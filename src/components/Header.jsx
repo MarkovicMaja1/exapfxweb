@@ -2,8 +2,8 @@ import React from 'react'
 
 const Header = () => {
   return (
-    <header className="bg-white shadow-sm sticky z-50 top-0 inset-x-0">
-    <nav className="items-center  mx-auto flex max-w-screen-2xl p-4">
+<header className="bg-white shadow-sm fixed top-0 left-0 right-0 z-50 w-full">
+<nav className="items-center  mx-auto flex max-w-screen-2xl p-4">
       {/* <div className="lg:flex-1 flex">
         <a href="#" className="-m-1.5 p-1.5">
           <span className="sr-only">Windframe</span>

@@ -11,7 +11,7 @@ const Suistanbility = () => {
 
           <div className="mx-auto lg:max-w-4xl text-center">
             <p className="tracking-widest text-sm font-bold text-gray-600 text-center uppercase"></p>
-            <p className="mt-2 text-4xl lg:text-5xl font-bold tracking-tight text-center">Our Commitment to Sustainability</p>
+            <p className="mt-2 text-4xl lg:text-5xl font-extrabold tracking-tight text-center">Our Commitment to Sustainability</p>
             <p className="mt-6 text-lg leading-8 text-gray-600">At Eco Capital FX, we align our efforts with the United Nations Sustainable Development Goals (SDGs) to create a positive global impact. Our focus is on three key areas:</p>
           </div>
 

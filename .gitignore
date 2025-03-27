@@ -7,6 +7,10 @@
 
 # testing
 /coverage
+/src/components/AboutSlike
+/src/components/AboutSlike.jsx
+/src/components/AboutTeget.jsx
+/src/components/Index.jsx
 
 # production
 /build

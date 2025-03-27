@@ -1,72 +1,102 @@
 import React from 'react'
+import image1 from '../assets/investment.png';
+import image2 from '../assets/growth.png';
 
 const AboutUs = () => {
   return (
     <div>
-      <section className="bg-white py-20 sm:py-32">
+      <section className="bg-black text-white py-20 sm:py-32">
         <div className="mx-auto px-4 max-w-screen-2xl relative isolate">
-          {/* <svg className="h-[788px] w-[350px] absolute top-0 -z-10 transform-gpu overflow-hidden blur-2xl left-12" viewBox="0 0 468 788" fill="none" xmlns="http://www.w3.org/2000/svg" id="Windframe__jc0N6lGXp4">
-            <circle cx="44.5105" cy="378.637" r="156.383" fill="#4A3AFF"></circle>
-            <circle cx="119.803" cy="529.24" r="156.383" fill="#702DFF"></circle>
-            <circle cx="173.364" cy="372.857" r="156.383" fill="#2D5BFF"></circle>
-            <g filter="url(#filter0_b_1410_520)">
-              <circle cx="73.5409" cy="394.049" r="393.819" fill="white" fillOpacity="0.79"></circle>
-            </g> */}
-            {/* <defs>
-              <filter x="-460.404" y="-139.896" width="1067.89" height="1067.89" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
-                <feFlood floodOpacity="0" result="BackgroundImageFix"></feFlood>
-                <feGaussianBlur in="BackgroundImageFix" stdDeviation="70.063"></feGaussianBlur>
-                <feComposite in2="SourceAlpha" operator="in" result="effect1_backgroundBlur_1410_520"></feComposite>
-                <feBlend mode="normal" in="SourceGraphic" in2="effect1_backgroundBlur_1410_520" result="shape"></feBlend>
-              </filter>
-            </defs>
-          </svg> */}
+         
           <div className="mx-auto lg:max-w-4xl text-center">
-            <p className="mt-2 text-4xl lg:text-5xl font-bold tracking-tight text-center">About Us</p>
-            {/* <p className="mt-6 text-lg leading-8 text-gray-600">Quis tellus eget adipiscing convallis sit sit eget aliquet quis. Suspendisse eget egestas a Elementum pulvinar et feugiat blandit at. In mi viverra elit nunc.</p> */}
+<p className="mt-2 text-4xl lg:text-5xl font-extrabold tracking-tight text-center ">About Us</p>
           </div>
+          <div className="max-w-7xl mx-auto px-6 lg:px-12">
+          <div className="grid grid-cols-1 lg:grid-cols-2 items-center gap-16">
 
+               {/*About us*/}
           <div className="mx-auto mt-16 sm:mt-20 lg:mt-24 lg:max-w-4xl">
             <dl className="grid grid-cols-1 gap-y-16">
-            <div className="flex flex-col items-start gap-6 py-10 bg-gray-100 rounded-lg shadow-md p-6">
-  {/* <div className="h-36 w-36 items-center justify-center rounded-full bg-white text-4xl font-bold flex border border-gray-500">1</div> */}
-  <div className="w-full text-left">
-    <dt className="text-xl font-semibold text-black mb-4">About Us</dt>
-    <dd className="mt-2 text-base text-gray-500 mb-4">
-      At Eco Capital FX, we are redefining proprietary trading by creating opportunities for skilled traders while making a positive impact on the world. Our platform empowers traders to access substantial capital, refine their strategies, and achieve financial success without the limitations of traditional funding.
-    </dd>
-    <dd className="mt-2 text-base text-gray-500">
-      But we’re more than just a prop firm. We believe that financial growth and sustainability can go hand in hand. That’s why we commit 1-3% of our annual profits to sustainability (SDGS)-focused initiatives, ensuring that our success contributes to a better future for both traders and the planet.
-    </dd>
-  </div>
-</div>
+            <div className="text-left">
+            <dt className="text-3xl font-semibold mb-4 inline-block border-b-2 border-green-500">
+              About Us
+            </dt>
 
-{/* 
-              <div className="flex flex-col items-center gap-6 py-10 bg-gray-100 rounded-lg shadow-md">
-                <div className="h-36 w-36 items-center justify-center rounded-full bg-white text-4xl font-bold flex border border-gray-500">2</div>
-                <div className="w-full text-center">
-                  <dt className="text-xl font-semibold text-black">Product Development</dt>
-                  <dd className="mt-2 text-base text-gray-500">Morbi viverra dui mi arcu sed. Tellus semper adipiscing suspendisse semper morbi. Odio urna massa nunc massa.</dd>
-                </div>
-              </div>
+            <dd className="text-lg text-gray-400 mb-4">
 
-              <div className="flex flex-col items-center gap-6 py-10 bg-gray-100 rounded-lg shadow-md">
-                <div className="h-36 w-36 items-center justify-center rounded-full bg-white text-4xl font-bold flex border border-gray-500">3</div>
-                <div className="w-full text-center">
-                  <dt className="text-xl font-semibold text-black">Product Testing</dt>
-                  <dd className="mt-2 text-base text-gray-500">Morbi viverra dui mi arcu sed. Tellus semper adipiscing suspendisse semper morbi. Odio urna massa nunc massa.</dd>
-                </div>
-              </div>
+                At Eco Capital FX, we are redefining proprietary trading by creating opportunities for skilled traders while making a positive impact on the world. Our platform empowers traders to access substantial capital, refine their strategies, and achieve financial success without the limitations of traditional funding.
+              </dd>
+              <dd className="text-lg text-gray-400 mb-4">
 
-              <div className="flex flex-col items-center gap-6 py-10 bg-gray-100 rounded-lg shadow-md">
-                <div className="h-36 w-36 items-center justify-center rounded-full bg-white text-4xl font-bold flex border border-gray-500">4</div>
-                <div className="w-full text-center">
-                  <dt className="text-xl font-semibold text-black">Product Launch</dt>
-                  <dd className="mt-2 text-base text-gray-500">Morbi viverra dui mi arcu sed. Tellus semper adipiscing suspendisse semper morbi. Odio urna massa nunc massa.</dd>
-                </div>
-              </div> */}
+                But we’re more than just a prop firm. We believe that financial growth and sustainability can go hand in hand. That’s why we commit 1-3% of our annual profits to sustainability (SDGS)-focused initiatives, ensuring that our success contributes to a better future for both traders and the planet.
+              </dd>
+            </div>
             </dl>
+            </div>
+            <div className="flex justify-center mt-10">
+              <img src={image1} alt="About Us" className="w-3/4 h-3/4 rounded-lg bg-transparent hover:scale-105 transition-transform duration-300" />
+            </div>
           </div>
+          </div>
+
+          <div className="w-3/4 mx-auto mt-8 border-t-2 border-green-500"></div>
+
+
+
+                {/*Mission*/}
+          <div className="max-w-7xl mx-auto px-6 lg:px-12">
+              <div className="grid grid-cols-1 lg:grid-cols-2 items-center gap-16">
+                {/* Leva strana - Slika */}
+                <div className="flex justify-center mt-10 mr-10">
+                <img src={image2} alt="About Us" className="w-3/4 h-3/4  mr-10 rounded-lg bg-transparent hover:scale-105 transition-transform duration-300" />
+                </div>
+
+
+                {/* Desna strana - Tekst */}
+                <div className="mx-auto mt-16 sm:mt-20 lg:mt-24 lg:max-w-4xl text-left">
+                  <dl className="grid grid-cols-1 gap-y-16">
+                    <div className="text-left">
+                      <dt className="text-3xl font-semibold mb-4 inline-block border-b-2 border-green-500">Our Mission</dt>
+                      <dd className="text-lg text-gray-400 mb-4">
+
+                      We are on a mission to build the largest and most impactful proprietary trading firm, one that not only fuels the success of traders but also fosters a strong, values-driven community overtime. We aim to support ambitious traders in reaching their full potential while integrating responsible practices that promote a sustainable future.                 
+                      </dd>
+                    </div>
+                  </dl>
+                </div>
+              </div>
+            </div>
+
+
+            <div className="w-3/4 mx-auto mt-8 border-t-2 border-green-500"></div>
+
+
+                {/* Our Goals */}
+                <div className="max-w-7xl mx-auto px-6 lg:px-12 mt-16">
+                  <div className="text-left">
+                    <p className="text-3xl font-semibold mb-4 inline-block border-b-2 border-green-500">Our Goals</p>
+                    {/* <ul className="text-lg text-gray-400 list-disc pl-5 space-y-4">
+                      <li><span role="img" aria-label="lightning">⚡</span> <strong>Empower Traders:</strong> Provide opportunities for skilled traders to scale their strategies with substantial funding.</li>
+                      <li><span role="img" aria-label="community">🌍</span> <strong>Build a Thriving Community:</strong> Grow a network of <strong>1,000+ funded traders</strong> within the first year.</li>
+                      <li><span role="img" aria-label="rocket">🚀</span> <strong>Drive Industry Leadership:</strong> Become the <strong>leading proprietary trading firm</strong> by 2030, measured by active traders, capital deployed, and profits.</li>
+                      <li><span role="img" aria-label="globe">🌍</span> <strong>Expand Globally:</strong> Establish a presence in <strong>at least 5 international markets</strong> within two years.</li>
+                      <li><span role="img" aria-label="eco">🌱</span> <strong>Commit to Sustainability:</strong> Partner with eco-friendly initiatives and donate 1-3% of profits to sustainability-driven causes (SDGS).</li>
+                    </ul> */}
+                    <ul className="text-lg text-gray-400 list-disc pl-5 space-y-4">
+                      <li><span role="img" aria-label="lightning">⚡</span> <strong>Empower Traders:</strong> Provide opportunities for skilled traders to scale their strategies with substantial funding.</li>
+                      <li><span role="img" aria-label="community">🌍</span> <strong>Build a Thriving Community:</strong> Grow a network of <strong>1,000+ funded traders</strong> within the first year.</li>
+                      <li><span role="img" aria-label="rocket">🚀</span> <strong>Drive Industry Leadership:</strong> Become the <strong>leading proprietary trading firm</strong> by 2030, measured by active traders, capital deployed, and profits.</li>
+                      <li><span role="img" aria-label="globe">🌍</span> <strong>Expand Globally:</strong> Establish a presence in <strong>at least 5 international markets</strong> within two years.</li>
+                      <li><span role="img" aria-label="eco">🌱</span> <strong>Commit to Sustainability:</strong> Partner with eco-friendly initiatives and donate 1-3% of profits to sustainability-driven causes (SDGS).</li>
+                    </ul>
+                    
+                    <p className="text-lg text-gray-400 mt-8">
+                      At Eco Capital FX, we believe in <strong>trading with purpose</strong>, where success isn’t just measured in profits but in the positive impact we create together. Join us, and be part of a prop firm that’s shaping the future of trading and sustainability.
+                    </p>
+                  </div>
+                </div>
+
+          
         </div>
       </section>
     </div>
@@ -74,4 +104,3 @@ const AboutUs = () => {
 }
 
 export default AboutUs
-
