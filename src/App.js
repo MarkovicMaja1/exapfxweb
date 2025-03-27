@@ -9,10 +9,12 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import About from "./components/About";
 import Suistanbility from "./components/Sustainability";
 import Home from "./components/Home";
+import AboutTeget from "./components/AboutTeget";
+import Index from "./components/Index";
 
 function App() {
   return (
-    <div className="App">
+    <div className="App min-h-scree">
       <BrowserRouter basename="/">
       <div id="navbar">
           <Header />
@@ -23,6 +25,13 @@ function App() {
         <div id="about">
           <About/>
         </div>
+        {/* <div id="about">
+          <AboutTeget/>
+        </div> */}
+        {/* <div id="index">
+          <Index/>
+        </div> */}
+        
         <div id="suistanbility">
           <Suistanbility/>
         </div>
