@@ -9,8 +9,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import About from "./components/About";
 import Suistanbility from "./components/Sustainability";
 import Home from "./components/Home";
-import AboutTeget from "./components/AboutTeget";
-import Index from "./components/Index";
+
 
 function App() {
   return (
