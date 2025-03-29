@@ -9,6 +9,13 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import About from "./components/About";
 import Suistanbility from "./components/Sustainability";
 import Home from "./components/Home";
+// import AboutTeget from "./components/AboutTeget";
+import Index from "./components/Index";
+import Sustainability2 from "./components/Sustainability2";
+import Footer from "./components/Footer";
+import Background from "./components/Background";
+import Goals from "./components/Goals";
+import Dashboard from "./components/Dashboard";
 
 
 function App() {
@@ -24,16 +31,29 @@ function App() {
         <div id="about">
           <About/>
         </div>
+        <div id="goals">
+          <Goals/>
+        </div>
         {/* <div id="about">
           <AboutTeget/>
         </div> */}
-        {/* <div id="index">
+        <div id="index">
           <Index/>
+        </div>
+        {/* <div id="dashboard">
+          <Dashboard/>
         </div> */}
         
         <div id="suistanbility">
           <Suistanbility/>
         </div>
+        {/* <div id="suistanbility">
+          <Sustainability2/>
+        </div> */}
+        <div id="footer">
+          <Footer/>
+        </div>
+       
   
         {/* <div id="about">
           <About />

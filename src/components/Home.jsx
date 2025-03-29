@@ -89,7 +89,7 @@ const Home = () => {
           {/* Dugme */}
           <div className="mt-6 flex justify-center gap-4">
             <a
-              className="px-5 py-2.5 rounded-md text-black border-2 border-[#1d8348] hover:bg-[#1d8348] hover:text-white transition-all"
+              className="px-5 py-2.5 rounded-md text-black border-2 border-[#f9e79f] hover:bg-[#f9e79f]  transition-all"
               href="#get-started"
             >
               Free Trial

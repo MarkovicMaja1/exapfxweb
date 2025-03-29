@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alpha Trader Plans</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        .tabinationContainer.variant2_tabs .tabinationWrapper .tabinationBox li.tabinationButton.activeTab, 
+        .tabinationContainer.variant2_tabs .tabinationWrapper .tabinationBox li.tabinationButton:hover {
+            background: #fff;
+            border-radius: 100px;
+            box-shadow: 0 4px 4px 0 #8d95db40;
+        }
+		.tabinationContainer.variant2_tabs .tabinationWrapper .tabinationBox li.tabinationButton {
+            cursor: pointer;
+            padding: 9px 20px;
+            transition: background .2s ease-in;
+        }
+        .tabinationContainer.variant2_tabs .tabinationWrapper .tabinationBox li {
+            text-wrap: wrap;
+            align-items: center;
+            border-radius: 100px;
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+            height: 43.5px;
+            justify-content: center;
+            width: 100%;
+        }
+		.tabinationButton {
+            background: #edf2fa;
+            border: 2px solid #ced3db;
+            border-radius: 12px !important;
+            box-shadow: none;
+            height: 50px;
+            cursor: pointer;
+            padding: 9px 20px;
+            transition: background .2s ease-in;
+        }
+        .tabinationButton.activeTab {
+            background: #fff;
+            border-radius: 100px;
+            box-shadow: 0 4px 4px 0 #8d95db40;
+        }
+		.tabinationButton:active {
+			border-color: #006039;
+			color: #1d8348;
+			background-color: white;
+			box-shadow: 0 4px 4px 0 #8d95db40;
+		}
+        .amountButton.activeAmount {
+            border-color: #22c55e;
+            color: #1d8348;
+            background-color: white;
+            box-shadow: 0 4px 4px 0 #8d95db40;
+        }
+        button.bg-white.text-green-900.px-4.py-2.rounded-full:hover {
+            background-position: 0px 0px;
+            background-image: url('buttonBg2.png');
+            color: var(--White) !important;
+        }
+        .bg-green-900 {
+			--tw-bg-opacity: 1;
+            background-image: repeating-linear-gradient(45deg, #006039, #1d8348 100px);
+        }
+        .text-green-5000 {
+            color: rgb(29 131 72);
+        }
+    </style>
+</head>
+<body class="bg-gray-50 font-roboto">
+    <div class="max-w-5xl mx-auto p-4">
+        <h1 class="text-center text-2xl md:text-4xl font-bold mb-4">Still Not Sure? <span class="text-green-5000">Check out our other plans</span></h1>
+        <p class="text-center mb-6">Choose the evaluation based on your preference to become an Eco Capital FX.</p>
+        
+        <div class="tabinationContainer variant2_tabs">
+            <div class="tabinationWrapper">
+                <ul class="tabinationBox flex justify-center space-x-2 mb-4">
+                    <li class="tabinationButton activeTab" onclick="showPlan('1step', this)">1 Step</li>
+                    <li class="tabinationButton" onclick="showPlan('2step', this)">2 Step</li>
+                    <li class="tabinationButton" onclick="showPlan('3step', this)">3 Step</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="tabinationContainer variant2_tabs">
+            <div class="tabinationWrapper">
+                <ul class="tabinationBox flex justify-center space-x-2 mb-6">
+                    <li class="amountButton px-4 py-2 border border-gray-300 rounded-full text-gray-500" onclick="selectAmount(this, 5000, 50)">$5,000</li>
+                    <li class="amountButton px-4 py-2 border border-gray-300 rounded-full text-gray-500" onclick="selectAmount(this, 10000, 100)">$10,000</li>
+                    <li class="amountButton px-4 py-2 border border-gray-300 rounded-full text-gray-500" onclick="selectAmount(this, 25000, 200)">$25,000</li>
+                    <li class="amountButton px-4 py-2 border border-gray-300 rounded-full text-gray-500" onclick="selectAmount(this, 50000, 300)">$50,000</li>
+                    <li class="amountButton px-4 py-2 border border-gray-300 rounded-full text-gray-500" onclick="selectAmount(this, 100000, 500)">$100,000</li>
+                    <li class="amountButton px-4 py-2 border border-gray-300 rounded-full text-gray-500" onclick="selectAmount(this, 200000, 1000)">$200,000</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="bg-white shadow-md rounded-lg p-4 mb-6">
+            <div class="flex justify-center space-x-4 mb-4">
+                <div class="flex items-center space-x-2">
+                    <input type="radio" id="1step" name="plan" checked onclick="updatePlanDetails('1step')">
+                    <label for="1step" class="text-gray-700">No Profit Cap</label>
+                </div>
+                <div class="flex items-center space-x-2">
+                    <input type="radio" id="2step" name="plan" onclick="updatePlanDetails('2step')">
+                    <label for="2step" class="text-gray-700">Payout-on-demand</label>
+                </div>
+                <div class="flex items-center space-x-2">
+                    <input type="radio" id="3step" name="plan" onclick="updatePlanDetails('3step')">
+                    <label for="3step" class="text-gray-700">Quickest way to become an Eco Capital FX</label>
+                </div>
+            </div>
+            
+            <div class="flex justify-center space-x-4 mb-4">
+                <div class="text-center">
+                    <h2 class="text-lg font-bold" id="plan-step">1 Step</h2>
+                    <p class="text-gray-500" id="plan-description">Analyst Assessment</p>
+                </div>
+                <div class="text-center">
+                    <h2 class="text-lg font-bold">Qualified</h2>
+                    <p class="text-gray-500">Qualified Analyst</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="bg-white shadow-md rounded-lg p-4">
+            <table class="w-full text-left">
+                <thead>
+                    <tr>
+                        <th class="py-2 px-4 text-gray-500">Leverage <i class="fas fa-info-circle"></i></th>
+                        <th class="py-2 px-4 text-gray-500">1 Step</th>
+                        <th class="py-2 px-4 text-gray-500">2 Step</th>
+                        <th class="py-2 px-4 text-gray-500">3 Step</th>
+                        <th class="py-2 px-4 text-gray-500">Qualified</th>
+                    </tr>
+                </thead>
+                <tbody id="plan-details">
+                    <tr class="border-t">
+                        <td class="py-2 px-4">Sim Profit Target <i class="fas fa-info-circle"></i></td>
+                        <td class="py-2 px-4">$500 (10%)</td>
+                        <td class="py-2 px-4 hidden">$500 (8%)</td>
+                        <td class="py-2 px-4 hidden">$600 (8%)</td>
+                        <td class="py-2 px-4">NA</td>
+                    </tr>
+                    <tr class="border-t">
+                        <td class="py-2 px-4">Max Sim Drawdown <i class="fas fa-info-circle"></i></td>
+                        <td class="py-2 px-4">$300 (6%)</td>
+                        <td class="py-2 px-4 hidden">$600 (6%)</td>
+                        <td class="py-2 px-4 hidden">$700 (6%)</td>
+                        <td class="py-2 px-4">$300 (6%)</td>
+                    </tr>
+                    <tr class="border-t">
+                        <td class="py-2 px-4">Max Daily Drawdown <i class="fas fa-info-circle"></i></td>
+                        <td class="py-2 px-4">$200 (4%)</td>
+                        <td class="py-2 px-4 hidden">$400 (4%)</td>
+                        <td class="py-2 px-4 hidden">$500 (4%)</td>
+                        <td class="py-2 px-4">$200 (4%)</td>
+                    </tr>
+                    <tr class="border-t">
+                        <td class="py-2 px-4">Max Sim Trading Days <i class="fas fa-info-circle"></i></td>
+                        <td class="py-2 px-4">Unlimited</td>
+                        <td class="py-2 px-4 hidden">Unlimited</td>
+                        <td class="py-2 px-4 hidden">Unlimited</td>
+                        <td class="py-2 px-4">NA</td>
+                    </tr>
+                    <tr class="border-t">
+                        <td class="py-2 px-4">Analyst Performance Fee <i class="fas fa-info-circle"></i></td>
+                        <td class="py-2 px-4">NA</td>
+                        <td class="py-2 px-4 hidden">NA</td>
+                        <td class="py-2 px-4 hidden">NA</td>
+                        <td class="py-2 px-4">80%</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        
+        <div class="bg-green-900 text-white rounded-lg p-4 mt-6 flex justify-between items-center">
+            <div>
+                <h2 class="text-lg font-bold" id="plan-name">Swing Plan 200K</h2>
+                <p id="plan-price">Assessment Price: $1000</p>
+            </div>
+            <button class="bg-white text-green-900 px-4 py-2 rounded-full">Start Eco Capital Evaluation</button>
+        </div>
+    </div>
+
+    <script>
+        const plans = {
+            '1step': [
+                { label: 'Sim Profit Target', step: '$500 (10%)', qualified: 'NA' },
+                { label: 'Max Sim Drawdown', step: '$300 (6%)', qualified: '$300 (6%)' },
+                { label: 'Max Daily Drawdown', step: '$200 (4%)', qualified: '$200 (4%)' },
+                { label: 'Max Sim Trading Days', step: 'Unlimited', qualified: 'NA' },
+                { label: 'Analyst Performance Fee', step: 'NA', qualified: '80%' }
+            ],
+            '2step': [
+                { label: 'Sim Profit Target', step: '$500 (8%)', qualified: 'NA' },
+                { label: 'Max Sim Drawdown', step: '$600 (6%)', qualified: '$600 (6%)' },
+                { label: 'Max Daily Drawdown', step: '$400 (4%)', qualified: '$400 (4%)' },
+                { label: 'Max Sim Trading Days', step: 'Unlimited', qualified: 'NA' },
+                { label: 'Analyst Performance Fee', step: 'NA', qualified: '80%' }
+            ],
+            '3step': [
+                { label: 'Sim Profit Target', step: '$600 (8%)', qualified: 'NA' },
+                { label: 'Max Sim Drawdown', step: '$700 (6%)', qualified: '$700 (6%)' },
+                { label: 'Max Daily Drawdown', step: '$500 (4%)', qualified: '$500 (4%)' },
+                { label: 'Max Sim Trading Days', step: 'Unlimited', qualified: 'NA' },
+                { label: 'Analyst Performance Fee', step: 'NA', qualified: '80%' }
+            ]
+        };
+
+        function showPlan(plan, element) {
+            const planDetails = document.getElementById('plan-details');
+            const stepColumns = ['1step', '2step', '3step'];
+            const stepIndex = stepColumns.indexOf(plan) + 1;
+
+            // Show or hide columns based on the selected step
+            stepColumns.forEach((step, index) => {
+                const columns = document.querySelectorAll(`td:nth-child(${index + 2}), th:nth-child(${index + 2})`);
+                columns.forEach(column => {
+                    if (index < stepIndex) {
+                        column.classList.remove('hidden');
+                    } else {
+                        column.classList.add('hidden');
+                    }
+                });
+            });
+
+            // Remove activeTab class from all buttons
+            document.querySelectorAll('.tabinationButton').forEach(button => {
+                button.classList.remove('activeTab');
+                button.classList.remove('border-green-500');
+                button.classList.remove('text-green-5000');
+                button.classList.add('border-gray-300');
+                button.classList.add('text-gray-500');
+            });
+
+            // Add activeTab class to the clicked button
+            element.classList.add('activeTab');
+            element.classList.remove('border-gray-300');
+            element.classList.remove('text-gray-500');
+            element.classList.add('border-green-500');
+            element.classList.add('text-green-5000');
+
+            // Update the plan details based on the selected step
+            updatePlanDetails(plan);
+        }
+
+        function updatePlanDetails(plan) {
+            const planStep = document.getElementById('plan-step');
+            const planDescription = document.getElementById('plan-description');
+
+            switch (plan) {
+                case '1step':
+                    planStep.innerText = '1 Step';
+                    planDescription.innerText = 'Analyst Assessment';
+                    break;
+                case '2step':
+                    planStep.innerText = '2 Step';
+                    planDescription.innerText = 'Analyst Assessment with additional benefits';
+                    break;
+                case '3step':
+                    planStep.innerText = '3 Step';
+                    planDescription.innerText = 'Comprehensive Analyst Assessment';
+                    break;
+                default:
+                    planStep.innerText = '1 Step';
+                    planDescription.innerText = 'Analyst Assessment';
+                    break;
+            }
+        }
+
+        function selectAmount(element, amount, price) {
+            // Remove activeAmount class from all amount buttons
+            document.querySelectorAll('.amountButton').forEach(button => {
+                button.classList.remove('activeAmount');
+            });
+
+            // Add activeAmount class to the clicked button
+            element.classList.add('activeAmount');
+
+            // Update plan name and price
+            document.getElementById('plan-name').innerText = `Swing Plan ${amount.toLocaleString()}K`;
+            document.getElementById('plan-price').innerText = `Assessment Price: $${price}`;
+        }
+
+        // Initialize with 1 Step plan
+        showPlan('1step', document.querySelector('.tabinationButton.activeTab'));
+    </script>
+</body>
+</html>
