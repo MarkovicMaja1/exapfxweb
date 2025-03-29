@@ -10,7 +10,10 @@
 /src/components/AboutSlike
 /src/components/AboutSlike.jsx
 /src/components/AboutTeget.jsx
-/src/components/Index.jsx
+/src/components/Sustainability2.jsx
+/src/components/Dashboard.jsx
+/src/components/Dashboard.css
+
 
 # production
 /build
