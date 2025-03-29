@@ -26,7 +26,7 @@ const Index = () => {
       <div className="block ">
        
         <p className="mb-2 text-xl font-medium leading-8 text-white line-clamp-2">Ecosphere Pro </p>
-        <span className="mb-2 font-medium text-white block text-[#b8860b]">$379-$999 </span>
+        <span className="mb-2 font-medium text-white block "><span className="text-[#b8860b]">$379-$999 </span></span>
         <p className="mb-2 leading-6 text-gray-400 whitespace-pre-line text-sm  ">Our Ecosphere Pro Trading Program offers traders the opportunity to access $100K or $200K funded accounts, with the flexibility to choose between a 1-phase or 2-phase evaluation.
 
 </p>
