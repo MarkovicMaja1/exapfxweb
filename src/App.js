@@ -11,11 +11,9 @@ import Suistanbility from "./components/Sustainability";
 import Home from "./components/Home";
 // import AboutTeget from "./components/AboutTeget";
 import Index from "./components/Index";
-import Sustainability2 from "./components/Sustainability2";
 import Footer from "./components/Footer";
-import Background from "./components/Background";
 import Goals from "./components/Goals";
-import Dashboard from "./components/Dashboard";
+
 
 
 function App() {
