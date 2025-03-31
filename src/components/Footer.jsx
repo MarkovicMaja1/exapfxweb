@@ -2,8 +2,9 @@ import React from 'react'
 
 const Footer = () => {
   return (
-    // <div className="mx-auto px-4 py-20 max-w-screen-2xl bg-[#101919] text-white" >
-      // <section className="mx-auto py-10 max-w-screen-2xl p-4  bg-[#101919]">
+    <div>
+    {/* // <div className="mx-auto px-4 py-20 max-w-screen-2xl bg-[#101919] text-white" >
+      // <section className="mx-auto py-10 max-w-screen-2xl p-4  bg-[#101919]"> */}
       <section className="bg-[#101919] text-white py-20 sm:py-32">
         <div className="mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
           <div className="mb-8">
@@ -70,12 +71,17 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        <div className="mt-10 pt-2 text-center border-t border-white/10">
-            <p className="text-xs leading-5 text-gray-400">© 2024 Windframe, Inc. All rights reserved.</p>
-            </div>
+       
       </section>
       
-    // </div>
+    {/* // </div> */}
+    {/* <div className="mt-10 pt-2 text-center border-t border-white/10 bg-[#101919]">
+            <p className="text-xs leading-5 text-gray-400">© 2024 Windframe, Inc. All rights reserved.</p>
+            </div> */}
+                <div className="text-center border-t border-white/10 bg-[#101919]">
+            <p className="text-xs leading-5 text-gray-400 mt-4 pb-4">© 2024 Windframe, Inc. All rights reserved.</p>
+            </div>
+    </div>
   )
 }
 
