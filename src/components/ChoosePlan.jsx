@@ -43,7 +43,7 @@ const ChoosePlan = () => {
 
         {/* Boks 2 */}
         <div className="box-wrapper">
-          <span className="badge badge-green">Best for Experienced</span>
+          <span className="badge badge-green">Best for Risk Takers</span>
           <div className="inner-box">
             <img src={trader} alt="Crypto Trader" className="blurred-background" />
             <div className="text-overlay">
@@ -66,7 +66,7 @@ const ChoosePlan = () => {
 
         {/* Boks 3 */}
         <div className="box-wrapper">
-          <span className="badge badge-blue">Best for Experienced</span>
+          <span className="badge badge-blue">Take it slow</span>
           <div className="inner-box">
             <img src={trader} alt="Crypto Trader" className="blurred-background" />
             <div className="text-overlay">
