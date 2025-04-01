@@ -63,7 +63,7 @@ const Goals = () => {
               </div>
             ))}
           </div>
-          <p className="text-lg text-gray-800 mt-8">
+          <p className="text-lg text-gray-800 mt-8 mb-10">
             At Eco Capital FX, we believe in <strong>trading with purpose</strong>, where success isn’t just measured in profits but in the positive impact we create together. Join us, and be part of a prop firm that’s shaping the future of trading and sustainability.
           </p>
         </div>

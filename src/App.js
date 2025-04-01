@@ -10,9 +10,12 @@ import About from "./components/About";
 import Suistanbility from "./components/Sustainability";
 import Home from "./components/Home";
 // import AboutTeget from "./components/AboutTeget";
-import Index from "./components/Index";
+import Index from "./components/Index2";
 import Footer from "./components/Footer";
 import Goals from "./components/Goals";
+import Example from "./components/Example";
+import ChoosePlan from "./components/ChoosePlan";
+import Dashboard from "./components/Dashboard";
 
 
 
@@ -35,13 +38,14 @@ function App() {
         {/* <div id="about">
           <AboutTeget/>
         </div> */}
+
         <div id="index">
-          <Index/>
+          <ChoosePlan/>
         </div>
-        {/* <div id="dashboard">
+        <div id="dashboard">
           <Dashboard/>
-        </div> */}
-        
+        </div>
+    
         <div id="suistanbility">
           <Suistanbility/>
         </div>
