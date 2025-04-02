@@ -5,6 +5,7 @@ import Header from "./components/Header";
 // import Contact from "./Components/Contact";
 // import Footer from "./Components/Footer";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import '@fortawesome/fontawesome-free/css/all.min.css';
 
 import About from "./components/About";
 import Suistanbility from "./components/Sustainability";

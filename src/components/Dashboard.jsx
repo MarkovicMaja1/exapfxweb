@@ -63,9 +63,9 @@ const Dashboard = () => {
   const { step, description } = radioDetails();
 
   return (
-    <div className="bg-gray-50 font-roboto">
+    <div className=" font-roboto">
       <div className="max-w-5xl mx-auto p-4">
-        <h1 className="text-center text-2xl md:text-4xl font-bold mb-4">
+        <h1 className="text-center text-2xl md:text-4xl font-bold mb-4 mt-16">
           Still Not Sure? <span className="text-green-5000">Check out our other plans</span>
         </h1>
         <p className="text-center mb-6">
@@ -207,7 +207,7 @@ const Dashboard = () => {
             <thead>
               <tr>
                 <th className="py-2 px-4 text-gray-500">
-                  Leverage <i className="fas fa-info-circle"></i>
+                  Leverage <i className="fas fa-info-circle"></i> 
                 </th>
                 {stepColumns.map((step, index) => (
                   <th
@@ -312,7 +312,7 @@ const Dashboard = () => {
         button.bg-white.text-green-900.px-4.py-2.rounded-full:hover {
           background-position: 0px 0px;
           background-image: url('buttonBg2.png');
-          color: var(--White) !important;
+          //color: var(--white) !important;
         }
         .bg-green-900 {
           background-image: repeating-linear-gradient(45deg, #006039, #1d8348 100px);

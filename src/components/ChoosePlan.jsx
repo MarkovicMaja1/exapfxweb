@@ -6,20 +6,21 @@ const ChoosePlan = () => {
     <div className="funding-journey-container">
       {/* Top half with black background */}
       <div className="top-section">
-        <h1 className="section-title">Choose Your Funding Journey</h1>
+        <h1 className="section-title" style={{ marginTop: '50px' }}>Choose Your Funding Journey</h1>
+        <div className="w-2/4 mx-auto mt-1 mb-10 border-t-2 border-green-500"></div>
         <div className="promo-text">
           <p>Sharpen your trading skills with ECO CaP FX <b>Simulated Trading Platform</b>! </p>
-          <p>✅ Access up to <strong>$200,000</strong> in virtual funds</p>
-          <p>✅ Claim <b>up to 90%</b> of your simulated profits</p>
-          <p>Take the first step toward becoming a Eco pro trader today! 💰✨</p>
-          <p className="promo-big">Start Eco today and show us your skills</p>
+          <p> Access up to <strong>$200,000</strong> in virtual funds</p>
+          <p> Claim <b>up to 90%</b> of your simulated profits</p>
+          <p>Take the first step toward becoming a Eco pro trader today! </p>
+          
         </div>
       </div>
 
       {/* Bottom half (boxes) */}
       <div className="boxes-container">
         {/* Boks 1 */}
-        <div className="box-wrapper">
+        <div className="box-wrapper" style={{ marginBottom: '30px' }}>
           <span className="badge badge-hyper">Best for Experienced</span>
           <div className="inner-box">
             <img src={trader} alt="Crypto Trader" className="blurred-background" />
@@ -93,19 +94,22 @@ const ChoosePlan = () => {
         .funding-journey-container {
           width: 100%;
           text-align: center;
+          background: #101919;
         }
 
         .top-section {
-          background: #101919; /* Black background for the top half */
-          padding: 40px 20px; /* Matches the original padding */
+           /* Black background for the top half */
+          padding: 20px 0px; /* Matches the original padding */
           color: #ffffff; /* White text for contrast */
+         
         }
 
         .promo-text {
-          margin-bottom: 40px;
+          margin-bottom: 20px;
           font-size: 1.1rem;
           line-height: 1.6;
           color: #ffffff; /* White text for promo section */
+          font-weight:bold;
         }
 
       
@@ -126,8 +130,8 @@ const ChoosePlan = () => {
           font-size: 2.5rem;
           font-weight: 700;
           color: #ffffff; /* White title for contrast */
-          text-transform: uppercase;
-          margin-bottom: 40px;
+         
+          margin-bottom: 17px;
         }
 
         .boxes-container {
@@ -135,6 +139,7 @@ const ChoosePlan = () => {
           justify-content: center;
           gap: 20px;
           flex-wrap: wrap;
+          
           padding: 40px 20px; /* Matches the original padding for bottom half */
           // background: #f5f5f5; 
         }
@@ -148,14 +153,15 @@ const ChoosePlan = () => {
         }
 
         .inner-box {
-          position: relative;
-          width: 100%;
-          height: 450px;
-          background: #101919;
-          border-radius: 1rem;
-          transition: all 0.3s ease;
-          box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-        }
+  position: relative;
+  width: 100%;
+  height: 450px;
+  background: #101919;
+  border-radius: 1rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.2); /* Bela svetla senka */
+}
+
 
         .blurred-background {
           width: 100%;
@@ -228,11 +234,6 @@ const ChoosePlan = () => {
           color: #ffffff;
         }
 
-        .blue-button {
-          background: #3b82f6;
-          color: #ffffff;
-        }
-
         .badge-high {
           background: #14b8a6;
           color: #1a1a2e;
@@ -294,25 +295,52 @@ const ChoosePlan = () => {
           transition: all 0.3s ease;
         }
 
-        .hyper-button {
-          background: #facc15;
-          color: #1a1a2e;
-        }
+       .hyper-button {
+        background: #facc15;
+        color: #1a1a2e;
+        transition: all 0.3s ease;
+      }
 
-        .green-button {
-          background: #1d8348;
-          color: rgb(255, 255, 255);
-        }
+      .hyper-button:hover {
+        background: #fde047; /* Svetlija nijansa */
+        box-shadow: 0 4px 10px rgba(250, 204, 21, 0.4); /* Blaga senka */
+      }
 
-        .high-button {
-          background: #14b8a6;
-          color: #1a1a2e;
-        }
+      .green-button {
+        background: #1d8348;
+        color: rgb(255, 255, 255);
+        transition: all 0.3s ease;
+      }
+
+      .green-button:hover {
+        background: #28a75b; /* Svetlija zelena */
+        box-shadow: 0 4px 10px rgba(29, 131, 72, 0.4);
+      }
+
+      .blue-button {
+        background: #3b82f6;
+        color: #ffffff;
+        transition: all 0.3s ease;
+      }
+
+      .blue-button:hover {
+        background: #60a5fa; /* Svetlija nijansa plave */
+        box-shadow: 0 4px 10px rgba(59, 130, 246, 0.4); /* Blaga senka */
+      }
+
+
+      .high-button {
+        background: #14b8a6;
+        color: #1a1a2e;
+        transition: all 0.3s ease;
+      }
 
         .bootcamp-button {
           background: #a855f7;
           color: #ffffff;
         }
+
+        
 
         @media (max-width: 768px) {
           .boxes-container {

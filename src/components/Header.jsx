@@ -1,5 +1,5 @@
 import React from 'react'
-
+import logo from '../assets/ECAPFX_1-removebg-preview.png';
 const Header = () => {
   return (
 <header className="bg-[#101919] shadow-sm fixed top-0 left-0 right-0 z-50 w-full">
@@ -7,11 +7,7 @@ const Header = () => {
       {/* <div className="lg:flex-1 flex">
         <a href="#" className="-m-1.5 p-1.5">
           <span className="sr-only">Windframe</span>
-          <img
-            alt=""
-            src="https://res.cloudinary.com/speedwares/image/upload/v1659284687/windframe-logo-main_daes7r.png"
-            className="h-8 w-auto"
-          />
+           <img src={logo} alt="Logo" className="w-10 h-10 blurred-background" />
         </a>
       </div> */}
         <ul className="hidden lg:flex gap-20 text-white ml-40 text-lg font-bold justify-center flex-1 font-medium">

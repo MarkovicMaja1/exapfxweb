@@ -36,12 +36,12 @@ const Goals = () => {
 
   return (
     <div>
-      <div className="max-w-7xl mx-auto px-6 lg:px-12 mt-16">
+      <div className="max-w-7xl mx-auto px-6 lg:px-12 mt-24 mb-24">
         <div className="text-center">
-          <p className="text-4xl font-semibold mb-8 inline-block">
+          <p className="text-4xl font-semibold mb-16 inline-block mb-12">
             Our Goals
           </p>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6 mb-16 mt-8">
             {goalsData.map((goal, index) => (
               <div
                 key={index}
@@ -63,7 +63,7 @@ const Goals = () => {
               </div>
             ))}
           </div>
-          <p className="text-lg text-gray-800 mt-8 mb-10">
+          <p className="text-lg text-gray-600 mt-16 mb-14">
             At Eco Capital FX, we believe in <strong>trading with purpose</strong>, where success isn’t just measured in profits but in the positive impact we create together. Join us, and be part of a prop firm that’s shaping the future of trading and sustainability.
           </p>
         </div>
