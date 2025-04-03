@@ -17,6 +17,7 @@ import Goals from "./components/Goals";
 import Example from "./components/Example";
 import ChoosePlan from "./components/ChoosePlan";
 import Dashboard from "./components/Dashboard";
+import Navbar from "./components/Navbar";
 
 
 
@@ -25,7 +26,7 @@ function App() {
     <div className="App min-h-scree">
       <BrowserRouter basename="/">
       <div id="navbar">
-          <Header />
+          <Header/>
         </div>
         <div id="home">
           <Home />

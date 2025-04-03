@@ -65,10 +65,11 @@ const Dashboard = () => {
   return (
     <div className=" font-roboto">
       <div className="max-w-5xl mx-auto p-4">
-        <h1 className="text-center text-2xl md:text-4xl font-bold mb-4 mt-16">
+        <h1 className="text-center text-4xl md:text-4xl font-bold mb-4 mt-16 font-extrabold tracking-tight">
+       
           Still Not Sure? <span className="text-green-5000">Check out our other plans</span>
         </h1>
-        <p className="text-center mb-6">
+        <p className="text-center mb-10 mt-10 text-lg leading-8 text-gray-600"> 
           Choose the evaluation based on your preference to become an Eco Capital FX.
         </p>
 
@@ -155,7 +156,7 @@ const Dashboard = () => {
         </div>
 
         {/* Radio Buttons and Plan Info */}
-        <div className="bg-white shadow-md rounded-lg p-4 mb-6">
+        {/* <div className="bg-white shadow-md rounded-lg p-4 mb-6">
           <div className="flex justify-center space-x-4 mb-4">
             <div className="flex items-center space-x-2">
               <input
@@ -199,7 +200,7 @@ const Dashboard = () => {
               <p className="text-gray-500">Qualified Analyst</p>
             </div>
           </div>
-        </div>
+        </div> */}
 
         {/* Plan Details Table */}
         <div className="bg-white shadow-md rounded-lg p-4">

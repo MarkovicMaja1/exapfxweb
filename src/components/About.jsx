@@ -21,7 +21,7 @@ const AboutUs = () => {
             <dl className="grid grid-cols-1 gap-y-16">
             <div className="text-left">
             <dt className="text-3xl font-semibold mb-4 inline-block ">
-              About Us
+               Eco Capital FX
             </dt>
 
             <dd className="text-lg text-gray-400 mb-4">

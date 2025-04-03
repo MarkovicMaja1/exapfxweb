@@ -6,13 +6,13 @@ const ChoosePlan = () => {
     <div className="funding-journey-container">
       {/* Top half with black background */}
       <div className="top-section">
-        <h1 className="section-title" style={{ marginTop: '50px' }}>Choose Your Funding Journey</h1>
+        <h1 className="section-title mt-2 text-4xl lg:text-4xl font-extrabold tracking-tight text-center" style={{ marginTop: '50px' }}>Choose Your Funding Journey</h1>
         <div className="w-2/4 mx-auto mt-1 mb-10 border-t-2 border-green-500"></div>
         <div className="promo-text">
-          <p>Sharpen your trading skills with ECO CaP FX <b>Simulated Trading Platform</b>! </p>
+          <p>Sharpen your trading skills with ECapFX Simulated Trading Platform </p>
           <p> Access up to <strong>$200,000</strong> in virtual funds</p>
           <p> Claim <b>up to 90%</b> of your simulated profits</p>
-          <p>Take the first step toward becoming a Eco pro trader today! </p>
+          <p>Take the first step toward becoming a Eco pro trader today </p>
           
         </div>
       </div>
@@ -21,7 +21,7 @@ const ChoosePlan = () => {
       <div className="boxes-container">
         {/* Boks 1 */}
         <div className="box-wrapper" style={{ marginBottom: '30px' }}>
-          <span className="badge badge-hyper">Best for Experienced</span>
+          <span className="badge badge-hyper">Best for Seasoned traders</span>
           <div className="inner-box">
             <img src={trader} alt="Crypto Trader" className="blurred-background" />
             <div className="text-overlay">
@@ -44,7 +44,7 @@ const ChoosePlan = () => {
 
         {/* Boks 2 */}
         <div className="box-wrapper">
-          <span className="badge badge-green">Best for Risk Takers</span>
+          <span className="badge badge-green">Best For Begginers</span>
           <div className="inner-box">
             <img src={trader} alt="Crypto Trader" className="blurred-background" />
             <div className="text-overlay">
@@ -127,8 +127,8 @@ const ChoosePlan = () => {
         }
 
         .section-title {
-          font-size: 2.5rem;
-          font-weight: 700;
+          //font-size: 2.5rem;
+          // font-weight: 700;
           color: #ffffff; /* White title for contrast */
          
           margin-bottom: 17px;
@@ -245,7 +245,7 @@ const ChoosePlan = () => {
         }
 
         .box-title {
-          font-size: 1.5rem;
+          font-size: 1.3rem;
           font-weight: 700;
           color: #ffffff;
           margin-bottom: 10px;
@@ -253,14 +253,14 @@ const ChoosePlan = () => {
         }
 
         .box-subtitle {
-          font-size: 1.25rem;
+          font-size: 1.1rem;
           font-weight: 600;
           color: #14b8a6;
           margin-bottom: 15px;
         }
 
         .box-description {
-          font-size: 0.9rem;
+          font-size: 1rem;
           color: #d1d5db;
           line-height: 1.2;
           margin-bottom: 15px;

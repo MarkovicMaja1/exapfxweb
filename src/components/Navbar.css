@@ -1,0 +1,107 @@
+/* Global reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Reem Kufi", sans-serif !important;
+  }
+  
+  /* Navbar styling */
+  /* nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 90px;
+    background-color:  rgba(35, 45, 55, 0.288);
+    background-color: transparent; 
+  position: fixed; 
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  transition: background-color 0.3s ease; 
+  } */
+
+  /* Klasna promena pri skrolovanju */
+/* .navbar-scrolled {
+    background-color: rgb(35, 45, 55) 
+  } */
+
+  /* .nav-logo-container{
+    margin-left:4em;
+    font-size: 2rem;
+    text-transform: uppercase;
+    color: rgb(255, 255, 255);
+    font-family: 'Montserrat', sans-serif;
+    padding: 0.8rem;
+  } */
+
+  /* .nav-logo-container .highlight {
+    color: crimson 
+  } */
+  /* .navbar-links-container a {
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
+    margin-right: 7rem;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-size: 1.1rem;
+    font-weight: 200;
+    cursor: pointer;
+  } */
+
+  /* .navbar-links-container a:hover {
+    color: crimson 
+} */
+/*   
+  .primary-button {
+    padding: 0.9rem 1.75rem;
+    background-color: white;
+    outline: none;
+    border: none;
+    border-radius: 5rem;
+    font-size: 1.1rem;
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.2s;
+  }
+  
+  .primary-button:hover {
+    background-color: rgb(234, 234, 234);
+  }
+  
+  .navbar-cart-icon {
+    font-size: 1.15rem;
+  }
+  
+  .navbar-menu-container {
+    display: none;
+  }
+  
+  .navbar-menu-container svg {
+    font-size: 2.5rem;
+    cursor: pointer;
+  }
+   */
+  /* Responsive design */
+  /* @media (max-width: 1000px) {
+    .navbar-links-container a {
+      margin-right: 1rem;
+      font-size: 1rem;
+    }
+  
+    .primary-button {
+      font-size: 1rem;
+    }
+  }
+  
+  @media (max-width: 800px) {
+    .navbar-links-container {
+      display: none;
+    }
+  
+    .navbar-menu-container {
+      display: flex;
+    }
+  }
+   */
