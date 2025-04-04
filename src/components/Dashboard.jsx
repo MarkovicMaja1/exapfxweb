@@ -182,9 +182,12 @@ const FundingPlans = () => {
                     </div>
                   </div>
                   <div className="plan_highlights">
-                    <div><img src="/tick-circle-blue.svg" alt="tick" /><p>No Profit Cap</p></div>
+                    {/* <div><img src="/tick-circle-blue.svg" alt="tick" /><p>No Profit Cap</p></div>
                     <div><img src="/tick-circle-blue.svg" alt="tick" /><p>Payout-on-demand</p></div>
-                    <div><img src="/tick-circle-blue.svg" alt="tick" /><p>Quickest way to become an Alpha Trader</p></div>
+                    <div><img src="/tick-circle-blue.svg" alt="tick" /><p>Quickest way to become an Alpha Trader</p></div> */}
+                     <div><p>No Profit Cap</p></div>
+                    <div><p>Payout-on-demand</p></div>
+                    <div><p>Quickest way to become an Alpha Trader</p></div>
                   </div>
                 </div>
                 <div className="tableWrapper">
