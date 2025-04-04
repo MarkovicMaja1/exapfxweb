@@ -62,7 +62,7 @@ const Footer = () => {
                 </p>
                 <div className="flex justify-end">
                     <a
-                        className="px-5 py-2.5  text-white "
+                        className="px-5 py-2.5  text-white font-poppins "
                         style={{ backgroundColor: '#1d8348', borderRadius: '30px' }}
                     >
                         Explore now
