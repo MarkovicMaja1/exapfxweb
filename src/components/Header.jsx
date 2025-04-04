@@ -15,9 +15,9 @@ const Header = () => {
         
         {/* Navigation centered with padding to avoid overlap */}
         <ul className="hidden lg:flex gap-20 text-white text-lg font-bold justify-center flex-1 pl-32 ml-[100px]">
-          <li><a href="#home" className="font-bold hover:text-[#1d8348] transition">Home</a></li>
+          <li><a href="#home" className="font-bold hover:text-[#1d8348] transition font-poppins">Home</a></li>
+          <li><a href="#chooseplan" className="font-bold hover:text-[#1d8348] transition">Choose Plan</a></li>
           <li><a href="#about" className="font-bold hover:text-[#1d8348] transition">About Us</a></li>
-          <li><a href="#suistanbility" className="font-bold hover:text-[#1d8348] transition">Sustainability</a></li>
           <li><a href="#team" className="font-bold hover:text-[#1d8348] transition">Team</a></li>
           <li><a href="#contact" className="font-bold hover:text-[#1d8348] transition">Contact</a></li>
         </ul>

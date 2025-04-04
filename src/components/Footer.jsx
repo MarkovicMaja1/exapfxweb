@@ -1,4 +1,5 @@
 import React from 'react'
+import logo from '../assets/ECapFX-LOGO-white.png';
 
 const Footer = () => {
   return (
@@ -7,10 +8,10 @@ const Footer = () => {
       // <section className="mx-auto py-10 max-w-screen-2xl p-4  bg-[#101919]"> */}
       <section className="bg-[#101919] text-white py-20 sm:py-32">
         <div className="mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
-          <div className="mb-8">
-            <p className="text-center text-gray-600 mb-2 font-medium tracking-wide uppercase">Logo</p>
-         
-          </div>
+        <div className="flex justify-center mb-12">
+  <img src={logo} alt="Logo" className="w-48 h-auto" /> {/* Prilagodi širinu po potrebi */}
+</div>
+
           <div className="flex justify-center gap-20 text-white text-lg font-bold mb-7">
             <a href="#home" className="hover:text-[#1d8348] transition" style={{ fontWeight: 'bold' }}>Home</a>
             <a href="#about" className="hover:text-[#1d8348] transition" style={{ fontWeight: 'bold' }}>About Us</a>

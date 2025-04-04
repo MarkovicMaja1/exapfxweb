@@ -2,6 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
+nav {
+  /* font-family: "Poppins", sans-serif !important; */
+}
 /* 
 body {
   margin: 0;
@@ -18,7 +21,7 @@ code {
 } */
 body {
   margin: 0;
-  font-family: "Roboto","Helvetica","Arial",sans-serif;
+  /* font-family: "Roboto","Helvetica","Arial",sans-serif; */
   font-weight: 400;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

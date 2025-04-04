@@ -16,6 +16,7 @@
     "react-scripts": "5.0.1",
     "react-scroll": "^1.9.3",
     "react-tsparticles": "^2.12.2",
+    "swiper": "^11.2.6",
     "tsparticles": "^3.8.1",
     "web-vitals": "^2.1.4"
   },

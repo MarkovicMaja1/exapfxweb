@@ -5,10 +5,14 @@ const ChoosePlan = () => {
   return (
     <div className="funding-journey-container">
       {/* Top half with black background */}
-      <div className="top-section">
-        <h1 className="section-title mt-2 text-4xl lg:text-4xl font-extrabold tracking-tight text-center" style={{ marginTop: '50px' }}>Choose Your Funding Journey</h1>
-        <div className="w-2/4 mx-auto mt-1 mb-10 border-t-2 border-green-500"></div>
-        <div className="promo-text">
+      <div className="top-section ">
+        {/* <h1 className="section-title mt-2 text-4xl lg:text-4xl font-extrabold tracking-tight text-center" style={{ marginTop: '50px' }}>Choose Your Funding Journey</h1> */}
+        <div className="mx-auto lg:max-w-4xl text-center mt-24">
+<p className="mt-2 text-4xl lg:text-5xl font-extrabold tracking-tight text-center ">Choose Your Funding Journey</p>
+          </div>
+        
+        {/* <div className="w-2/4 mx-auto mt-6 mb-10 border-t-2 border-green-500"></div> */}
+        <div className="promo-text mt-16 text-gray-400">
           <p>Sharpen your trading skills with ECapFX Simulated Trading Platform </p>
           <p> Access up to <strong>$200,000</strong> in virtual funds</p>
           <p> Claim <b>up to 90%</b> of your simulated profits</p>
@@ -29,11 +33,11 @@ const ChoosePlan = () => {
               <p className="box-description bigger">
                 Account Size: <span className="highlight-price">$100K </span>or<span className="highlight-price"> $200K</span> funded accounts.<br />
                 </p>
-                <p className="box-description">
+                <p className="box-description text-gray-400">
                 • 1-Phase Challenge: Quick evaluation for experienced traders to get funded.<br />
                 • 2-Phase Challenge: Two-stage evaluation for traders to prove consistency and risk control.
               </p>
-              <p className="box-description">
+              <p className="box-description text-gray-400">
                 This program is designed for skilled traders, offering flexibility while ensuring sustainable capital management.
               </p>
               <p className="box-price">Starting from <span className="highlight-price">$379-$999</span></p>
@@ -52,11 +56,11 @@ const ChoosePlan = () => {
               <p className="box-description bigger">
                 Account Size: From <span className="highlight-price">  $6K</span> to<span className="highlight-price">  $25K </span>funded accounts.<br />
                 </p>
-                <p className="box-description">
+                <p className="box-description text-gray-400">
                 • 1-Phase Challenge: Quick evaluation for experienced traders to get funded.<br />
                 • 2-Phase Challenge: Two-stage evaluation for traders to show consistency and risk control.
               </p>
-              <p className="box-description">
+              <p className="box-description text-gray-400">
                 This program helps traders grow while ensuring sustainable capital management and flexible evaluation paths.
               </p>
               <p className="box-price">Starting from <span className="highlight-price">$79-$179 </span></p>
@@ -75,11 +79,11 @@ const ChoosePlan = () => {
               <p className="box-description bigger">
                 Account Size: <span className="highlight-price">  $50K</span> to <span className="highlight-price">  $100K </span> funded accounts.<br />
                 </p>
-                <p className="box-description ">
+                <p className="box-description text-gray-400">
                 • 1-Phase Challenge: Quick evaluation for experienced traders to get funded.<br />
                 • 2-Phase Challenge: Two-stage evaluation for traders to prove consistency and risk control.
               </p>
-              <p className="box-description">
+              <p className="box-description text-gray-400">
                 This program helps pro traders grow with flexible, sustainable funding while focusing on risk management.
               </p>
               <p className="box-price">Starting from <span className="highlight-price">$159 - $359</span></p>
@@ -108,7 +112,7 @@ const ChoosePlan = () => {
           margin-bottom: 20px;
           font-size: 1.1rem;
           line-height: 1.6;
-          color: #ffffff; /* White text for promo section */
+        /* White text for promo section */
           font-weight:bold;
         }
 
@@ -261,7 +265,7 @@ const ChoosePlan = () => {
 
         .box-description {
           font-size: 1rem;
-          color: #d1d5db;
+        
           line-height: 1.2;
           margin-bottom: 15px;
         }
@@ -269,6 +273,7 @@ const ChoosePlan = () => {
         .bigger{
         font-weight:bold;
         font-size: 1.3rem;
+         color: #d1d5db !important;
         }
 
         .box-price {

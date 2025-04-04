@@ -18,6 +18,7 @@ import Example from "./components/Example";
 import ChoosePlan from "./components/ChoosePlan";
 import Dashboard from "./components/Dashboard";
 import Navbar from "./components/Navbar";
+import TeamSection from "./components/Team";
 
 
 
@@ -31,25 +32,28 @@ function App() {
         <div id="home">
           <Home />
         </div>
+        {/* <div id="about">
+          <AboutTeget/>
+        </div> */}
+
+        <div id="chooseplan">
+          <ChoosePlan/>
+        </div>
+        <div id="dashboard">
+          <Dashboard/>
+        </div>
+
         <div id="about">
           <About/>
         </div>
         <div id="goals">
           <Goals/>
         </div>
-        {/* <div id="about">
-          <AboutTeget/>
-        </div> */}
-
-        <div id="index">
-          <ChoosePlan/>
-        </div>
-        <div id="dashboard">
-          <Dashboard/>
-        </div>
-    
         <div id="suistanbility">
           <Suistanbility/>
+        </div>
+        <div id="team">
+          <TeamSection/>
         </div>
         {/* <div id="suistanbility">
           <Sustainability2/>

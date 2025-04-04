@@ -12,10 +12,12 @@ const Suistanbility = () => {
       <div className="max-w-7xl mx-auto px-6 lg:px-12 mt-24 mb-24">
         <div className="text-center">
           <div className="mx-auto px-12 max-w-screen-xl relative isolate">
+          <div className="mx-auto lg:max-w-4xl text-center">
+<p className="mt-2 text-4xl lg:text-5xl font-extrabold tracking-tight text-center ">Our Commitment to Sustainability</p>
+          </div>
             <div className="mx-auto lg:max-w-4xl text-center">
-              <p className="tracking-widest text-sm font-bold text-gray-600 text-center uppercase"></p>
-              <p className="mt-2 text-4xl lg:text-5xl font-extrabold tracking-tight text-center">Our Commitment to Sustainability</p>
-              <p className="mt-10 mb-12 text-lg leading-8 text-gray-600">At Eco Capital FX, we align our efforts with the United Nations Sustainable Development Goals (SDGs) to create a positive global impact. Our focus is on three key areas:</p>
+            
+              <p className="mt-16 mb-16 text-lg leading-8 text-gray-600">At Eco Capital FX, we align our efforts with the United Nations Sustainable Development Goals (SDGs) to create a positive global impact. Our focus is on three key areas:</p>
             </div>
           </div>
 
@@ -33,7 +35,7 @@ const Suistanbility = () => {
                 </div>
                 <div className="w-1/2 flex justify-center">
                   <div className="h-32 w-32 flex items-center justify-center rounded-lg bg-white ml-14">
-                    <img src={img3} alt="Clean Water & Sanitation" className="w-full object-cover" />
+                    <img src={img3} alt="Clean Water & Sanitation" className="w-full object-cover rounded-lg" />
                   </div>
                 </div>
               </div>
@@ -49,7 +51,7 @@ const Suistanbility = () => {
                 </div>
                 <div className="w-1/2 flex justify-center">
                   <div className="h-32 w-32 flex items-center justify-center rounded-lg bg-white">
-                    <img src={image1} alt="Quality Education" className="w-full object-cover" />
+                    <img src={image1} alt="Quality Education" className="w-full object-cover rounded-lg" />
                   </div>
                 </div>
               </div>
@@ -67,7 +69,7 @@ const Suistanbility = () => {
                 </div>
                 <div className="w-1/2 flex justify-center">
                   <div className="h-32 w-32 flex items-center justify-center rounded-lg bg-white">
-                    <img src={image2} alt="Gender Equality" className="w-full object-cover" />
+                    <img src={image2} alt="Gender Equality" className="w-full object-cover rounded-lg" />
                   </div>
                 </div>
               </div>

@@ -38,10 +38,10 @@ const Goals = () => {
     <div>
       <div className="max-w-7xl mx-auto px-6 lg:px-12 mt-24 mb-24">
         <div className="text-center">
-          <p className="mt-2 text-4xl lg:text-4xl font-extrabold tracking-tight text-center">
-            Our Goals
-          </p>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6 mb-16 mt-8">
+        <div className="mx-auto lg:max-w-4xl text-center">
+<p className="mt-2 text-4xl lg:text-5xl font-extrabold tracking-tight text-center ">Our Goals</p>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6 mb-16 mt-16">
             {goalsData.map((goal, index) => (
               <div
                 key={index}

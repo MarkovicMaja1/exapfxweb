@@ -11,7 +11,7 @@ const AboutUs = () => {
         <div className="mx-auto px-4 max-w-screen-2xl relative isolate">
          
           <div className="mx-auto lg:max-w-4xl text-center">
-<p className="mt-2 text-4xl lg:text-5xl font-extrabold tracking-tight text-center ">About Us</p>
+          <p className="mt-2 text-4xl lg:text-5xl font-extrabold tracking-tight text-center ">About Us</p>
           </div>
           <div className="max-w-7xl mx-auto px-6 lg:px-12">
           <div className="grid grid-cols-1 lg:grid-cols-2 items-center gap-16">

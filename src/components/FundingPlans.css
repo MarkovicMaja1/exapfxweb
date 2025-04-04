@@ -1,0 +1,570 @@
+/* Index Section */
+html {
+  scroll-behavior: smooth;
+}
+* {
+  box-sizing: border-box;
+  transition: all 0.3s ease;
+}
+body, h1, h2, h3, h4, h5, h6, p, ol, ul {
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+}
+ol, ul {
+  list-style: none;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+button {
+  cursor: pointer;
+}
+/* Fonts are assumed to be imported globally in your app */
+/* @font-face {
+  font-family: "Clash Display";
+  src: url("./ClashDisplay.ttf");
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url("./Montserrat.ttf");
+} */
+.normalButton {
+  cursor: pointer;
+  display: flex;
+  padding: 10px 50px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 100px;
+  border: 1px solid #2E7D32; /* Green border */
+  height: 50px;
+  color: #2E7D32; /* Green text */
+  text-align: center;
+  font-family: "Montserrat";
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 30px;
+  width: 100%;
+  text-wrap: nowrap;
+  background: #fff;
+  transition: color 0.2s ease, background 0.5s ease;
+}
+.normalButton:hover {
+  color: #fff !important;
+  background: #2E7D32; /* Green background on hover */
+}
+.gradientText {
+  background: linear-gradient(90deg, #2E7D32 51.41%, #1B5E20 68.28%, #4CAF50 85.89%, #2E7D32 101.03%); /* Green gradient */
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Funding Section */
+.fundingSectionContainer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background-size: cover;
+  background-position: top;
+  background-repeat: no-repeat;
+  /* background-image: url("./fundingPlansBgFrame.jpg"); */
+  padding-bottom: 40px;
+}
+.fundingSectionWrapper {
+  padding: 10px 20px 20px 20px;
+}
+
+/* Plans Section */
+.ps_wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 130px;
+}
+.ps_wrapper .swiper {
+  display: none;
+  position: relative;
+}
+@media only screen and (max-width: 900px) {
+  .ps_wrapper .swiper {
+    display: block;
+  }
+}
+@media only screen and (max-width: 900px) {
+  .ps_wrapper {
+    gap: 140px;
+  }
+}
+@media only screen and (max-width: 750px) {
+  .ps_wrapper {
+    gap: 10px;
+  }
+}
+.ps_intro {
+  max-width: 856px;
+  width: 100%;
+  margin: 5px auto auto auto;
+}
+@media only screen and (max-width: 1000px) {
+  .ps_intro {
+    margin: 50px auto auto auto;
+  }
+}
+.ps_intro h1 {
+  color: #000;
+  text-align: center;
+  font-family: "Clash Display";
+  font-size: 44px;
+  font-weight: 600;
+  line-height: 53px;
+  letter-spacing: -0.5px;
+}
+.ps_intro p {
+  color: rgba(0, 0, 0, 0.7);
+  text-align: center;
+  font-family: "Montserrat";
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 30px;
+}
+.plan_select {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+@media only screen and (max-width: 750px) {
+  .plan_select {
+    margin-top: 10px;
+  }
+}
+.plan_select p {
+  color: #010310;
+  text-align: center;
+  font-family: "Clash Display";
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 100%;
+  text-transform: capitalize;
+}
+.account_size_select .tabinationContainer {
+  display: flex;
+}
+@media only screen and (max-width: 900px) {
+  .account_size_select .tabinationBox {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media only screen and (max-width: 450px) {
+  .account_size_select .tabinationBox {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+.plansTable_wrapper {
+  max-width: 1240px;
+  width: 100%;
+}
+.plans_table {
+  border-radius: 30px;
+  width: 100%;
+  border: 1px solid #2E7D32; /* Green border */
+  background: #fff;
+  display: inline-flex;
+  padding: 20px 30px;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding-top: 20px;
+  position: relative;
+}
+@media only screen and (max-width: 750px) {
+  .plans_table {
+    padding: 15px;
+    padding-top: 20px;
+    gap: 14px;
+    padding-bottom: 30px;
+  }
+}
+.table_header {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+.table_head {
+  display: flex;
+  gap: 20px;
+}
+.stepHeader {
+  color: #010310;
+  font-family: "Clash Display";
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 100%;
+  text-transform: capitalize;
+  width: 150px;
+  text-align: center;
+  background: linear-gradient(90deg, #2E7D32 0%, #1B5E20 100%); /* Green gradient */
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.table_rows {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.table_row_white {
+  background-color: #fff !important;
+}
+.table_row {
+  border-radius: 55px;
+  height: 40px;
+  width: 100%;
+  display: flex;
+  background: #E8F5E9; /* Light green background */
+  cursor: pointer;
+  align-items: center;
+}
+.table_row_data {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #010310;
+  font-family: "Montserrat";
+  font-size: 14px;
+  font-weight: 400;
+  text-transform: capitalize;
+  padding: 0 15px;
+}
+.table_row_data.keys {
+  flex: 1;
+  font-weight: 600;
+}
+.table_row_data:not(.keys) {
+  width: 150px;
+  text-align: center;
+}
+.arrow-icon {
+  transition: transform 0.3s;
+  width: 20px;
+}
+.table_footer {
+  padding: 0 35px;
+  width: 100%;
+  border-radius: 20px;
+  background: linear-gradient(90deg, #1B5E20 0%, #2E7D32 100%); /* Green gradient */
+  height: 91px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.table_footer h3, .table_footer p {
+  color: #fff;
+  font-family: "Clash Display";
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 100%;
+  text-transform: capitalize;
+}
+.table_footer p {
+  font-size: 18px;
+}
+.rightBox {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.planDetails_wrapper {
+  position: absolute;
+  top: -117px;
+  border-radius: 30px;
+  border: 2px solid #2E7D32; /* Green border */
+  background: #E8F5E9; /* Light green background */
+  box-shadow: 0px 4px 30px 0px rgba(27, 94, 32, 0.33); /* Green-tinted shadow */
+  display: inline-flex;
+  padding: 20px 40px;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  max-width: 1000px;
+  width: fit-content;
+  justify-content: space-between;
+}
+.planDetails_inner_main {
+  display: flex;
+  gap: 20px;
+}
+.steps_info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.plan_highlights {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.plan_highlights > div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.plan_name h3 {
+  color: #131217;
+  font-family: "Clash Display";
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 28px;
+  text-align: center;
+}
+.plan_highlights p {
+  color: #131217;
+  text-align: center;
+  font-family: "Montserrat";
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 180%;
+  letter-spacing: -0.15px;
+}
+.mobile_plan_table {
+  width: 100%;
+  display: none;
+}
+@media only screen and (max-width: 750px) {
+  .mobile_plan_table {
+    display: block;
+  }
+  .plans_table.laptop {
+    display: none;
+  }
+}
+.plans_table.laptop {
+  display: none;
+}
+@media only screen and (min-width: 751px) {
+  .plans_table.laptop {
+    display: flex;
+  }
+}
+.mobileSteps {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.mobileSteps .table_row {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border-radius: 20px;
+  background: #E8F5E9; /* Light green background */
+  padding: 10px;
+}
+.table_row_key {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+}
+.key_header {
+  min-height: 40px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: linear-gradient(90deg, #2E7D32 51.41%, #1B5E20 68.28%, #4CAF50 85.89%, #2E7D32 101.03%); /* Green gradient */
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: "Montserrat";
+  font-weight: 600;
+  font-size: 14px;
+}
+.table_row_values {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding-left: 30px;
+}
+.table_cell {
+  display: flex;
+  gap: 5px;
+  color: #010310;
+  font-family: "Montserrat";
+  font-size: 14px;
+  font-weight: 400;
+  text-transform: capitalize;
+}
+
+/* Tabination Section */
+.tabinationContainer.variant2_tabs {
+  border-radius: 100px;
+  background: #F5F5F5; /* Silver background */
+  max-width: 770px;
+  height: 51px;
+  overflow: hidden;
+}
+.tabinationWrapper {
+  width: 100%;
+}
+.tabinationBox {
+  display: flex;
+  justify-content: space-between;
+}
+.tabinationButton {
+  padding: 9px 20px;
+  cursor: pointer;
+  height: 43.5px;
+  border-radius: 100px;
+  width: 100%;
+}
+.tabinationButton p {
+  gap: 4px;
+  cursor: pointer;
+  text-align: center;
+  font-family: "Montserrat";
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 140%;
+  display: flex;
+  flex-direction: row;
+  background: linear-gradient(90deg, #C0C0C0 0%, #A9A9A9 100%); /* Silver gradient */
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.tabinationButton.activeTab {
+  border-radius: 100px;
+  background: #fff;
+  box-shadow: 0px 4px 4px 0px rgba(141, 149, 219, 0.25);
+}
+.tabinationButton.activeTab p {
+  background: linear-gradient(90deg, #2E7D32 51.41%, #1B5E20 68.28%, #4CAF50 85.89%, #2E7D32 101.03%); /* Green gradient */
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Swiper Simplification */
+.swiper {
+  width: 100%;
+  overflow: hidden;
+}
+.swiper-wrapper {
+  display: flex;
+  transition: transform 0.3s ease;
+}
+.swiper-slide {
+  flex-shrink: 0;
+  width: 317.273px;
+  margin-right: 10px;
+}
+.swiper-pagination {
+  text-align: center;
+  margin-top: 10px;
+}
+.swiper-pagination-bullet {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  background: #C0C0C0; /* Silver */
+  border-radius: 50%;
+  margin: 0 5px;
+  cursor: pointer;
+}
+.swiper-pagination-bullet-active {
+  background: #2E7D32; /* Green */
+}
+/* Enhanced Swiper Styles */
+.swiper {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  touch-action: pan-y;
+}
+.swiper-wrapper {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  transition-property: transform;
+  will-change: transform;
+}
+.swiper-slide {
+  flex-shrink: 0;
+  width: 90%;
+  margin-right: 5%;
+  transition: all 0.3s ease;
+}
+.swiper-slide:last-child {
+  margin-right: 0;
+}
+.swiper-controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin-top: 15px;
+}
+.swiper-button-prev,
+.swiper-button-next {
+  background: none;
+  border: none;
+  font-size: 20px;
+  color: #2E7D32; /* Green */
+  cursor: pointer;
+  padding: 5px 15px;
+}
+.swiper-pagination {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin: 0 10px;
+}
+.swiper-pagination-bullet {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #C0C0C0; /* Silver */
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.swiper-pagination-bullet-active {
+  background: #2E7D32; /* Green */
+  transform: scale(1.2);
+}
+/* Active slide highlight effect */
+.swiper-slide {
+  transform: scale(0.95);
+  transition: all 0.3s ease;
+}
+.swiper-slide-active {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* PLANCSS */
+.mobileSteps .table_row .table_row_values {
+  display: none; /* Force hide initially */
+}
+.mobileSteps .table_row.expanded .table_row_values {
+  display: flex !important; /* Force show when expanded */
+  flex-direction: column;
+  gap: 5px;
+  padding-left: 30px;
+}
+.mobileSteps .table_row.expanded .arrow-icon {
+  transform: rotate(180deg);
+}
+.key_header {
+  cursor: pointer;
+  user-select: none; /* Prevent text selection */
+}
