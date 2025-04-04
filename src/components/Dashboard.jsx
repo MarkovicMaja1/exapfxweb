@@ -37,7 +37,7 @@ const FundingPlans = () => {
           <div className="rightBox">
             <p>Assessment Price: ${sizes[size].price}</p>
             <button className="normalButton">
-              Start Alpha Capital Evaluation <img src="/arrow-blue.svg" alt="arrow" />
+            Start Alpha Capital Evaluation    {/* Start Alpha Capital Evaluation <img src="/arrow-blue.svg" alt="arrow" /> */}
             </button>
           </div>
         </div>
@@ -45,7 +45,7 @@ const FundingPlans = () => {
           <div className="table_row">
             <div className="table_row_key">
               <div className="key_header">
-                <img src="/arrow-down-circle.svg" alt="arrow" className="arrow-icon" /> Leverage
+                {/* <img src="/arrow-down-circle.svg" alt="arrow" className="arrow-icon" /> Leverage */}Leverage
               </div>
             </div>
             <div className="table_row_values">
@@ -55,7 +55,7 @@ const FundingPlans = () => {
           <div className="table_row table_row_white">
             <div className="table_row_key">
               <div className="key_header">
-                <img src="/arrow-down-circle.svg" alt="arrow" className="arrow-icon" /> Sim Profit Target
+                {/* <img src="/arrow-down-circle.svg" alt="arrow" className="arrow-icon" /> Sim Profit Target */}Sim Profit Target
               </div>
             </div>
             <div className="table_row_values">
@@ -66,7 +66,7 @@ const FundingPlans = () => {
           <div className="table_row">
             <div className="table_row_key">
               <div className="key_header">
-                <img src="/arrow-down-circle.svg" alt="arrow" className="arrow-icon" /> Max Sim Drawdown
+                {/* <img src="/arrow-down-circle.svg" alt="arrow" className="arrow-icon" /> Max Sim Drawdown */}Max Sim Drawdown
               </div>
             </div>
             <div className="table_row_values">
@@ -76,7 +76,7 @@ const FundingPlans = () => {
           <div className="table_row table_row_white">
             <div className="table_row_key">
               <div className="key_header">
-                <img src="/arrow-down-circle.svg" alt="arrow" className="arrow-icon" /> Max Daily Drawdown
+                {/* <img src="/arrow-down-circle.svg" alt="arrow" className="arrow-icon" /> Max Daily Drawdown */}Max Daily Drawdown 
               </div>
             </div>
             <div className="table_row_values">
@@ -86,7 +86,7 @@ const FundingPlans = () => {
           <div className="table_row">
             <div className="table_row_key">
               <div className="key_header">
-                <img src="/arrow-down-circle.svg" alt="arrow" className="arrow-icon" /> Max Sim Trading Days
+                {/* <img src="/arrow-down-circle.svg" alt="arrow" className="arrow-icon" /> Max Sim Trading Days */}Max Sim Trading Days
               </div>
             </div>
             <div className="table_row_values">
@@ -97,7 +97,7 @@ const FundingPlans = () => {
           <div className="table_row table_row_white">
             <div className="table_row_key">
               <div className="key_header">
-                <img src="/arrow-down-circle.svg" alt="arrow" className="arrow-icon" /> Analyst Performance Fee
+                {/* <img src="/arrow-down-circle.svg" alt="arrow" className="arrow-icon" /> Analyst Performance Fee */}Analyst Performance Fee
               </div>
             </div>
             <div className="table_row_values">
@@ -198,42 +198,42 @@ const FundingPlans = () => {
                     <div className="table_rows">
                       <div className="table_row">
                         <div className="table_row_data keys">
-                          Leverage <img src="/arrow-down-circle.svg" alt="arrow" className="arrow-icon" />
+                        Leverage      {/* Leverage <img src="/arrow-down-circle.svg" alt="arrow" className="arrow-icon" /> */}
                         </div>
                         <div className="table_row_data">1:30</div>
                         <div className="table_row_data">1:30</div>
                       </div>
                       <div className="table_row table_row_white">
                         <div className="table_row_data keys">
-                          Sim Profit Target <img src="/arrow-down-circle.svg" alt="arrow" className="arrow-icon" />
+                        Sim Profit Target    {/* Sim Profit Target <img src="/arrow-down-circle.svg" alt="arrow" className="arrow-icon" /> */}
                         </div>
                         <div className="table_row_data">${currentPlan.profit.toLocaleString()} (10%)</div>
                         <div className="table_row_data">NA</div>
                       </div>
                       <div className="table_row">
                         <div className="table_row_data keys">
-                          Max Sim Drawdown <img src="/arrow-down-circle.svg" alt="arrow" className="arrow-icon" />
+                        Max Sim Drawdown   {/* Max Sim Drawdown <img src="/arrow-down-circle.svg" alt="arrow" className="arrow-icon" /> */}
                         </div>
                         <div className="table_row_data">${currentPlan.drawdown.toLocaleString()} (6%)</div>
                         <div className="table_row_data">${currentPlan.drawdown.toLocaleString()} (6%)</div>
                       </div>
                       <div className="table_row table_row_white">
                         <div className="table_row_data keys">
-                          Max Daily Drawdown <img src="/arrow-down-circle.svg" alt="arrow" className="arrow-icon" />
+                        Max Daily Drawdown   {/* Max Daily Drawdown <img src="/arrow-down-circle.svg" alt="arrow" className="arrow-icon" /> */}
                         </div>
                         <div className="table_row_data">${currentPlan.daily.toLocaleString()} (4%)</div>
                         <div className="table_row_data">${currentPlan.daily.toLocaleString()} (4%)</div>
                       </div>
                       <div className="table_row">
                         <div className="table_row_data keys">
-                          Max Sim Trading Days <img src="/arrow-down-circle.svg" alt="arrow" className="arrow-icon" />
+                        Max Sim Trading Days    {/* Max Sim Trading Days <img src="/arrow-down-circle.svg" alt="arrow" className="arrow-icon" /> */}
                         </div>
                         <div className="table_row_data">Unlimited</div>
                         <div className="table_row_data">NA</div>
                       </div>
                       <div className="table_row table_row_white">
                         <div className="table_row_data keys">
-                          Analyst Performance Fee <img src="/arrow-down-circle.svg" alt="arrow" className="arrow-icon" />
+                        Analyst Performance Fee   {/* Analyst Performance Fee <img src="/arrow-down-circle.svg" alt="arrow" className="arrow-icon" /> */}
                         </div>
                         <div className="table_row_data">NA</div>
                         <div className="table_row_data">80%</div>
@@ -246,7 +246,7 @@ const FundingPlans = () => {
                   <div className="rightBox">
                     <p>Assessment Price: ${currentPlan.price}</p>
                     <button className="normalButton">
-                      Start Alpha Capital Evaluation <img src="/arrow-blue.svg" alt="arrow" />
+                    Start Alpha Capital Evaluation    {/* Start Alpha Capital Evaluation <img src="/arrow-blue.svg" alt="arrow" /> */}
                     </button>
                   </div>
                 </div>
