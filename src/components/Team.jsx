@@ -3,11 +3,9 @@ import React from 'react';
 const Team = () => {
   return (
     <section className="bg-[#101919] py-16 text-center">
-      <div className="mx-auto lg:max-w-4xl text-center">
-        <p className="mt-10 text-4xl lg:text-5xl font-extrabold tracking-tight text-white">
-          Meet Our Team
-        </p>
-      </div>
+           <div className="mx-auto lg:max-w-4xl text-center">
+<p className="mt-12 text-4xl lg:text-5xl font-extrabold tracking-tight text-center text-white ">Meet Our Team</p>
+          </div>
 
       {/* Gornja tri člana tima */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16 px-6 max-w-6xl mx-auto">
