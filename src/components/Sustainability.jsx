@@ -9,7 +9,7 @@ import gender from '../assets/gender-fluid.png';
 const Suistanbility = () => {
   return (
     <div className="relative overflow-hidden">
-      <div className="max-w-7xl mx-auto px-6 lg:px-12 mt-24 mb-24">
+      <div className="max-w-7xl mx-auto px-6 lg:px-12 mt-10 mb-24">
         <div className="text-center">
           <div className="mx-auto px-12 max-w-screen-xl relative isolate">
           <div className="mx-auto lg:max-w-4xl text-center">
