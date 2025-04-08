@@ -5,6 +5,10 @@
 nav {
   /* font-family: "Poppins", sans-serif !important; */
 }
+body, html {
+  overflow-x: hidden;
+}
+
 /* 
 body {
   margin: 0;
