@@ -12,7 +12,7 @@ const ChoosePlan = () => {
           </div>
         
         {/* <div className="w-2/4 mx-auto mt-6 mb-10 border-t-2 border-green-500"></div> */}
-        <div className="promo-text mt-16 text-gray-400">
+        <div className="promo-text mt-14 text-gray-400">
           <p>Sharpen your trading skills with ECapFX Simulated Trading Platform </p>
           <p> Access up to <strong>$200,000</strong> in virtual funds</p>
           <p> Claim <b>up to 90%</b> of your simulated profits</p>
@@ -22,7 +22,7 @@ const ChoosePlan = () => {
       </div>
 
       {/* Bottom half (boxes) */}
-      <div className="boxes-container">
+      <div className="boxes-container mt-14">
         {/* Boks 1 */}
         <div className="box-wrapper">
           <span className="badge badge-hyper">Best for Seasoned traders</span>
@@ -142,7 +142,7 @@ const ChoosePlan = () => {
         .boxes-container {
           display: flex;
           justify-content: center;
-          gap: 20px;
+          gap: 50px;
           flex-wrap: wrap;
           
           // padding: 40px 20px; 
@@ -213,7 +213,7 @@ const ChoosePlan = () => {
 
         .badge {
           position: absolute;
-          top: 0;
+          top: -5px;
           left: 20px;
           padding: 5px 15px;
           font-size: 0.75rem;

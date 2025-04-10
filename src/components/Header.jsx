@@ -24,8 +24,7 @@ const Header = () => {
         
         {/* Get Started button */}
         <a
-          className="px-5 py-2.5 text-white font-poppins block ml-auto sm:block sm:ml-0"
-          style={{ backgroundColor: '#1d8348', borderRadius: '30px' }}
+          className="px-5 py-2.5 text-white font-poppins block ml-auto sm:block sm:ml-0 bg-[#1d8348] rounded-3xl hover:text-black hover:bg-[#2ecc71] transition duration-300 ease-in-out"
         >
           Get Started
         </a>

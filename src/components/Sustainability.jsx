@@ -28,9 +28,9 @@ const Suistanbility = () => {
           </div>
 
           {/* Flex container */}
-          <div className="flex flex-col lg:flex-row gap-6 mb-16 mt-8 justify-center">
+          <div className="flex flex-col lg:flex-row gap-16 mb-16 mt-8 justify-center">
             {/* Left Box - First two cards stacked vertically */}
-            <div className="flex flex-col gap-6 w-full lg:w-1/3">
+            <div className="flex flex-col gap-16 w-full lg:w-1/3">
               {/* First Card */}
               <div className="bg-[#101919] rounded-lg shadow-lg p-6 flex flex-row items-center text-gray-400 hover:bg-gray-800 transition duration-300">
                 <div className="flex flex-col items-center text-center w-1/2">
