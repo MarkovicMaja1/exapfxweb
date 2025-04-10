@@ -7,11 +7,11 @@ const Header = () => {
       <nav className="items-center mx-auto flex max-w-screen-2xl p-4 relative">
         {/* Logo positioned absolutely */}
         <div className="absolute left-4 top-1/2 transform -translate-y-1/2 z-10">
-  <a href="#home" className="-m-1.5 p-1.5">
-    <span className="sr-only">Windframe</span>
-    <img src={logo} alt="Logo" className="w-2/5" /> {/* Veća širina */}
-  </a>
-</div>
+          <a href="#home" className="-m-1.5 p-1.5">
+            <span className="sr-only">Windframe</span>
+            <img src={logo} alt="Logo" className="w-2/5" /> {/* Veća širina */}
+          </a>
+        </div>
         
         {/* Navigation centered with padding to avoid overlap */}
         <ul className="hidden lg:flex gap-16 text-white text-lg font-bold justify-center flex-1 pl-32 ml-[100px]">

@@ -41,9 +41,11 @@ const Suistanbility = () => {
                   <p className="text-sm">We support initiatives that provide access to clean water and sanitation for communities in need, ensuring a healthier and more sustainable future.</p>
                 </div>
                 <div className="w-1/2 flex justify-center">
+                <a href="https://sdgs.un.org/goals/goal6" target="_blank" rel="noopener noreferrer">
                   <div className="h-32 w-32 flex items-center justify-center rounded-lg bg-white ml-14">
                     <img src={img3} alt="Clean Water & Sanitation" className="w-full object-cover rounded-lg" />
                   </div>
+                  </a>
                 </div>
               </div>
 
@@ -57,9 +59,11 @@ const Suistanbility = () => {
                   <p className="text-sm">Education is the key to opportunity. We contribute to programs that provide learning resources, scholarships, and training to empower the next generation.</p>
                 </div>
                 <div className="w-1/2 flex justify-center">
+                <a href="https://sdgs.un.org/goals/goal4" target="_blank" rel="noopener noreferrer">
                   <div className="h-32 w-32 flex items-center justify-center rounded-lg bg-white">
                     <img src={image1} alt="Quality Education" className="w-full object-cover rounded-lg" />
                   </div>
+                  </a>
                 </div>
               </div>
             </div>
@@ -75,9 +79,11 @@ const Suistanbility = () => {
                   <p className="text-sm">We advocate for equal opportunities in finance and beyond, supporting programs that promote women’s participation in trading, education, and leadership.</p>
                 </div>
                 <div className="w-1/2 flex justify-center">
+                <a href="https://sdgs.un.org/goals/goal5y" target="_blank" rel="noopener noreferrer">
                   <div className="h-32 w-32 flex items-center justify-center rounded-lg bg-white">
                     <img src={image2} alt="Gender Equality" className="w-full object-cover rounded-lg" />
                   </div>
+                  </a>
                 </div>
               </div>
             </div>
