@@ -168,7 +168,7 @@ button {
 }
 .plansTable_wrapper {
   max-width: 1240px;
-  width: 100%;
+  width: 60%;
 }
 .plans_table {
   border-radius: 30px;
@@ -182,6 +182,7 @@ button {
   gap: 20px;
   padding-top: 20px;
   position: relative;
+  margin-bottom:48px;
 }
 @media only screen and (max-width: 750px) {
   .plans_table {
@@ -213,6 +214,7 @@ button {
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  margin-right: 10px;
 }
 .table_rows {
   width: 100%;
@@ -345,6 +347,10 @@ button {
   }
   .plans_table.laptop {
     display: none;
+  }
+  .plansTable_wrapper {
+    
+    width: 100%;
   }
 }
 .plans_table.laptop {
@@ -567,4 +573,26 @@ button {
 .key_header {
   cursor: pointer;
   user-select: none; /* Prevent text selection */
+}
+
+
+/* FundingPlans.css */
+
+/* Dodaj tranziciju na elemente koji se menjaju */
+.table_row_data,
+.table_footer h3,
+.rightBox p {
+  transition: all 0.3s ease-in-out; /* Glatka tranzicija za sve osobine */
+}
+
+/* Opcionalno: Dodaj blagi efekat zamućenja tokom promene */
+.table_row_data.promena,
+.table_footer h3.promena,
+.rightBox p.promena {
+  opacity: 0.5; /* Smanji prozirnost tokom promene */
+}
+
+/* Osiguraj da Swiper slajdovi imaju animaciju */
+.swiper-slide {
+  transition: opacity 0.3s ease-in-out;
 }

@@ -19,12 +19,12 @@ const Header = () => {
           <li><a href="#chooseplan" className="font-bold hover:text-[#1d8348] transition">Choose Plan</a></li>
           <li><a href="#about" className="font-bold hover:text-[#1d8348] transition">About Us</a></li>
           <li><a href="#team" className="font-bold hover:text-[#1d8348] transition">Team</a></li>
-          <li><a href="#contact" className="font-bold hover:text-[#1d8348] transition">Contact</a></li>
+          {/* <li><a href="#contact" className="font-bold hover:text-[#1d8348] transition">Contact</a></li> */}
         </ul>
         
         {/* Get Started button */}
         <a
-          className="px-5 py-2.5 text-white font-poppins"
+          className="px-5 py-2.5 text-white font-poppins block ml-auto sm:block sm:ml-0"
           style={{ backgroundColor: '#1d8348', borderRadius: '30px' }}
         >
           Get Started

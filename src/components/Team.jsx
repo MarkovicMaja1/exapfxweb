@@ -1,60 +1,48 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
+
+const teamMembers = [
+  { name: 'Michael Pearn', role: 'Founder & CEO', desc: 'Leads the firm with experience in trading.' },
+  { name: 'Carly Pearn', role: 'Chief Sustainability Officer', desc: 'Oversees sustainability efforts.' },
+  { name: 'Nebojša Sladoje', role: 'COO', desc: 'Manages operations and internal teams.' },
+  { name: 'Maja Marković', role: 'Lead Developer', desc: 'Optimizes the platform experience.' },
+  { name: 'Nikola Ilić', role: 'Lead Developer', desc: 'Maintains the trading system infrastructure.' },
+];
 
 const Team = () => {
+  const marqueeRef = useRef(null);
+
+  // Funkcija za dinamičko popunjavanje trake
+  const generateMarqueeContent = () => {
+    const screenWidth = window.innerWidth;
+    const cardWidth = 288; // w-72 = 18rem = 288px (pretpostavljena širina kartice sa marginom)
+    const cardsPerScreen = Math.ceil(screenWidth / cardWidth) * 2; // Dovoljno kartica za 2 ekrana
+    const totalCards = Math.max(cardsPerScreen, teamMembers.length * 2); // Minimalno 2x originalni niz
+
+    const repeatedMembers = [];
+    for (let i = 0; i < totalCards; i++) {
+      repeatedMembers.push(teamMembers[i % teamMembers.length]);
+    }
+    return repeatedMembers;
+  };
+
+  const marqueeContent = generateMarqueeContent();
+
   return (
-    <section className="bg-[#101919] py-16 text-center">
-           <div className="mx-auto lg:max-w-4xl text-center">
-<p className="mt-12 text-4xl lg:text-5xl font-extrabold tracking-tight text-center text-white ">Meet Our Team</p>
-          </div>
+    <section className="bg-[#101919] py-24 text-white text-center overflow-hidden">
+      <h2 className="text-4xl font-extrabold mb-12">Meet Our Team</h2>
 
-      {/* Gornja tri člana tima */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16 px-6 max-w-6xl mx-auto">
-        <div className="bg-white rounded-xl shadow-md p-6 w-full border-t-4 border-yellow-600 transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
-          <h3 className="text-xl font-semibold mb-2 text-gray-800">
-            Michael Pearn – <span className="text-yellow-600">Founder & CEO</span>
-          </h3>
-          <p className="text-gray-600 leading-relaxed">
-            As the visionary behind EcapFX, Michael leads the firm with extensive experience in proprietary trading and financial markets.
-          </p>
-        </div>
-
-        <div className="bg-white rounded-xl shadow-md p-6 w-full border-t-4 border-yellow-600 transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
-          <h3 className="text-xl font-semibold mb-2 text-gray-800">
-            Carly Pearn – <span className="text-yellow-600">Co-Founder & Chief Sustainability Officer</span>
-          </h3>
-          <p className="text-gray-600 leading-relaxed">
-            Carly oversees the firm's sustainability initiatives, ensuring that environmental and social responsibility are integrated into our business model.
-          </p>
-        </div>
-
-        <div className="bg-white rounded-xl shadow-md p-6 w-full border-t-4 border-yellow-600 transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
-          <h3 className="text-xl font-semibold mb-2 text-gray-800">
-            Nebojša Sladoje – <span className="text-yellow-600">Chief Operating Officer (COO)</span>
-          </h3>
-          <p className="text-gray-600 leading-relaxed">
-            Nebojša is responsible for overseeing company operations and managing all internal teams.
-          </p>
-        </div>
-      </div>
-
-      {/* Donja dva člana tima - vertikalno na telefonu */}
-      <div className="flex flex-col md:flex-row justify-center gap-8 mt-8 px-6 max-w-4xl mx-auto">
-        <div className="bg-white rounded-xl shadow-md p-6 w-full md:w-1/3 border-t-4 border-yellow-600 transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
-          <h3 className="text-xl font-semibold mb-2 text-gray-800">
-            Maja Marković – <span className="text-yellow-600">Lead Developer</span>
-          </h3>
-          <p className="text-gray-600 leading-relaxed">
-            Maja specializes in developing and optimizing our trading platform, ensuring seamless user experiences and cutting-edge trading tools.
-          </p>
-        </div>
-
-        <div className="bg-white rounded-xl shadow-md p-6 w-full md:w-1/3 border-t-4 border-yellow-600 transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
-          <h3 className="text-xl font-semibold mb-2 text-gray-800">
-            Nikola Ilić – <span className="text-yellow-600">Lead Developer</span>
-          </h3>
-          <p className="text-gray-600 leading-relaxed">
-            Nikola focuses on building and maintaining the technical infrastructure that powers our proprietary trading systems.
-          </p>
+      <div className="relative w-full overflow-hidden">
+        <div ref={marqueeRef} className="flex animate-marquee whitespace-nowrap gap-6 px-6">
+          {marqueeContent.map((member, idx) => (
+            <div
+              key={idx}
+              className="bg-white text-black w-72 flex-shrink-0 rounded-xl shadow-md p-6 border-t-4 border-yellow-600"
+            >
+              <h3 className="text-xl font-semibold mb-1">{member.name}</h3>
+              <p className="text-yellow-600 text-md mb-2">{member.role}</p>
+              <p className="text-gray-600 text-sm">{member.desc}</p>
+            </div>
+          ))}
         </div>
       </div>
     </section>

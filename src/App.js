@@ -18,7 +18,8 @@ import Example from "./components/Example";
 import ChoosePlan from "./components/ChoosePlan";
 import Dashboard from "./components/Dashboard";
 import Navbar from "./components/Navbar";
-import TeamSection from "./components/Team";
+import TeamSection from "./components/TeamFirst";
+import BlogCarousel from "./components/TeamNew";
 
 
 

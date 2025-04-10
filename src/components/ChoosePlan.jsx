@@ -5,9 +5,9 @@ const ChoosePlan = () => {
   return (
     <div className="funding-journey-container">
       {/* Top half with black background */}
-      <div className="top-section ">
+      <div className="top-section">
         {/* <h1 className="section-title mt-2 text-4xl lg:text-4xl font-extrabold tracking-tight text-center" style={{ marginTop: '50px' }}>Choose Your Funding Journey</h1> */}
-        <div className="mx-auto lg:max-w-4xl text-center mt-24">
+        <div className="mx-auto lg:max-w-4xl text-center ">
 <p className="mt-2 text-4xl lg:text-5xl font-extrabold tracking-tight text-center ">Choose Your Funding Journey</p>
           </div>
         
@@ -24,7 +24,7 @@ const ChoosePlan = () => {
       {/* Bottom half (boxes) */}
       <div className="boxes-container">
         {/* Boks 1 */}
-        <div className="box-wrapper" style={{ marginBottom: '30px' }}>
+        <div className="box-wrapper">
           <span className="badge badge-hyper">Best for Seasoned traders</span>
           <div className="inner-box">
             <img src={trader} alt="Crypto Trader" className="blurred-background" />
@@ -48,7 +48,7 @@ const ChoosePlan = () => {
 
         {/* Boks 2 */}
         <div className="box-wrapper">
-          <span className="badge badge-green">Best For Begginers</span>
+          <span className="badge badge-green">Best For Beginners</span>
           <div className="inner-box">
             <img src={trader} alt="Crypto Trader" className="blurred-background" />
             <div className="text-overlay">
@@ -71,7 +71,7 @@ const ChoosePlan = () => {
 
         {/* Boks 3 */}
         <div className="box-wrapper">
-          <span className="badge badge-blue">Take it slow</span>
+          <span className="badge badge-blue">Best For Experienced traders</span>
           <div className="inner-box">
             <img src={trader} alt="Crypto Trader" className="blurred-background" />
             <div className="text-overlay">
@@ -103,7 +103,8 @@ const ChoosePlan = () => {
 
         .top-section {
            /* Black background for the top half */
-          padding: 20px 0px; /* Matches the original padding */
+          // padding: 20px 0px; 
+          padding-top: 6rem;
           color: #ffffff; /* White text for contrast */
          
         }
@@ -144,7 +145,7 @@ const ChoosePlan = () => {
           gap: 20px;
           flex-wrap: wrap;
           
-          padding: 40px 20px; /* Matches the original padding for bottom half */
+          // padding: 40px 20px; 
           // background: #f5f5f5; 
         }
 
@@ -152,7 +153,7 @@ const ChoosePlan = () => {
           position: relative;
           width: 100%;
           max-width: 350px;
-          padding-top: 15px;
+          margin-bottom: 6rem;
           border-radius: 1rem;
         }
 

@@ -1,4 +1,4 @@
-@keyframes waveAnimation {
+/* @keyframes waveAnimation {
     0% { transform: translateY(0px) scaleY(1); }
     25% { transform: translateY(-10px) scaleY(1.02); }
     50% { transform: translateY(5px) scaleY(0.98); }
@@ -12,6 +12,66 @@
     background: url('../assets/so.svg') repeat-x;
     background-size: cover;
     filter: grayscale(100%);
+    z-index: -1;
+    animation: waveAnimation 6s ease-in-out infinite;
+  } */
+
+
+/* 
+  @keyframes waveAnimation {
+    0% {
+      transform: translateY(0px) scaleY(1);
+    }
+    25% {
+      transform: translateY(-30px) scaleY(1.1) rotate(-1deg);
+    }
+    50% {
+      transform: translateY(20px) scaleY(0.95) rotate(1deg);
+    }
+    75% {
+      transform: translateY(-25px) scaleY(1.05) rotate(-1.5deg);
+    }
+    100% {
+      transform: translateY(0px) scaleY(1) rotate(0deg);
+    }
+  }
+  
+  .animated-bg {
+    position: absolute;
+    inset: 0;
+    background: url('../assets/so.svg') repeat-x;
+    background-size: cover;
+    filter: grayscale(100%);
+    z-index: -1;
+    animation: waveAnimation 6s ease-in-out infinite;
+  }
+   */
+
+   
+   @keyframes waveAnimation {
+    0% { 
+      transform: translateY(0px) scaleY(1); 
+    }
+    25% { 
+      transform: translateY(-20px) scaleY(1.05); 
+    }
+    50% { 
+      transform: translateY(10px) scaleY(0.95); 
+    }
+    75% { 
+      transform: translateY(-15px) scaleY(1.02); 
+    }
+    100% { 
+      transform: translateY(0px) scaleY(1); 
+    }
+  }
+  
+  .animated-bg {
+    position: absolute;
+    inset: 0;
+    background: url('../assets/so.svg') repeat-x;
+    background-size: cover;
+    /* filter: grayscale(100%); */
     z-index: -1;
     animation: waveAnimation 6s ease-in-out infinite;
   }
