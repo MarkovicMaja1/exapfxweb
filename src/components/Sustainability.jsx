@@ -6,10 +6,12 @@ import quality from '../assets/quality.png';
 import ability from '../assets/ability.png';
 import gender from '../assets/gender-fluid.png';
 import backgroundImage from '../assets/so.svg';
+import './Home.css';
 
 const Suistanbility = () => {
   return (
-    <div className="relative overflow-hidden" style={{ backgroundImage: `url(${backgroundImage})`, backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat' }}>
+    <div className="relative overflow-hidden" >
+      <div className="animated-bg"></div>
       <div className="max-w-7xl mx-auto px-6 lg:px-12 mt-10 mb-24">
         <div className="text-center">
           <div className="mx-auto px-12 max-w-screen-xl relative isolate">
