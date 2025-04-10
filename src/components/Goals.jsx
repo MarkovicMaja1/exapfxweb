@@ -4,6 +4,8 @@ import network from '../assets/networking2.png';
 import leadership from '../assets/leadership2.png';
 import expansion from '../assets/expansion2.png';
 import planet from '../assets/planet2.png';
+import backgroundImage from '../assets/image.svg'; // Dodajte pozadinsku sliku
+
 
 const Goals = () => {
   const goalsData = [
@@ -35,7 +37,7 @@ const Goals = () => {
   ];
 
   return (
-    <div>
+    <div style={{ backgroundImage: `url(${backgroundImage})`, backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat' }}>
       <div className="max-w-7xl mx-auto px-6 lg:px-12 mt-24 mb-24">
         <div className="text-center">
         <div className="mx-auto lg:max-w-4xl text-center">
