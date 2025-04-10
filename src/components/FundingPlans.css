@@ -40,7 +40,7 @@ button {
   border-radius: 100px;
   border: 1px solid #2E7D32; /* Green border */
   height: 50px;
-  color: #2E7D32; /* Green text */
+  color: black; /* Green text */
   text-align: center;
   font-family: "Montserrat";
   font-size: 14px;
@@ -56,10 +56,8 @@ button {
   background: #2E7D32; /* Green background on hover */
 }
 .gradientText {
-  background: linear-gradient(90deg, #2E7D32 51.41%, #1B5E20 68.28%, #4CAF50 85.89%, #2E7D32 101.03%); /* Green gradient */
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: black;
+  font-weight: bold;
 }
 
 /* Funding Section */
@@ -205,15 +203,12 @@ button {
   color: #010310;
   font-family: "Clash Display";
   font-size: 20px;
-  font-weight: 500;
+  font-weight: 600;
   line-height: 100%;
   text-transform: capitalize;
   width: 150px;
   text-align: center;
-  background: linear-gradient(90deg, #2E7D32 0%, #1B5E20 100%); /* Green gradient */
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+
   margin-right: 10px;
 }
 .table_rows {
@@ -289,7 +284,7 @@ button {
   top: -117px;
   border-radius: 30px;
   border: 2px solid #2E7D32; /* Green border */
-  background: #E8F5E9; /* Light green background */
+  background: white; /* Light green background */
   box-shadow: 0px 4px 30px 0px rgba(27, 94, 32, 0.33); /* Green-tinted shadow */
   display: inline-flex;
   padding: 20px 40px;
