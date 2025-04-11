@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import image1 from '../assets/investment.png';
 import image2 from '../assets/growth.png';
 import Background from './Background';
@@ -13,9 +13,9 @@ const AboutUs = () => {
           </div>
 
           <div className="max-w-7xl mx-auto px-6 lg:px-12">
-            <div className="grid grid-cols-1 lg:grid-cols-2 items-center gap-16">
+            <div className="grid grid-cols-1 lg:grid-cols-2 items-center gap-16 about-us-grid">
               {/* Eco Capital FX */}
-              <div className="mx-auto mt-16 sm:mt-20 lg:mt-24 lg:max-w-4xl">
+              <div className="about-us-text mx-auto mt-16 sm:mt-20 lg:mt-24 lg:max-w-4xl">
                 <dl className="grid grid-cols-1 gap-y-16">
                   <div className="text-left">
                     <dt className="text-3xl font-semibold mb-4 inline-block">
@@ -31,7 +31,7 @@ const AboutUs = () => {
                 </dl>
               </div>
 
-              <div className="flex justify-center mt-10 image1">
+              <div className="about-us-image ecoImage flex justify-center mt-10">
                 <img src={image1} alt="About Us" className="w-3/4 h-3/4 rounded-lg bg-transparent hover:scale-105 transition-transform duration-300" />
               </div>
             </div>
@@ -41,14 +41,14 @@ const AboutUs = () => {
 
           {/* Mission */}
           <div className="max-w-7xl mx-auto px-6 lg:px-12">
-            <div className="grid grid-cols-1 lg:grid-cols-2 items-center gap-16">
+            <div className="grid grid-cols-1 lg:grid-cols-2 items-center gap-16 about-us-grid">
               {/* Left side - Image */}
-              <div className="flex justify-center  mr-10 image2">
-                <img src={image2} alt="About Us" className="w-3/4 h-3/4  mr-10 rounded-lg bg-transparent hover:scale-105 transition-transform duration-300" />
+              <div className="about-us-image missionImage flex justify-center mr-10">
+                <img src={image2} alt="About Us" className="w-3/4 h-3/4 mr-10 rounded-lg bg-transparent hover:scale-105 transition-transform duration-300" />
               </div>
 
               {/* Right side - Text */}
-              <div className="mx-auto  sm:mt-20 lg:max-w-4xl text-left">
+              <div className="about-us-text mx-auto sm:mt-20 lg:max-w-4xl text-left">
                 <dl className="grid grid-cols-1 gap-y-16">
                   <div className="text-left">
                     <dt className="text-3xl font-semibold mb-4 inline-block">Our Mission</dt>
@@ -64,38 +64,39 @@ const AboutUs = () => {
       </section>
 
       <style jsx>{`
+        /* Za mobilne uređaje */
         @media (max-width: 768px) {
-          /* Za mobilne uređaje, slika i tekst idu u horizontalni raspored */
-          .grid {
+          .about-us-grid {
             display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
           }
 
-          .grid .text-left,
-          .grid .flex {
+          .about-us-text,
+          .about-us-image {
             width: 100%;
             margin-bottom: 20px;
           }
 
-          .grid .text-left {
+          .about-us-text {
             order: 1; /* Tekst prvo */
           }
 
-          .grid .flex {
+          .about-us-image {
             order: 2; /* Slika druga */
             display: flex;
             justify-content: center;
             align-items: center;
           }
-            .image1 {
-             margin-top: -40px;
-             
-            }
-              .image2 {
-             margin-top: -40px;
-             
-            }
+
+          .ecoImage {
+           margin-top: -40px;
+          }
+           .missionImage {
+           margin-top:-20px;
+           margin-right:-20px;
+           }
         }
       `}</style>
     </div>
