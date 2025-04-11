@@ -411,7 +411,7 @@ button {
   border-radius: 100px;
   background: #F5F5F5; /* Silver background */
   max-width: 770px;
-  height: 51px;
+  height: 44px;
   overflow: hidden;
 }
 .tabinationWrapper {
@@ -435,7 +435,7 @@ button {
   /* font-family: "Montserrat"; */
   font-size: 14px;
   font-weight: 500;
-  line-height: 140%;
+  line-height: 179%;
   display: flex;
   flex-direction: row;
   background: linear-gradient(90deg, #C0C0C0 0%, #A9A9A9 100%); 
@@ -607,4 +607,11 @@ button {
 /* Osiguraj da Swiper slajdovi imaju animaciju */
 .swiper-slide {
   transition: opacity 0.3s ease-in-out;
+}
+
+@media (max-width: 640px) {
+  .normalButton {
+    padding: 2px 8px; /* Manje margine za mobilne uređaje */
+    font-size: 10px; /* Manji font za mobilne uređaje */
+  }
 }
