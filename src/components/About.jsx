@@ -37,7 +37,7 @@ const AboutUs = () => {
             </div>
           </div>
 
-          <div className="w-3/4 mx-auto mt-8 border-t-2 border-green-500"></div>
+          <div className="w-3/4 mx-auto mt-8 border-t-2 border-green-500 line"></div>
 
           {/* Mission */}
           <div className="max-w-7xl mx-auto px-6 lg:px-12">
@@ -97,6 +97,9 @@ const AboutUs = () => {
            margin-top:-20px;
            margin-right:-20px;
            }
+
+           .line {
+           margin-bottom: 70px;}
         }
       `}</style>
     </div>

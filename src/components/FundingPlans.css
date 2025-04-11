@@ -615,3 +615,9 @@ button {
     font-size: 10px; /* Manji font za mobilne uređaje */
   }
 }
+
+@media (max-width: 639px) {
+  .normalButton {
+    display: none;
+  }
+}
