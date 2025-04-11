@@ -19,10 +19,10 @@ const AboutUs = () => {
                 <dl className="grid grid-cols-1 gap-y-16">
                   <div className="text-left">
                     <dt className="text-3xl font-semibold mb-4 inline-block">
-                    ECAPFX
+                    ECapFX
                     </dt>
                     <dd className="text-lg text-gray-400 mb-4">
-                      At ECAPFX, we are redefining proprietary trading by creating opportunities for skilled traders while making a positive impact on the world. Our platform empowers traders to access substantial capital, refine their strategies, and achieve financial success without the limitations of traditional funding.
+                      At ECapFX, we are redefining proprietary trading by creating opportunities for skilled traders while making a positive impact on the world. Our platform empowers traders to access substantial capital, refine their strategies, and achieve financial success without the limitations of traditional funding.
                     </dd>
                     <dd className="text-lg text-gray-400 mb-4">
                       But we’re more than just a prop firm. We believe that financial growth and sustainability can go hand in hand. That’s why we commit 1-3% of our annual profits to sustainability (SDGS)-focused initiatives, ensuring that our success contributes to a better future for both traders and the planet.
