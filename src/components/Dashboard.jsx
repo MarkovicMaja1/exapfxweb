@@ -36,8 +36,8 @@ const FundingPlans = () => {
     <SwiperSlide key={size}>
       <div className="plans_table">
         <div className="table_footer">
-          <h3 className={uPromeni ? 'promena' : ''}>ECapFX {sizes[size].label}</h3>
-          <div className="rightBox">
+        <h3 className={`${uPromeni ? 'promena' : ''} text-white`}>ECapFX {sizes[size].label}</h3>
+        <div className="rightBox">
             <p className={uPromeni ? 'promena' : ''}>Assessment Price: ${sizes[size].price}</p>
             <button className="normalButton">
               Start ECapFX Evaluation

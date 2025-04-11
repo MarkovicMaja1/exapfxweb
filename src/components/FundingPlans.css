@@ -431,7 +431,7 @@ button {
   /* font-family: "Montserrat"; */
   font-size: 14px;
   font-weight: 500;
-  line-height: 179%;
+  line-height: 139% !important;
   display: flex;
   flex-direction: row;
   background: linear-gradient(90deg, #C0C0C0 0%, #A9A9A9 100%); 
