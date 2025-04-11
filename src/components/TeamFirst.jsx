@@ -10,7 +10,7 @@ const Team = () => {
       id: 1,
       category: "Michael Pearn",
       title: "Founder & CEO",
-      description: "As the visionary behind ECAPFX, Michael leads the firm with extensive experience in proprietary trading and financial markets."
+      description: "As the visionary behind ECapFX, Michael leads the firm with extensive experience in proprietary trading and financial markets."
     },
     {
       id: 2,

@@ -36,11 +36,11 @@ const FundingPlans = () => {
     <SwiperSlide key={size}>
       <div className="plans_table">
         <div className="table_footer">
-          <h3 className={uPromeni ? 'promena' : ''}>ECAPFX {sizes[size].label}</h3>
+          <h3 className={uPromeni ? 'promena' : ''}>ECapFX {sizes[size].label}</h3>
           <div className="rightBox">
             <p className={uPromeni ? 'promena' : ''}>Assessment Price: ${sizes[size].price}</p>
             <button className="normalButton">
-              Start ECAPFX Evaluation
+              Start ECapFX Evaluation
             </button>
           </div>
         </div>
@@ -123,7 +123,7 @@ const FundingPlans = () => {
           </div>
           <div className="ps_wrapper">
             <div className="ps_intro">                     
-              <p>Choose the evaluation based on your preference to become an ECAPFX Trader.</p>
+              <p>Choose the evaluation based on your preference to become an ECapFX Trader.</p>
               <div className="plan_select step_select">
                 <div className="tabinationContainer variant2_tabs">
                   <div className="tabinationWrapper">
@@ -146,7 +146,7 @@ const FundingPlans = () => {
                   <div className="tabinationWrapper">
                     <ul className="tabinationBox">
                       <li className="tabinationButton activeTab">
-                        <p><span>ECAPFX</span></p>
+                        <p><span>ECapFX</span></p>
                       </li>
                     </ul>
                   </div>
@@ -187,7 +187,7 @@ const FundingPlans = () => {
                   <div className="plan_highlights">
                     <div><p>No Profit Cap</p></div>
                     <div><p>Payout-on-demand</p></div>
-                    <div><p>Quickest way to become an ECAPFX Trader</p></div>
+                    <div><p>Quickest way to become an ECapFX Trader</p></div>
                   </div>
                 </div>
                 <div className="tableWrapper">
@@ -233,10 +233,10 @@ const FundingPlans = () => {
                   </div>
                 </div>
                 <div className="table_footer">
-                  <h3 className={uPromeni ? 'promena' : ''}>ECAPFX {currentPlan.label}</h3>
+                  <h3 className={uPromeni ? 'promena' : ''}>ECapFX {currentPlan.label}</h3>
                   <div className="rightBox">
                     <p className={uPromeni ? 'promena' : ''}>Assessment Price: ${currentPlan.price}</p>
-                    <button className="normalButton">Start ECAPFX  Capital Evaluation</button>
+                    <button className="normalButton">Start ECapFX  Capital Evaluation</button>
                   </div>
                 </div>
               </div>
