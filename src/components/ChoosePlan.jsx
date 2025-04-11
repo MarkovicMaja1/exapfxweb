@@ -8,7 +8,7 @@ const ChoosePlan = () => {
       <div className="top-section">
         {/* <h1 className="section-title mt-2 text-4xl lg:text-4xl font-extrabold tracking-tight text-center" style={{ marginTop: '50px' }}>Choose Your Funding Journey</h1> */}
         <div className="mx-auto lg:max-w-4xl text-center ">
-<h2 className="mt-2 text-4xl lg:text-5xl font-extrabold tracking-tight text-center ">Choose Your Funding Journey</h2>
+<h2 className="text-4xl lg:text-5xl font-extrabold tracking-tight text-center ">Choose Your Funding Journey</h2>
           </div>
         
         {/* <div className="w-2/4 mx-auto mt-6 mb-10 border-t-2 border-green-500"></div> */}
