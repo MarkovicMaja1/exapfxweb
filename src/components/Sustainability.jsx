@@ -16,7 +16,7 @@ const Suistanbility = () => {
         <div className="text-center">
           <div className="mx-auto px-12 max-w-screen-xl relative isolate">
             <div className="mx-auto lg:max-w-4xl text-center">
-              <h2 className="mt-2 text-4xl lg:text-5xl font-extrabold tracking-tight text-center commitment">
+              <h2 className="mt-2 text-4xl lg:text-5xl font-extrabold tracking-tight text-center ">
                 Sustainability
               </h2>
             </div>
