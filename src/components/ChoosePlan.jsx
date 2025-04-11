@@ -357,6 +357,12 @@ const ChoosePlan = () => {
           .box-wrapper {
             max-width: 100%;
             margin-bottom: 30px;
+             padding-left: 20px;
+            padding-right: 20px;
+          }
+             .top-section {
+            padding-left: 20px;
+            padding-right: 20px;
           }
 
           .section-title {
