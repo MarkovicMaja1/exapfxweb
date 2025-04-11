@@ -120,13 +120,13 @@ const Team = () => {
             {/* Ikona za sledeći slajd */}
           </button>
 
-          <button
+          {/* <button
             onClick={toggleAutoplay}
             className="absolute bottom-4 right-4 bg-white p-2 rounded-full shadow-lg hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-500"
             aria-label={isPlaying ? "Pause autoplay" : "Start autoplay"}
-          >
+          > */}
             {/* Ikona za play/pause */}
-          </button>
+          {/* </button> */}
         </div>
       </div>
     </section>
