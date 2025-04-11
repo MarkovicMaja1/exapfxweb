@@ -110,7 +110,7 @@ const Footer = () => {
         </div>
         <div className="mt-16 pt-8 sm:mt-20 md:flex md:items-center justify-center lg:mt-24 border-t border-gray-700">
           <p className="mt-8 text-xs leading-5 text-gray-500 md:order-1 md:mt-0 max-sm:text-center">
-            © 2025 All rights reserved.
+            © 2025 ECapFX All rights reserved.
           </p>
         </div>
       </div>
