@@ -69,7 +69,7 @@ const Team = () => {
   return (
     <section className="bg-[#101919] py-28 text-center">
       <div className="mx-auto lg:max-w-4xl text-center">
-        <p className="mb-12 text-4xl lg:text-5xl font-extrabold tracking-tight text-center text-white">Meet Our Team</p>
+        <h2 className="mb-28 text-4xl lg:text-5xl font-extrabold tracking-tight text-center text-white">Meet Our Team</h2>
       </div>
 
       <div className="max-w-7xl mx-auto px-4">
@@ -90,12 +90,12 @@ const Team = () => {
                 >
                   <div className="bg-white rounded-lg shadow-lg overflow-hidden h-full transition-transform duration-300 border-t-4 border-yellow-600">
                     <div className="p-4"> {/* Reduced padding for smaller cards */}
-                      <h2 className="mt-1 text-xl font-bold text-gray-900 leading-tight">
+                      <h4 className="mt-1 text-xl font-bold text-gray-900 leading-tight">
                         {post.category}
-                      </h2>
-                      <h2 className="mt-1 text-xl font-bold leading-tight text-yellow-600">
+                      </h4>
+                      <h5 className="mt-1 text-xl font-bold leading-tight text-yellow-600">
                         {post.title}
-                      </h2>
+                      </h5>
                       <p className="mt-2 text-gray-600">{post.description}</p> {/* Reduced spacing for tighter content */}
                     </div>
                   </div>

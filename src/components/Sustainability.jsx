@@ -16,9 +16,9 @@ const Suistanbility = () => {
         <div className="text-center">
           <div className="mx-auto px-12 max-w-screen-xl relative isolate">
             <div className="mx-auto lg:max-w-4xl text-center">
-              <p className="mt-2 text-4xl lg:text-5xl font-extrabold tracking-tight text-center">
-                Our Commitment to Sustainability
-              </p>
+              <h2 className="mt-2 text-4xl lg:text-5xl font-extrabold tracking-tight text-center commitment">
+                Sustainability
+              </h2>
             </div>
             <div className="mx-auto lg:max-w-4xl text-center">
               <p className="mt-16 mb-16 text-lg leading-8 text-gray-600">
@@ -37,8 +37,8 @@ const Suistanbility = () => {
                   <div className="w-16 h-16 mb-4 flex items-center justify-center bg-gray-800 rounded-full">
                     <img src={quality} alt="Empower Traders" className="w-10 h-10 object-contain filter brightness-100 saturate-200" />
                   </div>
-                  <h3 className="text-xl font-semibold text-white mb-2">Clean Water & Sanitation</h3>
-                  <p className="text-sm">We support initiatives that provide access to clean water and sanitation for communities in need, ensuring a healthier and more sustainable future.</p>
+                  <h5 className="text-xl font-semibold text-white mb-2">Clean Water & Sanitation</h5>
+                  <small className="text-sm">We support initiatives that provide access to clean water and sanitation for communities in need, ensuring a healthier and more sustainable future.</small>
                 </div>
                 <div className="w-1/2 flex justify-center">
                 <a href="https://sdgs.un.org/goals/goal6" target="_blank" rel="noopener noreferrer">
@@ -55,8 +55,8 @@ const Suistanbility = () => {
                   <div className="w-16 h-16 mb-4 flex items-center justify-center bg-gray-800 rounded-full">
                     <img src={ability} alt="Empower Traders" className="w-10 h-10 object-contain filter brightness-100 saturate-200" />
                   </div>
-                  <h3 className="text-xl font-semibold text-white mb-2">Quality Education</h3>
-                  <p className="text-sm">Education is the key to opportunity. We contribute to programs that provide learning resources, scholarships, and training to empower the next generation.</p>
+                  <h5 className="text-xl font-semibold text-white mb-2">Quality Education</h5>
+                  <small className="text-sm">Education is the key to opportunity. We contribute to programs that provide learning resources, scholarships, and training to empower the next generation.</small>
                 </div>
                 <div className="w-1/2 flex justify-center">
                 <a href="https://sdgs.un.org/goals/goal4" target="_blank" rel="noopener noreferrer">
@@ -75,8 +75,8 @@ const Suistanbility = () => {
                   <div className="w-16 h-16 mb-4 flex items-center justify-center bg-gray-800 rounded-full">
                     <img src={gender} alt="Empower Traders" className="w-10 h-10 object-contain filter brightness-100 saturate-200" />
                   </div>
-                  <h3 className="text-xl font-semibold text-white mb-2">Gender Equality</h3>
-                  <p className="text-sm">We advocate for equal opportunities in finance and beyond, supporting programs that promote women’s participation in trading, education, and leadership.</p>
+                  <h5 className="text-xl font-semibold text-white mb-2">Gender Equality</h5>
+                  <small className="text-sm">We advocate for equal opportunities in finance and beyond, supporting programs that promote women’s participation in trading, education, and leadership.</small>
                 </div>
                 <div className="w-1/2 flex justify-center">
                 <a href="https://sdgs.un.org/goals/goal5y" target="_blank" rel="noopener noreferrer">

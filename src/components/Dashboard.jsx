@@ -118,8 +118,8 @@ const FundingPlans = () => {
       <div className="fundingSectionContainer">
         <div className="fundingSectionWrapper">
           <div className="mx-auto lg:max-w-4xl text-center mt-24">
-            <p className="mt-2 text-4xl lg:text-5xl font-extrabold tracking-tight text-center ">Still Not Sure? </p>
-            <p className="mt-2 text-4xl lg:text-5xl font-extrabold tracking-tight text-center "><span className="">Check out our other plans</span></p>
+            <h2 className="mt-2 text-4xl lg:text-5xl font-extrabold tracking-tight text-center ">Still Not Sure? </h2>
+            <h2 className="mt-2 text-4xl lg:text-5xl font-extrabold tracking-tight text-center "><span className="">Check out our other plans</span></h2>
           </div>
           <div className="ps_wrapper">
             <div className="ps_intro">                     
@@ -177,11 +177,11 @@ const FundingPlans = () => {
                   <div className="planDetails_inner_main">
                     <div className="steps_info">
                       <span className="gradientText">1 Step</span>
-                      <div className="plan_name"><h3>Analyst Assessment</h3></div>
+                      <div className="plan_name"><h4>Analyst Assessment</h4></div>
                     </div>
                     <div className="steps_info">
                       <span className="gradientText">Qualified</span>
-                      <div className="plan_name"><h3>Qualified Analyst</h3></div>
+                      <div className="plan_name"><h4>Qualified Analyst</h4></div>
                     </div>
                   </div>
                   <div className="plan_highlights">
@@ -194,38 +194,38 @@ const FundingPlans = () => {
                   <div className="tableBox">
                     <div className="table_header">
                       <div className="table_head">
-                        <h3 className="stepHeader py-4">1 Step</h3>
-                        <h3 className="stepHeader py-4">Qualified</h3>
+                        <h4 className="stepHeader py-4">1 Step</h4>
+                        <h4 className="stepHeader py-4">Qualified</h4>
                       </div>
                     </div>
                     <div className="table_rows">
                       <div className="table_row">
-                        <div className="table_row_data keys">Leverage</div>
+                        <small className="table_row_data keys">Leverage</small>
                         <div className="table_row_data">1:30</div>
                         <div className="table_row_data">1:30</div>
                       </div>
                       <div className="table_row table_row_white">
-                        <div className="table_row_data keys">Sim Profit Target</div>
+                        <small className="table_row_data keys">Sim Profit Target</small>
                         <div className={`table_row_data ${uPromeni ? 'promena' : ''}`}>${currentPlan.profit.toLocaleString()} (10%)</div>
                         <div className="table_row_data">NA</div>
                       </div>
                       <div className="table_row">
-                          <div className="table_row_data keys">Max Sim Drawdown</div>
+                          <small className="table_row_data keys">Max Sim Drawdown</small>
                           <div className={`table_row_data ${uPromeni ? 'promena' : ''}`}>${currentPlan.drawdown.toLocaleString()} (6%)</div>
                           <div className={`table_row_data ${uPromeni ? 'promena' : ''}`}>${currentPlan.drawdown.toLocaleString()} (6%)</div>
                         </div>
                         <div className="table_row table_row_white">
-                          <div className="table_row_data keys">Max Daily Drawdown</div>
+                          <small className="table_row_data keys">Max Daily Drawdown</small>
                           <div className={`table_row_data ${uPromeni ? 'promena' : ''}`}>${currentPlan.daily.toLocaleString()} (4%)</div>
                           <div className={`table_row_data ${uPromeni ? 'promena' : ''}`}>${currentPlan.daily.toLocaleString()} (4%)</div>
                         </div>
                         <div className="table_row">
-                        <div className="table_row_data keys">Max Sim Trading Days</div>
+                        <small className="table_row_data keys">Max Sim Trading Days</small>
                         <div className="table_row_data">Unlimited</div>
                         <div className="table_row_data">NA</div>
                       </div>
                       <div className="table_row table_row_white">
-                        <div className="table_row_data keys">Analyst Performance Fee</div>
+                        <small className="table_row_data keys">Analyst Performance Fee</small>
                         <div className="table_row_data">NA</div>
                         <div className="table_row_data">80%</div>
                       </div>
@@ -233,7 +233,7 @@ const FundingPlans = () => {
                   </div>
                 </div>
                 <div className="table_footer">
-                  <h3 className={uPromeni ? 'promena' : ''}>ECapFX {currentPlan.label}</h3>
+                  <h4 className={uPromeni ? 'promena' : ''}>ECapFX {currentPlan.label}</h4>
                   <div className="rightBox">
                     <p className={uPromeni ? 'promena' : ''}>Assessment Price: ${currentPlan.price}</p>
                     <button className="normalButton">Start ECapFX  Capital Evaluation</button>

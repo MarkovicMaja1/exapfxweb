@@ -50,13 +50,13 @@ const Footer = () => {
                 <p className="text-sm font-semibold leading-6 text-white">Important Links</p>
                 <ul role="list" className="mt-6 space-y-4">
                   <li>
-                    <a href="#chooseplan" className="text-sm leading-6 text-gray-300 hover:text-white">Choose Plan</a>
+                    <small href="#chooseplan" className="text-sm leading-6 text-gray-300 hover:text-white">Choose Plan</small>
                   </li>
                   <li>
-                    <a href="#about" className="text-sm leading-6 text-gray-300 hover:text-white">About Us</a>
+                    <small href="#about" className="text-sm leading-6 text-gray-300 hover:text-white">About Us</small>
                   </li>
                   <li>
-                    <a href="#team" className="text-sm leading-6 text-gray-300 hover:text-white">Team</a>
+                    <small href="#team" className="text-sm leading-6 text-gray-300 hover:text-white">Team</small>
                   </li>
                 </ul>
               </div>
@@ -64,13 +64,13 @@ const Footer = () => {
                 <p className="text-sm font-semibold leading-6 text-white">Our Services</p>
                 <ul role="list" className="mt-6 space-y-4">
                   <li>
-                    <a href="#" className="text-sm leading-6 text-gray-300 hover:text-white">Pricing</a>
+                    <small href="#" className="text-sm leading-6 text-gray-300 hover:text-white">Pricing</small>
                   </li>
                   <li>
-                    <a href="#" className="text-sm leading-6 text-gray-300 hover:text-white">Guides</a>
+                    <small href="#" className="text-sm leading-6 text-gray-300 hover:text-white">Guides</small>
                   </li>
                   <li>
-                    <a href="#" className="text-sm leading-6 text-gray-300 hover:text-white">Mission and Values</a>
+                    <small href="#" className="text-sm leading-6 text-gray-300 hover:text-white">Mission and Values</small>
                   </li>
                 </ul>
               </div>
@@ -80,14 +80,14 @@ const Footer = () => {
                 <p className="text-sm font-semibold leading-6 text-white">Customer Care</p>
                 <ul role="list" className="mt-6 space-y-4">
                   <li>
-                    <a href="#" className="text-sm leading-6 text-gray-300 hover:text-white">Support Portal
-                    </a>
+                    <small href="#" className="text-sm leading-6 text-gray-300 hover:text-white">Support Portal
+                    </small>
                   </li>
                   <li>
-                    <a href="#" className="text-sm leading-6 text-gray-300 hover:text-white">Blog</a>
+                    <small href="#" className="text-sm leading-6 text-gray-300 hover:text-white">Blog</small>
                   </li>
                   <li>
-                    <a href="#" className="text-sm leading-6 text-gray-300 hover:text-white">Live Chat</a>
+                    <small href="#" className="text-sm leading-6 text-gray-300 hover:text-white">Live Chat</small>
                   </li>
                 </ul>
               </div>
@@ -95,13 +95,13 @@ const Footer = () => {
                 <p className="text-sm font-semibold leading-6 text-white">Policies</p>
                 <ul role="list" className="mt-6 space-y-4">
                   <li>
-                    <a href="#" className="text-sm leading-6 text-gray-300 hover:text-white">Claim</a>
+                    <small href="#" className="text-sm leading-6 text-gray-300 hover:text-white">Claim</small>
                   </li>
                   <li>
-                    <a href="#" className="text-sm leading-6 text-gray-300 hover:text-white">Privacy</a>
+                    <small href="#" className="text-sm leading-6 text-gray-300 hover:text-white">Privacy</small>
                   </li>
                   <li>
-                    <a href="#" className="text-sm leading-6 text-gray-300 hover:text-white">Terms</a>
+                    <small href="#" className="text-sm leading-6 text-gray-300 hover:text-white">Terms</small>
                   </li>
                 </ul>
               </div>
@@ -109,9 +109,9 @@ const Footer = () => {
           </div>
         </div>
         <div className="mt-16 pt-8 sm:mt-20 md:flex md:items-center justify-center lg:mt-24 border-t border-gray-700">
-          <p className="mt-8 text-xs leading-5 text-gray-500 md:order-1 md:mt-0 max-sm:text-center">
+          <small className="mt-8 text-xs leading-5 text-gray-500 md:order-1 md:mt-0 max-sm:text-center">
             © 2025 ECapFX. All rights reserved.
-          </p>
+          </small>
         </div>
       </div>
     </footer>

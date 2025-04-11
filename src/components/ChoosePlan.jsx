@@ -8,7 +8,7 @@ const ChoosePlan = () => {
       <div className="top-section">
         {/* <h1 className="section-title mt-2 text-4xl lg:text-4xl font-extrabold tracking-tight text-center" style={{ marginTop: '50px' }}>Choose Your Funding Journey</h1> */}
         <div className="mx-auto lg:max-w-4xl text-center ">
-<p className="mt-2 text-4xl lg:text-5xl font-extrabold tracking-tight text-center ">Choose Your Funding Journey</p>
+<h2 className="mt-2 text-4xl lg:text-5xl font-extrabold tracking-tight text-center ">Choose Your Funding Journey</h2>
           </div>
         
         {/* <div className="w-2/4 mx-auto mt-6 mb-10 border-t-2 border-green-500"></div> */}
@@ -29,17 +29,17 @@ const ChoosePlan = () => {
           <div className="inner-box">
             <img src={trader} alt="Crypto Trader" className="blurred-background" />
             <div className="text-overlay">
-              <h2 className="box-title">Ecosphere Pro</h2>
+              <h4 className="box-title">Ecosphere Pro</h4>
               <p className="box-description bigger">
                 Account Size: <span className="highlight-price">$100K </span>or<span className="highlight-price"> $200K</span> funded accounts.<br />
                 </p>
-                <p className="box-description text-gray-400">
+                <small className="box-description text-gray-400">
                 • 1-Phase Challenge: Quick evaluation for experienced traders to get funded.<br />
                 • 2-Phase Challenge: Two-stage evaluation for traders to prove consistency and risk control.
-              </p>
-              <p className="box-description text-gray-400">
+              </small>
+              <small className="box-description text-gray-400">
                 This program is designed for skilled traders, offering flexibility while ensuring sustainable capital management.
-              </p>
+              </small>
               <p className="box-price">Starting from <span className="highlight-price">$379-$999</span></p>
               <button className="action-button hyper-button">Select Program</button>
             </div>
@@ -52,17 +52,17 @@ const ChoosePlan = () => {
           <div className="inner-box">
             <img src={trader} alt="Crypto Trader" className="blurred-background" />
             <div className="text-overlay">
-              <h2 className="box-title">Greenwave Growth</h2>
+              <h4 className="box-title">Greenwave Growth</h4>
               <p className="box-description bigger">
                 Account Size: From <span className="highlight-price">  $6K</span> to<span className="highlight-price">  $25K </span>funded accounts.<br />
                 </p>
-                <p className="box-description text-gray-400">
+                <small className="box-description text-gray-400">
                 • 1-Phase Challenge: Quick evaluation for experienced traders to get funded.<br />
                 • 2-Phase Challenge: Two-stage evaluation for traders to show consistency and risk control.
-              </p>
-              <p className="box-description text-gray-400">
+              </small>
+              <small className="box-description text-gray-400">
                 This program helps traders grow while ensuring sustainable capital management and flexible evaluation paths.
-              </p>
+              </small>
               <p className="box-price">Starting from <span className="highlight-price">$79-$179 </span></p>
               <button className="action-button green-button">Select Program</button>
             </div>
@@ -75,17 +75,17 @@ const ChoosePlan = () => {
           <div className="inner-box">
             <img src={trader} alt="Crypto Trader" className="blurred-background" />
             <div className="text-overlay">
-              <h2 className="box-title">El Verde Pro Program</h2>
+              <h4 className="box-title">El Verde Pro Program</h4>
               <p className="box-description bigger">
                 Account Size: <span className="highlight-price">  $50K</span> to <span className="highlight-price">  $100K </span> funded accounts.<br />
                 </p>
-                <p className="box-description text-gray-400">
+                <small className="box-description text-gray-400">
                 • 1-Phase Challenge: Quick evaluation for experienced traders to get funded.<br />
                 • 2-Phase Challenge: Two-stage evaluation for traders to prove consistency and risk control.
-              </p>
-              <p className="box-description text-gray-400">
+              </small>
+              <small className="box-description text-gray-400">
                 This program helps pro traders grow with flexible, sustainable funding while focusing on risk management.
-              </p>
+              </small>
               <p className="box-price">Starting from <span className="highlight-price">$159 - $359</span></p>
               <button className="action-button blue-button">Select Program</button>
             </div>

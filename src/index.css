@@ -8,10 +8,6 @@ nav {
 body, html {
   overflow-x: hidden;
 }
-<<<<<<< HEAD
-=======
-
->>>>>>> f8eebe8add9bd54d0f0007b8de3d655c5c003066
 /* 
 body {
   margin: 0;
@@ -64,3 +60,40 @@ body {
 section {
   overflow: hidden;
 }
+
+h1 {
+  font-size: 3.5rem !important; /* 56px */
+  font-weight: 700 !important;
+}
+h2 {
+  font-size: 3rem !important; /* 48px */
+  font-weight: 700 !important;
+}
+h3 {
+  font-size: 2rem !important; /* 32px */
+  font-weight: 600 !important;
+}
+h4 {
+  font-size: 1.5rem !important; /* 32px */
+  font-weight: 600 !important;
+}
+h5 {
+  font-size: 1.3rem !important; /* 32px */
+  font-weight: 600 !important;
+}
+p {
+  font-size: 1.125rem !important; /* 18px */
+  font-weight: 400 !important;
+  line-height: 1.6 !important;
+}
+
+button {
+  font-size: 1rem !important; /* 16px */
+  font-weight: 500 !important;
+}
+
+small {
+  font-size: 0.875rem !important; /* 14px */
+  
+}
+
