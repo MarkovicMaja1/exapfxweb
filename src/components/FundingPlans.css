@@ -438,20 +438,39 @@ button {
   line-height: 140%;
   display: flex;
   flex-direction: row;
-  /* background: linear-gradient(90deg, #C0C0C0 0%, #A9A9A9 100%);  */
+  background: linear-gradient(90deg, #C0C0C0 0%, #A9A9A9 100%); 
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 .tabinationButton.activeTab {
-  border-radius: 100px;
+  border-radius: 24px;
   background: #fff;
   box-shadow: 0px 4px 4px 0px rgba(141, 149, 219, 0.25);
+  background: #1d8348; 
 }
+/* 
+.tabinationButton.activeTab:hover {
+  border-radius: 24px;
+  background: black;
+  box-shadow: 0px 4px 4px 0px rgba(141, 149, 219, 0.25);
+  background: #2ecc71; 
+} */
 .tabinationButton.activeTab p {
-  color: white;
-  
+
+  background: white; 
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
+/* .tabinationButton.activeTab p:hover {
+
+  background: black; 
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+} */
+
 
 /* Swiper Simplification */
 .swiper {
