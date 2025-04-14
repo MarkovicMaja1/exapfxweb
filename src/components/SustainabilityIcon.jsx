@@ -13,7 +13,7 @@ const SustainabilityIcon = () => {
         cursor: 'pointer',
       }}
       onClick={() => {
-      
+        window.open('https://sdgs.un.org/', '_blank', 'noopener,noreferrer');
       }}
     >
       <img

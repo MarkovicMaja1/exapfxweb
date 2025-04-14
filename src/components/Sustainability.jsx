@@ -78,7 +78,7 @@ const Suistanbility = () => {
                   <small className="text-sm">We advocate for equal opportunities in finance and beyond, supporting programs that promote women’s participation in trading, education, and leadership.</small>
                 </div>
                 <div className="w-1/2 flex justify-center">
-                <a href="https://sdgs.un.org/goals/goal5y" target="_blank" rel="noopener noreferrer">
+                <a href="https://sdgs.un.org/goals/goal5" target="_blank" rel="noopener noreferrer">
                   <div className="h-32 w-32 flex items-center justify-center rounded-lg bg-white">
                     <img src={image2} alt="Gender Equality" className="w-full object-cover rounded-lg" />
                   </div>
