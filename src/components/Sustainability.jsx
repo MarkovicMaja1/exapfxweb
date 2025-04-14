@@ -29,9 +29,9 @@ const Suistanbility = () => {
           {/* Flex container */}
           <div className="flex flex-col lg:flex-row gap-16 mb-16 mt-8 justify-center">
             {/* Left Box - First two cards stacked vertically */}
-            <div className="flex flex-col gap-16 w-full lg:w-1/3">
+            <div className="flex flex-col gap-16 w-full lg:w-1/3 ">
               {/* First Card */}
-              <div className="bg-[#101919] rounded-lg shadow-lg p-6 flex flex-row items-center text-gray-400 hover:bg-gray-800 transition duration-300">
+              <div className="bg-[#101919] rounded-lg shadow-lg p-6 flex flex-row items-center text-gray-400 hover:bg-gray-800 transition duration-300 hover:scale-105">
                 <div className="flex flex-col items-center text-center w-1/2">
                   <div className="w-16 h-16 mb-4 flex items-center justify-center bg-gray-800 rounded-full">
                     <img src={quality} alt="Empower Traders" className="w-10 h-10 object-contain filter brightness-100 saturate-200" />
@@ -49,7 +49,7 @@ const Suistanbility = () => {
               </div>
 
               {/* Second Card */}
-              <div className="bg-[#101919] rounded-lg shadow-lg p-6 flex flex-row items-center text-gray-400 hover:bg-gray-800 transition duration-300">
+              <div className="bg-[#101919] rounded-lg shadow-lg p-6 flex flex-row items-center text-gray-400 hover:bg-gray-800 transition duration-300 hover:scale-105">
                 <div className="flex flex-col items-center text-center w-1/2">
                   <div className="w-16 h-16 mb-4 flex items-center justify-center bg-gray-800 rounded-full">
                     <img src={ability} alt="Empower Traders" className="w-10 h-10 object-contain filter brightness-100 saturate-200" />
@@ -69,7 +69,7 @@ const Suistanbility = () => {
 
             {/* Right Box - Third card centered vertically */}
             <div className="w-full lg:w-1/3 flex items-center">
-              <div className="bg-[#101919] rounded-lg shadow-lg p-6 flex flex-row items-center text-gray-400 hover:bg-gray-800 transition duration-300">
+              <div className="bg-[#101919] rounded-lg shadow-lg p-6 flex flex-row items-center text-gray-400 hover:bg-gray-800 transition duration-300 hover:scale-105">
                 <div className="flex flex-col items-center text-center w-1/2">
                   <div className="w-16 h-16 mb-4 flex items-center justify-center bg-gray-800 rounded-full">
                     <img src={gender} alt="Empower Traders" className="w-10 h-10 object-contain filter brightness-100 saturate-200" />

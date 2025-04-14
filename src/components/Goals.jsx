@@ -1,12 +1,22 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css'; // Uvezi AOS stilove
 import funding from '../assets/funding2.png';
 import network from '../assets/networking2.png';
 import leadership from '../assets/leadership2.png';
 import expansion from '../assets/expansion2.png';
 import planet from '../assets/planet2.png';
-import './Home.css'; // Obavezno zadrži ovo
+import './Home.css'; // Zadržavamo tvoj CSS
 
 const Goals = () => {
+  useEffect(() => {
+    AOS.init({
+      duration: 800, // Trajanje animacije (u milisekundama)
+      easing: 'ease-in-out', // Glatki prelaz
+      once: true, // Animacija se pokreće samo jednom
+    });
+  }, []);
+
   const goalsData = [
     {
       image: funding,
@@ -37,7 +47,7 @@ const Goals = () => {
 
   return (
     <div className="relative overflow-hidden">
-      {/* 👇 Animated Background */}
+      {/* Animated Background */}
       <div className="animated-bg-goals"></div>
 
       <div className="max-w-7xl mx-auto px-6 lg:px-12 mt-20 mb-24 relative z-10">
@@ -51,6 +61,8 @@ const Goals = () => {
               <div
                 key={index}
                 className="bg-[#101919] rounded-lg shadow-lg p-4 flex flex-col items-center text-center text-gray-400 hover:bg-gray-800 transition duration-300"
+                data-aos="fade-up" // Animacija za svaku karticu
+                data-aos-delay={`${index * 100}`} // Kašnjenje: 0ms, 100ms, 200ms...
               >
                 <div className="w-16 h-16 mb-4 flex items-center justify-center bg-gray-800 rounded-full">
                   <img

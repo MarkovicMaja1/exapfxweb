@@ -1,15 +1,16 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 import { Pagination, Navigation } from 'swiper/modules';
-import './FundingPlans.css'; // Assuming you have your styles in a separate CSS file
+import './FundingPlans.css';
 
 const FundingPlans = () => {
   const [activeStep, setActiveStep] = useState(1);
-  const [activeSize, setActiveSize] = useState('5000');
-  const [uPromeni, setUPromeni] = useState(false); // Dodato za animaciju
+  const [activeSize, setActiveSize] = useState('100000'); // Početni plan je 100K
+  const [uPromeni, setUPromeni] = useState(false);
+  const swiperRef = useRef(null);
 
   const sizes = {
     '5000': { price: 50, label: '5K', profit: 500, drawdown: 300, daily: 200 },
@@ -25,9 +26,13 @@ const FundingPlans = () => {
   };
 
   const handleSizeChange = (size) => {
-    setUPromeni(true); // Pokreni animaciju
+    setUPromeni(true);
     setActiveSize(size);
-    setTimeout(() => setUPromeni(false), 300); // Isključi nakon 300ms
+    const index = Object.keys(sizes).indexOf(size);
+    if (swiperRef.current && swiperRef.current.swiper) {
+      swiperRef.current.swiper.slideTo(index);
+    }
+    setTimeout(() => setUPromeni(false), 300);
   };
 
   const currentPlan = sizes[activeSize];
@@ -36,76 +41,101 @@ const FundingPlans = () => {
     <SwiperSlide key={size}>
       <div className="plans_table">
         <div className="table_footer">
-        <h3 className={`${uPromeni ? 'promena' : ''} text-white`}>ECapFX {sizes[size].label}</h3>
-        <div className="rightBox">
+          <h3 className={`${uPromeni ? 'promena' : ''} text-white`}>ECapFX {sizes[size].label}</h3>
+          <div className="rightBox">
             <p className={uPromeni ? 'promena' : ''}>Assessment Price: ${sizes[size].price}</p>
-            <button className="normalButton">
-              Start ECapFX Evaluation
-            </button>
+            <button className="normalButton">Start ECapFX Evaluation</button>
           </div>
         </div>
         <div className="mobileSteps">
           <div className="table_row">
             <div className="table_row_key">
-              <div className="key_header">
-                Leverage
-              </div>
+              <div className="key_header">Leverage</div>
             </div>
             <div className="table_row_values">
-              <div className="table_cell"><span>1:30</span></div>
+              <div className="table_cell">
+                <span>1 Step:</span>
+                <span>1:30</span>
+              </div>
+              <div className="table_cell">
+                <span>Qualified:</span>
+                <span>1:30</span>
+              </div>
             </div>
           </div>
           <div className="table_row table_row_white">
             <div className="table_row_key">
-              <div className="key_header">
-                Sim Profit Target
-              </div>
+              <div className="key_header">Sim Profit Target</div>
             </div>
             <div className="table_row_values">
-              <div className="table_cell"><span>1 Step:</span><span>${sizes[size].profit.toLocaleString()} (10%)</span></div>
-              <div className="table_cell"><span>Qualified:</span><span>NA</span></div>
+              <div className="table_cell">
+                <span>1 Step:</span>
+                <span>${sizes[size].profit.toLocaleString()} (10%)</span>
+              </div>
+              <div className="table_cell">
+                <span>Qualified:</span>
+                <span>NA</span>
+              </div>
             </div>
           </div>
           <div className="table_row">
             <div className="table_row_key">
-              <div className="key_header">
-                Max Sim Drawdown
-              </div>
+              <div className="key_header">Max Sim Drawdown</div>
             </div>
             <div className="table_row_values">
-              <div className="table_cell"><span>${sizes[size].drawdown.toLocaleString()} (6%)</span></div>
+              <div className="table_cell">
+                <span>1 Step:</span>
+                <span>${sizes[size].drawdown.toLocaleString()} (6%)</span>
+              </div>
+              <div className="table_cell">
+                <span>Qualified:</span>
+                <span>${sizes[size].drawdown.toLocaleString()} (6%)</span>
+              </div>
             </div>
           </div>
           <div className="table_row table_row_white">
             <div className="table_row_key">
-              <div className="key_header">
-                Max Daily Drawdown 
-              </div>
+              <div className="key_header">Max Daily Drawdown</div>
             </div>
             <div className="table_row_values">
-              <div className="table_cell"><span>${sizes[size].daily.toLocaleString()} (4%)</span></div>
+              <div className="table_cell">
+                <span>1 Step:</span>
+                <span>${sizes[size].daily.toLocaleString()} (4%)</span>
+              </div>
+              <div className="table_cell">
+                <span>Qualified:</span>
+                <span>${sizes[size].daily.toLocaleString()} (4%)</span>
+              </div>
             </div>
           </div>
           <div className="table_row">
             <div className="table_row_key">
-              <div className="key_header">
-                Max Sim Trading Days
-              </div>
+              <div className="key_header">Max Sim Trading Days</div>
             </div>
             <div className="table_row_values">
-              <div className="table_cell"><span>1 Step:</span><span>Unlimited</span></div>
-              <div className="table_cell"><span>Qualified:</span><span>NA</span></div>
+              <div className="table_cell">
+                <span>1 Step:</span>
+                <span>Unlimited</span>
+              </div>
+              <div className="table_cell">
+                <span>Qualified:</span>
+                <span>NA</span>
+              </div>
             </div>
           </div>
           <div className="table_row table_row_white">
             <div className="table_row_key">
-              <div className="key_header">
-                Analyst Performance Fee
-              </div>
+              <div className="key_header">Analyst Performance Fee</div>
             </div>
             <div className="table_row_values">
-              <div className="table_cell"><span>1 Step:</span><span>NA</span></div>
-              <div className="table_cell"><span>Qualified:</span><span>80%</span></div>
+              <div className="table_cell">
+                <span>1 Step:</span>
+                <span>NA</span>
+              </div>
+              <div className="table_cell">
+                <span>Qualified:</span>
+                <span>80%</span>
+              </div>
             </div>
           </div>
         </div>
@@ -118,23 +148,32 @@ const FundingPlans = () => {
       <div className="fundingSectionContainer">
         <div className="fundingSectionWrapper">
           <div className="mx-auto lg:max-w-4xl text-center mt-20">
-            <h2 className=" text-4xl lg:text-5xl font-extrabold tracking-tight text-center ">Still Not Sure? </h2>
-            <h2 className="mt-2 text-4xl lg:text-5xl font-extrabold tracking-tight text-center "><span className="">Check out our other plans</span></h2>
+            <h2 className="text-4xl lg:text-5xl font-extrabold tracking-tight text-center">
+              Still Not Sure?
+            </h2>
+            <h2 className="mt-2 text-4xl lg:text-5xl font-extrabold tracking-tight text-center">
+              <span>Check out our other plans</span>
+            </h2>
           </div>
           <div className="ps_wrapper">
-            <div className="ps_intro">                     
-              <p className='mb-12 mt-10 text-gray-600'>Choose the evaluation based on your preference to become an ECapFX Trader.</p>
+            <div className="ps_intro">
+              <p className="mb-12 mt-10 text-gray-600">
+                Choose the evaluation based on your preference to become an ECapFX Trader.
+              </p>
               <div className="plan_select step_select">
                 <div className="tabinationContainer variant2_tabs">
                   <div className="tabinationWrapper">
                     <ul className="tabinationBox">
-                      {[1, 2, 3].map(step => (
+                      {[1, 2, 3].map((step) => (
                         <li
                           key={step}
                           className={`tabinationButton ${activeStep === step ? 'activeTab' : ''}`}
                           onClick={() => handleStepChange(step)}
                         >
-                          <p><span>{step}</span><span>Step</span></p>
+                          <p>
+                            <span>{step}</span>
+                            <span>Step</span>
+                          </p>
                         </li>
                       ))}
                     </ul>
@@ -156,14 +195,16 @@ const FundingPlans = () => {
                 <div className="tabinationContainer variant6_tabs">
                   <div className="tabinationWrapper">
                     <ul className="tabinationBox">
-                      {Object.keys(sizes).map(size => (
+                      {Object.keys(sizes).map((size) => (
                         <li
                           key={size}
                           className={`tabinationButton ${activeSize === size ? 'activeTab' : ''}`}
                           onClick={() => handleSizeChange(size)}
                           data-size={size}
                         >
-                          <p><span>${parseInt(size).toLocaleString()}</span><span></span></p>
+                          <p>
+                            <span>${parseInt(size).toLocaleString()}</span>
+                          </p>
                         </li>
                       ))}
                     </ul>
@@ -185,7 +226,7 @@ const FundingPlans = () => {
                     </div>
                   </div>
                   <div className="plan_highlights">
-                    <div><p >No Profit Cap</p></div>
+                    <div><p>No Profit Cap</p></div>
                     <div><p>Payout-on-demand</p></div>
                     <div><p>Quickest way to become an ECapFX Trader</p></div>
                   </div>
@@ -206,20 +247,30 @@ const FundingPlans = () => {
                       </div>
                       <div className="table_row table_row_white">
                         <small className="table_row_data keys">Sim Profit Target</small>
-                        <div className={`table_row_data ${uPromeni ? 'promena' : ''}`}>${currentPlan.profit.toLocaleString()} (10%)</div>
+                        <div className={`table_row_data ${uPromeni ? 'promena' : ''}`}>
+                          ${currentPlan.profit.toLocaleString()} (10%)
+                        </div>
                         <div className="table_row_data">NA</div>
                       </div>
                       <div className="table_row">
-                          <small className="table_row_data keys">Max Sim Drawdown</small>
-                          <div className={`table_row_data ${uPromeni ? 'promena' : ''}`}>${currentPlan.drawdown.toLocaleString()} (6%)</div>
-                          <div className={`table_row_data ${uPromeni ? 'promena' : ''}`}>${currentPlan.drawdown.toLocaleString()} (6%)</div>
+                        <small className="table_row_data keys">Max Sim Drawdown</small>
+                        <div className={`table_row_data ${uPromeni ? 'promena' : ''}`}>
+                          ${currentPlan.drawdown.toLocaleString()} (6%)
                         </div>
-                        <div className="table_row table_row_white">
-                          <small className="table_row_data keys">Max Daily Drawdown</small>
-                          <div className={`table_row_data ${uPromeni ? 'promena' : ''}`}>${currentPlan.daily.toLocaleString()} (4%)</div>
-                          <div className={`table_row_data ${uPromeni ? 'promena' : ''}`}>${currentPlan.daily.toLocaleString()} (4%)</div>
+                        <div className={`table_row_data ${uPromeni ? 'promena' : ''}`}>
+                          ${currentPlan.drawdown.toLocaleString()} (6%)
                         </div>
-                        <div className="table_row">
+                      </div>
+                      <div className="table_row table_row_white">
+                        <small className="table_row_data keys">Max Daily Drawdown</small>
+                        <div className={`table_row_data ${uPromeni ? 'promena' : ''}`}>
+                          ${currentPlan.daily.toLocaleString()} (4%)
+                        </div>
+                        <div className={`table_row_data ${uPromeni ? 'promena' : ''}`}>
+                          ${currentPlan.daily.toLocaleString()} (4%)
+                        </div>
+                      </div>
+                      <div className="table_row">
                         <small className="table_row_data keys">Max Sim Trading Days</small>
                         <div className="table_row_data">Unlimited</div>
                         <div className="table_row_data">NA</div>
@@ -236,18 +287,21 @@ const FundingPlans = () => {
                   <h4 className={uPromeni ? 'promena' : ''}>ECapFX {currentPlan.label}</h4>
                   <div className="rightBox">
                     <p className={uPromeni ? 'promena' : ''}>Assessment Price: ${currentPlan.price}</p>
-                    <button className="normalButton">Start ECapFX  Capital Evaluation</button>
+                    <button className="normalButton">Start ECapFX Capital Evaluation</button>
                   </div>
                 </div>
               </div>
               <div className="mobile_plan_table">
                 <Swiper
+                  ref={swiperRef}
                   modules={[Pagination, Navigation]}
                   spaceBetween={10}
                   slidesPerView={1}
-                  pagination={{ clickable: true }}
+                  centeredSlides={true}
+                  pagination={{ clickable: true, dynamicBullets: true }}
                   navigation
                   onSlideChange={(swiper) => handleSizeChange(Object.keys(sizes)[swiper.activeIndex])}
+                  style={{ width: '100%', minHeight: '500px' }}
                 >
                   {mobileSlides}
                 </Swiper>
