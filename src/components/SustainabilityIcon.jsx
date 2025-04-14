@@ -13,8 +13,7 @@ const SustainabilityIcon = () => {
         cursor: 'pointer',
       }}
       onClick={() => {
-        // Dodajte funkcionalnost za otvaranje chat prozora ovde
-        alert('Chat otvoren!');
+      
       }}
     >
       <img
