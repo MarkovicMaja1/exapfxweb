@@ -21,7 +21,7 @@ import Navbar from "./components/Navbar";
 import TeamSection from "./components/TeamFirst";
 import BlogCarousel from "./components/TeamNew";
 
-
+import SustainabilityIcon from "./components/SustainabilityIcon";
 
 function App() {
   return (
@@ -74,6 +74,7 @@ function App() {
           <Contact />
         </div>
         <Footer /> */}
+         <SustainabilityIcon />
       </BrowserRouter>
     </div>
   );

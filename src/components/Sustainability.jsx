@@ -22,8 +22,7 @@ const Suistanbility = () => {
             </div>
             <div className="mx-auto lg:max-w-4xl text-center">
               <p className="mt-16 mb-16 text-lg leading-8 text-gray-600">
-                At ECapFX, we align our efforts with the United Nations Sustainable Development Goals (SDGs) to create a positive global impact. Our focus is on three key areas:
-              </p>
+              At ECapFX, we align our efforts with the United Nations Sustainable Development Goals (SDGs) to create a meaningful global impact. Our focus is on three key areas, supported by a strategic three-year plan designed to drive measurable and lasting change.              </p>
             </div>
           </div>
 
