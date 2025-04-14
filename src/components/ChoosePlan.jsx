@@ -22,7 +22,7 @@ const ChoosePlan = () => {
       </div>
 
       {/* Bottom half (boxes) */}
-      <div className="boxes-container mt-14">
+      <div className="boxes-container mt-14 ">
         {/* Boks 1 */}
         <div className="box-wrapper">
           <span className="badge badge-hyper">Best for Seasoned traders</span>
@@ -145,8 +145,7 @@ const ChoosePlan = () => {
           gap: 50px;
           flex-wrap: wrap;
           
-          // padding: 40px 20px; 
-          // background: #f5f5f5; 
+   
         }
 
         .box-wrapper {
@@ -349,6 +348,9 @@ const ChoosePlan = () => {
         
 
         @media (max-width: 768px) {
+          .funding-journey-container{
+            padding-bottom: 70px;
+          }
           .boxes-container {
             flex-direction: column;
             align-items: center;

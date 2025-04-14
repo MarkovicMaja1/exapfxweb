@@ -67,9 +67,9 @@ const Team = () => {
   }, [isPlaying, nextSlide]);
 
   return (
-    <section className="bg-[#101919] py-28 text-center">
+    <section className="bg-[#101919] py-24 text-center">
       <div className="mx-auto lg:max-w-4xl text-center">
-        <h2 className="mb-28 text-4xl lg:text-5xl font-extrabold tracking-tight text-center text-white">Meet Our Team</h2>
+        <h2 className="mb-24 text-4xl font-extrabold tracking-tight text-center text-white">Meet Our Team</h2>
       </div>
 
       <div className="max-w-7xl mx-auto px-4">

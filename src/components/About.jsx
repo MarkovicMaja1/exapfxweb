@@ -6,7 +6,7 @@ import Background from './Background';
 const AboutUs = () => {
   return (
     <div>
-      <section className="bg-[#101919] text-white pt-28 pb-16">
+      <section className="bg-[#101919] text-white pt-24 pb-14">
         <div className="mx-auto px-4 max-w-screen-2xl relative isolate">
           <div className="mx-auto lg:max-w-4xl text-center">
             <h2 className="text-4xl lg:text-5xl font-extrabold tracking-tight text-center">About Us</h2>

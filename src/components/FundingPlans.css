@@ -72,7 +72,7 @@ button {
   padding-bottom: 40px;
 }
 .fundingSectionWrapper {
-  padding: 10px 20px 20px 20px;
+  padding: 10px 20px 10px 20px;
 }
 
 /* Plans Section */
@@ -121,7 +121,7 @@ button {
   letter-spacing: -0.5px;
 }
 .ps_intro p {
-  color: rgba(0, 0, 0, 0.7);
+  
   text-align: center;
   /* font-family: "Montserrat"; */
   line-height: 30px;
@@ -530,12 +530,12 @@ button {
 }
 .swiper-button-prev,
 .swiper-button-next {
-  background: none;
+  /* background: none;
   border: none;
   font-size: 20px;
-  color: #2E7D32; /* Green */
+  color: #2E7D32; 
   cursor: pointer;
-  padding: 5px 15px;
+  padding: 5px 15px; */
 }
 .swiper-pagination {
   display: flex;

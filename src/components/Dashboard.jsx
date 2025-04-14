@@ -117,13 +117,13 @@ const FundingPlans = () => {
     <div id="TestYourSkills">
       <div className="fundingSectionContainer">
         <div className="fundingSectionWrapper">
-          <div className="mx-auto lg:max-w-4xl text-center mt-24">
-            <h2 className="mt-2 text-4xl lg:text-5xl font-extrabold tracking-tight text-center ">Still Not Sure? </h2>
+          <div className="mx-auto lg:max-w-4xl text-center mt-20">
+            <h2 className=" text-4xl lg:text-5xl font-extrabold tracking-tight text-center ">Still Not Sure? </h2>
             <h2 className="mt-2 text-4xl lg:text-5xl font-extrabold tracking-tight text-center "><span className="">Check out our other plans</span></h2>
           </div>
           <div className="ps_wrapper">
             <div className="ps_intro">                     
-              <p>Choose the evaluation based on your preference to become an ECapFX Trader.</p>
+              <p className='mb-12 mt-10 text-gray-600'>Choose the evaluation based on your preference to become an ECapFX Trader.</p>
               <div className="plan_select step_select">
                 <div className="tabinationContainer variant2_tabs">
                   <div className="tabinationWrapper">
@@ -185,7 +185,7 @@ const FundingPlans = () => {
                     </div>
                   </div>
                   <div className="plan_highlights">
-                    <div><p>No Profit Cap</p></div>
+                    <div><p >No Profit Cap</p></div>
                     <div><p>Payout-on-demand</p></div>
                     <div><p>Quickest way to become an ECapFX Trader</p></div>
                   </div>

@@ -28,7 +28,7 @@ const Team = () => {
   const marqueeContent = generateMarqueeContent();
 
   return (
-    <section className="bg-[#101919] py-24 text-white text-center overflow-hidden">
+    <section className="bg-[#101919]  text-white text-center overflow-hidden">
       <h2 className="text-4xl font-extrabold mb-12">Meet Our Team</h2>
 
       <div className="relative w-full overflow-hidden">

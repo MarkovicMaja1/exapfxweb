@@ -40,10 +40,10 @@ const Goals = () => {
       {/* 👇 Animated Background */}
       <div className="animated-bg-goals"></div>
 
-      <div className="max-w-7xl mx-auto px-6 lg:px-12 mt-24 mb-24 relative z-10">
+      <div className="max-w-7xl mx-auto px-6 lg:px-12 mt-20 mb-24 relative z-10">
         <div className="text-center">
           <div className="mx-auto lg:max-w-4xl text-center">
-            <h2 className="mt-2 text-4xl lg:text-5xl font-extrabold tracking-tight text-center">Our Goals</h2>
+            <h2 className="text-4xl lg:text-5xl font-extrabold tracking-tight text-center">Our Goals</h2>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6 mb-16 mt-16">
