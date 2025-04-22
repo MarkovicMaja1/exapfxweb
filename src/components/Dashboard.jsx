@@ -181,7 +181,7 @@ const FundingPlans = () => {
                 </div>
               </div>
               <div className="plan_select plan_selector_container">
-                <div className="tabinationContainer variant2_tabs">
+                {/* <div className="tabinationContainer variant2_tabs">
                   <div className="tabinationWrapper">
                     <ul className="tabinationBox">
                       <li className="tabinationButton activeTab">
@@ -189,7 +189,7 @@ const FundingPlans = () => {
                       </li>
                     </ul>
                   </div>
-                </div>
+                </div> */}
               </div>
               <div className="plan_select account_size_select">
                 <div className="tabinationContainer variant6_tabs">
@@ -235,8 +235,8 @@ const FundingPlans = () => {
                   <div className="tableBox">
                     <div className="table_header">
                       <div className="table_head">
-                        <h4 className="stepHeader py-4">1 Step</h4>
-                        <h4 className="stepHeader py-4">Qualified</h4>
+                        <h4 className="stepHeader py-6">1 Step</h4>
+                        <h4 className="stepHeader py-6">Qualified</h4>
                       </div>
                     </div>
                     <div className="table_rows">

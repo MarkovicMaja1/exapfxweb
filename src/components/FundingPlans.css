@@ -43,7 +43,7 @@ button {
 }
 .normalButton:hover {
   color: #fff !important;
-  background: #2E7D32;
+  background:#2E7D32 !important; 
 }
 .gradientText {
   color: black;

@@ -234,7 +234,7 @@ const ChoosePlan = () => {
         }
 
         .badge-blue {
-          background: #3b82f6;
+          background: #F26334;
           color: #ffffff;
         }
 
@@ -323,13 +323,13 @@ const ChoosePlan = () => {
       }
 
       .blue-button {
-        background: #3b82f6;
+        background: #F26334;
         color: #ffffff;
         transition: all 0.3s ease;
       }
 
       .blue-button:hover {
-        background: #60a5fa; /* Svetlija nijansa plave */
+        background: #fa7a4c; /* Svetlija nijansa plave */
         box-shadow: 0 4px 10px rgba(59, 130, 246, 0.4); /* Blaga senka */
       }
 

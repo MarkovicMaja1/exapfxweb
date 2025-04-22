@@ -41,7 +41,7 @@ const Suistanbility = () => {
                 </div>
                 <div className="w-1/2 flex justify-center">
                 <a href="https://sdgs.un.org/goals/goal6" target="_blank" rel="noopener noreferrer">
-                  <div className="h-32 w-32 flex items-center justify-center rounded-lg bg-white ml-14">
+                  <div className="h-32 w-32 flex items-center justify-center rounded-lg bg-white">
                     <img src={img3} alt="Clean Water & Sanitation" className="w-full object-cover rounded-lg" />
                   </div>
                   </a>
