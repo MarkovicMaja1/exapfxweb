@@ -37,7 +37,8 @@ const AboutUs = () => {
             </div>
           </div>
 
-          <div className="w-3/4 mx-auto mt-8 border-t-2 border-green-500 line"></div>
+          <div className="w-3/4 mx-auto mt-8 border-t-[1px] border-green-500 line"></div>
+
 
           {/* Mission */}
           <div className="max-w-7xl mx-auto px-6 lg:px-12">
