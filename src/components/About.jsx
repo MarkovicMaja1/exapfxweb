@@ -12,7 +12,7 @@ const AboutUs = () => {
             <h2 className="text-4xl lg:text-5xl font-extrabold tracking-tight text-center">About Us</h2>
           </div>
 
-          <div className="max-w-7xl mx-auto px-6 lg:px-12">
+          <div className="max-w-7xl mx-auto px-4 lg:px-12">
             <div className="grid grid-cols-1 lg:grid-cols-2 items-center gap-16 about-us-grid">
               {/* Eco Capital FX */}
               <div className="about-us-text mx-auto mt-16 sm:mt-20 lg:mt-24 lg:max-w-4xl">

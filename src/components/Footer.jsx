@@ -6,12 +6,12 @@ const Footer = () => {
     <footer aria-labelledby="footer-heading" className="bg-[#101919] text-white">
       <p className="sr-only" id="footer-heading">Footer</p>
       <div className="mx-auto px-4 py-20 max-w-screen-2xl">
-        <div className="xl:grid xl:grid-cols-3 xl:gap-8">
+        <div className="xl:grid xl:grid-cols-3 xl:gap-8 paddingFooter">
           <div className="mt-10 xl:mt-0">
             <div className="flex justify-center mb-12">
               <img src={logo} alt="Logo" className="w-48 h-auto" />
             </div>
-            <div className="md:order-2 flex space-x-6 justify-center">
+            <div className="md:order-2 flex space-x-6 justify-center ml-10 socialMediaPhone">
             <a href="#" className="text-gray-400 hover:text-white">
               <span className="sr-only">Facebook</span>
               <svg className="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="">
@@ -109,10 +109,28 @@ const Footer = () => {
           </div>
         </div>
         <div className="mt-16 pt-8 sm:mt-20 md:flex md:items-center justify-center lg:mt-24 border-t border-gray-700">
-          <small className="mt-8 text-xs leading-5 text-gray-500 md:order-1 md:mt-0 max-sm:text-center">
+          <small className="mt-8 text-xs leading-5 text-gray-500 md:order-1 md:mt-0 max-sm:text-center paddingCopyright">
             © 2025 ECapFX. All rights reserved.
           </small>
         </div>
+        <style jsx>{`
+          @media (max-width: 768px) {
+          .paddingFooter{
+            
+              padding-left: 30px;
+            padding-right: 30px;
+          }
+            .paddingCopyright{
+            
+              padding-left: 33px;
+            padding-right: 33px;
+            
+          }
+            .socialMediaPhone{
+            margin-left: -5px;}
+      
+      }
+      `}</style>
       </div>
     </footer>
   );

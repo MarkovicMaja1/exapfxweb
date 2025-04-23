@@ -531,3 +531,10 @@ button {
  
 }
 }
+
+@media (max-width: 768px) {
+  .fundingSectionContainer {
+    /* padding-left: 14px;
+    padding-right: 14px; */
+  }
+}

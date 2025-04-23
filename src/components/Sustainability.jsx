@@ -13,8 +13,8 @@ const Suistanbility = () => {
     <div className="relative overflow-hidden" >
       <div className="animated-bg"></div>
       <div className="max-w-7xl mx-auto px-6 lg:px-12 mt-10 mb-24">
-        <div className="text-center">
-          <div className="mx-auto px-12 max-w-screen-xl relative isolate">
+        <div className="text-center sustainabillityPadding">
+          <div className="mx-auto  max-w-screen-xl relative isolate">
             <div className="mx-auto lg:max-w-4xl text-center">
               <h2 className="mt-2 text-4xl lg:text-5xl font-extrabold tracking-tight text-center ">
                 Sustainability
@@ -89,6 +89,15 @@ const Suistanbility = () => {
           </div>
         </div>
       </div>
+      <style jsx>{`
+          @media (max-width: 768px) {
+          .sustainabillityPadding{
+            
+              padding-left: 12px;
+            padding-right:12px;
+          }
+      }
+      `}</style>
     </div>
   );
 };

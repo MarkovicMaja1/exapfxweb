@@ -142,7 +142,7 @@ const ChoosePlan = () => {
         .boxes-container {
           display: flex;
           justify-content: center;
-          gap: 50px;
+          gap: 63px;
           flex-wrap: wrap;
           
    
@@ -350,6 +350,8 @@ const ChoosePlan = () => {
         @media (max-width: 768px) {
           .funding-journey-container{
             padding-bottom: 70px;
+              padding-left: 33px;
+            padding-right: 33px;
           }
           .boxes-container {
             flex-direction: column;
@@ -359,12 +361,12 @@ const ChoosePlan = () => {
           .box-wrapper {
             max-width: 100%;
             margin-bottom: 30px;
-             padding-left: 20px;
-            padding-right: 20px;
+            //  padding-left: 20px;
+            // padding-right: 20px;
           }
              .top-section {
-            padding-left: 20px;
-            padding-right: 20px;
+            // padding-left: 20px;
+            // padding-right: 20px;
           }
 
           .section-title {

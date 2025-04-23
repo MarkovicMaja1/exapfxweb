@@ -72,7 +72,7 @@ const Team = () => {
         <h2 className="mb-24 text-4xl font-extrabold tracking-tight text-center text-white">Meet Our Team</h2>
       </div>
 
-      <div className="max-w-7xl mx-auto px-4">
+      <div className="max-w-7xl mx-auto px-8 paddingTeam">
         <div className="relative">
           <div className="overflow-hidden">
             <div
@@ -128,6 +128,15 @@ const Team = () => {
             {/* Ikona za play/pause */}
           {/* </button> */}
         </div>
+        <style jsx>{`
+          @media (max-width: 768px) {
+          .paddingTeam{
+            
+              padding-left: 28px;
+            padding-right:28px;
+          }
+      }
+      `}</style>
       </div>
     </section>
   );

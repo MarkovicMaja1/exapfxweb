@@ -51,7 +51,7 @@ const Goals = () => {
       <div className="animated-bg-goals"></div>
 
       <div className="max-w-7xl mx-auto px-6 lg:px-12 mt-20 mb-24 relative z-10">
-        <div className="text-center">
+        <div className="text-center goalsPadding">
           <div className="mx-auto lg:max-w-4xl text-center">
             <h2 className="text-4xl lg:text-5xl font-extrabold tracking-tight text-center">Our Goals</h2>
           </div>
@@ -85,6 +85,15 @@ const Goals = () => {
           </p>
         </div>
       </div>
+      <style jsx>{`
+          @media (max-width: 768px) {
+          .goalsPadding{
+            
+              padding-left: 12px;
+            padding-right:12px;
+          }
+      }
+      `}</style>
     </div>
   );
 };
