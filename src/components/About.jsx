@@ -31,7 +31,7 @@ const AboutUs = () => {
               </div>
 
               <div className="about-us-image ecoImage flex justify-center mt-10">
-                <img src={image1} alt="About Us" className="w-3/4 h-3/4 rounded-lg bg-transparent hover:scale-105 transition-transform duration-300" />
+                <img src={image1} alt="About Us" loading="lazy" className="w-3/4 h-3/4 rounded-lg bg-transparent hover:scale-105 transition-transform duration-300" />
               </div>
             </div>
           </div>
@@ -42,7 +42,7 @@ const AboutUs = () => {
           <div className="max-w-7xl mx-auto px-6 lg:px-12">
             <div className="grid grid-cols-1 lg:grid-cols-2 items-center gap-16 about-us-grid">
               <div className="about-us-image missionImage flex justify-center mr-10">
-                <img src={image2} alt="About Us" className="w-3/4 h-3/4 mr-10 rounded-lg bg-transparent hover:scale-105 transition-transform duration-300" />
+                <img src={image2} alt="About Us" loading="lazy" className="w-3/4 h-3/4 mr-10 rounded-lg bg-transparent hover:scale-105 transition-transform duration-300" />
               </div>
 
               <div className="about-us-text mx-auto sm:mt-20 lg:max-w-4xl text-left">
