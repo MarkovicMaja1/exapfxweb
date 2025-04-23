@@ -53,7 +53,7 @@ body {
 
 .animate-marquee {
   display: inline-flex;
-  animation: marquee 15s linear infinite; /* Podesi brzinu po želji */
+  animation: marquee 15s linear infinite;
   will-change: transform;
 }
 

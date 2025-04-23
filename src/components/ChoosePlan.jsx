@@ -4,11 +4,10 @@ import trader from '../assets/backg.jpeg';
 const ChoosePlan = () => {
   return (
     <div className="funding-journey-container">
-      {/* Top half with black background */}
       <div className="top-section">
         {/* <h1 className="section-title mt-2 text-4xl lg:text-4xl font-extrabold tracking-tight text-center" style={{ marginTop: '50px' }}>Choose Your Funding Journey</h1> */}
         <div className="mx-auto lg:max-w-4xl text-center ">
-<h2 className="text-4xl lg:text-5xl font-extrabold tracking-tight text-center ">Choose Your Funding Journey</h2>
+        <h2 className="text-4xl lg:text-5xl font-extrabold tracking-tight text-center ">Choose Your Funding Journey</h2>
           </div>
         
         {/* <div className="w-2/4 mx-auto mt-6 mb-10 border-t-2 border-green-500"></div> */}
@@ -21,7 +20,6 @@ const ChoosePlan = () => {
         </div>
       </div>
 
-      {/* Bottom half (boxes) */}
       <div className="boxes-container mt-14 ">
         {/* Boks 1 */}
         <div className="box-wrapper">
@@ -93,7 +91,6 @@ const ChoosePlan = () => {
         </div>
       </div>
 
-      {/* Stilovi */}
       <style jsx>{`
         .funding-journey-container {
           width: 100%;
@@ -157,14 +154,14 @@ const ChoosePlan = () => {
         }
 
         .inner-box {
-  position: relative;
-  width: 100%;
-  height: 450px;
-  background: #101919;
-  border-radius: 1rem;
-  transition: all 0.3s ease;
-  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.2); /* Bela svetla senka */
-}
+          position: relative;
+          width: 100%;
+          height: 450px;
+          background: #101919;
+          border-radius: 1rem;
+          transition: all 0.3s ease;
+          box-shadow: 0 4px 15px rgba(255, 255, 255, 0.2); /* Bela svetla senka */
+        }
 
 
         .blurred-background {
@@ -300,45 +297,45 @@ const ChoosePlan = () => {
           transition: all 0.3s ease;
         }
 
-       .hyper-button {
-        background: #facc15;
-        color: #1a1a2e;
-        transition: all 0.3s ease;
-      }
+        .hyper-button {
+          background: #facc15;
+          color: #1a1a2e;
+          transition: all 0.3s ease;
+        }
 
-      .hyper-button:hover {
-        background: #fde047; /* Svetlija nijansa */
-        box-shadow: 0 4px 10px rgba(250, 204, 21, 0.4); /* Blaga senka */
-      }
+        .hyper-button:hover {
+          background: #fde047; /* Svetlija nijansa */
+          box-shadow: 0 4px 10px rgba(250, 204, 21, 0.4); /* Blaga senka */
+        }
 
-      .green-button {
-        background: #1d8348;
-        color: rgb(255, 255, 255);
-        transition: all 0.3s ease;
-      }
+        .green-button {
+          background: #1d8348;
+          color: rgb(255, 255, 255);
+          transition: all 0.3s ease;
+        }
 
-      .green-button:hover {
-        background: #28a75b; /* Svetlija zelena */
-        box-shadow: 0 4px 10px rgba(29, 131, 72, 0.4);
-      }
+        .green-button:hover {
+          background: #28a75b; /* Svetlija zelena */
+          box-shadow: 0 4px 10px rgba(29, 131, 72, 0.4);
+        }
 
-      .blue-button {
-        background: #F26334;
-        color: #ffffff;
-        transition: all 0.3s ease;
-      }
+        .blue-button {
+          background: #F26334;
+          color: #ffffff;
+          transition: all 0.3s ease;
+        }
 
-      .blue-button:hover {
-        background: #fa7a4c; /* Svetlija nijansa plave */
-        box-shadow: 0 4px 10px rgba(59, 130, 246, 0.4); /* Blaga senka */
-      }
+        .blue-button:hover {
+          background: #fa7a4c; /* Svetlija nijansa plave */
+          box-shadow: 0 4px 10px rgba(59, 130, 246, 0.4); /* Blaga senka */
+        }
 
 
-      .high-button {
-        background: #14b8a6;
-        color: #1a1a2e;
-        transition: all 0.3s ease;
-      }
+        .high-button {
+          background: #14b8a6;
+          color: #1a1a2e;
+          transition: all 0.3s ease;
+        }
 
         .bootcamp-button {
           background: #a855f7;

@@ -1,19 +1,19 @@
 import React, { useEffect } from 'react';
 import AOS from 'aos';
-import 'aos/dist/aos.css'; // Uvezi AOS stilove
+import 'aos/dist/aos.css'; 
 import funding from '../assets/funding2.png';
 import network from '../assets/networking2.png';
 import leadership from '../assets/leadership2.png';
 import expansion from '../assets/expansion2.png';
 import planet from '../assets/planet2.png';
-import './Home.css'; // Zadržavamo tvoj CSS
+import './Home.css'; 
 
 const Goals = () => {
   useEffect(() => {
     AOS.init({
-      duration: 800, // Trajanje animacije (u milisekundama)
-      easing: 'ease-in-out', // Glatki prelaz
-      once: true, // Animacija se pokreće samo jednom
+      duration: 800, 
+      easing: 'ease-in-out',
+      once: true, 
     });
   }, []);
 
@@ -56,13 +56,13 @@ const Goals = () => {
             <h2 className="text-4xl lg:text-5xl font-extrabold tracking-tight text-center">Our Goals</h2>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6 mb-16 mt-16">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6 mb-16 mt-16 ">
             {goalsData.map((goal, index) => (
               <div
                 key={index}
-                className="bg-[#101919] rounded-lg shadow-lg p-4 flex flex-col items-center text-center text-gray-400 hover:bg-gray-800 transition duration-300"
-                data-aos="fade-up" // Animacija za svaku karticu
-                data-aos-delay={`${index * 100}`} // Kašnjenje: 0ms, 100ms, 200ms...
+                className="bg-[#101919]  rounded-lg shadow-lg p-4 flex flex-col items-center text-center text-gray-400 hover:bg-gray-800 transition duration-300 "
+                data-aos="fade-up" 
+                data-aos-delay={`${index * 100}`} 
               >
                 <div className="w-16 h-16 mb-4 flex items-center justify-center bg-gray-800 rounded-full">
                   <img

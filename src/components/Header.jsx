@@ -23,7 +23,6 @@ const Header = () => {
           <li><a href="#team" className="font-bold hover:text-[#1d8348] transition">Team</a></li>
         </ul>
 
-        {/* Get Started button */}
         <a
           className="px-5 py-2.5 text-white font-poppins hidden lg:block ml-auto bg-[#1d8348] rounded-3xl hover:text-black hover:bg-[#2ecc71] transition duration-300 ease-in-out"
         >

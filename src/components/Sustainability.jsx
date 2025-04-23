@@ -5,7 +5,6 @@ import image2 from '../assets/sustainable2.png';
 import quality from '../assets/quality.png';
 import ability from '../assets/ability.png';
 import gender from '../assets/gender-fluid.png';
-import backgroundImage from '../assets/so.svg';
 import './Home.css';
 
 const Suistanbility = () => {
@@ -28,7 +27,7 @@ const Suistanbility = () => {
 
           {/* Flex container */}
           <div className="flex flex-col lg:flex-row gap-16 mb-16 mt-8 justify-center">
-            {/* Left Box - First two cards stacked vertically */}
+            {/* Left Box */}
             <div className="flex flex-col gap-16 w-full lg:w-1/3 ">
               {/* First Card */}
               <div className="bg-[#101919] rounded-lg shadow-lg p-6 flex flex-row items-center text-gray-400 hover:bg-gray-800 transition duration-300 hover:scale-105">
@@ -67,7 +66,7 @@ const Suistanbility = () => {
               </div>
             </div>
 
-            {/* Right Box - Third card centered vertically */}
+            {/* Right Box */}
             <div className="w-full lg:w-1/3 flex items-center">
               <div className="bg-[#101919] rounded-lg shadow-lg p-6 flex flex-row items-center text-gray-400 hover:bg-gray-800 transition duration-300 hover:scale-105">
                 <div className="flex flex-col items-center text-center w-1/2">

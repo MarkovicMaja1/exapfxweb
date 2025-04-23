@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useRef } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
@@ -8,7 +8,7 @@ import './FundingPlans.css';
 
 const FundingPlans = () => {
   const [activeStep, setActiveStep] = useState(1);
-  const [activeSize, setActiveSize] = useState('100000'); // Početni plan je 100K
+  const [activeSize, setActiveSize] = useState('100000'); 
   const [uPromeni, setUPromeni] = useState(false);
   const swiperRef = useRef(null);
 

@@ -1,4 +1,3 @@
-// ChatIcon.js
 import React from 'react';
 import sustainability from '../assets/sustainability.png';
 

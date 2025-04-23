@@ -1,7 +1,7 @@
 import React from 'react';
 import image1 from '../assets/investment.png';
 import image2 from '../assets/growth.png';
-import Background from './Background';
+
 
 const AboutUs = () => {
   return (
@@ -14,7 +14,6 @@ const AboutUs = () => {
 
           <div className="max-w-7xl mx-auto px-4 lg:px-12">
             <div className="grid grid-cols-1 lg:grid-cols-2 items-center gap-16 about-us-grid">
-              {/* Eco Capital FX */}
               <div className="about-us-text mx-auto mt-16 sm:mt-20 lg:mt-24 lg:max-w-4xl">
                 <dl className="grid grid-cols-1 gap-y-16">
                   <div className="text-left">
@@ -40,15 +39,12 @@ const AboutUs = () => {
           <div className="w-3/4 mx-auto mt-8 border-t-[1px] border-green-500 line"></div>
 
 
-          {/* Mission */}
           <div className="max-w-7xl mx-auto px-6 lg:px-12">
             <div className="grid grid-cols-1 lg:grid-cols-2 items-center gap-16 about-us-grid">
-              {/* Left side - Image */}
               <div className="about-us-image missionImage flex justify-center mr-10">
                 <img src={image2} alt="About Us" className="w-3/4 h-3/4 mr-10 rounded-lg bg-transparent hover:scale-105 transition-transform duration-300" />
               </div>
 
-              {/* Right side - Text */}
               <div className="about-us-text mx-auto sm:mt-20 lg:max-w-4xl text-left">
                 <dl className="grid grid-cols-1 gap-y-16">
                   <div className="text-left">
