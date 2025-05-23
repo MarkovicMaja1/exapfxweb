@@ -52,10 +52,12 @@ const Footer = () => {
       <small href="#chooseplan" className="text-sm leading-6 text-gray-300 hover:text-white">ECAPFX LIMITED</small>
     </li>
     <li>
-      <small href="#somethingnew" className="text-sm leading-6 text-gray-300 hover:text-white">16330400</small>
+      <small href="#somethingnew" className="text-sm leading-6 text-gray-300 hover:text-white">Office 7330MO
+</small>
     </li>
     <li>
-      <small href="#team" className="text-sm leading-6 text-gray-300 hover:text-white">166 WILLINGALE ROAD</small>
+      <small href="#team" className="text-sm leading-6 text-gray-300 hover:text-white">182-184 High Street North
+</small>
     </li>
   </ul>
 
@@ -63,10 +65,11 @@ const Footer = () => {
   <ul role="list" className="mt-6 space-y-4">
 
     <li>
-      <small href="#chooseplan" className="text-sm leading-6 text-gray-300 hover:text-white">LOUGHTON</small>
+      <small href="#chooseplan" className="text-sm leading-6 text-gray-300 hover:text-white">Area 1/1 East Ham
+</small>
     </li>
     <li>
-      <small href="#somethingnew" className="text-sm leading-6 text-gray-300 hover:text-white">ENGLAND IG10 2DA</small>
+      <small href="#somethingnew" className="text-sm leading-6 text-gray-300 hover:text-white">London E6 2JA</small>
     </li>
    
   </ul>
