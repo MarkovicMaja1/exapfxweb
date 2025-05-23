@@ -12,6 +12,7 @@ import Dashboard from "./components/Dashboard";
 import TeamSection from "./components/TeamFirst";
 import SustainabilityIcon from "./components/SustainabilityIcon";
 
+
 function App() {
   return (
     <div className="App min-h-scree">
