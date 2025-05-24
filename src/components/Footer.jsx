@@ -49,7 +49,7 @@ const Footer = () => {
   {/* Leva lista */}
   <ul role="list" className="mt-6 space-y-4 ml-28 addInformations">
     <li>
-      <small href="#chooseplan" className="text-sm leading-6 text-gray-300 hover:text-white">ECAPFX LIMITED</small>
+      <small href="#chooseplan" className="text-sm leading-6 text-gray-300 hover:text-white">X ECAPFX LIMITED</small>
     </li>
     <li>
       <small href="#somethingnew" className="text-sm leading-6 text-gray-300 hover:text-white">Office 7330MO
