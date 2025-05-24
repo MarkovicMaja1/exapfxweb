@@ -49,14 +49,14 @@ const Footer = () => {
   {/* Leva lista */}
   <ul role="list" className="mt-6 space-y-4 ml-28 addInformations">
     <li>
-      <small href="#chooseplan" className="text-sm leading-6 text-gray-300 hover:text-white">X ECAPFX LIMITED</small>
+      <small href="#chooseplan" className="text-sm leading-6 text-gray-300 hover:text-white">ECAPFX LIMITED</small>
     </li>
     <li>
-      <small href="#somethingnew" className="text-sm leading-6 text-gray-300 hover:text-white">Office 7330MO
+      <small href="#somethingnew" className="text-sm leading-6 text-gray-300 hover:text-white">16330400
 </small>
     </li>
     <li>
-      <small href="#team" className="text-sm leading-6 text-gray-300 hover:text-white">182-184 High Street North
+      <small href="#team" className="text-sm leading-6 text-gray-300 hover:text-white">166 WILLINGALE ROAD LOUGHTON
 </small>
     </li>
   </ul>
@@ -65,12 +65,12 @@ const Footer = () => {
   <ul role="list" className="mt-6 space-y-4">
 
     <li>
-      <small href="#chooseplan" className="text-sm leading-6 text-gray-300 hover:text-white">Area 1/1 East Ham
+      <small href="#chooseplan" className="text-sm leading-6 text-gray-300 hover:text-white">ENGLAND IG10 2DA
 </small>
     </li>
-    <li>
+    {/* <li>
       <small href="#somethingnew" className="text-sm leading-6 text-gray-300 hover:text-white">London E6 2JA</small>
-    </li>
+    </li> */}
    
   </ul>
 </div>
