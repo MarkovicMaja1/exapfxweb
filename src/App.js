@@ -1,4 +1,5 @@
 
+import Soon from "./components/Soon.jsx";
 import Header from "./components/Header";
 import { BrowserRouter } from "react-router-dom";
 import '@fortawesome/fontawesome-free/css/all.min.css';
@@ -20,7 +21,10 @@ function App() {
       <div id="navbar">
           <Header/>
         </div>
-        <div id="home">
+        <div id="soon">
+          <Soon />
+        </div>
+        {/* <div id="home">
           <Home />
         </div>
         <div id="chooseplan">
@@ -43,7 +47,7 @@ function App() {
         </div>
         <div id="footer">
           <Footer/>
-        </div>
+        </div> */}
          <SustainabilityIcon />
       </BrowserRouter>
     </div>
