@@ -49,18 +49,14 @@ const Footer = () => {
   {/* Leva lista */}
   <ul role="list" className="mt-6 space-y-4 ml-28 addInformations">
     <li>
-      <small href="#chooseplan" className="text-sm leading-6 text-gray-300 hover:text-white">ECAPFX LIMITED</small>
+      <small href="#chooseplan" className="text-sm leading-6 text-gray-300 hover:text-white"></small>
     </li>
     <li>
-      <small href="#somethingnew" className="text-sm leading-6 text-gray-300 hover:text-white">16330400
+      <small href="#somethingnew" className="text-sm leading-6 text-gray-300 hover:text-white">
 </small>
     </li>
     <li>
-          <small href="#somethingnew" className="text-sm leading-6 text-gray-300 hover:text-white">ENGLAND IG10 2DA
-</small>
-    </li>
-    <li>
-      <small href="#team" className="text-sm leading-6 text-gray-300 hover:text-white">166 WILLINGALE ROAD LOUGHTON
+      <small href="#team" className="text-sm leading-6 text-gray-300 hover:text-white">
 </small>
     </li>
   </ul>
@@ -145,7 +141,8 @@ const Footer = () => {
         </div>
         <div className="mt-16 pt-8 sm:mt-10 md:flex md:items-center justify-center lg:mt-10 border-t border-gray-700">
           <small className="mt-8 text-xs leading-5 text-gray-500 md:order-1 md:mt-0 max-sm:text-center paddingCopyright">
-            © 2025 ECapFX. All rights reserved.
+            © 2025 ECapFX. All rights reserved. 16330400, ENGLAND IG10 2DA, 166 WILLINGALE ROAD LOUGHTON
+
           </small>
         </div>
         <style jsx>{`
