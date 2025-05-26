@@ -1,5 +1,5 @@
 import React from 'react';
-import logo from '../assets/ECAPFX-LOGO-white.png';
+import logo from '../assets/ECapFX-LOGO-white.png';
 
 const Footer = () => {
   return (
