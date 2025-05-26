@@ -73,7 +73,7 @@ export default function ComingSoon() {
         <aside className="w-full md:w-1/2 mt-12 md:mt-0 flex justify-center">
           <img
             src="/ECAPFX.png"
-            alt="ECapFX Logo"
+            alt="ECAPFX Logo"
             className="max-w-full h-auto md:max-w-lg rounded-lg shadow-md"
           />
         </aside>

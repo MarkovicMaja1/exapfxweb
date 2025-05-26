@@ -1,5 +1,5 @@
 import React from 'react';
-import logo from '../assets/ECapFX-LOGO-white.png';
+import logo from '../assets/ECAPFX-LOGO-white.png';
 
 const Footer = () => {
   return (
@@ -141,7 +141,7 @@ const Footer = () => {
         </div>
         <div className="mt-16 pt-8 sm:mt-10 md:flex md:items-center justify-center lg:mt-10 border-t border-gray-700">
           <small className="mt-8 text-xs leading-5 text-gray-500 md:order-1 md:mt-0 max-sm:text-center paddingCopyright">
-            © 2025 ECapFX. All rights reserved. Company ID: 16330400, 166 Willingale Road, Loughton, IG10 2DA, United Kingdom.
+            © 2025 ECAPFX. All rights reserved. Company ID: 16330400, 166 Willingale Road, Loughton, IG10 2DA, United Kingdom.
 
           </small>
         </div>

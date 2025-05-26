@@ -41,10 +41,10 @@ const FundingPlans = () => {
     <SwiperSlide key={size}>
       <div className="plans_table">
         <div className="table_footer">
-          <h3 className={`${uPromeni ? 'promena' : ''} text-white`}>ECapFX {sizes[size].label}</h3>
+          <h3 className={`${uPromeni ? 'promena' : ''} text-white`}>ECAPFX {sizes[size].label}</h3>
           <div className="rightBox">
             <p className={uPromeni ? 'promena' : ''}>Assessment Price: ${sizes[size].price}</p>
-            <button className="normalButton">Start ECapFX Evaluation</button>
+            <button className="normalButton">Start ECAPFX Evaluation</button>
           </div>
         </div>
         <div className="mobileSteps">
@@ -158,7 +158,7 @@ const FundingPlans = () => {
           <div className="ps_wrapper">
             <div className="ps_intro">
               <p className="mb-12 mt-10 text-gray-600">
-                Choose the evaluation based on your preference to become an ECapFX Trader.
+                Choose the evaluation based on your preference to become an ECAPFX Trader.
               </p>
               <div className="plan_select step_select">
                 <div className="tabinationContainer variant2_tabs">
@@ -228,7 +228,7 @@ const FundingPlans = () => {
                   <div className="plan_highlights">
                     <div><p>No Profit Cap</p></div>
                     <div><p>Payout-on-demand</p></div>
-                    <div><p>Quickest way to become an ECapFX Trader</p></div>
+                    <div><p>Quickest way to become an ECAPFX Trader</p></div>
                   </div>
                 </div>
                 <div className="tableWrapper">
@@ -284,10 +284,10 @@ const FundingPlans = () => {
                   </div>
                 </div>
                 <div className="table_footer">
-                  <h4 className={uPromeni ? 'promena' : ''}>ECapFX {currentPlan.label}</h4>
+                  <h4 className={uPromeni ? 'promena' : ''}>ECAPFX {currentPlan.label}</h4>
                   <div className="rightBox">
                     <p className={uPromeni ? 'promena' : ''}>Assessment Price: ${currentPlan.price}</p>
-                    <button className="normalButton">Start ECapFX Capital Evaluation</button>
+                    <button className="normalButton">Start ECAPFX Capital Evaluation</button>
                   </div>
                 </div>
               </div>
