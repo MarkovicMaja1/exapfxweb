@@ -171,7 +171,7 @@ function PrivacyPolicy() {
         </p>
       </section>
 
-      <section className="mb-500">
+      <section className="mb-20">
         <h6 className="text-xl font-semibold text-black-200 mb-2">14. Contact Us</h6>
         <p className="text-black-400">
           If you have any questions about this Privacy Policy or your data, please contact:

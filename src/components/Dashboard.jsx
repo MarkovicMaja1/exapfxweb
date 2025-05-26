@@ -185,7 +185,7 @@ const FundingPlans = () => {
                   <div className="tabinationWrapper">
                     <ul className="tabinationBox">
                       <li className="tabinationButton activeTab">
-                        <p><span>ECapFX</span></p>
+                        <p><span>ECAPFX</span></p>
                       </li>
                     </ul>
                   </div>

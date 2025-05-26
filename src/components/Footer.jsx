@@ -56,6 +56,10 @@ const Footer = () => {
 </small>
     </li>
     <li>
+          <small href="#somethingnew" className="text-sm leading-6 text-gray-300 hover:text-white">ENGLAND IG10 2DA
+</small>
+    </li>
+    <li>
       <small href="#team" className="text-sm leading-6 text-gray-300 hover:text-white">166 WILLINGALE ROAD LOUGHTON
 </small>
     </li>
@@ -65,7 +69,7 @@ const Footer = () => {
   <ul role="list" className="mt-6 space-y-4">
 
     <li>
-      <small href="#chooseplan" className="text-sm leading-6 text-gray-300 hover:text-white">ENGLAND IG10 2DA
+      <small href="#chooseplan" className="text-sm leading-6 text-gray-300 hover:text-white">
 </small>
     </li>
     {/* <li>
