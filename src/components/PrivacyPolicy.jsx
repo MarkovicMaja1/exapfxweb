@@ -3,9 +3,9 @@ import React from 'react';
 function PrivacyPolicy() {
   return (
     <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 bg-white text-black min-h-screen pt-20 pb-12">
-      <h1 className="text-4xl font-bold text-[#1d8348] mb-4">Privacy</h1>
-      <h2 className="text-2xl font-semibold text-gray-900 mb-2">EcapFX Proprietary Firm – Website Privacy Policy</h2>
-      <p className="text-gray-600 mb-6">
+      <h1 className="text-4xl font-bold text-[#1d8348] mt-5 mb-10">Privacy</h1>
+      <h2 className="text-2xl font-semibold text-gray-900 mt-10 mb-10">EcapFX Proprietary Firm – Website Privacy Policy</h2>
+      <p className="text-gray-600 mb-10">
         <strong>Effective Date:</strong> 11/04/2025
         <br />
         <strong>Applicable Law:</strong> UK General Data Protection Regulation (UK GDPR), Data Protection Act 2018, and Financial Conduct Authority (FCA) Principles

@@ -15,7 +15,7 @@ import SustainabilityIcon from "./components/SustainabilityIcon";
 import { useEffect } from "react";
 
 const ScrollToSection = () => {
-  const { hash } = useLocation();
+  const { hash, pathname } = useLocation();
 
   useEffect(() => {
     if (hash) {
@@ -29,8 +29,11 @@ const ScrollToSection = () => {
           behavior: 'smooth'
         });
       }
+    } else if (pathname === '/privacy-policy') {
+      // Scroll to top when loading Privacy Policy page
+      window.scrollTo({ top: 0, behavior: 'smooth' });
     }
-  }, [hash]);
+  }, [hash, pathname]);
 
   return null;
 };
