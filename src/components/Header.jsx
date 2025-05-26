@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import logo from '../assets/ECapFX-LOGO-white.png';
 
 const Header = () => {
@@ -9,25 +10,27 @@ const Header = () => {
       <nav className="items-center mx-auto flex max-w-screen-2xl p-4 relative">
         {/* Logo */}
         <div className="absolute left-4 top-1/2 transform -translate-y-1/2 z-10">
-          <a href="#home" className="-m-1.5 p-1.5">
+          <Link to="/#home" className="-m-1.5 p-1.5"> {/* Changed to Link */}
             <span className="sr-only">Windframe</span>
             <img src={logo} alt="Logo" className="w-2/5" />
-          </a>
+          </Link>
         </div>
 
         {/* Desktop Navigation */}
         <ul className="hidden lg:flex gap-16 text-white text-lg font-bold justify-center flex-1 pl-32 ml-[100px]">
-          <li><a href="#home" className="font-bold hover:text-[#1d8348] transition font-poppins">Home</a></li>
-          <li><a href="#chooseplan" className="font-bold hover:text-[#1d8348] transition">Choose Plan</a></li>
-          <li><a href="#about" className="font-bold hover:text-[#1d8348] transition">About Us</a></li>
-          <li><a href="#team" className="font-bold hover:text-[#1d8348] transition">Team</a></li>
+          <li><Link to="/#home" className="font-bold hover:text-[#1d8348] transition font-poppins">Home</Link></li>
+          <li><Link to="/#chooseplan" className="font-bold hover:text-[#1d8348] transition">Choose Plan</Link></li>
+          <li><Link to="/#about" className="font-bold hover:text-[#1d8348] transition">About Us</Link></li>
+          <li><Link to="/#team" className="font-bold hover:text-[#1d8348] transition">Team</Link></li>
+          <li><Link to="/privacy-policy" className="font-bold hover:text-[#1d8348] transition">Privacy Policy</Link></li>
         </ul>
 
-        <a
+        <Link
+          to="/#get-started" // Changed to Link
           className="px-5 py-2.5 text-white font-poppins hidden lg:block ml-auto bg-[#1d8348] rounded-3xl hover:text-black hover:bg-[#2ecc71] transition duration-300 ease-in-out"
         >
           Get Started
-        </a>
+        </Link>
 
         {/* Mobile menu button */}
         <div className="lg:hidden ml-auto z-20">
@@ -56,16 +59,19 @@ const Header = () => {
       {isOpen && (
         <div className="lg:hidden bg-[#101919] px-4 pt-4 pb-6">
           <ul className="space-y-4 text-white text-lg font-bold">
-            <li><a href="#home" className="block hover:text-[#1d8348] transition"   onClick={() => setIsOpen(!isOpen)}>Home</a></li>
-            <li><a href="#chooseplan" className="block hover:text-[#1d8348] transition"   onClick={() => setIsOpen(!isOpen)}>Choose Plan</a></li>
-            <li><a href="#about" className="block hover:text-[#1d8348] transition"   onClick={() => setIsOpen(!isOpen)}>About Us</a></li>
-            <li><a href="#team" className="block hover:text-[#1d8348] transition"   onClick={() => setIsOpen(!isOpen)}>Team</a></li>
+            <li><Link to="/#home" className="block hover:text-[#1d8348] transition" onClick={() => setIsOpen(!isOpen)}>Home</Link></li>
+            <li><Link to="/#chooseplan" className="block hover:text-[#1d8348] transition" onClick={() => setIsOpen(!isOpen)}>Choose Plan</Link></li>
+            <li><Link to="/#about" className="block hover:text-[#1d8348] transition" onClick={() => setIsOpen(!isOpen)}>About Us</Link></li>
+            <li><Link to="/#team" className="block hover:text-[#1d8348] transition" onClick={() => setIsOpen(!isOpen)}>Team</Link></li>
+            <li><Link to="/privacy-policy" className="block hover:text-[#1d8348] transition" onClick={() => setIsOpen(!isOpen)}>Privacy Policy</Link></li>
             <li>
-              <a
+              <Link
+                to="/#get-started" // Changed to Link
                 className="px-5 py-2.5 text-white font-poppins bg-[#1d8348] rounded-3xl hover:text-black hover:bg-[#2ecc71] transition duration-300 ease-in-out inline-block"
+                onClick={() => setIsOpen(!isOpen)}
               >
                 Get Started
-              </a>
+              </Link>
             </li>
           </ul>
         </div>
