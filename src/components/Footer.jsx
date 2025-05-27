@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import logo from '../assets/ECapFX-LOGO-white.png';
 
 const Footer = () => {
@@ -126,13 +127,13 @@ const Footer = () => {
                 <p className="text-sm font-semibold leading-6 text-white">Policies</p>
                 <ul role="list" className="mt-6 space-y-4">
                   <li>
-                    <small href="#" className="text-sm leading-6 text-gray-300 hover:text-white">Claim</small>
+                    <small><Link to="/claim" className="text-sm leading-6 text-gray-300 hover:text-white">Claim</Link></small>
                   </li>
                   <li>
-                    <small href="#" className="text-sm leading-6 text-gray-300 hover:text-white">Privacy</small>
+                    <small><Link to="/privacy-policy" className="text-sm leading-6 text-gray-300 hover:text-white">Privacy Policy</Link></small>
                   </li>
                   <li>
-                    <small href="#" className="text-sm leading-6 text-gray-300 hover:text-white">Terms</small>
+                    <small><Link to="/terms" className="text-sm leading-6 text-gray-300 hover:text-white">Terms and Conditions</Link></small>
                   </li>
                 </ul>
               </div>

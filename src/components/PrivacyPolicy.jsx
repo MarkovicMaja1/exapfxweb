@@ -14,7 +14,7 @@ function PrivacyPolicy() {
       <section className="mb-8">
         <h6 className="text-xl font-semibold text-black-200 mb-2">1. Introduction</h6>
         <p className="text-black-400">
-          ECAPFX Proprietary Firm ("ECAPFX", "we", "our", or "us") is committed to protecting and respecting your privacy. This Privacy Policy explains how we collect, use, disclose, and protect your personal data when you visit our website <a href="https://www.ECAPFX.com" className="text-[#1d8348] hover:text-[#f9e79f] underline">https://www.ECAPFX.com</a> or use our services.
+          ECAPFX Proprietary Firm ("ECAPFX", "we", "our", or "us") is committed to protecting and respecting your privacy. This Privacy Policy explains how we collect, use, disclose, and protect your personal data when you visit our website <a href="https://www.ecapfx.com" className="text-[#1d8348] hover:text-[#f9e79f] underline">https://www.ecapfx.com</a> or use our services.
         </p>
         <p className="text-black-400 mt-2">
           By accessing our website, you agree to the collection and use of information in accordance with this policy.
@@ -29,7 +29,7 @@ function PrivacyPolicy() {
         <p className="text-black-400 mt-2">
           <strong className="text-black">Registered Address:</strong> [Office 7330MO 182-184, High Street North Area 1/1, East Ham, London, E6 2JA]
           <br />
-          <strong className="text-black">Contact:</strong> <a href="mailto:privacy@ECAPFX.com" className="text-[#1d8348] hover:text-[#f9e79f] underline">privacy@ECAPFX.com</a>
+          <strong className="text-black">Contact:</strong> <a href="mailto:privacy@ecapfx.com" className="text-[#1d8348] hover:text-[#f9e79f] underline">privacy@ecapfx.com</a>
         </p>
       </section>
 
@@ -137,7 +137,7 @@ function PrivacyPolicy() {
           <li className="text-black">Lodge a complaint with the UK Information Commissioner’s Office (ICO) at <a href="https://ico.org.uk/" className="text-[#1d8348] hover:text-[#f9e79f] underline">https://ico.org.uk/</a></li>
         </ul>
         <p className="text-black-400 mt-2">
-          To exercise these rights, email us at <a href="mailto:privacy@ECAPFX.com" className="text-[#1d8348] hover:text-[#f9e79f] underline">privacy@ECAPFX.com</a>.
+          To exercise these rights, email us at <a href="mailto:privacy@ecapfx.com" className="text-[#1d8348] hover:text-[#f9e79f] underline">privacy@ecapfx.com</a>.
         </p>
       </section>
 
@@ -157,7 +157,7 @@ function PrivacyPolicy() {
         <p className="text-black-400">You can opt in or out of marketing communications at any time by:</p>
         <ul className="list-disc pl-6 text-black-400">
           <li className="text-black">Clicking the “unsubscribe” link in our emails</li>
-          <li className="text-black">Contacting <a href="mailto:privacy@ECAPFX.com" className="text-[#1d8348] hover:text-[#f9e79f] underline">privacy@ECAPFX.com</a></li>
+          <li className="text-black">Contacting <a href="mailto:privacy@ecapfx.com" className="text-[#1d8348] hover:text-[#f9e79f] underline">privacy@ecapfx.com</a></li>
         </ul>
         <p className="text-black-400 mt-2">
           We will never send unsolicited marketing unless we have your explicit consent.
@@ -179,7 +179,7 @@ function PrivacyPolicy() {
         <p className="text-black-400 mt-2">
           ECAPFX Proprietary Firm
           <br />
-          <strong className="text-black">Email:</strong> <a href="mailto:privacy@ECAPFX.com" className="text-[#1d8348] hover:text-[#f9e79f] underline">privacy@ECAPFX.com</a>
+          <strong className="text-black">Email:</strong> <a href="mailto:privacy@ecapfx.com" className="text-[#1d8348] hover:text-[#f9e79f] underline">privacy@ecapfx.com</a>
         </p>
       </section>
     </main>

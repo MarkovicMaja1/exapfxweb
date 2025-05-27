@@ -1,6 +1,8 @@
 import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import Soon from "./components/Soon";
 import PrivacyPolicy from "./components/PrivacyPolicy";
+import Terms from "./components/Terms";
+import Claim from "./components/Claim";
 import Header from "./components/Header";
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import About from "./components/About";
@@ -21,7 +23,6 @@ const ScrollToSection = () => {
     if (hash) {
       const element = document.getElementById(hash.replace('#', ''));
       if (element) {
-        // Scroll with an offset to account for the fixed header (assuming ~80px height)
         const offset = 80;
         const elementPosition = element.getBoundingClientRect().top + window.scrollY;
         window.scrollTo({
@@ -29,25 +30,31 @@ const ScrollToSection = () => {
           behavior: 'smooth'
         });
       }
-    } else if (pathname === '/privacy-policy') {
-      // Scroll to top when loading Privacy Policy page
-      window.scrollTo({ top: 0, behavior: 'smooth' });
+    } else if (pathname === '/privacy-policy' || pathname === '/terms' || pathname === '/claim') {
+      window.scrollTo({ top: 0, behavior: 'smooth' });  
     }
   }, [hash, pathname]);
 
   return null;
 };
 
+// Simple 404 fallback component
+const NotFound = () => (
+  <div className="text-center py-20">
+    <h1 className="text-4xl font-bold">404 - Page Not Found</h1>
+    <p className="mt-4 text-lg">Sorry, the page you're looking for doesn't exist.</p>
+  </div>
+);
+
 function App() {
   return (
-    <div className="App min-h-screen"> {/* Fixed typo: min-h-scree -> min-h-screen */}
+    <div className="App min-h-screen">
       <BrowserRouter basename="/">
         <ScrollToSection />
         <div id="navbar">
           <Header />
         </div>
         <Routes>
-          {/* Default route with all sections */}
           <Route
             path="/"
             element={
@@ -70,7 +77,7 @@ function App() {
                 <div id="goals">
                   <Goals />
                 </div>
-                <div id="sustainability"> {/* Fixed typo: suistanbility -> sustainability */}
+                <div id="sustainability">
                   <Sustainability />
                 </div>
                 <div id="team">
@@ -79,8 +86,10 @@ function App() {
               </>
             }
           />
-          {/* Separate Privacy Policy route */}
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+          <Route path="/terms" element={<Terms />} />
+          <Route path="/claim" element={<Claim />} />
+          <Route path="*" element={<NotFound />} /> {/* 404 Route */}
         </Routes>
         <SustainabilityIcon />
         <div id="footer">

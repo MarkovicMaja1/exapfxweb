@@ -22,7 +22,6 @@ const Header = () => {
           <li><Link to="/#chooseplan" className="font-bold hover:text-[#1d8348] transition">Choose Plan</Link></li>
           <li><Link to="/#about" className="font-bold hover:text-[#1d8348] transition">About Us</Link></li>
           <li><Link to="/#team" className="font-bold hover:text-[#1d8348] transition">Team</Link></li>
-          <li><Link to="/privacy-policy" className="font-bold hover:text-[#1d8348] transition">Privacy Policy</Link></li>
         </ul>
 
         <Link
@@ -63,7 +62,6 @@ const Header = () => {
             <li><Link to="/#chooseplan" className="block hover:text-[#1d8348] transition" onClick={() => setIsOpen(!isOpen)}>Choose Plan</Link></li>
             <li><Link to="/#about" className="block hover:text-[#1d8348] transition" onClick={() => setIsOpen(!isOpen)}>About Us</Link></li>
             <li><Link to="/#team" className="block hover:text-[#1d8348] transition" onClick={() => setIsOpen(!isOpen)}>Team</Link></li>
-            <li><Link to="/privacy-policy" className="block hover:text-[#1d8348] transition" onClick={() => setIsOpen(!isOpen)}>Privacy Policy</Link></li>
             <li>
               <Link
                 to="/#get-started" // Changed to Link
