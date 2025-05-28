@@ -2,11 +2,11 @@ import { CalendarDaysIcon, HandRaisedIcon } from '@heroicons/react/24/outline'
 
 export default function Example() {
   return (
-    <div className="relative isolate overflow-hidden py-16 sm:py-24 lg:py-32">
-      <div className="mx-auto max-w-5xl rounded-2xl bg-gray-900 px-6 py-12 shadow-xl ring-1 ring-white/10 lg:px-12">
+    <div className="bg-[#151515] relative isolate overflow-hidden py-16 sm:py-24 lg:py-8">
+      <div className="mx-auto max-w-5xl rounded-2xl bg-[#151515] px-6 py-12 shadow-xl ring-1 ring-white/10 lg:px-12">
         <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-2">
           <div className="max-w-xl lg:max-w-lg">
-            <h2 className="text-4xl font-semibold tracking-tight text-white">Subscribe to our newsletter</h2>
+            <h2 className="text-4xl font-semibold tracking-tight text-white">Stay up to date with our newsletter</h2>
             <p className="mt-4 text-lg text-gray-300">
               Get trading insights, strategy tips, and updates on challenges, direct to your inbox. Stay ahead in the
               markets with content crafted for prop traders.
@@ -26,7 +26,7 @@ export default function Example() {
               />
               <button
                 type="submit"
-                className="flex-none rounded-md bg-indigo-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-indigo-400 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500"
+                className="flex-none rounded-md bg-[#1D8348] px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-[#2ECC71] hover:text-black focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#1D8348]"
               >
                 Subscribe
               </button>
@@ -39,7 +39,7 @@ export default function Example() {
               </div>
               <dt className="mt-4 text-base font-semibold text-white">Weekly insights</dt>
               <dd className="mt-2 text-base/7 text-gray-400">
-                Receive professional trading tips, market overviews, and risk management techniques from top traders.
+                Receive professional trading tips, market overviews and risk management techniques from top traders.
               </dd>
             </div>
             <div className="flex flex-col items-start">
@@ -48,7 +48,7 @@ export default function Example() {
               </div>
               <dt className="mt-4 text-base font-semibold text-white">Zero spam policy</dt>
               <dd className="mt-2 text-base/7 text-gray-400">
-                We respect your time and inbox. Only valuable trading content—no promotions, no nonsense.
+                We respect your time and inbox. Only valuable trading content and no nonsense.
               </dd>
             </div>
           </dl>
@@ -61,7 +61,7 @@ export default function Example() {
             clipPath:
               'polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)',
           }}
-          className="aspect-[1155/678] bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30"
+          className="aspect-[1155/678] bg-[#151515]"
         />
       </div>
     </div>

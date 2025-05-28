@@ -4,7 +4,7 @@ import logo from '../assets/ECapFX-LOGO-white.png';
 
 const Footer = () => {
   return (
-    <footer aria-labelledby="footer-heading" className="bg-[#101919] text-white">
+    <footer aria-labelledby="footer-heading" className="bg-[#151515] text-white">
       <p className="sr-only" id="footer-heading">Footer</p>
       <div className="mx-auto px-4 py-20 max-w-screen-2xl">
         <div className="xl:grid xl:grid-cols-3 xl:gap-8 paddingFooter">
