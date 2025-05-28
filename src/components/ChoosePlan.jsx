@@ -5,6 +5,8 @@ const ChoosePlan = () => {
   return (
     <div className="funding-journey-container">
       <div className="top-section">
+        {/* SVG Divider */}
+        <div className="mb-10 w-full h-2 bg-gradient-to-r from-transparent via-[#1d8348]/50 to-transparent shadow-md" />
         {/* <h1 className="section-title mt-2 text-4xl lg:text-4xl font-extrabold tracking-tight text-center" style={{ marginTop: '50px' }}>Choose Your Funding Journey</h1> */}
         <div className="mx-auto lg:max-w-4xl text-center ">
         <h2 className="text-4xl lg:text-5xl font-extrabold tracking-tight text-center ">Choose Your Funding Challenge</h2>
