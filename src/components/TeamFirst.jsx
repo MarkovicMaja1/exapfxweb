@@ -69,7 +69,8 @@ const Team = () => {
   return (
     <section className="bg-[#151515] py-24 text-center">
       <div className="mx-auto lg:max-w-4xl text-center">
-        <h2 className="mb-24 text-4xl font-extrabold tracking-tight text-center text-white">Meet Our Team</h2>
+        <h2 className="mb-4 text-4xl font-extrabold tracking-tight text-center text-white">Meet The Team</h2>
+        <p className="mb-24 text-4xl font-extrabold tracking-tight text-center text-white">Our Leadership & Talent</p>
       </div>
 
       <div className="max-w-7xl mx-auto px-8 paddingTeam">
@@ -88,12 +89,12 @@ const Team = () => {
                   role="article"
                   aria-label={post.title}
                 >
-                  <div className="bg-white rounded-lg shadow-lg overflow-hidden h-full transition-transform duration-300 border-t-4 border-yellow-600">
+                  <div className="bg-white rounded-lg shadow-lg overflow-hidden h-full transition-transform duration-300 border-t-4 border-green-600">
                     <div className="p-4"> {/* Reduced padding for smaller cards */}
                       <h4 className="mt-1 text-xl font-bold text-gray-900 leading-tight">
                         {post.category}
                       </h4>
-                      <h5 className="mt-1 text-xl font-bold leading-tight text-yellow-600">
+                      <h5 className="mt-1 text-xl font-bold leading-tight text-green-600">
                         {post.title}
                       </h5>
                       <p className="mt-2 text-gray-600">{post.description}</p> {/* Reduced spacing for tighter content */}

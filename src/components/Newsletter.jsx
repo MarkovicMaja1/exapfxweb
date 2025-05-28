@@ -3,7 +3,7 @@ import { CalendarDaysIcon, HandRaisedIcon } from '@heroicons/react/24/outline'
 export default function Example() {
   return (
     <div className="bg-[#151515] relative isolate overflow-hidden py-16 sm:py-24 lg:py-8">
-      <div className="mx-auto max-w-5xl rounded-2xl bg-[#151515] px-6 py-12 shadow-xl ring-1 ring-white/10 lg:px-12">
+      <div className="max-w-7xl mx-auto px-8 paddingTeam rounded-2xl bg-[#151515] px-6 py-12 shadow-xl ring-1 ring-white/10 lg:px-12">
         <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-2">
           <div className="max-w-xl lg:max-w-lg">
             <h2 className="text-4xl font-semibold tracking-tight text-white">Stay up to date with our newsletter</h2>
