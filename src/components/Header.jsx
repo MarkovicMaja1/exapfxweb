@@ -6,7 +6,10 @@ const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <header className="bg-[#151515] fixed top-0 left-0 right-0 z-50 w-full">
+    <header className="bg-[#151515] fixed top-0 left-0 right-0 z-50 w-full"
+      style={{
+      background: `linear-gradient(to bottom, #151515 98%, rgba(185, 179, 179, 0.61) 100%)`
+      }}>
       <nav className="items-center mx-auto flex max-w-screen-2xl p-4 relative">
         {/* Logo */}
         <div className="absolute left-4 top-1/2 transform -translate-y-1/2 z-10">
