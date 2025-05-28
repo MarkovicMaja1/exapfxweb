@@ -13,6 +13,7 @@ import Goals from "./components/Goals";
 import ChoosePlan from "./components/ChoosePlan";
 import Dashboard from "./components/Dashboard";
 import TeamSection from "./components/TeamFirst";
+import Newsletter from "./components/Newsletter";
 import SustainabilityIcon from "./components/SustainabilityIcon";
 import { useEffect } from "react";
 
@@ -82,6 +83,9 @@ function App() {
                 </div>
                 <div id="team">
                   <TeamSection />
+                </div>
+                <div id="newsletter">
+                  <Newsletter />
                 </div>
               </>
             }
