@@ -95,7 +95,7 @@ const ChoosePlan = () => {
         .funding-journey-container {
           width: 100%;
           text-align: center;
-          background: #101919;
+          background: #151515;
         }
 
         .top-section {
