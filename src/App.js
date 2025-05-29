@@ -24,7 +24,7 @@ const ScrollToSection = () => {
     if (hash) {
       const element = document.getElementById(hash.replace('#', ''));
       if (element) {
-        const offset = 80;
+        const offset = 70;
         const elementPosition = element.getBoundingClientRect().top + window.scrollY;
         window.scrollTo({
           top: elementPosition - offset,
