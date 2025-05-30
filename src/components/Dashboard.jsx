@@ -149,16 +149,16 @@ const FundingPlans = () => {
         <div className="fundingSectionWrapper">
           <div className="mx-auto lg:max-w-4xl text-center mt-20">
             <h2 className="text-4xl lg:text-5xl font-extrabold tracking-tight text-center">
-              Still Not Sure?
+              Our Plans
             </h2>
             <h2 className="mt-2 text-4xl lg:text-5xl font-extrabold tracking-tight text-center">
-              <span>Check out our other plans</span>
+              <span></span>
             </h2>
           </div>
           <div className="ps_wrapper">
             <div className="ps_intro">
-              <p className="mb-12 mt-10 text-gray-600">
-                Choose the evaluation based on your preference to become an ECAPFX Trader.
+              <p className="mb-12 mt-2 text-black-600">
+                The Choice Is Yours Select The Right Evaluation And Become An Ecapfx Trader
               </p>
               <div className="plan_select step_select">
                 <div className="tabinationContainer variant2_tabs">
