@@ -92,8 +92,6 @@ const ChoosePlan = () => {
           </div>
         </div>
       </div>
-      {/* SVG Divider */}
-       <div className="mb-14 w-full h-2 bg-gradient-to-r from-transparent via-[#1d8348]/50 to-transparent shadow-[0_2px_6px_2px_rgba(18,18,18,1.25)]" />
       <style jsx>{`
         .funding-journey-container {
           width: 100%;
@@ -383,6 +381,8 @@ const ChoosePlan = () => {
           }
         }
       `}</style>
+      {/* SVG Divider */}
+       <div className="mb-14 w-full h-2 bg-gradient-to-r from-transparent via-[#1d8348]/50 to-transparent shadow-[0_2px_6px_2px_rgba(18,18,18,1.25)]" />
     </div>
   );
 };
