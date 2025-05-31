@@ -54,7 +54,7 @@ const ChoosePlan = () => {
             <div className="text-overlay">
               <h4 className="box-title">Greenwave Growth</h4>
               <p className="box-description bigger">
-                Account Size: From <span className="highlight-price">  $6K</span> to<span className="highlight-price">  $25K </span>funded accounts.<br />
+                Account Size: <span className="highlight-price">  $6K</span> to<span className="highlight-price">  $25K </span>funded accounts.<br />
                 </p>
                 <small className="box-description text-white">
                 • 1-Phase Challenge: Quick evaluation for experienced traders to get funded.<br />
@@ -293,6 +293,13 @@ const ChoosePlan = () => {
           padding: 12px;
           font-size: 1rem;
           font-weight: 600;
+          text-transform: uppercase;
+          border: none;
+          border-radius: 8px;
+          cursor: pointer;
+          transition: all 0.3s ease;
+        }
+        .getstarted-button {
           text-transform: uppercase;
           border: none;
           border-radius: 8px;
