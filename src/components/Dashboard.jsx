@@ -5,6 +5,7 @@ import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 import { Pagination, Navigation } from 'swiper/modules';
 import './FundingPlans.css';
+import bgPlans from '../assets/bgplans.png'; // Adjust path if needed
 
 const FundingPlans = () => {
   const [activeStep, setActiveStep] = useState(1);

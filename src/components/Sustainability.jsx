@@ -20,7 +20,7 @@ const Suistanbility = () => {
               </h2>
             </div>
             <div className="mx-auto lg:max-w-4xl text-center">
-              <p className="mt-16 mb-16 text-lg leading-8 text-gray-600">
+              <p className="mt-16 mb-16 text-lg leading-8 text-white-600">
               At ECAPFX, we align our efforts with the United Nations Sustainable Development Goals (SDGs) to create a meaningful global impact. Our focus is on three key areas, supported by a strategic three-year plan designed to drive measurable and lasting change.              </p>
             </div>
           </div>
@@ -30,7 +30,7 @@ const Suistanbility = () => {
             {/* Left Box */}
             <div className="flex flex-col gap-16 w-full lg:w-1/3 ">
               {/* First Card */}
-              <div className="bg-[#101919] rounded-lg shadow-lg p-6 flex flex-row items-center text-gray-400 hover:bg-gray-800 transition duration-300 hover:scale-105">
+              <div className="bg-[#101919] rounded-lg shadow-lg p-6 flex flex-row items-center text-white hover:bg-gray-800 transition duration-300 hover:scale-105">
                 <div className="flex flex-col items-center text-center w-1/2">
                   <div className="w-16 h-16 mb-4 flex items-center justify-center bg-gray-800 rounded-full">
                     <img src={quality} alt="Empower Traders" className="w-10 h-10 object-contain filter brightness-100 saturate-200" />
@@ -48,7 +48,7 @@ const Suistanbility = () => {
               </div>
 
               {/* Second Card */}
-              <div className="bg-[#101919] rounded-lg shadow-lg p-6 flex flex-row items-center text-gray-400 hover:bg-gray-800 transition duration-300 hover:scale-105">
+              <div className="bg-[#101919] rounded-lg shadow-lg p-6 flex flex-row items-center text-white hover:bg-gray-800 transition duration-300 hover:scale-105">
                 <div className="flex flex-col items-center text-center w-1/2">
                   <div className="w-16 h-16 mb-4 flex items-center justify-center bg-gray-800 rounded-full">
                     <img src={ability} alt="Empower Traders" className="w-10 h-10 object-contain filter brightness-100 saturate-200" />
@@ -68,7 +68,7 @@ const Suistanbility = () => {
 
             {/* Right Box */}
             <div className="w-full lg:w-1/3 flex items-center">
-              <div className="bg-[#101919] rounded-lg shadow-lg p-6 flex flex-row items-center text-gray-400 hover:bg-gray-800 transition duration-300 hover:scale-105">
+              <div className="bg-[#101919] rounded-lg shadow-lg p-6 flex flex-row items-center text-white hover:bg-gray-800 transition duration-300 hover:scale-105">
                 <div className="flex flex-col items-center text-center w-1/2">
                   <div className="w-16 h-16 mb-4 flex items-center justify-center bg-gray-800 rounded-full">
                     <img src={gender} alt="Empower Traders" className="w-10 h-10 object-contain filter brightness-100 saturate-200" />

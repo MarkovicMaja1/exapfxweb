@@ -504,7 +504,14 @@ button {
 .rightBox p.promena {
   opacity: 0.5;
 }
-
+.fundingSectionContainer {
+  background-image: url(''); /* Updated path /public/bgplans.png*/
+  background-size: cover; /* Ensures the image covers the entire container */
+  background-position: center; /* Centers the image */
+  background-repeat: no-repeat; /* Prevents the image from repeating */
+  min-height: 100vh; /* Optional: Ensures the container takes up at least the full viewport height */
+  position: relative; /* Optional: Useful if you need to position child elements relative to this container */
+}
 /* Osiguraj vidljivost dugmadi */
 @media (max-width: 640px) {
   .normalButton {

@@ -13,7 +13,7 @@ const ChoosePlan = () => {
           </div>
         
         {/* <div className="w-2/4 mx-auto mt-6 mb-10 border-t-2 border-green-500"></div> */}
-        <div className="promo-text mt-14 text-gray-400">
+        <div className="promo-text mt-14 text-white">
           <p> Advance Your Trading Skills with ECAPFX’s Simulated Platform </p>
           <p> Access up to <strong>$200,000</strong> in virtual capital</p>
           <p> Keep <b>up to 90%</b> of your simulated profits</p>
@@ -33,11 +33,11 @@ const ChoosePlan = () => {
               <p className="box-description bigger">
                 Account Size: <span className="highlight-price">$100K </span>or<span className="highlight-price"> $200K</span> funded accounts.<br />
                 </p>
-                <small className="box-description text-gray-400">
+                <small className="box-description text-white">
                 • 1-Phase Challenge: Quick evaluation for experienced traders to get funded.<br />
                 • 2-Phase Challenge: Two-stage evaluation for traders to prove consistency and risk control.
               </small>
-              <small className="box-description text-gray-400">
+              <small className="box-description text-white">
                 This program is designed for skilled traders, offering flexibility while ensuring sustainable capital management.
               </small>
               <p className="box-price">Starting from <span className="highlight-price">$379-$999</span></p>
@@ -56,11 +56,11 @@ const ChoosePlan = () => {
               <p className="box-description bigger">
                 Account Size: From <span className="highlight-price">  $6K</span> to<span className="highlight-price">  $25K </span>funded accounts.<br />
                 </p>
-                <small className="box-description text-gray-400">
+                <small className="box-description text-white">
                 • 1-Phase Challenge: Quick evaluation for experienced traders to get funded.<br />
                 • 2-Phase Challenge: Two-stage evaluation for traders to show consistency and risk control.
               </small>
-              <small className="box-description text-gray-400">
+              <small className="box-description text-white">
                 This program helps traders grow while ensuring sustainable capital management and flexible evaluation paths.
               </small>
               <p className="box-price">Starting from <span className="highlight-price">$79-$179 </span></p>
@@ -79,11 +79,11 @@ const ChoosePlan = () => {
               <p className="box-description bigger">
                 Account Size: <span className="highlight-price">  $50K</span> to <span className="highlight-price">  $100K </span> funded accounts.<br />
                 </p>
-                <small className="box-description text-gray-400">
+                <small className="box-description text-white">
                 • 1-Phase Challenge: Quick evaluation for experienced traders to get funded.<br />
                 • 2-Phase Challenge: Two-stage evaluation for traders to prove consistency and risk control.
               </small>
-              <small className="box-description text-gray-400">
+              <small className="box-description text-white">
                 This program helps pro traders grow with flexible, sustainable funding while focusing on risk management.
               </small>
               <p className="box-price">Starting from <span className="highlight-price">$159 - $359</span></p>
@@ -92,6 +92,8 @@ const ChoosePlan = () => {
           </div>
         </div>
       </div>
+      {/* SVG Divider */}
+        <div className="mb-14 w-full h-2 bg-gradient-to-r from-transparent via-[#1d8348]/50 to-transparent shadow-md" />
       <style jsx>{`
         .funding-journey-container {
           width: 100%;
@@ -222,18 +224,18 @@ const ChoosePlan = () => {
         }
 
         .badge-hyper {
-          background: #facc15;
-          color: #1a1a2e;
+          background: #1d8147;
+          color:rgb(255, 255, 255);
         }
 
         .badge-green {
-          background: #1d8348;
-          color: rgb(255, 255, 255);
+          background:rgb(255, 255, 255);
+          color: rgb(0, 0, 0);
         }
 
         .badge-blue {
-          background: #F26334;
-          color: #ffffff;
+          background: #f7e59d;
+          color:rgb(0, 0, 0);
         }
 
         .badge-high {
@@ -299,35 +301,35 @@ const ChoosePlan = () => {
         }
 
         .hyper-button {
-          background: #facc15;
-          color: #1a1a2e;
+          background: #1d8147;
+          color:rgb(255, 255, 255);
           transition: all 0.3s ease;
         }
 
         .hyper-button:hover {
-          background: #fde047; /* Svetlija nijansa */
-          box-shadow: 0 4px 10px rgba(250, 204, 21, 0.4); /* Blaga senka */
+          background:#28a75b; /* Svetlija nijansa */
+          box-shadow: 0 4px 10px rgba(29, 131, 72, 0.4); /* Blaga senka */
         }
 
         .green-button {
-          background: #1d8348;
-          color: rgb(255, 255, 255);
+          background:rgb(255, 255, 255);
+          color: rgb(0, 0, 0);
           transition: all 0.3s ease;
         }
 
         .green-button:hover {
-          background: #28a75b; /* Svetlija zelena */
-          box-shadow: 0 4px 10px rgba(29, 131, 72, 0.4);
+          background:rgb(155, 155, 155); /* Svetlija zelena */
+          box-shadow: 0 4px 10px rgba(123, 123, 123, 0.4);
         }
 
         .blue-button {
-          background: #F26334;
-          color: #ffffff;
+          background: #f7e59d;
+          color:rgb(0, 0, 0);
           transition: all 0.3s ease;
         }
 
         .blue-button:hover {
-          background: #fa7a4c; /* Svetlija nijansa plave */
+          background:rgb(255, 242, 190); /* Svetlija nijansa plave */
           box-shadow: 0 4px 10px rgba(59, 130, 246, 0.4); /* Blaga senka */
         }
 
@@ -381,8 +383,6 @@ const ChoosePlan = () => {
           }
         }
       `}</style>
-      {/* SVG Divider */}
-       <div className="mb-14 w-full h-2 bg-gradient-to-r from-transparent via-[#1d8348]/50 to-transparent shadow-[0_2px_6px_2px_rgba(18,18,18,1.25)]" />
     </div>
   );
 };

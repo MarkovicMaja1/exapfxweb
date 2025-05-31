@@ -20,10 +20,10 @@ const AboutUs = () => {
                     <h3 className="text-3xl font-semibold mb-4 inline-block">
                     ECAPFX
                     </h3>
-                    <p className="text-lg text-gray-400 mb-4">
+                    <p className="text-lg text-white mb-4">
                       At ECAPFX, we are redefining proprietary trading by creating opportunities for skilled traders while making a positive impact on the world. Our platform empowers traders to access substantial capital, refine their strategies, and achieve financial success without the limitations of traditional funding.
                     </p>
-                    <p className="text-lg text-gray-400 mb-4">
+                    <p className="text-lg text-white mb-4">
                       But we’re more than just a prop firm. We believe that financial growth and sustainability can go hand in hand. That’s why we commit 1-3% of our annual profits to sustainability (SDGS)-focused initiatives, ensuring that our success contributes to a better future for both traders and the planet.
                     </p>
                   </div>
@@ -43,7 +43,7 @@ const AboutUs = () => {
             <div className="grid grid-cols-1 lg:grid-cols-2 items-center gap-16 about-us-grid">
                   <div className="text-left">
                     <h3 className="text-3xl font-semibold mb-4 inline-block">Our Mission</h3>
-                    <p className="text-lg text-gray-400">
+                    <p className="text-lg text-white">
                       We are on a mission to build the largest and most impactful proprietary trading firm, one that not only fuels the success of traders but also fosters a strong, values-driven community over time. We aim to support ambitious traders in reaching their full potential while integrating responsible practices that promote a sustainable future.
                     </p>
                   </div>

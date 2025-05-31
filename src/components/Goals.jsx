@@ -48,19 +48,22 @@ const Goals = () => {
   return (
     <div className="relative overflow-hidden">
       {/* Animated Background */}
-      <div className="animated-bg-goals"></div>
+      {/* <div className="animated-bg-goals"></div> */}
 
       <div className="max-w-7xl mx-auto px-6 lg:px-12 mt-20 mb-24 relative z-10">
         <div className="text-center goalsPadding">
           <div className="mx-auto lg:max-w-4xl text-center">
             <h2 className="text-4xl lg:text-5xl font-extrabold tracking-tight text-center">Our Goals</h2>
+            <p className="text-lg text-white-600 mt-10 mb-0">
+            At ECAPFX, we believe in trading with purpose, where success isn’t just measured in profits but in the positive impact we create together. Join us, and be part of a prop firm that’s shaping the future of trading and sustainability
+          </p>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6 mb-16 mt-16 ">
             {goalsData.map((goal, index) => (
               <div
                 key={index}
-                className="bg-[#101919]  rounded-lg shadow-lg p-4 flex flex-col items-center text-center text-gray-400 hover:bg-gray-800 transition duration-300 "
+                className="bg-[#101919]  rounded-lg shadow-lg p-4 flex flex-col items-center text-center text-white hover:bg-gray-800 transition duration-300 "
                 data-aos="fade-up" 
                 data-aos-delay={`${index * 100}`} 
               >
@@ -79,10 +82,6 @@ const Goals = () => {
               </div>
             ))}
           </div>
-
-          <p className="text-lg text-gray-600 mt-16 mb-14">
-            At ECAPFX, we believe in trading with purpose, where success isn’t just measured in profits but in the positive impact we create together. Join us, and be part of a prop firm that’s shaping the future of trading and sustainability.
-          </p>
         </div>
       </div>
       <style jsx>{`
