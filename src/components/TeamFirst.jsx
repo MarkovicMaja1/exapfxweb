@@ -91,13 +91,13 @@ const Team = () => {
                 >
                   <div className="bg-white rounded-lg shadow-lg overflow-hidden h-full transition-transform duration-300 border-t-4 border-green-600">
                     <div className="p-4"> {/* Reduced padding for smaller cards */}
-                      <h4 className="mt-1 text-xl font-bold text-gray-900 leading-tight">
+                      <h4 className="mt-1 text-xl font-bold text-white-900 leading-tight">
                         {post.category}
                       </h4>
                       <h5 className="mt-1 text-xl font-bold leading-tight text-green-600">
                         {post.title}
                       </h5>
-                      <p className="mt-2 text-gray-600">{post.description}</p> {/* Reduced spacing for tighter content */}
+                      <p className="mt-2 text-white-600">{post.description}</p> {/* Reduced spacing for tighter content */}
                     </div>
                   </div>
                 </div>

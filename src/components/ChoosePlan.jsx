@@ -93,7 +93,10 @@ const ChoosePlan = () => {
         </div>
       </div>
       {/* SVG Divider */}
+      {/* Bottom SVG Divider */}
+      <div className="bottom-divider">
         <div className="mb-14 w-full h-2 bg-gradient-to-r from-transparent via-[#1d8348]/50 to-transparent shadow-md" />
+      </div>
       <style jsx>{`
         .funding-journey-container {
           width: 100%;
