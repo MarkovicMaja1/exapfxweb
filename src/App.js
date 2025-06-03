@@ -60,9 +60,9 @@ function App() {
             path="/"
             element={
               <>
-                <div id="soon">
+                {/* <div id="soon">
                   <Soon />
-                </div>
+                </div> */}
                 <div id="home">
                   <Home />
                 </div>
