@@ -1,5 +1,6 @@
 import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
-import Soon from "./components/Soon";
+// import Soon from "./components/Soon";
+import Discord from "./components/Discord";
 import PrivacyPolicy from "./components/PrivacyPolicy";
 import Terms from "./components/Terms";
 import Claim from "./components/Claim";
@@ -86,6 +87,9 @@ function App() {
                 </div>
                 <div id="newsletter">
                   <Newsletter />
+                </div>
+                <div id="discord">
+                  <Discord />
                 </div>
               </>
             }
