@@ -4,7 +4,7 @@ import joinDiscordImage from "../assets/joindiscord.png";
 const Discord = () => {
   return (
     <div 
-      className="min-h-screen flex items-center justify-center p-6" 
+      className="flex items-center justify-center py-24 p-6" 
       style={{ backgroundColor: "rgb(21, 21, 21)" }}
     >
       <div className="max-w-6xl w-full grid md:grid-cols-2 gap-10 items-center">
