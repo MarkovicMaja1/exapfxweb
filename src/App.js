@@ -85,11 +85,11 @@ function App() {
                 <div id="team">
                   <TeamSection />
                 </div>
-                <div id="newsletter">
-                  <Newsletter />
-                </div>
                 <div id="discord">
                   <Discord />
+                </div>
+                <div id="newsletter">
+                  <Newsletter />
                 </div>
               </>
             }

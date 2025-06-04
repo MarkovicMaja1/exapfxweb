@@ -88,6 +88,13 @@ const Discord = () => {
           </div>
         </div>
       </div>
+            {/* Custom Scoped CSS */}
+      <style jsx>{`
+        .py-24 {
+            padding-bottom: 0rem;
+            padding-top: 6rem;
+        }
+      `}</style>
     </div>
   );
 };
