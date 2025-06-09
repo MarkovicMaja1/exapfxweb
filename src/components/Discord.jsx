@@ -61,13 +61,13 @@ const Discord = () => {
           </p>
           <ul className="space-y-2 mb-6 text-white">
             <li className="flex items-center gap-2">
-              <span className="text-[#1d8348]">✔</span> Support Channels
+              <span className="text-green-500">✓</span> Support Channels
             </li>
             <li className="flex items-center gap-2">
-              <span className="text-[#1d8348]">✔</span> Exclusive Offers
+              <span className="text-green-500">✓</span> Exclusive Offers
             </li>
             <li className="flex items-center gap-2">
-              <span className="text-[#1d8348]">✔</span> Trading Education
+              <span className="text-green-500">✓</span> Trading Education
             </li>
           </ul>
           <div className="flex gap-4">
