@@ -325,7 +325,7 @@ function PricingTable() {
         <div className="ps_wrapper">
           <div className="ps_intro">
             <p className="mb-14 mt-10 text-black-600 text-center">
-              The Choice Is Yours Select The Right Evaluation And Become An Ecapfx Trader
+              The Choice Is Yours Select The Right Evaluation And Become An ECAPFX Trader
             </p>
           </div>
         </div>
