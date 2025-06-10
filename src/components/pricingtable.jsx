@@ -316,7 +316,7 @@ function PricingTable() {
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <div className="text-center">
           <h2 className="text-5xl lg:text-5xl font-extrabold tracking-tight text-center">
-            Our Plans
+            Select Your Evaluation Plan
           </h2>
           <h2 className="mt-2 text-5xl lg:text-5xl font-extrabold tracking-tight text-center">
             <span></span>
@@ -325,7 +325,7 @@ function PricingTable() {
         <div className="ps_wrapper">
           <div className="ps_intro">
             <p className="mb-14 mt-10 text-black-600 text-center">
-              The Choice Is Yours Select The Right Evaluation And Become An ECAPFX Trader
+              The Choice Is Yours Select The Right Evaluation And Become A Funded Trader With ECAPFX Trader
             </p>
           </div>
         </div>

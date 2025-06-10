@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 nav {
-  /* font-family: "Poppins", sans-serif !important; */
+  /* font-family: "Roboto", sans-serif !important; */
 }
 body, html {
   overflow-x: hidden;

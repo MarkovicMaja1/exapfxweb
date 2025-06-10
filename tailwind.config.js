@@ -29,7 +29,7 @@ module.exports = {
       //   'ease': 'ease',
       // },
       fontFamily: {
-        poppins: ['Poppins', 'sans-serif'], // Dodajemo Poppins
+        poppins: ['Roboto', 'sans-serif'], // Dodajemo Poppins
       },
       position: ['sticky'], // Dodajemo position: sticky
       animation: {
