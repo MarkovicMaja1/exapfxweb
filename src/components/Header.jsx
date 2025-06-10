@@ -66,10 +66,12 @@ const Header = () => {
             <li><Link to="/#home" className="block hover:text-[#1d8348] transition" onClick={() => setIsOpen(!isOpen)}>Home</Link></li>
             <li><Link to="/#chooseplan" className="block hover:text-[#1d8348] transition" onClick={() => setIsOpen(!isOpen)}>Choose Plan</Link></li>
             <li><Link to="/#about" className="block hover:text-[#1d8348] transition" onClick={() => setIsOpen(!isOpen)}>About Us</Link></li>
+            <li><Link to="/#faq" className="block hover:text-[#1d8348] transition" onClick={() => setIsOpen(!isOpen)}>FAQ</Link></li>
+            <li><Link to="/#howitworks" className="block hover:text-[#1d8348] transition" onClick={() => setIsOpen(!isOpen)}>How it works</Link></li>
             <li><Link to="/#team" className="block hover:text-[#1d8348] transition" onClick={() => setIsOpen(!isOpen)}>Team</Link></li>
             <li>
               <Link
-                to="/#get-started" // Changed to Link
+                to="https://active.ecapfx.com/auth/signin" // Changed to Link
                 className="px-5 py-2.5 text-white font-roboto bg-[#1d8348] rounded-3xl hover:text-black hover:bg-[#2ecc71] transition duration-300 ease-in-out inline-block"
                 onClick={() => setIsOpen(!isOpen)}
               >
