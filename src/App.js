@@ -2,6 +2,8 @@ import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 // import Soon from "./components/Soon";
 import Discord from "./components/Discord";
 import PrivacyPolicy from "./components/PrivacyPolicy";
+import PricingTable from './components/pricingtable.jsx';
+// import Dashboard from "./components/Dashboard";
 import Terms from "./components/Terms";
 import Claim from "./components/Claim";
 import Header from "./components/Header";
@@ -12,7 +14,7 @@ import Home from "./components/Home";
 import Footer from "./components/Footer";
 import Goals from "./components/Goals";
 import ChoosePlan from "./components/ChoosePlan";
-import Dashboard from "./components/Dashboard";
+
 import TeamSection from "./components/TeamFirst";
 import Newsletter from "./components/Newsletter";
 import SustainabilityIcon from "./components/SustainabilityIcon";
@@ -70,8 +72,11 @@ function App() {
                 <div id="chooseplan">
                   <ChoosePlan />
                 </div>
-                <div id="dashboard">
+                {/* <div id="dashboard">
                   <Dashboard />
+                </div> */}
+                <div id="pricingtable">
+                  <PricingTable />
                 </div>
                 <div id="about">
                   <About />
