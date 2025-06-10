@@ -21,7 +21,7 @@ const Header = () => {
 
         {/* Desktop Navigation */}
         <ul className="hidden lg:flex gap-16 text-white text-lg font-bold justify-center flex-1 pl-32 ml-[100px]">
-          <li><Link to="/#home" className="font-bold hover:text-[#1d8348] transition font-roboto">Home</Link></li>
+          <li><Link to="/#home" className="font-bold hover:text-[#1d8348] transition">Home</Link></li>
           <li><Link to="/#chooseplan" className="font-bold hover:text-[#1d8348] transition font-roboto">Choose Plan</Link></li>
           <li><Link to="/#about" className="font-bold hover:text-[#1d8348] transition">About Us</Link></li>
           <li><Link to="/#faq" className="font-bold hover:text-[#1d8348] transition">FAQ</Link></li>
