@@ -150,7 +150,7 @@ const FundingPlans = () => {
         <div className="fundingSectionWrapper">
           <div className="mx-auto lg:max-w-4xl text-center mt-20">
             <h2 className="text-4xl lg:text-5xl font-extrabold tracking-tight text-center">
-              Our Plans
+              Select Your Evaluation Plan
             </h2>
             <h2 className="mt-2 text-4xl lg:text-5xl font-extrabold tracking-tight text-center">
               <span></span>
