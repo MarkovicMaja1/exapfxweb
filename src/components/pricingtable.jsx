@@ -401,10 +401,10 @@ function PricingTable() {
                 <table className="w-full" aria-label="Trading Challenge Details">
                   <thead>
                     <tr className="bg-gray-100 text-gray-800" style={{ borderBottom: '2px solid #e5e7eb' }}>
-                      <th className="p-2 sm:p-4 text-left font-medium text-xs sm:text-base sticky left-0 bg-gray-100" style={{ color: '#1f2937', zIndex: 1 }}>Metrics</th>
+                      <th className="p-2 sm:p-4 text-left font-medium text-sm sm:text-base sticky left-0 bg-gray-100" style={{ color: '#1f2937', zIndex: 1 }}>Metrics</th>
                       {columnHeaders.slice(0, columns).map((header, index) => (
                         header ? (
-                          <th key={index} className="p-2 sm:p-4 text-left font-medium text-xs sm:text-base" style={{ color: '#1f2937' }}>
+                          <th key={index} className="p-2 sm:p-4 text-left font-medium text-sm sm:text-base" style={{ color: '#1f2937' }}>
                             {header}
                           </th>
                         ) : null
@@ -417,11 +417,11 @@ function PricingTable() {
                         key={metric}
                         className="border-b border-gray-200 hover:bg-gray-100"
                       >
-                        <td className="p-2 sm:p-4 font-medium text-xs sm:text-base sticky left-0 bg-white" style={{ color: '#374151', zIndex: 1 }}>{metric}</td>
+                        <td className="p-2 sm:p-4 font-medium text-sm sm:text-base sticky left-0 bg-white" style={{ color: '#374151', zIndex: 1 }}>{metric}</td>
                         {getTableData(metric).slice(0, columns).map((value, index) => (
                           <td
                             key={index}
-                            className={`p-2 sm:p-4 text-xs sm:text-base ${isAnimating ? 'animate-change' : ''}`}
+                            className={`p-2 sm:p-4 text-sm sm:text-base ${isAnimating ? 'animate-change' : ''}`}
                             style={{ color: '#4b5563' }}
                           >
                             {value}
