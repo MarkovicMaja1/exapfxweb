@@ -476,11 +476,13 @@ function PricingTable() {
                 }}
                 onMouseEnter={(e) => { 
                   e.target.style.background = 'linear-gradient(to right, rgba(21, 100, 55, 0.9), rgba(29, 131, 72, 0.9), rgba(14, 63, 36, 0.9))';
+                  e.target.style.color = '#000000';
                   e.target.style.transform = 'scale(1.05)';
                   e.target.style.boxShadow = '0 4px 6px -1px rgba(0, 128, 0, 0.5)';
                 }}
                 onMouseLeave={(e) => { 
                   e.target.style.background = 'linear-gradient(to right, #1a6f3d, #1d8348, #145c33)';
+                  e.target.style.color = '#ffffff';
                   e.target.style.transform = 'scale(1)';
                   e.target.style.boxShadow = 'none';
                 }}
