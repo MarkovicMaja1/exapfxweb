@@ -19,17 +19,17 @@ module.exports = {
         'text-gradient': 'linear-gradient(90deg, #C0C0C0 0%, #A9A9A9 100%)',
         'key-header-gradient': 'linear-gradient(90deg, #2E7D32 51.41%, #1B5E20 68.28%, #4CAF50 85.89%, #2E7D32 101.03%)',
       },
-      // transitionProperty: {
-      //   'all-ease': 'all',
-      // },
-      // transitionDuration: {
-      //   '300': '300ms',
-      // },
-      // transitionTimingFunction: {
-      //   'ease': 'ease',
-      // },
+      transitionProperty: {
+        'all-ease': 'all',
+      },
+      transitionDuration: {
+        '300': '300ms',
+      },
+      transitionTimingFunction: {
+        'ease': 'ease',
+      },
       fontFamily: {
-        roboto: ['Roboto', 'sans-serif'], // Dodajemo Roboto
+        poppins: ['Poppins', 'sans-serif'], // Dodajemo Poppins
       },
       position: ['sticky'], // Dodajemo position: sticky
       animation: {

@@ -81,6 +81,31 @@ const Header = () => {
           </ul>
         </div>
       )}
+      <style jsx>{`
+          @media (max-width: 1160px) {
+            .lg\\:flex {
+              display: none !important;
+            }
+            .lg\\:block {
+              display: none !important;
+            }
+            .lg\\:hidden {
+              display: block !important;
+            }
+          }
+          @media (min-width: 1160px) {
+            .lg\\:flex {
+              display: flex !important;
+            }
+            .lg\\:block {
+              display: block !important;
+            }
+            .lg\\:hidden {
+              display: none !important;
+            }
+          }
+        `}
+      </style>
     </header>
   );
 };
