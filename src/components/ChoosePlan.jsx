@@ -1,5 +1,6 @@
 import React from 'react';
 import trader from '../assets/backg.jpeg';
+import { Link } from 'react-router-dom';
 
 const ChoosePlan = () => {
   return (
@@ -39,7 +40,9 @@ const ChoosePlan = () => {
                 This program is designed for skilled traders, offering flexibility while ensuring sustainable capital management.
               </small>
               <p className="box-price">Starting from <span className="highlight-price">$379-$999</span></p>
-              <button className="action-button hyper-button">Select Program</button>
+                <a href="/pricing?step=Instant+Funding&size=100k">
+                  <button className="action-button hyper-button">Select Program</button>
+                </a>
             </div>
           </div>
         </div>

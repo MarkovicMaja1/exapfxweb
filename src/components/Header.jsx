@@ -21,15 +21,17 @@ const Header = () => {
 
         {/* Desktop Navigation */}
         <ul className="hidden lg:flex gap-16 text-white text-lg font-bold justify-center flex-1 pl-32 ml-[100px]">
-          <li><Link to="/#home" className="font-bold hover:text-[#1d8348] transition font-poppins">Home</Link></li>
-          <li><Link to="/#chooseplan" className="font-bold hover:text-[#1d8348] transition">Choose Plan</Link></li>
+          <li><Link to="/#home" className="font-bold hover:text-[#1d8348] transition">Home</Link></li>
+          <li><Link to="/#chooseplan" className="font-bold hover:text-[#1d8348] transition font-roboto">Choose Plan</Link></li>
           <li><Link to="/#about" className="font-bold hover:text-[#1d8348] transition">About Us</Link></li>
+          <li><Link to="/#faq" className="font-bold hover:text-[#1d8348] transition">FAQ</Link></li>
+          <li><Link to="/#howitworks" className="font-bold hover:text-[#1d8348] transition">How it works</Link></li>
           <li><Link to="/#team" className="font-bold hover:text-[#1d8348] transition">Team</Link></li>
         </ul>
 
         <Link
-          to="/#get-started" // Changed to Link
-          className="getstarted-button px-5 py-2.5 text-white font-poppins hidden lg:block ml-auto bg-[#1d8348] rounded-2xl hover:text-black hover:bg-[#2ecc71] transition duration-300 ease-in-out"
+          to="https://active.ecapfx.com/auth/signin" // Changed to Link
+          className="getstarted-button px-5 py-2.5 text-white font-roboto hidden lg:block ml-auto bg-[#1d8348] rounded-2xl hover:text-black hover:bg-[#2ecc71] transition duration-300 ease-in-out"
         >
           Get Started
         </Link>
@@ -64,11 +66,13 @@ const Header = () => {
             <li><Link to="/#home" className="block hover:text-[#1d8348] transition" onClick={() => setIsOpen(!isOpen)}>Home</Link></li>
             <li><Link to="/#chooseplan" className="block hover:text-[#1d8348] transition" onClick={() => setIsOpen(!isOpen)}>Choose Plan</Link></li>
             <li><Link to="/#about" className="block hover:text-[#1d8348] transition" onClick={() => setIsOpen(!isOpen)}>About Us</Link></li>
+            <li><Link to="/#faq" className="block hover:text-[#1d8348] transition" onClick={() => setIsOpen(!isOpen)}>FAQ</Link></li>
+            <li><Link to="/#howitworks" className="block hover:text-[#1d8348] transition" onClick={() => setIsOpen(!isOpen)}>How it works</Link></li>
             <li><Link to="/#team" className="block hover:text-[#1d8348] transition" onClick={() => setIsOpen(!isOpen)}>Team</Link></li>
             <li>
               <Link
-                to="/#get-started" // Changed to Link
-                className="px-5 py-2.5 text-white font-poppins bg-[#1d8348] rounded-3xl hover:text-black hover:bg-[#2ecc71] transition duration-300 ease-in-out inline-block"
+                to="https://active.ecapfx.com/auth/signin" // Changed to Link
+                className="px-5 py-2.5 text-white font-roboto bg-[#1d8348] rounded-3xl hover:text-black hover:bg-[#2ecc71] transition duration-300 ease-in-out inline-block"
                 onClick={() => setIsOpen(!isOpen)}
               >
                 Get Started
