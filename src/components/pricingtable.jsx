@@ -1,4 +1,9 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect } from 'react';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+import 'swiper/css/pagination';
+import 'swiper/css/navigation';
+import { Pagination, Navigation } from 'swiper/modules';
 import './pricingtable.css';
 
 function PricingTable() {
@@ -6,7 +11,6 @@ function PricingTable() {
   const [selectedSize, setSelectedSize] = useState("10k");
   const [price, setPrice] = useState("$69");
   const [isAnimating, setIsAnimating] = useState(false);
-  const tableContainerRef = useRef(null);
 
   // Price mapping based on size and step
   const priceMap = {
@@ -256,13 +260,6 @@ function PricingTable() {
     setPrice(priceMap[selectedStep][selectedSize]);
   }, [selectedStep, selectedSize]);
 
-  // Reset scroll position when selectedStep or selectedSize changes
-  useEffect(() => {
-    if (tableContainerRef.current) {
-      tableContainerRef.current.scrollLeft = 0;
-    }
-  }, [selectedStep, selectedSize]);
-
   const handleStepChange = (step) => {
     setIsAnimating(true);
     setSelectedStep(step);
@@ -312,35 +309,27 @@ function PricingTable() {
     }
   };
 
-  // Calculate dynamic minimum width based on number of columns
-  const getMinWidth = () => {
-    const baseWidth = 120; // Width per column
-    const metricsWidth = 120; // Width for Metrics column
-    const totalColumns = visibleColumns();
-    return `${metricsWidth + totalColumns * baseWidth}px`;
-  };
-
   const columnHeaders = getColumnHeaders();
   const columns = visibleColumns();
 
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-      <div className="text-center">
-        <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight">
-          Select Your Evaluation Plan
-        </h2>
-        <h2 className="mt-2 text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight">
-          <span></span>
-        </h2>
-      </div>
-      <div className="ps_wrapper">
-        <div className="ps_intro">
-          <p className="mb-10 mt-6 text-gray-600 text-center text-sm sm:text-base">
-            The Choice Is Yours Select The Right Evaluation And Become A Funded Trader With ECAPFX Trader
-          </p>
+        <div className="text-center">
+          <h2 className="text-5xl lg:text-5xl font-extrabold tracking-tight text-center">
+            Our Plans
+          </h2>
+          <h2 className="mt-2 text-5xl lg:text-5xl font-extrabold tracking-tight text-center">
+            <span></span>
+          </h2>
         </div>
-      </div>
-      <div className="grid grid-cols-1 lg:grid-cols-12 gap-4 sm:gap-6">
+        <div className="ps_wrapper">
+          <div className="ps_intro">
+            <p className="mb-14 mt-10 text-black-600 text-center">
+              The Choice Is Yours Select The Right Evaluation And Become An ECAPFX Trader
+            </p>
+          </div>
+        </div>
+      <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
         {/* Left sidebar with options */}
         <div className="lg:col-span-3 space-y-4">
           <div className="bg-white rounded-lg shadow-md p-4 sm:p-6" style={{ border: '1px solid #e5e7eb' }}>
@@ -349,15 +338,34 @@ function PricingTable() {
               {steps.map((step) => (
                 <button
                   key={step}
-                  className={`text-left px-4 py-2 sm:py-3 rounded-md font-medium text-sm sm:text-base ${selectedStep === step ? 'active' : ''}`}
-                  onClick={() => handleStepChange(step)}
-                  style={{
-                    backgroundColor: selectedStep === step ? '#1d8348' : '#e5e7eb',
-                    color: selectedStep === step ? '#ffffff' : '#374151',
-                    transition: 'background-color 0.6s ease, color 0.6s ease',
+                  className={`text-left px-4 py-3 rounded-md font-medium text-sm sm:text-base active:cursor-pointer select-none ${selectedStep === step ? 'active' : ''}`}
+                  onClick={(e) => {
+                    handleStepChange(step);
                   }}
-                  onMouseEnter={(e) => { if (selectedStep !== step) e.target.style.backgroundColor = '#d1d5db'; }}
-                  onMouseLeave={(e) => { if (selectedStep !== step) e.target.style.backgroundColor = '#e5e7eb'; }}
+                  style={{
+                    background: selectedStep === step 
+                      ? 'linear-gradient(to right, #1a6f3d, #1d8348, #145c33)' 
+                      : 'linear-gradient(to right, #1a6f3d, #1d8348, #145c33)',
+                    color: selectedStep === step ? '#000000' : '#ffffff',
+                    transition: 'background 0.6s ease, color 0.6s ease, transform 0.3s ease, box-shadow 0.3s ease',
+                    display: 'inline-block',
+                    transform: selectedStep === step ? 'scale(1.05)' : 'scale(1)',
+                    boxShadow: selectedStep === step ? '0 4px 6px -1px rgba(0, 128, 0, 0.5)' : 'none',
+                  }}
+                  onMouseEnter={(e) => { 
+                    if (selectedStep !== step) {
+                      e.target.style.background = 'linear-gradient(to right, rgba(21, 100, 55, 0.9), rgba(29, 131, 72, 0.9), rgba(14, 63, 36, 0.9))';
+                      e.target.style.transform = 'scale(1.05)';
+                      e.target.style.boxShadow = '0 4px 6px -1px rgba(0, 128, 0, 0.5)';
+                    }
+                  }}
+                  onMouseLeave={(e) => { 
+                    if (selectedStep !== step) {
+                      e.target.style.background = 'linear-gradient(to right, #1a6f3d, #1d8348, #145c33)';
+                      e.target.style.transform = 'scale(1)';
+                      e.target.style.boxShadow = 'none';
+                    }
+                  }}
                 >
                   {step}
                 </button>
@@ -371,15 +379,34 @@ function PricingTable() {
               {sizes.map((size) => (
                 <button
                   key={size}
-                  className={`text-left px-4 py-2 sm:py-3 rounded-md font-medium text-sm sm:text-base ${selectedSize === size ? 'active' : ''} ${selectedStep === "Instant Funding" && size === "200k" ? 'hidden' : ''}`}
-                  onClick={() => handleSizeChange(size)}
-                  style={{
-                    backgroundColor: selectedSize === size ? '#1d8348' : '#e5e7eb',
-                    color: selectedSize === size ? '#ffffff' : '#374151',
-                    transition: 'background-color 0.3s ease, color 0.3s ease',
+                  className={`text-left px-4 py-3 rounded-md font-medium text-sm sm:text-base active:cursor-pointer select-none ${selectedSize === size ? 'active' : ''} ${selectedStep === "Instant Funding" && size === "200k" ? 'hidden' : ''}`}
+                  onClick={(e) => {
+                    handleSizeChange(size);
                   }}
-                  onMouseEnter={(e) => { if (selectedSize !== size) e.target.style.backgroundColor = '#d1d5db'; }}
-                  onMouseLeave={(e) => { if (selectedSize !== size) e.target.style.backgroundColor = '#e5e7eb'; }}
+                  style={{
+                    background: selectedSize === size 
+                      ? 'linear-gradient(to right, #1a6f3d, #1d8348, #145c33)' 
+                      : 'linear-gradient(to right, #1a6f3d, #1d8348, #145c33)',
+                    color: selectedSize === size ? '#000000' : '#ffffff',
+                    transition: 'background 0.6s ease, color 0.6s ease, transform 0.3s ease, box-shadow 0.3s ease',
+                    display: 'inline-block',
+                    transform: selectedSize === size ? 'scale(1.05)' : 'scale(1)',
+                    boxShadow: selectedSize === size ? '0 4px 6px -1px rgba(0, 128, 0, 0.5)' : 'none',
+                  }}
+                  onMouseEnter={(e) => { 
+                    if (selectedSize !== size) {
+                      e.target.style.background = 'linear-gradient(to right, rgba(21, 100, 55, 0.9), rgba(29, 131, 72, 0.9), rgba(14, 63, 36, 0.9))';
+                      e.target.style.transform = 'scale(1.05)';
+                      e.target.style.boxShadow = '0 4px 6px -1px rgba(0, 128, 0, 0.5)';
+                    }
+                  }}
+                  onMouseLeave={(e) => { 
+                    if (selectedSize !== size) {
+                      e.target.style.background = 'linear-gradient(to right, #1a6f3d, #1d8348, #145c33)';
+                      e.target.style.transform = 'scale(1)';
+                      e.target.style.boxShadow = 'none';
+                    }
+                  }}
                 >
                   {size} Challenge
                 </button>
@@ -388,7 +415,7 @@ function PricingTable() {
           </div>
 
           <div className="bg-white rounded-lg shadow-md p-4 sm:p-6 text-center" style={{ border: '1px solid #e5e7eb' }}>
-            <h2 className="text-xl sm:text-3xl font-bold" style={{ color: '#1d8348', background: 'linear-gradient(90deg, #1d8348, #28a745)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>{price}</h2>
+            <h2 className="text-2xl sm:text-4xl font-bold" style={{ color: '#1d8348', background: 'linear-gradient(90deg, #1d8348, #28a745)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>{price}</h2>
             <p className="text-gray-500 mt-1 text-sm sm:text-base">One-time Fee</p>
           </div>
         </div>
@@ -396,15 +423,15 @@ function PricingTable() {
         {/* Right side table */}
         <div className="lg:col-span-9">
           <div className="bg-white rounded-lg shadow-md" style={{ border: '1px solid #e5e7eb', position: 'relative' }}>
-            <div className="overflow-x-auto" ref={tableContainerRef}>
-              <div className="min-w-[240px] sm:min-w-[360px] md:min-w-full" style={{ minWidth: getMinWidth() }}>
+            <div className="overflow-x-auto">
+              <div className="min-w-[600px] md:min-w-full">
                 <table className="w-full" aria-label="Trading Challenge Details">
                   <thead>
                     <tr className="bg-gray-100 text-gray-800" style={{ borderBottom: '2px solid #e5e7eb' }}>
-                      <th className="p-2 sm:p-4 text-left font-medium text-sm sm:text-base sticky left-0 bg-gray-100" style={{ color: '#1f2937', zIndex: 1 }}>Metrics</th>
+                      <th className="p-4 text-left font-medium text-sm sm:text-base sticky left-0 bg-gray-100" style={{ color: '#1f2937', zIndex: 1 }}>Metrics</th>
                       {columnHeaders.slice(0, columns).map((header, index) => (
                         header ? (
-                          <th key={index} className="p-2 sm:p-4 text-left font-medium text-sm sm:text-base" style={{ color: '#1f2937' }}>
+                          <th key={index} className="p-4 text-left font-medium text-sm sm:text-base" style={{ color: '#1f2937' }}>
                             {header}
                           </th>
                         ) : null
@@ -417,11 +444,11 @@ function PricingTable() {
                         key={metric}
                         className="border-b border-gray-200 hover:bg-gray-100"
                       >
-                        <td className="p-2 sm:p-4 font-medium text-sm sm:text-base sticky left-0 bg-white" style={{ color: '#374151', zIndex: 1 }}>{metric}</td>
+                        <td className="p-4 font-medium text-sm sm:text-base sticky left-0 bg-white" style={{ color: '#374151', zIndex: 1 }}>{metric}</td>
                         {getTableData(metric).slice(0, columns).map((value, index) => (
                           <td
                             key={index}
-                            className={`p-2 sm:p-4 text-sm sm:text-base ${isAnimating ? 'animate-change' : ''}`}
+                            className={`p-4 text-sm sm:text-base ${isAnimating ? 'animate-change' : ''}`}
                             style={{ color: '#4b5563' }}
                           >
                             {value}
@@ -433,15 +460,30 @@ function PricingTable() {
                 </table>
               </div>
             </div>
-            <div className="p-4 sm:p-6 text-center border-t border-gray-200" style={{ backgroundColor: '#f9fafb', position: 'sticky', bottom: 0, left: 0, width: '100%', zIndex: 2 }}>
+            <div className="p-6 text-center border-t border-gray-200" style={{ backgroundColor: '#f9fafb', position: 'sticky', bottom: 0, left: 0, width: '100%', zIndex: 2 }}>
               <p className="text-gray-600 mb-4 max-w-lg mx-auto text-sm sm:text-base" style={{ color: '#6b7280' }}>
                 We allow our traders to trade on their own terms. Get Funded with No Consistency Rule!
               </p>
               <button
-                className="bg-[#1d8348] text-white font-medium px-4 sm:px-6 py-2 sm:py-3 rounded-md text-sm sm:text-base"
-                style={{ transition: 'background-color 0.3s ease, transform 0.2s ease' }}
-                onMouseEnter={(e) => { e.target.style.backgroundColor = '#166c3a'; e.target.style.transform = 'scale(1.05)'; }}
-                onMouseLeave={(e) => { e.target.style.backgroundColor = '#1d8348'; e.target.style.transform = 'scale(1)'; }}
+                className="font-medium px-6 sm:px-8 py-2 sm:py-3 rounded-md text-sm sm:text-base text-white active:cursor-pointer select-none"
+                style={{
+                  background: 'linear-gradient(to right, #1a6f3d, #1d8348, #145c33)',
+                  color: '#ffffff',
+                  transition: 'background 0.6s ease, color 0.6s ease, transform 0.3s ease, box-shadow 0.3s ease',
+                  display: 'inline-block',
+                  transform: 'scale(1)',
+                  boxShadow: 'none',
+                }}
+                onMouseEnter={(e) => { 
+                  e.target.style.background = 'linear-gradient(to right, rgba(21, 100, 55, 0.9), rgba(29, 131, 72, 0.9), rgba(14, 63, 36, 0.9))';
+                  e.target.style.transform = 'scale(1.05)';
+                  e.target.style.boxShadow = '0 4px 6px -1px rgba(0, 128, 0, 0.5)';
+                }}
+                onMouseLeave={(e) => { 
+                  e.target.style.background = 'linear-gradient(to right, #1a6f3d, #1d8348, #145c33)';
+                  e.target.style.transform = 'scale(1)';
+                  e.target.style.boxShadow = 'none';
+                }}
               >
                 Start Challenge
               </button>
