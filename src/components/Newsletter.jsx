@@ -26,7 +26,7 @@ export default function Example() {
               />
               <button
                 type="submit"
-                className="flex-none rounded-md bg-[#1D8348] px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-[#2ECC71] hover:text-black focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#1D8348]"
+                className="bg-gradient-to-r from-[#1a6f3d] via-[#1d8348] to-[#145c33] hover:from-[#156437]/90 hover:via-[#1d8348]/90 hover:to-[#0e3f24]/90 hover:text-black hover:shadow-md hover:shadow-green-700/50 px-6 py-2 rounded-lg text-white inline-block transition duration-300 ease-in-out hover:scale-105 active:cursor-pointer select-none"
               >
                 Subscribe
               </button>
