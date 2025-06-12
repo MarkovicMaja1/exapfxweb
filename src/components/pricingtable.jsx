@@ -314,21 +314,21 @@ function PricingTable() {
 
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        <div className="text-center">
-          <h2 className="text-5xl lg:text-5xl font-extrabold tracking-tight text-center">
-            Our Plans
-          </h2>
-          <h2 className="mt-2 text-5xl lg:text-5xl font-extrabold tracking-tight text-center">
-            <span></span>
-          </h2>
+      <div className="text-center">
+        <h2 className="text-5xl lg:text-5xl font-extrabold tracking-tight text-center">
+          Our Plans
+        </h2>
+        <h2 className="mt-2 text-5xl lg:text-5xl font-extrabold tracking-tight text-center">
+          <span></span>
+        </h2>
+      </div>
+      <div className="ps_wrapper">
+        <div className="ps_intro">
+          <p className="mb-14 mt-10 text-black-600 text-center">
+            The Choice Is Yours Select The Right Evaluation And Become An ECAPFX Trader
+          </p>
         </div>
-        <div className="ps_wrapper">
-          <div className="ps_intro">
-            <p className="mb-14 mt-10 text-black-600 text-center">
-              The Choice Is Yours Select The Right Evaluation And Become An ECAPFX Trader
-            </p>
-          </div>
-        </div>
+      </div>
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
         {/* Left sidebar with options */}
         <div className="lg:col-span-3 space-y-4">
@@ -339,9 +339,7 @@ function PricingTable() {
                 <button
                   key={step}
                   className={`text-left px-4 py-3 rounded-md font-medium text-sm sm:text-base active:cursor-pointer select-none ${selectedStep === step ? 'active' : ''}`}
-                  onClick={(e) => {
-                    handleStepChange(step);
-                  }}
+                  onClick={() => handleStepChange(step)}
                   style={{
                     background: selectedStep === step 
                       ? 'linear-gradient(to right, #1a6f3d, #1d8348, #145c33)' 
@@ -354,16 +352,16 @@ function PricingTable() {
                   }}
                   onMouseEnter={(e) => { 
                     if (selectedStep !== step) {
-                      e.target.style.background = 'linear-gradient(to right, rgba(21, 100, 55, 0.9), rgba(29, 131, 72, 0.9), rgba(14, 63, 36, 0.9))';
-                      e.target.style.transform = 'scale(1.05)';
-                      e.target.style.boxShadow = '0 4px 6px -1px rgba(0, 128, 0, 0.5)';
+                      e.currentTarget.style.background = 'linear-gradient(to right, rgba(21, 100, 55, 0.9), rgba(29, 131, 72, 0.9), rgba(14, 63, 36, 0.9))';
+                      e.currentTarget.style.transform = 'scale(1.05)';
+                      e.currentTarget.style.boxShadow = '0 4px 6px -1px rgba(0, 128, 0, 0.5)';
                     }
                   }}
                   onMouseLeave={(e) => { 
                     if (selectedStep !== step) {
-                      e.target.style.background = 'linear-gradient(to right, #1a6f3d, #1d8348, #145c33)';
-                      e.target.style.transform = 'scale(1)';
-                      e.target.style.boxShadow = 'none';
+                      e.currentTarget.style.background = 'linear-gradient(to right, #1a6f3d, #1d8348, #145c33)';
+                      e.currentTarget.style.transform = 'scale(1)';
+                      e.currentTarget.style.boxShadow = 'none';
                     }
                   }}
                 >
@@ -380,9 +378,7 @@ function PricingTable() {
                 <button
                   key={size}
                   className={`text-left px-4 py-3 rounded-md font-medium text-sm sm:text-base active:cursor-pointer select-none ${selectedSize === size ? 'active' : ''} ${selectedStep === "Instant Funding" && size === "200k" ? 'hidden' : ''}`}
-                  onClick={(e) => {
-                    handleSizeChange(size);
-                  }}
+                  onClick={() => handleSizeChange(size)}
                   style={{
                     background: selectedSize === size 
                       ? 'linear-gradient(to right, #1a6f3d, #1d8348, #145c33)' 
@@ -395,16 +391,16 @@ function PricingTable() {
                   }}
                   onMouseEnter={(e) => { 
                     if (selectedSize !== size) {
-                      e.target.style.background = 'linear-gradient(to right, rgba(21, 100, 55, 0.9), rgba(29, 131, 72, 0.9), rgba(14, 63, 36, 0.9))';
-                      e.target.style.transform = 'scale(1.05)';
-                      e.target.style.boxShadow = '0 4px 6px -1px rgba(0, 128, 0, 0.5)';
+                      e.currentTarget.style.background = 'linear-gradient(to right, rgba(21, 100, 55, 0.9), rgba(29, 131, 72, 0.9), rgba(14, 63, 36, 0.9))';
+                      e.currentTarget.style.transform = 'scale(1.05)';
+                      e.currentTarget.style.boxShadow = '0 4px 6px -1px rgba(0, 128, 0, 0.5)';
                     }
                   }}
                   onMouseLeave={(e) => { 
                     if (selectedSize !== size) {
-                      e.target.style.background = 'linear-gradient(to right, #1a6f3d, #1d8348, #145c33)';
-                      e.target.style.transform = 'scale(1)';
-                      e.target.style.boxShadow = 'none';
+                      e.currentTarget.style.background = 'linear-gradient(to right, #1a6f3d, #1d8348, #145c33)';
+                      e.currentTarget.style.transform = 'scale(1)';
+                      e.currentTarget.style.boxShadow = 'none';
                     }
                   }}
                 >
@@ -424,14 +420,14 @@ function PricingTable() {
         <div className="lg:col-span-9">
           <div className="bg-white rounded-lg shadow-md" style={{ border: '1px solid #e5e7eb', position: 'relative' }}>
             <div className="overflow-x-auto">
-              <div className="min-w-[600px] md:min-w-full">
-                <table className="w-full" aria-label="Trading Challenge Details">
+              <div className="w-full">
+                <table className="w-full table-auto" aria-label="Trading Challenge Details">
                   <thead>
                     <tr className="bg-gray-100 text-gray-800" style={{ borderBottom: '2px solid #e5e7eb' }}>
-                      <th className="p-4 text-left font-medium text-sm sm:text-base sticky left-0 bg-gray-100" style={{ color: '#1f2937', zIndex: 1 }}>Metrics</th>
+                      <th className="p-4 text-left font-medium text-sm sm:text-base sticky left-0 bg-gray-100" style={{ color: '#1f2937', zIndex: 1, minWidth: '120px' }}>Metrics</th>
                       {columnHeaders.slice(0, columns).map((header, index) => (
                         header ? (
-                          <th key={index} className="p-4 text-left font-medium text-sm sm:text-base" style={{ color: '#1f2937' }}>
+                          <th key={index} className="p-4 text-left font-medium text-sm sm:text-base" style={{ color: '#1f2937', minWidth: '120px' }}>
                             {header}
                           </th>
                         ) : null
@@ -444,12 +440,12 @@ function PricingTable() {
                         key={metric}
                         className="border-b border-gray-200 hover:bg-gray-100"
                       >
-                        <td className="p-4 font-medium text-sm sm:text-base sticky left-0 bg-white" style={{ color: '#374151', zIndex: 1 }}>{metric}</td>
+                        <td className="p-4 font-medium text-sm sm:text-base sticky left-0 bg-white" style={{ color: '#374151', zIndex: 1, minWidth: '120px' }}>{metric}</td>
                         {getTableData(metric).slice(0, columns).map((value, index) => (
                           <td
                             key={index}
                             className={`p-4 text-sm sm:text-base ${isAnimating ? 'animate-change' : ''}`}
-                            style={{ color: '#4b5563' }}
+                            style={{ color: '#4b5563', minWidth: '120px' }}
                           >
                             {value}
                           </td>
@@ -475,16 +471,16 @@ function PricingTable() {
                   boxShadow: 'none',
                 }}
                 onMouseEnter={(e) => { 
-                  e.target.style.background = 'linear-gradient(to right, rgba(21, 100, 55, 0.9), rgba(29, 131, 72, 0.9), rgba(14, 63, 36, 0.9))';
-                  e.target.style.color = '#000000';
-                  e.target.style.transform = 'scale(1.05)';
-                  e.target.style.boxShadow = '0 4px 6px -1px rgba(0, 128, 0, 0.5)';
+                  e.currentTarget.style.background = 'linear-gradient(to right, rgba(21, 100, 55, 0.9), rgba(29, 131, 72, 0.9), rgba(14, 63, 36, 0.9))';
+                  e.currentTarget.style.color = '#000000';
+                  e.currentTarget.style.transform = 'scale(1.05)';
+                  e.currentTarget.style.boxShadow = '0 4px 6px -1px rgba(0, 128, 0, 0.5)';
                 }}
                 onMouseLeave={(e) => { 
-                  e.target.style.background = 'linear-gradient(to right, #1a6f3d, #1d8348, #145c33)';
-                  e.target.style.color = '#ffffff';
-                  e.target.style.transform = 'scale(1)';
-                  e.target.style.boxShadow = 'none';
+                  e.currentTarget.style.background = 'linear-gradient(to right, #1a6f3d, #1d8348, #145c33)';
+                  e.currentTarget.style.color = '#ffffff';
+                  e.currentTarget.style.transform = 'scale(1)';
+                  e.currentTarget.style.boxShadow = 'none';
                 }}
               >
                 Start Challenge
@@ -493,6 +489,54 @@ function PricingTable() {
           </div>
         </div>
       </div>
+      <style jsx>{`
+        @media (max-width: 640px) {
+          .max-w-7xl {
+            padding-left: 1rem;
+            padding-right: 1rem;
+          }
+
+          .grid {
+            display: flex;
+            flex-direction: column;
+          }
+
+          .lg\\:col-span-3, .lg\\:col-span-9 {
+            width: 100%;
+          }
+
+          .overflow-x-auto {
+            overflow-x: hidden; /* Hide scrollbar on mobile */
+            -webkit-overflow-scrolling: touch;
+          }
+
+          table {
+            font-size: 0.875rem;
+          }
+
+          th, td {
+            padding: 0.75rem;
+            min-width: 100px;
+          }
+
+          .text-5xl {
+            font-size: 2rem;
+          }
+
+          .ps_wrapper p {
+            font-size: 0.875rem;
+          }
+        }
+
+        .animate-change {
+          animation: fadeIn 0.3s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+          0% { opacity: 0; }
+          100% { opacity: 1; }
+        }
+      `}</style>
     </div>
   );
 }
