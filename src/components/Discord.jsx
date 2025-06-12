@@ -42,7 +42,7 @@ const Discord = () => {
                   <div className="text-xl font-extrabold text-white mb-2">ECAPFX</div>
                   <div className="text-xs mt-1">
                     <span className="text-white">🟢 5 Online</span>
-                    <span className="text-white"> • 10 Members</span>
+                    <span className="text-white"> • 8 Members</span>
                   </div>
                 </div>
               </div>
