@@ -77,13 +77,13 @@ const Footer = () => {
                 <p className="text-sm font-semibold leading-6 text-white">Important Links</p>
                 <ul role="list" className="mt-6 space-y-4">
                   <li>
-                    <small href="#chooseplan" className="text-sm leading-6 text-white hover:text-white">Choose Plan</small>
+                    <small><Link to="/#chooseplan" className="text-sm leading-6 text-white hover:text-white">Choose Plan</Link></small>
                   </li>
                   <li>
-                    <small href="#about" className="text-sm leading-6 text-white hover:text-white">About Us</small>
+                    <small><Link to="/#about" className="text-sm leading-6 text-white hover:text-white">About Us</Link></small>
                   </li>
                   <li>
-                    <small href="#team" className="text-sm leading-6 text-white hover:text-white">Team</small>
+                    <small><Link to="/#team" className="text-sm leading-6 text-white hover:text-white">Team</Link></small>
                   </li>
                 </ul>
               </div>
