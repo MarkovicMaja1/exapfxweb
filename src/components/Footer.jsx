@@ -4,6 +4,7 @@ import logo from '../assets/ECapFX-LOGO-white.png';
 import confirmoBlack from '../assets/confirmo-black.png';
 import visa from '../assets/visa.svg';
 import paypal from '../assets/paypal.svg';
+import stripe from '../assets/stripe.svg';
 import mastercard from '../assets/mastercard.svg';
 import coinpayments from '../assets/coinpayments.png';
 
@@ -142,6 +143,7 @@ const Footer = () => {
               <img src={visa} alt="Visa" className="h-3.5 w-auto" />
               <img src={mastercard} alt="Mastercard" className="h-5 w-auto" />
               <img src={paypal} alt="Paypal" className="h-5 w-auto" />
+              <img src={stripe} alt="Stripe" className="h-9 w-auto" />
               <img src={confirmoBlack} alt="Confirmo" className="h-6 w-auto" />
               <img src={coinpayments} alt="CoinPayments" className="h-5 w-auto" />
             </div>
