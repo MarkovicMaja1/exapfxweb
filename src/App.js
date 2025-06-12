@@ -1,6 +1,7 @@
 import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 // import Soon from "./components/Soon";
 import Discord from "./components/Discord";
+import Faq from "./components/Faq.jsx";
 import PrivacyPolicy from "./components/PrivacyPolicy";
 import PricingTable from './components/pricingtable.jsx';
 // import Dashboard from "./components/Dashboard";
@@ -102,6 +103,7 @@ function App() {
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
           <Route path="/terms" element={<Terms />} />
           <Route path="/claim" element={<Claim />} />
+          <Route path="/faq" element={<Faq />} />
           <Route path="*" element={<NotFound />} /> {/* 404 Route */}
         </Routes>
         <SustainabilityIcon />
