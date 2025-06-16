@@ -119,15 +119,15 @@ function PricingTable() {
         "Bonus After Stage": { USD: ["", "", "", ""], GBP: ["", "", "", ""], EUR: ["", "", "", ""] }
       },
       "25k": {
-        "Profit Target": ["$2,000 (8%)", "None", "", ""],
-        "Duration": ["Unlimited", "Unlimited", "", ""],
-        "Leverage": ["Up to 1:50", "Up to 1:50", "", ""],
-        "Min Trading Days": ["7 Days", "None", "", ""],
-        "Max Loss": { USD: ["$1,500 (6%)", "None", "", ""], GBP: ["£1,500 (6%)", "None", "", ""], EUR: ["€1,500 (6%)", "None", "", ""] },
-        "Daily Loss": { USD: ["$750 (3%)", "None", "", ""], GBP: ["£750 (3%)", "None", "", ""], EUR: ["€750 (3%)", "None", "", ""] },
-        "Profit Share": ["None", "90/10", "", ""],
-        "Fee": { USD: ["$125", "Refunded", "", ""], GBP: ["£100", "Refunded", "", ""], EUR: ["€110", "Refunded", "", ""] },
-        "Bonus After Stage": { USD: ["", "", "", ""], GBP: ["", "", "", ""], EUR: ["", "", "", ""] }
+        "Profit Target": ["$2,000 (8%)", "$1,250 (5%)", "None"],
+        "Duration": ["Unlimited", "Unlimited", "Indefinite"],
+        "Leverage": ["Up to 1:50", "Up to 1:50", "Up to 1:50"],
+        "Min Trading Days": ["7 Days", "None", "None"],
+        "Max Loss": { USD: ["$1,500 (6%)", "$1,000 (4%)", "None"], GBP: ["£1,500 (6%)", "£1,000 (4%)", "None"], EUR: ["€1,500 (6%)", "£1,000 (4%)", "None"] },
+        "Daily Loss": { USD: ["$750 (3%)", "$500 (2%)", "None"], GBP: ["£750 (3%)", "£500 (2%)", "None"], EUR: ["€750 (3%)", "£500 (2%)", "None"] },
+        "Profit Share": ["None", "None", "90/10"],
+        "Fee": { USD: ["$125", "Refunded", ""], GBP: ["£100", "Refunded", ""], EUR: ["€110", "Refunded", ""] },
+        "Bonus After Stage": { USD: ["", "", ""], GBP: ["", "", ""], EUR: ["", "", ""] }
       },
       "50k": {
         "Profit Target": ["$5,000 (10%)", "$4,000 (8%)", "$2,000 (4%)", "None"],
@@ -176,13 +176,13 @@ function PricingTable() {
         "Bonus After Stage": { USD: ["$10", "$15", "$20", "$25"], GBP: ["£10", "£15", "£20", "£25"], EUR: ["€10", "€15", "€20", "€25"] }
       },
       "25k": {
-        "Profit Target": ["$2,000 (8%)", "None", "", ""],
-        "Duration": ["Unlimited", "Unlimited", "", ""],
-        "Leverage": ["Up to 1:50", "Up to 1:50", "", ""],
-        "Min Trading Days": ["7 Days", "None", "", ""],
-        "Max Loss": { USD: ["$1,250 (5%)", "None", "", ""], GBP: ["£1,250 (5%)", "None", "", ""], EUR: ["€1,250 (5%)", "None", "", ""] },
-        "Daily Loss": { USD: ["$750 (3%)", "None", "", ""], GBP: ["£750 (3%)", "None", "", ""], EUR: ["€750 (3%)", "None", "", ""] },
-        "Profit Share": ["None", "90/10", "", ""],
+        "Profit Target": ["$2,000 (10%)", "$2000 (8%)", "$1000 (4%)", "None"],
+        "Duration": ["Unlimited", "Unlimited", "Unlimited", "Indefinite"],
+        "Leverage": ["Up to 1:50", "Up to 1:50", "Up to 1:50", "Up to 1:50"],
+        "Min Trading Days": ["None", "None", "None", "None"],
+        "Max Loss": { USD: ["$1250 (5%)", "$1000 (4%)", "$500 (2%)", "None"], GBP: ["£1250 (5%)", "£1000 (4%)", "£500 (2%)", "None"], EUR: ["€1250 (5%)", "€1000 (4%)", "€500 (2%)", "None"] },
+        "Daily Loss": { USD: ["$750 (3%)", "$600 (2.4%)", "$300 (1.2%)", "None"], GBP: ["£750 (3%)", "£600 (2.4%)", "£300 (1.2%)", "None"], EUR: ["€750 (3%)", "€600 (2.4%)", "€300 (1.2%)", "None"] },
+        "Profit Share": ["None", "None", "None", "90/10"],
         "Fee": { USD: ["$105", "Refunded", "", ""], GBP: ["£90", "Refunded", "", ""], EUR: ["€100", "Refunded", "", ""] },
         "Bonus After Stage": { USD: ["$25", "$37.50", "$50", "$62.50"], GBP: ["£25", "£37.50", "£50", "£62.50"], EUR: ["€25", "€37.50", "€50", "€62.50"] }
       },
