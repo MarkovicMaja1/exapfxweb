@@ -16,7 +16,7 @@ function PricingTable() {
   const [price, setPrice] = useState("$55");
   const [isAnimating, setIsAnimating] = useState(false);
 
-  // Price mapping based on step, size, and currency (aligned with document)
+  // Price mapping based on step, size, and currency
   const priceMap = {
     "One Step": {
       "10k": { USD: "$80", GBP: "£65", EUR: "€75" },
@@ -47,7 +47,7 @@ function PricingTable() {
     }
   };
 
-  // Table data based on step type, size, and currency with updated requirements
+  // Table data based on step type, size, and currency
   const tableData = {
     "One Step": {
       "10k": {
@@ -322,7 +322,7 @@ function PricingTable() {
 
   const getTableData = (metric) => {
     if (!tableData[selectedStep] || !tableData[selectedStep][selectedSize]) {
-      return Array(columns).fill(""); // Return empty array with correct length if data is unavailable
+      return Array(columns).fill("");
     }
     if (metric === "Fee" && tableData[selectedStep][selectedSize][metric]?.[selectedCurrency]) {
       return tableData[selectedStep][selectedSize][metric][selectedCurrency];
@@ -364,6 +364,39 @@ function PricingTable() {
   const columns = visibleColumns();
   const availableSizes = getAvailableSizes();
 
+  const renderDesktopTable = () => (
+    <table className="w-full table-auto" aria-label="Trading Challenge Details">
+      <thead>
+        <tr className="bg-gray-100 text-gray-800" style={{ borderBottom: '2px solid #e5e7eb' }}>
+          <th className="p-4 text-left font-medium text-sm sm:text-base sticky left-0 bg-gray-100" style={{ color: '#1f2937', zIndex: 1, minWidth: '120px' }}>Metrics</th>
+          {columnHeaders.slice(0, columns).map((header, index) => (
+            header ? (
+              <th key={index} className="p-4 text-left font-medium text-sm sm:text-base" style={{ color: '#1f2937', minWidth: '120px' }}>
+                {header}
+              </th>
+            ) : null
+          ))}
+        </tr>
+      </thead>
+      <tbody>
+        {metrics.map((metric) => (
+          <tr key={metric} className="border-b border-gray-200 hover:bg-gray-100">
+            <td className="p-4 font-medium text-sm sm:text-base sticky left-0 bg-white" style={{ color: '#374151', zIndex: 1, minWidth: '120px' }}>{metric}</td>
+            {getTableData(metric).slice(0, columns).map((value, index) => (
+              <td
+                key={index}
+                className={`p-4 text-sm sm:text-base ${isAnimating ? 'animate-change' : ''}`}
+                style={{ color: '#4b5563', minWidth: '120px' }}
+              >
+                {value}
+              </td>
+            ))}
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  );
+
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
       <div className="text-center">
@@ -389,7 +422,7 @@ function PricingTable() {
             {currencies.map((currency) => (
               <button
                 key={currency}
-                className={`px-4 py-2 rounded-md font-medium text-sm sm:text-base active:cursor-pointer select-none ${selectedCurrency === currency ? 'bg-blue-500 text-white' : 'bg-gray-200 text-black'}`}
+                className={`px-4 py-2 rounded-md font-medium text-sm sm:text-base select-none ${selectedCurrency === currency ? 'bg-blue-500 text-white' : 'bg-gray-200 text-black'}`}
                 onClick={() => handleCurrencyChange(currency)}
                 style={{
                   transition: 'background 0.3s ease, color 0.3s ease',
@@ -419,7 +452,7 @@ function PricingTable() {
               {steps.map((step) => (
                 <button
                   key={step}
-                  className={`text-left px-4 py-3 rounded-md font-medium text-sm sm:text-base active:cursor-pointer select-none ${selectedStep === step ? 'active' : ''}`}
+                  className={`text-left px-4 py-3 rounded-md font-medium text-sm sm:text-base select-none ${selectedStep === step ? 'active' : ''}`}
                   onClick={() => handleStepChange(step)}
                   style={{
                     background: selectedStep === step 
@@ -458,7 +491,7 @@ function PricingTable() {
               {availableSizes.map((size) => (
                 <button
                   key={size}
-                  className={`text-left px-4 py-3 rounded-md font-medium text-sm sm:text-base active:cursor-pointer select-none ${selectedSize === size ? 'active' : ''}`}
+                  className={`text-left px-4 py-3 rounded-md font-medium text-sm sm:text-base select-none ${selectedSize === size ? 'active' : ''}`}
                   onClick={() => handleSizeChange(size)}
                   style={{
                     background: selectedSize === size 
@@ -500,41 +533,47 @@ function PricingTable() {
         {/* Right side table */}
         <div className="lg:col-span-9">
           <div className="bg-white rounded-lg shadow-md" style={{ border: '1px solid #e5e7eb', position: 'relative' }}>
-            <div className="overflow-x-auto">
-              <div className="w-full">
-                <table className="w-full table-auto" aria-label="Trading Challenge Details">
-                  <thead>
-                    <tr className="bg-gray-100 text-gray-800" style={{ borderBottom: '2px solid #e5e7eb' }}>
-                      <th className="p-4 text-left font-medium text-sm sm:text-base sticky left-0 bg-gray-100" style={{ color: '#1f2937', zIndex: 1, minWidth: '120px' }}>Metrics</th>
-                      {columnHeaders.slice(0, columns).map((header, index) => (
-                        header ? (
-                          <th key={index} className="p-4 text-left font-medium text-sm sm:text-base" style={{ color: '#1f2937', minWidth: '120px' }}>
-                            {header}
-                          </th>
-                        ) : null
-                      ))}
-                    </tr>
-                  </thead>
-                  <tbody>
-                    {metrics.map((metric) => (
-                      <tr
-                        key={metric}
-                        className="border-b border-gray-200 hover:bg-gray-100"
-                      >
-                        <td className="p-4 font-medium text-sm sm:text-base sticky left-0 bg-white" style={{ color: '#374151', zIndex: 1, minWidth: '120px' }}>{metric}</td>
-                        {getTableData(metric).slice(0, columns).map((value, index) => (
-                          <td
-                            key={index}
-                            className={`p-4 text-sm sm:text-base ${isAnimating ? 'animate-change' : ''}`}
-                            style={{ color: '#4b5563', minWidth: '120px' }}
-                          >
-                            {value}
-                          </td>
-                        ))}
-                      </tr>
-                    ))}
-                  </tbody>
-                </table>
+            <div className="table-container">
+              <div className="desktop-table hidden sm:block overflow-x-auto">
+                {renderDesktopTable()}
+              </div>
+              <div className="mobile-table block sm:hidden">
+                <Swiper
+                  modules={[Pagination, Navigation]}
+                  spaceBetween={10}
+                  slidesPerView={1}
+                  pagination={{ clickable: true }}
+                  navigation
+                  style={{ padding: '10px', paddingBottom: '40px' }}
+                >
+                  {columnHeaders.slice(0, columns).map((header, index) => (
+                    header ? (
+                      <SwiperSlide key={index}>
+                        <table className="w-full table-auto" aria-label={`Trading Challenge Details - ${header}`}>
+                          <thead>
+                            <tr className="bg-gray-100 text-gray-800" style={{ borderBottom: '2px solid #e5e7eb' }}>
+                              <th className="p-4 text-left font-medium text-sm" style={{ color: '#1f2937', minWidth: '100px' }}>Metrics</th>
+                              <th className="p-4 text-left font-medium text-sm" style={{ color: '#1f2937', minWidth: '100px' }}>{header}</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            {metrics.map((metric) => (
+                              <tr key={metric} className="border-b border-gray-200 hover:bg-gray-100">
+                                <td className="p-4 font-medium text-sm" style={{ color: '#374151', minWidth: '100px' }}>{metric}</td>
+                                <td
+                                  className={`p-4 text-sm ${isAnimating ? 'animate-change' : ''}`}
+                                  style={{ color: '#4b5563', minWidth: '100px' }}
+                                >
+                                  {getTableData(metric)[index]}
+                                </td>
+                              </tr>
+                            ))}
+                          </tbody>
+                        </table>
+                      </SwiperSlide>
+                    ) : null
+                  ))}
+                </Swiper>
               </div>
             </div>
             <div className="p-6 text-center border-t border-gray-200" style={{ backgroundColor: '#f9fafb', position: 'sticky', bottom: 0, left: 0, width: '100%', zIndex: 2 }}>
@@ -542,7 +581,7 @@ function PricingTable() {
                 We allow our traders to trade on their own terms. Get Funded with No Consistency Rule!
               </p>
               <button
-                className="font-medium px-6 sm:px-8 py-2 sm:py-3 rounded-md text-sm sm:text-base text-white active:cursor-pointer select-none"
+                className="font-medium px-6 sm:px-8 py-2 sm:py-3 rounded-md text-sm sm:text-base text-white select-none"
                 style={{
                   background: 'linear-gradient(to right, #1a6f3d, #1d8348, #145c33)',
                   color: '#ffffff',
@@ -576,43 +615,43 @@ function PricingTable() {
             padding-left: 1rem;
             padding-right: 1rem;
           }
-
           .grid {
             display: flex;
             flex-direction: column;
           }
-
           .lg\\:col-span-3, .lg\\:col-span-9, .lg\\:col-span-12 {
             width: 100%;
           }
-
-          .overflow-x-auto {
-            overflow-x: hidden; /* Hide scrollbar on mobile */
-            -webkit-overflow-scrolling: touch;
+          .table-container {
+            overflow-x: hidden;
           }
-
-          table {
-            font-size: 0.875rem;
+          .mobile-table {
+            padding-bottom: 40px;
           }
-
+          .swiper-button-next,
+          .swiper-button-prev {
+            color: #1d8348;
+          }
+          .swiper-pagination-bullet {
+            background: #1d8348;
+          }
+          .swiper-pagination-bullet-active {
+            background: #145c33;
+          }
           th, td {
             padding: 0.75rem;
             min-width: 100px;
           }
-
           .text-5xl {
             font-size: 2rem;
           }
-
           .ps_wrapper p {
             font-size: 0.875rem;
           }
         }
-
         .animate-change {
           animation: fadeIn 0.3s ease-in-out;
         }
-
         @keyframes fadeIn {
           0% { opacity: 0; }
           100% { opacity: 1; }
