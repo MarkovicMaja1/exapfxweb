@@ -74,7 +74,7 @@ const HowItWorks = () => {
           {/* Call to Action */}
           <div className="mt-16 flex justify-center">
             <a
-              href="#chooseplan"
+              href="https://active.ecapfx.com/auth/signin"
               className="bg-gradient-to-r from-[#1a6f3d] via-[#1d8348] to-[#145c33] hover:from-[#156437] hover:via-[#1d8348] hover:to-[#0e3f24] px-6 py-3 rounded-lg text-white text-lg font-semibold transition duration-300 ease-in-out hover:scale-105"
             >
               Get Started Now
