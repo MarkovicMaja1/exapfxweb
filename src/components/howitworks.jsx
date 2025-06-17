@@ -1,6 +1,25 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
 const HowItWorks = () => {
+  // Scroll to top when the tab becomes active or on initial mount
+  useEffect(() => {
+    // Scroll to top on initial mount
+    window.scrollTo(0, 0);
+
+    const handleVisibilityChange = () => {
+      if (document.visibilityState === 'visible') {
+        window.scrollTo(0, 0);
+      }
+    };
+
+    document.addEventListener('visibilitychange', handleVisibilityChange);
+
+    // Cleanup event listener on component unmount
+    return () => {
+      document.removeEventListener('visibilitychange', handleVisibilityChange);
+    };
+  }, []);
+
   return (
     <div id="how-it-works" className="relative bg-[#151515] min-h-screen">
       {/* Main Section */}

@@ -110,7 +110,7 @@ const Footer = () => {
                     <small href="#" className="text-sm leading-6 text-white hover:text-white">Support Portal</small>
                   </li>
                   <li>
-                    <small href="#" className="text-sm leading-6 text-white hover:text-white">Blog</small>
+                    <small><Link to="/rules" className="text-sm leading-6 text-white hover:text-white">Rules</Link></small>
                   </li>
                   <li>
                     <small href="#" className="text-sm leading-6 text-white hover:text-white">Live Chat</small>

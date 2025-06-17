@@ -21,6 +21,14 @@ const Faq = () => {
       faq_2: 600,
       faq_3: 700,
       faq_4: 800,
+      faq_5: 900,
+      faq_6: 1000,
+      faq_7: 1100,
+      faq_8: 1200,
+      faq_9: 1300,
+      faq_10: 1400,
+      faq_11: 1500,
+      faq_12: 1600,
     };
 
     Object.keys(delays).forEach((key) => {
@@ -91,27 +99,59 @@ const Faq = () => {
     detectRetina: true,
   };
 
-  // Sample FAQ data
+  // Updated FAQ data
   const faqs = [
     {
       question: "What is ECAPFX?",
-      answer: "ECAPFX is a platform that offers trading evaluation programs, allowing traders to demonstrate their skills and access funded accounts with up to 90% profit sharing.",
+      answer: "ECAPFX is a proprietary trading firm that provides traders with access to funded capital after successfully completing a challenge. We combine performance-based funding with a commitment to positive global impact, donating 1% of annual profits to sustainability initiatives.",
     },
     {
-      question: "How do the evaluation steps work?",
-      answer: "ECAPFX offers One Step, Two Step, Three Step, and Instant Funding programs. Each has specific profit targets, loss limits, and trading rules to qualify for a funded account.",
+      question: "What types of challenges do you offer?",
+      answer: "We offer three structured challenge types designed for different levels of trading experience: Beginner – For those new to trading, Experienced – For traders with moderate experience, Seasoned – For professional and high-performance traders. Each structure comes with its own risk parameters, targets, and evaluation metrics.",
     },
     {
-      question: "What is the profit split for funded accounts?",
-      answer: "Once funded, traders can earn up to 90% of the profits generated, with ECAPFX retaining 10%.",
+      question: "What are the evaluation criteria?",
+      answer: "To pass a challenge, you must stay within the following rules: Daily Loss Limit, Max Drawdown, Profit Targets, Consistency Rules based on the type of challenge (Phased or Instant), Trailing Drawdown for Instant accounts, measured with precision.",
     },
     {
-      question: "Are there any trading restrictions?",
-      answer: "There are no consistency rules, allowing traders to trade on their own terms. However, specific leverage, loss limits, and minimum trading days may apply based on the chosen plan.",
+      question: "How long does it take to get funded?",
+      answer: "After you pass the evaluation and complete KYC/AML compliance checks, we aim to provide access to your funded account within 5 calendar days.",
     },
     {
-      question: "How can I contact support?",
-      answer: "You can reach ECAPFX support via email at support@eurocapex.com or by phone at +441618187456.",
+      question: "What is the profit split?",
+      answer: "Your profit share depends on the challenge type and account tier selected. Details are clearly outlined before you start the challenge.",
+    },
+    {
+      question: "Do I keep my profits?",
+      answer: "Yes — funded traders receive a profit share from the earnings they generate, based on their selected model.",
+    },
+    {
+      question: "What are prohibited practices?",
+      answer: "We strictly prohibit strategies such as: Copy trading, High-frequency arbitrage, News exploitation, Any form of system abuse. Please review the full list on our Rules Page.",
+    },
+    {
+      question: "What happens if I break the rules?",
+      answer: "Rule violations may lead to disqualification or termination of your funded account. We encourage all traders to read and understand our guidelines before participating.",
+    },
+    {
+      question: "What makes ECAPFX different from other prop firms?",
+      answer: "At ECAPFX, we stand against cheap gimmicks and misleading promotions. We don’t offer shallow discounts or flashy marketing tricks just to drive volume. Our focus is on meaningful challenges that develop real traders, not short-term hype. We’re here to support long-term growth, accountability, and impact — both in trading and the world beyond.",
+    },
+    {
+      question: "What platforms do you support?",
+      answer: "We currently offer Match-Trader as our trading platform, available on both web and mobile for seamless trading across devices.",
+    },
+    {
+      question: "What are your support hours?",
+      answer: "Our support team is available 24/7 to assist you with any questions or technical issues. Whether you're just starting or actively trading, we’re always here to help.",
+    },
+    {
+      question: "How does ECAPFX give back?",
+      answer: "After your first successful year of trading, ECAPFX donates 1% of firm profits to sustainability-focused projects. It’s our way of aligning trading success with a greater purpose.",
+    },
+    {
+      question: "How do I get started?",
+      answer: "Sign up at ecapfx.com, choose the challenge that matches your level, and begin your evaluation. You’ll be guided through every step of the journey.",
     },
   ];
 
@@ -273,6 +313,30 @@ const Faq = () => {
         }
         .animation-delay-800 {
           animation-delay: 800ms;
+        }
+        .animation-delay-900 {
+          animation-delay: 900ms;
+        }
+        .animation-delay-1000 {
+          animation-delay: 1000ms;
+        }
+        .animation-delay-1100 {
+          animation-delay: 1100ms;
+        }
+        .animation-delay-1200 {
+          animation-delay: 1200ms;
+        }
+        .animation-delay-1300 {
+          animation-delay: 1300ms;
+        }
+        .animation-delay-1400 {
+          animation-delay: 1400ms;
+        }
+        .animation-delay-1500 {
+          animation-delay: 1500ms;
+        }
+        .animation-delay-1600 {
+          animation-delay: 1600ms;
         }
 
         @keyframes fadeInUp {

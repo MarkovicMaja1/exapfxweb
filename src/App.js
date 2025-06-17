@@ -2,6 +2,7 @@ import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 // import Soon from "./components/Soon";
 import Discord from "./components/Discord";
 import Faq from "./components/Faq.jsx";
+import Rules from "./components/Rules.jsx";
 import Howitworks from "./components/howitworks.jsx";
 import PrivacyPolicy from "./components/PrivacyPolicy";
 import PricingTable from './components/pricingtable.jsx';
@@ -106,6 +107,7 @@ function App() {
           <Route path="/claim" element={<Claim />} />
           <Route path="/faq" element={<Faq />} />
           <Route path="/howitworks" element={<Howitworks />} />
+          <Route path="/rules" element={<Rules />} />
           <Route path="*" element={<NotFound />} /> {/* 404 Route */}
         </Routes>
         <SustainabilityIcon />
