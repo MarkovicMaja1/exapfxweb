@@ -137,7 +137,7 @@ const Footer = () => {
         <div className="footer-primary-row-3 mt-10">
           <div className="flex justify-center items-center w-full">
             <p className="footer-primary-section-title footer-primary-section-title--small text-sm font-semibold leading-6 text-white mr-4">
-              Payment Options
+              {/* Payment Options */}
             </p>
             <div className="footer-primary-payments-list flex gap-x-4 flex-wrap items-center">
               <img src={visa} alt="Visa" className="h-3.5 w-auto" />
