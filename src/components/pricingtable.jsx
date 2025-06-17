@@ -544,7 +544,7 @@ function PricingTable() {
                   slidesPerView={1}
                   pagination={{ clickable: true }}
                   navigation
-                  style={{ padding: '10px', paddingBottom: '40px' }}
+                  style={{ padding: '30px 10px 40px 10px' }}
                 >
                   {columnHeaders.slice(0, columns).map((header, index) => (
                     header ? (
@@ -630,10 +630,35 @@ function PricingTable() {
           }
           .swiper-button-next,
           .swiper-button-prev {
+            width: 24px;
+            height: 24px;
+            background:rgb(255, 255, 255);
+            border-radius: 50%;
             color: #1d8348;
+            margin-top: 0;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+            transition: background 0.3s ease, transform 0.3s ease;
+          }
+          .swiper-button-prev {
+            left: -6px;
+          }
+          .swiper-button-next {
+            right: -6px;
+          }
+          .swiper-button-next:hover,
+          .swiper-button-prev:hover {
+            background:rgb(190, 190, 190);
+            transform: scale(1.1);
+          }
+          .swiper-button-next::after,
+          .swiper-button-prev::after {
+            font-size: 12px;
+            font-weight: bold;
           }
           .swiper-pagination-bullet {
             background: #1d8348;
+            width: 8px;
+            height: 8px;
           }
           .swiper-pagination-bullet-active {
             background: #145c33;
