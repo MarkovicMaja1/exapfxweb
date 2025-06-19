@@ -28,18 +28,18 @@ const ChoosePlan = () => {
           <div className="inner-box">
             <img src={trader} alt="Crypto Trader" className="blurred-background" />
             <div className="text-overlay">
-              <h4 className="box-title">Ecosphere Pro</h4>
+              <h4 className="box-title">Ecosphere PRO </h4>
               <p className="box-description bigger">
-                Account Size: <span className="highlight-price">$100K </span>or<span className="highlight-price"> $200K</span> funded accounts.<br />
+                Instant Funding or One Step: <span className="highlight-price"><br />$10K </span>to<span className="highlight-price"> $200K</span> funded accounts.<br />
                 </p>
                 <small className="box-description text-white">
-                • 1-Phase Challenge: Quick evaluation for experienced traders to get funded.<br />
-                • 2-Phase Challenge: Two-stage evaluation for traders to prove consistency and risk control.
+                • Instant Funding: No evaluation for experienced traders to get funded instantly.<br />
+                • 1-Step Challenge: One-Step evaluation for traders to demonstrate strategy and risk control.
               </small>
               <small className="box-description text-white">
-                This program is designed for skilled traders, offering flexibility while ensuring sustainable capital management.
+                 ECOSPHERE PRO is designed for skilled traders, instant funding, one step evaluation with stricter criteria.
               </small>
-              <p className="box-price">Starting from <span className="highlight-price">$379-$999</span></p>
+              <p className="box-price">Starting from: <span className="text-2xl font-semibold highlight-price">$80</span></p>
                 <a href="/pricing?step=Instant+Funding&size=100k">
                   <button className="action-button hyper-button">Select Program</button>
                 </a>
@@ -55,16 +55,16 @@ const ChoosePlan = () => {
             <div className="text-overlay">
               <h4 className="box-title">Greenwave Growth</h4>
               <p className="box-description bigger">
-                Account Size: <span className="highlight-price">  $6K</span> to<span className="highlight-price">  $25K </span>funded accounts.<br />
+                Two Step or Three Step Evaluations: <span className="highlight-price">  $10K</span> to<span className="highlight-price">  $200K </span>funded accounts.<br />
                 </p>
                 <small className="box-description text-white">
-                • 1-Phase Challenge: Quick evaluation for experienced traders to get funded.<br />
-                • 2-Phase Challenge: Two-stage evaluation for traders to show consistency and risk control.
+                • 2-Step Challenge: Balanced metrics for begginer to find their edge and get funded.<br />
+                • 3-Step Challenge: Three-step evaluation with bonuses on every step.
               </small>
               <small className="box-description text-white">
-                This program helps traders grow while ensuring sustainable capital management and flexible evaluation paths.
+                GREENWAVE GROWTH  is designed for begginers that rewards new traders with consistency and good risk menagement skils.
               </small>
-              <p className="box-price">Starting from <span className="highlight-price">$79-$179 </span></p>
+              <p className="box-price">Starting from: <span className="text-2xl font-semibold highlight-price">$55 </span></p>
               <button className="action-button green-button">Select Program</button>
             </div>
           </div>
@@ -81,13 +81,13 @@ const ChoosePlan = () => {
                 Account Size: <span className="highlight-price">  $50K</span> to <span className="highlight-price">  $100K </span> funded accounts.<br />
                 </p>
                 <small className="box-description text-white">
-                • 1-Phase Challenge: Quick evaluation for experienced traders to get funded.<br />
-                • 2-Phase Challenge: Two-stage evaluation for traders to prove consistency and risk control.
+                • 1-Step Challenge: Quick evaluation for experienced traders to get funded.<br />
+                • 2-Step Challenge: Two-stage evaluation for traders to prove consistency and risk control.
               </small>
               <small className="box-description text-white">
                 This program helps pro traders grow with flexible, sustainable funding while focusing on risk management.
               </small>
-              <p className="box-price">Starting from <span className="highlight-price">$159 - $359</span></p>
+              <p className="box-price">Starting from: <span className="text-2xl font-semibold highlight-price">$159</span></p>
               <button className="action-button blue-button">Select Program</button>
             </div>
           </div>
