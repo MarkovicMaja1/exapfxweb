@@ -13,10 +13,10 @@ const ChoosePlan = () => {
         
         {/* <div className="w-2/4 mx-auto mt-6 mb-10 border-t-2 border-green-500"></div> */}
         <div className="promo-text mt-14 text-white">
-          {/* <p> Advance Your Trading Skills with ECAPFX’s Simulated Platform </p>
+          <p> Advance Your Trading Skills with ECAPFX’s Simulated Platform </p>
           <p> Access up to <strong>$200,000</strong> in virtual capital</p>
           <p> Keep <b>up to 90%</b> of your simulated profits</p>
-          <p> Take the first step toward becoming a funded trader today </p> */}
+          <p> Take the first step toward becoming a funded trader today </p>
           
         </div>
       </div>
