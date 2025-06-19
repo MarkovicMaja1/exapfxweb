@@ -58,11 +58,11 @@ const ChoosePlan = () => {
                 Two Step or Three Step Evaluations: <span className="highlight-price">  $10K</span> to<span className="highlight-price">  $200K </span>funded accounts.<br />
                 </p>
                 <small className="box-description text-white">
-                • 2-Step Challenge: Balanced metrics for begginer to find their edge and get funded.<br />
+                • 2-Step Challenge: Balanced metrics for beginner to find their edge and get funded.<br />
                 • 3-Step Challenge: Three-step evaluation with bonuses on every step.
               </small>
               <small className="box-description text-white">
-                GREENWAVE GROWTH  is designed for begginers that rewards new traders with consistency and good risk menagement skils.
+                GREENWAVE GROWTH  is designed for beginners that rewards new traders with consistency and good risk menagement skils.
               </small>
               <p className="box-price">Starting from: <span className="text-2xl font-semibold highlight-price">$55 </span></p>
               <button className="action-button green-button">Select Program</button>
