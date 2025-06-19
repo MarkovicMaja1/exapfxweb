@@ -13,10 +13,10 @@ const ChoosePlan = () => {
         
         {/* <div className="w-2/4 mx-auto mt-6 mb-10 border-t-2 border-green-500"></div> */}
         <div className="promo-text mt-14 text-white">
-          <p> Advance Your Trading Skills with ECAPFX’s Simulated Platform </p>
+          {/* <p> Advance Your Trading Skills with ECAPFX’s Simulated Platform </p>
           <p> Access up to <strong>$200,000</strong> in virtual capital</p>
           <p> Keep <b>up to 90%</b> of your simulated profits</p>
-          <p> Take the first step toward becoming a funded trader today </p>
+          <p> Take the first step toward becoming a funded trader today </p> */}
           
         </div>
       </div>
@@ -76,16 +76,16 @@ const ChoosePlan = () => {
           <div className="inner-box">
             <img src={trader} alt="Crypto Trader" className="blurred-background" />
             <div className="text-overlay">
-              <h4 className="box-title">El Verde Pro Program</h4>
+              <h4 className="box-title">El Verde Pro</h4>
               <p className="box-description bigger">
-                Account Size: <span className="highlight-price">  $50K</span> to <span className="highlight-price">  $100K </span> funded accounts.<br />
+                One Step or Two Step: <span className="highlight-price">  $10K</span> to <span className="highlight-price">  $200K </span> funded accounts.<br />
                 </p>
                 <small className="box-description text-white">
-                • 1-Step Challenge: Quick evaluation for experienced traders to get funded.<br />
-                • 2-Step Challenge: Two-stage evaluation for traders to prove consistency and risk control.
+                • 1-Step Challenge: Strict metrics for experienced traders to get funded.<br />
+                • 2-Step Challenge: Two-step evaluation for traders to prove consistency and risk control.
               </small>
               <small className="box-description text-white">
-                This program helps pro traders grow with flexible, sustainable funding while focusing on risk management.
+                EL VERDE PRO is designed for pro traders with stricter metrics to manage capital, while focusing on risk management.
               </small>
               <p className="box-price">Starting from: <span className="text-2xl font-semibold highlight-price">$159</span></p>
               <button className="action-button blue-button">Select Program</button>
