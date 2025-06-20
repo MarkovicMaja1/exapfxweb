@@ -1,6 +1,39 @@
-import React from 'https://cdn.jsdelivr.net/npm/react@18/umd/react.development.js';
+import React, { useEffect, useState } from 'react';
 
 const Contact = () => {
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }, []);
+
+  const [formData, setFormData] = useState({ name: '', email: '', message: '' });
+  const [status, setStatus] = useState('');
+
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setStatus('Sending...');
+
+    try {
+      const response = await fetch('http://localhost:5000/api/send-email', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData),
+      });
+      const result = await response.json();
+      if (response.ok) {
+        setStatus('Message sent successfully!');
+        setFormData({ name: '', email: '', message: '' }); // Reset form
+      } else {
+        setStatus(`Failed to send message: ${result.error || 'Please try again.'}`);
+      }
+    } catch (error) {
+      setStatus('An error occurred. Please try again later.');
+    }
+  };
+
   return (
     <section className="bg-gradient-to-br from-blue-900 via-blue-800 to-green-900 dark:from-slate-900 dark:via-slate-800 dark:to-green-900 mt-16 relative overflow-hidden" id="contact">
       {/* Abstract Shapes */}
@@ -74,25 +107,56 @@ const Contact = () => {
             </div>
             <div className="card h-fit max-w-6xl p-5 md:p-12" id="form">
               <h2 className="mb-4 text-2xl font-bold dark:text-white">Ready to Get Started?</h2>
-              <form id="contactForm">
+              <form id="contactForm" onSubmit={handleSubmit}>
                 <div className="mb-6">
-                  <div className="mx-0 mb-1 sm:mb-4">
-                    <div className="mx-0 mb-1 sm:mb-4">
-                      <label htmlFor="name" className="pb-1 text-xs uppercase tracking-wider"></label>
-                      <input type="text" id="name" autoComplete="given-name" placeholder="Your name" className="mb-2 w-full rounded-md border border-gray-400 py-2 pl-2 pr-4 shadow-md dark:text-gray-300 sm:mb-0" name="name" />
-                    </div>
-                    <div className="mx-0 mb-1 sm:mb-4">
-                      <label htmlFor="email" className="pb-1 text-xs uppercase tracking-wider"></label>
-                      <input type="email" id="email" autoComplete="email" placeholder="Your email address" className="mb-2 w-full rounded-md border border-gray-400 py-2 pl-2 pr-4 shadow-md dark:text-gray-300 sm:mb-0" name="email" />
-                    </div>
+                  <div className="mx-0 mb-4">
+                    <label htmlFor="name" className="block text-sm font-medium text-gray-300 dark:text-gray-400">Your Name</label>
+                    <input
+                      type="text"
+                      id="name"
+                      name="name"
+                      value={formData.name}
+                      onChange={handleChange}
+                      autoComplete="given-name"
+                      className="mt-1 w-full rounded-md border border-gray-400 py-2 pl-2 pr-4 shadow-md bg-gray-800 text-white"
+                      placeholder="Your name"
+                      required
+                    />
                   </div>
-                  <div className="mx-0 mb-1 sm:mb-4">
-                    <label htmlFor="textarea" className="pb-1 text-xs uppercase tracking-wider"></label>
-                    <textarea id="textarea" name="textarea" cols="30" rows="5" placeholder="Write your message..." className="mb-2 w-full rounded-md border border-gray-400 py-2 pl-2 pr-4 shadow-md dark:text-gray-300 sm:mb-0"></textarea>
+                  <div className="mx-0 mb-4">
+                    <label htmlFor="email" className="block text-sm font-medium text-gray-300 dark:text-gray-400">Your Email</label>
+                    <input
+                      type="email"
+                      id="email"
+                      name="email"
+                      value={formData.email}
+                      onChange={handleChange}
+                      autoComplete="email"
+                      className="mt-1 w-full rounded-md border border-gray-400 py-2 pl-2 pr-4 shadow-md bg-gray-800 text-white"
+                      placeholder="Your email address"
+                      required
+                    />
+                  </div>
+                  <div className="mx-0 mb-4">
+                    <label htmlFor="message" className="block text-sm font-medium text-gray-300 dark:text-gray-400">Message</label>
+                    <textarea
+                      id="message"
+                      name="message"
+                      value={formData.message}
+                      onChange={handleChange}
+                      cols="30"
+                      rows="5"
+                      className="mt-1 w-full rounded-md border border-gray-400 py-2 pl-2 pr-4 shadow-md bg-gray-800 text-white"
+                      placeholder="Write your message..."
+                      required
+                    ></textarea>
                   </div>
                 </div>
                 <div className="text-center">
-                  <button type="button" className="w-full bg-blue-800 text-white px-6 py-3 font-xl rounded-md sm:mb-0">Send Message</button>
+                  <button type="submit" className="w-full bg-blue-800 text-white px-6 py-3 font-xl rounded-md hover:bg-blue-700 transition-colors">
+                    Send Message
+                  </button>
+                  {status && <p className="mt-2 text-sm text-gray-300">{status}</p>}
                 </div>
               </form>
             </div>
