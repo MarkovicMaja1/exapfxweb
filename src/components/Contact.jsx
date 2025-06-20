@@ -64,12 +64,12 @@ const Contact = () => {
         <div className="mb-4">
           <div className="mb-6 max-w-3xl text-center sm:text-center md:mx-auto md:mb-12">
             <p className="text-base font-semibold uppercase tracking-wide text-blue-600 dark:text-blue-200">
-              Contact
+              
             </p>
-            <h2 className="font-heading mb-4 font-bold tracking-tight text-gray-900 dark:text-white text-3xl sm:text-5xl">
+            <h2 className="font-heading mb-4 font-bold tracking-tight text-white-900 dark:text-white text-3xl sm:text-5xl">
               Get in Touch
             </h2>
-            <p className="mx-auto mt-4 max-w-3xl text-xl text-gray-600 dark:text-slate-400">
+            <p className="mx-auto mt-4 max-w-3xl text-xl text-white dark:text-slate-300">
               At ECAPFX, we are dedicated to providing top-tier support and guidance to our trading community. Contact us for inquiries, partnership opportunities, or assistance with your trading journey.
             </p>
           </div>
@@ -77,7 +77,7 @@ const Contact = () => {
         <div className="flex items-stretch justify-center">
           <div className="grid md:grid-cols-2">
             <div className="h-full pr-6">
-              <p className="mt-3 mb-12 text-lg text-gray-600 dark:text-slate-400">
+              <p className="mt-3 mb-12 text-lg text-white dark:text-slate-300">
                 Our team is committed to ensuring your success in the financial markets. Whether you need help with account management, trading strategies, or general support, we are here to assist you every step of the way.
               </p>
               <ul className="mb-6 md:mb-0">
@@ -100,13 +100,13 @@ const Contact = () => {
                     </svg>
                   </div>
                   <div className="ml-4 mb-4">
-                    <h3 className="mb-2 text-lg font-medium leading-6 text-gray-900 dark:text-white">
+                    <h3 className="mb-2 text-lg font-medium leading-6 text-white-900 dark:text-white">
                       Our Address
                     </h3>
-                    <p className="text-gray-600 dark:text-slate-400">
+                    <p className="text-white dark:text-slate-300">
                       Office 7330MO 182-184, High Street North Area 1/1
                     </p>
-                    <p className="text-gray-600 dark:text-slate-400">
+                    <p className="text-white dark:text-slate-300">
                       East Ham, London, E6 2JA, UK
                     </p>
                   </div>
@@ -131,13 +131,13 @@ const Contact = () => {
                     </svg>
                   </div>
                   <div className="ml-4 mb-4">
-                    <h3 className="mb-2 text-lg font-medium leading-6 text-gray-900 dark:text-white">
+                    <h3 className="mb-2 text-lg font-medium leading-6 text-white-900 dark:text-white">
                       Contact
                     </h3>
-                    <p className="text-gray-600 dark:text-slate-400">
+                    <p className="text-white dark:text-slate-300">
                       Phone: +1 (123) 456-7890
                     </p>
-                    <p className="text-gray-600 dark:text-slate-400">
+                    <p className="text-white dark:text-slate-300">
                       Email: contact@ecapfx.com
                     </p>
                   </div>
@@ -161,13 +161,13 @@ const Contact = () => {
                     </svg>
                   </div>
                   <div className="ml-4 mb-4">
-                    <h3 className="mb-2 text-lg font-medium leading-6 text-gray-900 dark:text-white">
+                    <h3 className="mb-2 text-lg font-medium leading-6 text-white-900 dark:text-white">
                       Working Hours
                     </h3>
-                    <p className="text-gray-600 dark:text-slate-400">
+                    <p className="text-white dark:text-slate-300">
                       Monday - Friday: 08:00 - 17:00 EST
                     </p>
-                    <p className="text-gray-600 dark:text-slate-400">
+                    <p className="text-white dark:text-slate-300">
                       Saturday & Sunday: 08:00 - 12:00 EST
                     </p>
                   </div>

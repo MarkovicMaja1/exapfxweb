@@ -1,6 +1,7 @@
 import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import Contact from './components/Contact.jsx'; // Import default Contact
 import Discord from "./components/Discord";
+import Compare from "./components/compare.jsx";
 import Faq from "./components/Faq.jsx";
 import Rules from "./components/Rules.jsx";
 import Howitworks from "./components/howitworks.jsx";
@@ -110,6 +111,7 @@ function App() {
           <Route path="/howitworks" element={<Howitworks />} />
           <Route path="/rules" element={<Rules />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/compare" element={<Compare />} />
           <Route path="*" element={<NotFound />} /> {/* 404 Route */}
         </Routes>
         <SustainabilityIcon />
