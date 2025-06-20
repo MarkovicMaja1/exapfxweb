@@ -1,20 +1,14 @@
 import React, { useEffect, useState } from "react";
 
 const Contact = () => {
-  // Scroll to top when the tab becomes active or on initial mount
   useEffect(() => {
-    // Scroll to top on initial mount
     window.scrollTo(0, 0);
-
     const handleVisibilityChange = () => {
       if (document.visibilityState === "visible") {
         window.scrollTo(0, 0);
       }
     };
-
     document.addEventListener("visibilitychange", handleVisibilityChange);
-
-    // Cleanup event listener on component unmount
     return () => {
       document.removeEventListener("visibilitychange", handleVisibilityChange);
     };
@@ -30,9 +24,8 @@ const Contact = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setStatus("Sending...");
-
     try {
-      const response = await fetch("https://www.ecapfx.com/api/send-email", { // Update to your deployed URL
+      const response = await fetch("https://www.ecapfx.com/api/send-email", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
@@ -40,7 +33,7 @@ const Contact = () => {
       const result = await response.json();
       if (response.ok) {
         setStatus("Message sent successfully!");
-        setFormData({ name: "", email: "", message: "" }); // Reset form
+        setFormData({ name: "", email: "", message: "" });
       } else {
         setStatus(`Failed to send message: ${result.error || "Please try again."}`);
       }
@@ -51,11 +44,11 @@ const Contact = () => {
 
   return (
     <section
-      className="bg-gradient-to-br from-blue-900 via-blue-800 to-green-900 dark:from-slate-900 dark:via-slate-800 dark:to-green-900 mt-16 relative overflow-hidden"
+      className="bg-gradient-to-br from-blue-800 via-blue-700 to-green-800 sm:from-blue-900 sm:via-blue-800 sm:to-green-900 dark:from-slate-800 dark:via-slate-700 dark:to-green-800 mt-16 relative overflow-hidden"
       id="contact"
     >
-      {/* Abstract Shapes */}
-      <div className="absolute inset-0 opacity-10">
+      <div className="absolute inset-0 bg-black/20 z-0"></div>
+      <div className="absolute inset-0 opacity-5 sm:opacity-10 hidden sm:block">
         <div className="absolute w-64 h-64 bg-green-400 rounded-full -top-32 -left-32 transform rotate-45 blur-xl"></div>
         <div className="absolute w-48 h-48 bg-blue-300 rounded-full top-1/4 right-1/4 transform -rotate-15 blur-xl"></div>
         <div className="absolute w-72 h-72 bg-white rounded-full bottom-1/3 left-1/4 transform rotate-30 blur-xl"></div>
@@ -63,13 +56,10 @@ const Contact = () => {
       <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8 lg:py-20 relative z-10">
         <div className="mb-4">
           <div className="mb-6 max-w-3xl text-center sm:text-center md:mx-auto md:mb-12">
-            <p className="text-base font-semibold uppercase tracking-wide text-blue-600 dark:text-blue-200">
-              
-            </p>
-            <h2 className="font-heading mb-4 font-bold tracking-tight text-white-900 dark:text-white text-3xl sm:text-5xl">
+            <h2 className="font-heading mb-4 font-bold tracking-tight text-white text-3xl sm:text-5xl">
               Get in Touch
             </h2>
-            <p className="mx-auto mt-4 max-w-3xl text-xl text-white dark:text-slate-300">
+            <p className="mx-auto mt-4 max-w-3xl text-xl text-gray-200">
               At ECAPFX, we are dedicated to providing top-tier support and guidance to our trading community. Contact us for inquiries, partnership opportunities, or assistance with your trading journey.
             </p>
           </div>
@@ -77,7 +67,7 @@ const Contact = () => {
         <div className="flex items-stretch justify-center">
           <div className="grid md:grid-cols-2">
             <div className="h-full pr-6">
-              <p className="mt-3 mb-12 text-lg text-white dark:text-slate-300">
+              <p className="mt-3 mb-12 text-lg text-gray-200">
                 Our team is committed to ensuring your success in the financial markets. Whether you need help with account management, trading strategies, or general support, we are here to assist you every step of the way.
               </p>
               <ul className="mb-6 md:mb-0">
@@ -100,13 +90,13 @@ const Contact = () => {
                     </svg>
                   </div>
                   <div className="ml-4 mb-4">
-                    <h3 className="mb-2 text-lg font-medium leading-6 text-white-900 dark:text-white">
+                    <h3 className="mb-2 text-lg font-medium leading-6 text-white">
                       Our Address
                     </h3>
-                    <p className="text-white dark:text-slate-300">
+                    <p className="text-gray-200">
                       Office 7330MO 182-184, High Street North Area 1/1
                     </p>
-                    <p className="text-white dark:text-slate-300">
+                    <p className="text-gray-200">
                       East Ham, London, E6 2JA, UK
                     </p>
                   </div>
@@ -131,13 +121,13 @@ const Contact = () => {
                     </svg>
                   </div>
                   <div className="ml-4 mb-4">
-                    <h3 className="mb-2 text-lg font-medium leading-6 text-white-900 dark:text-white">
+                    <h3 className="mb-2 text-lg font-medium leading-6 text-white">
                       Contact
                     </h3>
-                    <p className="text-white dark:text-slate-300">
+                    <p className="text-gray-200">
                       Phone: +1 (123) 456-7890
                     </p>
-                    <p className="text-white dark:text-slate-300">
+                    <p className="text-gray-200">
                       Email: contact@ecapfx.com
                     </p>
                   </div>
@@ -161,13 +151,13 @@ const Contact = () => {
                     </svg>
                   </div>
                   <div className="ml-4 mb-4">
-                    <h3 className="mb-2 text-lg font-medium leading-6 text-white-900 dark:text-white">
+                    <h3 className="mb-2 text-lg font-medium leading-6 text-white">
                       Working Hours
                     </h3>
-                    <p className="text-white dark:text-slate-300">
+                    <p className="text-gray-200">
                       Monday - Friday: 08:00 - 17:00 EST
                     </p>
-                    <p className="text-white dark:text-slate-300">
+                    <p className="text-gray-200">
                       Saturday & Sunday: 08:00 - 12:00 EST
                     </p>
                   </div>
@@ -175,7 +165,7 @@ const Contact = () => {
               </ul>
             </div>
             <div className="card h-fit max-w-6xl p-5 md:p-12" id="form">
-              <h2 className="mb-4 text-2xl font-bold dark:text-white">
+              <h2 className="mb-4 text-2xl font-bold text-white">
                 Ready to Get Started?
               </h2>
               <form id="contactForm" onSubmit={handleSubmit}>
@@ -183,7 +173,7 @@ const Contact = () => {
                   <div className="mx-0 mb-4">
                     <label
                       htmlFor="name"
-                      className="block text-sm font-medium text-gray-300 dark:text-gray-400"
+                      className="block text-sm font-medium text-gray-400"
                     >
                       Your Name
                     </label>
@@ -194,7 +184,7 @@ const Contact = () => {
                       value={formData.name}
                       onChange={handleChange}
                       autoComplete="given-name"
-                      className="mt-1 w-full rounded-md border border-gray-400 py-2 pl-2 pr-4 shadow-md bg-gray-800 text-white"
+                      className="mt-1 w-full rounded-md border border-gray-400 bg-gray-900 text-gray-100 py-2 px-4 shadow-sm focus:ring-blue-300 focus:border-blue-300"
                       placeholder="Your name"
                       required
                     />
@@ -202,7 +192,7 @@ const Contact = () => {
                   <div className="mx-0 mb-4">
                     <label
                       htmlFor="email"
-                      className="block text-sm font-medium text-gray-300 dark:text-gray-400"
+                      className="block text-sm font-medium text-gray-400"
                     >
                       Your Email
                     </label>
@@ -213,7 +203,7 @@ const Contact = () => {
                       value={formData.email}
                       onChange={handleChange}
                       autoComplete="email"
-                      className="mt-1 w-full rounded-md border border-gray-400 py-2 pl-2 pr-4 shadow-md bg-gray-800 text-white"
+                      className="mt-1 w-full rounded-md border border-gray-400 bg-gray-900 text-gray-100 py-2 px-4 shadow-sm focus:ring-blue-300 focus:border-blue-300"
                       placeholder="Your email address"
                       required
                     />
@@ -221,7 +211,7 @@ const Contact = () => {
                   <div className="mx-0 mb-4">
                     <label
                       htmlFor="message"
-                      className="block text-sm font-medium text-gray-300 dark:text-gray-400"
+                      className="block text-sm font-medium text-gray-400"
                     >
                       Message
                     </label>
@@ -232,20 +222,28 @@ const Contact = () => {
                       onChange={handleChange}
                       cols="30"
                       rows="5"
-                      className="mt-1 w-full rounded-md border border-gray-400 py-2 pl-2 pr-4 shadow-md bg-gray-800 text-white"
+                      className="mt-1 w-full rounded-md border border-gray-400 bg-gray-900 text-gray-100 py-3 px-4 shadow-sm focus:ring-blue-300 focus:border-blue-300"
                       placeholder="Write your message..."
                       required
-                    ></textarea>
+                    />
                   </div>
                 </div>
                 <div className="text-center">
                   <button
                     type="submit"
-                    className="w-full bg-gradient-to-r from-[#1a6f3d] via-[#1d8348] to-[#145c33] hover:from-[#156437]/90 hover:via-[#1d8348]/90 hover:to-[#0e3f24]/90 hover:text-black hover:shadow-md hover:shadow-green-700/50 px-6 py-2 rounded-lg text-white inline-block transition duration-300 ease-in-out hover:scale-105 active:cursor-pointer select-none"
+                    className="w-full bg-gradient-to-r from-[#1a6f3d] via-[#1d8348] to-[#145c33] hover:from-[#156c37]/90 hover:via-[#1d8348]/90 hover:to-[#0e3f24]/90 hover:text-white hover:shadow-md hover:shadow-green-500/50 px-4 py-3 rounded-lg text-white transition duration-200 ease-in-out hover:scale-105 active:bg-green-600 select-none"
                   >
                     Send Message
                   </button>
-                  {status && <p className="mt-2 text-sm text-gray-300">{status}</p>}
+                  {status && (
+                    <p
+                      className="mt-2 text-sm text-gray-500"
+                      id="form-status"
+                      role="status"
+                    >
+                      {status}
+                    </p>
+                  )}
                 </div>
               </form>
             </div>
