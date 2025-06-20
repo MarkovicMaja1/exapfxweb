@@ -107,7 +107,7 @@ const Footer = () => {
                 <p className="text-sm font-semibold leading-6 text-white">Customer Care</p>
                 <ul role="list" className="mt-6 space-y-4">
                   <li>
-                    <small href="#" className="text-sm leading-6 text-white hover:text-white">Support Portal</small>
+                    <small><Link to="/contact" className="text-sm leading-6 text-white hover:text-white">Contact</Link></small>
                   </li>
                   <li>
                     <small><Link to="/rules" className="text-sm leading-6 text-white hover:text-white">Rules</Link></small>

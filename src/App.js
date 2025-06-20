@@ -1,27 +1,28 @@
 import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
-// import Soon from "./components/Soon";
+import Contact from './components/Contact.jsx'; // Import default Contact
 import Discord from "./components/Discord";
 import Faq from "./components/Faq.jsx";
 import Rules from "./components/Rules.jsx";
 import Howitworks from "./components/howitworks.jsx";
 import PrivacyPolicy from "./components/PrivacyPolicy";
 import PricingTable from './components/pricingtable.jsx';
-// import Dashboard from "./components/Dashboard";
 import Terms from "./components/Terms";
 import Claim from "./components/Claim";
 import Header from "./components/Header";
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import About from "./components/About";
-import Sustainability from "./components/Sustainability"; // Fixed typo
+import Sustainability from "./components/Sustainability";
 import Home from "./components/Home";
 import Footer from "./components/Footer";
 import Goals from "./components/Goals";
 import ChoosePlan from "./components/ChoosePlan";
-
 import TeamSection from "./components/TeamFirst";
 import Newsletter from "./components/Newsletter";
 import SustainabilityIcon from "./components/SustainabilityIcon";
 import { useEffect } from "react";
+
+// Remove unused named imports from Contact.jsx since we're using default import
+// import { ConnectWithUs, ContactForm, ContactInfo } from './components/Contact.jsx';
 
 const ScrollToSection = () => {
   const { hash, pathname } = useLocation();
@@ -108,6 +109,7 @@ function App() {
           <Route path="/faq" element={<Faq />} />
           <Route path="/howitworks" element={<Howitworks />} />
           <Route path="/rules" element={<Rules />} />
+          <Route path="/contact" element={<Contact />} />
           <Route path="*" element={<NotFound />} /> {/* 404 Route */}
         </Routes>
         <SustainabilityIcon />
