@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 
-const Rules = () => {
+const Contact = () => {
   // Scroll to top when the tab becomes active or on initial mount
   useEffect(() => {
     // Scroll to top on initial mount
@@ -169,7 +169,7 @@ const Rules = () => {
                   </div>
                 </div>
                 <div className="text-center">
-                  <button type="submit" className="w-full bg-blue-800 text-white px-6 py-3 font-xl rounded-md hover:bg-blue-700 transition-colors">
+                  <button type="submit" className="w-full bg-gradient-to-r from-[#1a6f3d] via-[#1d8348] to-[#145c33] hover:from-[#156437]/90 hover:via-[#1d8348]/90 hover:to-[#0e3f24]/90 hover:text-black hover:shadow-md hover:shadow-green-700/50 px-6 py-2 rounded-lg text-white inline-block transition duration-300 ease-in-out hover:scale-105 active:cursor-pointer select-none">
                     Send Message
                   </button>
                   {status && <p className="mt-2 text-sm text-gray-300">{status}</p>}
