@@ -7,6 +7,10 @@ export default async function handler(req, res) {
     return res.status(405).json({ error: 'Method not allowed' });
   }
 
+  // ✅ DEBUG LOGGING
+  console.log("REQ BODY:", req.body);
+  console.log("API KEY EXISTS:", !!process.env.RESEND_API_KEY);
+
   const { name, email, message } = req.body;
 
   if (!name || !email || !message) {
@@ -15,8 +19,8 @@ export default async function handler(req, res) {
 
   try {
     const data = await resend.emails.send({
-      from: 'ECAPFX Contact <noreply@ecapfx.com>', // <- change to your domain later
-      to: 'contact@ecapfx.com', // <- your email where the message will be sent
+      from: 'ECAPFX Contact <noreply@ecapfx.com>',
+      to: 'contact@ecapfx.com',
       subject: `New Message from ${name}`,
       html: `
         <p><strong>Name:</strong> ${name}</p>
