@@ -8,6 +8,7 @@ export default async function handler(req, res) {
   }
 
   // ✅ DEBUG LOGGING
+  console.log("REQUEST RECEIVED"); // <- Top-level log
   console.log("REQ BODY:", req.body);
   console.log("API KEY EXISTS:", !!process.env.RESEND_API_KEY);
 
