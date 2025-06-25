@@ -94,7 +94,7 @@ const Faq = () => {
           <h2 className="mb-4 text-4xl font-extrabold tracking-tight text-white">
             Frequently Asked Questions
           </h2>
-          <p className="mb-24 text-xl font-medium tracking-tight text-gray-300">
+          <p className="mb-24 text-xl font-medium tracking-tight text-white">
             Find answers to common questions about ECAPFX’s trading programs and funding opportunities.
           </p>
         </div>
@@ -109,7 +109,7 @@ const Faq = () => {
               data-aos-delay={`${index * 100}`}
             >
               <button
-                className="w-full flex justify-between items-center text-left text-white text-base sm:text-lg font-semibold"
+                className="w-full flex justify-between items-center text-left text-white text-2xl sm:text-3xl !important font-semibold"
                 onClick={() => toggleFaq(index)}
               >
                 <span>{faq.question}</span>
@@ -126,7 +126,7 @@ const Faq = () => {
                 </span>
               </button>
               {openIndex === index && (
-                <p className="mt-4 text-gray-200 text-sm sm:text-base font-normal">
+                <p className="mt-4 text-white text-sm sm:text-base font-normal">
                   {faq.answer}
                 </p>
               )}
@@ -146,6 +146,14 @@ const Faq = () => {
           }
           .mb-24 {
             margin-bottom: 6rem;
+          }
+        }
+        #faq button {
+          font-size: 1.2rem !important;
+        }
+        @media (min-width: 640px) {
+          #faq button {
+            font-size: 1.375rem !important;
           }
         }
       `}</style>
