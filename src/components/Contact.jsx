@@ -24,18 +24,23 @@ const Contact = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setStatus("Sending...");
+    const formDataToSend = new FormData();
+    formDataToSend.append('name', formData.name);
+    formDataToSend.append('email', formData.email);
+    formDataToSend.append('message', formData.message);
+    formDataToSend.append('access_key', 'b957aa15-dd21-44ae-ab91-e0e32c2fe22b');
+
     try {
-      const response = await fetch("https://www.ecapfx.com/api/send-email", { // Updated URL
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(formData),
+      const response = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        body: formDataToSend,
       });
       const result = await response.json();
-      if (response.ok) {
+      if (result.success) {
         setStatus("Message sent successfully!");
         setFormData({ name: "", email: "", message: "" });
       } else {
-        setStatus(`Failed to send message: ${result.error || "Please try again."}`);
+        setStatus(`Failed to send message: ${result.message || "Please try again."}`);
       }
     } catch (error) {
       setStatus("An error occurred. Please try again later.");
