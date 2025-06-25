@@ -3,7 +3,7 @@ import MailchimpSubscribe from 'react-mailchimp-subscribe';
 import { useRef } from 'react';
 
 export default function Example() {
-  const MAILCHIMP_URL = 'https://ecapfx.us20.list-manage.com/subscribe/post?u=62055d2d195b21e6cdb476e89&id=76a2a1374d&f_id=00b4c2e1f0';
+  const MAILCHIMP_URL = 'https://ecapfx.us9.list-manage.com/subscribe/post?u=fd932819d178a211ef8787b45&amp;id=301c854078&amp;f_id=00ba55e1f0';
 
   const emailInputRef = useRef(null);
 
