@@ -73,7 +73,7 @@ const Contact = () => {
           <div className="grid md:grid-cols-2">
             <div className="h-full pr-6">
               <p className="mt-3 mb-12 text-lg text-gray-200">
-                Our team is committed to ensuring your success in the financial markets. Whether you need help with account management, trading strategies, or general support, we are here to assist you every step of the way.
+                We are committed to ensuring your success in the financial markets. Whether you need help with account management, trading strategies, or general support, we are here to assist you every step of the way.
               </p>
               <ul className="mb-6 md:mb-0">
                 <li className="flex">

@@ -24,9 +24,9 @@ const Header = () => {
           <li><Link to="/#home" className="font-bold hover:text-[#1d8348] transition">Home</Link></li>
           <li><Link to="/#chooseplan" className="font-bold hover:text-[#1d8348] transition font-roboto">Choose Plan</Link></li>
           <li><Link to="/#about" className="font-bold hover:text-[#1d8348] transition">About Us</Link></li>
+          <li><Link to="/#team" className="font-bold hover:text-[#1d8348] transition">Team</Link></li>
           <li><Link to="/faq" className="font-bold hover:text-[#1d8348] transition">FAQ</Link></li>
           <li><Link to="/howitworks" className="font-bold hover:text-[#1d8348] transition">How it works</Link></li>
-          <li><Link to="/#team" className="font-bold hover:text-[#1d8348] transition">Team</Link></li>
         </ul>
 
         <Link
@@ -66,9 +66,10 @@ const Header = () => {
             <li><Link to="/#home" className="block hover:text-[#1d8348] transition" onClick={() => setIsOpen(!isOpen)}>Home</Link></li>
             <li><Link to="/#chooseplan" className="block hover:text-[#1d8348] transition" onClick={() => setIsOpen(!isOpen)}>Choose Plan</Link></li>
             <li><Link to="/#about" className="block hover:text-[#1d8348] transition" onClick={() => setIsOpen(!isOpen)}>About Us</Link></li>
+            <li><Link to="/#team" className="block hover:text-[#1d8348] transition" onClick={() => setIsOpen(!isOpen)}>Team</Link></li>
             <li><Link to="/faq" className="block hover:text-[#1d8348] transition" onClick={() => setIsOpen(!isOpen)}>FAQ</Link></li>
             <li><Link to="/howitworks" className="block hover:text-[#1d8348] transition" onClick={() => setIsOpen(!isOpen)}>How it works</Link></li>
-            <li><Link to="/#team" className="block hover:text-[#1d8348] transition" onClick={() => setIsOpen(!isOpen)}>Team</Link></li>
+
             <li>
               <Link
                 to="https://active.ecapfx.com/auth/signin" // Changed to Link
