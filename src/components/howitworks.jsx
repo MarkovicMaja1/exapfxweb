@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { motion, useAnimation, useScroll, useTransform } from 'framer-motion';
+import { motion, useAnimation } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 
 const HowItWorks = () => {
@@ -94,7 +94,7 @@ const HowItWorks = () => {
               </ul>
             </div>
             <div className="flex-shrink-0 w-full sm:w-1/3 h-40 sm:h-36">
-              <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&h=150&q=80" alt="Illustration of signing up and choosing a challenge" className="w-full h-full object-contain rounded-lg" />
+              <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&h=150&q=80" alt="Person signing up on a form" className="w-full h-full object-contain rounded-lg" />
             </div>
           </motion.div>
 
@@ -125,7 +125,7 @@ const HowItWorks = () => {
               </ul>
             </div>
             <div className="flex-shrink-0 w-full sm:w-1/3 h-40 sm:h-36">
-              <img src="https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&h=150&q=80" alt="Illustration of proving trading skills" className="w-full h-full object-contain rounded-lg" />
+              <img src="https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&h=150&q=80" alt="Trading chart analysis" className="w-full h-full object-contain rounded-lg" />
             </div>
           </motion.div>
 
@@ -153,7 +153,7 @@ const HowItWorks = () => {
               </ul>
             </div>
             <div className="flex-shrink-0 w-full sm:w-1/3 h-40 sm:h-36">
-              <img src="https://images.unsplash.com/photo-1582213782179-e0d53f98f2e2?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&h=150&q=80" alt="Illustration of getting funded" className="w-full h-full object-contain rounded-lg" />
+              <img src="https://www.start-business-online.com/media/articles/pass-funded-account-challenge.jpg?fit=crop&w=200&h=150&q=80" alt="Passing funded account challenge" className="w-full h-full object-contain rounded-lg" />
             </div>
           </motion.div>
 
@@ -181,7 +181,7 @@ const HowItWorks = () => {
               </ul>
             </div>
             <div className="flex-shrink-0 w-full sm:w-1/3 h-40 sm:h-36">
-              <img src="https://images.unsplash.com/photo-1501854140801-50d01698950b?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&h=150&q=80" alt="Illustration of trading and making an impact" className="w-full h-full object-contain rounded-lg" />
+              <img src="https://images.unsplash.com/photo-1501854140801-50d01698950b?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&h=150&q=80" alt="Global trading market" className="w-full h-full object-contain rounded-lg" />
             </div>
           </motion.div>
         </div>
