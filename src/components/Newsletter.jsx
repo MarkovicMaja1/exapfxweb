@@ -25,30 +25,34 @@ export default function Example() {
     };
 
     return (
-      <div className="mt-6 flex max-w-md gap-x-4">
-        <label htmlFor="email-address" className="sr-only">
-          Email address
-        </label>
-        <input
-          ref={emailInputRef}
-          id="email-address"
-          name="email"
-          type="email"
-          required
-          placeholder="Enter your email"
-          autoComplete="email"
-          className="min-w-0 flex-auto rounded-md bg-white/5 px-3.5 py-2 text-base text-white outline-1 -outline-offset-1 outline-white/10 placeholder:text-white-500 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-500 sm:text-sm/6"
-        />
-        <button
-          type="button"
-          onClick={handleSubscribe}
-          className="bg-gradient-to-r from-[#1a6f3d] via-[#1d8348] to-[#145c33] hover:from-[#156437]/90 hover:via-[#1d8348]/90 hover:to-[#0e3f24]/90 hover:text-black hover:shadow-md hover:shadow-green-700/50 px-6 py-2 rounded-lg text-white inline-block transition duration-300 ease-in-out hover:scale-105 active:cursor-pointer select-none"
-          disabled={status === 'sending'}
-        >
-          {status === 'sending' ? 'Sending...' : 'Subscribe'}
-        </button>
-        {status === 'success' && <p className="mt-2 text-sm text-green-400">Subscribed successfully!</p>}
-        {status === 'error' && <p className="mt-2 text-sm text-red-400">Error: {message}</p>}
+      <div className="mt-6">
+        <div className="flex max-w-md gap-x-4">
+          <label htmlFor="email-address" className="sr-only">
+            Email address
+          </label>
+          <input
+            ref={emailInputRef}
+            id="email-address"
+            name="email"
+            type="email"
+            required
+            placeholder="Enter your email"
+            autoComplete="email"
+            className="min-w-0 flex-auto rounded-md bg-white/5 px-3.5 py-2 text-base text-white outline-1 -outline-offset-1 outline-white/10 placeholder:text-white-500 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-500 sm:text-sm/6"
+          />
+          <button
+            type="button"
+            onClick={handleSubscribe}
+            className="bg-gradient-to-r from-[#1a6f3d] via-[#1d8348] to-[#145c33] hover:from-[#156437]/90 hover:via-[#1d8348]/90 hover:to-[#0e3f24]/90 hover:text-black hover:shadow-md hover:shadow-green-700/50 px-6 py-2 rounded-lg text-white inline-block transition duration-300 ease-in-out hover:scale-105 active:cursor-pointer select-none"
+            disabled={status === 'sending'}
+          >
+            {status === 'sending' ? 'Sending...' : 'Subscribe'}
+          </button>
+        </div>
+        <div className="mt-2">
+          {status === 'success' && <p className="text-sm text-green-400">Subscribed successfully!</p>}
+          {status === 'error' && <p className="text-sm text-red-400">Error: {message}</p>}
+        </div>
       </div>
     );
   };
