@@ -1,8 +1,17 @@
 require('dotenv').config();
-const Resend = require('resend');
+
+let Resend;
+try {
+  Resend = require('resend').Resend || require('resend'); // Handle different export styles
+  console.log('Resend module loaded:', Resend);
+} catch (err) {
+  console.error('Failed to load resend module:', err);
+  throw err;
+}
+
 const resend = new Resend(process.env.RESEND_API_KEY);
 
-export default async function handler(req, res) {
+exports.handler = async (req, res) => {
   if (req.method !== 'POST') {
     return res.status(405).json({ error: 'Method not allowed' });
   }
@@ -16,7 +25,7 @@ export default async function handler(req, res) {
   try {
     await resend.emails.send({
       from: 'ECAPFX Contact <noreply@ecapfx.com>',
-      to: 'contact@ecapfx.com', // Replace with your email
+      to: 'contact@ecapfx.com',
       subject: `New Message from ${name}`,
       html: `<p><strong>Name:</strong> ${name}</p><p><strong>Email:</strong> ${email}</p><p><strong>Message:</strong><br>${message.replace(/\n/g, '<br>')}</p>`,
     });
@@ -25,4 +34,4 @@ export default async function handler(req, res) {
     console.error('Resend error:', error);
     return res.status(500).json({ error: 'Failed to send email' });
   }
-}
+};
