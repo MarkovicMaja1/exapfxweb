@@ -9,11 +9,18 @@ export default function Example() {
 
   const CustomForm = ({ subscribe, status, message }) => {
     const handleSubscribe = () => {
+      console.log('HandleSubscribe triggered');
       if (emailInputRef.current && status !== 'sending') {
         const email = emailInputRef.current.value;
-        if (email) {
+        console.log('Email:', email);
+        if (email && /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+          console.log('Subscribing with:', { EMAIL: email });
           subscribe({ EMAIL: email });
+        } else {
+          console.log('Invalid email format');
         }
+      } else {
+        console.log('Ref or status issue:', emailInputRef.current, status);
       }
     };
 
@@ -31,16 +38,10 @@ export default function Example() {
           placeholder="Enter your email"
           autoComplete="email"
           className="min-w-0 flex-auto rounded-md bg-white/5 px-3.5 py-2 text-base text-white outline-1 -outline-offset-1 outline-white/10 placeholder:text-white-500 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-500 sm:text-sm/6"
-          onChange={(e) => {
-            const email = e.target.value;
-            if (email && status !== 'sending') {
-              subscribe({ EMAIL: email });
-            }
-          }}
         />
         <button
           type="button"
-          onPress={handleSubscribe}
+          onClick={handleSubscribe}
           className="bg-gradient-to-r from-[#1a6f3d] via-[#1d8348] to-[#145c33] hover:from-[#156437]/90 hover:via-[#1d8348]/90 hover:to-[#0e3f24]/90 hover:text-black hover:shadow-md hover:shadow-green-700/50 px-6 py-2 rounded-lg text-white inline-block transition duration-300 ease-in-out hover:scale-105 active:cursor-pointer select-none"
           disabled={status === 'sending'}
         >
