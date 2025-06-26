@@ -1,6 +1,10 @@
 import React, { useEffect } from 'react';
 import { motion, useAnimation } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
+import step1 from '../assets/step1.png';
+import step2 from '../assets/step2.png';
+import step3 from '../assets/step3.png';
+import step4 from '../assets/step4.jpg';
 
 const HowItWorks = () => {
   // Scroll to top on mount or tab visibility change
@@ -101,7 +105,7 @@ const HowItWorks = () => {
               </ul>
             </div>
             <div className="flex-shrink-0 w-full sm:w-1/3 h-48 sm:h-56">
-              <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=225&q=90" alt="Person signing up on a form" className="w-full h-full object-cover rounded-xl" />
+              <img src={step1} alt="Person signing up on a form" className="w-full h-full object-cover rounded-xl" />
             </div>
           </motion.div>
 
@@ -132,7 +136,7 @@ const HowItWorks = () => {
               </ul>
             </div>
             <div className="flex-shrink-0 w-full sm:w-1/3 h-48 sm:h-56">
-              <img src="https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=225&q=90" alt="Trading chart analysis" className="w-full h-full object-cover rounded-xl" />
+              <img src={step2} alt="Trading chart analysis" className="w-full h-full object-cover rounded-xl" />
             </div>
           </motion.div>
 
@@ -160,7 +164,7 @@ const HowItWorks = () => {
               </ul>
             </div>
             <div className="flex-shrink-0 w-full sm:w-1/3 h-48 sm:h-56">
-              <img src="https://www.start-business-online.com/media/articles/pass-funded-account-challenge.jpg?fit=crop&w=300&h=225&q=90" alt="Passing funded account challenge" className="w-full h-full object-cover rounded-xl" />
+              <img src={step3} alt="Passing funded account challenge" className="w-full h-full object-cover rounded-xl" />
             </div>
           </motion.div>
 
@@ -188,7 +192,7 @@ const HowItWorks = () => {
               </ul>
             </div>
             <div className="flex-shrink-0 w-full sm:w-1/3 h-48 sm:h-56">
-              <img src="https://images.unsplash.com/photo-1501854140801-50d01698950b?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=225&q=90" alt="Global trading market" className="w-full h-full object-cover rounded-xl" />
+              <img src={step4} alt="Global trading market" className="w-full h-full object-cover rounded-xl" />
             </div>
           </motion.div>
         </div>
