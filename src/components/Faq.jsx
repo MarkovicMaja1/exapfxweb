@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import { motion, AnimatePresence } from 'framer-motion';
 
 const Faq = () => {
   const [openIndex, setOpenIndex] = useState(null);
@@ -75,6 +76,27 @@ const Faq = () => {
     setOpenIndex(openIndex === index ? null : index);
   };
 
+  // Animation variants for dropdown effect
+  const answerVariants = {
+    hidden: { maxHeight: 0, opacity: 0, overflow: 'hidden' },
+    visible: {
+      maxHeight: 250,
+      opacity: 1,
+      transition: {
+        maxHeight: { duration: 0.5, ease: 'easeInOut' },
+        opacity: { duration: 0.3, delay: 0.1 },
+      },
+    },
+    exit: {
+      maxHeight: 0,
+      opacity: 0,
+      transition: {
+        maxHeight: { duration: 0.5, ease: 'easeInOut' },
+        opacity: { duration: 0.2 },
+      },
+    },
+  };
+
   return (
     <section
       id="faq"
@@ -104,36 +126,80 @@ const Faq = () => {
           {faqs.map((faq, index) => (
             <div
               key={index}
-              className="bg-[#1E2A44] rounded-lg p-4 sm:p-6"
+              className="bg-[#1E2A44] rounded-lg p-4 sm:p-6 overflow-hidden border border-[#1E2A44] transition duration-500"
               data-aos="fade-up"
               data-aos-delay={`${index * 100}`}
+              id={`accordion-${index}`}
             >
               <button
-                className="w-full flex justify-between items-center text-left text-white text-2xl sm:text-3xl !important font-semibold"
+                className={`group inline-flex items-center justify-between text-left text-2xl sm:text-3xl font-semibold text-white w-full transition duration-500 hover:text-[#1d8348] ${
+                  openIndex === index ? 'text-[#1d8348]' : ''
+                }`}
                 onClick={() => toggleFaq(index)}
+                aria-controls={`collapse-${index}`}
               >
                 <span>{faq.question}</span>
-                <span className="ml-2">
-                  {openIndex === index ? (
-                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 15l7-7 7 7" />
-                    </svg>
-                  ) : (
-                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                    </svg>
-                  )}
-                </span>
+                <svg
+                  className={`w-6 h-6 transition duration-500 ${
+                    openIndex === index ? 'hidden' : 'block'
+                  } group-hover:text-[#1d8348] ${
+                    openIndex === index ? 'text-[#1d8348]' : 'text-white'
+                  }`}
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M6 12H18M12 18V6"
+                    stroke="currentColor"
+                    strokeWidth="1.6"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                </svg>
+                <svg
+                  className={`w-6 h-6 transition duration-500 ${
+                    openIndex === index ? 'block' : 'hidden'
+                  } group-hover:text-[#1d8348] ${
+                    openIndex === index ? 'text-[#1d8348]' : 'text-white'
+                  }`}
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M6 12H18"
+                    stroke="currentColor"
+                    strokeWidth="1.6"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                </svg>
               </button>
-              {openIndex === index && (
-                <p className="mt-4 text-white text-sm sm:text-base font-normal">
-                  {faq.answer}
-                </p>
-              )}
+              <AnimatePresence>
+                {openIndex === index && (
+                  <motion.div
+                    id={`collapse-${index}`}
+                    initial="hidden"
+                    animate="visible"
+                    exit="exit"
+                    variants={answerVariants}
+                    className="w-full overflow-hidden pr-4"
+                    aria-labelledby={`accordion-${index}`}
+                  >
+                    <p className="mt-4 text-white text-sm sm:text-base font-normal leading-6">
+                      {faq.answer}
+                    </p>
+                  </motion.div>
+                )}
+              </AnimatePresence>
             </div>
           ))}
         </div>
       </div>
+
+      {/* Section Divider Line */}
+      <hr className="w-full h-px bg-[#1d8348]/50 my-8 mx-auto border-0" />
 
       {/* Custom Scoped CSS */}
       <style jsx>{`
@@ -149,7 +215,7 @@ const Faq = () => {
           }
         }
         #faq button {
-          font-size: 1.2rem !important;
+          font-size: 1.5rem !important;
         }
         @media (min-width: 640px) {
           #faq button {

@@ -42,26 +42,33 @@ const HowItWorks = () => {
   };
 
   return (
-    <div id="how-it-works" className="relative bg-[#151515] min-h-screen font-sans overflow-x-hidden text-white">
+    <section
+      id="how-it-works"
+      className="bg-gradient-to-br from-blue-800 via-blue-700 to-green-800 sm:from-blue-900 sm:via-blue-800 sm:to-green-900 dark:from-slate-800 dark:via-slate-700 dark:to-green-800 mt-16 relative overflow-hidden min-h-screen font-sans text-white"
+    >
+      <div className="absolute inset-0 bg-black/20 z-0"></div>
+      <div className="absolute inset-0 opacity-5 sm:opacity-10 hidden sm:block">
+        <div className="absolute w-64 h-64 bg-green-400 rounded-full -top-32 -left-32 transform rotate-45 blur-xl"></div>
+        <div className="absolute w-48 h-48 bg-blue-300 rounded-full top-1/4 right-1/4 transform -rotate-15 blur-xl"></div>
+        <div className="absolute w-72 h-72 bg-white rounded-full bottom-1/3 left-1/4 transform rotate-30 blur-xl"></div>
+      </div>
+
       {/* Hero Section */}
-      <motion.section
-        initial={{ opacity: 0, y: -20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8 }}
-        className="flex flex-col items-center justify-center pt-24 sm:pt-32 px-6 sm:px-12 mx-auto py-20 text-center"
-      >
-        <h1 className="text-4xl sm:text-5xl md:text-6xl tracking-tight uppercase text-[#FFFFFF] font-extrabold leading-tight">
-          How It Works
-        </h1>
-        <p className="text-white mt-6 text-lg sm:text-xl font-medium max-w-3xl leading-relaxed">
-          Follow these steps to transform your trading skills into funded success with ECAPFX.
-        </p>
-      </motion.section>
+      <div className="mx-auto max-w-7xl px-4 py-24 sm:px-6 lg:px-8 lg:py-24 relative z-10 text-center">
+        <div className="mx-auto lg:max-w-4xl">
+          <h2 className="mb-4 text-4xl font-extrabold tracking-tight text-white">
+            How It Works
+          </h2>
+          <p className="text-xl font-medium tracking-tight text-white">
+            Follow these steps to transform your trading skills into funded success with ECAPFX.
+          </p>
+        </div>
+      </div>
 
       {/* Steps Section with Stylized Line */}
       <section
         ref={ref}
-        className="relative px-6 sm:px-12 mx-auto max-w-6xl py-16"
+        className="relative px-6 sm:px-12 mx-auto max-w-6xl py-5"
         style={{
           backgroundImage: 'url(https://via.placeholder.com/10x900.png?text=Dashed+Green+Line&color=1d8348)',
           backgroundPosition: 'center',
@@ -211,7 +218,7 @@ const HowItWorks = () => {
 
       {/* Separator */}
       <div className="absolute bottom-0 left-0 w-full h-2 bg-gradient-to-r from-transparent via-[#1d8348] to-transparent shadow-lg" />
-    </div>
+    </section>
   );
 };
 

@@ -706,6 +706,8 @@ function PricingTable() {
           </div>
         </div>
       </div>
+            {/* Desktop separator */}
+      <div className="absolute bottom-0 left-0 w-full h-2 bg-gradient-to-r from-transparent via-[#1d8348] to-transparent hidden shadow-lg sm:block z-20" />
       <style jsx>{`
         @media (max-width: 640px) {
           .max-w-7xl {
