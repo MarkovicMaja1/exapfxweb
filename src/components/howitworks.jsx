@@ -48,8 +48,8 @@ const HowItWorks = () => {
   return (
     <section
       id="how-it-works"
-      className="bg-gradient-to-br from-blue-800 via-blue-700 to-green-800 sm:from-blue-900 sm:via-blue-800 sm:to-green-900 dark:from-slate-800 dark:via-slate-700 dark:to-green-800 mt-16 relative overflow-hidden min-h-screen font-sans text-white"
-    >
+      className="bg-gradient-to-br from-[#0e404f] via-[#0e404f] to-green-800 sm:from-[#0e404f] sm:via-[#0e404f] sm:to-green-900 dark:from-slate-800 dark:via-slate-700 dark:to-green-800 mt-16 relative overflow-hidden min-h-screen font-sans text-white"
+    > 
       <div className="absolute inset-0 bg-black/20 z-0"></div>
       <div className="absolute inset-0 opacity-5 sm:opacity-10 hidden sm:block">
         <div className="absolute w-64 h-64 bg-green-400 rounded-full -top-32 -left-32 transform rotate-45 blur-xl"></div>
