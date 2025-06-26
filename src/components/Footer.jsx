@@ -77,7 +77,7 @@ const Footer = () => {
                 <p className="text-sm font-semibold leading-6 text-white">Important Links</p>
                 <ul role="list" className="mt-6 space-y-4">
                   <li>
-                    <small><Link to="/#chooseplan" className="text-sm leading-6 text-white hover:text-white">Choose Plan</Link></small>
+                    <small><Link to="howitworks" className="text-sm leading-6 text-white hover:text-white">How it works</Link></small>
                   </li>
                   <li>
                     <small><Link to="/#about" className="text-sm leading-6 text-white hover:text-white">About Us</Link></small>
@@ -91,7 +91,7 @@ const Footer = () => {
                 <p className="text-sm font-semibold leading-6 text-white">Our Services</p>
                 <ul role="list" className="mt-6 space-y-4">
                   <li>
-                    <small href="#" className="text-sm leading-6 text-white hover:text-white">Pricing</small>
+                    <small><Link to="/#pricingtable" className="text-sm leading-6 text-white hover:text-white">Pricing</Link></small>
                   </li>
                   <li>
                     <small href="#" className="text-sm leading-6 text-white hover:text-white">Guides</small>
