@@ -199,19 +199,19 @@ const HowItWorks = () => {
       </section>
 
       {/* Call to Action */}
-      <motion.section
-        initial={{ opacity: 0, scale: 0.8 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 0.6, delay: 1.2 }}
-        className="flex justify-center pb-20 px-6 sm:px-12"
-      >
-        <a
+      <section className="flex justify-center pt-20 pb-20 px-6 sm:px-12">
+        <motion.a
           href="https://active.ecapfx.com/auth/signin"
-          className="bg-gradient-to-r from-[#1a6f3d] via-[#1d8348] to-[#145c33] hover:from-[#156437] hover:via-[#1d8348] hover:to-[#0e3f24] px-10 py-4 rounded-xl text-white text-xl font-semibold transition duration-300 hover:scale-105 shadow-lg"
+          target="_blank"
+          rel="noopener noreferrer"
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+          className="getstarted-button px-5 py-2.5 sm:text-lg text-white font-roboto bg-gradient-to-r from-[#1a6f3d] via-[#1d8348] to-[#145c33] hover:from-[#156437]/90 hover:via-[#1d8348]/90 hover:to-[#0e3f24]/90 hover:text-black hover:shadow-md hover:shadow-green-700/50 rounded-2xl transition duration-300 ease-in-out hover:scale-105 select-none z-20 pointer-events-auto"
         >
           Get Started Now
-        </a>
-      </motion.section>
+        </motion.a>
+      </section>
 
       {/* Disclaimer */}
       <section className="pb-16 px-6 sm:px-12 text-center">
