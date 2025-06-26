@@ -16,7 +16,7 @@ import Sustainability from "./components/Sustainability";
 import Home from "./components/Home";
 import Footer from "./components/Footer";
 import Goals from "./components/Goals";
-import ChoosePlan from "./components/ChoosePlan";
+// import ChoosePlan from "./components/ChoosePlan";
 import TeamSection from "./components/TeamFirst";
 import Newsletter from "./components/Newsletter";
 import SustainabilityIcon from "./components/SustainabilityIcon";
@@ -74,9 +74,9 @@ function App() {
                 <div id="home">
                   <Home />
                 </div>
-                <div id="chooseplan">
+                {/* <div id="chooseplan">
                   <ChoosePlan />
-                </div>
+                </div> */}
                 {/* <div id="dashboard">
                   <Dashboard />
                 </div> */}

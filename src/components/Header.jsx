@@ -22,7 +22,7 @@ const Header = () => {
         {/* Desktop Navigation */}
         <ul className="hidden lg:flex gap-16 text-white text-lg font-bold justify-center flex-1 pl-32 ml-[100px]">
           <li><Link to="/#home" className="font-bold hover:text-[#1d8348] transition">Home</Link></li>
-          <li><Link to="/#chooseplan" className="font-bold hover:text-[#1d8348] transition font-roboto">Choose Plan</Link></li>
+          <li><Link to="/#pricingtable" className="font-bold hover:text-[#1d8348] transition font-roboto">Choose Plan</Link></li>
           <li><Link to="/#about" className="font-bold hover:text-[#1d8348] transition">About Us</Link></li>
           <li><Link to="/#team" className="font-bold hover:text-[#1d8348] transition">Team</Link></li>
           <li><Link to="/faq" className="font-bold hover:text-[#1d8348] transition">FAQ</Link></li>
@@ -64,7 +64,7 @@ const Header = () => {
         <div className="lg:hidden bg-[#101919] px-4 pt-4 pb-6">
           <ul className="space-y-4 text-white text-lg font-bold">
             <li><Link to="/#home" className="block hover:text-[#1d8348] transition" onClick={() => setIsOpen(!isOpen)}>Home</Link></li>
-            <li><Link to="/#chooseplan" className="block hover:text-[#1d8348] transition" onClick={() => setIsOpen(!isOpen)}>Choose Plan</Link></li>
+            <li><Link to="/#pricingtable" className="block hover:text-[#1d8348] transition" onClick={() => setIsOpen(!isOpen)}>Choose Plan</Link></li>
             <li><Link to="/#about" className="block hover:text-[#1d8348] transition" onClick={() => setIsOpen(!isOpen)}>About Us</Link></li>
             <li><Link to="/#team" className="block hover:text-[#1d8348] transition" onClick={() => setIsOpen(!isOpen)}>Team</Link></li>
             <li><Link to="/faq" className="block hover:text-[#1d8348] transition" onClick={() => setIsOpen(!isOpen)}>FAQ</Link></li>
