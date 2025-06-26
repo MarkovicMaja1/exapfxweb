@@ -487,7 +487,7 @@ function PricingTable() {
       <div
         className="absolute left-0 top-0 h-full w-full"
         style={{
-          background: 'linear-gradient(180deg, rgba(18, 27, 113, 0) 0%, #0E1A88 60.24%, #121E85 100%)',
+          background: 'linear-gradient(rgba(18, 27, 113, 0) 0%, rgb(69 69 69) 60.24%, rgb(18 18 18) 100%)',
         }}
       />
       <div className="z-10 relative">
