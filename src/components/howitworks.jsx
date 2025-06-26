@@ -48,53 +48,53 @@ const HowItWorks = () => {
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
-        className="flex flex-col items-center justify-center pt-20 sm:pt-28 px-4 sm:px-8 mx-auto py-16 text-center"
+        className="flex flex-col items-center justify-center pt-24 sm:pt-32 px-6 sm:px-12 mx-auto py-20 text-center"
       >
-        <h1 className="text-3xl sm:text-4xl md:text-5xl tracking-wide uppercase text-[#1d8348] font-extrabold" style={{ wordSpacing: '0.3rem' }}>
+        <h1 className="text-4xl sm:text-5xl md:text-6xl tracking-tight uppercase text-[#FFFFFF] font-extrabold leading-tight">
           How It Works
         </h1>
-        <p className="text-white mt-4 text-lg sm:text-xl font-semibold max-w-2xl">
-          Follow these steps to turn your trading skills into funded success with ECAPFX.
+        <p className="text-white mt-6 text-lg sm:text-xl font-medium max-w-3xl leading-relaxed">
+          Follow these steps to transform your trading skills into funded success with ECAPFX.
         </p>
       </motion.section>
 
-      {/* Steps Section with PNG Background Line */}
+      {/* Steps Section with Stylized Line */}
       <section
         ref={ref}
-        className="relative px-4 sm:px-6 mx-auto max-w-5xl py-12"
+        className="relative px-6 sm:px-12 mx-auto max-w-6xl py-16"
         style={{
-          backgroundImage: 'url(https://via.placeholder.com/50x800.png?text=Green+Line)',
+          backgroundImage: 'url(https://via.placeholder.com/10x900.png?text=Dashed+Green+Line&color=1d8348)',
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat',
-          backgroundSize: 'contain',
+          backgroundSize: '10px auto',
         }}
       >
-        <div className="relative space-y-12">
+        <div className="relative space-y-16">
           {/* Step 1 - Text Left, Image Right */}
           <motion.div
             custom={0}
             initial="hidden"
             animate={controls}
             variants={stepVariants}
-            className="flex flex-col sm:flex-row items-center justify-between gap-6"
+            className="flex flex-col sm:flex-row items-center justify-between gap-8"
           >
-            <div className="relative bg-gradient-to-br from-[#1a1a1a] to-[#222222] p-6 sm:p-8 rounded-xl shadow-lg border border-[#1d8348]/20 flex-1 z-10">
+            <div className="relative bg-gradient-to-br from-[#1a1a1a] to-[#222222] p-8 sm:p-10 rounded-2xl shadow-xl border border-[#1d8348]/20 flex-1 z-10">
               <motion.div
                 variants={badgeVariants}
-                className="absolute -top-4 left-4 bg-[#1d8348] text-white text-lg font-bold rounded-full w-10 h-10 flex items-center justify-center shadow-md"
+                className="absolute -top-5 left-6 bg-[#1d8348] text-white text-xl font-bold rounded-full w-12 h-12 flex items-center justify-center shadow-lg"
               >
                 1
               </motion.div>
-              <h3 className="text-xl sm:text-2xl font-bold text-[#1d8348] mt-6">Sign Up & Choose Challenge</h3>
-              <p className="text-white mt-3 text-sm sm:text-base">Select a plan tailored to your trading goals.</p>
-              <ul className="text-white mt-3 space-y-2 list-disc list-inside text-xs sm:text-sm">
-                <li>🌱 <strong>Beginner (Greenwave)</strong> - Easy targets for new traders.</li>
-                <li>🌿 <strong>Experienced (El Verde)</strong> - Moderate risk options.</li>
-                <li>🌳 <strong>Seasoned (Ecosphere)</strong> - Challenging targets for pros.</li>
+              <h3 className="text-2xl sm:text-3xl font-bold text-[#1d8348] mt-8 leading-snug">Sign Up & Choose Challenge</h3>
+              <p className="text-white mt-4 text-base sm:text-lg leading-relaxed">Select a plan tailored to your trading expertise.</p>
+              <ul className="text-white mt-4 space-y-2 list-disc list-inside text-sm sm:text-base">
+                <li><strong>Beginner (Greenwave)</strong> - Ideal for new traders.</li>
+                <li><strong>Experienced (El Verde)</strong> - Moderate risk options.</li>
+                <li><strong>Seasoned (Ecosphere)</strong> - Designed for professionals.</li>
               </ul>
             </div>
-            <div className="flex-shrink-0 w-full sm:w-1/3 h-40 sm:h-36">
-              <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&h=150&q=80" alt="Person signing up on a form" className="w-full h-full object-contain rounded-lg" />
+            <div className="flex-shrink-0 w-full sm:w-1/3 h-48 sm:h-56">
+              <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=225&q=90" alt="Person signing up on a form" className="w-full h-full object-cover rounded-xl" />
             </div>
           </motion.div>
 
@@ -104,28 +104,28 @@ const HowItWorks = () => {
             initial="hidden"
             animate={controls}
             variants={stepVariants}
-            className="flex flex-col sm:flex-row-reverse items-center justify-between gap-6"
+            className="flex flex-col sm:flex-row-reverse items-center justify-between gap-8"
           >
-            <div className="relative bg-gradient-to-br from-[#1a1a1a] to-[#222222] p-6 sm:p-8 rounded-xl shadow-lg border border-[#1d8348]/20 flex-1 z-10">
+            <div className="relative bg-gradient-to-br from-[#1a1a1a] to-[#222222] p-8 sm:p-10 rounded-2xl shadow-xl border border-[#1d8348]/20 flex-1 z-10">
               <motion.div
                 variants={badgeVariants}
-                className="absolute -top-4 left-4 bg-[#1d8348] text-white text-lg font-bold rounded-full w-10 h-10 flex items-center justify-center shadow-md"
+                className="absolute -top-5 left-6 bg-[#1d8348] text-white text-xl font-bold rounded-full w-12 h-12 flex items-center justify-center shadow-lg"
               >
                 2
               </motion.div>
-              <h3 className="text-xl sm:text-2xl font-bold text-[#1d8348] mt-6">Prove Your Skills</h3>
-              <p className="text-white mt-3 text-sm sm:text-base">Trade in a simulation with strict limits.</p>
-              <ul className="text-white mt-3 space-y-2 list-disc list-inside text-xs sm:text-sm">
-                <li>⏳ <strong>Daily Loss Limit</strong> - Stay disciplined.</li>
-                <li>📉 <strong>Max Drawdown</strong> - Avoid limits.</li>
-                <li>💰 <strong>Profit Targets</strong> - Meet goals.</li>
-                <li>📊 <strong>Consistency</strong> - Sustain performance.</li>
-                <li>⚡ <strong>Instant Challenges</strong> - Test skills.</li>
-                <li>🤝 <strong>Profit Split</strong> - 80/20 start.</li>
+              <h3 className="text-2xl sm:text-3xl font-bold text-[#1d8348] mt-8 leading-snug">Prove Your Skills</h3>
+              <p className="text-white mt-4 text-base sm:text-lg leading-relaxed">Demonstrate your trading ability in a simulated environment.</p>
+              <ul className="text-white mt-4 space-y-2 list-disc list-inside text-sm sm:text-base">
+                <li><strong>Daily Loss Limit</strong> - Maintain discipline.</li>
+                <li><strong>Max Drawdown</strong> - Stay within bounds.</li>
+                <li><strong>Profit Targets</strong> - Achieve goals.</li>
+                <li><strong>Consistency</strong> - Ensure steady performance.</li>
+                <li><strong>Instant Challenges</strong> - Quick skill assessment.</li>
+                <li><strong>Profit Split</strong> - Begin at 80/20.</li>
               </ul>
             </div>
-            <div className="flex-shrink-0 w-full sm:w-1/3 h-40 sm:h-36">
-              <img src="https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&h=150&q=80" alt="Trading chart analysis" className="w-full h-full object-contain rounded-lg" />
+            <div className="flex-shrink-0 w-full sm:w-1/3 h-48 sm:h-56">
+              <img src="https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=225&q=90" alt="Trading chart analysis" className="w-full h-full object-cover rounded-xl" />
             </div>
           </motion.div>
 
@@ -135,25 +135,25 @@ const HowItWorks = () => {
             initial="hidden"
             animate={controls}
             variants={stepVariants}
-            className="flex flex-col sm:flex-row items-center justify-between gap-6"
+            className="flex flex-col sm:flex-row items-center justify-between gap-8"
           >
-            <div className="relative bg-gradient-to-br from-[#1a1a1a] to-[#222222] p-6 sm:p-8 rounded-xl shadow-lg border border-[#1d8348]/20 flex-1 z-10">
+            <div className="relative bg-gradient-to-br from-[#1a1a1a] to-[#222222] p-8 sm:p-10 rounded-2xl shadow-xl border border-[#1d8348]/20 flex-1 z-10">
               <motion.div
                 variants={badgeVariants}
-                className="absolute -top-4 left-4 bg-[#1d8348] text-white text-lg font-bold rounded-full w-10 h-10 flex items-center justify-center shadow-md"
+                className="absolute -top-5 left-6 bg-[#1d8348] text-white text-xl font-bold rounded-full w-12 h-12 flex items-center justify-center shadow-lg"
               >
                 3
               </motion.div>
-              <h3 className="text-xl sm:text-2xl font-bold text-[#1d8348] mt-6">Get Funded</h3>
-              <p className="text-white mt-3 text-sm sm:text-base">Pass to unlock funding.</p>
-              <ul className="text-white mt-3 space-y-2 list-disc list-inside text-xs sm:text-sm">
-                <li>🔍 KYC & AML checks.</li>
-                <li>⏰ Access in 5 days.</li>
-                <li>📜 Review <a href="/rules" className="text-[#1d8348] hover:underline">Rules</a> & <a href="/terms" className="text-[#1d8348] hover:underline">Terms</a>.</li>
+              <h3 className="text-2xl sm:text-3xl font-bold text-[#1d8348] mt-8 leading-snug">Get Funded</h3>
+              <p className="text-white mt-4 text-base sm:text-lg leading-relaxed">Unlock funding upon successful completion.</p>
+              <ul className="text-white mt-4 space-y-2 list-disc list-inside text-sm sm:text-base">
+                <li>KYC & AML checks completed.</li>
+                <li>Funding access within 5 days.</li>
+                <li>Review <a href="/rules" className="text-[#1d8348] hover:underline">Rules</a> & <a href="/terms" className="text-[#1d8348] hover:underline">Terms</a>.</li>
               </ul>
             </div>
-            <div className="flex-shrink-0 w-full sm:w-1/3 h-40 sm:h-36">
-              <img src="https://www.start-business-online.com/media/articles/pass-funded-account-challenge.jpg?fit=crop&w=200&h=150&q=80" alt="Passing funded account challenge" className="w-full h-full object-contain rounded-lg" />
+            <div className="flex-shrink-0 w-full sm:w-1/3 h-48 sm:h-56">
+              <img src="https://www.start-business-online.com/media/articles/pass-funded-account-challenge.jpg?fit=crop&w=300&h=225&q=90" alt="Passing funded account challenge" className="w-full h-full object-cover rounded-xl" />
             </div>
           </motion.div>
 
@@ -163,25 +163,25 @@ const HowItWorks = () => {
             initial="hidden"
             animate={controls}
             variants={stepVariants}
-            className="flex flex-col sm:flex-row-reverse items-center justify-between gap-6"
+            className="flex flex-col sm:flex-row-reverse items-center justify-between gap-8"
           >
-            <div className="relative bg-gradient-to-br from-[#1a1a1a] to-[#222222] p-6 sm:p-8 rounded-xl shadow-lg border border-[#1d8348]/20 flex-1 z-10">
+            <div className="relative bg-gradient-to-br from-[#1a1a1a] to-[#222222] p-8 sm:p-10 rounded-2xl shadow-xl border border-[#1d8348]/20 flex-1 z-10">
               <motion.div
                 variants={badgeVariants}
-                className="absolute -top-4 left-4 bg-[#1d8348] text-white text-lg font-bold rounded-full w-10 h-10 flex items-center justify-center shadow-md"
+                className="absolute -top-5 left-6 bg-[#1d8348] text-white text-xl font-bold rounded-full w-12 h-12 flex items-center justify-center shadow-lg"
               >
                 4
               </motion.div>
-              <h3 className="text-xl sm:text-2xl font-bold text-[#1d8348] mt-6">Trade, Earn & Impact</h3>
-              <p className="text-white mt-3 text-sm sm:text-base">Become a funded trader with purpose.</p>
-              <ul className="text-white mt-3 space-y-2 list-disc list-inside text-xs sm:text-sm">
-                <li>💸 Profit share at 80/20.</li>
-                <li>🌍 1% profit donation after year one.</li>
-                <li>🌱 Trade for a sustainable future.</li>
+              <h3 className="text-2xl sm:text-3xl font-bold text-[#1d8348] mt-8 leading-snug">Trade, Earn & Impact</h3>
+              <p className="text-white mt-4 text-base sm:text-lg leading-relaxed">Trade with purpose as a funded trader.</p>
+              <ul className="text-white mt-4 space-y-2 list-disc list-inside text-sm sm:text-base">
+                <li>Profit share at 80/20.</li>
+                <li>1% profit donation post year one.</li>
+                <li>Contribute to a sustainable future.</li>
               </ul>
             </div>
-            <div className="flex-shrink-0 w-full sm:w-1/3 h-40 sm:h-36">
-              <img src="https://images.unsplash.com/photo-1501854140801-50d01698950b?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&h=150&q=80" alt="Global trading market" className="w-full h-full object-contain rounded-lg" />
+            <div className="flex-shrink-0 w-full sm:w-1/3 h-48 sm:h-56">
+              <img src="https://images.unsplash.com/photo-1501854140801-50d01698950b?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=225&q=90" alt="Global trading market" className="w-full h-full object-cover rounded-xl" />
             </div>
           </motion.div>
         </div>
@@ -192,25 +192,25 @@ const HowItWorks = () => {
         initial={{ opacity: 0, scale: 0.8 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.6, delay: 1.2 }}
-        className="flex justify-center pb-16 px-4 sm:px-8"
+        className="flex justify-center pb-20 px-6 sm:px-12"
       >
         <a
           href="https://active.ecapfx.com/auth/signin"
-          className="bg-gradient-to-r from-[#1a6f3d] via-[#1d8348] to-[#145c33] hover:from-[#156437] hover:via-[#1d8348] hover:to-[#0e3f24] px-8 py-3 rounded-lg text-white text-lg font-semibold transition duration-300 hover:scale-105 shadow-md"
+          className="bg-gradient-to-r from-[#1a6f3d] via-[#1d8348] to-[#145c33] hover:from-[#156437] hover:via-[#1d8348] hover:to-[#0e3f24] px-10 py-4 rounded-xl text-white text-xl font-semibold transition duration-300 hover:scale-105 shadow-lg"
         >
           Get Started Now
         </a>
       </motion.section>
 
       {/* Disclaimer */}
-      <section className="pb-12 px-4 sm:px-8 text-center">
-        <p className="text-[#f7e59f] text-sm font-semibold">
-          ECAPFX is not a financial institution · This website does not promote or sell any financial products or services
+      <section className="pb-16 px-6 sm:px-12 text-center">
+        <p className="text-[#f7e59f] text-base font-medium leading-relaxed">
+          ECAPFX is not a financial institution · This website does not promote or sell financial products or services.
         </p>
       </section>
 
       {/* Separator */}
-      <div className="absolute bottom-0 left-0 w-full h-1.5 bg-gradient-to-r from-transparent via-[#1d8348] to-transparent shadow-md" />
+      <div className="absolute bottom-0 left-0 w-full h-2 bg-gradient-to-r from-transparent via-[#1d8348] to-transparent shadow-lg" />
     </div>
   );
 };
