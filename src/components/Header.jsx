@@ -26,7 +26,7 @@ const Header = () => {
           <li><Link to="/#about" className="font-bold hover:text-[#1d8348] transition">About Us</Link></li>
           <li><Link to="/#team" className="font-bold hover:text-[#1d8348] transition">Team</Link></li>
           <li><Link to="/faq" className="font-bold hover:text-[#1d8348] transition">FAQ</Link></li>
-          <li><Link to="/howitworks" className="font-bold hover:text-[#1d8348] transition">How it works</Link></li>
+          <li><Link to="/#howitworks" className="font-bold hover:text-[#1d8348] transition">How it works</Link></li>
         </ul>
 
         <Link
@@ -68,7 +68,7 @@ const Header = () => {
             <li><Link to="/#about" className="block hover:text-[#1d8348] transition" onClick={() => setIsOpen(!isOpen)}>About Us</Link></li>
             <li><Link to="/#team" className="block hover:text-[#1d8348] transition" onClick={() => setIsOpen(!isOpen)}>Team</Link></li>
             <li><Link to="/faq" className="block hover:text-[#1d8348] transition" onClick={() => setIsOpen(!isOpen)}>FAQ</Link></li>
-            <li><Link to="/howitworks" className="block hover:text-[#1d8348] transition" onClick={() => setIsOpen(!isOpen)}>How it works</Link></li>
+            <li><Link to="/#howitworks" className="block hover:text-[#1d8348] transition" onClick={() => setIsOpen(!isOpen)}>How it works</Link></li>
 
             <li>
               <Link
