@@ -77,7 +77,7 @@ const Footer = () => {
                 <p className="text-sm font-semibold leading-6 text-white">Important Links</p>
                 <ul role="list" className="mt-6 space-y-4">
                   <li>
-                    <small><Link to="howitworks" className="text-sm leading-6 text-white hover:text-white">How it works</Link></small>
+                    <small><Link to="/#howitworks" className="text-sm leading-6 text-white hover:text-white">How it works</Link></small>
                   </li>
                   <li>
                     <small><Link to="/#about" className="text-sm leading-6 text-white hover:text-white">About Us</Link></small>
