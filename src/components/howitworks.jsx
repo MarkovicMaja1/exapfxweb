@@ -19,30 +19,41 @@ const HowItWorks = () => {
     return () => document.removeEventListener('visibilitychange', handleVisibilityChange);
   }, []);
 
-  // Animation controls for steps
-  const controls = useAnimation();
-  const { ref, inView } = useInView({ triggerOnce: false, threshold: 0.2 });
-
-  useEffect(() => {
-    if (inView) {
-      controls.start('visible');
-    } else {
-      controls.start('hidden');
-    }
-  }, [controls, inView]);
-
-  const stepVariants = {
-    hidden: { opacity: 0, y: 50 },
+  const contentVariants = {
+    hidden: (i) => ({
+      opacity: 0,
+      x: i % 2 === 0 ? -window.innerWidth : window.innerWidth, // Left for even, right for odd
+    }),
     visible: (i) => ({
       opacity: 1,
-      y: 0,
-      transition: { delay: i * 0.3, duration: 0.6, ease: 'easeOut' },
+      x: 0,
+      transition: { 
+        duration: 1.0, 
+        ease: 'easeInOut',
+        delay: i * 0.2,
+      },
+    }),
+  };
+
+  const imageVariants = {
+    hidden: (i) => ({
+      opacity: 0,
+      x: i % 2 === 0 ? window.innerWidth : -window.innerWidth, // Right for even, left for odd
+    }),
+    visible: (i) => ({
+      opacity: 1,
+      x: 0,
+      transition: { 
+        duration: 1.0, 
+        ease: 'easeInOut',
+        delay: i * 0.2,
+      },
     }),
   };
 
   const badgeVariants = {
     hidden: { scale: 0 },
-    visible: { scale: 1, transition: { duration: 0.5, ease: 'easeOut' } },
+    visible: { scale: 1, transition: { duration: 0.8, ease: 'easeInOut' } },
   };
 
   return (
@@ -59,7 +70,7 @@ const HowItWorks = () => {
 
       {/* Hero Section */}
       <div className="mx-auto max-w-7xl px-4 py-24 sm:px-6 lg:px-8 lg:py-24 relative z-10 text-center">
-        <div className="mx-auto lg:max-w-4xl">
+        <div className="mb-14 mx-auto lg:max-w-4xl">
           <h2 className="mb-4 text-4xl font-extrabold tracking-tight text-white">
             How It Works
           </h2>
@@ -71,7 +82,6 @@ const HowItWorks = () => {
 
       {/* Steps Section with Stylized Line */}
       <section
-        ref={ref}
         className="relative px-6 sm:px-12 mx-auto max-w-6xl py-5"
         style={{
           backgroundImage: 'url(https://via.placeholder.com/10x900.png?text=Dashed+Green+Line&color=1d8348)',
@@ -82,119 +92,51 @@ const HowItWorks = () => {
       >
         <div className="relative space-y-16">
           {/* Step 1 - Text Left, Image Right */}
-          <motion.div
-            custom={0}
-            initial="hidden"
-            animate={controls}
-            variants={stepVariants}
-            className="flex flex-col sm:flex-row items-center justify-between gap-8"
-          >
-            <div className="relative bg-gradient-to-br from-[#1a1a1a] to-[#222222] p-8 sm:p-10 rounded-2xl shadow-xl border border-[#1d8348]/20 flex-1 z-10">
-              <motion.div
-                variants={badgeVariants}
-                className="absolute -top-5 left-6 bg-[#1d8348] text-white text-xl font-bold rounded-full w-12 h-12 flex items-center justify-center shadow-lg"
-              >
-                1
-              </motion.div>
-              <h3 className="text-2xl sm:text-3xl font-bold text-[#1d8348] mt-8 leading-snug">Sign Up & Choose Challenge</h3>
-              <p className="text-white mt-4 text-base sm:text-lg leading-relaxed">Select a plan tailored to your trading expertise.</p>
-              <ul className="text-white mt-4 space-y-2 list-disc list-inside text-sm sm:text-base">
-                <li><strong>Beginner (Greenwave)</strong> - Ideal for new traders.</li>
-                <li><strong>Experienced (El Verde)</strong> - Moderate risk options.</li>
-                <li><strong>Seasoned (Ecosphere)</strong> - Designed for professionals.</li>
-              </ul>
-            </div>
-            <div className="flex-shrink-0 w-full sm:w-1/3 h-58 sm:h-full">
-              <img src={step1} alt="Person signing up on a form" className="w-full h-full object-cover rounded-xl" />
-            </div>
-          </motion.div>
+          <Step custom={0} image={step1} alt="Person signing up on a form" contentVariants={contentVariants} imageVariants={imageVariants} badgeVariants={badgeVariants}>
+            <h3 className="text-2xl sm:text-3xl font-bold text-[#1d8348] mt-8 leading-snug">Sign Up & Choose Challenge</h3>
+            <p className="text-white mt-4 text-base sm:text-lg leading-relaxed">Select a plan tailored to your trading expertise.</p>
+            <ul className="text-white mt-4 space-y-2 list-disc list-inside text-sm sm:text-base">
+              <li><strong>Beginner (Greenwave)</strong> - Ideal for new traders.</li>
+              <li><strong>Experienced (El Verde)</strong> - Moderate risk options.</li>
+              <li><strong>Seasoned (Ecosphere)</strong> - Designed for professionals.</li>
+            </ul>
+          </Step>
 
           {/* Step 2 - Image Left, Text Right */}
-          <motion.div
-            custom={1}
-            initial="hidden"
-            animate={controls}
-            variants={stepVariants}
-            className="flex flex-col sm:flex-row-reverse items-center justify-between gap-8"
-          >
-            <div className="relative bg-gradient-to-br from-[#1a1a1a] to-[#222222] p-8 sm:p-10 rounded-2xl shadow-xl border border-[#1d8348]/20 flex-1 z-10">
-              <motion.div
-                variants={badgeVariants}
-                className="absolute -top-5 left-6 bg-[#1d8348] text-white text-xl font-bold rounded-full w-12 h-12 flex items-center justify-center shadow-lg"
-              >
-                2
-              </motion.div>
-              <h3 className="text-2xl sm:text-3xl font-bold text-[#1d8348] mt-8 leading-snug">Prove Your Skills</h3>
-              <p className="text-white mt-4 text-base sm:text-lg leading-relaxed">Demonstrate your trading ability in a simulated environment.</p>
-              <ul className="text-white mt-4 space-y-2 list-disc list-inside text-sm sm:text-base">
-                <li><strong>Daily Loss Limit</strong> - Maintain discipline.</li>
-                <li><strong>Max Drawdown</strong> - Stay within bounds.</li>
-                <li><strong>Profit Targets</strong> - Achieve goals.</li>
-                <li><strong>Consistency</strong> - Ensure steady performance.</li>
-                <li><strong>Instant Challenges</strong> - Quick skill assessment.</li>
-                <li><strong>Profit Split</strong> - Begin at 80/20.</li>
-              </ul>
-            </div>
-            <div className="flex-shrink-0 w-full sm:w-1/3 h-58 sm:h-full">
-              <img src={step2} alt="Trading chart analysis" className="w-full h-full object-cover rounded-xl" />
-            </div>
-          </motion.div>
+          <Step custom={1} image={step2} alt="Trading chart analysis" reverse contentVariants={contentVariants} imageVariants={imageVariants} badgeVariants={badgeVariants}>
+            <h3 className="text-2xl sm:text-3xl font-bold text-[#1d8348] mt-8 leading-snug">Prove Your Skills</h3>
+            <p className="text-white mt-4 text-base sm:text-lg leading-relaxed">Demonstrate your trading ability in a simulated environment.</p>
+            <ul className="text-white mt-4 space-y-2 list-disc list-inside text-sm sm:text-base">
+              <li><strong>Daily Loss Limit</strong> - Maintain discipline.</li>
+              <li><strong>Max Drawdown</strong> - Stay within bounds.</li>
+              <li><strong>Profit Targets</strong> - Achieve goals.</li>
+              <li><strong>Consistency</strong> - Ensure steady performance.</li>
+              <li><strong>Instant Challenges</strong> - Quick skill assessment.</li>
+              <li><strong>Profit Split</strong> - Begin at 80/20.</li>
+            </ul>
+          </Step>
 
           {/* Step 3 - Text Left, Image Right */}
-          <motion.div
-            custom={2}
-            initial="hidden"
-            animate={controls}
-            variants={stepVariants}
-            className="flex flex-col sm:flex-row items-center justify-between gap-8"
-          >
-            <div className="relative bg-gradient-to-br from-[#1a1a1a] to-[#222222] p-8 sm:p-10 rounded-2xl shadow-xl border border-[#1d8348]/20 flex-1 z-10">
-              <motion.div
-                variants={badgeVariants}
-                className="absolute -top-5 left-6 bg-[#1d8348] text-white text-xl font-bold rounded-full w-12 h-12 flex items-center justify-center shadow-lg"
-              >
-                3
-              </motion.div>
-              <h3 className="text-2xl sm:text-3xl font-bold text-[#1d8348] mt-8 leading-snug">Get Funded</h3>
-              <p className="text-white mt-4 text-base sm:text-lg leading-relaxed">Unlock funding upon successful completion.</p>
-              <ul className="text-white mt-4 space-y-2 list-disc list-inside text-sm sm:text-base">
-                <li>KYC & AML checks completed.</li>
-                <li>Funding access within 5 days.</li>
-                <li>Review <a href="/rules" className="text-[#1d8348] hover:underline">Rules</a> & <a href="/terms" className="text-[#1d8348] hover:underline">Terms</a>.</li>
-              </ul>
-            </div>
-            <div className="flex-shrink-0 w-full sm:w-1/3 h-58 sm:h-full">
-              <img src={step3} alt="Passing funded account challenge" className="w-full h-full object-cover rounded-xl" />
-            </div>
-          </motion.div>
+          <Step custom={2} image={step3} alt="Passing funded account challenge" contentVariants={contentVariants} imageVariants={imageVariants} badgeVariants={badgeVariants}>
+            <h3 className="text-2xl sm:text-3xl font-bold text-[#1d8348] mt-8 leading-snug">Get Funded</h3>
+            <p className="text-white mt-4 text-base sm:text-lg leading-relaxed">Unlock funding upon successful completion.</p>
+            <ul className="text-white mt-4 space-y-2 list-disc list-inside text-sm sm:text-base">
+              <li>KYC & AML checks completed.</li>
+              <li>Funding access within 5 days.</li>
+              <li>Review <a href="/rules" className="text-[#1d8348] hover:underline">Rules</a> & <a href="/terms" className="text-[#1d8348] hover:underline">Terms</a>.</li>
+            </ul>
+          </Step>
 
           {/* Step 4 - Image Left, Text Right */}
-          <motion.div
-            custom={3}
-            initial="hidden"
-            animate={controls}
-            variants={stepVariants}
-            className="flex flex-col sm:flex-row-reverse items-center justify-between gap-8"
-          >
-            <div className="relative bg-gradient-to-br from-[#1a1a1a] to-[#222222] p-8 sm:p-10 rounded-2xl shadow-xl border border-[#1d8348]/20 flex-1 z-10">
-              <motion.div
-                variants={badgeVariants}
-                className="absolute -top-5 left-6 bg-[#1d8348] text-white text-xl font-bold rounded-full w-12 h-12 flex items-center justify-center shadow-lg"
-              >
-                4
-              </motion.div>
-              <h3 className="text-2xl sm:text-3xl font-bold text-[#1d8348] mt-8 leading-snug">Trade, Earn & Impact</h3>
-              <p className="text-white mt-4 text-base sm:text-lg leading-relaxed">Trade with purpose as a funded trader.</p>
-              <ul className="text-white mt-4 space-y-2 list-disc list-inside text-sm sm:text-base">
-                <li>Profit share at 80/20.</li>
-                <li>1% profit donation post year one.</li>
-                <li>Contribute to a sustainable future.</li>
-              </ul>
-            </div>
-            <div className="flex-shrink-0 w-full sm:w-1/3 h-58 sm:h-full">
-              <img src={step4} alt="Global trading market" className="w-full h-full object-cover rounded-xl" />
-            </div>
-          </motion.div>
+          <Step custom={3} image={step4} alt="Global trading market" reverse contentVariants={contentVariants} imageVariants={imageVariants} badgeVariants={badgeVariants}>
+            <h3 className="text-2xl sm:text-3xl font-bold text-[#1d8348] mt-8 leading-snug">Trade, Earn & Impact</h3>
+            <p className="text-white mt-4 text-base sm:text-lg leading-relaxed">Trade with purpose as a funded trader.</p>
+            <ul className="text-white mt-4 space-y-2 list-disc list-inside text-sm sm:text-base">
+              <li>Profit share at 80/20.</li>
+              <li>1% profit donation post year one.</li>
+              <li>Contribute to a sustainable future.</li>
+            </ul>
+          </Step>
         </div>
       </section>
 
@@ -223,6 +165,49 @@ const HowItWorks = () => {
       {/* Separator */}
       <div className="absolute bottom-0 left-0 w-full h-2 bg-gradient-to-r from-transparent via-[#1d8348] to-transparent shadow-lg" />
     </section>
+  );
+};
+
+// Step Component
+const Step = ({ custom, image, alt, reverse, children, contentVariants, imageVariants, badgeVariants }) => {
+  const controls = useAnimation();
+  const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.2 });
+
+  useEffect(() => {
+    if (inView) {
+      controls.start('visible');
+    }
+  }, [controls, inView]);
+
+  return (
+    <motion.div
+      ref={ref}
+      custom={custom}
+      initial="hidden"
+      animate={controls}
+      className={`flex flex-col ${reverse ? 'sm:flex-row-reverse' : 'sm:flex-row'} items-center justify-between gap-8`}
+    >
+      <motion.div
+        custom={custom}
+        variants={contentVariants}
+        className="relative bg-gradient-to-br from-[#1a1a1a] to-[#222222] p-8 sm:p-10 rounded-2xl shadow-xl border border-[#1d8348]/20 flex-1 z-10"
+      >
+        <motion.div
+          variants={badgeVariants}
+          className="absolute -top-5 left-6 bg-[#1d8348] text-white text-xl font-bold rounded-full w-12 h-12 flex items-center justify-center shadow-lg"
+        >
+          {custom + 1}
+        </motion.div>
+        {children}
+      </motion.div>
+      <motion.div
+        custom={custom}
+        variants={imageVariants}
+        className="flex-shrink-0 w-full sm:w-1/3 h-58 sm:h-full"
+      >
+        <img src={image} alt={alt} className="w-full h-full object-cover rounded-xl" />
+      </motion.div>
+    </motion.div>
   );
 };
 
