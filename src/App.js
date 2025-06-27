@@ -1,6 +1,7 @@
 import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import Contact from './components/Contact.jsx'; // Import default Contact
 import Discord from "./components/Discord";
+import LogoSlider from "./components/LogoSlider.jsx";
 import Compare from "./components/compare.jsx";
 import Faq from "./components/Faq.jsx";
 import Rules from "./components/Rules.jsx";
@@ -80,6 +81,9 @@ function App() {
                 {/* <div id="dashboard">
                   <Dashboard />
                 </div> */}
+                <div id="logoslider">
+                  <LogoSlider />
+                </div>
                 <div id="pricingtable">
                   <PricingTable />
                 </div>
