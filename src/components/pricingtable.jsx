@@ -400,7 +400,7 @@ function PricingTable() {
   return (
     <div
       id="start-challenge"
-      className="rounded-rt-[40px] mt-[110px] relative z-0 pt-[90px] transition duration-500 ease-in-out overflow-hidden pb-[160px]"
+      className="rounded-rt-[40px] relative z-0 pt-[90px] bg-[#151515] transition duration-500 ease-in-out overflow-hidden pb-[160px]"
     >
       <div
         className="absolute left-[50%] top-0 h-full w-[1500px] sm:w-[2000px] xl:w-[3061px] translate-x-[-50%]"

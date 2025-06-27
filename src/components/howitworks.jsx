@@ -63,22 +63,22 @@ const HowItWorks = () => {
   return (
     <section
       id="how-it-works"
-      className="bg-gradient-to-br from-[#0e404f] via-[#0e404f] to-green-800 sm:from-[#0e404f] sm:via-[#0e404f] sm:to-green-900 dark:from-slate-800 dark:via-slate-700 dark:to-green-800 relative overflow-hidden min-h-screen font-sans text-white"
+      className="bg-white relative overflow-hidden min-h-screen font-sans text-black"
     > 
-      <div className="absolute inset-0 bg-black/20 z-0"></div>
+      <div className="absolute inset-0 bg-black/10 z-0"></div>
       <div className="absolute inset-0 opacity-5 sm:opacity-10 hidden sm:block">
         <div className="absolute w-64 h-64 bg-green-400 rounded-full -top-32 -left-32 transform rotate-45 blur-xl"></div>
         <div className="absolute w-48 h-48 bg-blue-300 rounded-full top-1/4 right-1/4 transform -rotate-15 blur-xl"></div>
-        <div className="absolute w-72 h-72 bg-white rounded-full bottom-1/3 left-1/4 transform rotate-30 blur-xl"></div>
+        <div className="absolute w-72 h-72 bg-gray-200 rounded-full bottom-1/3 left-1/4 transform rotate-30 blur-xl"></div>
       </div>
 
       {/* Hero Section */}
       <div className="mx-auto max-w-7xl px-4 py-24 sm:px-6 lg:px-8 lg:py-24 relative z-10 text-center">
         <div className="mb-14 mx-auto lg:max-w-4xl">
-          <h2 className="mb-4 text-4xl font-extrabold tracking-tight text-white">
+          <h2 className="mb-4 text-4xl font-extrabold tracking-tight text-black">
             How It Works
           </h2>
-          <p className="text-xl font-medium tracking-tight text-white">
+          <p className="text-xl font-medium tracking-tight text-black">
             Follow these steps to transform your trading skills into funded success with ECAPFX.
           </p>
         </div>
@@ -98,8 +98,8 @@ const HowItWorks = () => {
           {/* Step 1 - Text Left, Image Right */}
           <Step custom={0} image={step1} alt="Person signing up on a form" contentVariants={contentVariants} imageVariants={imageVariants} badgeVariants={badgeVariants}>
             <h3 className="text-2xl sm:text-3xl font-bold text-[#1d8348] mt-8 leading-snug">Sign Up & Choose Challenge</h3>
-            <p className="text-white mt-4 text-base sm:text-lg leading-relaxed">Select a plan tailored to your trading expertise.</p>
-            <ul className="text-white mt-4 space-y-2 list-disc list-inside text-sm sm:text-base">
+            <p className="text-black mt-4 text-base sm:text-lg leading-relaxed">Select a plan tailored to your trading expertise.</p>
+            <ul className="text-black mt-4 space-y-2 list-disc list-inside text-sm sm:text-base">
               <li><strong>Beginner (Greenwave)</strong> - Ideal for new traders.</li>
               <li><strong>Experienced (El Verde)</strong> - Moderate risk options.</li>
               <li><strong>Seasoned (Ecosphere)</strong> - Designed for professionals.</li>
@@ -109,8 +109,8 @@ const HowItWorks = () => {
           {/* Step 2 - Image Left, Text Right */}
           <Step custom={1} image={step2} alt="Trading chart analysis" reverse contentVariants={contentVariants} imageVariants={imageVariants} badgeVariants={badgeVariants}>
             <h3 className="text-2xl sm:text-3xl font-bold text-[#1d8348] mt-8 leading-snug">Prove Your Skills</h3>
-            <p className="text-white mt-4 text-base sm:text-lg leading-relaxed">Demonstrate your trading ability in a simulated environment.</p>
-            <ul className="text-white mt-4 space-y-2 list-disc list-inside text-sm sm:text-base">
+            <p className="text-black mt-4 text-base sm:text-lg leading-relaxed">Demonstrate your trading ability in a simulated environment.</p>
+            <ul className="text-black mt-4 space-y-2 list-disc list-inside text-sm sm:text-base">
               <li><strong>Daily Loss Limit</strong> - Maintain discipline.</li>
               <li><strong>Max Drawdown</strong> - Stay within bounds.</li>
               <li><strong>Profit Targets</strong> - Achieve goals.</li>
@@ -123,8 +123,8 @@ const HowItWorks = () => {
           {/* Step 3 - Text Left, Image Right */}
           <Step custom={2} image={step3} alt="Passing funded account challenge" contentVariants={contentVariants} imageVariants={imageVariants} badgeVariants={badgeVariants}>
             <h3 className="text-2xl sm:text-3xl font-bold text-[#1d8348] mt-8 leading-snug">Get Funded</h3>
-            <p className="text-white mt-4 text-base sm:text-lg leading-relaxed">Unlock funding upon successful completion.</p>
-            <ul className="text-white mt-4 space-y-2 list-disc list-inside text-sm sm:text-base">
+            <p className="text-black mt-4 text-base sm:text-lg leading-relaxed">Unlock funding upon successful completion.</p>
+            <ul className="text-black mt-4 space-y-2 list-disc list-inside text-sm sm:text-base">
               <li>KYC & AML checks completed.</li>
               <li>Funding access within 5 days.</li>
               <li>Review <a href="/rules" className="text-[#1d8348] hover:underline">Rules</a> & <a href="/terms" className="text-[#1d8348] hover:underline">Terms</a>.</li>
@@ -134,8 +134,8 @@ const HowItWorks = () => {
           {/* Step 4 - Image Left, Text Right */}
           <Step custom={3} image={step4} alt="Global trading market" reverse contentVariants={contentVariants} imageVariants={imageVariants} badgeVariants={badgeVariants}>
             <h3 className="text-2xl sm:text-3xl font-bold text-[#1d8348] mt-8 leading-snug">Trade, Earn & Impact</h3>
-            <p className="text-white mt-4 text-base sm:text-lg leading-relaxed">Trade with purpose as a funded trader.</p>
-            <ul className="text-white mt-4 space-y-2 list-disc list-inside text-sm sm:text-base">
+            <p className="text-black mt-4 text-base sm:text-lg leading-relaxed">Trade with purpose as a funded trader.</p>
+            <ul className="text-black mt-4 space-y-2 list-disc list-inside text-sm sm:text-base">
               <li>Profit share at 80/20.</li>
               <li>1% profit donation post year one.</li>
               <li>Contribute to a sustainable future.</li>
@@ -153,7 +153,7 @@ const HowItWorks = () => {
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="getstarted-button px-5 py-2.5 sm:text-lg text-white font-roboto bg-gradient-to-r from-[#1a6f3d] via-[#1d8348] to-[#145c33] hover:from-[#156437]/90 hover:via-[#1d8348]/90 hover:to-[#0e3f24]/90 hover:text-black hover:shadow-md hover:shadow-green-700/50 rounded-2xl transition duration-300 ease-in-out hover:scale-105 select-none z-20 pointer-events-auto"
+          className="getstarted-button sm:text-xl px-5 py-2.5 text-white font-roboto bg-gradient-to-r from-[#1a6f3d] via-[#1d8348] to-[#145c33] hover:from-[#156437]/90 hover:via-[#1d8348]/90 hover:to-[#0e3f24]/90 hover:text-black hover:shadow-md hover:shadow-green-700/50 rounded-2xl transition duration-300 ease-in-out hover:scale-105 select-none z-20 pointer-events-auto"
         >
           Get Started Now
         </motion.a>
@@ -162,7 +162,6 @@ const HowItWorks = () => {
       {/* Disclaimer */}
       <section className="pb-16 px-6 sm:px-12 text-center">
         <p className="text-[#f7e59f] text-base font-medium leading-relaxed">
-          ECAPFX is not a financial institution · This website does not promote or sell financial products or services.
         </p>
       </section>
 
@@ -194,7 +193,7 @@ const Step = ({ custom, image, alt, reverse, children, contentVariants, imageVar
       <motion.div
         custom={custom}
         variants={contentVariants}
-        className="relative bg-gradient-to-br from-[#1a1a1a] to-[#222222] p-8 sm:p-10 rounded-2xl shadow-xl border border-[#1d8348]/20 flex-1 z-10"
+        className="relative bg-gradient-to-br from-[#f5f5f5] to-[#e0e0e0] p-8 sm:p-10 rounded-2xl shadow-xl border border-[#1d8348]/20 flex-1 z-10"
       >
         <motion.div
           variants={badgeVariants}

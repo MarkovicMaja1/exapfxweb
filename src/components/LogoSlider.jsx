@@ -155,7 +155,7 @@ const LogoSlider = () => {
         >
           <polygon fill="#151515" points="0,0 100,0 100,100 0,100" />
         </svg>
-        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-[#151515] to-white" />
+        {/* <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-[#151515] to-white" /> */}
       </div>
     </>
   );
