@@ -135,24 +135,26 @@ const Footer = () => {
           </div>
         </div>
         <div className="footer-primary-row-3 mt-10">
-          <div className="flex justify-center items-center w-full">
-            <p className="footer-primary-section-title footer-primary-section-title--small text-sm font-semibold leading-6 text-white mr-4">
+          <div className="w-full flex flex-col items-center justify-center">
+            <p className="footer-primary-section-title footer-primary-section-title--small text-sm font-semibold leading-6 text-white mb-4">
               {/* Payment Options */}
             </p>
-            <div className="footer-primary-payments-list flex gap-x-4 flex-wrap items-center">
-              <img src={visa} alt="Visa" className="h-3.5 w-auto" />
+            <div className="footer-primary-payments-list flex flex-row flex-wrap justify-center items-center gap-4">
+              <img src={visa} alt="Visa" className="h-4 w-auto" />
               <img src={mastercard} alt="Mastercard" className="h-5 w-auto" />
               <img src={paypal} alt="Paypal" className="h-5 w-auto" />
-              <img src={stripe} alt="Stripe" className="h-9 w-auto" />
+              <img src={stripe} alt="Stripe" className="h-6 w-auto" />
               <img src={confirmoBlack} alt="Confirmo" className="h-6 w-auto" />
               <img src={coinpayments} alt="CoinPayments" className="h-5 w-auto" />
             </div>
           </div>
         </div>
-        <div className="mt-16 pt-8 sm:mt-10 md:flex md:items-center justify-center lg:mt-10 border-t border-gray-700">
-          <small className="mt-8 text-xs leading-5 text-white-500 md:order-1 md:mt-0 max-sm:text-center paddingCopyright">
-            © 2025 ECAPFX. All rights reserved. Company ID: 16330400, 166 Willingale Road, Loughton, IG10 2DA, United Kingdom.
-          </small>
+        <div className="mt-16 pt-8 sm:mt-10 lg:mt-10 border-t border-gray-700 w-full">
+          <div className="w-full flex justify-center px-4">
+            <small className="text-xs leading-5 text-center text-white max-w-full">
+              © 2025 ECAPFX. All rights reserved. Company ID: 16330400, 166 Willingale Road, Loughton, IG10 2DA, United Kingdom.
+            </small>
+          </div>
         </div>
         <style jsx>{`
           .additionalInfos {
@@ -186,20 +188,17 @@ const Footer = () => {
               margin-left: 0px !important;
             }
             .footer-primary-payments-list {
-              gap: 1rem;
-              justify-content: center;
+              display: flex !important;
+              flex-direction: row !important;
+              flex-wrap: wrap !important;
+              justify-content: center !important;
+              align-items: center !important;
+              gap: 1rem !important;
             }
-            .footer-primary-row-3 .flex {
+            .footer-primary-row-3 > .flex {
               flex-direction: column;
               align-items: center;
               gap: 1rem;
-            }
-          }
-          @media (min-width: 769px) {
-            .footer-primary-row-3 .flex {
-              flex-direction: row;
-              align-items: center;
-              justify-content: center;
             }
           }
         `}</style>

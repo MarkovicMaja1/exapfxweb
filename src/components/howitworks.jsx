@@ -104,7 +104,7 @@ const HowItWorks = () => {
                 <li><strong>Seasoned (Ecosphere)</strong> - Designed for professionals.</li>
               </ul>
             </div>
-            <div className="flex-shrink-0 w-full sm:w-1/3 h-48 sm:h-full">
+            <div className="flex-shrink-0 w-full sm:w-1/3 h-58 sm:h-full">
               <img src={step1} alt="Person signing up on a form" className="w-full h-full object-cover rounded-xl" />
             </div>
           </motion.div>
@@ -135,7 +135,7 @@ const HowItWorks = () => {
                 <li><strong>Profit Split</strong> - Begin at 80/20.</li>
               </ul>
             </div>
-            <div className="flex-shrink-0 w-full sm:w-1/3 h-48 sm:h-full">
+            <div className="flex-shrink-0 w-full sm:w-1/3 h-58 sm:h-full">
               <img src={step2} alt="Trading chart analysis" className="w-full h-full object-cover rounded-xl" />
             </div>
           </motion.div>
@@ -163,7 +163,7 @@ const HowItWorks = () => {
                 <li>Review <a href="/rules" className="text-[#1d8348] hover:underline">Rules</a> & <a href="/terms" className="text-[#1d8348] hover:underline">Terms</a>.</li>
               </ul>
             </div>
-            <div className="flex-shrink-0 w-full sm:w-1/3 h-48 sm:h-full">
+            <div className="flex-shrink-0 w-full sm:w-1/3 h-58 sm:h-full">
               <img src={step3} alt="Passing funded account challenge" className="w-full h-full object-cover rounded-xl" />
             </div>
           </motion.div>
@@ -191,7 +191,7 @@ const HowItWorks = () => {
                 <li>Contribute to a sustainable future.</li>
               </ul>
             </div>
-            <div className="flex-shrink-0 w-full sm:w-1/3 h-48 sm:h-full">
+            <div className="flex-shrink-0 w-full sm:w-1/3 h-58 sm:h-full">
               <img src={step4} alt="Global trading market" className="w-full h-full object-cover rounded-xl" />
             </div>
           </motion.div>
