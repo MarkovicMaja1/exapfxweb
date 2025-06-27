@@ -69,7 +69,7 @@ const AboutUs = () => {
         </svg>
 
         {/* Gradient fade shadow just below triangle */}
-        <div className="absolute top-[75%] w-full h-24 bg-gradient-to-b from-[#151515]/80 to-white"></div>
+        
       </div>
 
 
