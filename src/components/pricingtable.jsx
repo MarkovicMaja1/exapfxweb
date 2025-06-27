@@ -123,8 +123,8 @@ function PricingTable() {
         "Duration": ["Unlimited", "Unlimited", "Indefinite"],
         "Leverage": ["Up to 1:50", "Up to 1:50", "Up to 1:50"],
         "Min Trading Days": ["7 Days", "None", "None"],
-        "Max Loss": { USD: ["$1,500 (6%)", "$1,000 (4%)", "None"], GBP: ["£1,500 (6%)", "£1,000 (4%)", "None"], EUR: ["€1,500 (6%)", "£1,000 (4%)", "None"] },
-        "Daily Loss": { USD: ["$750 (3%)", "$500 (2%)", "None"], GBP: ["£750 (3%)", "£500 (2%)", "None"], EUR: ["€750 (3%)", "£500 (2%)", "None"] },
+        "Max Loss": { USD: ["$1,500 (6%)", "$1,000 (4%)", "None"], GBP: ["£1,500 (6%)", "£1,000 (4%)", "None"], EUR: ["€1,500 (6%)", "€1,000 (4%)", "None"] },
+        "Daily Loss": { USD: ["$750 (3%)", "$500 (2%)", "None"], GBP: ["£750 (3%)", "£500 (2%)", "None"], EUR: ["€750 (3%)", "€500 (2%)", "None"] },
         "Profit Share": ["None", "None", "90/10"],
         "Fee": { USD: ["$125", "Refunded", ""], GBP: ["£100", "Refunded", ""], EUR: ["€110", "Refunded", ""] },
         "Bonus After Stage": { USD: ["", "", ""], GBP: ["", "", ""], EUR: ["", "", ""] }
@@ -365,37 +365,37 @@ function PricingTable() {
   const availableSizes = getAvailableSizes();
 
   const renderDesktopTable = () => (
-    <table className="w-full table-auto" aria-label="Trading Challenge Details">
-      <thead>
-        <tr className="bg-gray-100 text-gray-800" style={{ borderBottom: '2px solid #e5e7eb' }}>
-          <th className="p-4 text-left font-medium text-sm sm:text-base sticky left-0 bg-gray-100" style={{ color: '#1f2937', zIndex: 1, minWidth: '120px' }}>Metrics</th>
-          {columnHeaders.slice(0, columns).map((header, index) => (
-            header ? (
-              <th key={index} className="p-4 text-left font-medium text-sm sm:text-base" style={{ color: '#1f2937', minWidth: '120px' }}>
-                {header}
-              </th>
-            ) : null
+  <table className="w-full table-auto" aria-label="Trading Challenge Details" style={{ borderSpacing: '0' }}>
+    <thead>
+      <tr className="bg-gray-100 text-gray-800" style={{ borderBottom: '2px solid #e5e7eb', borderRadius: '0.5rem 0.5rem 0 0', overflow: 'hidden' }}>
+        <th className="p-4 text-left font-medium text-sm sm:text-base sticky left-0 bg-gray-100" style={{ color: '#1f2937', zIndex: 1, minWidth: '120px' }}>Metrics</th>
+        {columnHeaders.slice(0, columns).map((header, index) => (
+          header ? (
+            <th key={index} className="p-4 text-left font-medium text-sm sm:text-base" style={{ color: '#1f2937', minWidth: '120px' }}>
+              {header}
+            </th>
+          ) : null
+        ))}
+      </tr>
+    </thead>
+    <tbody>
+      {metrics.map((metric) => (
+        <tr key={metric} className="border-b border-gray-200 hover:bg-gray-100">
+          <td className="p-4 font-medium text-sm sm:text-base sticky left-0 bg-white" style={{ color: '#374151', zIndex: 1, minWidth: '120px' }}>{metric}</td>
+          {getTableData(metric).slice(0, columns).map((value, index) => (
+            <td
+              key={index}
+              className={`p-4 text-sm sm:text-base ${isAnimating ? 'animate-change' : ''}`}
+              style={{ color: '#4b5563', minWidth: '120px' }}
+            >
+              {value}
+            </td>
           ))}
         </tr>
-      </thead>
-      <tbody>
-        {metrics.map((metric) => (
-          <tr key={metric} className="border-b border-gray-200 hover:bg-gray-100">
-            <td className="p-4 font-medium text-sm sm:text-base sticky left-0 bg-white" style={{ color: '#374151', zIndex: 1, minWidth: '120px' }}>{metric}</td>
-            {getTableData(metric).slice(0, columns).map((value, index) => (
-              <td
-                key={index}
-                className={`p-4 text-sm sm:text-base ${isAnimating ? 'animate-change' : ''}`}
-                style={{ color: '#4b5563', minWidth: '120px' }}
-              >
-                {value}
-              </td>
-            ))}
-          </tr>
-        ))}
-      </tbody>
-    </table>
-  );
+      ))}
+    </tbody>
+  </table>
+);
 
   return (
     <div
@@ -620,59 +620,53 @@ function PricingTable() {
             </div>
 
             {/* Right side table */}
-            <div className="lg:col-span-9">
-              <div className="bg-white rounded-lg shadow-md" style={{ border: '1px solid #e5e7eb', position: 'relative' }}>
-                <div className="table-container">
-                  <div className="desktop-table hidden sm:block overflow-x-auto">
+            <div className="lg:col-span-9 h-full">
+              <div className="bg-white rounded-lg shadow-md" style={{ border: '1px solid #e5e7eb', minHeight: '100%', position: 'relative', overflow: 'hidden' }}>
+                <div className="table-container h-full p-0">
+                  <div className="desktop-table hidden sm:block">
                     {renderDesktopTable()}
                   </div>
                   <div className="mobile-table block sm:hidden">
-                    <div className="desktop-table hidden sm:block overflow-x-auto">
-                      {renderDesktopTable()}
-                    </div>
-                    <div className="mobile-table block sm:hidden">
-                      {/* Swiper implementation as in original code */}
-                      <Swiper
-                        modules={[Pagination, Navigation]}
-                        spaceBetween={10}
-                        slidesPerView={1}
-                        pagination={{ clickable: true }}
-                        navigation
-                        style={{ padding: '30px 10px 40px 10px' }}
-                      >
-                        {columnHeaders.slice(0, columns).map((header, index) => (
-                          header ? (
-                            <SwiperSlide key={index}>
-                              <table className="w-full table-auto" aria-label={`Trading Challenge Details - ${header}`}>
-                                <thead>
-                                  <tr className="bg-gray-100 text-gray-800" style={{ borderBottom: '2px solid #e5e7eb' }}>
-                                    <th className="p-4 text-left font-medium text-sm" style={{ color: '#1f2937', minWidth: '100px' }}>Metrics</th>
-                                    <th className="p-4 text-left font-medium text-sm" style={{ color: '#1f2937', minWidth: '100px' }}>{header}</th>
+                    <Swiper
+                      modules={[Pagination, Navigation]}
+                      spaceBetween={10}
+                      slidesPerView={1}
+                      pagination={{ clickable: true }}
+                      navigation
+                      style={{ padding: '30px 10px 40px 10px', height: '100%' }}
+                    >
+                      {columnHeaders.slice(0, columns).map((header, index) => (
+                        header ? (
+                          <SwiperSlide key={index}>
+                            <table className="w-full table-auto" aria-label={`Trading Challenge Details - ${header}`}>
+                              <thead>
+                                <tr className="bg-gray-100 text-gray-800" style={{ borderBottom: '2px solid #e5e7eb', borderRadius: '0.5rem 0.5rem 0 0', overflow: 'hidden' }}>
+                                  <th className="p-4 text-left font-medium text-sm" style={{ color: '#1f2937', minWidth: '100px' }}>Metrics</th>
+                                  <th className="p-4 text-left font-medium text-sm" style={{ color: '#1f2937', minWidth: '100px' }}>{header}</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                {metrics.map((metric) => (
+                                  <tr key={metric} className="border-b border-gray-200 hover:bg-gray-100">
+                                    <td className="p-4 font-medium text-sm" style={{ color: '#374151', minWidth: '100px' }}>{metric}</td>
+                                    <td
+                                      className={`p-4 text-sm ${isAnimating ? 'animate-change' : ''}`}
+                                      style={{ color: '#4b5563', minWidth: '100px' }}
+                                    >
+                                      {getTableData(metric)[index]}
+                                    </td>
                                   </tr>
-                                </thead>
-                                <tbody>
-                                  {metrics.map((metric) => (
-                                    <tr key={metric} className="border-b border-gray-200 hover:bg-gray-100">
-                                      <td className="p-4 font-medium text-sm" style={{ color: '#374151', minWidth: '100px' }}>{metric}</td>
-                                      <td
-                                        className={`p-4 text-sm ${isAnimating ? 'animate-change' : ''}`}
-                                        style={{ color: '#4b5563', minWidth: '100px' }}
-                                      >
-                                        {getTableData(metric)[index]}
-                                      </td>
-                                    </tr>
-                                  ))}
-                                </tbody>
-                              </table>
-                            </SwiperSlide>
-                          ) : null
-                        ))}
-                      </Swiper>
-                    </div>
+                                ))}
+                              </tbody>
+                            </table>
+                          </SwiperSlide>
+                        ) : null
+                      ))}
+                    </Swiper>
                   </div>
                 </div>
                 <div className="p-6 text-center border-t border-gray-200" style={{ backgroundColor: '#f9fafb', position: 'sticky', bottom: 0, left: 0, width: '100%', zIndex: 2 }}>
-                  <p className="text-gray-600 mb-4 max-w-lg mx-auto text-sm sm:text-base" style={{ color: '#6b7280' }}>
+                  <p className="text-gray-600 mt-10 mb-4 max-w-lg mx-auto text-sm sm:text-base" style={{ color: '#6b7280' }}>
                     We allow our traders to trade on their own terms. Get Funded with No Consistency Rule!
                   </p>
                   <button
@@ -707,7 +701,7 @@ function PricingTable() {
           </div>
         </div>
       </div>
-            {/* Desktop separator */}
+      {/* Desktop separator */}
       <div className="absolute bottom-0 left-0 w-full h-2 bg-gradient-to-r from-transparent via-[#1d8348] to-transparent hidden shadow-lg sm:block z-20" />
       <style jsx>{`
         @media (max-width: 640px) {
