@@ -667,7 +667,7 @@ function PricingTable() {
                 </div>
                 <div className="p-6 text-center border-t border-gray-200" style={{ backgroundColor: '#f9fafb', position: 'sticky', bottom: 0, left: 0, width: '100%', zIndex: 2 }}>
                   <p className="text-gray-600 mt-10 mb-4 max-w-lg mx-auto text-sm sm:text-base" style={{ color: '#6b7280' }}>
-                    We allow our traders to trade on their own terms. Get Funded with No Consistency Rule!
+                    We allow our traders to trade on their own terms. Get Funded with No Consistency Rule! 
                   </p>
                   <button
                     className="font-medium px-6 sm:px-8 py-2 sm:py-3 rounded-md text-sm sm:text-base text-white select-none"
