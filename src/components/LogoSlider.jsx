@@ -50,9 +50,9 @@ const LogoSlider = () => {
       role="region"
       aria-label="Logo Slider showcasing payment providers"
     >
-      <div className="relative w-full max-w-[1800px] mx-auto">
+      <div className="relative w-full max-w-[2000px] mx-auto">
         {/* Desktop Slider - Normal Direction */}
-        <div className="group flex overflow-hidden p-2 [gap:var(--gap)] flex-row [--duration:20s] [--gap:0px]">
+        <div className="group flex overflow-hidden p-2 [gap:var(--gap)] flex-row [--duration:20s] [-gap:0px]">
           {/* First track */}
           <div className="flex shrink-0 justify-around [gap:var(--gap)] animate-marquee flex-row">
             {[...logos, ...logos].map((logo, index) => (
@@ -130,8 +130,18 @@ const LogoSlider = () => {
         </div>
 
         {/* Enhanced Gradient Overlays */}
-        <div className="pointer-events-none absolute inset-y-0 left-0 w-[15%] bg-gradient-to-r from-[#151515] via-[#151515]/90 to-transparent z-10 h-full" />
-        <div className="pointer-events-none absolute inset-y-0 right-0 w-[15%] bg-gradient-to-l from-[#151515] via-[#151515]/90 to-transparent z-10 h-full" />
+        <div
+          className="gradient-overlay pointer-events-none absolute inset-y-0 left-0 w-[35%] z-10 h-full"
+          style={{
+            backgroundImage: 'linear-gradient(to right, rgb(21, 21, 21), rgb(21, 21, 21), transparent)',
+          }}
+        />
+        <div
+          className="gradient-overlay pointer-events-none absolute inset-y-0 right-0 w-[35%] z-10 h-full"
+          style={{
+            backgroundImage: 'linear-gradient(to left, rgb(21, 21, 21), rgb(21, 21, 21), transparent)',
+          }}
+        />
       </div>
     </section>
   );
