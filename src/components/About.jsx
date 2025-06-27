@@ -5,6 +5,17 @@ import image2 from '../assets/growth.png';
 const AboutUs = () => {
   return (
     <div>
+      {/* TOP GRADIENT DIV ABOVE SECTION */}
+      <div className="relative w-full h-32 overflow-hidden bg-[#151515]">
+        <svg
+          className="absolute bottom-0 left-0 w-full h-full"
+          viewBox="0 0 100 100"
+          preserveAspectRatio="none"
+        >
+          <polygon fill="#e5e5e5" points="0,0 50,100 100,0" />
+        </svg>
+      </div>
+
       <section className="bg-[#151515] text-white pt-24 pb-14">
         <div className="mx-auto px-4 max-w-screen-2xl relative isolate">
           <div className="mx-auto lg:max-w-4xl text-center">
@@ -59,7 +70,6 @@ const AboutUs = () => {
 
       {/* GRADIENT DIV BELOW SECTION */}
       <div className="relative w-full h-32 overflow-hidden">
-        {/* Triangle shape */}
         <svg
           className="absolute top-0 left-0 w-full h-full"
           viewBox="0 0 100 100"
@@ -67,11 +77,7 @@ const AboutUs = () => {
         >
           <polygon fill="#151515" points="0,0 50,100 100,0" />
         </svg>
-
-        {/* Gradient fade shadow just below triangle */}
-        
       </div>
-
 
       <style jsx>{`
         @media (max-width: 768px) {

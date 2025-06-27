@@ -166,7 +166,8 @@ const HowItWorks = () => {
       </section>
 
       {/* Separator */}
-      <div className="absolute bottom-0 left-0 w-full h-2 bg-gradient-to-r from-transparent via-[#1d8348] to-transparent shadow-lg" />
+      {/* <div className="absolute bottom-0 left-0 w-full h-2 bg-gradient-to-r from-transparent via-[#1d8348] to-transparent shadow-lg" /> */}
+
     </section>
   );
 };
