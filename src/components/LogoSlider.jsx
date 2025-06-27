@@ -44,106 +44,120 @@ const LogoSlider = () => {
   }, [logos.length]);
 
   return (
-    <section
-      id="logo-slider"
-      className="relative flex w-full flex-col items-center justify-center overflow-hidden bg-[#151515] py-8"
-      role="region"
-      aria-label="Logo Slider showcasing payment providers"
-    >
-      <div className="relative w-full max-w-[2000px] mx-auto">
-        {/* Desktop Slider - Normal Direction */}
-        <div className="group flex overflow-hidden p-2 [gap:var(--gap)] flex-row [--duration:20s] [-gap:0px]">
-          {/* First track */}
-          <div className="flex shrink-0 justify-around [gap:var(--gap)] animate-marquee flex-row">
-            {[...logos, ...logos].map((logo, index) => (
-              <div key={`logo-${index}`} className="mr-2 sm:mr-2.5 inline-block">
-                <img
-                  alt={`Payment provider logo ${index % logos.length + 1}`}
-                  loading="lazy"
-                  width="100"
-                  height="100"
-                  decoding="async"
-                  className="w-16 sm:w-20 xl:w-24"
-                  style={{ color: 'transparent' }}
-                  src={logo}
-                />
-              </div>
-            ))}
-          </div>
-          
-          {/* Second track */}
-          <div className="flex shrink-0 justify-around [gap:var(--gap)] animate-marquee flex-row">
-            {[...logos, ...logos].map((logo, index) => (
-              <div key={`logo-2-${index}`} className="mr-2 sm:mr-2.5 inline-block">
-                <img
-                  alt={`Payment provider logo ${index % logos.length + 1}`}
-                  loading="lazy"
-                  width="100"
-                  height="100"
-                  decoding="async"
-                  className="w-16 sm:w-20 xl:w-24"
-                  style={{ color: 'transparent' }}
-                  src={logo}
-                />
-              </div>
-            ))}
-          </div>
-        </div>
+    <>
+      <section
+        id="logo-slider"
+        className="relative flex w-full flex-col items-center justify-center overflow-hidden bg-[#151515] py-8"
+        role="region"
+        aria-label="Logo Slider showcasing payment providers"
+      >
+        <div className="relative w-full max-w-[2000px] mx-auto">
+          {/* Desktop Slider - Normal Direction */}
+          <div className="group flex overflow-hidden p-2 [gap:var(--gap)] flex-row [--duration:20s] [--gap:0px]">
+            {/* First track */}
+            <div className="flex shrink-0 justify-around [gap:var(--gap)] animate-marquee flex-row">
+              {[...logos, ...logos].map((logo, index) => (
+                <div key={`logo-${index}`} className="mr-2 sm:mr-2.5 inline-block">
+                  <img
+                    alt={`Payment provider logo ${index % logos.length + 1}`}
+                    loading="lazy"
+                    width="100"
+                    height="100"
+                    decoding="async"
+                    className="w-16 sm:w-20 xl:w-24"
+                    style={{ color: 'transparent' }}
+                    src={logo}
+                  />
+                </div>
+              ))}
+            </div>
 
-        {/* Mobile Slider - Reverse Direction */}
-        <div className="group flex overflow-hidden p-2 [gap:var(--gap)] flex-row [--duration:20s] [--gap:0px] md:hidden">
-          {/* First track */}
-          <div className="flex shrink-0 justify-around [gap:var(--gap)] animate-marquee flex-row [animation-direction:reverse]">
-            {[...logos, ...logos].map((logo, index) => (
-              <div key={`logo-reverse-${index}`} className="mr-2 sm:mr-2.5 inline-block">
-                <img
-                  alt={`Payment provider logo ${index % logos.length + 1}`}
-                  loading="lazy"
-                  width="100"
-                  height="100"
-                  decoding="async"
-                  className="w-16 sm:w-20 xl:w-24"
-                  style={{ color: 'transparent' }}
-                  src={logo}
-                />
-              </div>
-            ))}
+            {/* Second track */}
+            <div className="flex shrink-0 justify-around [gap:var(--gap)] animate-marquee flex-row">
+              {[...logos, ...logos].map((logo, index) => (
+                <div key={`logo-2-${index}`} className="mr-2 sm:mr-2.5 inline-block">
+                  <img
+                    alt={`Payment provider logo ${index % logos.length + 1}`}
+                    loading="lazy"
+                    width="100"
+                    height="100"
+                    decoding="async"
+                    className="w-16 sm:w-20 xl:w-24"
+                    style={{ color: 'transparent' }}
+                    src={logo}
+                  />
+                </div>
+              ))}
+            </div>
           </div>
-          
-          {/* Second track */}
-          <div className="flex shrink-0 justify-around [gap:var(--gap)] animate-marquee flex-row [animation-direction:reverse]">
-            {[...logos, ...logos].map((logo, index) => (
-              <div key={`logo-reverse-2-${index}`} className="mr-2 sm:mr-2.5 inline-block">
-                <img
-                  alt={`Payment provider logo ${index % logos.length + 1}`}
-                  loading="lazy"
-                  width="100"
-                  height="100"
-                  decoding="async"
-                  className="w-16 sm:w-20 xl:w-24"
-                  style={{ color: 'transparent' }}
-                  src={logo}
-                />
-              </div>
-            ))}
-          </div>
-        </div>
 
-        {/* Enhanced Gradient Overlays */}
-        <div
-          className="gradient-overlay pointer-events-none absolute inset-y-0 left-0 w-[35%] z-10 h-full"
-          style={{
-            backgroundImage: 'linear-gradient(to right, rgb(21, 21, 21), rgb(21, 21, 21), transparent)',
-          }}
-        />
-        <div
-          className="gradient-overlay pointer-events-none absolute inset-y-0 right-0 w-[35%] z-10 h-full"
-          style={{
-            backgroundImage: 'linear-gradient(to left, rgb(21, 21, 21), rgb(21, 21, 21), transparent)',
-          }}
-        />
+          {/* Mobile Slider - Reverse Direction */}
+          <div className="group flex overflow-hidden p-2 [gap:var(--gap)] flex-row [--duration:20s] [--gap:0px] md:hidden">
+            {/* First track */}
+            <div className="flex shrink-0 justify-around [gap:var(--gap)] animate-marquee flex-row [animation-direction:reverse]">
+              {[...logos, ...logos].map((logo, index) => (
+                <div key={`logo-reverse-${index}`} className="mr-2 sm:mr-2.5 inline-block">
+                  <img
+                    alt={`Payment provider logo ${index % logos.length + 1}`}
+                    loading="lazy"
+                    width="100"
+                    height="100"
+                    decoding="async"
+                    className="w-16 sm:w-20 xl:w-24"
+                    style={{ color: 'transparent' }}
+                    src={logo}
+                  />
+                </div>
+              ))}
+            </div>
+
+            {/* Second track */}
+            <div className="flex shrink-0 justify-around [gap:var(--gap)] animate-marquee flex-row [animation-direction:reverse]">
+              {[...logos, ...logos].map((logo, index) => (
+                <div key={`logo-reverse-2-${index}`} className="mr-2 sm:mr-2.5 inline-block">
+                  <img
+                    alt={`Payment provider logo ${index % logos.length + 1}`}
+                    loading="lazy"
+                    width="100"
+                    height="100"
+                    decoding="async"
+                    className="w-16 sm:w-20 xl:w-24"
+                    style={{ color: 'transparent' }}
+                    src={logo}
+                  />
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Enhanced Gradient Overlays */}
+          <div
+            className="gradient-overlay pointer-events-none absolute inset-y-0 left-0 w-[35%] z-10 h-full"
+            style={{
+              backgroundImage: 'linear-gradient(to right, rgb(21, 21, 21), rgba(21, 21, 21, 0.8), rgba(21, 21, 21, 0.4), transparent)',
+            }}
+          />
+          <div
+            className="gradient-overlay pointer-events-none absolute inset-y-0 right-0 w-[35%] z-10 h-full"
+            style={{
+              backgroundImage: 'linear-gradient(to left, rgb(21, 21, 21), rgba(21, 21, 21, 0.8), rgba(21, 21, 21, 0.4), transparent)',
+            }}
+          />
+        </div>
+      </section>
+
+      {/* Gradient Divider Below Logo Slider */}
+      <div className="relative w-full h-4 overflow-hidden">
+        <svg
+          className="absolute top-0 left-0 w-full h-full"
+          viewBox="0 0 100 100"
+          preserveAspectRatio="none"
+        >
+          <polygon fill="#151515" points="0,0 100,0 100,100 0,100" />
+        </svg>
+        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-[#151515] to-white" />
       </div>
-    </section>
+    </>
   );
 };
 
