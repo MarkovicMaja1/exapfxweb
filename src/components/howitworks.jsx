@@ -23,13 +23,15 @@ const HowItWorks = () => {
     hidden: (i) => ({
       opacity: 0,
       x: i % 2 === 0 ? -window.innerWidth : window.innerWidth, // Left for even, right for odd
+      scale: 0.2, // Start smaller
     }),
     visible: (i) => ({
       opacity: 1,
       x: 0,
+      scale: 1, // Scale to full size
       transition: { 
-        duration: 1.0, 
-        ease: 'easeInOut',
+        duration: 1.3, // Slightly longer for smooth zoom
+        ease: [0.4, 0, 0.2, 1], // Custom easing for natural feel
         delay: i * 0.2,
       },
     }),
@@ -39,13 +41,15 @@ const HowItWorks = () => {
     hidden: (i) => ({
       opacity: 0,
       x: i % 2 === 0 ? window.innerWidth : -window.innerWidth, // Right for even, left for odd
+      scale: 0.2, // Start smaller
     }),
     visible: (i) => ({
       opacity: 1,
       x: 0,
+      scale: 1, // Scale to full size
       transition: { 
-        duration: 1.0, 
-        ease: 'easeInOut',
+        duration: 1.3, // Slightly longer for smooth zoom
+        ease: [0.4, 0, 0.2, 1], // Custom easing for natural feel
         delay: i * 0.2,
       },
     }),
@@ -53,7 +57,7 @@ const HowItWorks = () => {
 
   const badgeVariants = {
     hidden: { scale: 0 },
-    visible: { scale: 1, transition: { duration: 0.8, ease: 'easeInOut' } },
+    visible: { scale: 1, transition: { duration: 0.5, ease: 'easeOut' } },
   };
 
   return (
