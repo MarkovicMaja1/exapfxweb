@@ -693,7 +693,7 @@ function PricingTable() {
                     }}
                     onClick={() => window.open('https://active.ecapfx.com/auth/signin', '_blank', 'noopener,noreferrer')}
                   >
-                    Start Challenge
+                    Start Challenge 
                   </button>
                 </div>
               </div>
