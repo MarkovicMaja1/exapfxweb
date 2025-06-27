@@ -1,17 +1,13 @@
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 const Contact = () => {
+  // Only scroll to top if no hash is present
   useEffect(() => {
-    window.scrollTo(0, 0);
-    const handleVisibilityChange = () => {
-      if (document.visibilityState === "visible") {
-        window.scrollTo(0, 0);
-      }
-    };
-    document.addEventListener("visibilitychange", handleVisibilityChange);
-    return () => {
-      document.removeEventListener("visibilitychange", handleVisibilityChange);
-    };
+    if (!window.location.hash) {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+    // Removed visibilitychange listener to avoid interference
   }, []);
 
   const [formData, setFormData] = useState({ name: "", email: "", message: "" });
@@ -49,7 +45,7 @@ const Contact = () => {
 
   return (
     <section
-       className="bg-gradient-to-br from-[#0e404f] via-[#0e404f] to-green-800 sm:from-[#0e404f] sm:via-[#0e404f] sm:to-green-900 dark:from-slate-800 dark:via-slate-700 dark:to-green-800 mt-16 relative overflow-hidden min-h-screen font-sans text-white"
+      className="bg-gradient-to-br from-[#0e404f] via-[#0e404f] to-green-800 sm:from-[#0e404f] sm:via-[#0e404f] sm:to-green-900 dark:from-slate-800 dark:via-slate-700 dark:to-green-800 mt-16 relative overflow-hidden min-h-screen font-sans text-white"
       id="contact"
     >
       <div className="absolute inset-0 bg-black/20 z-0"></div>
@@ -253,6 +249,21 @@ const Contact = () => {
               </form>
             </div>
           </div>
+        </div>
+        {/* Navigation Links to Homepage Sections */}
+        <div className="mt-8 flex flex-col items-center space-y-4 sm:flex-row sm:space-y-0 sm:space-x-6">
+          <Link
+            to="/#team"
+            className="text-[#1d8348] hover:text-white font-semibold text-lg transition duration-300"
+          >
+            Go to Team Section
+          </Link>
+          <Link
+            to="/#about"
+            className="text-[#1d8348] hover:text-white font-semibold text-lg transition duration-300"
+          >
+            Go to About Us
+          </Link>
         </div>
       </div>
     </section>

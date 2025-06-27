@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -6,9 +7,11 @@ import { motion, AnimatePresence } from 'framer-motion';
 const Faq = () => {
   const [openIndex, setOpenIndex] = useState(null);
 
-  // Initialize AOS and reset scroll position
+  // Initialize AOS and reset scroll position only if no hash
   useEffect(() => {
-    window.scrollTo(0, 0);
+    if (!window.location.hash) {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
     AOS.init({
       duration: 800,
       easing: 'ease-in-out',
@@ -100,7 +103,7 @@ const Faq = () => {
   return (
     <section
       id="faq"
-       className="bg-gradient-to-br from-[#0e404f] via-[#0e404f] to-green-800 sm:from-[#0e404f] sm:via-[#0e404f] sm:to-green-900 dark:from-slate-800 dark:via-slate-700 dark:to-green-800 mt-16 relative overflow-hidden min-h-screen font-sans text-white"
+      className="bg-gradient-to-br from-[#0e404f] via-[#0e404f] to-green-800 sm:from-[#0e404f] sm:via-[#0e404f] sm:to-green-900 dark:from-slate-800 dark:via-slate-700 dark:to-green-800 mt-16 relative overflow-hidden min-h-screen font-sans text-white"
     >
       <div className="absolute inset-0 bg-black/20 z-0"></div>
       <div className="absolute inset-0 opacity-5 sm:opacity-10 hidden sm:block">
@@ -196,6 +199,10 @@ const Faq = () => {
             </div>
           ))}
         </div>
+
+        {/* Navigation Links to Homepage Sections */}
+        <div className="mt-8 flex flex-col items-center space-y-4 sm:flex-row sm:space-y-0 sm:space-x-6">
+         </div>
       </div>
 
       {/* Section Divider Line */}

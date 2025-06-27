@@ -1,6 +1,14 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { Link } from 'react-router-dom'; // Added for navigation links
 
-function ClaimPolicy() {
+const ClaimPolicy = () => {
+  // Only scroll to top if no hash is present
+  useEffect(() => {
+    if (!window.location.hash) {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  }, []);
+
   return (
     <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 text-black-100 min-h-screen pt-20 pb-12">
       <h4 className="text-4xl text-center font-bold text-[#1d8348] mt-5 mb-10">Claim Policy</h4>

@@ -1,6 +1,14 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { Link } from 'react-router-dom'; // Added for navigation links
 
-function TermsAndConditions() {
+const TermsAndConditions = () => {
+  // Only scroll to top if no hash is present
+  useEffect(() => {
+    if (!window.location.hash) {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  }, []);
+
   return (
     <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 text-black-100 min-h-screen pt-20 pb-12">
       <h4 className="text-4xl text-center font-bold text-[#1d8348] mt-5 mb-10">Terms and Conditions</h4>
@@ -132,13 +140,13 @@ function TermsAndConditions() {
         <h6 className="text-xl font-semibold text-black-200 mb-2">9. Privacy and Data Protection</h6>
         <p className="text-black-400">
           We are committed to protecting your personal data under UK GDPR and the Data Protection Act 2018. Please refer to our{' '}
-          <a href="/privacy-policy" className="text-[#1d8348] hover:text-[#f9e79f] underline">
+          <Link to="/privacy-policy" className="text-[#1d8348] hover:text-[#f9e79f] underline">
             Privacy Policy
-          </a>{' '}
+          </Link>{' '}
           and{' '}
-          <a href="/cookie-policy" className="text-[#1d8348] hover:text-[#f9e79f] underline">
+          <Link to="/cookie-policy" className="text-[#1d8348] hover:text-[#f9e79f] underline">
             Cookie Policy
-          </a>{' '}
+          </Link>{' '}
           for full details on how we handle your data.
         </p>
       </section>
@@ -147,9 +155,9 @@ function TermsAndConditions() {
         <h6 className="text-xl font-semibold text-black-200 mb-2">10. Complaints and Dispute Resolution</h6>
         <p className="text-black-400">
           If you are dissatisfied with our services, please refer to our{' '}
-          <a href="/complaints-policy" className="text-[#1d8348] hover:text-[#f9e79f] underline">
+          <Link to="/complaints-policy" className="text-[#1d8348] hover:text-[#f9e79f] underline">
             Complaints Policy
-          </a>{' '}
+          </Link>{' '}
           to raise your concern.
           <br />
           If your complaint is unresolved after 8 weeks, and you are an eligible complainant, you may refer the case to the UK Financial Ombudsman Service.
@@ -305,8 +313,24 @@ function TermsAndConditions() {
           </a>
         </p>
       </section>
+
+      {/* Navigation Links to Homepage Sections */}
+      <div className="mt-8 flex flex-col items-center space-y-4 sm:flex-row sm:space-y-0 sm:space-x-6">
+        <Link
+          to="/#team"
+          className="text-[#1d8348] hover:text-[#f9e79f] font-semibold text-lg transition duration-300"
+        >
+          Go to Team Section
+        </Link>
+        <Link
+          to="/#about"
+          className="text-[#1d8348] hover:text-[#f9e79f] font-semibold text-lg transition duration-300"
+        >
+          Go to About Us
+        </Link>
+      </div>
     </main>
   );
-}
+};
 
 export default TermsAndConditions;

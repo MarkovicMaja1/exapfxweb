@@ -1,5 +1,5 @@
 import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
-import Contact from './components/Contact.jsx'; // Import default Contact
+import Contact from './components/Contact.jsx';
 import Discord from "./components/Discord";
 import LogoSlider from "./components/LogoSlider.jsx";
 import Compare from "./components/compare.jsx";
@@ -17,32 +17,49 @@ import Sustainability from "./components/Sustainability";
 import Home from "./components/Home";
 import Footer from "./components/Footer";
 import Goals from "./components/Goals";
-// import ChoosePlan from "./components/ChoosePlan";
 import TeamSection from "./components/TeamFirst";
 import Newsletter from "./components/Newsletter";
 import SustainabilityIcon from "./components/SustainabilityIcon";
 import { useEffect } from "react";
 
-// Remove unused named imports from Contact.jsx since we're using default import
-// import { ConnectWithUs, ContactForm, ContactInfo } from './components/Contact.jsx';
-
 const ScrollToSection = () => {
   const { hash, pathname } = useLocation();
 
   useEffect(() => {
-    if (hash) {
-      const element = document.getElementById(hash.replace('#', ''));
-      if (element) {
-        const offset = 60;
-        const elementPosition = element.getBoundingClientRect().top + window.scrollY;
-        window.scrollTo({
-          top: elementPosition - offset,
-          behavior: 'smooth'
-        });
-      }
-    } else if (pathname === '/privacy-policy' || pathname === '/terms' || pathname === '/claim') {
-      window.scrollTo({ top: 0, behavior: 'smooth' });  
-    }
+    const scrollToElement = () => {
+      let retries = 0;
+      const maxRetries = 30; // Increased for slower dynamic content
+      const retryDelay = 300; // Increased to 300ms for reliability
+
+      const attemptScroll = () => {
+        if (hash) {
+          const id = hash.replace('#', '');
+          const element = document.getElementById(id);
+          if (element) {
+            const offset = 60; // Adjust for fixed header
+            const elementPosition = element.getBoundingClientRect().top + window.scrollY;
+            window.scrollTo({
+              top: elementPosition - offset,
+              behavior: 'smooth',
+            });
+            console.log(`Scrolled to element ${id} after ${retries} retries`);
+          } else if (id && retries < maxRetries) {
+            retries++;
+            console.log(`Retry ${retries} for element ${id}`);
+            setTimeout(attemptScroll, retryDelay);
+          } else if (retries >= maxRetries) {
+            console.log(`Failed to find element ${id} after ${maxRetries} retries`);
+          }
+        } else if (pathname === '/privacy-policy' || pathname === '/terms' || pathname === '/claim') {
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+      };
+
+      // Defer initial scroll to ensure DOM is ready after route change
+      setTimeout(attemptScroll, 100);
+    };
+
+    scrollToElement();
   }, [hash, pathname]);
 
   return null;
@@ -69,18 +86,9 @@ function App() {
             path="/"
             element={
               <>
-                {/* <div id="soon">
-                  <Soon />
-                </div> */}
                 <div id="home">
                   <Home />
                 </div>
-                {/* <div id="chooseplan">
-                  <ChoosePlan />
-                </div> */}
-                {/* <div id="dashboard">
-                  <Dashboard />
-                </div> */}
                 <div id="logoslider">
                   <LogoSlider />
                 </div>
@@ -119,7 +127,7 @@ function App() {
           <Route path="/rules" element={<Rules />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/compare" element={<Compare />} />
-          <Route path="*" element={<NotFound />} /> {/* 404 Route */}
+          <Route path="*" element={<NotFound />} />
         </Routes>
         <SustainabilityIcon />
         <div id="footer">
