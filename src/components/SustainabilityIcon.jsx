@@ -7,7 +7,7 @@ const SustainabilityIcon = () => {
       style={{
         position: 'fixed',
         bottom: '20px',
-        right: '20px',
+        left: '20px',
         zIndex: 1000,
         cursor: 'pointer',
       }}
