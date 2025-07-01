@@ -259,9 +259,9 @@ const Rules = () => {
 
       {/* Disclaimer */}
       <section className="pb-12 px-6 sm:px-12 text-center">
-        <p className="text-[#f7e59f] text-base font-medium leading-relaxed">
+        {/* <p className="text-[#f7e59f] text-base font-medium leading-relaxed">
           ECAPFX is not a financial institution · This website does not promote or sell any financial products or services
-        </p>
+        </p> */}
       </section>
 
       {/* Separator */}
