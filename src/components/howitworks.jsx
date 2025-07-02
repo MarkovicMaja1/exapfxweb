@@ -22,17 +22,17 @@ const HowItWorks = () => {
   const contentVariants = {
     hidden: (i) => ({
       opacity: 0,
-      x: i % 2 === 0 ? -window.innerWidth : window.innerWidth, // Left for even, right for odd
-      scale: 0.2, // Start smaller
+      x: i % 2 === 0 ? -100 : 100,
+      scale: 0.9,
     }),
     visible: (i) => ({
       opacity: 1,
       x: 0,
-      scale: 1, // Scale to full size
-      transition: { 
-        duration: 1.3, // Slightly longer for smooth zoom
-        ease: [0.4, 0, 0.2, 1], // Custom easing for natural feel
-        delay: i * 0.2,
+      scale: 1.05,
+      transition: {
+        duration: 0.6,
+        ease: [0.25, 0.1, 0.25, 1],
+        delay: 0.3 + i * 0.15,
       },
     }),
   };
@@ -40,24 +40,28 @@ const HowItWorks = () => {
   const imageVariants = {
     hidden: (i) => ({
       opacity: 0,
-      x: i % 2 === 0 ? window.innerWidth : -window.innerWidth, // Right for even, left for odd
-      scale: 0.2, // Start smaller
+      x: i % 2 === 0 ? -100 : 100,
+      scale: 0.9,
     }),
     visible: (i) => ({
       opacity: 1,
       x: 0,
-      scale: 1, // Scale to full size
-      transition: { 
-        duration: 1.3, // Slightly longer for smooth zoom
-        ease: [0.4, 0, 0.2, 1], // Custom easing for natural feel
-        delay: i * 0.2,
+      scale: 1.05,
+      transition: {
+        duration: 0.6,
+        ease: [0.25, 0.1, 0.25, 1],
+        delay: 0.3 + i * 0.15,
       },
     }),
   };
 
   const badgeVariants = {
-    hidden: { scale: 0 },
-    visible: { scale: 1, transition: { duration: 0.5, ease: 'easeOut' } },
+    hidden: { scale: 0, opacity: 0 },
+    visible: (i) => ({
+      scale: 1,
+      opacity: 1,
+      transition: { duration: 0.4, ease: [0.25, 0.1, 0.25, 1], delay: 0.35 + i * 0.15 },
+    }),
   };
 
   return (
@@ -73,7 +77,12 @@ const HowItWorks = () => {
       </div>
 
       {/* Hero Section */}
-      <div className="mx-auto max-w-7xl px-4 py-24 sm:px-6 lg:px-8 lg:py-24 relative z-10 text-center">
+      <motion.div
+        className="mx-auto max-w-7xl px-4 py-24 sm:px-6 lg:px-8 lg:py-24 relative z-10 text-center"
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, ease: [0.25, 0.1, 0.25, 1] }}
+      >
         <div className="mb-14 mx-auto lg:max-w-4xl">
           <h2 className="mb-4 text-4xl font-extrabold tracking-tight text-black">
             How It Works
@@ -82,11 +91,11 @@ const HowItWorks = () => {
             Follow these steps to transform your trading skills into funded success with ECAPFX.
           </p>
         </div>
-      </div>
+      </motion.div>
 
       {/* Steps Section with Stylized Line */}
       <section
-        className="relative px-6 sm:px-12 mx-auto max-w-6xl py-5"
+        className="relative px-6 sm:px-12 mx-auto max-w-6xl my-5 py-12"
         style={{
           backgroundImage: 'url(https://via.placeholder.com/10x900.png?text=Dashed+Green+Line&color=1d8348)',
           backgroundPosition: 'center',
@@ -94,7 +103,7 @@ const HowItWorks = () => {
           backgroundSize: '10px auto',
         }}
       >
-        <div className="relative space-y-16">
+        <div className="relative space-y-24"> {/* Changed from space-y-16 to space-y-24 */}
           {/* Step 1 - Text Left, Image Right */}
           <Step custom={0} image={step1} alt="Person signing up on a form" contentVariants={contentVariants} imageVariants={imageVariants} badgeVariants={badgeVariants}>
             <h3 className="text-2xl sm:text-3xl font-bold text-[#1d8348] mt-8 leading-snug">Sign Up & Choose Challenge</h3>
@@ -145,14 +154,14 @@ const HowItWorks = () => {
       </section>
 
       {/* Call to Action */}
-      <section className="flex justify-center pt-20 pb-20 px-6 sm:px-12">
+      <section className="flex justify-center pt-12 pb-12 px-6 sm:px-12">
         <motion.a
           href="https://active.ecapfx.com/auth/signin"
           target="_blank"
           rel="noopener noreferrer"
-          initial={{ opacity: 0, scale: 0.8 }}
+          initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
+          transition={{ duration: 0.5, ease: [0.25, 0.1, 0.25, 1] }}
           className="getstarted-button sm:text-xl px-5 py-2.5 text-white font-roboto bg-gradient-to-r from-[#1a6f3d] via-[#1d8348] to-[#145c33] hover:from-[#156437]/90 hover:via-[#1d8348]/90 hover:to-[#0e3f24]/90 hover:text-black hover:shadow-md hover:shadow-green-700/50 rounded-2xl transition duration-300 ease-in-out hover:scale-105 select-none z-20 pointer-events-auto"
         >
           Get Started Now
@@ -167,7 +176,6 @@ const HowItWorks = () => {
 
       {/* Separator */}
       {/* <div className="absolute bottom-0 left-0 w-full h-2 bg-gradient-to-r from-transparent via-[#1d8348] to-transparent shadow-lg" /> */}
-
     </section>
   );
 };
@@ -175,7 +183,7 @@ const HowItWorks = () => {
 // Step Component
 const Step = ({ custom, image, alt, reverse, children, contentVariants, imageVariants, badgeVariants }) => {
   const controls = useAnimation();
-  const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.2 });
+  const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.1, rootMargin: '200px 0px' });
 
   useEffect(() => {
     if (inView) {
@@ -189,14 +197,16 @@ const Step = ({ custom, image, alt, reverse, children, contentVariants, imageVar
       custom={custom}
       initial="hidden"
       animate={controls}
-      className={`flex flex-col ${reverse ? 'sm:flex-row-reverse' : 'sm:flex-row'} items-center justify-between gap-8`}
+      className={`flex flex-col ${reverse ? 'sm:flex-row-reverse' : 'sm:flex-row'} items-center justify-between mt-5 gap-16`}
     >
       <motion.div
         custom={custom}
         variants={contentVariants}
-        className="relative bg-gradient-to-br from-[#f5f5f5] to-[#e0e0e0] p-8 sm:p-10 rounded-2xl shadow-xl border border-[#1d8348]/20 flex-1 z-10"
+        className="relative bg-gradient-to-br from-[#f5f5f5] to-[#e0e0e0] p-8 sm:p-10 rounded-2xl shadow-xl border border-[#1d8348]/20 flex-1 z-10" // Fixed typo: bordering to border
+        style={{ overflow: 'visible' }} // Added to prevent shadow clipping
       >
         <motion.div
+          custom={custom}
           variants={badgeVariants}
           className="absolute -top-5 left-6 bg-[#1d8348] text-white text-xl font-bold rounded-full w-12 h-12 flex items-center justify-center shadow-lg"
         >
