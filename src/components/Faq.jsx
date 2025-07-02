@@ -205,8 +205,6 @@ const Faq = () => {
          </div>
       </div>
 
-      {/* Section Divider Line */}
-      <hr className="w-full h-px bg-[#1d8348]/50 my-8 mx-auto border-0" />
 
       {/* Custom Scoped CSS */}
       <style jsx>{`
