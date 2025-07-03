@@ -2,7 +2,7 @@ import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import Contact from './components/Contact.jsx';
 import Discord from "./components/Discord";
 import LogoSlider from "./components/LogoSlider.jsx";
-import Compare from "./components/compare.jsx";
+// import Compare from "./components/compare.jsx";
 import Faq from "./components/Faq.jsx";
 import Rules from "./components/Rules.jsx";
 import Howitworks from "./components/howitworks.jsx";
@@ -123,10 +123,9 @@ function App() {
           <Route path="/terms" element={<Terms />} />
           <Route path="/claim" element={<Claim />} />
           <Route path="/faq" element={<Faq />} />
-          <Route path="/howitworks" element={<Howitworks />} />
           <Route path="/rules" element={<Rules />} />
           <Route path="/contact" element={<Contact />} />
-          <Route path="/compare" element={<Compare />} />
+          {/* <Route path="/compare" element={<Compare />} /> */}
           <Route path="*" element={<NotFound />} />
         </Routes>
         <SustainabilityIcon />
