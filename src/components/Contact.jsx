@@ -251,20 +251,6 @@ const Contact = () => {
           </div>
         </div>
         {/* Navigation Links to Homepage Sections */}
-        <div className="mt-8 flex flex-col items-center space-y-4 sm:flex-row sm:space-y-0 sm:space-x-6">
-          <Link
-            to="/#team"
-            className="text-[#1d8348] hover:text-white font-semibold text-lg transition duration-300"
-          >
-            Go to Team Section
-          </Link>
-          <Link
-            to="/#about"
-            className="text-[#1d8348] hover:text-white font-semibold text-lg transition duration-300"
-          >
-            Go to About Us
-          </Link>
-        </div>
       </div>
     </section>
   );

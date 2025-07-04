@@ -97,7 +97,7 @@ const Footer = () => {
                     <small href="#" className="text-sm leading-6 text-white hover:text-white">Guides</small>
                   </li>
                   <li>
-                    <small href="#" className="text-sm leading-6 text-white hover:text-white">Mission and Values</small>
+                    <small><Link to="/#goals" className="text-sm leading-6 text-white hover:text-white">Mission and Values</Link></small>
                   </li>
                 </ul>
               </div>

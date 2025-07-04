@@ -5,29 +5,52 @@
     <link rel="icon" href="%PUBLIC_URL%/ECAPFX.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
-    <meta
-      name="description"
-      content="Smart Trading"
-    />
+    <meta name="description" content="Smart Trading" />
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <!--
-      manifest.json provides metadata used when your web app is installed on a
-      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
-    -->
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
-
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
     <title>ECAPFX | Trade With Purpose</title>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "ECAPFX",
+        "url": "https://www.ecapfx.com",
+        "logo": "https://www.ecapfx.com/ECAPFX.png",
+        "description": "ECAPFX offers smart trading solutions with simulated accounts and educational resources to help traders succeed.",
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "+123-456-7890",
+          "contactType": "Customer Service",
+          "email": "contact@ecapfx.com"
+        },
+        "sameAs": [
+          "https://www.facebook.com/ecapfx",
+          "https://x.com/EcapFXLTD",
+          "https://www.linkedin.com/company/ecapfx",
+          "https://www.instagram.com/ecapfx/"
+        ]
+        "service": {
+          "@type": "Service",
+          "name": "Trading Challenge Program",
+          "description": "Join our trading challenge to demonstrate your skills and gain access to a simulated trading account with up to $200,000 in fictitious funds.",
+          "provider": {
+            "@type": "Organization",
+            "name": "ECAPFX"
+          },
+          "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD",
+            "availability": "https://schema.org/InStock",
+            "description": "Free trial available with evaluation process."
+          },
+          "areaServed": "Worldwide"
+        }
+      }
+    </script>
   </head>
   <body>
     <noscript></noscript>
