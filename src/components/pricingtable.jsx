@@ -4,12 +4,28 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 import { Pagination, Navigation } from 'swiper/modules';
+import { useTranslation } from 'react-i18next';
 import './pricingtable.css';
 import usdFlag from '../assets/usd-flag.png';
 import gbpFlag from '../assets/gbp-flag.png';
 import eurFlag from '../assets/eur-flag.png';
 
+const getTranslationKey = (text) => {
+  const keyMap = {
+    "One Step": "onestep",
+    "Two Step": "twostep",
+    "Three Step": "threestep",
+    "Profit": "profit",
+    "Maxloss": "maxLoss",
+    "Daily Loss": "dailyLoss",
+    "Mintradingdays": "minTradingDays",
+    "Profit Share": "profitShare",
+  };
+  return keyMap[text] || text.toLowerCase().replace(/ /g, '');
+};
+
 function PricingTable() {
+  const { t } = useTranslation();
   const [selectedStep, setSelectedStep] = useState("Three Step");
   const [selectedSize, setSelectedSize] = useState("10k");
   const [selectedCurrency, setSelectedCurrency] = useState("USD");
@@ -51,55 +67,55 @@ function PricingTable() {
   const tableData = {
     "One Step": {
       "10k": {
-        "Profit Target": ["$800 (8%)", "None", "", ""],
+        "Profit": ["$800 (8%)", "None", "", ""],
         "Duration": ["Unlimited", "Unlimited", "", ""],
         "Leverage": ["Up to 1:50", "Up to 1:50", "", ""],
-        "Min Trading Days": ["7 Days", "None", "", ""],
-        "Max Loss": { USD: ["$500 (5%)", "None", "", ""], GBP: ["£500 (5%)", "None", "", ""], EUR: ["€500 (5%)", "None", "", ""] },
+        "MinTrading Days": ["7 Days", "None", "", ""],
+        "Maxloss": { USD: ["$500 (5%)", "None", "", ""], GBP: ["£500 (5%)", "None", "", ""], EUR: ["€500 (5%)", "None", "", ""] },
         "Daily Loss": { USD: ["$300 (3%)", "None", "", ""], GBP: ["£300 (3%)", "None", "", ""], EUR: ["€300 (3%)", "None", "", ""] },
         "Profit Share": ["None", "90/10", "", ""],
         "Fee": { USD: ["$80", "Refunded", "", ""], GBP: ["£65", "Refunded", "", ""], EUR: ["€75", "Refunded", "", ""] },
         "Bonus After Stage": { USD: ["", "", "", ""], GBP: ["", "", "", ""], EUR: ["", "", "", ""] }
       },
       "25k": {
-        "Profit Target": ["$2,000 (8%)", "None", "", ""],
+        "Profit": ["$2,000 (8%)", "None", "", ""],
         "Duration": ["Unlimited", "Unlimited", "", ""],
         "Leverage": ["Up to 1:50", "Up to 1:50", "", ""],
-        "Min Trading Days": ["7 Days", "None", "", ""],
-        "Max Loss": { USD: ["$1,250 (5%)", "None", "", ""], GBP: ["£1,250 (5%)", "None", "", ""], EUR: ["€1,250 (5%)", "None", "", ""] },
+        "Mintradingdays": ["7 Days", "None", "", ""],
+        "Maxloss": { USD: ["$1,250 (5%)", "None", "", ""], GBP: ["£1,250 (5%)", "None", "", ""], EUR: ["€1,250 (5%)", "None", "", ""] },
         "Daily Loss": { USD: ["$750 (3%)", "None", "", ""], GBP: ["£750 (3%)", "None", "", ""], EUR: ["€750 (3%)", "None", "", ""] },
         "Profit Share": ["None", "90/10", "", ""],
         "Fee": { USD: ["$145", "Refunded", "", ""], GBP: ["£115", "Refunded", "", ""], EUR: ["€130", "Refunded", "", ""] },
         "Bonus After Stage": { USD: ["", "", "", ""], GBP: ["", "", "", ""], EUR: ["", "", "", ""] }
       },
       "50k": {
-        "Profit Target": ["$5,000 (10%)", "$4,000 (8%)", "$2,000 (4%)", "None"],
+        "Profit": ["$5,000 (10%)", "$4,000 (8%)", "$2,000 (4%)", "None"],
         "Duration": ["Unlimited", "Unlimited", "Unlimited", "Indefinite"],
         "Leverage": ["Up to 1:50", "Up to 1:50", "Up to 1:50", "Up to 1:50"],
-        "Min Trading Days": ["None", "None", "None", "None"],
-        "Max Loss": { USD: ["$2,500 (5%)", "$2,000 (4%)", "$1,000 (2%)", "None"], GBP: ["£2,500 (5%)", "£2,000 (4%)", "£1,000 (2%)", "None"], EUR: ["€2,500 (5%)", "€2,000 (4%)", "€1,000 (2%)", "None"] },
+        "Mintradingdays": ["None", "None", "None", "None"],
+        "Maxloss": { USD: ["$2,500 (5%)", "$2,000 (4%)", "$1,000 (2%)", "None"], GBP: ["£2,500 (5%)", "£2,000 (4%)", "£1,000 (2%)", "None"], EUR: ["€2,500 (5%)", "€2,000 (4%)", "€1,000 (2%)", "None"] },
         "Daily Loss": { USD: ["$1,500 (3%)", "$1,200 (2.4%)", "$600 (1.2%)", "None"], GBP: ["£1,500 (3%)", "£1,200 (2.4%)", "£600 (1.2%)", "None"], EUR: ["€1,500 (3%)", "€1,200 (2.4%)", "€600 (1.2%)", "None"] },
         "Profit Share": ["None", "None", "None", "90/10"],
         "Fee": { USD: ["$260", "Refunded", "", ""], GBP: ["£215", "Refunded", "", ""], EUR: ["€240", "Refunded", "", ""] },
         "Bonus After Stage": { USD: ["", "", "", ""], GBP: ["", "", "", ""], EUR: ["", "", "", ""] }
       },
       "100k": {
-        "Profit Target": ["$10,000 (10%)", "$8,000 (8%)", "$4,000 (4%)", "None"],
+        "Profit": ["$10,000 (10%)", "$8,000 (8%)", "$4,000 (4%)", "None"],
         "Duration": ["Unlimited", "Unlimited", "Unlimited", "Indefinite"],
         "Leverage": ["Up to 1:50", "Up to 1:50", "Up to 1:50", "Up to 1:50"],
-        "Min Trading Days": ["None", "None", "None", "None"],
-        "Max Loss": { USD: ["$5,000 (5%)", "$4,000 (4%)", "$2,000 (2%)", "None"], GBP: ["£5,000 (5%)", "£4,000 (4%)", "£2,000 (2%)", "None"], EUR: ["€5,000 (5%)", "€4,000 (4%)", "€2,000 (2%)", "None"] },
+        "Mintradingdays": ["None", "None", "None", "None"],
+        "Maxloss": { USD: ["$5,000 (5%)", "$4,000 (4%)", "$2,000 (2%)", "None"], GBP: ["£5,000 (5%)", "£4,000 (4%)", "£2,000 (2%)", "None"], EUR: ["€5,000 (5%)", "€4,000 (4%)", "€2,000 (2%)", "None"] },
         "Daily Loss": { USD: ["$3,000 (3%)", "$2,400 (2.4%)", "$1,200 (1.2%)", "None"], GBP: ["£3,000 (3%)", "£2,400 (2.4%)", "£1,200 (1.2%)", "None"], EUR: ["€3,000 (3%)", "€2,400 (2.4%)", "€1,200 (1.2%)", "None"] },
         "Profit Share": ["None", "None", "None", "90/10"],
         "Fee": { USD: ["$440", "Refunded", "", ""], GBP: ["£365", "Refunded", "", ""], EUR: ["€405", "Refunded", "", ""] },
         "Bonus After Stage": { USD: ["", "", "", ""], GBP: ["", "", "", ""], EUR: ["", "", "", ""] }
       },
       "200k": {
-        "Profit Target": ["$20,000 (10%)", "$16,000 (8%)", "$8,000 (4%)", "None"],
+        "Profit": ["$20,000 (10%)", "$16,000 (8%)", "$8,000 (4%)", "None"],
         "Duration": ["Unlimited", "Unlimited", "Unlimited", "Indefinite"],
         "Leverage": ["Up to 1:50", "Up to 1:50", "Up to 1:50", "Up to 1:50"],
-        "Min Trading Days": ["None", "None", "None", "None"],
-        "Max Loss": { USD: ["$10,000 (5%)", "$8,000 (4%)", "$4,000 (2%)", "None"], GBP: ["£10,000 (5%)", "£8,000 (4%)", "£4,000 (2%)", "None"], EUR: ["€10,000 (5%)", "€8,000 (4%)", "€4,000 (2%)", "None"] },
+        "Mintradingdays": ["None", "None", "None", "None"],
+        "Maxloss": { USD: ["$10,000 (5%)", "$8,000 (4%)", "$4,000 (2%)", "None"], GBP: ["£10,000 (5%)", "£8,000 (4%)", "£4,000 (2%)", "None"], EUR: ["€10,000 (5%)", "€8,000 (4%)", "€4,000 (2%)", "None"] },
         "Daily Loss": { USD: ["$6,000 (3%)", "$4,800 (2.4%)", "$2,400 (1.2%)", "None"], GBP: ["£6,000 (3%)", "£4,800 (2.4%)", "£2,400 (1.2%)", "None"], EUR: ["€6,000 (3%)", "€4,800 (2.4%)", "€2,400 (1.2%)", "None"] },
         "Profit Share": ["None", "None", "None", "90/10"],
         "Fee": { USD: ["$855", "Refunded", "", ""], GBP: ["£705", "Refunded", "", ""], EUR: ["€785", "Refunded", "", ""] },
@@ -108,55 +124,55 @@ function PricingTable() {
     },
     "Two Step": {
       "10k": {
-        "Profit Target": ["$1,000 (10%)", "$500 (5%)", "None", ""],
+        "Profit": ["$1,000 (10%)", "$500 (5%)", "None", ""],
         "Duration": ["Unlimited", "Unlimited", "Unlimited", ""],
         "Leverage": ["Up to 1:100", "Up to 1:100", "Up to 1:100", ""],
-        "Min Trading Days": ["None", "None", "None", ""],
-        "Max Loss": { USD: ["$1,000 (10%)", "$500 (5%)", "None", ""], GBP: ["£1,000 (10%)", "£500 (5%)", "None", ""], EUR: ["€1,000 (10%)", "€500 (5%)", "None", ""] },
+        "Mintradingdays": ["None", "None", "None", ""],
+        "Maxloss": { USD: ["$1,000 (10%)", "$500 (5%)", "None", ""], GBP: ["£1,000 (10%)", "£500 (5%)", "None", ""], EUR: ["€1,000 (10%)", "€500 (5%)", "None", ""] },
         "Daily Loss": { USD: ["$500 (5%)", "$250 (2.5%)", "None", ""], GBP: ["£500 (5%)", "£250 (2.5%)", "None", ""], EUR: ["€500 (5%)", "€250 (2.5%)", "None", ""] },
         "Profit Share": ["None", "None", "90/10", ""],
         "Fee": { USD: ["$60", "Refunded", "", ""], GBP: ["£50", "Refunded", "", ""], EUR: ["€60", "Refunded", "", ""] },
         "Bonus After Stage": { USD: ["", "", "", ""], GBP: ["", "", "", ""], EUR: ["", "", "", ""] }
       },
       "25k": {
-        "Profit Target": ["$2,000 (8%)", "$1,250 (5%)", "None"],
+        "Profit": ["$2,000 (8%)", "$1,250 (5%)", "None"],
         "Duration": ["Unlimited", "Unlimited", "Indefinite"],
         "Leverage": ["Up to 1:50", "Up to 1:50", "Up to 1:50"],
-        "Min Trading Days": ["7 Days", "None", "None"],
-        "Max Loss": { USD: ["$1,500 (6%)", "$1,000 (4%)", "None"], GBP: ["£1,500 (6%)", "£1,000 (4%)", "None"], EUR: ["€1,500 (6%)", "€1,000 (4%)", "None"] },
+        "Mintradingdays": ["7 Days", "None", "None"],
+        "Maxloss": { USD: ["$1,500 (6%)", "$1,000 (4%)", "None"], GBP: ["£1,500 (6%)", "£1,000 (4%)", "None"], EUR: ["€1,500 (6%)", "€1,000 (4%)", "None"] },
         "Daily Loss": { USD: ["$750 (3%)", "$500 (2%)", "None"], GBP: ["£750 (3%)", "£500 (2%)", "None"], EUR: ["€750 (3%)", "€500 (2%)", "None"] },
         "Profit Share": ["None", "None", "90/10"],
         "Fee": { USD: ["$125", "Refunded", ""], GBP: ["£100", "Refunded", ""], EUR: ["€110", "Refunded", ""] },
         "Bonus After Stage": { USD: ["", "", ""], GBP: ["", "", ""], EUR: ["", "", ""] }
       },
       "50k": {
-        "Profit Target": ["$5,000 (10%)", "$4,000 (8%)", "$2,000 (4%)", "None"],
+        "Profit": ["$5,000 (10%)", "$4,000 (8%)", "$2,000 (4%)", "None"],
         "Duration": ["Unlimited", "Unlimited", "Unlimited", "Indefinite"],
         "Leverage": ["Up to 1:50", "Up to 1:50", "Up to 1:50", "Up to 1:50"],
-        "Min Trading Days": ["None", "None", "None", "None"],
-        "Max Loss": { USD: ["$2,500 (5%)", "$2,000 (4%)", "$1,000 (2%)", "None"], GBP: ["£2,500 (5%)", "£2,000 (4%)", "£1,000 (2%)", "None"], EUR: ["€2,500 (5%)", "€2,000 (4%)", "€1,000 (2%)", "None"] },
+        "Mintradingdays": ["None", "None", "None", "None"],
+        "Maxloss": { USD: ["$2,500 (5%)", "$2,000 (4%)", "$1,000 (2%)", "None"], GBP: ["£2,500 (5%)", "£2,000 (4%)", "£1,000 (2%)", "None"], EUR: ["€2,500 (5%)", "€2,000 (4%)", "€1,000 (2%)", "None"] },
         "Daily Loss": { USD: ["$1,500 (3%)", "$1,200 (2.4%)", "$600 (1.2%)", "None"], GBP: ["£1,500 (3%)", "£1,200 (2.4%)", "£600 (1.2%)", "None"], EUR: ["€1,500 (3%)", "€1,200 (2.4%)", "€600 (1.2%)", "None"] },
         "Profit Share": ["None", "None", "None", "90/10"],
         "Fee": { USD: ["$205", "Refunded", "", ""], GBP: ["£170", "Refunded", "", ""], EUR: ["€185", "Refunded", "", ""] },
         "Bonus After Stage": { USD: ["", "", "", ""], GBP: ["", "", "", ""], EUR: ["", "", "", ""] }
       },
       "100k": {
-        "Profit Target": ["$10,000 (10%)", "$8,000 (8%)", "$4,000 (4%)", "None"],
+        "Profit": ["$10,000 (10%)", "$8,000 (8%)", "$4,000 (4%)", "None"],
         "Duration": ["Unlimited", "Unlimited", "Unlimited", "Indefinite"],
         "Leverage": ["Up to 1:50", "Up to 1:50", "Up to 1:50", "Up to 1:50"],
-        "Min Trading Days": ["None", "None", "None", "None"],
-        "Max Loss": { USD: ["$5,000 (5%)", "$4,000 (4%)", "$2,000 (2%)", "None"], GBP: ["£5,000 (5%)", "£4,000 (4%)", "£2,000 (2%)", "None"], EUR: ["€5,000 (5%)", "€4,000 (4%)", "€2,000 (2%)", "None"] },
+        "Mintradingdays": ["None", "None", "None", "None"],
+        "Maxloss": { USD: ["$5,000 (5%)", "$4,000 (4%)", "$2,000 (2%)", "None"], GBP: ["£5,000 (5%)", "£4,000 (4%)", "£2,000 (2%)", "None"], EUR: ["€5,000 (5%)", "€4,000 (4%)", "€2,000 (2%)", "None"] },
         "Daily Loss": { USD: ["$3,000 (3%)", "$2,400 (2.4%)", "$1,200 (1.2%)", "None"], GBP: ["£3,000 (3%)", "£2,400 (2.4%)", "£1,200 (1.2%)", "None"], EUR: ["€3,000 (3%)", "€2,400 (2.4%)", "€1,200 (1.2%)", "None"] },
         "Profit Share": ["None", "None", "None", "90/10"],
         "Fee": { USD: ["$370", "Refunded", "", ""], GBP: ["£305", "Refunded", "", ""], EUR: ["€335", "Refunded", "", ""] },
         "Bonus After Stage": { USD: ["", "", "", ""], GBP: ["", "", "", ""], EUR: ["", "", "", ""] }
       },
       "200k": {
-        "Profit Target": ["$20,000 (10%)", "$16,000 (8%)", "$8,000 (4%)", "None"],
+        "Profit": ["$20,000 (10%)", "$16,000 (8%)", "$8,000 (4%)", "None"],
         "Duration": ["Unlimited", "Unlimited", "Unlimited", "Indefinite"],
         "Leverage": ["Up to 1:50", "Up to 1:50", "Up to 1:50", "Up to 1:50"],
-        "Min Trading Days": ["None", "None", "None", "None"],
-        "Max Loss": { USD: ["$10,000 (5%)", "$8,000 (4%)", "$4,000 (2%)", "None"], GBP: ["£10,000 (5%)", "£8,000 (4%)", "£4,000 (2%)", "None"], EUR: ["€10,000 (5%)", "€8,000 (4%)", "€4,000 (2%)", "None"] },
+        "Mintradingdays": ["None", "None", "None", "None"],
+        "Maxloss": { USD: ["$10,000 (5%)", "$8,000 (4%)", "$4,000 (2%)", "None"], GBP: ["£10,000 (5%)", "£8,000 (4%)", "£4,000 (2%)", "None"], EUR: ["€10,000 (5%)", "€8,000 (4%)", "€4,000 (2%)", "None"] },
         "Daily Loss": { USD: ["$6,000 (3%)", "$4,800 (2.4%)", "$2,400 (1.2%)", "None"], GBP: ["£6,000 (3%)", "£4,800 (2.4%)", "£2,400 (1.2%)", "None"], EUR: ["€6,000 (3%)", "€4,800 (2.4%)", "€2,400 (1.2%)", "None"] },
         "Profit Share": ["None", "None", "None", "90/10"],
         "Fee": { USD: ["$720", "Refunded", "", ""], GBP: ["£600", "Refunded", "", ""], EUR: ["€650", "Refunded", "", ""] },
@@ -165,55 +181,55 @@ function PricingTable() {
     },
     "Three Step": {
       "10k": {
-        "Profit Target": ["$1,000 (10%)", "$800 (8%)", "$400 (4%)", "None"],
+        "Profit": ["$1,000 (10%)", "$800 (8%)", "$400 (4%)", "None"],
         "Duration": ["Unlimited", "Unlimited", "Unlimited", "Indefinite"],
         "Leverage": ["Up to 1:50", "Up to 1:50", "Up to 1:50", "Up to 1:50"],
-        "Min Trading Days": ["None", "None", "None", "None"],
-        "Max Loss": { USD: ["$500 (5%)", "$400 (4%)", "$200 (2%)", "None"], GBP: ["£500 (5%)", "£400 (4%)", "£200 (2%)", "None"], EUR: ["€500 (5%)", "€400 (4%)", "€200 (2%)", "None"] },
+        "Mintradingdays": ["None", "None", "None", "None"],
+        "Maxloss": { USD: ["$500 (5%)", "$400 (4%)", "$200 (2%)", "None"], GBP: ["£500 (5%)", "£400 (4%)", "£200 (2%)", "None"], EUR: ["€500 (5%)", "€400 (4%)", "€200 (2%)", "None"] },
         "Daily Loss": { USD: ["$300 (3%)", "$240 (2.4%)", "$120 (1.2%)", "None"], GBP: ["£300 (3%)", "£240 (2.4%)", "£120 (1.2%)", "None"], EUR: ["€300 (3%)", "€240 (2.4%)", "€120 (1.2%)", "None"] },
         "Profit Share": ["None", "None", "None", "90/10"],
         "Fee": { USD: ["$55", "Refunded", "", ""], GBP: ["£45", "Refunded", "", ""], EUR: ["€50", "Refunded", "", ""] },
         "Bonus After Stage": { USD: ["$10", "$15", "$20", ""], GBP: ["£10", "£15", "£20", ""], EUR: ["€10", "€15", "€20", ""] }
       },
       "25k": {
-        "Profit Target": ["$2,000 (10%)", "$2000 (8%)", "$1000 (4%)", "None"],
+        "Profit": ["$2,000 (10%)", "$2000 (8%)", "$1000 (4%)", "None"],
         "Duration": ["Unlimited", "Unlimited", "Unlimited", "Indefinite"],
         "Leverage": ["Up to 1:50", "Up to 1:50", "Up to 1:50", "Up to 1:50"],
-        "Min Trading Days": ["None", "None", "None", "None"],
-        "Max Loss": { USD: ["$1250 (5%)", "$1000 (4%)", "$500 (2%)", "None"], GBP: ["£1250 (5%)", "£1000 (4%)", "£500 (2%)", "None"], EUR: ["€1250 (5%)", "€1000 (4%)", "€500 (2%)", "None"] },
+        "Mintradingdays": ["None", "None", "None", "None"],
+        "Maxloss": { USD: ["$1250 (5%)", "$1000 (4%)", "$500 (2%)", "None"], GBP: ["£1250 (5%)", "£1000 (4%)", "£500 (2%)", "None"], EUR: ["€1250 (5%)", "€1000 (4%)", "€500 (2%)", "None"] },
         "Daily Loss": { USD: ["$750 (3%)", "$600 (2.4%)", "$300 (1.2%)", "None"], GBP: ["£750 (3%)", "£600 (2.4%)", "£300 (1.2%)", "None"], EUR: ["€750 (3%)", "€600 (2.4%)", "€300 (1.2%)", "None"] },
         "Profit Share": ["None", "None", "None", "90/10"],
         "Fee": { USD: ["$105", "Refunded", "", ""], GBP: ["£90", "Refunded", "", ""], EUR: ["€100", "Refunded", "", ""] },
         "Bonus After Stage": { USD: ["$25", "$37.50", "$50", ""], GBP: ["£25", "£37.50", "£50", ""], EUR: ["€25", "€37.50", "€50", ""] }
       },
       "50k": {
-        "Profit Target": ["$5,000 (10%)", "$4,000 (8%)", "$2,000 (4%)", "None"],
+        "Profit": ["$5,000 (10%)", "$4,000 (8%)", "$2,000 (4%)", "None"],
         "Duration": ["Unlimited", "Unlimited", "Unlimited", "Indefinite"],
         "Leverage": ["Up to 1:50", "Up to 1:50", "Up to 1:50", "Up to 1:50"],
-        "Min Trading Days": ["None", "None", "None", "None"],
-        "Max Loss": { USD: ["$2,500 (5%)", "$2,000 (4%)", "$1,000 (2%)", "None"], GBP: ["£2,500 (5%)", "£2,000 (4%)", "£1,000 (2%)", "None"], EUR: ["€2,500 (5%)", "€2,000 (4%)", "€1,000 (2%)", "None"] },
+        "Mintradingdays": ["None", "None", "None", "None"],
+        "Maxloss": { USD: ["$2,500 (5%)", "$2,000 (4%)", "$1,000 (2%)", "None"], GBP: ["£2,500 (5%)", "£2,000 (4%)", "£1,000 (2%)", "None"], EUR: ["€2,500 (5%)", "€2,000 (4%)", "€1,000 (2%)", "None"] },
         "Daily Loss": { USD: ["$1,500 (3%)", "$1,200 (2.4%)", "$600 (1.2%)", "None"], GBP: ["£1,500 (3%)", "£1,200 (2.4%)", "£600 (1.2%)", "None"], EUR: ["€1,500 (3%)", "€1,200 (2.4%)", "€600 (1.2%)", "None"] },
         "Profit Share": ["None", "None", "None", "90/10"],
         "Fee": { USD: ["$180", "Refunded", "", ""], GBP: ["£150", "Refunded", "", ""], EUR: ["€165", "Refunded", "", ""] },
         "Bonus After Stage": { USD: ["$50", "$75", "$100", ""], GBP: ["£50", "£75", "£100", ""], EUR: ["€50", "€75", "€100", ""] }
       },
       "100k": {
-        "Profit Target": ["$10,000 (10%)", "$8,000 (8%)", "$4,000 (4%)", "None"],
+        "Profit": ["$10,000 (10%)", "$8,000 (8%)", "$4,000 (4%)", "None"],
         "Duration": ["Unlimited", "Unlimited", "Unlimited", "Indefinite"],
         "Leverage": ["Up to 1:50", "Up to 1:50", "Up to 1:50", "Up to 1:50"],
-        "Min Trading Days": ["None", "None", "None", "None"],
-        "Max Loss": { USD: ["$5,000 (5%)", "$4,000 (4%)", "$2,000 (2%)", "None"], GBP: ["£5,000 (5%)", "£4,000 (4%)", "£2,000 (2%)", "None"], EUR: ["€5,000 (5%)", "€4,000 (4%)", "€2,000 (2%)", "None"] },
+        "Mintradingdays": ["None", "None", "None", "None"],
+        "Maxloss": { USD: ["$5,000 (5%)", "$4,000 (4%)", "$2,000 (2%)", "None"], GBP: ["£5,000 (5%)", "£4,000 (4%)", "£2,000 (2%)", "None"], EUR: ["€5,000 (5%)", "€4,000 (4%)", "€2,000 (2%)", "None"] },
         "Daily Loss": { USD: ["$3,000 (3%)", "$2,400 (2.4%)", "$1,200 (1.2%)", "None"], GBP: ["£3,000 (3%)", "£2,400 (2.4%)", "£1,200 (1.2%)", "None"], EUR: ["€3,000 (3%)", "€2,400 (2.4%)", "€1,200 (1.2%)", "None"] },
         "Profit Share": ["None", "None", "None", "90/10"],
         "Fee": { USD: ["$325", "Refunded", "", ""], GBP: ["£270", "Refunded", "", ""], EUR: ["€295", "Refunded", "", ""] },
         "Bonus After Stage": { USD: ["$100", "$150", "$200", ""], GBP: ["£100", "£150", "£200", ""], EUR: ["€100", "€150", "€200", ""] }
       },
       "200k": {
-        "Profit Target": ["$20,000 (10%)", "$16,000 (8%)", "$8,000 (4%)", "None"],
+        "Profit": ["$20,000 (10%)", "$16,000 (8%)", "$8,000 (4%)", "None"],
         "Duration": ["Unlimited", "Unlimited", "Unlimited", "Indefinite"],
         "Leverage": ["Up to 1:50", "Up to 1:50", "Up to 1:50", "Up to 1:50"],
-        "Min Trading Days": ["None", "None", "None", "None"],
-        "Max Loss": { USD: ["$10,000 (5%)", "$8,000 (4%)", "$4,000 (2%)", "None"], GBP: ["£10,000 (5%)", "£8,000 (4%)", "£4,000 (2%)", "None"], EUR: ["€10,000 (5%)", "€8,000 (4%)", "€4,000 (2%)", "None"] },
+        "Mintradingdays": ["None", "None", "None", "None"],
+        "Maxloss": { USD: ["$10,000 (5%)", "$8,000 (4%)", "$4,000 (2%)", "None"], GBP: ["£10,000 (5%)", "£8,000 (4%)", "£4,000 (2%)", "None"], EUR: ["€10,000 (5%)", "€8,000 (4%)", "€4,000 (2%)", "None"] },
         "Daily Loss": { USD: ["$6,000 (3%)", "$4,800 (2.4%)", "$2,400 (1.2%)", "None"], GBP: ["£6,000 (3%)", "£4,800 (2.4%)", "£2,400 (1.2%)", "None"], EUR: ["€6,000 (3%)", "€4,800 (2.4%)", "€2,400 (1.2%)", "None"] },
         "Profit Share": ["None", "None", "None", "90/10"],
         "Fee": { USD: ["$630", "Refunded", "", ""], GBP: ["£520", "Refunded", "", ""], EUR: ["€570", "Refunded", "", ""] },
@@ -222,44 +238,44 @@ function PricingTable() {
     },
     "Instant Funding": {
       "10k": {
-        "Profit Target": ["None", "", "", ""],
+        "Profit": ["None", "", "", ""],
         "Duration": ["Unlimited", "", "", ""],
         "Leverage": ["Up to 1:50", "", "", ""],
-        "Min Trading Days": ["10 Days", "", "", ""],
-        "Max Loss": { USD: ["$500 (5%)", "", "", ""], GBP: ["£500 (5%)", "", "", ""], EUR: ["€500 (5%)", "", "", ""] },
+        "Mintradingdays": ["10 Days", "", "", ""],
+        "Maxloss": { USD: ["$500 (5%)", "", "", ""], GBP: ["£500 (5%)", "", "", ""], EUR: ["€500 (5%)", "", "", ""] },
         "Daily Loss": { USD: ["$300 (3%)", "", "", ""], GBP: ["£300 (3%)", "", "", ""], EUR: ["€300 (3%)", "", "", ""] },
         "Profit Share": ["90/10", "", "", ""],
         "Fee": { USD: ["$315", "Refunded", "", ""], GBP: ["£260", "Refunded", "", ""], EUR: ["€295", "Refunded", "", ""] },
         "Bonus After Stage": { USD: ["", "", "", ""], GBP: ["", "", "", ""], EUR: ["", "", "", ""] }
       },
       "15k": {
-        "Profit Target": ["None", "", "", ""],
+        "Profit": ["None", "", "", ""],
         "Duration": ["Unlimited", "", "", ""],
         "Leverage": ["Up to 1:50", "", "", ""],
-        "Min Trading Days": ["10 Days", "", "", ""],
-        "Max Loss": { USD: ["$750 (5%)", "", "", ""], GBP: ["£750 (5%)", "", "", ""], EUR: ["€750 (5%)", "", "", ""] },
+        "Mintradingdays": ["10 Days", "", "", ""],
+        "Maxloss": { USD: ["$750 (5%)", "", "", ""], GBP: ["£750 (5%)", "", "", ""], EUR: ["€750 (5%)", "", "", ""] },
         "Daily Loss": { USD: ["$450 (3%)", "", "", ""], GBP: ["£450 (3%)", "", "", ""], EUR: ["€450 (3%)", "", "", ""] },
         "Profit Share": ["90/10", "", "", ""],
         "Fee": { USD: ["$450", "Refunded", "", ""], GBP: ["£375", "Refunded", "", ""], EUR: ["€425", "Refunded", "", ""] },
         "Bonus After Stage": { USD: ["", "", "", ""], GBP: ["", "", "", ""], EUR: ["", "", "", ""] }
       },
       "20k": {
-        "Profit Target": ["None", "", "", ""],
+        "Profit": ["None", "", "", ""],
         "Duration": ["Unlimited", "", "", ""],
         "Leverage": ["Up to 1:50", "", "", ""],
-        "Min Trading Days": ["10 Days", "", "", ""],
-        "Max Loss": { USD: ["$1,000 (5%)", "", "", ""], GBP: ["£1,000 (5%)", "", "", ""], EUR: ["€1,000 (5%)", "", "", ""] },
+        "Mintradingdays": ["10 Days", "", "", ""],
+        "Maxloss": { USD: ["$1,000 (5%)", "", "", ""], GBP: ["£1,000 (5%)", "", "", ""], EUR: ["€1,000 (5%)", "", "", ""] },
         "Daily Loss": { USD: ["$600 (3%)", "", "", ""], GBP: ["£600 (3%)", "", "", ""], EUR: ["€600 (3%)", "", "", ""] },
         "Profit Share": ["90/10", "", "", ""],
         "Fee": { USD: ["$585", "Refunded", "", ""], GBP: ["£485", "Refunded", "", ""], EUR: ["€550", "Refunded", "", ""] },
         "Bonus After Stage": { USD: ["", "", "", ""], GBP: ["", "", "", ""], EUR: ["", "", "", ""] }
       },
       "25k": {
-        "Profit Target": ["None", "", "", ""],
+        "Profit": ["None", "", "", ""],
         "Duration": ["Unlimited", "", "", ""],
         "Leverage": ["Up to 1:50", "", "", ""],
-        "Min Trading Days": ["10 Days", "", "", ""],
-        "Max Loss": { USD: ["$1,250 (5%)", "", "", ""], GBP: ["£1,250 (5%)", "", "", ""], EUR: ["€1,250 (5%)", "", "", ""] },
+        "Mintradingdays": ["10 Days", "", "", ""],
+        "Maxloss": { USD: ["$1,250 (5%)", "", "", ""], GBP: ["£1,250 (5%)", "", "", ""], EUR: ["€1,250 (5%)", "", "", ""] },
         "Daily Loss": { USD: ["$750 (3%)", "", "", ""], GBP: ["£750 (3%)", "", "", ""], EUR: ["€750 (3%)", "", "", ""] },
         "Profit Share": ["90/10", "", "", ""],
         "Fee": { USD: ["$720", "Refunded", "", ""], GBP: ["£595", "Refunded", "", ""], EUR: ["€675", "Refunded", "", ""] },
@@ -317,7 +333,7 @@ function PricingTable() {
 
   const steps = ["One Step", "Two Step", "Three Step", "Instant Funding"];
   const currencies = ["USD", "GBP", "EUR"];
-  const baseMetrics = ["Profit Target", "Duration", "Leverage", "Min Trading Days", "Max Loss", "Daily Loss", "Profit Share", "Fee"];
+  const baseMetrics = ["Profit", "Duration", "Leverage", "Mintradingdays", "Maxloss", "Daily Loss", "Profit Share", "Fee"];
   const metrics = selectedStep === "Three Step" ? [...baseMetrics, "Bonus After Stage"] : baseMetrics;
 
   const getTableData = (metric) => {
@@ -326,7 +342,7 @@ function PricingTable() {
     }
     if (metric === "Fee" && tableData[selectedStep][selectedSize][metric]?.[selectedCurrency]) {
       return tableData[selectedStep][selectedSize][metric][selectedCurrency];
-    } else if ((metric === "Max Loss" || metric === "Daily Loss") && tableData[selectedStep][selectedSize][metric]?.[selectedCurrency]) {
+    } else if ((metric === "Maxloss" || metric === "Daily Loss") && tableData[selectedStep][selectedSize][metric]?.[selectedCurrency]) {
       return tableData[selectedStep][selectedSize][metric][selectedCurrency];
     } else if (metric === "Bonus After Stage" && tableData[selectedStep][selectedSize][metric]?.[selectedCurrency]) {
       return tableData[selectedStep][selectedSize][metric][selectedCurrency];
@@ -365,37 +381,41 @@ function PricingTable() {
   const availableSizes = getAvailableSizes();
 
   const renderDesktopTable = () => (
-  <table className="w-full table-auto" aria-label="Trading Challenge Details" style={{ borderSpacing: '0' }}>
-    <thead>
-      <tr className="bg-gray-100 text-gray-800" style={{ borderBottom: '2px solid #e5e7eb', borderRadius: '0.5rem 0.5rem 0 0', overflow: 'hidden' }}>
-        <th className="p-4 text-left font-medium text-sm sm:text-base sticky left-0 bg-gray-100" style={{ color: '#1f2937', zIndex: 1, minWidth: '120px' }}>Metrics</th>
-        {columnHeaders.slice(0, columns).map((header, index) => (
-          header ? (
-            <th key={index} className="p-4 text-left font-medium text-sm sm:text-base" style={{ color: '#1f2937', minWidth: '120px' }}>
-              {header}
-            </th>
-          ) : null
-        ))}
-      </tr>
-    </thead>
-    <tbody>
-      {metrics.map((metric) => (
-        <tr key={metric} className="border-b border-gray-200 hover:bg-gray-100">
-          <td className="p-4 font-medium text-sm sm:text-base sticky left-0 bg-white" style={{ color: '#374151', zIndex: 1, minWidth: '120px' }}>{metric}</td>
-          {getTableData(metric).slice(0, columns).map((value, index) => (
-            <td
-              key={index}
-              className={`p-4 text-sm sm:text-base ${isAnimating ? 'animate-change' : ''}`}
-              style={{ color: '#4b5563', minWidth: '120px' }}
-            >
-              {value}
-            </td>
+    <table className="w-full table-auto" aria-label="Trading Challenge Details" style={{ borderSpacing: '0' }}>
+      <thead>
+        <tr className="bg-gray-100 text-gray-800" style={{ borderBottom: '2px solid #e5e7eb', borderRadius: '0.5rem 0.5rem 0 0', overflow: 'hidden' }}>
+          <th className="p-4 text-left font-medium text-sm sm:text-base sticky left-0 bg-gray-100" style={{ color: '#1f2937', zIndex: 1, minWidth: '120px' }}>{t('pricingTable.metricsLabel')}</th>
+          {columnHeaders.slice(0, columns).map((header, index) => (
+            header ? (
+              <th
+                key={index}
+                className="p-4 text-left font-medium text-sm sm:text-base"
+                style={{ color: '#1f2937', minWidth: '120px' }}
+              >
+                {t(`pricingTable.${getTranslationKey(header)}`)}
+              </th>
+            ) : null
           ))}
         </tr>
-      ))}
-    </tbody>
-  </table>
-);
+      </thead>
+      <tbody>
+        {metrics.map((metric) => (
+          <tr key={metric} className="border-b border-gray-200 hover:bg-gray-100">
+            <td className="p-4 font-medium text-sm sm:text-base sticky left-0 bg-white" style={{ color: '#374151', zIndex: 1, minWidth: '120px' }}>{t(`pricingTable.${metric.toLowerCase().replace(/ /g, '')}`)}</td>
+            {getTableData(metric).slice(0, columns).map((value, index) => (
+              <td
+                key={index}
+                className={`p-4 text-sm sm:text-base ${isAnimating ? 'animate-change' : ''}`}
+                style={{ color: '#4b5563', minWidth: '120px' }}
+              >
+                {value}
+              </td>
+            ))}
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  );
 
   return (
     <div
@@ -494,7 +514,7 @@ function PricingTable() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
           <div className="text-center">
             <h2 className="text-5xl lg:text-5xl font-extrabold tracking-tight text-center text-white">
-              Choose the Best Plan
+              {t('pricingTable.chooseTheBestPlan')}
             </h2>
             <h2 className="mt-2 text-5xl lg:text-5xl font-extrabold tracking-tight text-center">
               <span></span>
@@ -503,7 +523,7 @@ function PricingTable() {
           <div className="ps_wrapper">
             <div className="ps_intro">
               <p className="mb-14 mt-10 text-white text-center">
-                The Choice Is Yours Select The Right Evaluation And Become An ECAPFX Trader
+                {t('pricingTable.theChoiceIsYours')}
               </p>
             </div>
           </div>
@@ -511,7 +531,7 @@ function PricingTable() {
             {/* Currency selector at the top */}
             <div className="lg:col-span-12 mb-4">
               <div className="bg-white rounded-lg text-center shadow-md p-4 sm:p-6" style={{ border: '1px solid #e5e7eb', display: 'flex', justifyContent: 'center', gap: '10px' }}>
-                <h6 className="text-lg font-semibold mb-0 mr-4" style={{ color: '#1f2937', alignSelf: 'center' }}>CURRENCY:</h6>
+                <h6 className="text-lg font-semibold mb-0 mr-4" style={{ color: '#1f2937', alignSelf: 'center' }}>{t('pricingTable.currencyLabel')}</h6>
                 {currencies.map((currency) => (
                   <button
                     key={currency}
@@ -540,7 +560,7 @@ function PricingTable() {
             {/* Left sidebar with options */}
             <div className="lg:col-span-3 space-y-4">
               <div className="bg-white rounded-lg shadow-md p-4 sm:p-6" style={{ border: '1px solid #e5e7eb' }}>
-                <h3 className="text-lg font-semibold mb-3" style={{ color: '#1f2937' }}>Steps</h3>
+                <h3 className="text-lg font-semibold mb-3" style={{ color: '#1f2937' }}>{t('pricingTable.stepsLabel')}</h3>
                 <div className="flex flex-col gap-2">
                   {steps.map((step) => (
                     <button
@@ -570,14 +590,14 @@ function PricingTable() {
                         }
                       }}
                     >
-                      {step}
+                      {t(`pricingTable.${step.toLowerCase().replace(/ /g, '')}`)}
                     </button>
                   ))}
                 </div>
               </div>
 
               <div className="bg-white rounded-lg shadow-md p-4 sm:p-6" style={{ border: '1px solid #e5e7eb' }}>
-                <h3 className="text-lg font-semibold mb-3" style={{ color: '#1f2937' }}>Size</h3>
+                <h3 className="text-lg font-semibold mb-3" style={{ color: '#1f2937' }}>{t('pricingTable.sizeLabel')}</h3>
                 <div className="flex flex-col gap-2">
                   {availableSizes.map((size) => (
                     <button
@@ -607,7 +627,7 @@ function PricingTable() {
                         }
                       }}
                     >
-                      {size} Challenge
+                      {size} {t('pricingTable.challenge')}
                     </button>
                   ))}
                 </div>
@@ -615,7 +635,7 @@ function PricingTable() {
 
               <div className="bg-white rounded-lg shadow-md p-4 sm:p-6 text-center" style={{ border: '1px solid #e5e7eb' }}>
                 <h2 className="text-2xl sm:text-4xl font-bold" style={{ color: '#1d8348', background: 'linear-gradient(90deg, #1d8348, #28a745)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>{price}</h2>
-                <p className="text-gray-500 mt-1 text-sm sm:text-base">One-time Fee</p>
+                <p className="text-gray-500 mt-1 text-sm sm:text-base">{t('pricingTable.oneTimeFee')}</p>
               </div>
             </div>
 
@@ -638,17 +658,22 @@ function PricingTable() {
                       {columnHeaders.slice(0, columns).map((header, index) => (
                         header ? (
                           <SwiperSlide key={index}>
-                            <table className="w-full table-auto" aria-label={`Trading Challenge Details - ${header}`}>
+                            <table className="w-full table-auto" aria-label={t('pricingTable.tradingChallengeDetails', { header: t(`pricingTable.${header.toLowerCase().replace(/ /g, '')}`) })}>
                               <thead>
                                 <tr className="bg-gray-100 text-gray-800" style={{ borderBottom: '2px solid #e5e7eb', borderRadius: '0.5rem 0.5rem 0 0', overflow: 'hidden' }}>
-                                  <th className="p-4 text-left font-medium text-sm" style={{ color: '#1f2937', minWidth: '100px' }}>Metrics</th>
-                                  <th className="p-4 text-left font-medium text-sm" style={{ color: '#1f2937', minWidth: '100px' }}>{header}</th>
+                                  <th className="p-4 text-left font-medium text-sm" style={{ color: '#1f2937', minWidth: '100px' }}>{t('pricingTable.metricsLabel')}</th>
+                                  <th
+                                    className="p-4 text-left font-medium text-sm sm:text-base"
+                                    style={{ color: '#1f2937', minWidth: '120px' }}
+                                  >
+                                    {t(`pricingTable.${getTranslationKey(header)}`)}
+                                  </th>
                                 </tr>
                               </thead>
                               <tbody>
                                 {metrics.map((metric) => (
                                   <tr key={metric} className="border-b border-gray-200 hover:bg-gray-100">
-                                    <td className="p-4 font-medium text-sm" style={{ color: '#374151', minWidth: '100px' }}>{metric}</td>
+                                    <td className="p-4 font-medium text-sm" style={{ color: '#374151', minWidth: '100px' }}>{t(`pricingTable.${metric.toLowerCase().replace(/ /g, '')}`)}</td>
                                     <td
                                       className={`p-4 text-sm ${isAnimating ? 'animate-change' : ''}`}
                                       style={{ color: '#4b5563', minWidth: '100px' }}
@@ -667,7 +692,7 @@ function PricingTable() {
                 </div>
                 <div className="p-6 text-center border-t border-gray-200" style={{ backgroundColor: '#f9fafb', position: 'sticky', bottom: 0, left: 0, width: '100%', zIndex: 2 }}>
                   <p className="text-gray-600 mt-10 mb-4 max-w-lg mx-auto text-sm sm:text-base" style={{ color: '#6b7280' }}>
-                    We allow our traders to trade on their own terms. Get Funded with No Consistency Rule! 
+                    {t('pricingTable.weAllowOurTraders')}
                   </p>
                   <button
                     className="font-medium px-6 sm:px-8 py-2 sm:py-3 rounded-md text-sm sm:text-base text-white select-none"
@@ -693,7 +718,7 @@ function PricingTable() {
                     }}
                     onClick={() => window.open('https://active.ecapfx.com/auth/signin', '_blank', 'noopener,noreferrer')}
                   >
-                    Start Challenge 
+                    {t('pricingTable.startChallenge')}
                   </button>
                 </div>
               </div>

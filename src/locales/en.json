@@ -3,29 +3,80 @@
     "title": "ECAPFX - Trade and Earn with Purpose",
     "description": "Join ECAPFX to trade with funded accounts, earn profits, and contribute to a sustainable future."
   },
-  "heading": {
-    "tradeWithPurpose": "Trade with Purpose Grow with ECAPFX"
-  },
-  "title": {
-    "empowerYourTrading": "Empower Your Trading",
-    "realFunding": "Real Funding &",
-    "supportingSustainability": "Supporting Sustainability"
-  },
-  "paragraph": {
-    "turnSimulatedTrading": "Turn Simulated Trading Into Real Profits. Turn Your Trading Talent Into Funded Success With ECAPFX & Earn Up to 90% Of Your Profits."
-  },
-  "button": {
-    "selectPlan": "Select Plan"
-  },
-  "disclaimer": {
-    "text": "ECAPFX is not a financial institution · This website does not promote or sell any financial products or services"
-  },
-  "image": {
-    "mtrTvDark": {
-      "alt": "ECAPFX Trading Platform"
+  "home": {
+    "heading": {
+      "tradeWithPurpose": "Trade with Purpose Grow with ECAPFX"
     },
-    "tradingView": {
-      "alt": "Trading View Integration"
+    "title": {
+      "empowerYourTrading": "Empower Your Trading",
+      "realFunding": "Real Funding &",
+      "supportingSustainability": "Supporting Sustainability"
+    },
+    "paragraph": {
+      "turnSimulatedTrading": "Turn Simulated Trading Into Real Profits. Turn Your Trading Talent Into Funded Success With ECAPFX & Earn Up to 90% Of Your Profits."
+    },
+    "button": {
+      "selectPlan": "Select Plan"
+    },
+    "disclaimer": {
+      "text": "ECAPFX is not a financial institution · This website does not promote or sell any financial products or services"
+    },
+    "items": {
+      "forex": "Forex",
+      "metals": "Metals",
+      "indices": "Indices",
+      "commodities": "Commodities",
+      "crypto": "Crypto",
+      "stocks": "Stocks"
+    },
+    "image": {
+      "mtrTvDark": {
+        "alt": "ECAPFX Trading Platform"
+      },
+      "tradingView": {
+        "alt": "Trading View Integration"
+      }
     }
+  },
+  "about": {
+    "title": {
+      "companyHistory": "Our Company History",
+      "mission": "Our Mission"
+    },
+    "description": "Learn more about our journey and values."
+  },
+  "pricingTable": {
+    "chooseTheBestPlan": "Choose the Best Plan",
+    "theChoiceIsYours": "The Choice Is Yours Select The Right Evaluation And Become An ECAPFX Trader",
+    "currencyLabel": "CURRENCY:",
+    "stepsLabel": "Steps",
+    "sizeLabel": "Size",
+    "oneTimeFee": "One-time Fee",
+    "onestep": "One Step",
+    "twostep": "Two Step",
+    "threestep": "Three Step",
+    "instantfunding": "Instant Funding",
+    "challenge": "Challenge",
+    "metricsLabel": "Metrics",
+    "stageone": "Stage One",
+    "stagetwo": "Stage Two",
+    "stagethree": "Stage Three",
+    "funded": "Funded",
+    "tradingChallengeDetails": "Trading Challenge Details - {{header}}",
+    "weAllowOurTraders": "We allow our traders to trade on their own terms. Get Funded with No Consistency Rule!",
+    "startchallenge": "Start Challenge",
+    "profit": "Profit Target",
+    "duration": "Duration",
+    "leverage": "Leverage",
+    "mintradingdays": "Min Trading Days",
+    "maxloss": "Max Loss",
+    "dailyloss": "Daily Loss",
+    "profitshare": "Profit Share",
+    "fee": "Fee",
+    "bonusafterstage": "Bonus After Stage",
+    "unlimited": "Unlimited",
+    "none": "None",
+    "refunded": "Refunded",
+    "upTo": "Up to"
   }
 }
