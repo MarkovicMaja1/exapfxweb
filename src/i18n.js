@@ -12,7 +12,12 @@ i18n
       en: { translation: en },
       es: { translation: es },
     },
-    fallbackLng: 'en',
+    lng: 'en', // Set English as the default language
+    fallbackLng: 'en', // Fallback to English if detection fails
+    detection: {
+      order: ['navigator'], // Use browser language detection
+      caches: [], // Disable caching to always start with 'en' unless overridden
+    },
     interpolation: {
       escapeValue: false,
     },
