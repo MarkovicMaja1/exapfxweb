@@ -1,4 +1,5 @@
 import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
+import LanguageSwitcher from './components/LanguageSwitcher.jsx';
 import Contact from './components/Contact.jsx';
 import Discord from "./components/Discord";
 import LogoSlider from "./components/LogoSlider.jsx";

@@ -1,0 +1,31 @@
+{
+  "seo": {
+    "title": "ECAPFX - Comercie y Gane con Propósito",
+    "description": "Únete a ECAPFX para comerciar con cuentas financiadas, ganar ganancias y contribuir a un futuro sostenible."
+  },
+  "heading": {
+    "tradeWithPurpose": "Comercie con Propósito Crezca con ECAPFX"
+  },
+  "title": {
+    "empowerYourTrading": "Empodera Tu Comercio",
+    "realFunding": "Financiamiento Real &",
+    "supportingSustainability": "Apoyando la Sostenibilidad"
+  },
+  "paragraph": {
+    "turnSimulatedTrading": "Convierte el Comercio Simulado en Ganancias Reales. Convierte tu Talento de Comercio en Éxito Financiado con ECAPFX y Gana hasta el 90% de tus Ganancias."
+  },
+  "button": {
+    "selectPlan": "Seleccionar Plan"
+  },
+  "disclaimer": {
+    "text": "ECAPFX no es una institución financiera · Este sitio web no promueve ni vende productos o servicios financieros"
+  },
+  "image": {
+    "mtrTvDark": {
+      "alt": "Plataforma de Comercio ECAPFX"
+    },
+    "tradingView": {
+      "alt": "Integración de Trading View"
+    }
+  }
+}

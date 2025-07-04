@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import logo from '../assets/ECapFX-LOGO-white.png';
+import LanguageSwitcher from './LanguageSwitcher';
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -8,12 +9,12 @@ const Header = () => {
   return (
     <header className="bg-[#151515] fixed top-0 left-0 right-0 z-50 w-full"
       style={{
-      background: `linear-gradient(to bottom, #151515 98%, rgba(185, 179, 179, 0.61) 100%)`
+        background: `linear-gradient(to bottom, #151515 98%, rgba(185, 179, 179, 0.61) 100%)`
       }}>
       <nav className="items-center mx-auto flex max-w-screen-2xl p-4 relative">
         {/* Logo */}
         <div className="absolute left-4 top-1/2 transform -translate-y-1/2 z-10">
-          <Link to="/#home" className="-m-1.5 p-1.5"> {/* Changed to Link */}
+          <Link to="/#home" className="-m-1.5 p-1.5">
             <span className="sr-only">Windframe</span>
             <img src={logo} alt="Logo" className="w-2/5" />
           </Link>
@@ -29,12 +30,15 @@ const Header = () => {
           <li><Link to="/#howitworks" className="font-bold hover:text-[#1d8348] transition">How it works</Link></li>
         </ul>
 
-        <Link
-          to="https://active.ecapfx.com/auth/signin" // Changed to Link
-          className="getstarted-button px-5 py-2.5 text-white font-roboto hidden lg:block ml-auto bg-gradient-to-r from-[#1a6f3d] via-[#1d8348] to-[#145c33] hover:from-[#156437]/90 hover:via-[#1d8348]/90 hover:to-[#0e3f24]/90 hover:text-black hover:shadow-md hover:shadow-green-700/50 rounded-2xl transition duration-300 ease-in-out hover:scale-105 active:cursor-pointer select-none"
-        >
-          Get Started
-        </Link>
+        <div className="hidden lg:flex items-center ml-auto space-x-4">
+          <Link
+            to="https://active.ecapfx.com/auth/signin"
+            className="getstarted-button px-5 py-2.5 text-white font-roboto bg-gradient-to-r from-[#1a6f3d] via-[#1d8348] to-[#145c33] hover:from-[#156437]/90 hover:via-[#1d8348]/90 hover:to-[#0e3f24]/90 hover:text-black hover:shadow-md hover:shadow-green-700/50 rounded-2xl transition duration-300 ease-in-out hover:scale-105 active:cursor-pointer select-none"
+          >
+            Get Started
+          </Link>
+          <LanguageSwitcher />
+        </div>
 
         {/* Mobile menu button */}
         <div className="lg:hidden ml-auto z-20">
@@ -43,16 +47,12 @@ const Header = () => {
             className="text-white focus:outline-none"
           >
             {isOpen ? (
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none"
-                viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
-                  d="M6 18L18 6M6 6l12 12" />
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
               </svg>
             ) : (
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none"
-                viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
-                  d="M4 6h16M4 12h16M4 18h16" />
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
               </svg>
             )}
           </button>
@@ -69,44 +69,45 @@ const Header = () => {
             <li><Link to="/#team" className="block hover:text-[#1d8348] transition" onClick={() => setIsOpen(!isOpen)}>Team</Link></li>
             <li><Link to="/faq" className="block hover:text-[#1d8348] transition" onClick={() => setIsOpen(!isOpen)}>FAQ</Link></li>
             <li><Link to="/#howitworks" className="block hover:text-[#1d8348] transition" onClick={() => setIsOpen(!isOpen)}>How it works</Link></li>
-
             <li>
               <Link
-                to="https://active.ecapfx.com/auth/signin" // Changed to Link
+                to="https://active.ecapfx.com/auth/signin"
                 className="bg-gradient-to-r from-[#1a6f3d] via-[#1d8348] to-[#145c33] hover:from-[#156437]/90 hover:via-[#1d8348]/90 hover:to-[#0e3f24]/90 hover:text-black hover:shadow-md hover:shadow-green-700/50 px-6 py-2 rounded-lg text-white inline-block transition duration-300 ease-in-out hover:scale-105 active:cursor-pointer select-none"
                 onClick={() => setIsOpen(!isOpen)}
               >
                 Get Started
               </Link>
             </li>
+            <li className="mt-2">
+              <LanguageSwitcher />
+            </li>
           </ul>
         </div>
       )}
       <style jsx>{`
-          @media (max-width: 1160px) {
-            .lg\\:flex {
-              display: none !important;
-            }
-            .lg\\:block {
-              display: none !important;
-            }
-            .lg\\:hidden {
-              display: block !important;
-            }
+        @media (max-width: 1160px) {
+          .lg\\:flex {
+            display: none !important;
           }
-          @media (min-width: 1160px) {
-            .lg\\:flex {
-              display: flex !important;
-            }
-            .lg\\:block {
-              display: block !important;
-            }
-            .lg\\:hidden {
-              display: none !important;
-            }
+          .lg\\:block {
+            display: none !important;
           }
-        `}
-      </style>
+          .lg\\:hidden {
+            display: block !important;
+          }
+        }
+        @media (min-width: 1160px) {
+          .lg\\:flex {
+            display: flex !important;
+          }
+          .lg\\:block {
+            display: block !important;
+          }
+          .lg\\:hidden {
+            display: none !important;
+          }
+        }
+      `}</style>
     </header>
   );
 };

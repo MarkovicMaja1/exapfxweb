@@ -1,0 +1,31 @@
+{
+  "seo": {
+    "title": "ECAPFX - Trade and Earn with Purpose",
+    "description": "Join ECAPFX to trade with funded accounts, earn profits, and contribute to a sustainable future."
+  },
+  "heading": {
+    "tradeWithPurpose": "Trade with Purpose Grow with ECAPFX"
+  },
+  "title": {
+    "empowerYourTrading": "Empower Your Trading",
+    "realFunding": "Real Funding &",
+    "supportingSustainability": "Supporting Sustainability"
+  },
+  "paragraph": {
+    "turnSimulatedTrading": "Turn Simulated Trading Into Real Profits. Turn Your Trading Talent Into Funded Success With ECAPFX & Earn Up to 90% Of Your Profits."
+  },
+  "button": {
+    "selectPlan": "Select Plan"
+  },
+  "disclaimer": {
+    "text": "ECAPFX is not a financial institution · This website does not promote or sell any financial products or services"
+  },
+  "image": {
+    "mtrTvDark": {
+      "alt": "ECAPFX Trading Platform"
+    },
+    "tradingView": {
+      "alt": "Trading View Integration"
+    }
+  }
+}
