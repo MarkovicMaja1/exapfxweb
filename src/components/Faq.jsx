@@ -3,8 +3,10 @@ import { Link } from 'react-router-dom';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { motion, AnimatePresence } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
 
 const Faq = () => {
+  const { t } = useTranslation();
   const [openIndex, setOpenIndex] = useState(null);
 
   // Initialize AOS and reset scroll position only if no hash
@@ -22,56 +24,56 @@ const Faq = () => {
   // FAQ data
   const faqs = [
     {
-      question: "What is ECAPFX?",
-      answer: "ECAPFX is a proprietary trading firm that provides traders with access to funded capital after successfully completing a challenge. We combine performance-based funding with a commitment to positive global impact, donating 1% of annual profits to sustainability initiatives.",
+      question: t('faq.whatIsECAPFX.question'),
+      answer: t('faq.whatIsECAPFX.answer'),
     },
     {
-      question: "What types of challenges do you offer?",
-      answer: "We offer three structured challenge types designed for different levels of trading experience: Beginner – For those new to trading, Experienced – For traders with moderate experience, Seasoned – For professional and high-performance traders. Each structure comes with its own risk parameters, targets, and evaluation metrics.",
+      question: t('faq.challengeTypes.question'),
+      answer: t('faq.challengeTypes.answer'),
     },
     {
-      question: "What are the evaluation criteria?",
-      answer: "To pass a challenge, you must stay within the following rules: Daily Loss Limit, Max Drawdown, Profit Targets, Consistency Rules based on the type of challenge (Phased or Instant), Trailing Drawdown for Instant accounts, measured with precision.",
+      question: t('faq.evaluationCriteria.question'),
+      answer: t('faq.evaluationCriteria.answer'),
     },
     {
-      question: "How long does it take to get funded?",
-      answer: "After you pass the evaluation and complete KYC/AML compliance checks, we aim to provide access to your funded account within 5 calendar days.",
+      question: t('faq.fundingTime.question'),
+      answer: t('faq.fundingTime.answer'),
     },
     {
-      question: "What is the profit split?",
-      answer: "Your profit share depends on the challenge type and account tier selected. Details are clearly outlined before you start the challenge.",
+      question: t('faq.profitSplit.question'),
+      answer: t('faq.profitSplit.answer'),
     },
     {
-      question: "Do I keep my profits?",
-      answer: "Yes — funded traders receive a profit share from the earnings they generate, based on their selected model.",
+      question: t('faq.keepProfits.question'),
+      answer: t('faq.keepProfits.answer'),
     },
     {
-      question: "What are prohibited practices?",
-      answer: "We strictly prohibit strategies such as: Copy trading, High-frequency arbitrage, News exploitation, Any form of system abuse. Please review the full list on our Rules Page.",
+      question: t('faq.prohibitedPractices.question'),
+      answer: t('faq.prohibitedPractices.answer'),
     },
     {
-      question: "What happens if I break the rules?",
-      answer: "Rule violations may lead to disqualification or termination of your funded account. We encourage all traders to read and understand our guidelines before participating.",
+      question: t('faq.ruleBreaks.question'),
+      answer: t('faq.ruleBreaks.answer'),
     },
     {
-      question: "What makes ECAPFX different from other prop firms?",
-      answer: "At ECAPFX, we stand against cheap gimmicks and misleading promotions. We don’t offer shallow discounts or flashy marketing tricks just to drive volume. Our focus is on meaningful challenges that develop real traders, not short-term hype. We’re here to support long-term growth, accountability, and impact — both in trading and the world beyond.",
+      question: t('faq.uniqueDifference.question'),
+      answer: t('faq.uniqueDifference.answer'),
     },
     {
-      question: "What platforms do you support?",
-      answer: "We currently offer Match-Trader as our trading platform, available on both web and mobile for seamless trading across devices.",
+      question: t('faq.supportedPlatforms.question'),
+      answer: t('faq.supportedPlatforms.answer'),
     },
     {
-      question: "What are your support hours?",
-      answer: "Our support team is available 24/7 to assist you with any questions or technical issues. Whether you're just starting or actively trading, we’re always here to help.",
+      question: t('faq.supportHours.question'),
+      answer: t('faq.supportHours.answer'),
     },
     {
-      question: "How does ECAPFX give back?",
-      answer: "After your first successful year of trading, ECAPFX donates 1% of firm profits to sustainability-focused projects. It’s our way of aligning trading success with a greater purpose.",
+      question: t('faq.givingBack.question'),
+      answer: t('faq.givingBack.answer'),
     },
     {
-      question: "How do I get started?",
-      answer: "Sign up at ecapfx.com, choose the challenge that matches your level, and begin your evaluation. You’ll be guided through every step of the journey.",
+      question: t('faq.gettingStarted.question'),
+      answer: t('faq.gettingStarted.answer'),
     },
   ];
 
@@ -117,10 +119,10 @@ const Faq = () => {
         {/* Title Section */}
         <div className="mx-auto lg:max-w-4xl">
           <h2 className="mb-4 text-4xl font-extrabold tracking-tight text-white">
-            Frequently Asked Questions
+            {t('faq.title')}
           </h2>
           <p className="mb-24 text-xl font-medium tracking-tight text-white">
-            Find answers to common questions about ECAPFX’s trading programs and funding opportunities.
+            {t('faq.description')}
           </p>
         </div>
 
@@ -204,7 +206,6 @@ const Faq = () => {
         <div className="mt-8 flex flex-col items-center space-y-4 sm:flex-row sm:space-y-0 sm:space-x-6">
          </div>
       </div>
-
 
       {/* Custom Scoped CSS */}
       <style jsx>{`

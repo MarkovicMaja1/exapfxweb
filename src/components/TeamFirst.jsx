@@ -1,40 +1,47 @@
 import React from 'react';
 import { useState, useEffect, useCallback } from "react";
+import { useTranslation } from 'react-i18next';
 
 const Team = () => {
+  const { t } = useTranslation();
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isPlaying, setIsPlaying] = useState(true);
 
   const blogPosts = [
     {
       id: 1,
-      category: "Michael Pearn",
-      title: "Founder & CEO",
-      description: "As the visionary behind ECAPFX, Michael leads the firm with extensive experience in proprietary trading and financial markets."
+      key: 'michaelPearn',
+      category: t(`team.${'michaelPearn'}.category`),
+      title: t(`team.${'michaelPearn'}.title`),
+      description: t(`team.${'michaelPearn'}.description`)
     },
     {
       id: 2,
-      category: "Carly Pearn",
-      title: "Co-Founder & Chief Sustainability Officer",
-      description: "Carly oversees the firm's sustainability initiatives, ensuring that environmental and social responsibility are integrated into our business model."
+      key: 'carlyPearn',
+      category: t(`team.${'carlyPearn'}.category`),
+      title: t(`team.${'carlyPearn'}.title`),
+      description: t(`team.${'carlyPearn'}.description`)
     },
     {
       id: 3,
-      category: "Nebojša Sladoje",
-      title: "Chief Operating Officer (COO)",
-      description: "Nebojša is responsible for overseeing company operations and managing all internal teams."
+      key: 'nebojsaSladoje',
+      category: t(`team.${'nebojsaSladoje'}.category`),
+      title: t(`team.${'nebojsaSladoje'}.title`),
+      description: t(`team.${'nebojsaSladoje'}.description`)
     },
     {
       id: 4,
-      category: "Maja Marković",
-      title: "Lead Developer",
-      description: "Maja specializes in developing and optimizing our trading platform, ensuring seamless user experiences and cutting-edge trading tools."
+      key: 'majaMarkovic',
+      category: t(`team.${'majaMarkovic'}.category`),
+      title: t(`team.${'majaMarkovic'}.title`),
+      description: t(`team.${'majaMarkovic'}.description`)
     },
     {
       id: 5,
-      category: "Nikola Ilić",
-      title: "Lead Developer",
-      description: "Nikola focuses on building and maintaining the technical infrastructure that powers our proprietary trading systems."
+      key: 'nikolaIlic',
+      category: t(`team.${'nikolaIlic'}.category`),
+      title: t(`team.${'nikolaIlic'}.title`),
+      description: t(`team.${'nikolaIlic'}.description`)
     },
   ];
 
@@ -69,8 +76,12 @@ const Team = () => {
   return (
     <section className="bg-[#151515] py-24 text-center">
       <div className="mx-auto lg:max-w-4xl text-center">
-        <h2 className="mb-4 text-4xl font-extrabold tracking-tight text-center text-white">Meet The Team</h2>
-        <p className="mb-24 text-4xl font-extrabold tracking-tight text-center text-white">Our Leadership & Talent</p>
+        <h2 className="mb-4 text-4xl font-extrabold tracking-tight text-center text-white">
+          {t('team.hero.title')}
+        </h2>
+        <p className="mb-24 text-4xl font-extrabold tracking-tight text-center text-white">
+          {t('team.hero.subtitle')}
+        </p>
       </div>
 
       <div className="max-w-7xl mx-auto px-8 paddingTeam">
@@ -90,14 +101,14 @@ const Team = () => {
                   aria-label={post.title}
                 >
                   <div className="bg-white rounded-lg shadow-lg overflow-hidden h-full transition-transform duration-300 border-t-4 border-green-600">
-                    <div className="p-4"> {/* Reduced padding for smaller cards */}
+                    <div className="p-4">
                       <h4 className="mt-1 text-xl font-bold text-white-900 leading-tight">
                         {post.category}
                       </h4>
                       <h5 className="mt-1 text-xl font-bold leading-tight text-green-600">
                         {post.title}
                       </h5>
-                      <p className="mt-2 text-white-600">{post.description}</p> {/* Reduced spacing for tighter content */}
+                      <p className="mt-2 text-white-600">{post.description}</p>
                     </div>
                   </div>
                 </div>
@@ -131,18 +142,15 @@ const Team = () => {
         </div>
         <style jsx>{`
           @media (max-width: 768px) {
-          .paddingTeam{
-            
+            .paddingTeam {
               padding-left: 28px;
-            padding-right:28px;
+              padding-right: 28px;
+            }
           }
-      }
-      `}</style>
+        `}</style>
       </div>
     </section>
   );
 };
 
 export default Team;
-
-

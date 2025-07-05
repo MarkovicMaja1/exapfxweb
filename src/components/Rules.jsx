@@ -1,8 +1,12 @@
 import React, { useEffect } from 'react';
 import { motion, useAnimation } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
+import { useTranslation } from 'react-i18next';
+import { Link } from 'react-router-dom'; // If using react-router for navigation
 
 const Rules = () => {
+  const { t } = useTranslation();
+
   // Scroll to top on mount or tab visibility change
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -79,78 +83,78 @@ const Rules = () => {
 
   const practices = [
     {
-      title: "Outsourcing Your Challenge",
-      description: "You must complete the trading challenge yourself. Paying a third party, using trade services, or hiring someone else to pass the challenge on your behalf is strictly forbidden.",
+      title: t('rules.practices.outsourcingChallenge.title'),
+      description: t('rules.practices.outsourcingChallenge.description'),
       color: 'from-orange-500 to-red-500',
     },
     {
-      title: "Copy Trading / Signal Mirroring",
-      description: "Using any form of: Copy trading platforms, Social signal services, Trade replication software, Manual mirroring of trades from other accounts is not allowed.",
+      title: t('rules.practices.copyTrading.title'),
+      description: t('rules.practices.copyTrading.description'),
       color: 'from-yellow-400 to-orange-500',
     },
     {
-      title: "High-Frequency Arbitrage / Tick Scalping",
-      description: "Using latency arbitrage, tick scalping (ultra-fast entries/exits within seconds), or exploiting broker execution delays is a violation.",
+      title: t('rules.practices.highFrequencyArbitrage.title'),
+      description: t('rules.practices.highFrequencyArbitrage.description'),
       color: 'from-purple-500 to-pink-500',
     },
     {
-      title: "Account Sharing or Third-Party Access",
-      description: "Only the registered trader may access and operate the account. ECAPFX reserves the right to disqualify any trader if we believe someone else is in control of the account or unauthorised activity is taking place.",
+      title: t('rules.practices.accountSharing.title'),
+      description: t('rules.practices.accountSharing.description'),
       color: 'from-blue-400 to-indigo-500',
     },
     {
-      title: "Platform or Pricing Exploits",
-      description: "Abusing pricing errors, execution glitches, or misusing software bugs is prohibited. Trades must reflect fair, legitimate market behaviour.",
+      title: t('rules.practices.platformExploits.title'),
+      description: t('rules.practices.platformExploits.description'),
       color: 'from-green-500 to-emerald-500',
     },
     {
-      title: "News Event Gambling",
-      description: "Placing oversized trades before or during major economic news releases, with the intent of capitalising on unpredictable volatility, is not allowed.",
+      title: t('rules.practices.newsEventGambling.title'),
+      description: t('rules.practices.newsEventGambling.description'),
       color: 'from-blue-300 to-sky-400',
     },
     {
-      title: "Use of Expert Advisors (EAs) or Bots",
-      description: "Automated systems, bots, or EAs are not allowed unless specifically authorised by ECAPFX in writing.",
+      title: t('rules.practices.expertAdvisors.title'),
+      description: t('rules.practices.expertAdvisors.description'),
       color: 'from-green-400 to-lime-500',
     },
     {
-      title: "Team/Group Trading",
-      description: "Coordinating with others to influence positions, hedge across multiple ECAPFX accounts, or replicate trades is strictly forbidden.",
+      title: t('rules.practices.teamTrading.title'),
+      description: t('rules.practices.teamTrading.description'),
       color: 'from-orange-400 to-amber-500',
     },
     {
-      title: "Round-Trip Scalping / Spread Exploitation",
-      description: "Trades placed solely to benefit from short-term spreads or commission loopholes — with no market intent — are disallowed.",
+      title: t('rules.practices.roundTripScalping.title'),
+      description: t('rules.practices.roundTripScalping.description'),
       color: 'from-yellow-300 to-yellow-500',
     },
     {
-      title: "Breach of Trading Limits via Manipulation",
-      description: "Passing or failing a challenge by manipulating lot sizes, timing, or open PnL to avoid hitting drawdown rules or to force target completion will result in disqualification.",
+      title: t('rules.practices.tradingLimitsManipulation.title'),
+      description: t('rules.practices.tradingLimitsManipulation.description'),
       color: 'from-purple-400 to-violet-500',
     },
     {
-      title: "False Identity or Fake KYC/AML",
-      description: "Submitting fraudulent identification documents or impersonating another person will result in a permanent ban and may trigger legal action.",
+      title: t('rules.practices.falseIdentity.title'),
+      description: t('rules.practices.falseIdentity.description'),
       color: 'from-yellow-200 to-yellow-400',
     },
     {
-      title: "Gambling Behaviour & Excessive Risk-Taking",
-      description: "If we detect substantial profits gained through reckless, inconsistent, or gambling-like behaviour, ECAPFX reserves the right to investigate or revoke payout eligibility — even if technical rules have not been broken.",
+      title: t('rules.practices.gamblingBehaviour.title'),
+      description: t('rules.practices.gamblingBehaviour.description'),
       color: 'from-purple-300 to-purple-500',
     },
     {
-      title: "Consistency Rule (Discretionary Enforcement)",
-      description: "While our Consistency Rule may not be enforced during your challenge, ECAPFX reserves the right to enforce it at the payout stage. If we believe the strategy used to pass the challenge or generate profits is inconsistent, manipulated, or violates the spirit of sustainable trading, we may: Withhold or adjust payouts, Request further verification, Disqualify the account.",
+      title: t('rules.practices.consistencyRule.title'),
+      description: t('rules.practices.consistencyRule.description'),
       color: 'from-blue-200 to-blue-400',
     },
     {
-      title: "Misleading Conduct or Fraudulent Intent",
-      description: "Any attempt to mislead ECAPFX, evade our systems, or abuse trust will result in immediate account termination.",
+      title: t('rules.practices.misleadingConduct.title'),
+      description: t('rules.practices.misleadingConduct.description'),
       color: 'from-green-300 to-teal-500',
     },
     {
-      title: "Breached Account Rules",
-      description: "If your account breaches any of the following limits or rules, ECAPFX reserves the right to take immediate action, including but not limited to: Daily Loss Limit, Overall (Max) Loss Limit, Profit Loss Limit, Days Trading Limit. Actions may include: Immediate disqualification from the challenge or funded program, Termination of your funded trading account without prior notice, Forfeiture of any pending profits or payouts, Permanent ban from future ECAPFX challenges and funding opportunities, Reporting to relevant authorities in cases of fraud or legal violations.",
+      title: t('rules.practices.breachedAccountRules.title'),
+      description: t('rules.practices.breachedAccountRules.description'),
       color: 'from-orange-300 to-orange-500',
     },
   ];
@@ -176,10 +180,10 @@ const Rules = () => {
       >
         <div className="mb-12 mx-auto lg:max-w-4xl">
           <h2 className="mb-4 text-3xl sm:text-4xl font-extrabold tracking-tight text-black">
-            ECAPFX Prohibited Practices
+            {t('rules.title')}
           </h2>
           <p className="text-lg sm:text-xl font-medium tracking-tight text-black">
-            At ECAPFX, we are committed to protecting the integrity of our challenges, our traders, and the firm. The following practices are strictly prohibited.
+            {t('rules.description')}
           </p>
         </div>
       </motion.div>
@@ -221,34 +225,36 @@ const Rules = () => {
           transition={{ duration: 0.5, ease: [0.25, 0.1, 0.25, 1] }}
           className="relative bg-gradient-to-br from-[#f5f5f5] to-[#e0e0e0] p-6 sm:p-8 rounded-2xl shadow-xl border border-[#1d8348]/20"
         >
-          <h3 className="text-xl sm:text-2xl font-bold text-[#1d8348] leading-snug">⚠️ Final Note</h3>
-          <p className="text-black mt-3 text-base sm:text-lg leading-relaxed">
-            By participating in any ECAPFX challenge or funded program, you agree to abide by these rules. Ignorance is not an excuse. Review the{' '}
-            <a href="/terms" className="text-[#1d8348] hover:underline">
+          <h3 className="text-xl sm:text-2xl font-bold text-[#1d8348] mb-4">{t('rules.finalNote.heading')}</h3>
+          <p className="text-black text-base sm:text-lg leading-relaxed">
+            {t('rules.finalNote.text').split('<a')[0]}
+            <Link
+              to="/terms"
+              className="text-[#1d8348] hover:underline"
+            >
               Terms & Conditions
-            </a>{' '}
-            and contact our 24/7 support team for clarification.
+            </Link>
+            {' and contact our 24/7 support team for clarification.'}
           </p>
         </motion.div>
       </section>
 
       {/* Call to Action */}
       <section className="flex justify-center pt-16 pb-16 px-6 sm:px-12">
-        <motion.a
+        <a
           href="https://active.ecapfx.com/auth/signin"
           target="_blank"
           rel="noopener noreferrer"
-          initial={{ opacity: 0, scale: 0.9 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.5, ease: [0.25, 0.1, 0.25, 1] }}
           className="getstarted-button text-lg sm:text-xl px-5 py-2.5 text-white font-roboto bg-gradient-to-r from-[#1a6f3d] via-[#1d8348] to-[#145c33] hover:from-[#156437]/90 hover:via-[#1d8348]/90 hover:to-[#0e3f24]/90 hover:text-black hover:shadow-md hover:shadow-green-700/50 rounded-2xl transition duration-300 ease-in-out hover:scale-105 select-none z-20 pointer-events-auto"
+          style={{ pointerEvents: 'auto' }}
         >
-          Get Started Now
-        </motion.a>
+          {t('rules.callToAction')}
+        </a>
       </section>
 
       {/* Disclaimer */}
       <section className="pb-12 px-6 sm:px-12 text-center">
+        {/* Uncomment if needed */}
         {/* <p className="text-[#f7e59f] text-base font-medium leading-relaxed">
           ECAPFX is not a financial institution · This website does not promote or sell any financial products or services
         </p> */}
@@ -351,8 +357,8 @@ const Rule = ({ custom, color, number, reverse, children, contentVariants, badge
             stroke={`url(#gradient-${custom})`}
             strokeWidth="8"
             strokeDasharray="251.2"
-            strokeLinecap="round" // Smooths the stroke ends
-            transform="rotate(1 50 50)" // Slight rotation to hide the seam
+            strokeLinecap="round"
+            transform="rotate(1 50 50)"
             variants={circleVariants}
           />
           <defs>

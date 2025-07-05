@@ -905,5 +905,209 @@
         "website": "https://www.ecapfx.com"
       }
     }
+  },
+  "cookiePolicy": {
+    "title": "Política de Cookies",
+    "header": "ECAPFX Proprietary Firm – Política de Cookies",
+    "effectiveDateLabel": "Fecha de entrada en vigor:",
+    "effectiveDate": "5 de julio de 2025",
+    "applicableLawLabel": "Ley aplicable:",
+    "applicableLaw": "Reglamento General de Protección de Datos del Reino Unido (UK GDPR), Directiva de Privacidad Electrónica",
+    "sections": {
+      "introduction": {
+        "title": "1. Introducción",
+        "text1": "ECAPFX Proprietary Firm (\"ECAPFX\", \"nosotros\", \"nuestro\") utiliza cookies y tecnologías similares para mejorar la funcionalidad, seguridad y personalización de nuestro sitio web ",
+        "website": "https://www.ecapfx.com",
+        "text2": ". Esta Política de Cookies explica cómo usamos las cookies, qué tipos de cookies utilizamos y cómo puede gestionar sus preferencias de cookies."
+      },
+      "operator": {
+        "title": "2. Operador del sitio web",
+        "text1": "El operador del sitio web es ECAPFX Proprietary Firm, con domicilio registrado en Office 7330MO 182-184, High Street North Area 1/1, East Ham, London, E6 2JA, Reino Unido.",
+        "contactLabel": "Contacto:",
+        "email": "privacy@ecapfx.com"
+      },
+      "whatAreCookies": {
+        "title": "3. ¿Qué son las cookies?",
+        "text": "Las cookies son pequeños archivos de texto almacenados en su dispositivo cuando visita nuestro sitio web. Nos ayudan a mejorar la funcionalidad del sitio, analizar el uso y personalizar su experiencia."
+      },
+      "typesOfCookies": {
+        "title": "4. Tipos de cookies que usamos",
+        "text": "Utilizamos los siguientes tipos de cookies:",
+        "subsections": {
+          "necessary": {
+            "title": "a) Cookies necesarias",
+            "items": [
+              "Habilitan la funcionalidad básica del sitio web, como la navegación y el acceso a áreas seguras.",
+              "No se pueden desactivar ya que son esenciales para el funcionamiento del sitio."
+            ]
+          },
+          "analytical": {
+            "title": "b) Cookies analíticas",
+            "items": [
+              "Nos ayudan a entender cómo los visitantes usan nuestro sitio web, por ejemplo, qué páginas son las más visitadas.",
+              "Son opcionales y se usan solo con su consentimiento."
+            ]
+          },
+          "marketing": {
+            "title": "c) Cookies de marketing",
+            "items": [
+              "Se utilizan para personalizar anuncios y contenido en sitios web y redes sociales.",
+              "Son opcionales y se usan solo con su consentimiento."
+            ]
+          }
+        }
+      },
+      "cookieManagement": {
+        "title": "5. Cómo gestionar las cookies",
+        "text1": "Puede gestionar las preferencias de cookies a través de la configuración de su navegador o nuestro banner de consentimiento de cookies. La mayoría de los navegadores aceptan cookies por defecto, pero puede:",
+        "items": [
+          "Aceptar todas las cookies.",
+          "Rechazar las cookies no esenciales.",
+          "Eliminar las cookies de su dispositivo en cualquier momento."
+        ],
+        "text2": "Para más información, consulte la sección de ayuda de su navegador o la configuración de su sistema operativo. Tenga en cuenta que rechazar cookies puede afectar algunas funciones del sitio web."
+      },
+      "thirdPartyCookies": {
+        "title": "6. Cookies de terceros",
+        "text": "Algunas cookies pueden ser establecidas por servicios de terceros (por ejemplo, socios de análisis o publicidad). Estas están sujetas a las políticas de privacidad de esos proveedores."
+      },
+      "yourRights": {
+        "title": "7. Sus derechos",
+        "text": "Bajo el UK GDPR, usted tiene derecho a:",
+        "items": [
+          "Acceder a los datos que tenemos sobre usted a través de cookies.",
+          "Objetar o restringir el procesamiento de datos relacionados con cookies.",
+          "Retirar el consentimiento para cookies no esenciales en cualquier momento.",
+          "Presentar una queja ante la Oficina del Comisionado de Información del Reino Unido (ICO) en https://ico.org.uk/"
+        ],
+        "contactText": "Para ejercer estos derechos, contáctenos en ",
+        "email": "privacy@ecapfx.com"
+      },
+      "updates": {
+        "title": "8. Actualizaciones de esta política",
+        "text": "Podemos actualizar esta Política de Cookies para reflejar cambios en la ley o en nuestras prácticas. La versión más reciente se publicará en nuestro sitio web con una fecha de entrada en vigor revisada."
+      },
+      "contact": {
+        "title": "9. Contáctenos",
+        "text": "Para preguntas sobre esta Política de Cookies, contáctenos:",
+        "company": "ECAPFX Proprietary Firm",
+        "emailLabel": "Correo electrónico:",
+        "email": "privacy@ecapfx.com",
+        "websiteLabel": "Sitio web:",
+        "website": "https://www.ecapfx.com"
+      }
+    }
+  },
+  "footer": {
+    "importantLinks": {
+      "title": "Enlaces Importantes",
+      "items": [
+        {
+          "label": "Cómo funciona",
+          "to": "/#howitworks"
+        },
+        {
+          "label": "Sobre Nosotros",
+          "to": "/#about"
+        },
+        {
+          "label": "Equipo",
+          "to": "/#team"
+        }
+      ]
+    },
+    "ourServices": {
+      "title": "Nuestros Servicios",
+      "items": [
+        {
+          "label": "Precios",
+          "to": "/#pricingtable"
+        },
+        {
+          "label": "Guías",
+          "to": "#"
+        },
+        {
+          "label": "Misión y Valores",
+          "to": "/#goals"
+        }
+      ]
+    },
+    "customerCare": {
+      "title": "Atención al Cliente",
+      "items": [
+        {
+          "label": "Contacto",
+          "to": "/contact"
+        },
+        {
+          "label": "Reglas",
+          "to": "/rules"
+        },
+        {
+          "label": "Chat en Vivo",
+          "to": "#"
+        }
+      ]
+    },
+    "policies": {
+      "title": "Políticas",
+      "items": [
+        {
+          "label": "Reclamaciones",
+          "to": "/claim"
+        },
+        {
+          "label": "Política de Privacidad",
+          "to": "/privacy-policy"
+        },
+        {
+          "label": "Términos y Condiciones",
+          "to": "/terms"
+        }
+      ]
+    },
+    "copyright": "© 2025 ECAPFX. Todos los derechos reservados. ID de la empresa: 16330400, 166 Willingale Road, Loughton, IG10 2DA, Reino Unido.",
+    "images": {
+      "logo": "Logotipo de ECAPFX",
+      "visa": "Visa",
+      "mastercard": "Mastercard",
+      "paypal": "Paypal",
+      "stripe": "Stripe",
+      "confirmo": "Confirmo",
+      "coinpayments": "CoinPayments"
+    }
+  },
+  "header": {
+    "logoAlt": "Logotipo de ECAPFX",
+    "navItems": [
+      {
+        "label": "Inicio",
+        "to": "/#home"
+      },
+      {
+        "label": "Elegir Plan",
+        "to": "/#pricingtable"
+      },
+      {
+        "label": "Sobre Nosotros",
+        "to": "/#about"
+      },
+      {
+        "label": "Equipo",
+        "to": "/#team"
+      },
+      {
+        "label": "Preguntas Frecuentes",
+        "to": "/faq"
+      },
+      {
+        "label": "Cómo funciona",
+        "to": "/#howitworks"
+      }
+    ],
+    "getStarted": "Comenzar"
   }
 }
+
+

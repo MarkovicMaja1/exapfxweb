@@ -1,9 +1,11 @@
 import { CalendarDaysIcon, HandRaisedIcon } from '@heroicons/react/24/outline';
 import MailchimpSubscribe from 'react-mailchimp-subscribe';
 import { useRef } from 'react';
+import { useTranslation } from 'react-i18next';
 
-export default function Example() {
-  const MAILCHIMP_URL = 'https://ecapfx.us9.list-manage.com/subscribe/post?u=fd932819d178a211ef8787b45&amp;id=301c854078&amp;f_id=00ba55e1f0';
+export default function Newsletter() {
+  const { t } = useTranslation();
+  const MAILCHIMP_URL = 'https://ecapfx.us9.list-manage.com/subscribe/post?u=fd932819d178a211ef8787b45&id=301c854078&f_id=00ba55e1f0';
 
   const emailInputRef = useRef(null);
 
@@ -36,7 +38,7 @@ export default function Example() {
             name="email"
             type="email"
             required
-            placeholder="Enter your email"
+            placeholder={t('newsletter.form.placeholder')}
             autoComplete="email"
             className="min-w-0 flex-auto rounded-md bg-white/5 px-3.5 py-2 text-base text-white outline-1 -outline-offset-1 outline-white/10 placeholder:text-white-500 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-500 sm:text-sm/6"
           />
@@ -46,12 +48,12 @@ export default function Example() {
             className="bg-gradient-to-r from-[#1a6f3d] via-[#1d8348] to-[#145c33] hover:from-[#156437]/90 hover:via-[#1d8348]/90 hover:to-[#0e3f24]/90 hover:text-black hover:shadow-md hover:shadow-green-700/50 px-6 py-2 rounded-lg text-white inline-block transition duration-300 ease-in-out hover:scale-105 active:cursor-pointer select-none"
             disabled={status === 'sending'}
           >
-            {status === 'sending' ? 'Sending...' : 'Subscribe'}
+            {status === 'sending' ? t('newsletter.form.sending') : t('newsletter.form.button')}
           </button>
         </div>
         <div className="mt-2">
-          {status === 'success' && <p className="text-sm text-green-400">Subscribed successfully!</p>}
-          {status === 'error' && <p className="text-sm text-red-400">Error: {message}</p>}
+          {status === 'success' && <p className="text-sm text-green-400">{t('newsletter.form.success')}</p>}
+          {status === 'error' && <p className="text-sm text-red-400">{t('newsletter.form.error', { message })}</p>}
         </div>
       </div>
     );
@@ -62,10 +64,9 @@ export default function Example() {
       <div className="max-w-7xl mx-auto px-8 paddingTeam rounded-2xl bg-[#151515] px-6 py-12 shadow-xl ring-1 ring-white/10 lg:px-12">
         <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-2">
           <div className="max-w-xl lg:max-w-lg">
-            <h3 className="text-4xl font-semibold tracking-tight text-white">Stay up to date with our newsletter</h3>
+            <h3 className="text-4xl font-semibold tracking-tight text-white">{t('newsletter.title')}</h3>
             <p className="mt-4 text-lg text-white">
-              Get trading insights, strategy tips, and updates on challenges, direct to your inbox. Stay ahead in the
-              markets with content crafted for prop traders.
+              {t('newsletter.description')}
             </p>
             <MailchimpSubscribe
               url={MAILCHIMP_URL}
@@ -77,18 +78,18 @@ export default function Example() {
               <div className="rounded-md bg-white/5 p-2 ring-1 ring-white/10">
                 <CalendarDaysIcon aria-hidden="true" className="size-6 text-white" />
               </div>
-              <dt className="mt-4 text-base font-semibold text-white">Weekly insights</dt>
+              <dt className="mt-4 text-base font-semibold text-white">{t('newsletter.features.weeklyInsights.title')}</dt>
               <dd className="mt-2 text-base/7 text-white">
-                Receive professional trading tips, market overviews and risk management techniques from top traders.
+                {t('newsletter.features.weeklyInsights.description')}
               </dd>
             </div>
             <div className="flex flex-col items-start">
               <div className="rounded-md bg-white/5 p-2 ring-1 ring-white/10">
                 <HandRaisedIcon aria-hidden="true" className="size-6 text-white" />
               </div>
-              <dt className="mt-4 text-base font-semibold text-white">Zero spam policy</dt>
+              <dt className="mt-4 text-base font-semibold text-white">{t('newsletter.features.zeroSpam.title')}</dt>
               <dd className="mt-2 text-base/7 text-white">
-                We respect your time and inbox. Only valuable trading content and no nonsense.
+                {t('newsletter.features.zeroSpam.description')}
               </dd>
             </div>
           </dl>

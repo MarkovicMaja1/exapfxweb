@@ -1,8 +1,11 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import image1 from '../assets/investment.png';
 import image2 from '../assets/growth.png';
 
 const AboutUs = () => {
+  const { t } = useTranslation();
+
   return (
     <div>
       {/* TOP GRADIENT DIV ABOVE SECTION */}
@@ -19,7 +22,9 @@ const AboutUs = () => {
       <section className="bg-[#151515] text-white pt-24 pb-14">
         <div className="mx-auto px-4 max-w-screen-2xl relative isolate">
           <div className="mx-auto lg:max-w-4xl text-center">
-            <h2 className="text-4xl lg:text-5xl font-extrabold tracking-tight text-center">About Us</h2>
+            <h2 className="text-4xl lg:text-5xl font-extrabold tracking-tight text-center">
+              {t('about.title.mainTitle')}
+            </h2>
           </div>
 
           <div className="max-w-7xl mx-auto px-4 lg:px-12">
@@ -28,17 +33,19 @@ const AboutUs = () => {
                 <dl className="grid grid-cols-1 gap-y-16">
                   <div className="text-left">
                     <h3 className="text-3xl font-semibold mb-4 inline-block">
-                      ECAPFX
+                      {t('about.title.ecapfx')}
                     </h3>
                     <p className="text-lg text-white mb-4">
-                      At ECAPFX, we are redefining proprietary trading by creating opportunities for skilled traders while making a positive impact on the world. Our platform empowers traders to access substantial capital, refine their strategies, and achieve financial success without the limitations of traditional funding.
+                      {t('about.description.ecapfx1')}
                     </p>
                     <p className="text-lg text-white mb-4">
-                      But we’re more than just a prop firm. We believe that financial growth and sustainability can go hand in hand. That’s why we commit 1-3% of our annual profits to sustainability (SDGS)-focused initiatives, ensuring that our success contributes to a better future for both traders and the planet.
+                      {t('about.description.ecapfx2')}
                     </p>
-                    <h3 className="text-3xl font-semibold mb-4 inline-block">Our Mission</h3>
+                    <h3 className="text-3xl font-semibold mb-4 inline-block">
+                      {t('about.title.mission')}
+                    </h3>
                     <p className="text-lg text-white">
-                      We are on a mission to build the largest and most impactful proprietary trading firm, one that not only fuels the success of traders but also fosters a strong, values-driven community over time. We aim to support ambitious traders in reaching their full potential while integrating responsible practices that promote a sustainable future.
+                      {t('about.description.mission')}
                     </p>
                   </div>
                 </dl>
@@ -47,7 +54,7 @@ const AboutUs = () => {
               <div className="about-us-image ecoImage flex justify-center mt-10">
                 <img
                   src={image2}
-                  alt="About Us"
+                  alt={t('about.image.alt')}
                   loading="lazy"
                   className="w-3/4 h-3/4 mr-10 rounded-lg bg-transparent hover:scale-105 transition-transform duration-300"
                 />

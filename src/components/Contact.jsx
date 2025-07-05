@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import { useTranslation } from 'react-i18next';
 
 const Contact = () => {
+  const { t } = useTranslation();
   // Only scroll to top if no hash is present
   useEffect(() => {
     if (!window.location.hash) {
@@ -19,7 +21,7 @@ const Contact = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setStatus("Sending...");
+    setStatus(t('contact.form.statusSending'));
     const formDataToSend = new FormData();
     formDataToSend.append('name', formData.name);
     formDataToSend.append('email', formData.email);
@@ -33,13 +35,13 @@ const Contact = () => {
       });
       const result = await response.json();
       if (result.success) {
-        setStatus("Message sent successfully!");
+        setStatus(t('contact.form.statusSuccess'));
         setFormData({ name: "", email: "", message: "" });
       } else {
-        setStatus(`Failed to send message: ${result.message || "Please try again."}`);
+        setStatus(t('contact.form.statusError', { message: result.message || "Please try again." }));
       }
     } catch (error) {
-      setStatus("An error occurred. Please try again later.");
+      setStatus(t('contact.form.statusError', { message: "Please try again later." }));
     }
   };
 
@@ -58,10 +60,10 @@ const Contact = () => {
         <div className="mb-4">
           <div className="mb-6 max-w-3xl text-center sm:text-center md:mx-auto md:mb-12">
             <h2 className="font-heading mb-4 font-bold tracking-tight text-white text-3xl sm:text-5xl">
-              Get in Touch
+              {t('contact.title')}
             </h2>
             <p className="mx-auto mt-4 max-w-3xl text-xl text-gray-200">
-              At ECAPFX, we are dedicated to providing top-tier support and guidance to our trading community. Contact us for inquiries, partnership opportunities, or assistance with your trading journey.
+              {t('contact.description')}
             </p>
           </div>
         </div>
@@ -69,7 +71,7 @@ const Contact = () => {
           <div className="grid md:grid-cols-2">
             <div className="h-full pr-6">
               <p className="mt-3 mb-12 text-lg text-gray-200">
-                We are committed to ensuring your success in the financial markets. Whether you need help with account management, trading strategies, or general support, we are here to assist you every step of the way.
+                {t('contact.supportMessage')}
               </p>
               <ul className="mb-6 md:mb-0">
                 <li className="flex">
@@ -92,13 +94,10 @@ const Contact = () => {
                   </div>
                   <div className="ml-4 mb-4">
                     <h3 className="mb-2 text-lg font-medium leading-6 text-white">
-                      Our Address
+                      {t('contact.address.title')}
                     </h3>
                     <p className="text-gray-200">
-                      Office 7330MO 182-184, High Street North Area 1/1
-                    </p>
-                    <p className="text-gray-200">
-                      East Ham, London, E6 2JA, UK
+                      {t('contact.address.details')}
                     </p>
                   </div>
                 </li>
@@ -123,13 +122,13 @@ const Contact = () => {
                   </div>
                   <div className="ml-4 mb-4">
                     <h3 className="mb-2 text-lg font-medium leading-6 text-white">
-                      Contact
+                      {t('contact.contactInfo.title')}
                     </h3>
                     <p className="text-gray-200">
-                      Phone: +1 (123) 456-7890
+                      {t('contact.contactInfo.phone')}
                     </p>
                     <p className="text-gray-200">
-                      Email: contact@ecapfx.com
+                      {t('contact.contactInfo.email')}
                     </p>
                   </div>
                 </li>
@@ -153,13 +152,13 @@ const Contact = () => {
                   </div>
                   <div className="ml-4 mb-4">
                     <h3 className="mb-2 text-lg font-medium leading-6 text-white">
-                      Working Hours
+                      {t('contact.workingHours.title')}
                     </h3>
                     <p className="text-gray-200">
-                      Monday - Friday: 08:00 - 17:00 EST
+                      {t('contact.workingHours.weekdays')}
                     </p>
                     <p className="text-gray-200">
-                      Saturday & Sunday: 08:00 - 12:00 EST
+                      {t('contact.workingHours.weekends')}
                     </p>
                   </div>
                 </li>
@@ -167,7 +166,7 @@ const Contact = () => {
             </div>
             <div className="card h-fit max-w-6xl p-5 md:p-12" id="form">
               <h2 className="mb-4 text-2xl font-bold text-white">
-                Ready to Get Started?
+                {t('contact.form.heading')}
               </h2>
               <form id="contactForm" onSubmit={handleSubmit}>
                 <div className="mb-6">
@@ -176,7 +175,7 @@ const Contact = () => {
                       htmlFor="name"
                       className="block text-sm font-medium text-gray-400"
                     >
-                      Your Name
+                      {t('contact.form.labelName')}
                     </label>
                     <input
                       type="text"
@@ -186,7 +185,7 @@ const Contact = () => {
                       onChange={handleChange}
                       autoComplete="given-name"
                       className="mt-1 w-full rounded-md border border-gray-400 bg-gray-900 text-gray-100 py-2 px-4 shadow-sm focus:ring-blue-300 focus:border-blue-300"
-                      placeholder="Your name"
+                      placeholder={t('contact.form.placeholderName')}
                       required
                     />
                   </div>
@@ -195,7 +194,7 @@ const Contact = () => {
                       htmlFor="email"
                       className="block text-sm font-medium text-gray-400"
                     >
-                      Your Email
+                      {t('contact.form.labelEmail')}
                     </label>
                     <input
                       type="email"
@@ -205,7 +204,7 @@ const Contact = () => {
                       onChange={handleChange}
                       autoComplete="email"
                       className="mt-1 w-full rounded-md border border-gray-400 bg-gray-900 text-gray-100 py-2 px-4 shadow-sm focus:ring-blue-300 focus:border-blue-300"
-                      placeholder="Your email address"
+                      placeholder={t('contact.form.placeholderEmail')}
                       required
                     />
                   </div>
@@ -214,7 +213,7 @@ const Contact = () => {
                       htmlFor="message"
                       className="block text-sm font-medium text-gray-400"
                     >
-                      Message
+                      {t('contact.form.labelMessage')}
                     </label>
                     <textarea
                       id="message"
@@ -224,7 +223,7 @@ const Contact = () => {
                       cols="30"
                       rows="5"
                       className="mt-1 w-full rounded-md border border-gray-400 bg-gray-900 text-gray-100 py-3 px-4 shadow-sm focus:ring-blue-300 focus:border-blue-300"
-                      placeholder="Write your message..."
+                      placeholder={t('contact.form.placeholderMessage')}
                       required
                     />
                   </div>
@@ -234,7 +233,7 @@ const Contact = () => {
                     type="submit"
                     className="w-full bg-gradient-to-r from-[#1a6f3d] via-[#1d8348] to-[#145c33] hover:from-[#156c37]/90 hover:via-[#1d8348]/90 hover:to-[#0e3f24]/90 hover:text-white hover:shadow-md hover:shadow-green-500/50 px-4 py-3 rounded-lg text-white transition duration-200 ease-in-out hover:scale-105 active:bg-green-600 select-none"
                   >
-                    Send Message
+                    {t('contact.form.button')}
                   </button>
                   {status && (
                     <p

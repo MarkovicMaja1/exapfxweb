@@ -2,6 +2,7 @@ import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import LanguageSwitcher from './components/LanguageSwitcher.jsx';
 import Contact from './components/Contact.jsx';
 import Discord from "./components/Discord";
+import Cookies from "./components/Cookies.jsx";
 import LogoSlider from "./components/LogoSlider.jsx";
 // import Compare from "./components/compare.jsx";
 import Faq from "./components/Faq.jsx";
@@ -69,8 +70,8 @@ const ScrollToSection = () => {
 // Simple 404 fallback component
 const NotFound = () => (
   <div className="text-center py-20">
-    <h1 className="text-4xl font-bold">404 - Page Not Found</h1>
-    <p className="mt-4 text-lg">Sorry, the page you're looking for doesn't exist.</p>
+    <h1 className="mt-[150px] text-4xl font-bold">404 - Page Not Found</h1>
+    <p className="mt-4 mb-[90px] text-lg">Sorry, the page you're looking for doesn't exist.</p>
   </div>
 );
 
@@ -122,6 +123,7 @@ function App() {
           />
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
           <Route path="/terms" element={<Terms />} />
+          <Route path="/cookies" element={<Cookies />} />
           <Route path="/claim" element={<Claim />} />
           <Route path="/faq" element={<Faq />} />
           <Route path="/rules" element={<Rules />} />
