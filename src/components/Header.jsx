@@ -34,12 +34,14 @@ const Header = () => {
         </ul>
 
         <div className="hidden lg:flex items-center ml-auto space-x-4">
-          <Link
-            to="https://active.ecapfx.com/auth/signin"
+          <a
+            href="https://active.ecapfx.com/auth/signin"
             className="getstarted-button px-5 py-2.5 text-white font-roboto bg-gradient-to-r from-[#1a6f3d] via-[#1d8348] to-[#145c33] hover:from-[#156437]/90 hover:via-[#1d8348]/90 hover:to-[#0e3f24]/90 hover:text-black hover:shadow-md hover:shadow-green-700/50 rounded-2xl transition duration-300 ease-in-out hover:scale-105 active:cursor-pointer select-none"
+            target="_blank"
+            rel="noopener noreferrer"
           >
             {t('header.getStarted')}
-          </Link>
+          </a>
           <LanguageSwitcher />
         </div>
 
@@ -78,13 +80,15 @@ const Header = () => {
               </li>
             ))}
             <li>
-              <Link
-                to="https://active.ecapfx.com/auth/signin"
+              <a
+                href="https://active.ecapfx.com/auth/signin"
                 className="bg-gradient-to-r from-[#1a6f3d] via-[#1d8348] to-[#145c33] hover:from-[#156437]/90 hover:via-[#1d8348]/90 hover:to-[#0e3f24]/90 hover:text-black hover:shadow-md hover:shadow-green-700/50 px-6 py-2 rounded-lg text-white inline-block transition duration-300 ease-in-out hover:scale-105 active:cursor-pointer select-none"
                 onClick={() => setIsOpen(!isOpen)}
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 {t('header.getStarted')}
-              </Link>
+              </a>
             </li>
             <li className="mt-2">
               <LanguageSwitcher />
