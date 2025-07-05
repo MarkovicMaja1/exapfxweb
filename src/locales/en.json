@@ -41,9 +41,19 @@
   "about": {
     "title": {
       "companyHistory": "Our Company History",
-      "mission": "Our Mission"
+      "mission": "Our Mission",
+      "mainTitle": "About Us",
+      "ecapfx": "ECAPFX"
     },
-    "description": "Learn more about our journey and values."
+    "description": {
+      "main": "Learn more about our journey and values.",
+      "ecapfx1": "At ECAPFX, we are redefining proprietary trading by creating opportunities for skilled traders while making a positive impact on the world. Our platform empowers traders to access substantial capital, refine their strategies, and achieve financial success without the limitations of traditional funding.",
+      "ecapfx2": "But we’re more than just a prop firm. We believe that financial growth and sustainability can go hand in hand. That’s why we commit 1-3% of our annual profits to sustainability (SDGS)-focused initiatives, ensuring that our success contributes to a better future for both traders and the planet.",
+      "mission": "We are on a mission to build the largest and most impactful proprietary trading firm, one that not only fuels the success of traders but also fosters a strong, values-driven community over time. We aim to support ambitious traders in reaching their full potential while integrating responsible practices that promote a sustainable future."
+    },
+    "image": {
+      "alt": "About Us"
+    }
   },
   "pricingTable": {
     "chooseTheBestPlan": "Choose the Best Plan",
@@ -64,7 +74,7 @@
     "funded": "Funded",
     "tradingChallengeDetails": "Trading Challenge Details - {{header}}",
     "weAllowOurTraders": "We allow our traders to trade on their own terms. Get Funded with No Consistency Rule!",
-    "startchallenge": "Start Challenge",
+    "startChallenge": "Start Challenge",
     "profit": "Profit Target",
     "duration": "Duration",
     "leverage": "Leverage",
@@ -78,5 +88,916 @@
     "none": "None",
     "refunded": "Refunded",
     "upTo": "Up to"
+  },
+  "howItWorks": {
+    "hero": {
+      "title": "How It Works",
+      "description": "Follow these steps to transform your trading skills into funded success with ECAPFX."
+    },
+    "steps": {
+      "step1": {
+        "title": "Sign Up & Choose Challenge",
+        "description": "Select a plan tailored to your trading expertise.",
+        "items": {
+          "beginner": "<strong>Beginner (Greenwave)</strong> - Ideal for new traders.",
+          "experienced": "<strong>Experienced (El Verde)</strong> - Moderate risk options.",
+          "seasoned": "<strong>Seasoned (Ecosphere)</strong> - Designed for professionals."
+        },
+        "imageAlt": "Person signing up on a form"
+      },
+      "step2": {
+        "title": "Prove Your Skills",
+        "description": "Demonstrate your trading ability in a simulated environment.",
+        "items": {
+          "dailyLossLimit": "<strong>Daily Loss Limit</strong> - Maintain discipline.",
+          "maxDrawdown": "<strong>Max Drawdown</strong> - Stay within bounds.",
+          "profitTargets": "<strong>Profit Targets</strong> - Achieve goals.",
+          "consistency": "<strong>Consistency</strong> - Ensure steady performance.",
+          "instantChallenges": "<strong>InstantChallenges</strong> - Quick skill assessment.",
+          "profitSplit": "<strong>Profit Split</strong> - Begin at 80/20."
+        },
+        "imageAlt": "Trading chart analysis"
+      },
+      "step3": {
+        "title": "Get Funded",
+        "description": "Unlock funding upon successful completion.",
+        "items": {
+          "kycAml": "KYC & AML checks completed.",
+          "fundingAccess": "Funding access within 5 days.",
+          "rulesAndTerms": "Review <a href=\"/rules\" class=\"text-[#1d8348] hover:underline\">Rules</a> & <a href=\"/terms\" class=\"text-[#1d8348] hover:underline\">Terms</a>."
+        },
+        "imageAlt": "Passing funded account challenge"
+      },
+      "step4": {
+        "title": "Trade, Earn & Impact",
+        "description": "Trade with purpose as a funded trader.",
+        "items": {
+          "profitShare": "Profit share at 80/20.",
+          "profitDonation": "1% profit donation post year one.",
+          "sustainableFuture": "Contribute to a sustainable future."
+        },
+        "imageAlt": "Global trading market"
+      }
+    },
+    "cta": {
+      "button": "Get Started Now"
+    }
+  },
+  "goals": {
+    "hero": {
+      "title": "Our Goals",
+      "description": "At ECAPFX, we believe in trading with purpose, where success isn’t just measured in profits but in the positive impact we create together. Join us, and be part of a prop firm that’s shaping the future of trading and sustainability"
+    },
+    "empowerTraders": {
+      "title": "Empower Traders",
+      "text": "Provide opportunities for skilled traders to scale their strategies with substantial funding.",
+      "imageAlt": "Empower Traders"
+    },
+    "buildThrivingCommunity": {
+      "title": "Build a Thriving Community",
+      "text": "Grow a network of <strong>1,000+ funded traders</strong> within the first year.",
+      "imageAlt": "Build a Thriving Community"
+    },
+    "driveIndustryLeadership": {
+      "title": "Drive Industry Leadership",
+      "text": "Become the <strong>leading proprietary trading firm</strong> by 2030, measured by active traders, capital deployed, and profits.",
+      "imageAlt": "Drive Industry Leadership"
+    },
+    "expandGlobally": {
+      "title": "Expand Globally",
+      "text": "Establish a presence in <strong>at least 5 international markets</strong> within two years.",
+      "imageAlt": "Expand Globally"
+    },
+    "commitToSustainability": {
+      "title": "Commit to Sustainability",
+      "text": "Partner with eco-friendly initiatives and donate 1-3% of profits to sustainability-driven causes (SDGS).",
+      "imageAlt": "Commit to Sustainability"
+    }
+  },
+    "sustainability": {
+    "hero": {
+      "title": "Our Focus On Sustainability",
+      "description": "At ECAPFX, we align our efforts with the United Nations Sustainable Development Goals (SDGs) to create a meaningful global impact. Our focus is on three key areas, supported by a strategic three-year plan designed to drive measurable and lasting change"
+    },
+    "cleanWater": {
+      "title": "Clean Water & Sanitation",
+      "text": "We support initiatives that provide access to clean water and sanitation for communities in need, ensuring a healthier and more sustainable future.",
+      "imageAlt": "Clean Water & Sanitation"
+    },
+    "qualityEducation": {
+      "title": "Quality Education",
+      "text": "Education is the key to opportunity. We contribute to programs that provide learning resources, scholarships, and training to empower the next generation.",
+      "imageAlt": "Quality Education"
+    },
+    "genderEquality": {
+      "title": "Gender Equality",
+      "text": "We advocate for equal opportunities in finance and beyond, supporting programs that promote women’s participation in trading, education, and leadership.",
+      "imageAlt": "Gender Equality"
+    }
+  },
+    "team": {
+    "hero": {
+      "title": "Meet The Team",
+      "subtitle": "Our Leadership & Talent"
+    },
+    "michaelPearn": {
+      "category": "Michael Pearn",
+      "title": "Founder & CEO",
+      "description": "As the visionary behind ECAPFX, Michael leads the firm with extensive experience in proprietary trading and financial markets."
+    },
+    "carlyPearn": {
+      "category": "Carly Pearn",
+      "title": "Co-Founder & Chief Sustainability Officer",
+      "description": "Carly oversees the firm's sustainability initiatives, ensuring that environmental and social responsibility are integrated into our business model."
+    },
+    "nebojsaSladoje": {
+      "category": "Nebojša Sladoje",
+      "title": "Chief Operating Officer (COO)",
+      "description": "Nebojša is responsible for overseeing company operations and managing all internal teams."
+    },
+    "majaMarkovic": {
+      "category": "Maja Marković",
+      "title": "Lead Developer",
+      "description": "Maja specializes in developing and optimizing our trading platform, ensuring seamless user experiences and cutting-edge trading tools."
+    },
+    "nikolaIlic": {
+      "category": "Nikola Ilić",
+      "title": "Lead Developer",
+      "description": "Nikola focuses on building and maintaining the technical infrastructure that powers our proprietary trading systems."
+    }
+  }, 
+    "discord": {
+    "title": "Join our Discord Community",
+    "description": "Connect with like-minded traders, share insights, get real-time updates, and be part of an engaging and supportive community from ECAPFX.",
+    "features": {
+      "supportChannels": "Support Channels",
+      "exclusiveOffers": "Exclusive Offers",
+      "tradingEducation": "Trading Education"
+    },
+    "overlay": {
+      "invitedText": "ECAPFX invited you to join",
+      "communityName": "ECAPFX",
+      "onlineStatus": "🟢 5 Online • 8 Members"
+    },
+    "buttons": {
+      "getStarted": "Get Started",
+      "selectPlan": "Select Plan"
+    }
+  },
+    "newsletter": {
+    "title": "Stay up to date with our newsletter",
+    "description": "Get trading insights, strategy tips, and updates on challenges, direct to your inbox. Stay ahead in the markets with content crafted for prop traders.",
+    "features": {
+      "weeklyInsights": {
+        "title": "Weekly insights",
+        "description": "Receive professional trading tips, market overviews and risk management techniques from top traders."
+      },
+      "zeroSpam": {
+        "title": "Zero spam policy",
+        "description": "We respect your time and inbox. Only valuable trading content and no nonsense."
+      }
+    },
+    "form": {
+      "placeholder": "Enter your email",
+      "button": "Subscribe",
+      "sending": "Sending...",
+      "success": "Subscribed successfully!",
+      "error": "Error: {message}"
+    }
+  },
+     "faq": {
+    "title": "Frequently Asked Questions",
+    "description": "Find answers to common questions about ECAPFX’s trading programs and funding opportunities.",
+    "whatIsECAPFX": {
+      "question": "What is ECAPFX?",
+      "answer": "ECAPFX is a proprietary trading firm that provides traders with access to funded capital after successfully completing a challenge. We combine performance-based funding with a commitment to positive global impact, donating 1% of annual profits to sustainability initiatives."
+    },
+    "challengeTypes": {
+      "question": "What types of challenges do you offer?",
+      "answer": "We offer three structured challenge types designed for different levels of trading experience: Beginner – For those new to trading, Experienced – For traders with moderate experience, Seasoned – For professional and high-performance traders. Each structure comes with its own risk parameters, targets, and evaluation metrics."
+    },
+    "evaluationCriteria": {
+      "question": "What are the evaluation criteria?",
+      "answer": "To pass a challenge, you must stay within the following rules: Daily Loss Limit, Max Drawdown, Profit Targets, Consistency Rules based on the type of challenge (Phased or Instant), Trailing Drawdown for Instant accounts, measured with precision."
+    },
+    "fundingTime": {
+      "question": "How long does it take to get funded?",
+      "answer": "After you pass the evaluation and complete KYC/AML compliance checks, we aim to provide access to your funded account within 5 calendar days."
+    },
+    "profitSplit": {
+      "question": "What is the profit split?",
+      "answer": "Your profit share depends on the challenge type and account tier selected. Details are clearly outlined before you start the challenge."
+    },
+    "keepProfits": {
+      "question": "Do I keep my profits?",
+      "answer": "Yes — funded traders receive a profit share from the earnings they generate, based on their selected model."
+    },
+    "prohibitedPractices": {
+      "question": "What are prohibited practices?",
+      "answer": "We strictly prohibit strategies such as: Copy trading, High-frequency arbitrage, News exploitation, Any form of system abuse. Please review the full list on our Rules Page."
+    },
+    "ruleBreaks": {
+      "question": "What happens if I break the rules?",
+      "answer": "Rule violations may lead to disqualification or termination of your funded account. We encourage all traders to read and understand our guidelines before participating."
+    },
+    "uniqueDifference": {
+      "question": "What makes ECAPFX different from other prop firms?",
+      "answer": "At ECAPFX, we stand against cheap gimmicks and misleading promotions. We don’t offer shallow discounts or flashy marketing tricks just to drive volume. Our focus is on meaningful challenges that develop real traders, not short-term hype. We’re here to support long-term growth, accountability, and impact — both in trading and the world beyond."
+    },
+    "supportedPlatforms": {
+      "question": "What platforms do you support?",
+      "answer": "We currently offer Match-Trader as our trading platform, available on both web and mobile for seamless trading across devices."
+    },
+    "supportHours": {
+      "question": "What are your support hours?",
+      "answer": "Our support team is available 24/7 to assist you with any questions or technical issues. Whether you're just starting or actively trading, we’re always here to help."
+    },
+    "givingBack": {
+      "question": "How does ECAPFX give back?",
+      "answer": "After your first successful year of trading, ECAPFX donates 1% of firm profits to sustainability-focused projects. It’s our way of aligning trading success with a greater purpose."
+    },
+    "gettingStarted": {
+      "question": "How do I get started?",
+      "answer": "Sign up at ecapfx.com, choose the challenge that matches your level, and begin your evaluation. You’ll be guided through every step of the journey."
+    }
+  },
+    "contact": {
+    "title": "Get in Touch",
+    "description": "At ECAPFX, we are dedicated to providing top-tier support and guidance to our trading community. Contact us for inquiries, partnership opportunities, or assistance with your trading journey.",
+    "supportMessage": "We are committed to ensuring your success in the financial markets. Whether you need help with account management, trading strategies, or general support, we are here to assist you every step of the way.",
+    "address": {
+      "title": "Our Address",
+      "details": "Office 7330MO 182-184, High Street North Area 1/1\nEast Ham, London, E6 2JA, UK"
+    },
+    "contactInfo": {
+      "title": "Contact",
+      "phone": "Phone: +1 (123) 456-7890",
+      "email": "Email: contact@ecapfx.com"
+    },
+    "workingHours": {
+      "title": "Working Hours",
+      "weekdays": "Monday - Friday: 08:00 - 17:00 EST",
+      "weekends": "Saturday & Sunday: 08:00 - 12:00 EST"
+    },
+    "form": {
+      "heading": "Ready to Get Started?",
+      "labelName": "Your Name",
+      "placeholderName": "Your name",
+      "labelEmail": "Your Email",
+      "placeholderEmail": "Your email address",
+      "labelMessage": "Message",
+      "placeholderMessage": "Write your message...",
+      "button": "Send Message",
+      "statusSending": "Sending...",
+      "statusSuccess": "Message sent successfully!",
+      "statusError": "Failed to send message: {message}"
+    }
+  },
+    "rules": {
+    "title": "ECAPFX Prohibited Practices",
+    "description": "At ECAPFX, we are committed to protecting the integrity of our challenges, our traders, and the firm. The following practices are strictly prohibited.",
+    "finalNote": {
+      "heading": "⚠️ Final Note",
+      "text": "By participating in any ECAPFX challenge or funded program, you agree to abide by these rules. Ignorance is not an excuse. Review the <a href=\"/terms\" className=\"text-[#1d8348] hover:underline\">Terms & Conditions</a> and contact our 24/7 support team for clarification."
+    },
+    "callToAction": "Get Started Now",
+    "practices": {
+      "outsourcingChallenge": {
+        "title": "Outsourcing Your Challenge",
+        "description": "You must complete the trading challenge yourself. Paying a third party, using trade services, or hiring someone else to pass the challenge on your behalf is strictly forbidden."
+      },
+      "copyTrading": {
+        "title": "Copy Trading / Signal Mirroring",
+        "description": "Using any form of: Copy trading platforms, Social signal services, Trade replication software, Manual mirroring of trades from other accounts is not allowed."
+      },
+      "highFrequencyArbitrage": {
+        "title": "High-Frequency Arbitrage / Tick Scalping",
+        "description": "Using latency arbitrage, tick scalping (ultra-fast entries/exits within seconds), or exploiting broker execution delays is a violation."
+      },
+      "accountSharing": {
+        "title": "Account Sharing or Third-Party Access",
+        "description": "Only the registered trader may access and operate the account. ECAPFX reserves the right to disqualify any trader if we believe someone else is in control of the account or unauthorised activity is taking place."
+      },
+      "platformExploits": {
+        "title": "Platform or Pricing Exploits",
+        "description": "Abusing pricing errors, execution glitches, or misusing software bugs is prohibited. Trades must reflect fair, legitimate market behaviour."
+      },
+      "newsEventGambling": {
+        "title": "News Event Gambling",
+        "description": "Placing oversized trades before or during major economic news releases, with the intent of capitalising on unpredictable volatility, is not allowed."
+      },
+      "expertAdvisors": {
+        "title": "Use of Expert Advisors (EAs) or Bots",
+        "description": "Automated systems, bots, or EAs are not allowed unless specifically authorised by ECAPFX in writing."
+      },
+      "teamTrading": {
+        "title": "Team/Group Trading",
+        "description": "Coordinating with others to influence positions, hedge across multiple ECAPFX accounts, or replicate trades is strictly forbidden."
+      },
+      "roundTripScalping": {
+        "title": "Round-Trip Scalping / Spread Exploitation",
+        "description": "Trades placed solely to benefit from short-term spreads or commission loopholes — with no market intent — are disallowed."
+      },
+      "tradingLimitsManipulation": {
+        "title": "Breach of Trading Limits via Manipulation",
+        "description": "Passing or failing a challenge by manipulating lot sizes, timing, or open PnL to avoid hitting drawdown rules or to force target completion will result in disqualification."
+      },
+      "falseIdentity": {
+        "title": "False Identity or Fake KYC/AML",
+        "description": "Submitting fraudulent identification documents or impersonating another person will result in a permanent ban and may trigger legal action."
+      },
+      "gamblingBehaviour": {
+        "title": "Gambling Behaviour & Excessive Risk-Taking",
+        "description": "If we detect substantial profits gained through reckless, inconsistent, or gambling-like behaviour, ECAPFX reserves the right to investigate or revoke payout eligibility — even if technical rules have not been broken."
+      },
+      "consistencyRule": {
+        "title": "Consistency Rule (Discretionary Enforcement)",
+        "description": "While our Consistency Rule may not be enforced during your challenge, ECAPFX reserves the right to enforce it at the payout stage. If we believe the strategy used to pass the challenge or generate profits is inconsistent, manipulated, or violates the spirit of sustainable trading, we may: Withhold or adjust payouts, Request further verification, Disqualify the account."
+      },
+      "misleadingConduct": {
+        "title": "Misleading Conduct or Fraudulent Intent",
+        "description": "Any attempt to mislead ECAPFX, evade our systems, or abuse trust will result in immediate account termination."
+      },
+      "breachedAccountRules": {
+        "title": "Breached Account Rules",
+        "description": "If your account breaches any of the following limits or rules, ECAPFX reserves the right to take immediate action, including but not limited to: Daily Loss Limit, Overall (Max) Loss Limit, Profit Loss Limit, Days Trading Limit. Actions may include: Immediate disqualification from the challenge or funded program, Termination of your funded trading account without prior notice, Forfeiture of any pending profits or payouts, Permanent ban from future ECAPFX challenges and funding opportunities, Reporting to relevant authorities in cases of fraud or legal violations."
+      }
+    }
+  },
+  "claimPolicy": {
+    "title": "Claim Policy",
+    "header": "ECAPFX Proprietary Firm – Website Claims & Complaints Policy (UK FCA Compliant)",
+    "effectiveDateLabel": "Effective Date:",
+    "regulatoryAlignmentLabel": "Regulatory Alignment:",
+    "sections": {
+      "purpose": {
+        "title": "1. Purpose and Scope",
+        "text": "ECAPFX is committed to treating customers fairly and handling all claims and complaints transparently and promptly.",
+        "appliesTo": "This Policy applies to:",
+        "items": [
+          "Trading challenge outcomes",
+          "Disputes regarding funded account decisions",
+          "Misrepresentation or errors on our website or marketing",
+          "Technical issues or service failures",
+          "Intellectual property concerns"
+        ]
+      },
+      "definition": {
+        "title": "2. What Constitutes a Complaint or Claim?",
+        "text": "FCA defines a ",
+        "complaint": "complaint",
+        "definition": "as: \"Any oral or written expression of dissatisfaction, whether justified or not, from or on behalf of a person about the provision of, or failure to provide, a financial service.\"",
+        "claim": "A ",
+        "claimText": "claim"
+      },
+      "howToComplain": {
+        "title": "3. How to Make a Complaint or Claim",
+        "textPrefix": "Email us at ",
+        "textSuffix": " with:",
+        "email": "complaints@ecapfx.com",
+        "items": [
+          "Full name and registered email",
+          "Issue description",
+          "Date of incident",
+          "Evidence (e.g. screenshots, trade IDs)",
+          "Desired resolution",
+          "Strategy used (if relevant)"
+        ]
+      },
+      "timelines": {
+        "title": "4. Acknowledgement and Timelines",
+        "items": [
+          "Acknowledgement within 3–5 business days",
+          "Final written response within 8 weeks",
+          "Delays will be communicated with escalation rights"
+        ]
+      },
+      "reviewProcess": {
+        "title": "5. Internal Review Process",
+        "steps": [
+          "Log into internal compliance system",
+          "Investigate all data and communication",
+          "Request more info if needed",
+          "Issue clear, reasoned resolution",
+          "Ensure no policy violations"
+        ]
+      },
+      "escalation": {
+        "title": "6. If Unsatisfied – Escalation",
+        "text": "Eligible complainants can escalate to the Financial Ombudsman Service (FOS):",
+        "website": "financial-ombudsman.org.uk",
+        "email": "complaint.info@financial-ombudsman.org.uk",
+        "phone": "0800 023 4567",
+        "address": "Exchange Tower, London, E14 9SR",
+        "referral": "Refer within 6 months of our final response."
+      },
+      "misuse": {
+        "title": "7. Misuse and Malicious Claims",
+        "items": [
+          "False claims may lead to account suspension or legal action"
+        ]
+      },
+      "intellectualProperty": {
+        "title": "8. Intellectual Property Claims",
+        "items": [
+          "Send details of copyrighted work and proof of ownership",
+          "Include URL and contact details"
+        ],
+        "review": "We review such reports per UK Copyright Law."
+      },
+      "fcaPrinciples": {
+        "title": "9. FCA Principles",
+        "items": [
+          "Principle 6: Fair treatment of customers",
+          "Principle 7: Clear, fair, and not misleading communication"
+        ]
+      },
+      "contact": {
+        "title": "10. Contact Us",
+        "email": "contact@ecapfx.com",
+        "website": "www.ecapfx.com"
+      }
+    }
+  },
+  "claimPolicy": {
+    "title": "Claim Policy",
+    "header": "ECAPFX Proprietary Firm – Website Claims & Complaints Policy (UK FCA Compliant)",
+    "effectiveDateLabel": "Effective Date:",
+    "regulatoryAlignmentLabel": "Regulatory Alignment:",
+    "sections": {
+      "purpose": {
+        "title": "1. Purpose and Scope",
+        "text": "ECAPFX is committed to treating customers fairly and handling all claims and complaints transparently and promptly.",
+        "appliesTo": "This Policy applies to:",
+        "items": [
+          "Trading challenge outcomes",
+          "Disputes regarding funded account decisions",
+          "Misrepresentation or errors on our website or marketing",
+          "Technical issues or service failures",
+          "Intellectual property concerns"
+        ]
+      },
+      "definition": {
+        "title": "2. What Constitutes a Complaint or Claim?",
+        "text": "FCA defines a ",
+        "complaint": "complaint",
+        "definition": "as: \"Any oral or written expression of dissatisfaction, whether justified or not, from or on behalf of a person about the provision of, or failure to provide, a financial service.\"",
+        "claim": "A ",
+        "claimText": "claim"
+      },
+      "howToComplain": {
+        "title": "3. How to Make a Complaint or Claim",
+        "textPrefix": "Email us at ",
+        "textSuffix": " with:",
+        "email": "complaints@ecapfx.com",
+        "items": [
+          "Full name and registered email",
+          "Issue description",
+          "Date of incident",
+          "Evidence (e.g. screenshots, trade IDs)",
+          "Desired resolution",
+          "Strategy used (if relevant)"
+        ]
+      },
+      "timelines": {
+        "title": "4. Acknowledgement and Timelines",
+        "items": [
+          "Acknowledgement within 3–5 business days",
+          "Final written response within 8 weeks",
+          "Delays will be communicated with escalation rights"
+        ]
+      },
+      "reviewProcess": {
+        "title": "5. Internal Review Process",
+        "steps": [
+          "Log into internal compliance system",
+          "Investigate all data and communication",
+          "Request more info if needed",
+          "Issue clear, reasoned resolution",
+          "Ensure no policy violations"
+        ]
+      },
+      "escalation": {
+        "title": "6. If Unsatisfied – Escalation",
+        "text": "Eligible complainants can escalate to the Financial Ombudsman Service (FOS):",
+        "website": "financial-ombudsman.org.uk",
+        "email": "complaint.info@financial-ombudsman.org.uk",
+        "phone": "0800 023 4567",
+        "address": "Exchange Tower, London, E14 9SR",
+        "referral": "Refer within 6 months of our final response."
+      },
+      "misuse": {
+        "title": "7. Misuse and Malicious Claims",
+        "items": [
+          "False claims may lead to account suspension or legal action"
+        ]
+      },
+      "intellectualProperty": {
+        "title": "8. Intellectual Property Claims",
+        "items": [
+          "Send details of copyrighted work and proof of ownership",
+          "Include URL and contact details"
+        ],
+        "review": "We review such reports per UK Copyright Law."
+      },
+      "fcaPrinciples": {
+        "title": "9. FCA Principles",
+        "items": [
+          "Principle 6: Fair treatment of customers",
+          "Principle 7: Clear, fair, and not misleading communication"
+        ]
+      },
+      "contact": {
+        "title": "10. Contact Us",
+        "email": "contact@ecapfx.com",
+        "website": "www.ecapfx.com"
+      }
+    }
+  },
+  "privacyPolicy": {
+    "title": "Privacy Policy",
+    "header": "ECAPFX Proprietary Firm – Website Privacy Policy",
+    "effectiveDateLabel": "Effective Date:",
+    "applicableLawLabel": "Applicable Law:",
+    "sections": {
+      "introduction": {
+        "title": "1. Introduction",
+        "text1": "ECAPFX Proprietary Firm (\"ECAPFX\", \"we\", \"our\", or \"us\") is committed to protecting and respecting your privacy. This Privacy Policy explains how we collect, use, disclose, and protect your personal data when you visit our website ",
+        "website": "https://www.ecapfx.com",
+        "text2": " or use our services.",
+        "agreement": "By accessing our website, you agree to the collection and use of information in accordance with this policy."
+      },
+      "dataController": {
+        "title": "2. Data Controller",
+        "text1": "ECAPFX Proprietary Firm is the data controller for the purposes of UK GDPR.",
+        "registeredAddressLabel": "Registered Address:",
+        "contactLabel": "Contact:",
+        "email": "privacy@ecapfx.com"
+      },
+      "informationWeCollect": {
+        "title": "3. Information We Collect",
+        "text": "We may collect and process the following personal data:",
+        "subsections": {
+          "a": {
+            "title": "a) Information You Provide Directly",
+            "items": [
+              "Name, email address, phone number",
+              "Billing or payment information (via secure payment providers)",
+              "Trading activity and challenge participation data",
+              "Uploaded documentation (e.g. identity verification)"
+            ]
+          },
+          "b": {
+            "title": "b) Information We Collect Automatically",
+            "items": [
+              "IP address, browser type, operating system",
+              "Usage data (e.g., pages visited, time spent)",
+              "Cookies and tracking technologies (see section 8)"
+            ]
+          },
+          "c": {
+            "title": "c) Third-Party Data",
+            "items": [
+              "Data from payment providers, verification services, or analytics platforms",
+              "Social media data (if you interact with our content)"
+            ]
+          }
+        }
+      },
+      "howWeUse": {
+        "title": "4. How We Use Your Information",
+        "text": "Your data is used to:",
+        "items": [
+          "Deliver and manage our trading challenges and funded account programs",
+          "Provide customer support and respond to inquiries",
+          "Fulfil our contractual and regulatory obligations",
+          "Improve our website, services, and marketing",
+          "Prevent fraud and enforce our terms of service",
+          "Comply with applicable laws, including anti-money laundering (AML) and financial crime regulations"
+        ]
+      },
+      "legalBasis": {
+        "title": "5. Legal Basis for Processing",
+        "text": "We process personal data under the following lawful bases:",
+        "items": [
+          { "label": "", "bold": "Consent", "description": "– when you give explicit consent (e.g., marketing emails)" },
+          { "label": "", "bold": "Contract", "description": "– to fulfil a service you’ve signed up for" },
+          { "label": "", "bold": "Legal obligation", "description": "– to comply with FCA or anti-money laundering regulations" },
+          { "label": "", "bold": "Legitimate interests", "description": "– to improve services, prevent fraud, and operate our business effectively" }
+        ]
+      },
+      "dataSharing": {
+        "title": "6. Data Sharing and Disclosure",
+        "text1": "We do not sell your data. We may share data with:",
+        "items": [
+          "Verified payment processors (e.g., Stripe, PayPal)",
+          "KYC/AML verification partners",
+          "IT and hosting providers (UK/EU-based where possible)",
+          "Legal or regulatory bodies (e.g., FCA or HMRC), if required by law"
+        ],
+        "text2": "All third-party processors are contractually obligated to safeguard your data in accordance with UK GDPR."
+      },
+      "internationalDataTransfers": {
+        "title": "7. International Data Transfers",
+        "text": "If we transfer your personal data outside the UK or EEA, we ensure appropriate safeguards are in place (such as Standard Contractual Clauses or UK Addendum) to protect your privacy."
+      },
+      "cookies": {
+        "title": "8. Cookies and Tracking Technologies (We do not currently track cookies)",
+        "text1": "We use cookies to:",
+        "items": [
+          "Improve website functionality",
+          "Analyse usage patterns",
+          "Personalise user experiences",
+          "Track affiliate links or marketing campaigns"
+        ],
+        "text2": "You can manage your cookie preferences via our cookie banner or browser settings. For more details, see our ",
+        "link": "Cookie Policy"
+      },
+      "dataRetention": {
+        "title": "9. Data Retention",
+        "text": "We retain your data only for as long as necessary:",
+        "items": [
+          "To provide services and support",
+          "For tax and regulatory compliance (typically 6–7 years)",
+          "Until you withdraw consent (for optional marketing communications)"
+        ]
+      },
+      "yourRights": {
+        "title": "10. Your Data Protection Rights (UK GDPR)",
+        "text": "You have the right to:",
+        "items": [
+            "Access the personal data we hold about you",
+            "Correct inaccuracies in your data",
+            "Request erasure of your data (\"right to be forgotten\")",
+            "Object to processing or restrict it",
+            "Request data portability",
+            "Lodge a complaint with the UK Information Commissioner’s Office (ICO) at https://ico.org.uk/"
+        ],
+        "contactText": "To exercise these rights, email us at ",
+        "email": "privacy@ecapfx.com"
+        },
+      "security": {
+        "title": "11. Security",
+        "text": "We implement appropriate technical and organisational measures to protect your personal data against loss, misuse, or unauthorised access. These include:",
+        "items": [
+          "Encrypted data storage",
+          "Multi-factor authentication (MFA) for admin access",
+          "Secure third-party integrations",
+          "Regular vulnerability assessments"
+        ]
+      },
+      "marketing": {
+        "title": "12. Marketing and Communications",
+        "text1": "You can opt in or out of marketing communications at any time by:",
+        "items": [
+          "Clicking the “unsubscribe” link in our emails",
+          "Contacting privacy@ecapfx.com"
+        ],
+        "text2": "We will never send unsolicited marketing unless we have your explicit consent."
+      },
+      "updates": {
+        "title": "13. Updates to This Policy",
+        "text": "We may update this Privacy Policy to reflect changes in the law, regulation, or our business practices. The latest version will always be posted on our website with a revised \"Effective Date.\""
+      },
+      "contactUs": {
+        "title": "14. Contact Us",
+        "text1": "If you have any questions about this Privacy Policy or your data, please contact:",
+        "company": "ECAPFX Proprietary Firm",
+        "emailLabel": "Email:",
+        "email": "privacy@ecapfx.com"
+      }
+    }
+  },
+  "termsAndConditions": {
+    "title": "Terms and Conditions",
+    "header": "ECAPFX Proprietary Firm – Terms and Conditions",
+    "effectiveDateLabel": "Effective Date:",
+    "effectiveDate": "June 2, 2025",
+    "websiteLabel": "Website:",
+    "website": "https://www.ecapfx.com",
+    "jurisdictionLabel": "Jurisdiction:",
+    "jurisdiction": "United Kingdom",
+    "intro": "These Terms and Conditions (“Terms”) govern your access to and use of the services, website, and trading programmes provided by ECAPFX Proprietary Firm (“ECAPFX”, “we”, “us”, or “our”). By using our website or participating in any of our services, you agree to be bound by these Terms.",
+    "sections": {
+      "about": {
+        "title": "1. About ECAPFX",
+        "text1": "ECAPFX Proprietary Firm is a financial technology and prop trading company offering evaluation challenges for aspiring traders. Upon successful completion, traders may be offered a funded account under a profit-sharing model.",
+        "text2": "We are",
+        "notABroker": "not a broker",
+        "text3": "and",
+        "doNotOfferAdvice": "do not offer investment advice.",
+        "text4": " All trading activities are simulated or executed through third-party brokerage accounts with demo or real capital."
+      },
+      "eligibility": {
+        "title": "2. Eligibility",
+        "text1": "To use our services, you must:",
+        "items": [
+          "Be 18 years or older",
+          "Have the legal capacity to enter into a contract",
+          "Not be prohibited under any applicable law from participating in financial activities",
+          "Not be located in any restricted or sanctioned country (per FCA and UK law)"
+        ],
+        "text2": "By registering, you confirm that all information you provide is truthful and accurate."
+      },
+      "servicesOffered": {
+        "title": "3. Services Offered",
+        "text1": "ECAPFX offers:",
+        "items": [
+          "Trading challenges across forex, commodities, and futures markets",
+          "Funded account opportunities subject to challenge success and compliance",
+          "Profit-sharing schemes (details available in individual programme pages)",
+          "Educational and performance analytics tools"
+        ],
+        "text2": "All services are subject to change without prior notice. Detailed rules are outlined in EACH challenge’s FAQ or programme guide."
+      },
+      "fundedAccounts": {
+        "title": "4. Funded Accounts and Payouts",
+        "text1": "Successful completion of our multi-phase evaluation may qualify you for a simulated or real capital trading account. Terms include:",
+        "items": [
+          "Profit split ratios (e.g., 80/20) are outlined before challenge entry",
+          "Payouts are subject to identity verification, AML checks, KYC and account health",
+          "Violations of trading rules (e.g., daily drawdown breach) may void eligibility—please confirm with rules before purchase of a challenge",
+          "We reserve the right to revoke funding if we suspect fraud, manipulation, or breach of rules"
+        ],
+        "text2": "Payouts are typically processed within 5–10 business days after approval."
+      },
+      "feesAndPayments": {
+        "title": "5. Fees and Payments",
+        "text1": "Participation in trading challenges requires payment of a one-time, non-refundable fee. All fees:",
+        "items": [
+          "Are clearly listed prior to purchase",
+          "Include applicable UK VAT where required",
+          "May be paid via Stripe, PayPal, or other approved gateways"
+        ],
+        "text2": "Refunds will only be issued in the case of technical faults or service failure on our part. Users must submit refund requests in writing within 7 days of the issue."
+      },
+      "userConduct": {
+        "title": "6. User Conduct",
+        "text1": "You agree not to:",
+        "items": [
+          "Use bots, scripts, or automation to trade",
+          "Misuse platform access or breach challenge rules",
+          "Attempt to reverse-engineer or interfere with the platform",
+          "Impersonate others or submit false documents",
+          "Use our service for unlawful, deceptive, or malicious purposes",
+          "We reserve the right to implement any trading rule we perceive to be a risk to our company at any point of your trading journey with us"
+        ],
+        "text2": "Violation of this clause may result in account suspension, forfeiture of any payouts, or legal action."
+      },
+      "intellectualProperty": {
+        "title": "7. Intellectual Property",
+        "text": "All website content, including but not limited to branding, logos, videos, documents, software, and layout, is the intellectual property of ECAPFX or our licensors. You may not copy, reproduce, or use it for commercial purposes without written permission."
+      },
+      "limitationOfLiability": {
+        "title": "8. Limitation of Liability",
+        "text1": "To the maximum extent permitted by law, ECAPFX will not be liable for:",
+        "items": [
+          "Any loss of profits or opportunity",
+          "Errors resulting from third-party platforms (e.g., brokers or data feeds)",
+          "Indirect, incidental, or consequential damages",
+          "Delays or failures due to force majeure events (e.g., server outages, war, regulation)"
+        ],
+        "text2": "Our total liability under these Terms shall not exceed the amount paid by you for the challenge in question."
+      },
+      "privacy": {
+        "title": "9. Privacy and Data Protection",
+        "text1": "We are committed to protecting your personal data under UK GDPR and the Data Protection Act 2018. Please refer to our",
+        "privacyPolicyLink": "Privacy Policy",
+        "text2": "and",
+        "cookiePolicyLink": "Cookie Policy",
+        "text3": "for full details on how we handle your data."
+      },
+      "complaints": {
+        "title": "10. Complaints and Dispute Resolution",
+        "text1": "If you are dissatisfied with our services, please refer to our",
+        "complaintsPolicyLink": "Complaints Policy",
+        "text2": "to raise your concern.",
+        "text3": "If your complaint is unresolved after 8 weeks, and you are an eligible complainant, you may refer the case to the UK Financial Ombudsman Service."
+      },
+      "termination": {
+        "title": "11. Termination",
+        "text1": "We may terminate your access to our platform or funded accounts at any time for cause, including:",
+        "items": [
+          "Breach of these Terms",
+          "Violation of trading rules",
+          "Evidence of fraudulent behaviour",
+          "Regulatory concerns"
+        ],
+        "text2": "You may cancel your account at any time by emailing",
+        "email": "support@ecapfx.com",
+        "text3": ". Refunds are not issued for voluntary cancellations."
+      },
+      "governingLaw": {
+        "title": "12. Governing Law",
+        "text": "These Terms are governed by and construed in accordance with the laws of England and Wales. Any disputes arising from these Terms shall be subject to the exclusive jurisdiction of the courts of England and Wales."
+      },
+      "changesToTerms": {
+        "title": "13. Changes to These Terms",
+        "text": "We reserve the right to modify these Terms at any time. Updated Terms will be posted on our website and take effect immediately. You are responsible for reviewing the Terms periodically."
+      },
+      "kyc": {
+        "title": "14. Know Your Customer (KYC) and Restricted Jurisdictions",
+        "text": "To comply with international regulations and applicable laws, all users of ECAPFX must complete identity verification to participate in evaluation programmes or receive payouts.",
+        "subsections": {
+          "requirements": {
+            "title": "14.1 KYC Requirements",
+            "text": "As part of our registration and payout procedures, you are required to submit full identity verification using a valid government-issued photo ID (e.g., passport or national identity card). We utilize secure identity verification solutions provided by Kenmore Design to process and validate KYC documents. Payouts will only be processed upon successful completion of identity verification."
+          },
+          "prohibitedJurisdictions": {
+            "title": "14.2 Prohibited Jurisdictions",
+            "text": "The use of ECAPFX services is strictly prohibited from the following jurisdictions, regardless of attempts to bypass restrictions through VPNs or other methods:",
+            "items": [
+              "Afghanistan",
+              "Belarus",
+              "Canada",
+              "Cuba",
+              "Iran",
+              "Myanmar (Burma)",
+              "North Korea (DPRK)",
+              "Russia",
+              "Syria",
+              "United States of America (USA)",
+              "Crimea, Donetsk, and Lugansk regions of Ukraine"
+            ],
+            "text2": "If access from any of these jurisdictions is detected, ECAPFX reserves the right to terminate your account and withhold any pending payouts."
+          }
+        }
+      },
+      "aml": {
+        "title": "15. Anti-Money Laundering (AML) Policy",
+        "subsections": {
+          "introduction": {
+            "title": "15.1 Introduction",
+            "text": "ECAPFX is an educational trading evaluation platform that provides traders with access to simulated (demo) trading accounts. Our platform is designed exclusively for the development, assessment, and demonstration of trading skills in a risk-free environment."
+          },
+          "scope": {
+            "title": "15.2 Scope",
+            "text": "This AML Policy applies to all ECAPFX employees, contractors, and associated personnel. It outlines the company’s approach to Anti-Money Laundering (AML) and Counter-Terrorist Financing (CTF) in relation to its operations."
+          },
+          "businessModel": {
+            "title": "15.3 Business Model and Nature of Services",
+            "items": [
+              "ECAPFX does not accept, hold, or manage any client funds.",
+              "ECAPFX does not provide financial advice, investment recommendations, or manage real capital.",
+              "All trading activities on the ECAPFX platform occur in a simulated, risk-free environment using demo accounts only.",
+              "ECAPFX operates strictly for educational and evaluation purposes."
+            ]
+          },
+          "regulatoryStatus": {
+            "title": "15.4 AML Regulatory Status",
+            "text": "Given the nature of ECAPFX’s services, the company is not subject to the regulatory obligations typically imposed on financial institutions or entities that handle real client funds or conduct actual financial transactions. This includes, but is not limited to:",
+            "items": [
+              "Customer Due Diligence (CDD) and Know Your Customer (KYC) requirements beyond those outlined in Section 14",
+              "Transaction monitoring for suspicious activity.",
+              "Reporting of suspicious activity to financial intelligence units (FIUs).",
+              "Sanctions screening and risk assessments."
+            ]
+          },
+          "compliance": {
+            "title": "15.5 Commitment to Compliance",
+            "text": "While ECAPFX is not obligated to implement formal AML controls due to the absence of real fund handling, the company remains committed to:",
+            "items": [
+              "Maintaining transparency in all business operations.",
+              "Ensuring legal and regulatory compliance in all applicable areas.",
+              "Monitoring regulatory developments that may affect the business model or obligations.",
+              "Implementing a comprehensive AML program immediately should the business model evolve to include handling of real client funds or financial transactions."
+            ]
+          },
+          "futurePolicy": {
+            "title": "15.6 Future AML Policy Implementation",
+            "text": "Should ECAPFX expand or modify its business operations to include the acceptance, management, or processing of client funds, the company will:",
+            "items": [
+              "Develop and implement a full AML/CTF compliance program in line with relevant regulations.",
+              "Conduct appropriate customer due diligence (CDD) and ongoing monitoring.",
+              "Appoint a Money Laundering Reporting Officer (MLRO) responsible for AML compliance.",
+              "Provide AML training and awareness to all staff members."
+            ]
+          },
+          "policyDevelopment": {
+            "title": "15.7 Policy Development and Support",
+            "text": "This AML Policy has been developed with the support of a private company that supplies ECAPFX with its Customer Relationship Management (CRM) platform. This partnership assists ECAPFX in maintaining and implementing compliance best practices aligned with industry standards."
+          },
+          "conclusion": {
+            "title": "15.8 Conclusion",
+            "text": "ECAPFX maintains a clear position as an educational and simulated trading platform without real money involvement. The company acknowledges the importance of AML regulations and stands ready to implement necessary controls if its business operations change.",
+            "documentVersionLabel": "Document Version:",
+            "documentVersion": "1.1",
+            "reviewedByLabel": "Reviewed by:",
+            "reviewedBy": "ECAPFX Compliance Officer",
+            "approvedByLabel": "Approved by:",
+            "approvedBy": "ECAPFX Management Team"
+          }
+        }
+      },
+      "contact": {
+        "title": "16. Contact Information",
+        "text": "If you have any questions about these Terms, please contact us:",
+        "company": "ECAPFX Proprietary Firm",
+        "emailLabel": "Email:",
+        "email": "support@ecapfx.com",
+        "websiteLabel": "Website:",
+        "website": "https://www.ecapfx.com"
+      }
+    }
   }
 }
