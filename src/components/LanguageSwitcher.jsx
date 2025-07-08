@@ -20,6 +20,15 @@ const FlagEs = () => (
   </svg>
 );
 
+// SVG for German flag
+const FlagDe = () => (
+  <svg width="18" height="12" viewBox="0 0 36 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="border border-gray-400">
+    <rect width="36" height="8" fill="#000000"/>
+    <rect y="8" width="36" height="8" fill="#DD0000"/>
+    <rect y="16" width="36" height="8" fill="#FFCE00"/>
+  </svg>
+);
+
 const LanguageSwitcher = () => {
   const { i18n } = useTranslation();
   const [isOpen, setIsOpen] = useState(false);
@@ -46,7 +55,13 @@ const LanguageSwitcher = () => {
           border: '1px solid #4b5563',
         }}
       >
-        {i18n.language === 'en' ? <FlagEn style={{ marginRight: '8px' }} /> : <FlagEs style={{ marginRight: '8px' }} />}
+        {i18n.language === 'en' ? (
+          <FlagEn style={{ marginRight: '8px' }} />
+        ) : i18n.language === 'es' ? (
+          <FlagEs style={{ marginRight: '8px' }} />
+        ) : (
+          <FlagDe style={{ marginRight: '8px' }} />
+        )}
         <svg style={{ marginLeft: '4px', height: '1rem', width: '1rem' }} fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
         </svg>
@@ -73,7 +88,7 @@ const LanguageSwitcher = () => {
                 padding: '0.25rem 0.5rem',
                 color: '#fff',
                 justifyContent: 'center',
-                alignItems: 'center', // Added to align items vertically
+                alignItems: 'center',
                 transition: 'background-color 0.2s',
                 background: 'none',
                 border: 'none',
@@ -92,7 +107,7 @@ const LanguageSwitcher = () => {
                 padding: '0.25rem 0.5rem',
                 color: '#fff',
                 justifyContent: 'center',
-                alignItems: 'center', // Added to align items vertically
+                alignItems: 'center',
                 transition: 'background-color 0.2s',
                 background: 'none',
                 border: 'none',
@@ -102,6 +117,25 @@ const LanguageSwitcher = () => {
             >
               <FlagEs style={{ marginRight: '12px', verticalAlign: 'middle' }} />
               <span style={{ marginLeft: '8px', verticalAlign: 'middle' }}>ES</span>
+            </button>
+            <button
+              onClick={() => changeLanguage('de')}
+              style={{
+                display: 'flex',
+                width: '100%',
+                padding: '0.25rem 0.5rem',
+                color: '#fff',
+                justifyContent: 'center',
+                alignItems: 'center',
+                transition: 'background-color 0.2s',
+                background: 'none',
+                border: 'none',
+                cursor: 'pointer',
+              }}
+              role="menuitem"
+            >
+              <FlagDe style={{ marginRight: '12px', verticalAlign: 'middle' }} />
+              <span style={{ marginLeft: '8px', verticalAlign: 'middle' }}>DE</span>
             </button>
           </div>
         </div>
