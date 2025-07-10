@@ -54,13 +54,13 @@ function PricingTable() {
       "50k": { USD: "$180", GBP: "£150", EUR: "€165" },
       "100k": { USD: "$325", GBP: "£270", EUR: "€295" },
       "200k": { USD: "$630", GBP: "£520", EUR: "€570" }
-    },
-    "Instant Funding": {
-      "10k": { USD: "$315", GBP: "£260", EUR: "€295" },
-      "15k": { USD: "$450", GBP: "£375", EUR: "€425" },
-      "20k": { USD: "$585", GBP: "£485", EUR: "€550" },
-      "25k": { USD: "$720", GBP: "£595", EUR: "€675" }
     }
+    // "Instant Funding": {
+    //   "10k": { USD: "$315", GBP: "£260", EUR: "€295" },
+    //   "15k": { USD: "$450", GBP: "£375", EUR: "€425" },
+    //   "20k": { USD: "$585", GBP: "£485", EUR: "€550" },
+    //   "25k": { USD: "$720", GBP: "£595", EUR: "€675" }
+    // }
   };
 
   // Table data based on step type, size, and currency
@@ -235,53 +235,53 @@ function PricingTable() {
         "Fee": { USD: ["$630", "Refunded", "", ""], GBP: ["£520", "Refunded", "", ""], EUR: ["€570", "Refunded", "", ""] },
         "Bonus After Stage": { USD: ["$200", "$300", "$400", ""], GBP: ["£200", "£300", "£400", ""], EUR: ["€200", "€300", "€400", ""] }
       }
-    },
-    "Instant Funding": {
-      "10k": {
-        "Profit": ["None", "", "", ""],
-        "Duration": ["Unlimited", "", "", ""],
-        "Leverage": ["Up to 1:50", "", "", ""],
-        "Mintradingdays": ["10 Days", "", "", ""],
-        "Maxloss": { USD: ["$500 (5%)", "", "", ""], GBP: ["£500 (5%)", "", "", ""], EUR: ["€500 (5%)", "", "", ""] },
-        "Daily Loss": { USD: ["$300 (3%)", "", "", ""], GBP: ["£300 (3%)", "", "", ""], EUR: ["€300 (3%)", "", "", ""] },
-        "Profit Share": ["90/10", "", "", ""],
-        "Fee": { USD: ["$315", "Refunded", "", ""], GBP: ["£260", "Refunded", "", ""], EUR: ["€295", "Refunded", "", ""] },
-        "Bonus After Stage": { USD: ["", "", "", ""], GBP: ["", "", "", ""], EUR: ["", "", "", ""] }
-      },
-      "15k": {
-        "Profit": ["None", "", "", ""],
-        "Duration": ["Unlimited", "", "", ""],
-        "Leverage": ["Up to 1:50", "", "", ""],
-        "Mintradingdays": ["10 Days", "", "", ""],
-        "Maxloss": { USD: ["$750 (5%)", "", "", ""], GBP: ["£750 (5%)", "", "", ""], EUR: ["€750 (5%)", "", "", ""] },
-        "Daily Loss": { USD: ["$450 (3%)", "", "", ""], GBP: ["£450 (3%)", "", "", ""], EUR: ["€450 (3%)", "", "", ""] },
-        "Profit Share": ["90/10", "", "", ""],
-        "Fee": { USD: ["$450", "Refunded", "", ""], GBP: ["£375", "Refunded", "", ""], EUR: ["€425", "Refunded", "", ""] },
-        "Bonus After Stage": { USD: ["", "", "", ""], GBP: ["", "", "", ""], EUR: ["", "", "", ""] }
-      },
-      "20k": {
-        "Profit": ["None", "", "", ""],
-        "Duration": ["Unlimited", "", "", ""],
-        "Leverage": ["Up to 1:50", "", "", ""],
-        "Mintradingdays": ["10 Days", "", "", ""],
-        "Maxloss": { USD: ["$1,000 (5%)", "", "", ""], GBP: ["£1,000 (5%)", "", "", ""], EUR: ["€1,000 (5%)", "", "", ""] },
-        "Daily Loss": { USD: ["$600 (3%)", "", "", ""], GBP: ["£600 (3%)", "", "", ""], EUR: ["€600 (3%)", "", "", ""] },
-        "Profit Share": ["90/10", "", "", ""],
-        "Fee": { USD: ["$585", "Refunded", "", ""], GBP: ["£485", "Refunded", "", ""], EUR: ["€550", "Refunded", "", ""] },
-        "Bonus After Stage": { USD: ["", "", "", ""], GBP: ["", "", "", ""], EUR: ["", "", "", ""] }
-      },
-      "25k": {
-        "Profit": ["None", "", "", ""],
-        "Duration": ["Unlimited", "", "", ""],
-        "Leverage": ["Up to 1:50", "", "", ""],
-        "Mintradingdays": ["10 Days", "", "", ""],
-        "Maxloss": { USD: ["$1,250 (5%)", "", "", ""], GBP: ["£1,250 (5%)", "", "", ""], EUR: ["€1,250 (5%)", "", "", ""] },
-        "Daily Loss": { USD: ["$750 (3%)", "", "", ""], GBP: ["£750 (3%)", "", "", ""], EUR: ["€750 (3%)", "", "", ""] },
-        "Profit Share": ["90/10", "", "", ""],
-        "Fee": { USD: ["$720", "Refunded", "", ""], GBP: ["£595", "Refunded", "", ""], EUR: ["€675", "Refunded", "", ""] },
-        "Bonus After Stage": { USD: ["", "", "", ""], GBP: ["", "", "", ""], EUR: ["", "", "", ""] }
-      }
     }
+    // "Instant Funding": {
+    //   "10k": {
+    //     "Profit": ["None", "", "", ""],
+    //     "Duration": ["Unlimited", "", "", ""],
+    //     "Leverage": ["Up to 1:50", "", "", ""],
+    //     "Mintradingdays": ["10 Days", "", "", ""],
+    //     "Maxloss": { USD: ["$500 (5%)", "", "", ""], GBP: ["£500 (5%)", "", "", ""], EUR: ["€500 (5%)", "", "", ""] },
+    //     "Daily Loss": { USD: ["$300 (3%)", "", "", ""], GBP: ["£300 (3%)", "", "", ""], EUR: ["€300 (3%)", "", "", ""] },
+    //     "Profit Share": ["90/10", "", "", ""],
+    //     "Fee": { USD: ["$315", "Refunded", "", ""], GBP: ["£260", "Refunded", "", ""], EUR: ["€295", "Refunded", "", ""] },
+    //     "Bonus After Stage": { USD: ["", "", "", ""], GBP: ["", "", "", ""], EUR: ["", "", "", ""] }
+    //   },
+    //   "15k": {
+    //     "Profit": ["None", "", "", ""],
+    //     "Duration": ["Unlimited", "", "", ""],
+    //     "Leverage": ["Up to 1:50", "", "", ""],
+    //     "Mintradingdays": ["10 Days", "", "", ""],
+    //     "Maxloss": { USD: ["$750 (5%)", "", "", ""], GBP: ["£750 (5%)", "", "", ""], EUR: ["€750 (5%)", "", "", ""] },
+    //     "Daily Loss": { USD: ["$450 (3%)", "", "", ""], GBP: ["£450 (3%)", "", "", ""], EUR: ["€450 (3%)", "", "", ""] },
+    //     "Profit Share": ["90/10", "", "", ""],
+    //     "Fee": { USD: ["$450", "Refunded", "", ""], GBP: ["£375", "Refunded", "", ""], EUR: ["€425", "Refunded", "", ""] },
+    //     "Bonus After Stage": { USD: ["", "", "", ""], GBP: ["", "", "", ""], EUR: ["", "", "", ""] }
+    //   },
+    //   "20k": {
+    //     "Profit": ["None", "", "", ""],
+    //     "Duration": ["Unlimited", "", "", ""],
+    //     "Leverage": ["Up to 1:50", "", "", ""],
+    //     "Mintradingdays": ["10 Days", "", "", ""],
+    //     "Maxloss": { USD: ["$1,000 (5%)", "", "", ""], GBP: ["£1,000 (5%)", "", "", ""], EUR: ["€1,000 (5%)", "", "", ""] },
+    //     "Daily Loss": { USD: ["$600 (3%)", "", "", ""], GBP: ["£600 (3%)", "", "", ""], EUR: ["€600 (3%)", "", "", ""] },
+    //     "Profit Share": ["90/10", "", "", ""],
+    //     "Fee": { USD: ["$585", "Refunded", "", ""], GBP: ["£485", "Refunded", "", ""], EUR: ["€550", "Refunded", "", ""] },
+    //     "Bonus After Stage": { USD: ["", "", "", ""], GBP: ["", "", "", ""], EUR: ["", "", "", ""] }
+    //   },
+    //   "25k": {
+    //     "Profit": ["None", "", "", ""],
+    //     "Duration": ["Unlimited", "", "", ""],
+    //     "Leverage": ["Up to 1:50", "", "", ""],
+    //     "Mintradingdays": ["10 Days", "", "", ""],
+    //     "Maxloss": { USD: ["$1,250 (5%)", "", "", ""], GBP: ["£1,250 (5%)", "", "", ""], EUR: ["€1,250 (5%)", "", "", ""] },
+    //     "Daily Loss": { USD: ["$750 (3%)", "", "", ""], GBP: ["£750 (3%)", "", "", ""], EUR: ["€750 (3%)", "", "", ""] },
+    //     "Profit Share": ["90/10", "", "", ""],
+    //     "Fee": { USD: ["$720", "Refunded", "", ""], GBP: ["£595", "Refunded", "", ""], EUR: ["€675", "Refunded", "", ""] },
+    //     "Bonus After Stage": { USD: ["", "", "", ""], GBP: ["", "", "", ""], EUR: ["", "", "", ""] }
+    //   }
+    // }
   };
 
   // Dynamically generate available sizes based on selected step
@@ -331,7 +331,7 @@ function PricingTable() {
     setTimeout(() => setIsAnimating(false), 300);
   };
 
-  const steps = ["One Step", "Two Step", "Three Step", "Instant Funding"];
+  const steps = ["One Step", "Two Step", "Three Step"]; //"Instant Funding" get this back inside when we enable it.
   const currencies = ["USD", "GBP", "EUR"];
   const baseMetrics = ["Profit", "Duration", "Leverage", "Mintradingdays", "Maxloss", "Daily Loss", "Profit Share", "Fee"];
   const metrics = selectedStep === "Three Step" ? [...baseMetrics, "Bonus After Stage"] : baseMetrics;
@@ -356,8 +356,8 @@ function PricingTable() {
         return ["Stage One", "Funded", "", ""];
       case "Two Step":
         return ["Stage One", "Stage Two", "Funded", ""];
-      case "Instant Funding":
-        return ["Funded", "", "", ""];
+      // case "Instant Funding":
+      //   return ["Funded", "", "", ""];
       default:
         return ["Stage One", "Stage Two", "Stage Three", "Funded"];
     }
@@ -369,8 +369,8 @@ function PricingTable() {
         return 2;
       case "Two Step":
         return 3;
-      case "Instant Funding":
-        return 1;
+      // case "Instant Funding":
+      //   return 1;
       default:
         return 4;
     }
