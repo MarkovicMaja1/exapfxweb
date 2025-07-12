@@ -5,12 +5,21 @@ import { useTranslation } from 'react-i18next';
 import step1 from '../assets/step1.png';
 import step2 from '../assets/step2.png';
 import step3 from '../assets/step3.png';
-import step4 from '../assets/step4.jpg';
+import step4 from '../assets/step4.png';
+import step5 from '../assets/step5.jpg';
 
+/**
+ * Updated: 2025‑07‑12
+ *  - Inserted a new Step 3 “Payouts within 5‑7 calendar days”.
+ *  - Pushed the former Step 3 and Step 4 one slot down.
+ *  - Badge counters (`custom` prop) now run 0‑4.
+ */
 const HowItWorks = () => {
   const { t } = useTranslation();
 
-  // Scroll to top on mount or tab visibility change
+  /* ------------------------------------------------------------------ */
+  /*  Scroll to top on mount or tab visibility change                    */
+  /* ------------------------------------------------------------------ */
   useEffect(() => {
     window.scrollTo(0, 0);
     const handleVisibilityChange = () => {
@@ -22,6 +31,9 @@ const HowItWorks = () => {
     return () => document.removeEventListener('visibilitychange', handleVisibilityChange);
   }, []);
 
+  /* ------------------------------------------------------------------ */
+  /*  Animation variants                                                */
+  /* ------------------------------------------------------------------ */
   const contentVariants = {
     hidden: (i) => ({
       opacity: 0,
@@ -40,23 +52,7 @@ const HowItWorks = () => {
     }),
   };
 
-  const imageVariants = {
-    hidden: (i) => ({
-      opacity: 0,
-      x: i % 2 === 0 ? -100 : 100,
-      scale: 0.9,
-    }),
-    visible: (i) => ({
-      opacity: 1,
-      x: 0,
-      scale: 1.05,
-      transition: {
-        duration: 0.6,
-        ease: [0.25, 0.1, 0.25, 1],
-        delay: 0.3 + i * 0.15,
-      },
-    }),
-  };
+  const imageVariants = contentVariants; // identical behaviour
 
   const badgeVariants = {
     hidden: { scale: 0, opacity: 0 },
@@ -67,19 +63,22 @@ const HowItWorks = () => {
     }),
   };
 
+  /* ------------------------------------------------------------------ */
+  /*  Render                                                            */
+  /* ------------------------------------------------------------------ */
   return (
-    <section
-      id="how-it-works"
-      className="bg-white relative overflow-hidden min-h-screen font-sans text-black"
-    >
-      <div className="absolute inset-0 bg-black/10 z-0"></div>
+    <section id="how-it-works" className="bg-white relative overflow-hidden min-h-screen font-sans text-black">
+      {/* ---- subtle radial blobs in the background ------------------- */}
+      <div className="absolute inset-0 bg-black/10 z-0" />
       <div className="absolute inset-0 opacity-5 sm:opacity-10 hidden sm:block">
-        <div className="absolute w-64 h-64 bg-green-400 rounded-full -top-32 -left-32 transform rotate-45 blur-xl"></div>
-        <div className="absolute w-48 h-48 bg-blue-300 rounded-full top-1/4 right-1/4 transform -rotate-15 blur-xl"></div>
-        <div className="absolute w-72 h-72 bg-gray-200 rounded-full bottom-1/3 left-1/4 transform rotate-30 blur-xl"></div>
+        <div className="absolute w-64 h-64 bg-green-400 rounded-full -top-32 -left-32 transform rotate-45 blur-xl" />
+        <div className="absolute w-48 h-48 bg-blue-300 rounded-full top-1/4 right-1/4 transform -rotate-15 blur-xl" />
+        <div className="absolute w-72 h-72 bg-gray-200 rounded-full bottom-1/3 left-1/4 transform rotate-30 blur-xl" />
       </div>
 
-      {/* Hero Section */}
+      {/* ------------------------------------------------------------------ */}
+      {/*  Hero                                                             */}
+      {/* ------------------------------------------------------------------ */}
       <motion.div
         className="mx-auto max-w-7xl px-4 py-24 sm:px-6 lg:px-8 lg:py-24 relative z-10 text-center"
         initial={{ opacity: 0, y: 20 }}
@@ -96,18 +95,21 @@ const HowItWorks = () => {
         </div>
       </motion.div>
 
-      {/* Steps Section with Stylized Line */}
+      {/* ------------------------------------------------------------------ */}
+      {/*  Steps with vertical dashed line                                  */}
+      {/* ------------------------------------------------------------------ */}
       <section
         className="relative px-6 sm:px-12 mx-auto max-w-6xl my-5 py-12"
         style={{
-          backgroundImage: 'url(https://via.placeholder.com/10x900.png?text=Dashed+Green+Line&color=1d8348)',
+          backgroundImage:
+            'url(https://via.placeholder.com/10x900.png?text=Dashed+Green+Line&color=1d8348)',
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat',
           backgroundSize: '10px auto',
         }}
       >
         <div className="relative space-y-24">
-          {/* Step 1 - Text Left, Image Right */}
+          {/* ---------------------------- 1 */}
           <Step
             custom={0}
             image={step1}
@@ -129,7 +131,7 @@ const HowItWorks = () => {
             </ul>
           </Step>
 
-          {/* Step 2 - Image Left, Text Right */}
+          {/* ---------------------------- 2 */}
           <Step
             custom={1}
             image={step2}
@@ -155,14 +157,40 @@ const HowItWorks = () => {
             </ul>
           </Step>
 
-          {/* Step 3 - Text Left, Image Right */}
+          {/* ---------------------------- 3 – NEW  */}
           <Step
             custom={2}
             image={step3}
+            alt="Secure payouts illustration"
+            contentVariants={contentVariants}
+            imageVariants={imageVariants}
+            badgeVariants={badgeVariants}
+          >
+            <h3 className="text-2xl sm:text-3xl font-bold text-[#1d8348] mt-8 leading-snug">
+              {t('howItWorks.steps.stepPayout.title', 'Payouts within 5–7 calendar days')}
+            </h3>
+            <p className="text-black mt-4 text-base sm:text-lg leading-relaxed">
+              {t(
+                'howItWorks.steps.stepPayout.description',
+                'We know fast access to your earnings matters. Our automated payout system sends your share directly to the wallet or bank of your choice just days after the profit‑split date.'
+              )}
+            </p>
+            <ul className="text-black mt-4 space-y-2 list-disc list-inside text-sm sm:text-base">
+              <li>{t('howItWorks.steps.stepPayout.items.weekly', 'Weekly payout cycles – no long waiting‑lists.')}</li>
+              <li>{t('howItWorks.steps.stepPayout.items.methods', 'Multiple payment methods including USDT, BTC, wire & local gateways.')}</li>
+              <li>{t('howItWorks.steps.stepPayout.items.transparency', 'Full transparency: track the status of every invoice in your dashboard.')}</li>
+            </ul>
+          </Step>
+
+          {/* ---------------------------- 4 (formerly 3) */}
+          <Step
+            custom={3}
+            image={step4}
             alt={t('howItWorks.steps.step3.imageAlt')}
             contentVariants={contentVariants}
             imageVariants={imageVariants}
             badgeVariants={badgeVariants}
+            reverse
           >
             <h3 className="text-2xl sm:text-3xl font-bold text-[#1d8348] mt-8 leading-snug">
               {t('howItWorks.steps.step3.title')}
@@ -177,12 +205,11 @@ const HowItWorks = () => {
             </ul>
           </Step>
 
-          {/* Step 4 - Image Left, Text Right */}
+          {/* ---------------------------- 5 (formerly 4) */}
           <Step
-            custom={3}
-            image={step4}
+            custom={4}
+            image={step5}
             alt={t('howItWorks.steps.step4.imageAlt')}
-            reverse
             contentVariants={contentVariants}
             imageVariants={imageVariants}
             badgeVariants={badgeVariants}
@@ -202,7 +229,9 @@ const HowItWorks = () => {
         </div>
       </section>
 
-      {/* Call to Action */}
+      {/* ------------------------------------------------------------------ */}
+      {/*  CTA                                                               */}
+      {/* ------------------------------------------------------------------ */}
       <section className="flex justify-center pt-12 pb-12 px-6 sm:px-12">
         <motion.a
           href="https://active.ecapfx.com/auth/signin"
@@ -216,18 +245,13 @@ const HowItWorks = () => {
           {t('howItWorks.cta.button')}
         </motion.a>
       </section>
-
-      {/* Disclaimer */}
-      <section className="pb-16 px-6 sm:px-12 text-center">
-        <p className="text-[#f7e59f] text-base font-medium leading-relaxed">
-          {/* Add disclaimer translation if needed */}
-        </p>
-      </section>
     </section>
   );
 };
 
-// Step Component
+/* --------------------------------------------------------------------
+ *  <Step> : shared animation wrapper                                    
+ * ------------------------------------------------------------------ */
 const Step = ({ custom, image, alt, reverse, children, contentVariants, imageVariants, badgeVariants }) => {
   const controls = useAnimation();
   const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.1, rootMargin: '200px 0px' });
