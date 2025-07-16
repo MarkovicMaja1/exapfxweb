@@ -1,6 +1,7 @@
 import React from "react";
 import { useTranslation } from 'react-i18next';
 import joinDiscordImage from "../assets/joindiscord.png";
+import logoImage from "../assets/ECapFX-LOGO-white.png";
 
 const Discord = () => {
   const { t } = useTranslation();
@@ -34,11 +35,15 @@ const Discord = () => {
 
             {/* Overlay Card */}
             <div
-              className="absolute w-[90%] mx-auto p-6 bg-gradient-to-br from-[#1d8348] to-[#145c33] rounded-xl shadow-lg text-white z-30"
+              className="absolute w-[90%] mx-auto p-6 bg-gradient-to-br from-[#f9e79f] via-[#1d8348] to-[#000000] rounded-xl shadow-lg text-white z-30"
             >
               <div className="flex flex-col items-center mb-5">
-                <div className="w-12 h-12 bg-[#f9e79f] rounded-full flex items-center justify-center text-2xl font-bold text-[#1d8348] mb-4">
-                  EC
+                <div className="w-15 h-8 flex items-center justify-center mb-4">
+                  <img
+                    src={logoImage}
+                    alt="ECapFX Logo"
+                    className="w-full h-full object-contain"
+                  />
                 </div>
                 <div className="text-center w-full">
                   <div className="text-sm text-white mb-1">{t('discord.overlay.invitedText')}</div>
@@ -52,7 +57,7 @@ const Discord = () => {
                 href="https://discord.gg/eBkRpp66"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full bg-gradient-to-r from-[#f9e79f] to-[#e8c74d] hover:from-[#f7d86e] hover:to-[#d7b73c] text-[#000000] font-semibold text-sm py-3 rounded-xl flex items-center justify-center gap-2 transition duration-300"
+                className="w-full bg-gradient-to-r from-[#f9e79f] via-[#e8c74d] to-[#1d8348] hover:from-[#f7d86e] hover:via-[#d7b73c] hover:to-[#156437] text-[#000000] text-[#000000] hover:text-[#ffffff] font-semibold text-sm py-3 rounded-xl flex items-center justify-center gap-2 transition duration-300"
               >
                 {t('discord.buttons.getStarted')} <i className="fab fa-discord" />
               </a>
