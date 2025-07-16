@@ -150,7 +150,9 @@ const Footer = () => {
               <img src={stripe} alt={t('footer.images.stripe')} className="h-6 w-auto" />
               <img src={confirmoBlack} alt={t('footer.images.confirmo')} className="h-6 w-auto" />
               <img src={coinpayments} alt={t('footer.images.coinpayments')} className="h-5 w-auto" />
-              <img src={tradingview} alt={t('footer.images.tradingview')} className="h-6 w-auto" />
+              <a href="https://www.tradingview.com" target="_blank" rel="noopener noreferrer" className="text-white hover:text-white">
+                <img src={tradingview} alt={t('footer.images.tradingview')} className="h-6 w-auto" />
+              </a>
             </div>
           </div>
         </div>
