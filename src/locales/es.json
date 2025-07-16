@@ -118,6 +118,16 @@
         },
         "imageAlt": "Análisis de gráficos de comercio"
       },
+      "stepPayout": {
+        "title": "Pagos en 5-7 Días Naturales",
+        "description": "Sabemos que el acceso rápido a tus ganancias es importante. Nuestro sistema de pagos automatizado envía tu parte directamente a la billetera o cuenta bancaria de tu elección, solo días después de la fecha de reparto de beneficios.",
+        "items": {
+          "weekly": "Ciclos de pago semanales – sin listas de espera largas.",
+          "methods": "Múltiples métodos de pago, incluyendo USDT, BTC, transferencia bancaria y pasarelas locales.",
+          "transparency": "Transparencia total: sigue el estado de cada factura en tu panel de control."
+        },
+        "imageAlt": "Ilustración de pagos seguros"
+      },
       "step3": {
         "title": "Obtén Financiamiento",
         "description": "Desbloquea financiamiento al completar con éxito.",
@@ -237,7 +247,7 @@
     "overlay": {
       "invitedText": "ECAPFX te invitó a unirte",
       "communityName": "ECAPFX",
-      "onlineStatus": "🟢 5 En Línea • 8 Miembros"
+      "onlineStatus": "🟢 10 En Línea • 21 Miembros"
     },
     "buttons": {
       "getStarted": "Comenzar",
@@ -1075,7 +1085,8 @@
       "paypal": "Paypal",
       "stripe": "Stripe",
       "confirmo": "Confirmo",
-      "coinpayments": "CoinPayments"
+      "coinpayments": "CoinPayments",
+      "tradingview": "TradingView"
     }
   },
   "header": {

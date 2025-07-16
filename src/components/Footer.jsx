@@ -8,6 +8,7 @@ import paypal from '../assets/paypal.svg';
 import stripe from '../assets/stripe.svg';
 import mastercard from '../assets/mastercard.svg';
 import coinpayments from '../assets/coinpayments.png';
+import tradingview from '../assets/tradingview.png';
 
 const Footer = () => {
   const { t } = useTranslation();
@@ -149,6 +150,7 @@ const Footer = () => {
               <img src={stripe} alt={t('footer.images.stripe')} className="h-6 w-auto" />
               <img src={confirmoBlack} alt={t('footer.images.confirmo')} className="h-6 w-auto" />
               <img src={coinpayments} alt={t('footer.images.coinpayments')} className="h-5 w-auto" />
+              <img src={tradingview} alt={t('footer.images.tradingview')} className="h-6 w-auto" />
             </div>
           </div>
         </div>

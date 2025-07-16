@@ -118,6 +118,16 @@
         },
         "imageAlt": "Analyse eines Handelsdiagramms"
       },
+      "stepPayout": {
+        "title": "Auszahlungen innerhalb von 5–7 Kalendertagen",
+        "description": "Wir wissen, dass schneller Zugriff auf Ihre Gewinne wichtig ist. Unser automatisiertes Auszahlungssystem sendet Ihren Anteil direkt an das Wallet oder Bankkonto Ihrer Wahl, nur wenige Tage nach dem Gewinnteilungsdatum.",
+        "items": {
+          "weekly": "Wöchentliche Auszahlungszyklen – keine langen Wartelisten.",
+          "methods": "Mehrere Zahlungsmethoden, einschließlich USDT, BTC, Überweisung & lokalen Gateways.",
+          "transparency": "Volle Transparenz: Verfolgen Sie den Status jeder Rechnung in Ihrem Dashboard."
+        },
+        "imageAlt": "Illustration sicherer Auszahlungen"
+      },
       "step3": {
         "title": "Finanzierung erhalten",
         "description": "Schalten Sie die Finanzierung nach erfolgreichem Abschluss frei.",
@@ -237,7 +247,7 @@
     "overlay": {
       "invitedText": "ECAPFX hat Sie eingeladen, beizutreten",
       "communityName": "ECAPFX",
-      "onlineStatus": "🟢 5 Online • 8 Mitglieder"
+      "onlineStatus": "🟢 10 Online • 21 Mitglieder"
     },
     "buttons": {
       "getStarted": "Jetzt starten",
@@ -1074,7 +1084,8 @@
       "paypal": "Paypal",
       "stripe": "Stripe",
       "confirmo": "Confirmo",
-      "coinpayments": "CoinPayments"
+      "coinpayments": "CoinPayments",
+      "tradingview": "TradingView"
     }
   },
   "header": {
