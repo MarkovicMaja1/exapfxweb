@@ -1055,8 +1055,8 @@
           "to": "/rules"
         },
         {
-          "label": "Chat en Vivo",
-          "to": "#"
+          "label": "Centro de ayuda",
+          "to": "https://ecapfx.tawk.help/"
         }
       ]
     },

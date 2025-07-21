@@ -1054,8 +1054,8 @@
           "to": "/rules"
         },
         {
-          "label": "Live-Chat",
-          "to": "#"
+          "label": "Hilfecenter",
+          "to": "https://ecapfx.tawk.help/"
         }
       ]
     },
