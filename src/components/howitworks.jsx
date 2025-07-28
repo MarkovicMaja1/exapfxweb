@@ -9,10 +9,9 @@ import step4 from '../assets/step4.png';
 import step5 from '../assets/step5.jpg';
 
 /**
- * Updated: 2025‑07‑12
- *  - Inserted a new Step 3 “Payouts within 5‑7 calendar days”.
- *  - Pushed the former Step 3 and Step 4 one slot down.
- *  - Badge counters (`custom` prop) now run 0‑4.
+ * Updated: 2025-07-28
+ *  - Swapped content (text and image) between Step 3 and Step 4 as requested.
+ *  - Kept all other structure, including custom props and reverse prop, unchanged.
  */
 const HowItWorks = () => {
   const { t } = useTranslation();
@@ -77,7 +76,7 @@ const HowItWorks = () => {
       </div>
 
       {/* ------------------------------------------------------------------ */}
-      {/*  Hero                                                             */}
+      {/*  Hero                                                              */}
       {/* ------------------------------------------------------------------ */}
       <motion.div
         className="mx-auto max-w-7xl px-4 py-24 sm:px-6 lg:px-8 lg:py-24 relative z-10 text-center"
@@ -96,7 +95,7 @@ const HowItWorks = () => {
       </motion.div>
 
       {/* ------------------------------------------------------------------ */}
-      {/*  Steps with vertical dashed line                                  */}
+      {/* /*  Steps with vertical dashed line                                */}
       {/* ------------------------------------------------------------------ */}
       <section
         className="relative px-6 sm:px-12 mx-auto max-w-6xl my-5 py-12"
@@ -152,19 +151,42 @@ const HowItWorks = () => {
               <li dangerouslySetInnerHTML={{ __html: t('howItWorks.steps.step2.items.maxDrawdown') }} />
               <li dangerouslySetInnerHTML={{ __html: t('howItWorks.steps.step2.items.profitTargets') }} />
               <li dangerouslySetInnerHTML={{ __html: t('howItWorks.steps.step2.items.consistency') }} />
-              <li dangerouslySetInnerHTML={{ __html: t('howItWorks.steps.step2.items.instantChallenges') }} />
+              {/* - <li dangerouslySetInnerHTML={{ __html: t('howItWorks.steps.step2.items.instantChallenges') }} /> -*/}
+            </ul>
+          </Step>
+
+          {/* ---------------------------- 3 (content from former Step 4) */}
+          <Step
+            custom={2}
+            image={step4}
+            alt={t('howItWorks.steps.step3.imageAlt')}
+            contentVariants={contentVariants}
+            imageVariants={imageVariants}
+            badgeVariants={badgeVariants}
+          >
+            <h3 className="text-2xl sm:text-3xl font-bold text-[#1d8348] mt-8 leading-snug">
+              {t('howItWorks.steps.step3.title')}
+            </h3>
+            <p className="text-black mt-4 text-base sm:text-lg leading-relaxed">
+              {t('howItWorks.steps.step3.description')}
+            </p>
+            <ul className="text-black mt-4 space-y-2 list-disc list-inside text-sm sm:text-base">
+              <li dangerouslySetInnerHTML={{ __html: t('howItWorks.steps.step3.items.kycAml') }} />
+              <li dangerouslySetInnerHTML={{ __html: t('howItWorks.steps.step3.items.fundingAccess') }} />
+              <li dangerouslySetInnerHTML={{ __html: t('howItWorks.steps.step3.items.rulesAndTerms') }} />
               <li dangerouslySetInnerHTML={{ __html: t('howItWorks.steps.step2.items.profitSplit') }} />
             </ul>
           </Step>
 
-          {/* ---------------------------- 3 – NEW  */}
+          {/* ---------------------------- 4 (content from former Step 3) */}
           <Step
-            custom={2}
+            custom={3}
             image={step3}
             alt="Secure payouts illustration"
             contentVariants={contentVariants}
             imageVariants={imageVariants}
             badgeVariants={badgeVariants}
+            reverse
           >
             <h3 className="text-2xl sm:text-3xl font-bold text-[#1d8348] mt-8 leading-snug">
               {t('howItWorks.steps.stepPayout.title', 'Payouts within 5–7 calendar days')}
@@ -179,29 +201,6 @@ const HowItWorks = () => {
               <li>{t('howItWorks.steps.stepPayout.items.weekly', 'Weekly payout cycles – no long waiting‑lists.')}</li>
               <li>{t('howItWorks.steps.stepPayout.items.methods', 'Multiple payment methods including USDT, BTC, wire & local gateways.')}</li>
               <li>{t('howItWorks.steps.stepPayout.items.transparency', 'Full transparency: track the status of every invoice in your dashboard.')}</li>
-            </ul>
-          </Step>
-
-          {/* ---------------------------- 4 (formerly 3) */}
-          <Step
-            custom={3}
-            image={step4}
-            alt={t('howItWorks.steps.step3.imageAlt')}
-            contentVariants={contentVariants}
-            imageVariants={imageVariants}
-            badgeVariants={badgeVariants}
-            reverse
-          >
-            <h3 className="text-2xl sm:text-3xl font-bold text-[#1d8348] mt-8 leading-snug">
-              {t('howItWorks.steps.step3.title')}
-            </h3>
-            <p className="text-black mt-4 text-base sm:text-lg leading-relaxed">
-              {t('howItWorks.steps.step3.description')}
-            </p>
-            <ul className="text-black mt-4 space-y-2 list-disc list-inside text-sm sm:text-base">
-              <li dangerouslySetInnerHTML={{ __html: t('howItWorks.steps.step3.items.kycAml') }} />
-              <li dangerouslySetInnerHTML={{ __html: t('howItWorks.steps.step3.items.fundingAccess') }} />
-              <li dangerouslySetInnerHTML={{ __html: t('howItWorks.steps.step3.items.rulesAndTerms') }} />
             </ul>
           </Step>
 
@@ -221,17 +220,18 @@ const HowItWorks = () => {
               {t('howItWorks.steps.step4.description')}
             </p>
             <ul className="text-black mt-4 space-y-2 list-disc list-inside text-sm sm:text-base">
-              <li dangerouslySetInnerHTML={{ __html: t('howItWorks.steps.step4.items.profitShare') }} />
+              {/* -  <li dangerouslySetInnerHTML={{ __html: t('howItWorks.steps.step4.items.profitShare') }} />  - */}   
               <li dangerouslySetInnerHTML={{ __html: t('howItWorks.steps.step4.items.profitDonation') }} />
               <li dangerouslySetInnerHTML={{ __html: t('howItWorks.steps.step4.items.sustainableFuture') }} />
+              <li dangerouslySetInnerHTML={{ __html: t('howItWorks.steps.step4.items.sustainableWorld') }} />
             </ul>
           </Step>
         </div>
       </section>
 
-      {/* ------------------------------------------------------------------ */}
-      {/*  CTA                                                               */}
-      {/* ------------------------------------------------------------------ */}
+      {/* ------------------------------------------------------------------ */
+      /*  CTA                                                               */
+      /* ------------------------------------------------------------------ */}
       <section className="flex justify-center pt-12 pb-12 px-6 sm:px-12">
         <motion.a
           href="https://active.ecapfx.com/auth/signin"

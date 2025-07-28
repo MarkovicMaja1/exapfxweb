@@ -99,9 +99,9 @@
         "title": "Regístrate y Elige un Desafío",
         "description": "Selecciona un plan adaptado a tu experiencia en comercio.",
         "items": {
-          "beginner": "<strong>Principiante (Greenwave)</strong> - Ideal para nuevos comerciantes.",
-          "experienced": "<strong>Experimentado (El Verde)</strong> - Opciones de riesgo moderado.",
-          "seasoned": "<strong>Experimentado (Ecosphere)</strong> - Diseñado para profesionales."
+          "beginner": "Tres Pasos - Ideal para traders nuevos.",
+          "experienced": "Dos Pasos - Opciones de riesgo moderado.",
+          "seasoned": "Un Paso - Diseñado para profesionales."
         },
         "imageAlt": "Persona registrándose en un formulario"
       },
@@ -109,12 +109,12 @@
         "title": "Demuestra Tus Habilidades",
         "description": "Demuestra tu capacidad de comercio en un entorno simulado.",
         "items": {
-          "dailyLossLimit": "<strong>Límite de Pérdida Diaria</strong> - Mantén la disciplina.",
-          "maxDrawdown": "<strong>Reducción Máxima</strong> - Mantente dentro de los límites.",
-          "profitTargets": "<strong>Objetivos de Ganancia</strong> - Alcanza metas.",
-          "consistency": "<strong>Consistencia</strong> - Asegura un rendimiento estable.",
-          "instantChallenges": "<strong>Desafíos Instantáneos</strong> - Evaluación rápida de habilidades.",
-          "profitSplit": "<strong>División de Ganancias</strong> - Comienza en 80/20."
+          "dailyLossLimit": "Límite de Pérdida Diaria - Mantén la disciplina.",
+          "maxDrawdown": "Reducción Máxima - Mantente dentro de los límites.",
+          "profitTargets": "Objetivos de Ganancia - Alcanza metas.",
+          "consistency": "Consistencia - Asegura un rendimiento estable.",
+          "instantChallenges": "Desafíos Instantáneos - Evaluación rápida de habilidades.",
+          "profitSplit": "División de Ganancias - Comienza en 80/20."
         },
         "imageAlt": "Análisis de gráficos de comercio"
       },
@@ -144,7 +144,8 @@
         "items": {
           "profitShare": "Participación en ganancias de 80/20.",
           "profitDonation": "Donación del 1% de las ganancias después del primer año.",
-          "sustainableFuture": "Contribuye a un futuro sostenible."
+          "sustainableFuture": "Contribuye a un futuro sostenible.",
+          "sustainableWorld": "Nos importa el mundo en el que vivimos, y a ti también debería importarte."
         },
         "imageAlt": "Mercado de comercio global"
       }

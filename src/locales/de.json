@@ -99,9 +99,9 @@
         "title": "Registrieren & Herausforderung wählen",
         "description": "Wählen Sie einen Plan, der auf Ihre Handelsexpertise zugeschnitten ist.",
         "items": {
-          "beginner": "<strong>Anfänger (Greenwave)</strong> - Ideal für neue Trader.",
-          "experienced": "<strong>Erfahren (El Verde)</strong> - Moderate Risikooptionen.",
-          "seasoned": "<strong>Profis (Ecosphere)</strong> - Für professionelle Trader konzipiert."
+          "beginner": "Drei Schritte - Ideal für neue Trader.",
+          "experienced": "Zwei Schritte - Moderate Risikooptionen.",
+          "seasoned": "Ein Schritt - Entwickelt für Profis."
         },
         "imageAlt": "Person, die sich auf einem Formular registriert"
       },
@@ -109,12 +109,12 @@
         "title": "Beweisen Sie Ihre Fähigkeiten",
         "description": "Zeigen Sie Ihre Handelsfähigkeiten in einer simulierten Umgebung.",
         "items": {
-          "dailyLossLimit": "<strong>Tägliches Verlustlimit</strong> - Disziplin wahren.",
-          "maxDrawdown": "<strong>Maximaler Drawdown</strong> - Innerhalb der Grenzen bleiben.",
-          "profitTargets": "<strong>Gewinnziele</strong> - Ziele erreichen.",
-          "consistency": "<strong>Konsistenz</strong> - Stetige Leistung sicherstellen.",
-          "instantChallenges": "<strong>Sofortige Herausforderungen</strong> - Schnelle Fähigkeitsbewertung.",
-          "profitSplit": "<strong>Gewinnteilung</strong> - Beginnt bei 80/20."
+          "dailyLossLimit": "Tägliches Verlustlimit - Disziplin wahren.",
+          "maxDrawdown": "Maximaler Drawdown - Innerhalb der Grenzen bleiben.",
+          "profitTargets": "Gewinnziele - Ziele erreichen.",
+          "consistency": "Konsistenz - Stetige Leistung sicherstellen.",
+          "instantChallenges": "Sofortige Herausforderungen - Schnelle Fähigkeitsbewertung.",
+          "profitSplit": "Gewinnteilung - Beginnt bei 80/20."
         },
         "imageAlt": "Analyse eines Handelsdiagramms"
       },
@@ -144,7 +144,8 @@
         "items": {
           "profitShare": "Gewinnanteil bei 80/20.",
           "profitDonation": "1 % Gewinnspende nach dem ersten Jahr.",
-          "sustainableFuture": "Beitrag zu einer nachhaltigen Zukunft."
+          "sustainableFuture": "Beitrag zu einer nachhaltigen Zukunft.",
+          "sustainableWorld": "Uns liegt die Welt, in der wir leben, am Herzen, und dir sollte es auch so gehen."
         },
         "imageAlt": "Globaler Handelsmarkt"
       }

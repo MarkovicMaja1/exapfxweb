@@ -99,9 +99,9 @@
         "title": "Sign Up & Choose Challenge",
         "description": "Select a plan tailored to your trading expertise.",
         "items": {
-          "beginner": "<strong>Beginner (Greenwave)</strong> - Ideal for new traders.",
-          "experienced": "<strong>Experienced (El Verde)</strong> - Moderate risk options.",
-          "seasoned": "<strong>Seasoned (Ecosphere)</strong> - Designed for professionals."
+          "beginner": "Three Step - Ideal for new traders.",
+          "experienced": "Two Step - Moderate risk options.",
+          "seasoned": "One Step - Designed for professionals."
         },
         "imageAlt": "Person signing up on a form"
       },
@@ -119,12 +119,12 @@
         "title": "Prove Your Skills",
         "description": "Demonstrate your trading ability in a simulated environment.",
         "items": {
-          "dailyLossLimit": "<strong>Daily Loss Limit</strong> - Maintain discipline.",
-          "maxDrawdown": "<strong>Max Drawdown</strong> - Stay within bounds.",
-          "profitTargets": "<strong>Profit Targets</strong> - Achieve goals.",
-          "consistency": "<strong>Consistency</strong> - Ensure steady performance.",
-          "instantChallenges": "<strong>InstantChallenges</strong> - Quick skill assessment.",
-          "profitSplit": "<strong>Profit Split</strong> - Begin at 80/20."
+          "dailyLossLimit": "Daily Loss Limit - Maintain discipline.",
+          "maxDrawdown": "Max Drawdown - Stay within bounds.",
+          "profitTargets": "Profit Targets - Achieve goals.",
+          "consistency": "Consistency - Ensure steady performance.",
+          "instantChallenges": "InstantChallenges - Quick skill assessment.",
+          "profitSplit": "Profit Split - Begin at 80/20."
         },
         "imageAlt": "Trading chart analysis"
       },
@@ -144,7 +144,8 @@
         "items": {
           "profitShare": "Profit share at 80/20.",
           "profitDonation": "1% profit donation post year one.",
-          "sustainableFuture": "Contribute to a sustainable future."
+          "sustainableFuture": "Contribute to a sustainable future.",
+          "sustainableWorld": "We care about the world we live in so should you."
         },
         "imageAlt": "Global trading market"
       }
