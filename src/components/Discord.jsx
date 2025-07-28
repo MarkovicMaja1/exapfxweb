@@ -54,7 +54,7 @@ const Discord = () => {
                 </div>
               </div>
               <a
-                href="https://discord.gg/eBkRpp66"
+                href="https://discord.gg/85UM4nTDJg"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-full bg-gradient-to-r from-[#f9e79f] via-[#e8c74d] to-[#1d8348] hover:from-[#f7d86e] hover:via-[#d7b73c] hover:to-[#156437] text-[#000000] text-[#000000] hover:text-[#ffffff] font-semibold text-sm py-3 rounded-xl flex items-center justify-center gap-2 transition duration-300"
