@@ -27,9 +27,9 @@ const getTranslationKey = (text) => {
 function PricingTable() {
   const { t } = useTranslation();
   const [selectedStep, setSelectedStep] = useState("Three Step");
-  const [selectedSize, setSelectedSize] = useState("10k");
+  const [selectedSize, setSelectedSize] = useState("100k");
   const [selectedCurrency, setSelectedCurrency] = useState("USD");
-  const [price, setPrice] = useState("$55");
+  const [price, setPrice] = useState("$325");
   const [isAnimating, setIsAnimating] = useState(false);
 
   // Price mapping based on step, size, and currency
@@ -627,7 +627,30 @@ function PricingTable() {
                         }
                       }}
                     >
-                      {size} {t('pricingTable.challenge')}
+                      <div className="flex items-center">
+                        {size} {t('pricingTable.challenge')}
+                        {size === "100k" && (
+                          <svg
+                            viewBox="-8.21 -8.21 98.56 98.56"
+                            xmlns="http://www.w3.org/2000/svg"
+                            fill="#f7e59d"
+                            className="w-5 h-5 ml-16"
+                          >
+                            <g>
+                              <path d="M503.592,662.923v0l41.02-13.494-27.587-5.138-13.433,18.629Z" fill="#f7e59d" transform="translate(-462.47 -619.736)" />
+                              <path d="M525.465,669.942l19.147-20.51-41.02,13.494Z" fill="#f7e59d" transform="translate(-462.47 -619.736)" />
+                              <path d="M481.772,670.1,478.33,697.95l25.256-35.023Z" fill="#f7e59d" transform="translate(-462.47 -619.736)" />
+                              <path d="M503.586,662.926,478.33,697.95l25.345-12.057-.083-22.967Z" fill="#f7e59d" transform="translate(-462.47 -619.736)" />
+                              <path d="M517.025,644.294l-13.588-24.559.155,43.188Z" fill="#f7e59d" transform="translate(-462.47 -619.736)" />
+                              <path d="M503.592,662.926h0L529.1,697.77l-3.632-27.828Z" fill="#f7e59d" transform="translate(-462.47 -619.736)" />
+                              <path d="M503.592,662.926l.083,22.967L529.1,697.77l-25.505-34.844Z" fill="#f7e59d" transform="translate(-462.47 -619.736)" />
+                              <path d="M503.592,662.923h0l-.155-43.187-13.416,24.652,13.57,18.535Z" fill="#f7e59d" transform="translate(-462.47 -619.736)" />
+                              <path d="M490.021,644.388l-27.551,5.336,41.122,13.2Z" fill="#f7e59d" transform="translate(-462.47 -619.736)" />
+                              <path d="M503.592,662.923h0l-41.122-13.2,19.3,20.375,21.814-7.173Z" fill="#f7e59d" transform="translate(-462.47 -619.736)" />
+                            </g>
+                          </svg>
+                        )}
+                      </div>
                     </button>
                   ))}
                 </div>
