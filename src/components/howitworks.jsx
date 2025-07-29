@@ -123,10 +123,19 @@ const HowItWorks = () => {
             <p className="text-black mt-4 text-base sm:text-lg leading-relaxed">
               {t('howItWorks.steps.step1.description')}
             </p>
-            <ul className="text-black mt-4 space-y-2 list-disc list-inside text-sm sm:text-base">
-              <li dangerouslySetInnerHTML={{ __html: t('howItWorks.steps.step1.items.beginner') }} />
-              <li dangerouslySetInnerHTML={{ __html: t('howItWorks.steps.step1.items.experienced') }} />
-              <li dangerouslySetInnerHTML={{ __html: t('howItWorks.steps.step1.items.seasoned') }} />
+            <ul className="text-black mt-4 space-y-2 list-none text-sm sm:text-base">
+              <li className="flex items-start">
+                <span className="mr-2 text-green-600">➤</span>
+                <span dangerouslySetInnerHTML={{ __html: t('howItWorks.steps.step1.items.beginner') }} />
+              </li>
+              <li className="flex items-start">
+                <span className="mr-2 text-green-600">➤</span>
+                <span dangerouslySetInnerHTML={{ __html: t('howItWorks.steps.step1.items.experienced') }} />
+              </li>
+              <li className="flex items-start">
+                <span className="mr-2 text-green-600">➤</span>
+                <span dangerouslySetInnerHTML={{ __html: t('howItWorks.steps.step1.items.seasoned') }} />
+              </li>
             </ul>
           </Step>
 
@@ -146,13 +155,31 @@ const HowItWorks = () => {
             <p className="text-black mt-4 text-base sm:text-lg leading-relaxed">
               {t('howItWorks.steps.step2.description')}
             </p>
-            <ul className="text-black mt-4 space-y-2 list-disc list-inside text-sm sm:text-base">
-              <li dangerouslySetInnerHTML={{ __html: t('howItWorks.steps.step2.items.dailyLossLimit') }} />
-              <li dangerouslySetInnerHTML={{ __html: t('howItWorks.steps.step2.items.maxDrawdown') }} />
-              <li dangerouslySetInnerHTML={{ __html: t('howItWorks.steps.step2.items.profitTargets') }} />
-              <li dangerouslySetInnerHTML={{ __html: t('howItWorks.steps.step2.items.consistency') }} />
-              {/* - <li dangerouslySetInnerHTML={{ __html: t('howItWorks.steps.step2.items.instantChallenges') }} /> -*/}
+            <ul className="text-black mt-4 space-y-2 list-none text-sm sm:text-base">
+              <li>
+                <span className="mr-1 text-green-700">➤</span>
+                <span dangerouslySetInnerHTML={{ __html: t('howItWorks.steps.step2.items.dailyLossLimit') }} />
+              </li>
+              <li>
+                <span className="mr-1 text-green-700">➤</span>
+                <span dangerouslySetInnerHTML={{ __html: t('howItWorks.steps.step2.items.maxDrawdown') }} />
+              </li>
+              <li>
+                <span className="mr-1 text-green-700">➤</span>
+                <span dangerouslySetInnerHTML={{ __html: t('howItWorks.steps.step2.items.profitTargets') }} />
+              </li>
+              <li>
+                <span className="mr-1 text-green-700">➤</span>
+                <span dangerouslySetInnerHTML={{ __html: t('howItWorks.steps.step2.items.consistency') }} />
+              </li>
+              {/* 
+              <li>
+                <span className="mr-1 text-green-700">➤</span>
+                <span dangerouslySetInnerHTML={{ __html: t('howItWorks.steps.step2.items.instantChallenges') }} />
+              </li> 
+              */}
             </ul>
+
           </Step>
 
           {/* ---------------------------- 3 (content from former Step 4) */}
@@ -170,12 +197,25 @@ const HowItWorks = () => {
             <p className="text-black mt-4 text-base sm:text-lg leading-relaxed">
               {t('howItWorks.steps.step3.description')}
             </p>
-            <ul className="text-black mt-4 space-y-2 list-disc list-inside text-sm sm:text-base">
-              <li dangerouslySetInnerHTML={{ __html: t('howItWorks.steps.step3.items.kycAml') }} />
-              <li dangerouslySetInnerHTML={{ __html: t('howItWorks.steps.step3.items.fundingAccess') }} />
-              <li dangerouslySetInnerHTML={{ __html: t('howItWorks.steps.step3.items.rulesAndTerms') }} />
-              <li dangerouslySetInnerHTML={{ __html: t('howItWorks.steps.step2.items.profitSplit') }} />
+            <ul className="text-black mt-4 space-y-2 list-none text-sm sm:text-base">
+              <li>
+                <span className="mr-1 text-green-700">➤</span>
+                <span dangerouslySetInnerHTML={{ __html: t('howItWorks.steps.step3.items.kycAml') }} />
+              </li>
+              <li>
+                <span className="mr-1 text-green-700">➤</span>
+                <span dangerouslySetInnerHTML={{ __html: t('howItWorks.steps.step3.items.fundingAccess') }} />
+              </li>
+              <li>
+                <span className="mr-1 text-green-700">➤</span>
+                <span dangerouslySetInnerHTML={{ __html: t('howItWorks.steps.step3.items.rulesAndTerms') }} />
+              </li>
+              <li>
+                <span className="mr-1 text-green-700">➤</span>
+                <span dangerouslySetInnerHTML={{ __html: t('howItWorks.steps.step2.items.profitSplit') }} />
+              </li>
             </ul>
+
           </Step>
 
           {/* ---------------------------- 4 (content from former Step 3) */}
@@ -194,14 +234,24 @@ const HowItWorks = () => {
             <p className="text-black mt-4 text-base sm:text-lg leading-relaxed">
               {t(
                 'howItWorks.steps.stepPayout.description',
-                'We know fast access to your earnings matters. Our automated payout system sends your share directly to the wallet or bank of your choice just days after the profit‑split date.'
+                'Our automated payout system sends your share directly to the wallet or bank of your choice just days after the profit‑split date.'
               )}
             </p>
-            <ul className="text-black mt-4 space-y-2 list-disc list-inside text-sm sm:text-base">
-              <li>{t('howItWorks.steps.stepPayout.items.weekly', 'Weekly payout cycles – no long waiting‑lists.')}</li>
-              <li>{t('howItWorks.steps.stepPayout.items.methods', 'Multiple payment methods including USDT, BTC, wire & local gateways.')}</li>
-              <li>{t('howItWorks.steps.stepPayout.items.transparency', 'Full transparency: track the status of every invoice in your dashboard.')}</li>
+            <ul className="text-black mt-4 space-y-2 list-none text-sm sm:text-base">
+              <li>
+                <span className="mr-1 text-green-700">➤</span>
+                {t('howItWorks.steps.stepPayout.items.weekly', 'Weekly payout cycles – no long waiting‑lists.')}
+              </li>
+              <li>
+                <span className="mr-1 text-green-700">➤</span>
+                {t('howItWorks.steps.stepPayout.items.methods', 'Multiple payment methods including USDT, BTC, wire & local gateways.')}
+              </li>
+              <li>
+                <span className="mr-1 text-green-700">➤</span>
+                {t('howItWorks.steps.stepPayout.items.transparency', 'Full transparency: track the status of every invoice in your dashboard.')}
+              </li>
             </ul>
+
           </Step>
 
           {/* ---------------------------- 5 (formerly 4) */}
@@ -219,12 +269,22 @@ const HowItWorks = () => {
             <p className="text-black mt-4 text-base sm:text-lg leading-relaxed">
               {t('howItWorks.steps.step4.description')}
             </p>
-            <ul className="text-black mt-4 space-y-2 list-disc list-inside text-sm sm:text-base">
-              {/* -  <li dangerouslySetInnerHTML={{ __html: t('howItWorks.steps.step4.items.profitShare') }} />  - */}   
-              <li dangerouslySetInnerHTML={{ __html: t('howItWorks.steps.step4.items.profitDonation') }} />
-              <li dangerouslySetInnerHTML={{ __html: t('howItWorks.steps.step4.items.sustainableFuture') }} />
-              <li dangerouslySetInnerHTML={{ __html: t('howItWorks.steps.step4.items.sustainableWorld') }} />
+            <ul className="text-black mt-4 space-y-2 list-none text-sm sm:text-base">
+              {/* <li dangerouslySetInnerHTML={{ __html: t('howItWorks.steps.step4.items.profitShare') }} /> */}
+              <li>
+                <span className="mr-1 text-green-700">➤</span>
+                <span dangerouslySetInnerHTML={{ __html: t('howItWorks.steps.step4.items.profitDonation') }} />
+              </li>
+              <li>
+                <span className="mr-1 text-green-700">➤</span>
+                <span dangerouslySetInnerHTML={{ __html: t('howItWorks.steps.step4.items.sustainableFuture') }} />
+              </li>
+              <li>
+                <span className="mr-1 text-green-700">➤</span>
+                <span dangerouslySetInnerHTML={{ __html: t('howItWorks.steps.step4.items.sustainableWorld') }} />
+              </li>
             </ul>
+
           </Step>
         </div>
       </section>

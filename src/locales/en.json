@@ -107,9 +107,9 @@
       },
       "stepPayout": {
       "title": "Payouts within 5–7 calendar days",
-      "description": "We know fast access to your earnings matters. Our automated payout system sends your share directly to the wallet or bank of your choice just days after the profit-split date.",
+      "description": "Our automated payout system sends your share directly to the wallet or bank of your choice just days after the profit-split date.",
       "items": {
-        "weekly": "Weekly payout cycles – no long waiting-lists.",
+        "weekly": "Weekly payout cycles no long waiting-lists.",
         "methods": "Multiple payment methods including USDT, BTC, wire & local gateways.",
         "transparency": "Full transparency: track the status of every invoice in your dashboard."
       },

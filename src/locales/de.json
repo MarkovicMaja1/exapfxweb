@@ -120,9 +120,9 @@
       },
       "stepPayout": {
         "title": "Auszahlungen innerhalb von 5–7 Kalendertagen",
-        "description": "Wir wissen, dass schneller Zugriff auf Ihre Gewinne wichtig ist. Unser automatisiertes Auszahlungssystem sendet Ihren Anteil direkt an das Wallet oder Bankkonto Ihrer Wahl, nur wenige Tage nach dem Gewinnteilungsdatum.",
+        "description": "Unser automatisiertes Auszahlungssystem sendet Ihren Anteil direkt an das Wallet oder Bankkonto Ihrer Wahl, nur wenige Tage nach dem Gewinnteilungsdatum.",
         "items": {
-          "weekly": "Wöchentliche Auszahlungszyklen – keine langen Wartelisten.",
+          "weekly": "Wöchentliche Auszahlungszyklen keine langen Wartelisten.",
           "methods": "Mehrere Zahlungsmethoden, einschließlich USDT, BTC, Überweisung & lokalen Gateways.",
           "transparency": "Volle Transparenz: Verfolgen Sie den Status jeder Rechnung in Ihrem Dashboard."
         },

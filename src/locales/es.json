@@ -120,9 +120,9 @@
       },
       "stepPayout": {
         "title": "Pagos en 5-7 Días Naturales",
-        "description": "Sabemos que el acceso rápido a tus ganancias es importante. Nuestro sistema de pagos automatizado envía tu parte directamente a la billetera o cuenta bancaria de tu elección, solo días después de la fecha de reparto de beneficios.",
+        "description": "Nuestro sistema de pagos automatizado envía tu parte directamente a la billetera o cuenta bancaria de tu elección, solo días después de la fecha de reparto de beneficios.",
         "items": {
-          "weekly": "Ciclos de pago semanales – sin listas de espera largas.",
+          "weekly": "Ciclos de pago semanales sin listas de espera largas.",
           "methods": "Múltiples métodos de pago, incluyendo USDT, BTC, transferencia bancaria y pasarelas locales.",
           "transparency": "Transparencia total: sigue el estado de cada factura en tu panel de control."
         },
