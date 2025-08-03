@@ -294,7 +294,7 @@ const HowItWorks = () => {
       /* ------------------------------------------------------------------ */}
       <section className="flex justify-center pt-12 pb-12 px-6 sm:px-12">
         <motion.a
-          href="https://active.ecapfx.com/auth/signin"
+          href="https://active.ecapfx.com/promotion/challenge"
           target="_blank"
           rel="noopener noreferrer"
           initial={{ opacity: 0, scale: 0.9 }}

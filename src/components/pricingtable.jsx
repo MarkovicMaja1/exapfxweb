@@ -543,53 +543,54 @@ function PricingTable() {
                 }}
               >
                 {/* Currency Selector */}
-                <div
-                  className="flex items-center gap-4"
-                  style={{ flex: '1 1 auto', minWidth: '200px' }}
-                >
-                  <h6
-                    className="text-lg font-semibold mb-0"
-                    style={{ color: '#1f2937', whiteSpace: 'nowrap' }}
+                  <div
+                    className="flex items-center gap-4"
+                    style={{ flex: '1 1 auto', minWidth: '200px' }}
                   >
-                    {t('pricingTable.currencyLabel')}
-                  </h6>
-                  <div className="flex gap-2">
-                    {currencies.map((currency) => (
-                      <button
-                        key={currency}
-                        className={`px-4 py-2 rounded-md font-medium text-sm sm:text-base select-none transition-all duration-300 ease-in-out flex items-center justify-center min-w-[60px] h-10 ${
-                          selectedCurrency === currency
-                            ? 'bg-gradient-to-r from-[#1a6f3d] to-[#145c33] text-white'
-                            : 'bg-gray-200 text-black hover:bg-gray-300'
-                        }`}
-                        onClick={() => handleCurrencyChange(currency)}
-                      >
-                        {currency === 'USD' && (
-                          <img
-                            src={usdFlag}
-                            alt="USD Flag"
-                            style={{ width: '24px', height: '24px', marginRight: '4px' }}
-                          />
-                        )}
-                        {currency === 'GBP' && (
-                          <img
-                            src={gbpFlag}
-                            alt="GBP Flag"
-                            style={{ width: '24px', height: '24px', marginRight: '4px' }}
-                          />
-                        )}
-                        {currency === 'EUR' && (
-                          <img
-                            src={eurFlag}
-                            alt="EUR Flag"
-                            style={{ width: '24px', height: '24px', marginRight: '4px' }}
-                          />
-                        )}
-                        {currency}
-                      </button>
-                    ))}
+                    <h6
+                      className="text-lg font-semibold mb-0"
+                      style={{ color: '#1f2937', whiteSpace: 'nowrap' }}
+                    >
+                      {t('pricingTable.currencyLabel')}
+                    </h6>
+                    <div className="flex gap-2 flex-wrap">
+                      {currencies.map((currency) => (
+                        <button
+                          key={currency}
+                          className={`px-4 py-2 rounded-md font-medium text-sm sm:text-base select-none transition-all duration-300 ease-in-out flex items-center justify-center min-w-[60px] h-10 ${
+                            selectedCurrency === currency
+                              ? 'bg-gradient-to-r from-[#1a6f3d] to-[#145c33] text-white'
+                              : 'bg-gray-200 text-black hover:bg-gray-300'
+                          }`}
+                          onClick={() => handleCurrencyChange(currency)}
+                          style={{ minWidth: '0' }} // Allow shrinking on mobile
+                        >
+                          {currency === 'USD' && (
+                            <img
+                              src={usdFlag}
+                              alt="USD Flag"
+                              style={{ width: '24px', height: '24px', marginRight: '4px' }}
+                            />
+                          )}
+                          {currency === 'GBP' && (
+                            <img
+                              src={gbpFlag}
+                              alt="GBP Flag"
+                              style={{ width: '24px', height: '24px', marginRight: '4px' }}
+                            />
+                          )}
+                          {currency === 'EUR' && (
+                            <img
+                              src={eurFlag}
+                              alt="EUR Flag"
+                              style={{ width: '24px', height: '24px', marginRight: '4px' }}
+                            />
+                          )}
+                          {currency}
+                        </button>
+                      ))}
+                    </div>
                   </div>
-                </div>
 
                 {/* Add Price Display Here */}
                 <div
@@ -799,7 +800,7 @@ function PricingTable() {
                       e.currentTarget.style.transform = 'scale(1)';
                       e.currentTarget.style.boxShadow = 'none';
                     }}
-                    onClick={() => window.open('https://active.ecapfx.com/auth/signin', '_blank', 'noopener,noreferrer')}
+                    onClick={() => window.open('https://active.ecapfx.com/promotion/challenge', '_blank', 'noopener,noreferrer')}
                   >
                     {t('pricingTable.startChallenge')}
                   </button>
