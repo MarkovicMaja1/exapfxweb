@@ -16,7 +16,9 @@
       "turnSimulatedTrading": "Convierte el Comercio Simulado en Ganancias Reales. Convierte tu Talento de Comercio en Éxito Financiado con ECAPFX y Gana hasta el 90% de tus Ganancias."
     },
     "button": {
-      "selectPlan": "Seleccionar Plan"
+      "selectPlan": "Seleccionar Plan",
+      "getStarted": "Empezar",
+      "startChallenge": "Desafío"
     },
     "disclaimer": {
       "text": "ECAPFX no es una institución financiera · Este sitio web no promueve ni vende productos o servicios financieros"
@@ -1118,7 +1120,7 @@
         "to": "/#howitworks"
       }
     ],
-    "getStarted": "Comenzar"
+    "getStarted": "Acceso"
   }
 }
 

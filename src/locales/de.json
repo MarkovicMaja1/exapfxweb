@@ -16,7 +16,9 @@
       "turnSimulatedTrading": "Verwandeln Sie simulierten Handel in echte Gewinne. Nutzen Sie Ihr Handelstalent für finanzierten Erfolg mit ECAPFX und verdienen Sie bis zu 90 % Ihrer Gewinne."
     },
     "button": {
-      "selectPlan": "Plan auswählen"
+      "selectPlan": "Plan auswählen",
+      "getStarted": "Beginnen",
+      "startChallenge": "Herausforderung starten"
     },
     "disclaimer": {
       "text": "ECAPFX ist keine Finanzinstitution · Diese Website bewirbt oder verkauft keine Finanzprodukte oder -dienstleistungen"
@@ -1117,6 +1119,6 @@
         "to": "/#howitworks"
       }
     ],
-    "getStarted": "Jetzt starten"
+    "getStarted": "Anmelden"
   }
 }
