@@ -316,18 +316,28 @@ function PricingTable() {
   }, [selectedStep, selectedSize, selectedCurrency]);
 
   // Timer setup
+  const startDate = new Date('2025-08-04T15:34:00+02:00'); // 03:34 PM CEST, August 04, 2025
   const endDate = new Date('2025-08-16T23:59:59+02:00'); // End of August 16, 2025
 
   useEffect(() => {
     const timer = setInterval(() => {
       const now = new Date();
-      const remaining = Math.max(Math.floor((endDate - now) / 1000), 0);
-      setTimeLeft(remaining);
+      const remaining = Math.floor((endDate - now) / 1000);
+      setTimeLeft(remaining >= 0 ? remaining : 0);
     }, 1000);
     // Set initial timeLeft
-    setTimeLeft(Math.max(Math.floor((endDate - new Date()) / 1000), 0));
+    setTimeLeft(Math.floor((endDate - startDate) / 1000));
     return () => clearInterval(timer); // Cleanup timer on unmount
   }, []);
+
+  // Format time as "Xd Xh Xm Xs"
+  const formatTime = (seconds) => {
+    const days = Math.floor(seconds / (3600 * 24));
+    const hours = Math.floor((seconds % (3600 * 24)) / 3600);
+    const minutes = Math.floor((seconds % 3600) / 60);
+    const secs = seconds % 60;
+    return `${days}d ${hours}h ${minutes}m ${secs}s`;
+  };
   
   // Update handleCopy for shorter feedback duration
   const handleCopy = () => {
@@ -749,7 +759,6 @@ function PricingTable() {
                           type="button"
                           className="cursor-pointer transition-all duration-300 relative"
                           onClick={handleCopy}
-                          aria-label={isCopied ? "Code copied" : "Copy code"}
                         >
                           {isCopied ? (
                             <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-badge-check">
@@ -769,7 +778,7 @@ function PricingTable() {
                   <div className="mt-3 text-sm sm:text-base flex flex-wrap items-center justify-center gap-2">
                     <span className="font-medium">⏳ Time Remaining:</span>
                     <span className="font-mono bg-white text-[#1a6f3d] px-3 py-1 rounded font-semibold shadow-sm" id="countdown">
-                      {formatTime(timeLeft)}
+                      {`${Math.floor(timeLeft / 86400)}d ${Math.floor((timeLeft % 86400) / 3600)}h ${Math.floor((timeLeft % 3600) / 60)}m ${timeLeft % 60}s`}
                     </span>
                   </div>
                 </div>
