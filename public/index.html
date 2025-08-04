@@ -13,26 +13,32 @@
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
     <title>ECAPFX | Trade With Purpose</title>
     <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "Organization",
-        "name": "ECAPFX",
-        "url": "https://www.ecapfx.com",
-        "logo": "https://www.ecapfx.com/ECAPFX.png",
-        "description": "ECAPFX offers smart trading solutions with simulated accounts and educational resources to help traders succeed.",
-        "contactPoint": {
-          "@type": "ContactPoint",
-          "telephone": "+123-456-7890",
-          "contactType": "Customer Service",
-          "email": "contact@ecapfx.com"
-        },
-        "sameAs": [
-          "https://www.facebook.com/ecapfx",
-          "https://x.com/EcapFXLTD",
-          "https://www.linkedin.com/company/ecapfx",
-          "https://www.instagram.com/ecapfx/"
-        ]
-        "service": {
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "ECAPFX",
+      "url": "https://www.ecapfx.com",
+      "logo": "https://www.ecapfx.com/ECAPFX.png",
+      "foundingDate": "2025-03-20",
+      "description": "ECAPFX offers smart trading solutions with simulated accounts and educational resources to help traders succeed.",
+      "founder": {
+        "@type": "Person",
+        "name": "Michael Pearn"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "Customer Service",
+        "email": "contact@ecapfx.com"
+      },
+      "sameAs": [
+        "https://www.facebook.com/ecapfx",
+        "https://x.com/EcapFXLTD",
+        "https://www.linkedin.com/company/ecapfx",
+        "https://www.instagram.com/ecapfx/"
+      ],
+      "makesOffer": {
+        "@type": "Offer",
+        "itemOffered": {
           "@type": "Service",
           "name": "Trading Challenge Program",
           "description": "Join our trading challenge to demonstrate your skills and gain access to a simulated trading account with up to $200,000 in fictitious funds.",
@@ -40,17 +46,19 @@
             "@type": "Organization",
             "name": "ECAPFX"
           },
-          "offers": {
-            "@type": "Offer",
-            "price": "0",
-            "priceCurrency": "USD",
-            "availability": "https://schema.org/InStock",
-            "description": "Free trial available with evaluation process."
-          },
-          "areaServed": "Worldwide"
-        }
+          "areaServed": {
+            "@type": "Place",
+            "name": "Worldwide"
+          }
+        },
+        "price": "0",
+        "priceCurrency": "USD",
+        "availability": "https://schema.org/InStock",
+        "description": "Free trial available with evaluation process."
       }
+    }
     </script>
+
     <!-- Meta Pixel Code -->
     <script>
       !function(f,b,e,v,n,t,s)

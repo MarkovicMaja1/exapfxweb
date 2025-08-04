@@ -31,6 +31,7 @@ function PricingTable() {
   const [selectedCurrency, setSelectedCurrency] = useState("USD");
   const [price, setPrice] = useState("$325");
   const [isAnimating, setIsAnimating] = useState(false);
+  const [timeLeft, setTimeLeft] = useState(604800); // 7 days in seconds
 
   // Price mapping based on step, size, and currency
   const priceMap = {
@@ -312,6 +313,13 @@ function PricingTable() {
       setSelectedSize(availableSizes[0]);
     }
   }, [selectedStep, selectedSize, selectedCurrency]);
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setTimeLeft((prevTime) => (prevTime > 0 ? prevTime - 1 : 0));
+    }, 1000);
+    return () => clearInterval(timer); // Cleanup timer on unmount
+  }, []);
 
   const handleStepChange = (step) => {
     setIsAnimating(true);
@@ -714,6 +722,24 @@ function PricingTable() {
                       </div>
                     </button>
                   ))}
+                </div>
+                {/* Add Discount Message and Countdown Timer Below Size Buttons */}
+                <div className="mt-6 p-5 bg-gradient-to-br from-[#1a6f3d] to-[#145c33] border border-gray-800 rounded-xl shadow-lg text-center text-white w-full max-w-xs sm:max-w-sm md:max-w-md mx-auto">
+                  <p className="text-lg sm:text-xl font-semibold sm:font-bold leading-snug">
+                    Exclusive Offer:&nbsp;
+                    Use Code
+                    <span className="bg-white text-[#1a6f3d] px-2 py-0.5 rounded font-bold mx-1 shadow-sm">
+                      25OFF
+                    </span>
+                    for <span className="font-bold">25% Off</span> Any Challenge!
+                  </p>
+                  
+                  <div className="mt-3 text-sm sm:text-base flex flex-wrap items-center justify-center gap-2">
+                    <span className="font-medium">⏳ Time Remaining:</span>
+                    <span className="font-mono bg-white text-[#1a6f3d] px-3 py-1 rounded font-semibold shadow-sm" id="countdown">
+                      {`${Math.floor(timeLeft / 86400)}d ${Math.floor((timeLeft % 86400) / 3600)}h ${Math.floor((timeLeft % 3600) / 60)}m ${timeLeft % 60}s`}
+                    </span>
+                  </div>
                 </div>
               </div>
 
