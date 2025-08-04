@@ -19,7 +19,7 @@ const AboutUs = () => {
         </svg>
       </div>
 
-      <section className="bg-[#151515] text-white pt-24 pb-14">
+      <section className="bg-[#151515] text-white pt-9 pb-14">
         <div className="mx-auto px-4 max-w-screen-2xl relative isolate">
           <div className="mx-auto lg:max-w-4xl text-center">
             <h2 className="text-4xl lg:text-5xl font-extrabold tracking-tight text-center">

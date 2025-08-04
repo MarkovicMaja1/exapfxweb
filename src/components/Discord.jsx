@@ -106,6 +106,10 @@ const Discord = () => {
           padding-bottom: 0rem;
           padding-top: 6rem;
         }
+        .py-34 {
+          padding-bottom: 0rem;
+          padding-top: 8rem;
+        }  
       `}</style>
     </div>
   );

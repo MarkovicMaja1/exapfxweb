@@ -12,8 +12,8 @@ const PrivacyPolicy = () => {
   }, []);
 
   return (
-    <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 text-black-100 min-h-screen pt-20 pb-12">
-      <h4 className="text-4xl text-center font-bold text-[#1d8348] mt-5 mb-10">{t('privacyPolicy.title')}</h4>
+    <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 text-black-100 min-h-screen pt-24 pb-12">
+      <h4 className="text-4xl text-center font-bold text-[#1d8348] mt-20 mb-10">{t('privacyPolicy.title')}</h4>
       <p className="text-2xl font-semibold text-black-200 mt-10 mb-10">{t('privacyPolicy.header')}</p>
       <p className="text-black-400 mb-10">
         <strong className="text-black">{t('privacyPolicy.effectiveDateLabel')}</strong> 11/04/2025

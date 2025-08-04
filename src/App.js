@@ -38,7 +38,7 @@ const ScrollToSection = () => {
           const id = hash.replace('#', '');
           const element = document.getElementById(id);
           if (element) {
-            const offset = 60; // Adjust for fixed header
+            const offset = 125; // Adjust for fixed header
             const elementPosition = element.getBoundingClientRect().top + window.scrollY;
             window.scrollTo({
               top: elementPosition - offset,

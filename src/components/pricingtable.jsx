@@ -31,7 +31,8 @@ function PricingTable() {
   const [selectedCurrency, setSelectedCurrency] = useState("USD");
   const [price, setPrice] = useState("$325");
   const [isAnimating, setIsAnimating] = useState(false);
-  const [timeLeft, setTimeLeft] = useState(604800); // 7 days in seconds
+  const [timeLeft, setTimeLeft] = useState(0); // 7 days in seconds
+  const [isCopied, setIsCopied] = useState(false); // Added isCopied state
 
   // Price mapping based on step, size, and currency
   const priceMap = {
@@ -152,7 +153,7 @@ function PricingTable() {
         "Leverage": ["Up to 1:100", "Up to 1:100", "Up to 1:100", "Up to 1:100"],
         "Mintradingdays": ["None", "None", "None", "None"],
         "Maxloss": { USD: ["$4,000 (8%)", "$2,500 (5%)", "$4,000 (8%)", "None"], GBP: ["£4,000 (8%)", "£2,500 (5%)", "£4,000 (8%)", "None"], EUR: ["€4,000 (8%)", "€2,500 (5%)", "€4,000 (8%)", "None"] },
-        "Daily Loss": { USD: ["$2,500 (5%)", "$1,200 (3%)", "$2,500 (5%)", "None"], GBP: ["£2,500 (5%)", "£1,200 (3%)", "£2,500 (5%)", "None"], EUR: ["€2,500 (5%)", "€1,200 (3%)", "€600 (2)", "None"] },
+        "Daily Loss": { USD: ["$2,500 (5%)", "$1,200 (3%)", "$2,500 (5%)", "None"], GBP: ["£2,500 (5%)", "£1,200 (3%)", "£2,500 (5%)", "None"], EUR: ["€2,500 (5%)", "€1,200 (3%)", "€600 (2%)", "None"] },
         "Profit Share": ["None", "None", "None", "80/20"],
         "Fee": { USD: ["$205", "Refunded", "", ""], GBP: ["£170", "Refunded", "", ""], EUR: ["€185", "Refunded", "", ""] },
         "Bonus After Stage": { USD: ["", "", "", ""], GBP: ["", "", "", ""], EUR: ["", "", "", ""] }
@@ -314,13 +315,26 @@ function PricingTable() {
     }
   }, [selectedStep, selectedSize, selectedCurrency]);
 
+  // Timer setup
+  const endDate = new Date('2025-08-16T23:59:59+02:00'); // End of August 16, 2025
+
   useEffect(() => {
     const timer = setInterval(() => {
-      setTimeLeft((prevTime) => (prevTime > 0 ? prevTime - 1 : 0));
+      const now = new Date();
+      const remaining = Math.max(Math.floor((endDate - now) / 1000), 0);
+      setTimeLeft(remaining);
     }, 1000);
+    // Set initial timeLeft
+    setTimeLeft(Math.max(Math.floor((endDate - new Date()) / 1000), 0));
     return () => clearInterval(timer); // Cleanup timer on unmount
   }, []);
-
+  
+  // Update handleCopy for shorter feedback duration
+  const handleCopy = () => {
+    navigator.clipboard.writeText("NEW");
+    setIsCopied(true);
+    setTimeout(() => setIsCopied(false), 2000); // Reset after 2 seconds
+  };
   const handleStepChange = (step) => {
     setIsAnimating(true);
     setSelectedStep(step);
@@ -734,24 +748,28 @@ function PricingTable() {
                         <button
                           type="button"
                           className="cursor-pointer transition-all duration-300 relative"
-                          onClick={() => {
-                            navigator.clipboard.writeText("NEW");
-                            alert("Copied to clipboard!");
-                          }}
+                          onClick={handleCopy}
+                          aria-label={isCopied ? "Code copied" : "Copy code"}
                         >
-                          <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 19 19" fill="none">
-                            <path d="M18.3672 6.86819C18.3672 6.0013 17.8611 5.24305 17.1315 4.87266C16.7405 4.64074 16.2358 4.77709 16.0142 5.17408C15.7973 5.56301 15.9353 6.0543 16.3235 6.27245C16.5808 6.34745 16.7536 6.57732 16.7536 6.86818L16.7536 16.1309C16.7536 16.4885 16.491 16.7511 16.1334 16.7511L6.8675 16.7511C6.58732 16.7511 6.36734 16.5896 6.28439 16.3479C6.06625 15.9596 5.57416 15.8216 5.18523 16.0386C4.78824 16.2601 4.65189 16.7649 4.88382 17.1559C5.2578 17.8729 6.0105 18.3679 6.8675 18.3679L16.1334 18.3679C17.3583 18.3679 18.3672 17.3559 18.3672 16.1309L18.3672 6.86819ZM14.3256 2.82901C14.3256 1.60406 13.3176 0.592041 12.0926 0.592041L2.82675 0.59204C1.6018 0.59204 0.592934 1.60406 0.592934 2.82901L0.592933 12.0917C0.592933 13.3167 1.60179 14.3287 2.82675 14.3287L12.0926 14.3287C13.3176 14.3287 14.3256 13.3167 14.3256 12.0917L14.3256 2.82901ZM12.7128 2.82901L12.7128 12.0917C12.7128 12.4494 12.4503 12.7119 12.0926 12.7119L2.82675 12.7119C2.4691 12.7119 2.20576 12.4494 2.20576 12.0917L2.20576 2.82901C2.20576 2.47136 2.4691 2.20881 2.82675 2.20881L12.0926 2.20881C12.4503 2.20881 12.7128 2.47136 12.7128 2.82901Z" fill="white"></path>
-                          </svg>
+                          {isCopied ? (
+                            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-badge-check">
+                              <path d="M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z"></path>
+                              <path d="m9 12 2 2 4-4"></path>
+                            </svg>
+                          ) : (
+                            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 19 19" fill="none">
+                              <path d="M18.3672 6.86819C18.3672 6.0013 17.8611 5.24305 17.1315 4.87266C16.7405 4.64074 16.2358 4.77709 16.0142 5.17408C15.7973 5.56301 15.9353 6.0543 16.3235 6.27245C16.5808 6.34745 16.7536 6.57732 16.7536 6.86818L16.7536 16.1309C16.7536 16.4885 16.491 16.7511 16.1334 16.7511L6.8675 16.7511C6.58732 16.7511 6.36734 16.5896 6.28439 16.3479C6.06625 15.9596 5.57416 15.8216 5.18523 16.0386C4.78824 16.2601 4.65189 16.7649 4.88382 17.1559C5.2578 17.8729 6.0105 18.3679 6.8675 18.3679L16.1334 18.3679C17.3583 18.3679 18.3672 17.3559 18.3672 16.1309L18.3672 6.86819ZM14.3256 2.82901C14.3256 1.60406 13.3176 0.592041 12.0926 0.592041L2.82675 0.59204C1.6018 0.59204 0.592934 1.60406 0.592934 2.82901L0.592933 12.0917C0.592933 13.3167 1.60179 14.3287 2.82675 14.3287L12.0926 14.3287C13.3176 14.3287 14.3256 13.3167 14.3256 12.0917L14.3256 2.82901ZM12.7128 2.82901L12.7128 12.0917C12.7128 12.4494 12.4503 12.7119 12.0926 12.7119L2.82675 12.7119C2.4691 12.7119 2.20576 12.4494 2.20576 12.0917L2.20576 2.82901C2.20576 2.47136 2.4691 2.20881 2.82675 2.20881L12.0926 2.20881C12.4503 2.20881 12.7128 2.47136 12.7128 2.82901Z" fill="white"></path>
+                            </svg>
+                          )}
                         </button>
                       </p>
                     </span>
                     for <span className="font-bold">25% Off</span> !
                   </p>
-                  
                   <div className="mt-3 text-sm sm:text-base flex flex-wrap items-center justify-center gap-2">
                     <span className="font-medium">⏳ Time Remaining:</span>
                     <span className="font-mono bg-white text-[#1a6f3d] px-3 py-1 rounded font-semibold shadow-sm" id="countdown">
-                      {`${Math.floor(timeLeft / 86400)}d ${Math.floor((timeLeft % 86400) / 3600)}h ${Math.floor((timeLeft % 3600) / 60)}m ${timeLeft % 60}s`}
+                      {formatTime(timeLeft)}
                     </span>
                   </div>
                 </div>
