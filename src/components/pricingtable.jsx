@@ -729,7 +729,7 @@ function PricingTable() {
                     Exclusive Offer:&nbsp;
                     Use Code
                     <span className="bg-white text-[#1a6f3d] px-2 py-0.5 rounded font-bold mx-1 shadow-sm">
-                      25OFF
+                      NEW
                     </span>
                     for <span className="font-bold">25% Off</span> Any Challenge!
                   </p>
