@@ -7,11 +7,12 @@ import LanguageSwitcher from './LanguageSwitcher';
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   const { t } = useTranslation();
+  const [isCopied, setIsCopied] = useState(false);
 
-  // Timer state from current time (04:27 PM CEST, August 04, 2025) to August 16, 2025
-  const startDate = new Date('2025-08-04T16:27:00+02:00'); // 04:27 PM CEST
+  // Timer state from current time (02:02 AM CEST, August 05, 2025) to August 16, 2025
+  const startDate = new Date('2025-08-05T02:02:00+02:00'); // 02:02 AM CEST
   const endDate = new Date('2025-08-16T23:59:59+02:00'); // End of August 16, 2025
-  const [timeLeft, setTimeLeft] = useState(Math.floor((endDate - new Date()) / 1000)); // Start from current time
+  const [timeLeft, setTimeLeft] = useState(Math.floor((endDate - new Date()) / 1000));
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -31,9 +32,10 @@ const Header = () => {
     return `${days}d ${hours}h ${minutes}m ${secs}s`;
   };
 
-  const copyToClipboard = () => {
+  const handleCopy = () => {
     navigator.clipboard.writeText("NEW").then(() => {
-      alert("Copied to clipboard!");
+      setIsCopied(true);
+      setTimeout(() => setIsCopied(false), 2000); // Reset after 2 seconds
     }).catch(err => {
       console.error("Failed to copy: ", err);
     });
@@ -43,56 +45,65 @@ const Header = () => {
     <>
       {/* Banner Section */}
       <div
-        className="fixed top-0 left-0 w-full h-[67px] lg:h-[50px] px-5 sm:px-6 flex items-center justify-between z-[1000]"
-        style={{
-          background: 'radial-gradient(circle at top left, #1a6f3d 0%, #145c33 70%)',
-          borderBottom: '1px solid rgba(255, 255, 255, 0.1)',
-        }}
+        className="fixed top-0 left-0 w-full h-16 sm:h-12 px-2 sm:px-4 flex items-center justify-between z-[1000] bg-gradient-to-r from-[#1a6f3d] to-[#145c33] border-b border-white/10"
         role="region"
         aria-label="Special offers"
       >
-        <div className="space-y-[5px]">
-          <div className="h-[2px] bg-white transition-all duration-1000 w-[16px]"></div>
-          <div className="h-[2px] bg-white transition-all duration-1000 w-[10px]"></div>
+        {/* Menu Icon */}
+        <div className="flex flex-col gap-1">
+          <div className="h-0.5 w-3 bg-white transition-all duration-1000"></div>
+          <div className="h-0.5 w-2 bg-white transition-all duration-1000"></div>
         </div>
-        <div className="flex-1 h-full w-full relative overflow-hidden">
-          <div className="w-full h-full pointer-events-none" aria-hidden="true"></div>
-          <div className="absolute top-0 left-0 w-full h-fit" style={{ transform: 'translate(0px, 0px)' }}>
-            <div>
-              <div className="h-[67px] lg:h-[50px] flex items-center lg:justify-center justify-start relative" role="button" tabIndex="0">
-                <div className="text-white text-sm flex lg:items-center items-start lg:gap-[10px] gap-[5px] lg:flex-row flex-col relative">
-                  <span className="font-bold max-lg:hidden">ECAPFX: Exclusive Offer</span>
-                  <svg stroke="currentColor" fill="currentColor" strokeWidth="0" viewBox="0 0 512 512" className="text-[6px] max-lg:hidden" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8z"></path>
+
+        {/* Centered Banner Content */}
+        <div className="flex items-center justify-center space-x-2 sm:space-x-3">
+          <span className="font-bold text-white text-xs sm:text-sm hidden lg:block">ECAPFX: Exclusive Offer</span>
+          <span className="text-white text-xs sm:text-sm truncate max-w-[120px] sm:max-w-[180px] lg:max-w-[370px]">
+            {window.innerWidth >= 1024 ? "Claim 25% Off ECAPFX Challenges Now with Promo Code!" : "Claim 25% off ECAP"}
+          </span>
+          <div className="px-[10px] w-[75px] h-[35px] rounded-[50px] overflow-hidden flex items-center gap-1 border-[1px] border-[#1a6f3d]" style={{ background: 'linear-gradient(0deg, #1a6f3d 0%, #145c33 100%)' }}>
+         
+            <p className="text-xs font-bold text-white uppercase text-center flex items-center justify-center gap-1">
+              <span>NEW</span>
+              <button
+                type="button"
+                className="cursor-pointer transition-all duration-300 relative"
+                onClick={handleCopy}
+              >
+                {isCopied ? (
+                  <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-badge-check">
+                    <path d="M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z"></path>
+                    <path d="m9 12 2 2 4-4"></path>
                   </svg>
-                  <span className="max-xsm:w-[160px] leading-[120%] max-xsm:text-[12px]">Claim 25% Off ECAPFX Challenges Now with Promo Code!</span>
-                  <button className="bg-white/15 rounded-full px-2 py-[2px] text-[13px] uppercase flex items-center gap-[8px] transition-all duration-300 font-semibold hover:bg-white/20" type="button" onClick={copyToClipboard}>
-                    <span className="translate-y-[0.5px]">
-                      <span className="max-lg:hidden">CODE :</span> NEW
-                    </span>
-                    <svg stroke="currentColor" fill="currentColor" strokeWidth="0" viewBox="0 0 24 24" className="text-[12px]" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
-                      <path fill="none" d="M0 0h24v24H0z"></path>
-                      <path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"></path>
-                    </svg>
-                  </button>
-                </div>
-                <div className="absolute right-0 top-[50%] translate-y-[-50%] text-white flex flex-col items-center gap-[5px]">
-                  <div className="flex items-center gap-[5px]">
-                    <svg stroke="currentColor" fill="currentColor" strokeWidth="0" viewBox="0 0 16 16" className="text-[12px]" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71z"></path>
-                      <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16m7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0"></path>
-                    </svg>
-                    <span className="font-light text-sm text-nowrap">{formatTime(timeLeft)}</span>
-                  </div>
-                </div>
-              </div>
-            </div>
+                ) : (
+                  <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 19 19" fill="none">
+                    <path d="M18.3672 6.86819C18.3672 6.0013 17.8611 5.24305 17.1315 4.87266C16.7405 4.64074 16.2358 4.77709 16.0142 5.17408C15.7973 5.56301 15.9353 6.0543 16.3235 6.27245C16.5808 6.34745 16.7536 6.57732 16.7536 6.86818L16.7536 16.1309C16.7536 16.4885 16.491 16.7511 16.1334 16.7511L6.8675 16.7511C6.58732 16.7511 6.36734 16.5896 6.28439 16.3479C6.06625 15.9596 5.57416 15.8216 5.18523 16.0386C4.78824 16.2601 4.65189 16.7649 4.88382 17.1559C5.2578 17.8729 6.0105 18.3679 6.8675 18.3679L16.1334 18.3679C17.3583 18.3679 18.3672 17.3559 18.3672 16.1309L18.3672 6.86819ZM14.3256 2.82901C14.3256 1.60406 13.3176 0.592041 12.0926 0.592041L2.82675 0.59204C1.6018 0.59204 0.592934 1.60406 0.592934 2.82901L0.592933 12.0917C0.592933 13.3167 1.60179 14.3287 2.82675 14.3287L12.0926 14.3287C13.3176 14.3287 14.3256 13.3167 14.3256 12.0917L14.3256 2.82901ZM12.7128 2.82901L12.7128 12.0917C12.7128 12.4494 12.4503 12.7119 12.0926 12.7119L2.82675 12.7119C2.4691 12.7119 2.20576 12.4494 2.20576 12.0917L2.20576 2.82901C2.20576 2.47136 2.4691 2.20881 2.82675 2.20881L12.0926 2.20881C12.4503 2.20881 12.7128 2.47136 12.7128 2.82901Z" fill="white"></path>
+                  </svg>
+                )}
+              </button>
+            </p>
           </div>
+        </div>
+
+        {/* Timer */}
+        <div className="flex items-center gap-1">
+          <svg
+            className="w-2.5 h-2.5 sm:w-3 sm:h-3"
+            fill="currentColor"
+            viewBox="0 0 16 16"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71z" />
+            <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16m7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0" />
+          </svg>
+          <span className="text-white font-light text-[10px] sm:text-xs">
+            {formatTime(timeLeft)}
+          </span>
         </div>
       </div>
 
       {/* Navigation Section */}
-      <header className="bg-[#151515] fixed w-full p-4 z-[999] custom-header-offset">
+      <header className="bg-[#151515] fixed w-full p-4 z-[999] top-16 sm:top-12">
         <nav className="items-center mx-auto flex max-w-screen-2xl relative">
           {/* Logo */}
           <div className="absolute left-4 top-1/2 transform -translate-y-1/2 z-10">
@@ -177,36 +188,6 @@ const Header = () => {
           </div>
         )}
       </header>
-      <style jsx>{`
-        @media (max-width: 1023px) {
-          .lg\\:flex {
-            display: none !important;
-          }
-          .lg\\:block {
-            display: none !important;
-          }
-          .lg\\:hidden {
-            display: block !important;
-          }
-          .custom-header-offset {
-            top: 67px;
-          }
-        }
-        @media (min-width: 1024px) {
-          .lg\\:flex {
-            display: flex !important;
-          }
-          .lg\\:block {
-            display: block !important;
-          }
-          .lg\\:hidden {
-            display: none !important;
-          }
-          .custom-header-offset {
-            top: 50px;
-          }
-        }
-      `}</style>
     </>
   );
 };
