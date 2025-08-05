@@ -748,10 +748,12 @@ function PricingTable() {
                   ))}
                 </div>
                 {/* Add Discount Message and Countdown Timer Below Size Buttons */}
-                <div className="mt-6 p-5 bg-gradient-to-br from-[#1a6f3d] to-[#145c33] border border-gray-800 rounded-xl shadow-lg text-center text-white w-full max-w-xs sm:max-w-sm md:max-w-md mx-auto">
+                <div className="mt-6 p-5 bg-gradient-to-br from-[#1a6f3d] to-[#145c33] border border-gray-800 rounded-xl shadow-lg text-center text-white w-full max-w-md mx-auto flex flex-col items-center">
                   <p className="text-lg sm:text-xl font-semibold sm:font-bold leading-snug">
-                    Exclusive Offer:&nbsp;
-                    <span className="px-[10px] w-[175px] h-[35px] rounded-[50px] overflow-hidden flex items-center gap-1 border-[1px] border-[#1a6f3d]" style={{ background: 'linear-gradient(0deg, #1a6f3d 0%, #145c33 100%)' }}>
+                    Exclusive Offer:  
+                  </p>
+                  <div className="flex justify-center items-center mt-2">
+                    <span className="px-[10px] w-[175px] h-[35px] rounded-[50px] overflow-hidden flex items-center justify-center gap-1 border-[1px] border-[#1a6f3d]" style={{ background: 'linear-gradient(0deg, #1a6f3d 0%, #145c33 100%)' }}>
                       <p className="px-[5px] py-[0px] bg-[#FFC107] text-xs font-bold text-[#1a6f3d] uppercase rounded-[50px]">USE CODE</p>
                       <p className="text-xs font-bold text-white uppercase text-center flex items-center justify-center gap-1">
                         <span>NEW</span>
@@ -773,17 +775,20 @@ function PricingTable() {
                         </button>
                       </p>
                     </span>
-                    for <span className="font-bold">25% Off</span> !
-                  </p>
-                  <div className="mt-3 text-sm sm:text-base flex flex-wrap items-center justify-center gap-2">
+                  </div>
+                  <div className="text-lg sm:text-xl font-semibold sm:font-bold leading-snug">
+                          <p>
+                            for <span className="font-bold">25% Off</span>!
+                          </p>
+                  </div>
+                  <div className="mt-3 text-sm sm:text-base flex flex-col items-center gap-2 w-full">
                     <span className="font-medium">⏳ Time Remaining:</span>
                     <span className="font-mono bg-white text-[#1a6f3d] px-3 py-1 rounded font-semibold shadow-sm" id="countdown">
                       {`${Math.floor(timeLeft / 86400)}d ${Math.floor((timeLeft % 86400) / 3600)}h ${Math.floor((timeLeft % 3600) / 60)}m ${timeLeft % 60}s`}
                     </span>
                   </div>
                 </div>
-              </div>
-
+              </div>             
               <div className="bg-white rounded-lg shadow-md p-4 sm:p-6 text-center" style={{ border: '1px solid #e5e7eb' }}>
                 <h2 className="text-2xl sm:text-4xl font-bold" style={{ color: '#1d8348', background: 'linear-gradient(90deg, #1d8348, #28a745)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>{price}</h2>
                 <p className="text-gray-500 mt-1 text-sm sm:text-base">{t('pricingTable.oneTimeFee')}</p>
