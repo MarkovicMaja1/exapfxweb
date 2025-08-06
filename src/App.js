@@ -2,6 +2,7 @@ import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import LanguageSwitcher from './components/LanguageSwitcher.jsx';
 import Contact from './components/Contact.jsx';
 import Discord from "./components/Discord";
+import Testimonials from "./components/Testimonials";
 import Cookies from "./components/Cookies.jsx";
 import LogoSlider from "./components/LogoSlider.jsx";
 // import Compare from "./components/compare.jsx";
@@ -103,6 +104,9 @@ function App() {
                 </div>
                 <div id="about">
                   <About />
+                </div>
+                <div id="testimonials">
+                  <Testimonials />
                 </div>
                 <div id="goals">
                   <Goals />
