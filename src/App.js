@@ -22,6 +22,7 @@ import Goals from "./components/Goals";
 import TeamSection from "./components/TeamFirst";
 import Newsletter from "./components/Newsletter";
 import SustainabilityIcon from "./components/SustainabilityIcon";
+import ScrollToTop from "./components/ScrollToTop"; 
 import { useEffect } from "react";
 
 const ScrollToSection = () => {
@@ -132,6 +133,7 @@ function App() {
           <Route path="*" element={<NotFound />} />
         </Routes>
         <SustainabilityIcon />
+        <ScrollToTop /> 
         <div id="footer">
           <Footer />
         </div>
