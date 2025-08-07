@@ -72,7 +72,7 @@ function PricingTable() {
         "Profit": ["$900 (9%)", "None", "", ""],
         "Duration": ["Unlimited", "Unlimited", "", ""],
         "Leverage": ["Up to 1:100", "Up to 1:100", "", ""],
-        "Mintradingdays": ["5 Days", "5 days", "", ""],
+        "Mintradingdays": ["5 Days", "None", "", ""],
         "Maxloss": { USD: ["$800 (8%)", "$800 (8%)", "", ""], GBP: ["£800 (8%)", "£800 (8%)", "", ""], EUR: ["€800 (8%)", "€800 (8%)", "", ""] },
         "Daily Loss": { USD: ["$500 (5%)", "$500 (5%)", "", ""], GBP: ["£500 (5%)", "£500 (5%)", "", ""], EUR: ["€500 (5%)", "€500 (5%)", "", ""] },
         "Profit Share": ["None", "80/20", "", ""],
@@ -138,7 +138,7 @@ function PricingTable() {
       },
       "25k": {
         "Profit": ["$2,500 (10%)", "$1,250 (5%)", "None"],
-        "Duration": ["Unlimited", "Unlimited", "Indefinite"],
+        "Duration": ["Unlimited", "Unlimited", "Unlimited"],
         "Leverage": ["Up to 1:100", "Up to 1:100", "Up to 1:100"],
         "Mintradingdays": ["5 Days", "None", "None"],
         "Maxloss": { USD: ["$2,500 (8%)", "$1,250 (5%)", "$2,500 (8%)"], GBP: ["£2,500 (8%)", "£1,250 (5%)", "£2,500 (8%)"], EUR: ["€2,500 (8%)", "€1,250 (5%)", "€2,500 (8%)"] },
@@ -149,7 +149,7 @@ function PricingTable() {
       },
       "50k": {
         "Profit": ["$5,000 (10%)", "$2,500 (5%)", "None", "None"],
-        "Duration": ["Unlimited", "Unlimited", "Unlimited", "Indefinite"],
+        "Duration": ["Unlimited", "Unlimited", "Unlimited", "Unlimited"],
         "Leverage": ["Up to 1:100", "Up to 1:100", "Up to 1:100", "Up to 1:100"],
         "Mintradingdays": ["None", "None", "None", "None"],
         "Maxloss": { USD: ["$4,000 (8%)", "$2,500 (5%)", "$4,000 (8%)", "None"], GBP: ["£4,000 (8%)", "£2,500 (5%)", "£4,000 (8%)", "None"], EUR: ["€4,000 (8%)", "€2,500 (5%)", "€4,000 (8%)", "None"] },
@@ -160,7 +160,7 @@ function PricingTable() {
       },
       "100k": {
         "Profit": ["$10,000 (10%)", "$5,000 (5%)", "None", "None"],
-        "Duration": ["Unlimited", "Unlimited", "Unlimited", "Indefinite"],
+        "Duration": ["Unlimited", "Unlimited", "Unlimited", "Unlimited"],
         "Leverage": ["Up to 1:100", "Up to 1:100", "Up to 1:100", "Up to 1:100"],
         "Mintradingdays": ["None", "None", "None", "None"],
         "Maxloss": { USD: ["$8,000 (8%)", "$5,000 (5%)", "$8,000 (8%)", "None"], GBP: ["£8,000 (8%)", "£4,000 (4%)", "£8,000 (8%)", "None"], EUR: ["€8,000 (8%)", "€4,000 (4%)", "€8,000 (8%)", "None"] },
@@ -171,7 +171,7 @@ function PricingTable() {
       },
       "200k": {
         "Profit": ["$20,000 (10%)", "$10,000 (5%)", "None", "None"],
-        "Duration": ["Unlimited", "Unlimited", "Unlimited", "Indefinite"],
+        "Duration": ["Unlimited", "Unlimited", "Unlimited", "Unlimited"],
         "Leverage": ["Up to 1:100", "Up to 1:100", "Up to 1:100", "Up to 1:100"],
         "Mintradingdays": ["None", "None", "None", "None"],
         "Maxloss": { USD: ["$16,000 (8%)", "$10,000 (5%)", "$16,000 (8%)", "None"], GBP: ["£16,000 (8%)", "£10,000 (5%)", "£16,000 (8%)", "None"], EUR: ["€16,000 (8%)", "€10,000 (5%)", "€16,000 (8%)", "None"] },
@@ -184,7 +184,7 @@ function PricingTable() {
     "Three Step": {
       "10k": {
         "Profit": ["$800 (8%)", "$600 (6%)", "$400 (4%)", "None"],
-        "Duration": ["Unlimited", "Unlimited", "Unlimited", "Indefinite"],
+        "Duration": ["Unlimited", "Unlimited", "Unlimited", "Unlimited"],
         "Leverage": ["Up to 1:100", "Up to 1:100", "Up to 1:100", "Up to 1:100"],
         "Mintradingdays": ["None", "None", "None", "None"],
         "Maxloss": { USD: ["$800 (8%)", "$500 (5%)", "$300 (3%)", "$800 (8%)"], GBP: ["£800 (8%)", "£500 (5%)", "£300 (3%)", "£800 (8%)"], EUR: ["€800 (8%)", "€500 (5%)", "€300 (3%)", "€800 (8%)"] },
@@ -195,7 +195,7 @@ function PricingTable() {
       },
       "25k": {
         "Profit": ["$2,000 (8%)", "$1,500 (6%)", "$1000 (4%)", "None"],
-        "Duration": ["Unlimited", "Unlimited", "Unlimited", "Indefinite"],
+        "Duration": ["Unlimited", "Unlimited", "Unlimited", "Unlimited"],
         "Leverage": ["Up to 1:100", "Up to 1:100", "Up to 1:100", "Up to 1:100"],
         "Mintradingdays": ["None", "None", "None", "None"],
         "Maxloss": { USD: ["$2,000 (8%)", "$1,250 (5%)", "$750 (3%)", "$2,000 (8%)"], GBP: ["£2,000 (8%)", "£1,250 (5%)", "£750 (3%)", "£2,000 (8%)"], EUR: ["€2,000 (8%)", "€1,250 (5%)", "€750 (3%)", "€2,000 (8%)"] },
@@ -206,7 +206,7 @@ function PricingTable() {
       },
       "50k": {
         "Profit": ["$4,000 (8%)", "$3,000 (6%)", "$2,000 (4%)", "None"],
-        "Duration": ["Unlimited", "Unlimited", "Unlimited", "Indefinite"],
+        "Duration": ["Unlimited", "Unlimited", "Unlimited", "Unlimited"],
         "Leverage": ["Up to 1:100", "Up to 1:100", "Up to 1:100", "Up to 1:100"],
         "Mintradingdays": ["None", "None", "None", "None"],
         "Maxloss": { USD: ["$4,000 (8%)", "$2,500 (5%)", "$1,500 (3%)", "$4,000 (8%)"], GBP: ["£4,000 (8%)", "£2,500 (5%)", "£1,500 (3%)", "£4,000 (8%)"], EUR: ["€4,000 (8%)", "€2,500 (5%)", "€1,500 (3%)", "€4,000 (8%)"] },
@@ -217,7 +217,7 @@ function PricingTable() {
       },
       "100k": {
         "Profit": ["$8,000 (8%)", "$6,000 (6%)", "$4,000 (4%)", "None"],
-        "Duration": ["Unlimited", "Unlimited", "Unlimited", "Indefinite"],
+        "Duration": ["Unlimited", "Unlimited", "Unlimited", "Unlimited"],
         "Leverage": ["Up to 1:100", "Up to 1:100", "Up to 1:100", "Up to 1:100"],
         "Mintradingdays": ["None", "None", "None", "None"],
         "Maxloss": { USD: ["$8,000 (8%)", "$5,000 (5%)", "$3,000 (3%)", "$8,000 (8%)"], GBP: ["£8,000 (8%)", "£5,000 (5%)", "£3,000 (3%)", "£8,000 (8%)"], EUR: ["€8,000 (8%)", "€5,000 (5%)", "€3,000 (3%)", "€8,000 (8%)"] },
@@ -228,7 +228,7 @@ function PricingTable() {
       },
       "200k": {
         "Profit": ["$16,000 (8%)", "$12,000 (6%)", "$8,000 (4%)", "None"],
-        "Duration": ["Unlimited", "Unlimited", "Unlimited", "Indefinite"],
+        "Duration": ["Unlimited", "Unlimited", "Unlimited", "Unlimited"],
         "Leverage": ["Up to 1:100", "Up to 1:100", "Up to 1:100", "Up to 1:100"],
         "Mintradingdays": ["None", "None", "None", "None"],
         "Maxloss": { USD: ["$16,000 (8%)", "$10,000 (5%)", "$6,000 (3%)", "$16,000 (8%)"], GBP: ["£16,000 (8%)", "£10,000 (5%)", "£6,000 (3%)", "£16,000 (8%)"], EUR: ["€16,000 (8%)", "€10,000 (5%)", "€6,000 (3%)", "€16,000 (8%)"] },
