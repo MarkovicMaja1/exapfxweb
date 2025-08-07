@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import LanguageSwitcher from './components/LanguageSwitcher.jsx';
 import Contact from './components/Contact.jsx';
 import Discord from "./components/Discord";
@@ -24,50 +24,76 @@ import TeamSection from "./components/TeamFirst";
 import Newsletter from "./components/Newsletter";
 import SustainabilityIcon from "./components/SustainabilityIcon";
 import ScrollToTop from "./components/ScrollToTop"; 
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
+import { useLocation } from "react-router-dom";
 
 const ScrollToSection = () => {
-  const { hash, pathname } = useLocation();
+  const { pathname, hash } = useLocation();
+  const prevPathname = useRef(pathname);
 
   useEffect(() => {
-    const scrollToElement = () => {
-      let retries = 0;
-      const maxRetries = 30; // Increased for slower dynamic content
-      const retryDelay = 300; // Increased to 300ms for reliability
+    // Save scroll position when leaving "/"
+    if (prevPathname.current === "/" && pathname !== "/") {
+      sessionStorage.setItem("scrollPosition", window.scrollY);
+      console.log(`Saved scroll position: ${window.scrollY}`);
+    }
 
-      const attemptScroll = () => {
+    prevPathname.current = pathname;
+
+    if ("scrollRestoration" in window.history) {
+      window.history.scrollRestoration = "manual";
+    }
+
+    const scrollToTarget = () => {
+      let retries = 0;
+      const maxRetries = 150;
+      const retryDelay = 100;
+
+      const tryScroll = () => {
         if (hash) {
-          const id = hash.replace('#', '');
-          const element = document.getElementById(id);
-          if (element) {
-            const offset = 125; // Adjust for fixed header
-            const elementPosition = element.getBoundingClientRect().top + window.scrollY;
-            window.scrollTo({
-              top: elementPosition - offset,
-              behavior: 'smooth',
-            });
-            console.log(`Scrolled to element ${id} after ${retries} retries`);
-          } else if (id && retries < maxRetries) {
-            retries++;
-            console.log(`Retry ${retries} for element ${id}`);
-            setTimeout(attemptScroll, retryDelay);
-          } else if (retries >= maxRetries) {
-            console.log(`Failed to find element ${id} after ${maxRetries} retries`);
+          const id = hash.replace("#", "");
+          const el = document.getElementById(id);
+          if (el) {
+            const offset = 125;
+            const y = el.getBoundingClientRect().top + window.scrollY - offset;
+            window.scrollTo({ top: y, behavior: "smooth" });
+            console.log(`Scrolled to #${id} after ${retries} retries`);
+            return;
           }
-        } else if (pathname === '/privacy-policy' || pathname === '/terms' || pathname === '/claim') {
-          window.scrollTo({ top: 0, behavior: 'smooth' });
+        } else if (pathname === "/") {
+          const saved = sessionStorage.getItem("scrollPosition");
+          const homeEl = document.getElementById("home");
+          if (saved && homeEl) {
+            window.scrollTo({
+              top: parseInt(saved, 10),
+              behavior: "smooth",
+            });
+            console.log(`Restored scroll position to ${saved}`);
+            return;
+          }
+        } else if (["/privacy-policy", "/terms", "/claim"].includes(pathname)) {
+          window.scrollTo({ top: 0, behavior: "smooth" });
+          return;
+        }
+
+        if (retries < maxRetries) {
+          retries++;
+          setTimeout(tryScroll, retryDelay);
+        } else {
+          console.warn("Scroll target not found after max retries");
         }
       };
 
-      // Defer initial scroll to ensure DOM is ready after route change
-      setTimeout(attemptScroll, 100);
+      tryScroll();
     };
 
-    scrollToElement();
-  }, [hash, pathname]);
+    // Delay slightly to allow layout/render completion
+    setTimeout(scrollToTarget, 50);
+  }, [pathname, hash]);
 
   return null;
 };
+
 
 // Simple 404 fallback component
 const NotFound = () => (

@@ -11,24 +11,10 @@ import step5 from '../assets/step5.jpg';
 /**
  * Updated: 2025-07-28
  *  - Swapped content (text and image) between Step 3 and Step 4 as requested.
- *  - Kept all other structure, including custom props and reverse prop, unchanged.
+ *  - Removed scroll reset on mount and visibility change to allow page-level scroll restoration.
  */
 const HowItWorks = () => {
   const { t } = useTranslation();
-
-  /* ------------------------------------------------------------------ */
-  /*  Scroll to top on mount or tab visibility change                    */
-  /* ------------------------------------------------------------------ */
-  useEffect(() => {
-    window.scrollTo(0, 0);
-    const handleVisibilityChange = () => {
-      if (document.visibilityState === 'visible') {
-        window.scrollTo(0, 0);
-      }
-    };
-    document.addEventListener('visibilitychange', handleVisibilityChange);
-    return () => document.removeEventListener('visibilitychange', handleVisibilityChange);
-  }, []);
 
   /* ------------------------------------------------------------------ */
   /*  Animation variants                                                */
@@ -75,9 +61,9 @@ const HowItWorks = () => {
         <div className="absolute w-72 h-72 bg-gray-200 rounded-full bottom-1/3 left-1/4 transform rotate-30 blur-xl" />
       </div>
 
-      {/* ------------------------------------------------------------------ */}
-      {/*  Hero                                                              */}
-      {/* ------------------------------------------------------------------ */}
+      {/* ------------------------------------------------------------------ */
+      /*  Hero                                                              */
+      /* ------------------------------------------------------------------ */}
       <motion.div
         className="mx-auto max-w-7xl px-4 py-24 sm:px-6 lg:px-8 lg:py-24 relative z-10 text-center"
         initial={{ opacity: 0, y: 20 }}
@@ -94,14 +80,14 @@ const HowItWorks = () => {
         </div>
       </motion.div>
 
-      {/* ------------------------------------------------------------------ */}
-      {/* /*  Steps with vertical dashed line                                */}
+      {/* ------------------------------------------------------------------ */
+      /*  Steps with vertical dashed line                                */}
       {/* ------------------------------------------------------------------ */}
       <section
         className="relative px-6 sm:px-12 mx-auto max-w-6xl my-5 py-12"
         style={{
           backgroundImage:
-            'url(https://via.placeholder.com/10x900.png?text=Dashed+Green+Line&color=1d8348)',
+            'ur[](https://via.placeholder.com/10x900.png?text=Dashed+Green+Line&color=1d8348)',
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat',
           backgroundSize: '10px auto',
@@ -172,14 +158,7 @@ const HowItWorks = () => {
                 <span className="mr-1 text-green-700">➤</span>
                 <span dangerouslySetInnerHTML={{ __html: t('howItWorks.steps.step2.items.consistency') }} />
               </li>
-              {/* 
-              <li>
-                <span className="mr-1 text-green-700">➤</span>
-                <span dangerouslySetInnerHTML={{ __html: t('howItWorks.steps.step2.items.instantChallenges') }} />
-              </li> 
-              */}
             </ul>
-
           </Step>
 
           {/* ---------------------------- 3 (content from former Step 4) */}
@@ -215,7 +194,6 @@ const HowItWorks = () => {
                 <span dangerouslySetInnerHTML={{ __html: t('howItWorks.steps.step2.items.profitSplit') }} />
               </li>
             </ul>
-
           </Step>
 
           {/* ---------------------------- 4 (content from former Step 3) */}
@@ -251,7 +229,6 @@ const HowItWorks = () => {
                 {t('howItWorks.steps.stepPayout.items.transparency', 'Full transparency: track the status of every invoice in your dashboard.')}
               </li>
             </ul>
-
           </Step>
 
           {/* ---------------------------- 5 (formerly 4) */}
@@ -270,7 +247,6 @@ const HowItWorks = () => {
               {t('howItWorks.steps.step4.description')}
             </p>
             <ul className="text-black mt-4 space-y-2 list-none text-sm sm:text-base">
-              {/* <li dangerouslySetInnerHTML={{ __html: t('howItWorks.steps.step4.items.profitShare') }} /> */}
               <li>
                 <span className="mr-1 text-green-700">➤</span>
                 <span dangerouslySetInnerHTML={{ __html: t('howItWorks.steps.step4.items.profitDonation') }} />
@@ -284,7 +260,6 @@ const HowItWorks = () => {
                 <span dangerouslySetInnerHTML={{ __html: t('howItWorks.steps.step4.items.sustainableWorld') }} />
               </li>
             </ul>
-
           </Step>
         </div>
       </section>
