@@ -154,7 +154,7 @@ function PricingTable() {
         "Mintradingdays": ["None", "None", "None", "None"],
         "Maxloss": { USD: ["$4,000 (8%)", "$2,500 (5%)", "$4,000 (8%)", "None"], GBP: ["£4,000 (8%)", "£2,500 (5%)", "£4,000 (8%)", "None"], EUR: ["€4,000 (8%)", "€2,500 (5%)", "€4,000 (8%)", "None"] },
         "Daily Loss": { USD: ["$2,500 (5%)", "$1,200 (3%)", "$2,500 (5%)", "None"], GBP: ["£2,500 (5%)", "£1,200 (3%)", "£2,500 (5%)", "None"], EUR: ["€2,500 (5%)", "€1,200 (3%)", "€600 (2%)", "None"] },
-        "Profit Share": ["None", "None", "None", "80/20"],
+        "Profit Share": ["None", "None", "80/20", "None"],
         "Fee": { USD: ["$205", "Refunded", "", ""], GBP: ["£170", "Refunded", "", ""], EUR: ["€185", "Refunded", "", ""] },
         "Bonus After Stage": { USD: ["", "", "", ""], GBP: ["", "", "", ""], EUR: ["", "", "", ""] }
       },
@@ -165,7 +165,7 @@ function PricingTable() {
         "Mintradingdays": ["None", "None", "None", "None"],
         "Maxloss": { USD: ["$8,000 (8%)", "$5,000 (5%)", "$8,000 (8%)", "None"], GBP: ["£8,000 (8%)", "£4,000 (4%)", "£8,000 (8%)", "None"], EUR: ["€8,000 (8%)", "€4,000 (4%)", "€8,000 (8%)", "None"] },
         "Daily Loss": { USD: ["$5,000 (5%)", "$3,000 (3%)", "$5,000 (5%)", "None"], GBP: ["£5,000 (5%)", "£3,000 (3%)", "£5,000 (5%)", "None"], EUR: ["€5,000 (5%)", "€3,000 (3%)", "€5,000 (5%)", "None"] },
-        "Profit Share": ["None", "None", "None", "80/20"],
+        "Profit Share": ["None", "None", "80/20", "None"],
         "Fee": { USD: ["$370", "Refunded", "", ""], GBP: ["£305", "Refunded", "", ""], EUR: ["€335", "Refunded", "", ""] },
         "Bonus After Stage": { USD: ["", "", "", ""], GBP: ["", "", "", ""], EUR: ["", "", "", ""] }
       },
@@ -176,7 +176,7 @@ function PricingTable() {
         "Mintradingdays": ["None", "None", "None", "None"],
         "Maxloss": { USD: ["$16,000 (8%)", "$10,000 (5%)", "$16,000 (8%)", "None"], GBP: ["£16,000 (8%)", "£10,000 (5%)", "£16,000 (8%)", "None"], EUR: ["€16,000 (8%)", "€10,000 (5%)", "€16,000 (8%)", "None"] },
         "Daily Loss": { USD: ["$10,000 (5%)", "$4,800 (3%)", "$10,000 (5%)", "None"], GBP: ["£6,000 (3%)", "£4,800 (3%)", "£10,000 (5%)", "None"], EUR: ["€6,000 (3%)", "€4,800 (3%)", "€10,000 (5%)", "None"] },
-        "Profit Share": ["None", "None", "None", "80/20"],
+        "Profit Share": ["None", "None", "80/20", "None"],
         "Fee": { USD: ["$720", "Refunded", "", ""], GBP: ["£600", "Refunded", "", ""], EUR: ["€650", "Refunded", "", ""] },
         "Bonus After Stage": { USD: ["", "", "", ""], GBP: ["", "", "", ""], EUR: ["", "", "", ""] }
       }
