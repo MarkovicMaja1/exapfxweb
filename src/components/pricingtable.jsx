@@ -246,7 +246,7 @@ function PricingTable() {
         "Mintradingdays": ["10 Days", "", "", ""],
         "Maxloss": { USD: ["$500 (5%)", "", "", ""], GBP: ["£500 (5%)", "", "", ""], EUR: ["€500 (5%)", "", "", ""] },
         "Daily Loss": { USD: ["$300 (3%)", "", "", ""], GBP: ["£300 (3%)", "", "", ""], EUR: ["€300 (3%)", "", "", ""] },
-        "Profit Share": ["70/20", "", "", ""],
+        "Profit Share": ["70/30", "", "", ""],
         "Fee": { USD: ["$315", "Refunded", "", ""], GBP: ["£260", "Refunded", "", ""], EUR: ["€295", "Refunded", "", ""] },
         "Bonus After Stage": { USD: ["", "", "", ""], GBP: ["", "", "", ""], EUR: ["", "", "", ""] }
       },
@@ -257,7 +257,7 @@ function PricingTable() {
         "Mintradingdays": ["10 Days", "", "", ""],
         "Maxloss": { USD: ["$750 (5%)", "", "", ""], GBP: ["£750 (5%)", "", "", ""], EUR: ["€750 (5%)", "", "", ""] },
         "Daily Loss": { USD: ["$450 (3%)", "", "", ""], GBP: ["£450 (3%)", "", "", ""], EUR: ["€450 (3%)", "", "", ""] },
-        "Profit Share": ["70/20", "", "", ""],
+        "Profit Share": ["70/30", "", "", ""],
         "Fee": { USD: ["$450", "Refunded", "", ""], GBP: ["£375", "Refunded", "", ""], EUR: ["€425", "Refunded", "", ""] },
         "Bonus After Stage": { USD: ["", "", "", ""], GBP: ["", "", "", ""], EUR: ["", "", "", ""] }
       },
@@ -268,7 +268,7 @@ function PricingTable() {
         "Mintradingdays": ["10 Days", "", "", ""],
         "Maxloss": { USD: ["$1,000 (5%)", "", "", ""], GBP: ["£1,000 (5%)", "", "", ""], EUR: ["€1,000 (5%)", "", "", ""] },
         "Daily Loss": { USD: ["$600 (3%)", "", "", ""], GBP: ["£600 (3%)", "", "", ""], EUR: ["€600 (3%)", "", "", ""] },
-        "Profit Share": ["70/20", "", "", ""],
+        "Profit Share": ["70/30", "", "", ""],
         "Fee": { USD: ["$585", "Refunded", "", ""], GBP: ["£485", "Refunded", "", ""], EUR: ["€550", "Refunded", "", ""] },
         "Bonus After Stage": { USD: ["", "", "", ""], GBP: ["", "", "", ""], EUR: ["", "", "", ""] }
       },
@@ -279,7 +279,7 @@ function PricingTable() {
         "Mintradingdays": ["10 Days", "", "", ""],
         "Maxloss": { USD: ["$1,250 (5%)", "", "", ""], GBP: ["£1,250 (5%)", "", "", ""], EUR: ["€1,250 (5%)", "", "", ""] },
         "Daily Loss": { USD: ["$750 (3%)", "", "", ""], GBP: ["£750 (3%)", "", "", ""], EUR: ["€750 (3%)", "", "", ""] },
-        "Profit Share": ["70/20", "", "", ""],
+        "Profit Share": ["70/30", "", "", ""],
         "Fee": { USD: ["$720", "Refunded", "", ""], GBP: ["£595", "Refunded", "", ""], EUR: ["€675", "Refunded", "", ""] },
         "Bonus After Stage": { USD: ["", "", "", ""], GBP: ["", "", "", ""], EUR: ["", "", "", ""] }
       }
