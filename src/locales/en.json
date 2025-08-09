@@ -1014,98 +1014,120 @@
     }
   },
   "cookiePolicy": {
-    "title": "Cookie Policy",
-    "header": "ECAPFX Proprietary Firm – Cookie Policy",
-    "effectiveDateLabel": "Effective Date:",
-    "effectiveDate": "July 5, 2025",
-    "applicableLawLabel": "Applicable Law:",
-    "applicableLaw": "UK General Data Protection Regulation (UK GDPR), ePrivacy Directive",
-    "sections": {
-      "introduction": {
-        "title": "1. Introduction",
-        "text1": "ECAPFX Proprietary Firm (\"ECAPFX\", \"we\", \"our\", or \"us\") uses cookies and similar technologies to enhance the functionality, security, and personalization of our website ",
-        "website": "https://www.ecapfx.com",
-        "text2": ". This Cookie Policy explains how we use cookies, what types of cookies we use, and how you can manage your cookie preferences."
-      },
-      "operator": {
-        "title": "2. Website Operator",
-        "text1": "The operator of the website is ECAPFX Proprietary Firm, with its registered office at Office 7330MO 182-184, High Street North Area 1/1, East Ham, London, E6 2JA, UK.",
-        "contactLabel": "Contact:",
-        "email": "privacy@ecapfx.com"
-      },
-      "whatAreCookies": {
-        "title": "3. What Are Cookies?",
-        "text": "Cookies are small text files stored on your device when you visit our website. They help us improve website functionality, analyze usage, and personalize your experience."
-      },
-      "typesOfCookies": {
-        "title": "4. Types of Cookies We Use",
-        "text": "We use the following types of cookies:",
-        "subsections": {
-          "necessary": {
-            "title": "a) Necessary Cookies",
-            "items": [
-              "Enable core website functionality, such as navigation and access to secure areas.",
-              "Cannot be disabled as they are essential for the website to operate."
-            ]
-          },
-          "analytical": {
-            "title": "b) Analytical Cookies",
-            "items": [
-              "Help us understand how visitors use our website, e.g., which pages are visited most.",
-              "Optional and used only with your consent."
-            ]
-          },
-          "marketing": {
-            "title": "c) Marketing Cookies",
-            "items": [
-              "Used to personalize advertisements and content across websites and social media.",
-              "Optional and used only with your consent."
-            ]
+      "title": "Cookie Policy",
+      "header": "ECAPFX Proprietary Firm – Cookie Policy",
+      "effectiveDateLabel": "Effective Date:",
+      "effectiveDate": "July 5, 2025",
+      "applicableLawLabel": "Applicable Law:",
+      "applicableLaw": "UK General Data Protection Regulation (UK GDPR), ePrivacy Directive",
+      "sections": {
+        "introduction": {
+          "title": "1. Introduction",
+          "text1": "ECAPFX Proprietary Firm (\"ECAPFX\", \"we\", \"our\", or \"us\") uses cookies and similar technologies to enhance the functionality, security, and personalization of our website",
+          "website": "https://www.ecapfx.com",
+          "text2": ". This Cookie Policy explains how we use cookies, what types of cookies we use, and how you can manage your cookie preferences. This includes cookies used in conjunction with our trading platform (Match Trader) and CRM system (Kenmore CRM)."
+        },
+        "operator": {
+          "title": "2. Website Operator",
+          "text1": "The operator of the website is ECAPFX Proprietary Firm, with its registered office at Office 7330MO 182-184, High Street North Area 1/1, East Ham, London, E6 2JA, UK.",
+          "contactLabel": "Contact:",
+          "email": "privacy@ecapfx.com"
+        },
+        "whatAreCookies": {
+          "title": "3. What Are Cookies?",
+          "text": "Cookies are small text files stored on your device when you visit our website. They help us improve website functionality, analyze usage, and personalize your experience."
+        },
+        "typesOfCookies": {
+          "title": "4. Types of Cookies We Use",
+          "text": "We use the following types of cookies:",
+          "subsections": {
+            "necessary": {
+              "title": "4.1 Necessary Cookies",
+              "items": [
+                "Enable core website functionality, such as navigation and access to secure areas. Cannot be disabled as they are essential for the website to operate.",
+                "Purpose: Enable website and trading platform functionality (e.g., session management, login).",
+                "Systems: ECAPFX website, Match Trader (session cookies for trading access).",
+                "Retention: Session duration (deleted on browser close)."
+              ]
+            },
+            "analytical": {
+              "title": "4.2 Analytical Cookies",
+              "items": [
+                "Help us understand how visitors use our website, e.g., which pages are visited most. Optional and used only with your consent.",
+                "Purpose: Analyze usage (e.g., pages visited, time spent) to improve user experience.",
+                "Systems: ECAPFX website, Kenmore CRM (via analytics integrations, e.g., Google Analytics).",
+                "Retention: Up to 12 months, then anonymized."
+              ]
+            },
+            "marketing": {
+              "title": "4.3 Marketing Cookies",
+              "items": [
+                "Used to personalize advertisements and content across websites and social media. Optional and used only with your consent.",
+                "Purpose: Personalize marketing content, track affiliate campaigns.",
+                "Systems: ECAPFX website, Kenmore CRM (e.g., tracking newsletter clicks).",
+                "Retention: Up to 12 months or until consent withdrawn."
+              ]
+            },
+            "thirdParty": {
+              "title": "4.4 Third-Party Cookies",
+              "items": [
+                "Some cookies may be set by third-party services (e.g., analytics or advertising partners). These are subject to the privacy policies of those providers.",
+                "Purpose: Support analytics, affiliate tracking (e.g., Google Analytics, affiliate platforms).",
+                "Systems: Set by third parties via ECAPFX website or Kenmore CRM integrations.",
+                "Retention: Up to 12 months, per third-party policies.",
+                "Providers: Google Analytics (tracks website usage with anonymized IP addresses); Affiliate Platforms (track referrals, listed at https://www.ecapfx.com/processors)."
+              ]
+            }
           }
-        }
-      },
-      "cookieManagement": {
-        "title": "5. How to Manage Cookies",
-        "text1": "You can manage cookie preferences through your browser settings or our cookie consent banner. Most browsers accept cookies by default, but you can:",
-        "items": [
-          "Accept all cookies.",
-          "Reject non-essential cookies.",
-          "Delete cookies from your device at any time."
-        ],
-        "text2": "For more information, see your browser’s help section or operating system settings. Note that rejecting cookies may affect some website features."
-      },
-      "thirdPartyCookies": {
-        "title": "6. Third-Party Cookies",
-        "text": "Some cookies may be set by third-party services (e.g., analytics or advertising partners). These are subject to the privacy policies of those providers."
-      },
-      "yourRights": {
-        "title": "7. Your Rights",
-        "text": "Under UK GDPR, you have the right to:",
-        "items": [
-          "Access data we hold about you via cookies.",
-          "Object to or restrict cookie-related data processing.",
-          "Withdraw consent for non-essential cookies at any time.",
-          "Lodge a complaint with the UK Information Commissioner’s Office (ICO) at https://ico.org.uk/"
-        ],
-        "contactText": "To exercise these rights, contact us at ",
-        "email": "privacy@ecapfx.com"
-      },
-      "updates": {
-        "title": "8. Updates to This Policy",
-        "text": "We may update this Cookie Policy to reflect changes in law or our practices. The latest version will be posted on our website with a revised effective date."
-      },
-      "contact": {
-        "title": "9. Contact Us",
-        "text": "For questions about this Cookie Policy, please contact:",
-        "company": "ECAPFX Proprietary Firm",
-        "emailLabel": "Email:",
-        "email": "privacy@ecapfx.com",
-        "websiteLabel": "Website:",
-        "website": "https://www.ecapfx.com"
-      }
-    }
-  },
-  "footer": {
+        },
+        "cookieManagement": {
+          "title": "5. How to Manage Cookies",
+          "text1": "You can manage cookie preferences through your browser settings or our cookie consent banner. Most browsers accept cookies by default, but you can:",
+          "items": [
+            "Accept all cookies.",
+            "Reject non-essential cookies.",
+            "Delete cookies from your device at any time."
+          ],
+          "text2": "For more information, see your browser’s help section or operating system settings. Note that rejecting cookies may affect some website features.",
+          "subsections": {
+            "consent": {
+              "title": "5.1 Consent Management",
+              "items": [
+                "Granular Consent: Our cookie banner allows separate consent for analytics and marketing cookies. Essential cookies do not require consent.",
+                "Withdrawal: Opt out via browser settings or click on Decline.",
+                "Kenmore CRM: Logs consent timestamps, sources (e.g., webform), and withdrawal requests (processed within 48 hours)."
+              ]
+            }
+          }
+        },
+        "yourRights": {
+          "title": "6. Your Rights",
+          "text": "Under UK GDPR, you have the right to:",
+          "items": [
+            "Access data we hold about you via cookies.",
+            "Object to or restrict cookie-related data processing.",
+            "Withdraw consent for non-essential cookies at any time.",
+            "Lodge a complaint with the UK Information Commissioner’s Office (ICO) at https://ico.org.uk/"
+          ],
+          "contactText": "To exercise these rights, contact us at",
+          "email": "privacy@ecapfx.com"
+        },
+        "updates": {
+          "title": "7. Updates to This Policy",
+          "text": "We may update this Cookie Policy to reflect changes in law or our practices. The latest version will be posted on our website with a revised effective date."
+        },
+        "contact": {
+          "title": "8. Contact Us",
+          "text": "For questions about this Cookie Policy, please contact:",
+          "company": "ECAPFX Proprietary Firm",
+          "emailLabel": "Email:",
+          "email": "privacy@ecapfx.com",
+          "websiteLabel": "Website:",
+          "website": "https://www.ecapfx.com"
+       }
+     }
+   },
+   "footer": {
     "importantLinks": {
       "title": "Important Links",
       "items": [

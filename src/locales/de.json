@@ -920,20 +920,20 @@
   },
   "cookiePolicy": {
     "title": "Cookie-Richtlinie",
-    "header": "ECAPFX Eigenhandelsfirma – Cookie-Richtlinie",
-    "effectiveDateLabel": "Gültigkeitsdatum:",
+    "header": "ECAPFX Proprietary Firm – Cookie-Richtlinie",
+    "effectiveDateLabel": "Datum des Inkrafttretens:",
     "effectiveDate": "5. Juli 2025",
     "applicableLawLabel": "Anwendbares Recht:",
     "applicableLaw": "UK General Data Protection Regulation (UK GDPR), ePrivacy-Richtlinie",
     "sections": {
       "introduction": {
         "title": "1. Einführung",
-        "text1": "ECAPFX Proprietary Firm („ECAPFX“, „wir“, „unser“ oder „uns“) verwendet Cookies und ähnliche Technologien, um die Funktionalität, Sicherheit und Personalisierung unserer Website zu verbessern ",
+        "text1": "ECAPFX Proprietary Firm (\"ECAPFX\", \"wir\", \"unser\" oder \"uns\") verwendet Cookies und ähnliche Technologien, um die Funktionalität, Sicherheit und Personalisierung unserer Website zu verbessern",
         "website": "https://www.ecapfx.com",
-        "text2": ". Diese Cookie-Richtlinie erklärt, wie wir Cookies verwenden, welche Arten von Cookies wir verwenden und wie Sie Ihre Cookie-Präferenzen verwalten können."
+        "text2": ". Diese Cookie-Richtlinie erklärt, wie wir Cookies verwenden, welche Arten von Cookies wir nutzen und wie Sie Ihre Cookie-Präferenzen verwalten können. Dies schließt Cookies ein, die in Verbindung mit unserer Handelsplattform (Match Trader) und unserem CRM-System (Kenmore CRM) verwendet werden."
       },
       "operator": {
-        "title": "2. Website-Betreiber",
+        "title": "2. Betreiber der Website",
         "text1": "Der Betreiber der Website ist ECAPFX Proprietary Firm, mit eingetragenem Sitz in Office 7330MO 182-184, High Street North Area 1/1, East Ham, London, E6 2JA, UK.",
         "contactLabel": "Kontakt:",
         "email": "privacy@ecapfx.com"
@@ -947,24 +947,40 @@
         "text": "Wir verwenden die folgenden Arten von Cookies:",
         "subsections": {
           "necessary": {
-            "title": "a) Notwendige Cookies",
+            "title": "4.1 Notwendige Cookies",
             "items": [
-              "Ermöglichen grundlegende Website-Funktionen wie Navigation und Zugriff auf sichere Bereiche.",
-              "Können nicht deaktiviert werden, da sie für den Betrieb der Website unerlässlich sind."
+              "Ermöglichen die grundlegende Funktionalität der Website, wie Navigation und Zugang zu sicheren Bereichen. Können nicht deaktiviert werden, da sie für den Betrieb der Website unerlässlich sind.",
+              "Zweck: Ermöglicht die Funktionalität der Website und der Handelsplattform (z. B. Sitzungsverwaltung, Anmeldung).",
+              "Systeme: ECAPFX-Website, Match Trader (Sitzungscookies für Handelszugriff).",
+              "Aufbewahrung: Dauer der Sitzung (werden beim Schließen des Browsers gelöscht)."
             ]
           },
           "analytical": {
-            "title": "b) Analytische Cookies",
+            "title": "4.2 Analytische Cookies",
             "items": [
-              "Helfen uns zu verstehen, wie Besucher unsere Website nutzen, z. B. welche Seiten am häufigsten besucht werden.",
-              "Optional und werden nur mit Ihrer Zustimmung verwendet."
+              "Helfen uns zu verstehen, wie Besucher unsere Website nutzen, z. B. welche Seiten am häufigsten besucht werden. Optional und werden nur mit Ihrer Zustimmung verwendet.",
+              "Zweck: Analyse der Nutzung (z. B. besuchte Seiten, verbrachte Zeit) zur Verbesserung der Benutzererfahrung.",
+              "Systeme: ECAPFX-Website, Kenmore CRM (über Analytics-Integrationen, z. B. Google Analytics).",
+              "Aufbewahrung: Bis zu 12 Monate, dann anonymisiert."
             ]
           },
           "marketing": {
-            "title": "c) Marketing-Cookies",
+            "title": "4.3 Marketing-Cookies",
             "items": [
-              "Werden verwendet, um Werbung und Inhalte auf Websites und sozialen Medien zu personalisieren.",
-              "Optional und werden nur mit Ihrer Zustimmung verwendet."
+              "Werden verwendet, um Werbung und Inhalte auf Websites und sozialen Medien zu personalisieren. Optional und werden nur mit Ihrer Zustimmung verwendet.",
+              "Zweck: Personalisierung von Marketinginhalten, Verfolgung von Affiliate-Kampagnen.",
+              "Systeme: ECAPFX-Website, Kenmore CRM (z. B. Verfolgung von Klicks auf Newsletter).",
+              "Aufbewahrung: Bis zu 12 Monate oder bis die Zustimmung zurückgezogen wird."
+            ]
+          },
+          "thirdParty": {
+            "title": "4.4 Cookies von Drittanbietern",
+            "items": [
+              "Einige Cookies können von Drittanbietern (z. B. Analyse- oder Werbepartnern) gesetzt werden. Diese unterliegen den Datenschutzrichtlinien dieser Anbieter.",
+              "Zweck: Unterstützung von Analysen, Affiliate-Tracking (z. B. Google Analytics, Affiliate-Plattformen).",
+              "Systeme: Von Drittanbietern über die ECAPFX-Website oder Kenmore CRM-Integrationen gesetzt.",
+              "Aufbewahrung: Bis zu 12 Monate, gemäß den Richtlinien der Drittanbieter.",
+              "Providers: Google Analytics (verfolgt die Nutzung der Website mit anonymisierten IP-Adressen); Affiliate-Plattformen (verfolgen Empfehlungen, aufgelistet unter https://www.ecapfx.com/processors)."
             ]
           }
         }
@@ -977,30 +993,36 @@
           "Nicht-essentielle Cookies ablehnen.",
           "Cookies jederzeit von Ihrem Gerät löschen."
         ],
-        "text2": "Weitere Informationen finden Sie im Hilfsbereich Ihres Browsers oder in den Betriebssystemeinstellungen. Beachten Sie, dass das Ablehnen von Cookies einige Website-Funktionen beeinträchtigen kann."
-      },
-      "thirdPartyCookies": {
-        "title": "6. Cookies von Drittanbietern",
-        "text": "Einige Cookies können von Drittanbieter-Diensten (z. B. Analyse- oder Werbepartner) gesetzt werden. Diese unterliegen den Datenschutzrichtlinien dieser Anbieter."
+        "text2": "Für weitere Informationen siehe den Hilfebereich Ihres Browsers oder die Einstellungen Ihres Betriebssystems. Beachten Sie, dass das Ablehnen von Cookies einige Funktionen der Website beeinträchtigen kann.",
+        "subsections": {
+          "consent": {
+            "title": "5.1 Zustimmungsverwaltung",
+            "items": [
+              "Granulare Zustimmung: Unser Cookie-Banner erlaubt separate Zustimmungen für analytische und Marketing-Cookies. Essentielle Cookies erfordern keine Zustimmung.",
+              "Widerruf: Ablehnen über die Browser-Einstellungen oder durch Klicken auf Ablehnen.",
+              "Kenmore CRM: Protokolliert Zustimmungszeitstempel, Quellen (z. B. Webformular) und Widerrufsanfragen (innerhalb von 48 Stunden bearbeitet)."
+            ]
+          }
+        }
       },
       "yourRights": {
-        "title": "7. Ihre Rechte",
-        "text": "Unter der britischen DSGVO haben Sie das Recht auf:",
+        "title": "6. Ihre Rechte",
+        "text": "Nach UK GDPR haben Sie das Recht:",
         "items": [
-          "Zugriff auf die über Cookies gespeicherten Daten, die wir über Sie halten.",
-          "Widerspruch gegen oder Einschränkung der Datenverarbeitung durch Cookies.",
-          "Rücknahme der Zustimmung für nicht-essentielle Cookies jederzeit.",
-          "Eine Beschwerde beim britischen Information Commissioner’s Office (ICO) unter https://ico.org.uk/ einzureichen."
+          "Auf die über Cookies gespeicherten Daten zuzugreifen.",
+          "Der Verarbeitung von Cookie-bezogenen Daten zu widersprechen oder diese einzuschränken.",
+          "Die Zustimmung für nicht-essentielle Cookies jederzeit zu widerrufen.",
+          "Eine Beschwerde bei der britischen Datenschutzbehörde (ICO) unter https://ico.org.uk/ einzureichen."
         ],
-        "contactText": "Um diese Rechte auszuüben, kontaktieren Sie uns unter ",
+        "contactText": "Um diese Rechte auszuüben, kontaktieren Sie uns unter",
         "email": "privacy@ecapfx.com"
       },
       "updates": {
-        "title": "8. Aktualisierungen dieser Richtlinie",
-        "text": "Wir können diese Cookie-Richtlinie aktualisieren, um Änderungen im Gesetz oder in unseren Praktiken widerzuspiegeln. Die neueste Version wird auf unserer Website mit einem überarbeiteten Gültigkeitsdatum veröffentlicht."
+        "title": "7. Aktualisierungen dieser Richtlinie",
+        "text": "Wir können diese Cookie-Richtlinie aktualisieren, um Änderungen im Gesetz oder in unseren Praktiken widerzuspiegeln. Die neueste Version wird auf unserer Website mit einem überarbeiteten Datum des Inkrafttretens veröffentlicht."
       },
       "contact": {
-        "title": "9. Kontaktieren Sie uns",
+        "title": "8. Kontaktieren Sie uns",
         "text": "Für Fragen zu dieser Cookie-Richtlinie kontaktieren Sie bitte:",
         "company": "ECAPFX Proprietary Firm",
         "emailLabel": "E-Mail:",

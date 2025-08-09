@@ -922,87 +922,109 @@
   "cookiePolicy": {
     "title": "Política de Cookies",
     "header": "ECAPFX Proprietary Firm – Política de Cookies",
-    "effectiveDateLabel": "Fecha de entrada en vigor:",
+    "effectiveDateLabel": "Fecha de Efectividad:",
     "effectiveDate": "5 de julio de 2025",
-    "applicableLawLabel": "Ley aplicable:",
-    "applicableLaw": "Reglamento General de Protección de Datos del Reino Unido (UK GDPR), Directiva de Privacidad Electrónica",
+    "applicableLawLabel": "Ley Aplicable:",
+    "applicableLaw": "Reglamento General de Protección de Datos del Reino Unido (UK GDPR), Directiva de ePrivacy",
     "sections": {
       "introduction": {
         "title": "1. Introducción",
-        "text1": "ECAPFX Proprietary Firm (\"ECAPFX\", \"nosotros\", \"nuestro\") utiliza cookies y tecnologías similares para mejorar la funcionalidad, seguridad y personalización de nuestro sitio web ",
+        "text1": "ECAPFX Proprietary Firm (\"ECAPFX\", \"nosotros\", \"nuestro\", o \"nos\") utiliza cookies y tecnologías similares para mejorar la funcionalidad, seguridad y personalización de nuestro sitio web",
         "website": "https://www.ecapfx.com",
-        "text2": ". Esta Política de Cookies explica cómo usamos las cookies, qué tipos de cookies utilizamos y cómo puede gestionar sus preferencias de cookies."
+        "text2": ". Esta Política de Cookies explica cómo usamos las cookies, qué tipos de cookies utilizamos y cómo puedes gestionar tus preferencias de cookies. Esto incluye las cookies utilizadas en conjunto con nuestra plataforma de trading (Match Trader) y nuestro sistema CRM (Kenmore CRM)."
       },
       "operator": {
-        "title": "2. Operador del sitio web",
-        "text1": "El operador del sitio web es ECAPFX Proprietary Firm, con domicilio registrado en Office 7330MO 182-184, High Street North Area 1/1, East Ham, London, E6 2JA, Reino Unido.",
+        "title": "2. Operador del Sitio Web",
+        "text1": "El operador del sitio web es ECAPFX Proprietary Firm, con su oficina registrada en Office 7330MO 182-184, High Street North Area 1/1, East Ham, Londres, E6 2JA, Reino Unido.",
         "contactLabel": "Contacto:",
         "email": "privacy@ecapfx.com"
       },
       "whatAreCookies": {
-        "title": "3. ¿Qué son las cookies?",
-        "text": "Las cookies son pequeños archivos de texto almacenados en su dispositivo cuando visita nuestro sitio web. Nos ayudan a mejorar la funcionalidad del sitio, analizar el uso y personalizar su experiencia."
+        "title": "3. ¿Qué son las Cookies?",
+        "text": "Las cookies son pequeños archivos de texto almacenados en tu dispositivo cuando visitas nuestro sitio web. Nos ayudan a mejorar la funcionalidad del sitio web, analizar su uso y personalizar tu experiencia."
       },
       "typesOfCookies": {
-        "title": "4. Tipos de cookies que usamos",
+        "title": "4. Tipos de Cookies que Usamos",
         "text": "Utilizamos los siguientes tipos de cookies:",
         "subsections": {
           "necessary": {
-            "title": "a) Cookies necesarias",
+            "title": "4.1 Cookies Necesarias",
             "items": [
-              "Habilitan la funcionalidad básica del sitio web, como la navegación y el acceso a áreas seguras.",
-              "No se pueden desactivar ya que son esenciales para el funcionamiento del sitio."
+              "Habilitan la funcionalidad principal del sitio web, como la navegación y el acceso a áreas seguras. No se pueden desactivar ya que son esenciales para el funcionamiento del sitio web.",
+              "Propósito: Habilitar la funcionalidad del sitio web y de la plataforma de trading (por ejemplo, gestión de sesiones, inicio de sesión).",
+              "Sistemas: Sitio web de ECAPFX, Match Trader (cookies de sesión para acceso al trading).",
+              "Retención: Duración de la sesión (eliminadas al cerrar el navegador)."
             ]
           },
           "analytical": {
-            "title": "b) Cookies analíticas",
+            "title": "4.2 Cookies Analíticas",
             "items": [
-              "Nos ayudan a entender cómo los visitantes usan nuestro sitio web, por ejemplo, qué páginas son las más visitadas.",
-              "Son opcionales y se usan solo con su consentimiento."
+              "Nos ayudan a entender cómo los visitantes usan nuestro sitio web, por ejemplo, qué páginas son más visitadas. Son opcionales y solo se utilizan con tu consentimiento.",
+              "Propósito: Analizar el uso (por ejemplo, páginas visitadas, tiempo empleado) para mejorar la experiencia del usuario.",
+              "Sistemas: Sitio web de ECAPFX, Kenmore CRM (a través de integraciones analíticas, por ejemplo, Google Analytics).",
+              "Retención: Hasta 12 meses, luego anonimizadas."
             ]
           },
           "marketing": {
-            "title": "c) Cookies de marketing",
+            "title": "4.3 Cookies de Marketing",
             "items": [
-              "Se utilizan para personalizar anuncios y contenido en sitios web y redes sociales.",
-              "Son opcionales y se usan solo con su consentimiento."
+              "Se utilizan para personalizar anuncios y contenido en sitios web y redes sociales. Son opcionales y solo se utilizan con tu consentimiento.",
+              "Propósito: Personalizar contenido de marketing, rastrear campañas de afiliados.",
+              "Sistemas: Sitio web de ECAPFX, Kenmore CRM (por ejemplo, seguimiento de clics en boletines).",
+              "Retención: Hasta 12 meses o hasta que se retire el consentimiento."
+            ]
+          },
+          "thirdParty": {
+            "title": "4.4 Cookies de Terceros",
+            "items": [
+              "Algunas cookies pueden ser establecidas por servicios de terceros (por ejemplo, socios de análisis o publicidad). Estas están sujetas a las políticas de privacidad de esos proveedores.",
+              "Propósito: Apoyar análisis, seguimiento de afiliados (por ejemplo, Google Analytics, plataformas de afiliados).",
+              "Sistemas: Establecidas por terceros a través del sitio web de ECAPFX o integraciones de Kenmore CRM.",
+              "Retención: Hasta 12 meses, según las políticas de terceros.",
+              "Providers: Google Analytics (rastrea el uso del sitio web con direcciones IP anonimizadas); Plataformas de Afiliados (rastrean referencias, listadas en https://www.ecapfx.com/processors)."
             ]
           }
         }
       },
       "cookieManagement": {
-        "title": "5. Cómo gestionar las cookies",
-        "text1": "Puede gestionar las preferencias de cookies a través de la configuración de su navegador o nuestro banner de consentimiento de cookies. La mayoría de los navegadores aceptan cookies por defecto, pero puede:",
+        "title": "5. Cómo Gestionar las Cookies",
+        "text1": "Puedes gestionar tus preferencias de cookies a través de la configuración de tu navegador o nuestro banner de consentimiento de cookies. La mayoría de los navegadores aceptan cookies por defecto, pero puedes:",
         "items": [
           "Aceptar todas las cookies.",
-          "Rechazar las cookies no esenciales.",
-          "Eliminar las cookies de su dispositivo en cualquier momento."
+          "Rechazar cookies no esenciales.",
+          "Eliminar cookies de tu dispositivo en cualquier momento."
         ],
-        "text2": "Para más información, consulte la sección de ayuda de su navegador o la configuración de su sistema operativo. Tenga en cuenta que rechazar cookies puede afectar algunas funciones del sitio web."
-      },
-      "thirdPartyCookies": {
-        "title": "6. Cookies de terceros",
-        "text": "Algunas cookies pueden ser establecidas por servicios de terceros (por ejemplo, socios de análisis o publicidad). Estas están sujetas a las políticas de privacidad de esos proveedores."
+        "text2": "Para más información, consulta la sección de ayuda de tu navegador o la configuración de tu sistema operativo. Ten en cuenta que rechazar cookies puede afectar algunas funciones del sitio web.",
+        "subsections": {
+          "consent": {
+            "title": "5.1 Gestión de Consentimiento",
+            "items": [
+              "Consentimiento Granular: Nuestro banner de cookies permite consentimientos separados para cookies analíticas y de marketing. Las cookies esenciales no requieren consentimiento.",
+              "Retirada: Opta por no participar a través de la configuración del navegador o haciendo clic en Rechazar.",
+              "Kenmore CRM: Registra marcas temporales de consentimiento, fuentes (por ejemplo, formulario web) y solicitudes de retirada (procesadas en 48 horas)."
+            ]
+          }
+        }
       },
       "yourRights": {
-        "title": "7. Sus derechos",
-        "text": "Bajo el UK GDPR, usted tiene derecho a:",
+        "title": "6. Tus Derechos",
+        "text": "Bajo el UK GDPR, tienes derecho a:",
         "items": [
-          "Acceder a los datos que tenemos sobre usted a través de cookies.",
-          "Objetar o restringir el procesamiento de datos relacionados con cookies.",
+          "Acceder a los datos que tenemos sobre ti a través de cookies.",
+          "Oponerte o restringir el procesamiento de datos relacionados con cookies.",
           "Retirar el consentimiento para cookies no esenciales en cualquier momento.",
           "Presentar una queja ante la Oficina del Comisionado de Información del Reino Unido (ICO) en https://ico.org.uk/"
         ],
-        "contactText": "Para ejercer estos derechos, contáctenos en ",
+        "contactText": "Para ejercer estos derechos, contáctanos en",
         "email": "privacy@ecapfx.com"
       },
       "updates": {
-        "title": "8. Actualizaciones de esta política",
-        "text": "Podemos actualizar esta Política de Cookies para reflejar cambios en la ley o en nuestras prácticas. La versión más reciente se publicará en nuestro sitio web con una fecha de entrada en vigor revisada."
+        "title": "7. Actualizaciones de Esta Política",
+        "text": "Podemos actualizar esta Política de Cookies para reflejar cambios en la ley o en nuestras prácticas. La versión más reciente se publicará en nuestro sitio web con una fecha de efectividad revisada."
       },
       "contact": {
-        "title": "9. Contáctenos",
-        "text": "Para preguntas sobre esta Política de Cookies, contáctenos:",
+        "title": "8. Contáctanos",
+        "text": "Para preguntas sobre esta Política de Cookies, por favor contacta:",
         "company": "ECAPFX Proprietary Firm",
         "emailLabel": "Correo electrónico:",
         "email": "privacy@ecapfx.com",

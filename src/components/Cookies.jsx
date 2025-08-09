@@ -25,7 +25,12 @@ const Cookies = () => {
         <h6 className="text-xl font-semibold text-black-200 mb-2">{t('cookiePolicy.sections.introduction.title')}</h6>
         <p className="text-black-400">
           {t('cookiePolicy.sections.introduction.text1')}{' '}
-          <a href={t('cookiePolicy.sections.introduction.website')} className="text-[#1d8348] hover:text-[#f9e79f] underline">
+          <a
+            href={t('cookiePolicy.sections.introduction.website')}
+            className="text-[#1d8348] hover:text-[#f9e79f] underline"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             {t('cookiePolicy.sections.introduction.website')}
           </a>{' '}
           {t('cookiePolicy.sections.introduction.text2')}
@@ -37,7 +42,10 @@ const Cookies = () => {
         <p className="text-black-400">{t('cookiePolicy.sections.operator.text1')}</p>
         <p className="text-black-400 mt-2">
           <strong className="text-black">{t('cookiePolicy.sections.operator.contactLabel')}</strong>{' '}
-          <a href={`mailto:${t('cookiePolicy.sections.operator.email')}`} className="text-[#1d8348] hover:text-[#f9e79f] underline">
+          <a
+            href={`mailto:${t('cookiePolicy.sections.operator.email')}`}
+            className="text-[#1d8348] hover:text-[#f9e79f] underline"
+          >
             {t('cookiePolicy.sections.operator.email')}
           </a>
         </p>
@@ -69,6 +77,28 @@ const Cookies = () => {
             <li key={index} className="text-black">{item}</li>
           ))}
         </ul>
+        <h7 className="text-lg font-medium text-black-300 mt-4">{t('cookiePolicy.sections.typesOfCookies.subsections.thirdParty.title')}</h7>
+        <ul className="list-disc pl-6 text-black-400">
+          {t('cookiePolicy.sections.typesOfCookies.subsections.thirdParty.items', { returnObjects: true }).map((item, index) => (
+            <li key={index} className="text-black">
+              {item.includes('https://www.ecapfx.com/processors') ? (
+                <>
+                  {item.split('https://www.ecapfx.com/processors')[0]}{' '}
+                  <a
+                    href="https://www.ecapfx.com/processors"
+                    className="text-[#1d8348] hover:text-[#f9e79f] underline"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    https://www.ecapfx.com/processors
+                  </a>
+                </>
+              ) : (
+                item
+              )}
+            </li>
+          ))}
+        </ul>
       </section>
 
       <section className="mb-8">
@@ -80,11 +110,28 @@ const Cookies = () => {
           ))}
         </ul>
         <p className="text-black-400 mt-2">{t('cookiePolicy.sections.cookieManagement.text2')}</p>
-      </section>
-
-      <section className="mb-8">
-        <h6 className="text-xl font-semibold text-black-200 mb-2">{t('cookiePolicy.sections.thirdPartyCookies.title')}</h6>
-        <p className="text-black-400">{t('cookiePolicy.sections.thirdPartyCookies.text')}</p>
+        <h7 className="text-lg font-medium text-black-300 mt-4">{t('cookiePolicy.sections.cookieManagement.subsections.consent.title')}</h7>
+        <ul className="list-disc pl-6 text-black-400">
+          {t('cookiePolicy.sections.cookieManagement.subsections.consent.items', { returnObjects: true }).map((item, index) => (
+            <li key={index} className="text-black">
+              {item.includes('https://www.ecapfx.com/cookie-preferences') ? (
+                <>
+                  {item.split('https://www.ecapfx.com/cookie-preferences')[0]}{' '}
+                  <a
+                    href="https://www.ecapfx.com/cookie-preferences"
+                    className="text-[#1d8348] hover:text-[#f9e79f] underline"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    https://www.ecapfx.com/cookie-preferences
+                  </a>
+                </>
+              ) : (
+                item
+              )}
+            </li>
+          ))}
+        </ul>
       </section>
 
       <section className="mb-8">
@@ -96,7 +143,12 @@ const Cookies = () => {
               {item.includes('https://ico.org.uk/') ? (
                 <>
                   {item.split('https://ico.org.uk/')[0]}{' '}
-                  <a href="https://ico.org.uk/" className="text-[#1d8348] hover:text-[#f9e79f] underline">
+                  <a
+                    href="https://ico.org.uk/"
+                    className="text-[#1d8348] hover:text-[#f9e79f] underline"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     https://ico.org.uk/
                   </a>
                 </>
@@ -108,7 +160,10 @@ const Cookies = () => {
         </ul>
         <p className="text-black-400 mt-2">
           {t('cookiePolicy.sections.yourRights.contactText')}{' '}
-          <a href={`mailto:${t('cookiePolicy.sections.yourRights.email')}`} className="text-[#1d8348] hover:text-[#f9e79f] underline">
+          <a
+            href={`mailto:${t('cookiePolicy.sections.yourRights.email')}`}
+            className="text-[#1d8348] hover:text-[#f9e79f] underline"
+          >
             {t('cookiePolicy.sections.yourRights.email')}
           </a>
         </p>
@@ -126,12 +181,20 @@ const Cookies = () => {
           {t('cookiePolicy.sections.contact.company')}
           <br />
           <strong className="text-black">{t('cookiePolicy.sections.contact.emailLabel')}</strong>{' '}
-          <a href={`mailto:${t('cookiePolicy.sections.contact.email')}`} className="text-[#1d8348] hover:text-[#f9e79f] underline">
+          <a
+            href={`mailto:${t('cookiePolicy.sections.contact.email')}`}
+            className="text-[#1d8348] hover:text-[#f9e79f] underline"
+          >
             {t('cookiePolicy.sections.contact.email')}
           </a>
           <br />
           <strong className="text-black">{t('cookiePolicy.sections.contact.websiteLabel')}</strong>{' '}
-          <a href={t('cookiePolicy.sections.contact.website')} className="text-[#1d8348] hover:text-[#f9e79f] underline">
+          <a
+            href={t('cookiePolicy.sections.contact.website')}
+            className="text-[#1d8348] hover:text-[#f9e79f] underline"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             {t('cookiePolicy.sections.contact.website')}
           </a>
         </p>
