@@ -753,8 +753,8 @@ function PricingTable() {
                     Exclusive Offer:  
                   </p>
                   <div className="flex justify-center items-center mt-2">
-                    <span className="px-[10px] w-[175px] h-[35px] rounded-[50px] overflow-hidden flex items-center justify-center gap-1 border-[1px] border-[#1a6f3d]" style={{ background: 'linear-gradient(0deg, #1a6f3d 0%, #145c33 100%)' }}>
-                      <p className="px-[5px] py-[0px] bg-[#FFC107] text-xs font-bold text-[#1a6f3d] uppercase rounded-[50px]">USE CODE</p>
+                    <span className="px-2 w-[160px] h-[35px] rounded-[50px] overflow-hidden flex items-center justify-center gap-1 border-[1px] border-[#1a6f3d] code-container" style={{ background: 'linear-gradient(0deg, #1a6f3d 0%, #145c33 100%)', minWidth: '160px', whiteSpace: 'nowrap' }}>
+                      <p className="px-1 py-2 p bg-[#FFC107] text-xs font-bold text-[#1a6f3d] uppercase code-text">USE CODE</p>
                       <p className="text-xs font-bold text-white uppercase text-center flex items-center justify-center gap-1">
                         <span>NEW</span>
                         <button
@@ -886,76 +886,98 @@ function PricingTable() {
       <div className="absolute bottom-0 left-0 w-full h-2 bg-gradient-to-r from-transparent via-[#1d8348] to-transparent hidden shadow-lg sm:block z-20" />
       <style jsx>{`
         @media (max-width: 640px) {
-          .max-w-7xl {
-            padding-left: 1rem;
-            padding-right: 1rem;
-          }
-          .grid {
-            display: flex;
-            flex-direction: column;
-          }
-          .lg\\:col-span-3, .lg\\:col-span-9, .lg\\:col-span-12 {
-            width: 100%;
-          }
-          .table-container {
-            overflow-x: hidden;
-          }
-          .mobile-table {
-            padding-bottom: 40px;
-          }
-          .swiper-button-next,
-          .swiper-button-prev {
-            width: 24px;
-            height: 24px;
-            background: rgb(255, 255, 255);
-            border-radius: 50%;
-            color: #1d8348;
-            margin-top: 0;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-            transition: background 0.3s ease, transform 0.3s ease;
-          }
-          .swiper-button-prev {
-            left: -6px;
-          }
-          .swiper-button-next {
-            right: -6px;
-          }
-          .swiper-button-next:hover,
-          .swiper-button-prev:hover {
-            background: rgb(190, 190, 190);
-            transform: scale(1.1);
-          }
-          .swiper-button-next::after,
-          .swiper-button-prev::after {
-            font-size: 12px;
-            font-weight: bold;
-          }
-          .swiper-pagination-bullet {
-            background: #1d8348;
-            width: 8px;
-            height: 8px;
-          }
-          .swiper-pagination-bullet-active {
-            background: #145c33;
-          }
-          th, td {
-            padding: 0.75rem;
-            min-width: 100px;
-          }
-          .text-5xl {
-            font-size: 2rem;
-          }
-          .ps_wrapper p {
-            font-size: 0.875rem;
-          }
+        .code-container {
+          min-width: 160px;
+          padding: 0 2px;
         }
-        .animate-change {
-          animation: fadeIn 0.3s ease-in-out;
+        .code-text {
+          font-size: 0.rem; /* Smaller letters for phones */
         }
-        @keyframes fadeIn {
-          0% { opacity: 0; }
-          100% { opacity: 1; }
+        .max-w-7xl {
+          padding-left: 0.5rem; /* Reduced padding to minimize cutoff */
+          padding-right: 0.5rem;
         }
+        .grid {
+          display: flex;
+          flex-direction: column;
+        }
+        .lg\\:col-span-3,
+        .lg\\:col-span-9,
+        .lg\\:col-span-12 {
+          width: 100%;
+        }
+        .table-container {
+          overflow-x: auto; /* Allow horizontal scrolling if table overflows */
+          width: 100%;
+          -webkit-overflow-scrolling: touch; /* Smooth scrolling on mobile */
+        }
+        .mobile-table {
+          padding-bottom: 40px;
+          padding-left: 8px; /* Add padding to prevent Swiper cutoff */
+          padding-right: 8px;
+        }
+        .swiper-button-next,
+        .swiper-button-prev {
+          width: 24px;
+          height: 24px;
+          background: rgb(255, 255, 255);
+          border-radius: 50%;
+          color: #1d8348;
+          margin-top: 0;
+          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+          transition: background 0.3s ease, transform 0.3s ease;
+        }
+        .swiper-button-prev {
+          left: 2px; /* Adjusted to prevent cutoff */
+        }
+        .swiper-button-next {
+          right: 2px; /* Adjusted to prevent cutoff */
+        }
+        .swiper-button-next:hover,
+        .swiper-button-prev:hover {
+          background: rgb(190, 190, 190);
+          transform: scale(1.1);
+        }
+        .swiper-button-next::after,
+        .swiper-button-prev::after {
+          font-size: 12px;
+          font-weight: bold;
+        }
+        .swiper-pagination-bullet {
+          background: #1d8348;
+          width: 8px;
+          height: 8px;
+        }
+        .swiper-pagination-bullet-active {
+          background: #145c33;
+        }
+        th,
+        td {
+          padding: 0.5rem; /* Reduced padding for mobile */
+          min-width: 80px; /* Reduced min-width to fit smaller screens */
+        }
+        .text-5xl {
+          font-size: 2rem;
+        }
+        .ps_wrapper p {
+          font-size: 0.875rem;
+        }
+      }
+      .animate-change {
+        animation: fadeIn 0.3s ease-in-out;
+      }
+      @keyframes fadeIn {
+        0% {
+          opacity: 0;
+        }
+        100% {
+          opacity: 1;
+        }
+      }
+      /* Ensure the main container doesn't cause overflow */
+      #start-challenge {
+        overflow-x: hidden; /* Prevent horizontal overflow */
+      }
       `}</style>
     </div>
   );

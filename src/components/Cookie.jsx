@@ -38,8 +38,8 @@ const Cookie = () => {
             <h3 className="text-xl sm:text-2xl font-bold mb-2 text-[#f7e59f]">Cookie Consent</h3>
             <p className="text-xs sm:text-sm md:text-base text-white">
               We use cookies to optimize our communication and enhance your experience. By clicking "Approve", you agree to the collection of cookies. For more information, please see our{' '}
-              <a href="/privacy" className="text-[#f7e59f] hover:underline">
-                Privacy Policy
+              <a href="/cookies" className="text-[#f7e59f] hover:underline">
+                Cookie Policy
               </a>
               .
             </p>
