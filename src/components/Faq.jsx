@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
@@ -8,18 +8,8 @@ import { useTranslation } from 'react-i18next';
 const Faq = () => {
   const { t } = useTranslation();
   const [openIndex, setOpenIndex] = useState(null);
-
-  // Initialize AOS and reset scroll position only if no hash
-  useEffect(() => {
-    if (!window.location.hash) {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    }
-    AOS.init({
-      duration: 800,
-      easing: 'ease-in-out',
-      once: true,
-    });
-  }, []);
+  const [maxHeights, setMaxHeights] = useState({});
+  const faqRefs = useRef({});
 
   // FAQ data
   const faqs = [
@@ -77,15 +67,50 @@ const Faq = () => {
     },
   ];
 
+  // Initialize AOS and reset scroll position
+  useEffect(() => {
+    if (!window.location.hash) {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+    AOS.init({
+      duration: 800,
+      easing: 'ease-in-out',
+      once: true,
+    });
+  }, []);
+
+  // Calculate heights when content is rendered or window is resized
+  useEffect(() => {
+    const calculateHeights = () => {
+      const heights = {};
+      faqs.forEach((_, index) => {
+        const element = faqRefs.current[index];
+        if (element) {
+          heights[index] = element.scrollHeight + 30; // Increased buffer for safety
+        }
+      });
+      setMaxHeights(heights);
+    };
+
+    calculateHeights();
+
+    const handleResize = () => {
+      calculateHeights();
+    };
+
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, [faqs]);
+
   const toggleFaq = (index) => {
     setOpenIndex(openIndex === index ? null : index);
   };
 
   // Animation variants for dropdown effect
-  const answerVariants = {
+  const answerVariants = (index) => ({
     hidden: { maxHeight: 0, opacity: 0, overflow: 'hidden' },
     visible: {
-      maxHeight: 250,
+      maxHeight: maxHeights[index] || 1000, // Large fallback
       opacity: 1,
       transition: {
         maxHeight: { duration: 0.5, ease: 'easeInOut' },
@@ -100,7 +125,7 @@ const Faq = () => {
         opacity: { duration: 0.2 },
       },
     },
-  };
+  });
 
   return (
     <section
@@ -181,6 +206,16 @@ const Faq = () => {
                   />
                 </svg>
               </button>
+              {/* Hidden div for measuring height */}
+              <div
+                ref={(el) => (faqRefs.current[index] = el)}
+                className="absolute invisible pointer-events-none w-full pr-4"
+                id={`measure-${index}`}
+              >
+                <p className="mt-4 text-white text-sm sm:text-base font-normal leading-6">
+                  {faq.answer}
+                </p>
+              </div>
               <AnimatePresence>
                 {openIndex === index && (
                   <motion.div
@@ -188,8 +223,8 @@ const Faq = () => {
                     initial="hidden"
                     animate="visible"
                     exit="exit"
-                    variants={answerVariants}
-                    className="w-full overflow-hidden pr-4"
+                    variants={answerVariants(index)}
+                    className="w-full pr-4 pb-2" // Added pb-2 for extra bottom padding
                     aria-labelledby={`accordion-${index}`}
                   >
                     <p className="mt-4 text-white text-sm sm:text-base font-normal leading-6">
@@ -203,8 +238,7 @@ const Faq = () => {
         </div>
 
         {/* Navigation Links to Homepage Sections */}
-        <div className="mt-8 flex flex-col items-center space-y-4 sm:flex-row sm:space-y-0 sm:space-x-6">
-         </div>
+        <div className="mt-8 flex flex-col items-center space-y-4 sm:flex-row sm:space-y-0 sm:space-x-6"></div>
       </div>
 
       {/* Custom Scoped CSS */}

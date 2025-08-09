@@ -4,6 +4,7 @@ import Contact from './components/Contact.jsx';
 import Discord from "./components/Discord";
 import Testimonials from "./components/Testimonials";
 import Cookies from "./components/Cookies.jsx";
+import Cookie from "./components/Cookie.jsx";
 import LogoSlider from "./components/LogoSlider.jsx";
 // import Compare from "./components/compare.jsx";
 import Faq from "./components/Faq.jsx";
@@ -148,6 +149,9 @@ function App() {
                 </div>
                 <div id="newsletter">
                   <Newsletter />
+                </div>
+                <div id="cookie">
+                  <Cookie />
                 </div>
               </>
             }
