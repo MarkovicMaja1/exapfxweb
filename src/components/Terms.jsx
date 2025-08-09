@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
+import TermsAndConditionsPDF from '../assets/ECAPFX_Terms_And_Conditions.pdf';
 
 const TermsAndConditions = () => {
   const { t } = useTranslation();
@@ -265,6 +266,16 @@ const TermsAndConditions = () => {
             {t('termsAndConditions.sections.contact.website')}
           </a>
         </p>
+      </section>
+
+      <section className="mb-8 text-center">
+        <a
+          href={TermsAndConditionsPDF}
+          download
+          className="bg-gradient-to-r from-[#1a6f3d] via-[#1d8348] to-[#145c33] hover:from-[#156437]/90 hover:via-[#1d8348]/90 hover:to-[#0e3f24]/90 hover:text-black hover:shadow-md hover:shadow-green-700/50 px-6 py-2 rounded-lg text-white inline-block transition duration-300 ease-in-out hover:scale-105 active:cursor-pointer select-none w-full md:w-auto text-center"
+        >
+          {t('termsAndConditions.downloadButton')}
+        </a>
       </section>
     </main>
   );

@@ -536,6 +536,7 @@
     "title": "Claim Policy",
     "header": "ECAPFX Proprietary Firm – Website Claims & Complaints Policy (UK FCA Compliant)",
     "effectiveDateLabel": "Effective Date:",
+    "downloadButton": "Download Claim Complaints Policy PDF",
     "regulatoryAlignmentLabel": "Regulatory Alignment:",
     "sections": {
       "purpose": {
@@ -787,6 +788,7 @@
     "header": "ECAPFX Proprietary Firm – Terms and Conditions",
     "effectiveDateLabel": "Effective Date:",
     "effectiveDate": "June 2, 2025",
+    "downloadButton": "Download Terms and Conditions PDF",
     "websiteLabel": "Website:",
     "website": "https://www.ecapfx.com",
     "jurisdictionLabel": "Jurisdiction:",

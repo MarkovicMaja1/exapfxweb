@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
+import ClaimsComplaintsPDF from '../assets/ECAPFX_Claims_Complaints_Policy.pdf';
 
 const Claim = () => {
   const { t } = useTranslation();
@@ -121,6 +122,16 @@ const Claim = () => {
           Email: <a href="mailto:contact@ecapfx.com" className="text-[#1d8348] hover:text-[#f9e79f] underline">{t('claimPolicy.sections.contact.email')}</a><br />
           Website: <a href="https://www.ecapfx.com" className="text-[#1d8348] hover:text-[#f9e79f] underline">{t('claimPolicy.sections.contact.website')}</a>
         </p>
+      </section>
+
+      <section className="mb-8 text-center">
+        <a
+          href={ClaimsComplaintsPDF}
+          download
+          className="bg-gradient-to-r from-[#1a6f3d] via-[#1d8348] to-[#145c33] hover:from-[#156437]/90 hover:via-[#1d8348]/90 hover:to-[#0e3f24]/90 hover:text-black hover:shadow-md hover:shadow-green-700/50 px-6 py-2 rounded-lg text-white inline-block transition duration-300 ease-in-out hover:scale-105 active:cursor-pointer select-none w-full md:w-auto text-center"
+        >
+          {t('claimPolicy.downloadButton')}
+        </a>
       </section>
     </main>
   );

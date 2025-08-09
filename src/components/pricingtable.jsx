@@ -754,7 +754,7 @@ function PricingTable() {
                   </p>
                   <div className="flex justify-center items-center mt-2">
                     <span className="px-2 w-[160px] h-[35px] rounded-[50px] overflow-hidden flex items-center justify-center gap-1 border-[1px] border-[#1a6f3d] code-container" style={{ background: 'linear-gradient(0deg, #1a6f3d 0%, #145c33 100%)', minWidth: '160px', whiteSpace: 'nowrap' }}>
-                      <p className="px-1 py-2 p bg-[#FFC107] text-xs font-bold text-[#1a6f3d] uppercase code-text rounded-[50px]">USE CODE</p>
+                      <p className="px-1 py0 p bg-[#FFC107] text-xs font-bold text-[#1a6f3d] uppercase code-text rounded-[50px]">USE CODE</p>
                       <p className="text-xs font-bold text-white uppercase text-center flex items-center justify-center gap-1">
                         <span>NEW</span>
                         <button
