@@ -15,7 +15,7 @@ const Testimonials = () => {
         {
             image: 'https://images.unsplash.com/photo-1633332755192-727a05c4013d?q=80&w=200',
             name: 'Michael Carter',
-            handle: '@elenatrades',
+            handle: '@michaelcarter',
             date: 'July 12, 2025',
             review: 'ECAPFX transformed my trading game! The intuitive interface and real-time analytics make it so easy to stay ahead of the market. I’ve never felt more confident in my decisions.'
         },
