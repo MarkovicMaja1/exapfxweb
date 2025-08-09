@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
+import PrivacyPolicyPDF from '../assets/ECAPFX_Privacy_Policy_2025.pdf'; // Import the PDF
 
 const PrivacyPolicy = () => {
   const { t } = useTranslation();
@@ -176,7 +177,7 @@ const PrivacyPolicy = () => {
         <ul className="list-disc pl-6 text-black-400">
           {t('privacyPolicy.sections.marketing.items', { returnObjects: true }).map((item, index) => (
             <li key={index} className="text-black">
-              {index === 1 ? (
+              {item.includes('privacy@ecapfx.com') ? (
                 <>
                   {item.split('privacy@ecapfx.com')[0]}{' '}
                   <a href="mailto:privacy@ecapfx.com" className="text-[#1d8348] hover:text-[#f9e79f] underline">
@@ -208,6 +209,16 @@ const PrivacyPolicy = () => {
             {t('privacyPolicy.sections.contactUs.email')}
           </a>
         </p>
+      </section>
+
+      <section className="mb-8 text-center">
+        <a
+          href={PrivacyPolicyPDF}
+          download
+          className="bg-gradient-to-r from-[#1a6f3d] via-[#1d8348] to-[#145c33] hover:from-[#156437]/90 hover:via-[#1d8348]/90 hover:to-[#0e3f24]/90 hover:text-black hover:shadow-md hover:shadow-green-700/50 px-6 py-2 rounded-lg text-white inline-block transition duration-300 ease-in-out hover:scale-105 active:cursor-pointer select-none w-full md:w-auto text-center"
+        >
+          {t('privacyPolicy.downloadButton')}
+        </a>
       </section>
     </main>
   );
