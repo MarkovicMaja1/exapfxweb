@@ -209,6 +209,8 @@
     }
   },
     "team": {
+      "readMore": "Leer más",
+      "readLess": "Leer menos",
     "hero": {
       "title": "Conoce al Equipo",
       "subtitle": "Nuestro Liderazgo y Talento"

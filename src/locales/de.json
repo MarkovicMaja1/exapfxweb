@@ -209,6 +209,8 @@
     }
   },
   "team": {
+      "readMore": "Mehr lesen",
+      "readLess": "Weniger lesen",
     "hero": {
       "title": "Lernen Sie unser Team kennen",
       "subtitle": "Unsere Führungskräfte & Talente"

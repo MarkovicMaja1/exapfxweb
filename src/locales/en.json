@@ -214,6 +214,8 @@
     }
   },
     "team": {
+      "readMore": "Read More",
+      "readLess": "Read Less",
     "hero": {
       "title": "Meet The Team",
       "subtitle": "Our Leadership & Talent"
@@ -225,7 +227,7 @@
     },
     "carlyPearn": {
       "category": "Carly Pearn",
-      "title": "Co-Founder & Chief Sustainability Officer",
+      "title": "Co-Founder & CFO",
       "description": "Carly oversees the firm's sustainability initiatives, ensuring that environmental and social responsibility are integrated into our business model."
     },
     "nebojsaSladoje": {
