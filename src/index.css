@@ -102,7 +102,7 @@ small {
 
 @media (max-width: 640px) {
   h1 {
-    font-size: 2.25rem !important; /* oko 36px */
+    font-size: 2.25rem; /* oko 36px */
   }
 
   h2 {
