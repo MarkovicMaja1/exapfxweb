@@ -23,11 +23,11 @@ const TeamCard = ({ post }) => {
       <div className="bg-white rounded-lg shadow-lg overflow-hidden h-full transition-transform duration-300 border-t-4 border-green-600 flex flex-col">
         <div className="p-4 flex flex-col flex-grow">
           <div className="flex justify-center mb-4">
-            <div className="relative w-24 h-24">
+            <div className="relative w-[180px] h-[180px]">
               <img
                 src={post.image}
                 alt={`${post.title} Avatar`}
-                className="w-24 h-24 rounded-full object-cover"
+                className="w-[180px] h-[180px] rounded-full object-cover"
               />
               <div className="absolute inset-0 rounded-full border-4 border-transparent transition-all duration-300 hover:border-gradient"></div>
             </div>
@@ -149,7 +149,7 @@ const Team = () => {
   return (
     <section className="bg-[#151515] py-24 text-center">
       <div className="mx-auto lg:max-w-4xl text-center">
-        <h2 className="mb-4 text-4xl font-extrabold tracking-tight text-center text-white">
+        <h2 className="mb-4 text-4xl font-extrabold tracking-tight text-center text-white uppercase">
           {t('team.hero.title')}
         </h2>
         <p className="mb-24 text-4xl font-extrabold tracking-tight text-center text-white">
@@ -174,7 +174,7 @@ const Team = () => {
 
           <button
             onClick={prevSlide}
-            className="absolute left-0 top-1/2 -translate-y-1/2 bg-white p-2 rounded-full shadow-lg hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="absolute left-0 top-1/2 -translate-y-1/2 bg-white p-2 rounded-full shadow-lg hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-green-500"
             aria-label="Previous slide"
           >
             <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
@@ -184,7 +184,7 @@ const Team = () => {
 
           <button
             onClick={nextSlide}
-            className="absolute right-0 top-1/2 -translate-y-1/2 bg-white p-2 rounded-full shadow-lg hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="absolute right-0 top-1/2 -translate-y-1/2 bg-white p-2 rounded-full shadow-lg hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-green-500"
             aria-label="Next slide"
           >
             <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
