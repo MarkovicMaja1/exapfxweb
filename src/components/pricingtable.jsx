@@ -31,10 +31,10 @@ function PricingTable() {
   const [selectedCurrency, setSelectedCurrency] = useState("USD");
   const [price, setPrice] = useState("$325");
   const [isAnimating, setIsAnimating] = useState(false);
-  const [timeLeft, setTimeLeft] = useState(0); // 7 days in seconds
-  const [isCopied, setIsCopied] = useState(false); // Added isCopied state
+  const [timeLeft, setTimeLeft] = useState(0);
+  const [isCopied, setIsCopied] = useState(false);
 
-  // Price mapping based on step, size, and currency
+  // Price mapping and table data remain unchanged
   const priceMap = {
     "One Step": {
       "10k": { USD: "$80", GBP: "£65", EUR: "€75" },
@@ -65,7 +65,6 @@ function PricingTable() {
     }
   };
 
-  // Table data based on step type, size, and currency
   const tableData = {
     "One Step": {
       "10k": {
@@ -286,7 +285,6 @@ function PricingTable() {
     }
   };
 
-  // Dynamically generate available sizes based on selected step
   const getAvailableSizes = () => {
     switch (selectedStep) {
       case "One Step":
@@ -308,16 +306,14 @@ function PricingTable() {
     } else {
       setPrice("N/A");
     }
-    // Reset selectedSize if it's not available for the new step
     const availableSizes = getAvailableSizes();
     if (!availableSizes.includes(selectedSize)) {
       setSelectedSize(availableSizes[0]);
     }
   }, [selectedStep, selectedSize, selectedCurrency]);
 
-  // Timer setup
-  const startDate = new Date('2025-08-04T15:34:00+02:00'); // 03:34 PM CEST, August 04, 2025
-  const endDate = new Date('2025-08-16T23:59:59+02:00'); // End of August 16, 2025
+  const startDate = new Date('2025-08-04T15:34:00+02:00');
+  const endDate = new Date('2025-08-16T23:59:59+02:00');
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -325,12 +321,10 @@ function PricingTable() {
       const remaining = Math.floor((endDate - now) / 1000);
       setTimeLeft(remaining >= 0 ? remaining : 0);
     }, 1000);
-    // Set initial timeLeft
     setTimeLeft(Math.floor((endDate - startDate) / 1000));
-    return () => clearInterval(timer); // Cleanup timer on unmount
+    return () => clearInterval(timer);
   }, []);
 
-  // Format time as "Xd Xh Xm Xs"
   const formatTime = (seconds) => {
     const days = Math.floor(seconds / (3600 * 24));
     const hours = Math.floor((seconds % (3600 * 24)) / 3600);
@@ -338,13 +332,13 @@ function PricingTable() {
     const secs = seconds % 60;
     return `${days}d ${hours}h ${minutes}m ${secs}s`;
   };
-  
-  // Update handleCopy for shorter feedback duration
+
   const handleCopy = () => {
     navigator.clipboard.writeText("NEW");
     setIsCopied(true);
-    setTimeout(() => setIsCopied(false), 2000); // Reset after 2 seconds
+    setTimeout(() => setIsCopied(false), 2000);
   };
+
   const handleStepChange = (step) => {
     setIsAnimating(true);
     setSelectedStep(step);
@@ -363,7 +357,7 @@ function PricingTable() {
     setTimeout(() => setIsAnimating(false), 300);
   };
 
-  const steps = ["One Step", "Two Step", "Three Step", "Instant Funding"]; //"Instant Funding" get this back inside when we enable it.
+  const steps = ["One Step", "Two Step", "Three Step", "Instant Funding"];
   const currencies = ["USD", "GBP", "EUR"];
   const baseMetrics = ["Profit", "Duration", "Leverage", "Mintradingdays", "Maxloss", "Daily Loss", "Profit Share", "Fee"];
   const metrics = selectedStep === "Three Step" ? [...baseMetrics, "Bonus After Stage"] : baseMetrics;
@@ -553,14 +547,12 @@ function PricingTable() {
             </h2>
           </div>
           <div className="ps_wrapper">
-            <div className="ps_intro">
-              <p className="mb-14 mt-10 text-white text-center">
-                {t('pricingTable.theChoiceIsYours')}
-              </p>
-            </div>
+            <p className="mb-14 mt-10 text-white text-center">
+              {t('pricingTable.theChoiceIsYours')}
+            </p>
           </div>
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
-            {/* Currency selector at the top */}
+            {/* Currency selector and price at the top */}
             <div className="lg:col-span-12 mb-4">
               <div
                 className="bg-white rounded-lg shadow-md p-4 sm:p-6"
@@ -571,60 +563,57 @@ function PricingTable() {
                   justifyContent: 'space-between',
                   alignItems: 'center',
                   gap: '20px',
-                  flexWrap: 'wrap', // Allow wrapping on smaller screens
+                  flexWrap: 'wrap',
                 }}
               >
-                {/* Currency Selector */}
-                  <div
-                    className="flex items-center gap-4"
-                    style={{ flex: '1 1 auto', minWidth: '200px' }}
+                <div
+                  className="flex items-center gap-4"
+                  style={{ flex: '1 1 auto', minWidth: '200px' }}
+                >
+                  <h6
+                    className="text-lg font-semibold mb-0"
+                    style={{ color: '#1f2937', whiteSpace: 'nowrap' }}
                   >
-                    <h6
-                      className="text-lg font-semibold mb-0"
-                      style={{ color: '#1f2937', whiteSpace: 'nowrap' }}
-                    >
-                      {t('pricingTable.currencyLabel')}
-                    </h6>
-                    <div className="flex gap-2 flex-wrap">
-                      {currencies.map((currency) => (
-                        <button
-                          key={currency}
-                          className={`px-4 py-2 rounded-md font-medium text-sm sm:text-base select-none transition-all duration-300 ease-in-out flex items-center justify-center min-w-[60px] h-10 ${
-                            selectedCurrency === currency
-                              ? 'bg-gradient-to-r from-[#1a6f3d] to-[#145c33] text-white'
-                              : 'bg-gray-200 text-black hover:bg-gray-300'
-                          }`}
-                          onClick={() => handleCurrencyChange(currency)}
-                          style={{ minWidth: '0' }} // Allow shrinking on mobile
-                        >
-                          {currency === 'USD' && (
-                            <img
-                              src={usdFlag}
-                              alt="USD Flag"
-                              style={{ width: '24px', height: '24px', marginRight: '4px' }}
-                            />
-                          )}
-                          {currency === 'GBP' && (
-                            <img
-                              src={gbpFlag}
-                              alt="GBP Flag"
-                              style={{ width: '24px', height: '24px', marginRight: '4px' }}
-                            />
-                          )}
-                          {currency === 'EUR' && (
-                            <img
-                              src={eurFlag}
-                              alt="EUR Flag"
-                              style={{ width: '24px', height: '24px', marginRight: '4px' }}
-                            />
-                          )}
-                          {currency}
-                        </button>
-                      ))}
-                    </div>
+                    {t('pricingTable.currencyLabel')}
+                  </h6>
+                  <div className="flex gap-2 flex-wrap">
+                    {currencies.map((currency) => (
+                      <button
+                        key={currency}
+                        className={`px-4 py-2 rounded-md font-medium text-sm sm:text-base select-none transition-all duration-300 ease-in-out flex items-center justify-center min-w-[60px] h-10 ${
+                          selectedCurrency === currency
+                            ? 'bg-gradient-to-r from-[#1a6f3d] to-[#145c33] text-white'
+                            : 'bg-gray-200 text-black hover:bg-gray-300'
+                        }`}
+                        onClick={() => handleCurrencyChange(currency)}
+                        style={{ minWidth: '0' }}
+                      >
+                        {currency === 'USD' && (
+                          <img
+                            src={usdFlag}
+                            alt="USD Flag"
+                            style={{ width: '24px', height: '24px', marginRight: '4px' }}
+                          />
+                        )}
+                        {currency === 'GBP' && (
+                          <img
+                            src={gbpFlag}
+                            alt="GBP Flag"
+                            style={{ width: '24px', height: '24px', marginRight: '4px' }}
+                          />
+                        )}
+                        {currency === 'EUR' && (
+                          <img
+                            src={eurFlag}
+                            alt="EUR Flag"
+                            style={{ width: '24px', height: '24px', marginRight: '4px' }}
+                          />
+                        )}
+                        {currency}
+                      </button>
+                    ))}
                   </div>
-
-                {/* Add Price Display Here */}
+                </div>
                 <div
                   className="text-center"
                   style={{ flex: '1 1 auto', minWidth: '150px' }}
@@ -650,7 +639,7 @@ function PricingTable() {
               </div>
             </div>
 
-            {/* Left sidebar with options */}
+            {/* Left sidebar with step and size selectors */}
             <div className="lg:col-span-3 space-y-4">
               <div className="bg-white rounded-lg shadow-md p-4 sm:p-6" style={{ border: '1px solid #e5e7eb' }}>
                 <h3 className="text-lg font-semibold mb-3" style={{ color: '#1f2937' }}>{t('pricingTable.stepsLabel')}</h3>
@@ -688,7 +677,6 @@ function PricingTable() {
                   ))}
                 </div>
               </div>
-
               <div className="bg-white rounded-lg shadow-md p-4 sm:p-6" style={{ border: '1px solid #e5e7eb' }}>
                 <h3 className="text-lg font-semibold mb-3" style={{ color: '#1f2937' }}>{t('pricingTable.sizeLabel')}</h3>
                 <div className="flex flex-col gap-2">
@@ -747,48 +735,7 @@ function PricingTable() {
                     </button>
                   ))}
                 </div>
-                {/* Add Discount Message and Countdown Timer Below Size Buttons */}
-                <div className="mt-6 p-5 bg-gradient-to-br from-[#1a6f3d] to-[#145c33] border border-gray-800 rounded-xl shadow-lg text-center text-white w-full max-w-md mx-auto flex flex-col items-center">
-                  <p className="text-lg sm:text-xl font-semibold sm:font-bold leading-snug">
-                    Exclusive Offer:  
-                  </p>
-                  <div className="flex justify-center items-center mt-2">
-                    <span className="px-2 w-[160px] h-[35px] rounded-[50px] overflow-hidden flex items-center justify-center gap-1 border-[1px] border-[#1a6f3d] code-container" style={{ background: 'linear-gradient(0deg, #1a6f3d 0%, #145c33 100%)', minWidth: '160px', whiteSpace: 'nowrap' }}>
-                      <p className="px-1 py0 p bg-[#FFC107] text-xs font-bold text-[#1a6f3d] uppercase code-text rounded-[50px]">USE CODE</p>
-                      <p className="text-xs font-bold text-white uppercase text-center flex items-center justify-center gap-1">
-                        <span>NEW</span>
-                        <button
-                          type="button"
-                          className="cursor-pointer transition-all duration-300 relative"
-                          onClick={handleCopy}
-                        >
-                          {isCopied ? (
-                            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-badge-check">
-                              <path d="M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z"></path>
-                              <path d="m9 12 2 2 4-4"></path>
-                            </svg>
-                          ) : (
-                            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 19 19" fill="none">
-                              <path d="M18.3672 6.86819C18.3672 6.0013 17.8611 5.24305 17.1315 4.87266C16.7405 4.64074 16.2358 4.77709 16.0142 5.17408C15.7973 5.56301 15.9353 6.0543 16.3235 6.27245C16.5808 6.34745 16.7536 6.57732 16.7536 6.86818L16.7536 16.1309C16.7536 16.4885 16.491 16.7511 16.1334 16.7511L6.8675 16.7511C6.58732 16.7511 6.36734 16.5896 6.28439 16.3479C6.06625 15.9596 5.57416 15.8216 5.18523 16.0386C4.78824 16.2601 4.65189 16.7649 4.88382 17.1559C5.2578 17.8729 6.0105 18.3679 6.8675 18.3679L16.1334 18.3679C17.3583 18.3679 18.3672 17.3559 18.3672 16.1309L18.3672 6.86819ZM14.3256 2.82901C14.3256 1.60406 13.3176 0.592041 12.0926 0.592041L2.82675 0.59204C1.6018 0.59204 0.592934 1.60406 0.592934 2.82901L0.592933 12.0917C0.592933 13.3167 1.60179 14.3287 2.82675 14.3287L12.0926 14.3287C13.3176 14.3287 14.3256 13.3167 14.3256 12.0917L14.3256 2.82901ZM12.7128 2.82901L12.7128 12.0917C12.7128 12.4494 12.4503 12.7119 12.0926 12.7119L2.82675 12.7119C2.4691 12.7119 2.20576 12.4494 2.20576 12.0917L2.20576 2.82901C2.20576 2.47136 2.4691 2.20881 2.82675 2.20881L12.0926 2.20881C12.4503 2.20881 12.7128 2.47136 12.7128 2.82901Z" fill="white"></path>
-                            </svg>
-                          )}
-                        </button>
-                      </p>
-                    </span>
-                  </div>
-                  <div className="text-lg sm:text-xl font-semibold sm:font-bold leading-snug">
-                          <p>
-                            for <span className="font-bold">25% Off</span>!
-                          </p>
-                  </div>
-                  <div className="mt-3 text-sm sm:text-base flex flex-col items-center gap-2 w-full">
-                    <span className="font-medium">⏳ Time Remaining:</span>
-                    <span className="font-mono bg-white text-[#1a6f3d] px-3 py-1 rounded font-semibold shadow-sm" id="countdown">
-                      {`${Math.floor(timeLeft / 86400)}d ${Math.floor((timeLeft % 86400) / 3600)}h ${Math.floor((timeLeft % 3600) / 60)}m ${timeLeft % 60}s`}
-                    </span>
-                  </div>
-                </div>
-              </div>             
+              </div>
               <div className="bg-white rounded-lg shadow-md p-4 sm:p-6 text-center" style={{ border: '1px solid #e5e7eb' }}>
                 <h2 className="text-2xl sm:text-4xl font-bold" style={{ color: '#1d8348', background: 'linear-gradient(90deg, #1d8348, #28a745)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>{price}</h2>
                 <p className="text-gray-500 mt-1 text-sm sm:text-base">{t('pricingTable.oneTimeFee')}</p>
@@ -880,107 +827,150 @@ function PricingTable() {
               </div>
             </div>
           </div>
+
+          {/* Discount Section - Moved to Bottom, Full Width */}
+          <div className="mt-8 p-5 bg-gradient-to-br from-[#1a6f3d] to-[#145c33] border border-gray-800 rounded-xl shadow-lg text-center text-white w-full max-w-7xl mx-auto">
+            <div className="flex flex-col sm:flex-row justify-center items-center gap-4 sm:gap-6 flex-wrap">
+              <p className="text-lg sm:text-xl font-semibold sm:font-bold leading-snug">
+                Exclusive Offer:
+              </p>
+              <div className="flex justify-center items-center">
+                <span className="px-2 w-[160px] h-[35px] rounded-[50px] overflow-hidden flex items-center justify-center gap-1 border-[1px] border-[#1a6f3d] code-container" style={{ background: 'linear-gradient(0deg, #1a6f3d 0%, #145c33 100%)', minWidth: '160px', whiteSpace: 'nowrap' }}>
+                  <p className="px-1 py-0 bg-[#FFC107] text-xs font-bold text-[#1a6f3d] uppercase code-text rounded-[50px]">USE CODE</p>
+                  <p className="text-xs font-bold text-white uppercase text-center flex items-center justify-center gap-1">
+                    <span>NEW</span>
+                    <button
+                      type="button"
+                      className="cursor-pointer transition-all duration-300 relative"
+                      onClick={handleCopy}
+                    >
+                      {isCopied ? (
+                        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-badge-check">
+                          <path d="M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z"></path>
+                          <path d="m9 12 2 2 4-4"></path>
+                        </svg>
+                      ) : (
+                        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 19 19" fill="none">
+                          <path d="M18.3672 6.86819C18.3672 6.0013 17.8611 5.24305 17.1315 4.87266C16.7405 4.64074 16.2358 4.77709 16.0142 5.17408C15.7973 5.56301 15.9353 6.0543 16.3235 6.27245C16.5808 6.34745 16.7536 6.57732 16.7536 6.86818L16.7536 16.1309C16.7536 16.4885 16.491 16.7511 16.1334 16.7511L6.8675 16.7511C6.58732 16.7511 6.36734 16.5896 6.28439 16.3479C6.06625 15.9596 5.57416 15.8216 5.18523 16.0386C4.78824 16.2601 4.65189 16.7649 4.88382 17.1559C5.2578 17.8729 6.0105 18.3679 6.8675 18.3679L16.1334 18.3679C17.3583 18.3679 18.3672 17.3559 18.3672 16.1309L18.3672 6.86819ZM14.3256 2.82901C14.3256 1.60406 13.3176 0.592041 12.0926 0.592041L2.82675 0.59204C1.6018 0.59204 0.592934 1.60406 0.592934 2.82901L0.592933 12.0917C0.592933 13.3167 1.60179 14.3287 2.82675 14.3287L12.0926 14.3287C13.3176 14.3287 14.3256 13.3167 14.3256 12.0917L14.3256 2.82901ZM12.7128 2.82901L12.7128 12.0917C12.7128 12.4494 12.4503 12.7119 12.0926 12.7119L2.82675 12.7119C2.4691 12.7119 2.20576 12.4494 2.20576 12.0917L2.20576 2.82901C2.20576 2.47136 2.4691 2.20881 2.82675 2.20881L12.0926 2.20881C12.4503 2.20881 12.7128 2.47136 12.7128 2.82901Z" fill="white"></path>
+                        </svg>
+                      )}
+                    </button>
+                  </p>
+                </span>
+              </div>
+              <div className="text-lg sm:text-xl font-semibold sm:font-bold leading-snug">
+                <p>
+                  for <span className="font-bold">25% Off</span>!
+                </p>
+              </div>
+              <div className="text-sm sm:text-base flex flex-col sm:flex-row items-center gap-2 sm:gap-4">
+                <span className="font-medium">⏳ Time Remaining:</span>
+                <span className="font-mono bg-white text-[#1a6f3d] px-3 py-1 rounded font-semibold shadow-sm" id="countdown">
+                  {formatTime(timeLeft)}
+                </span>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-      {/* Desktop separator */}
-      <div className="absolute bottom-0 left-0 w-full h-2 bg-gradient-to-r from-transparent via-[#1d8348] to-transparent hidden shadow-lg sm:block z-20" />
+      {/* <div className="absolute bottom-0 left-0 w-full h-2 bg-gradient-to-r from-transparent via-[#1d8348] to-transparent hidden shadow-lg sm:block z-20" /> */}
       <style jsx>{`
         @media (max-width: 640px) {
-        .code-container {
-          min-width: 160px;
-          padding: 0 2px;
-        }
-        .code-text {
-          font-size: 0.5rem; /* Smaller letters for phones */
-        }
-        .max-w-7xl {
-          padding-left: 0.5rem; /* Reduced padding to minimize cutoff */
-          padding-right: 0.5rem;
-        }
-        .grid {
-          display: flex;
-          flex-direction: column;
-        }
-        .lg\\:col-span-3,
-        .lg\\:col-span-9,
-        .lg\\:col-span-12 {
-          width: 100%;
-        }
-        .table-container {
-          overflow-x: auto; /* Allow horizontal scrolling if table overflows */
-          width: 100%;
-          -webkit-overflow-scrolling: touch; /* Smooth scrolling on mobile */
-        }
-        .mobile-table {
-          padding-bottom: 40px;
-          padding-left: 8px; /* Add padding to prevent Swiper cutoff */
-          padding-right: 8px;
-        }
-        .swiper-button-next,
-        .swiper-button-prev {
-          width: 24px;
-          height: 24px;
-          background: rgb(255, 255, 255);
-          border-radius: 50%;
-          color: #1d8348;
-          margin-top: 0;
-          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-          transition: background 0.3s ease, transform 0.3s ease;
-        }
-        .swiper-button-prev {
-          left: 2px; /* Adjusted to prevent cutoff */
-        }
-        .swiper-button-next {
-          right: 2px; /* Adjusted to prevent cutoff */
-        }
-        .swiper-button-next:hover,
-        .swiper-button-prev:hover {
-          background: rgb(190, 190, 190);
-          transform: scale(1.1);
-        }
-        .swiper-button-next::after,
-        .swiper-button-prev::after {
-          font-size: 12px;
-          font-weight: bold;
-        }
-        .swiper-pagination-bullet {
+          .code-container {
+            min-width: 160px;
+            padding: 0 2px;
+          }
+          .code-text {
+            font-size: 0.5rem;
+          }
+          .max-w-7xl {
+            padding-left: 0.5rem;
+            padding-right: 0.5rem;
+          }
+          .grid {
+            display: flex;
+            flex-direction: column;
+          }
+          .lg\\:col-span-3,
+          .lg\\:col-span-9,
+          .lg\\:col-span-12 {
+            width: 100%;
+          }
+          .table-container {
+            overflow-x: auto;
+            width: 100%;
+            -webkit-overflow-scrolling: touch;
+          }
+          .mobile-table {
+            padding-bottom: 40px;
+            padding-left: 8px;
+            padding-right: 8px;
+          }
+          .swiper-button-next,
+          .swiper-button-prev {
+            width: 24px;
+            height: 24px;
+            background: rgb(255, 255, 255);
+            border-radius: 50%;
+            color: #1d8348;
+            margin-top: 0;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+            transition: background 0.3s ease, transform 0.3s ease;
+          }
+          .swiper-button-prev {
+            left: 2px;
+          }
+          .swiper-button-next {
+            right: 2px;
+          }
+          .swiper-button-next:hover,
+          .swiper-button-prev:hover {
+            background: rgb(190, 190, 190);
+            transform: scale(1.1);
+          }
+          .swiper-button-next::after,
+          .swiper-button-prev::after {
+            font-size: 12px;
+            font-weight: bold;
+          }
+          .swiper-pagination-bullet {
           background: #1d8348;
           width: 8px;
           height: 8px;
-        }
-        .swiper-pagination-bullet-active {
-          background: #145c33;
-        }
-        th,
-        td {
-          padding: 0.5rem; /* Reduced padding for mobile */
-          min-width: 80px; /* Reduced min-width to fit smaller screens */
-        }
-        .text-5xl {
-          font-size: 2rem;
-        }
-        .ps_wrapper p {
-          font-size: 0.875rem;
-        }
-      }
-      .animate-change {
-        animation: fadeIn 0.3s ease-in-out;
-      }
-      @keyframes fadeIn {
-        0% {
-          opacity: 0;
-        }
-        100% {
-          opacity: 1;
-        }
-      }
-      /* Ensure the main container doesn't cause overflow */
-      #start-challenge {
-        overflow-x: hidden; /* Prevent horizontal overflow */
-      }
+          }
+          .swiper-pagination-bullet-active {
+            background: #145c33;
+          }
+          th,
+          td {
+            padding: 0.5rem; /* Reduced padding for mobile */
+            min-width: 80px; /* Reduced min-width to fit smaller screens */
+          }
+          .text-5xl {
+            font-size: 2rem;
+          }
+          .ps_wrapper p {
+            font-size: 0.875rem;
+          }
+          }
+          .animate-change {
+            animation: fadeIn 0.3s ease-in-out;
+          }
+          @keyframes fadeIn {
+            0% {
+              opacity: 0;
+            }
+            100% {
+              opacity: 1;
+            }
+          }
+          /* Ensure the main container doesn't cause overflow */
+          #start-challenge {
+            overflow-x: hidden; /* Prevent horizontal overflow */
+          }
       `}</style>
     </div>
   );
 }
 
-export default PricingTable;
+export default PricingTable;  

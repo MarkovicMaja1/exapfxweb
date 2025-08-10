@@ -56,7 +56,7 @@ const HowItWorks = () => {
       {/* ---- subtle radial blobs in the background ------------------- */}
       <div className="absolute inset-0 bg-black/10 z-0" />
       <div className="absolute inset-0 opacity-5 sm:opacity-10 hidden sm:block">
-        <div className="absolute w-64 h-64 bg-green-400 rounded-full -top-32 -left-32 transform rotate-45 blur-xl" />
+        {/* <div className="absolute w-64 h-64 bg-green-400 rounded-full -top-32 -left-32 transform rotate-45 blur-xl" /> */}
         <div className="absolute w-48 h-48 bg-blue-300 rounded-full top-1/4 right-1/4 transform -rotate-15 blur-xl" />
         <div className="absolute w-72 h-72 bg-gray-200 rounded-full bottom-1/3 left-1/4 transform rotate-30 blur-xl" />
       </div>
