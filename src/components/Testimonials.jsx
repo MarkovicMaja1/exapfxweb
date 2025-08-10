@@ -241,7 +241,7 @@ const Testimonials = () => {
 
       <section className="w-full bg-[#131313] relative">
         <h2
-          className="text-4xl lg:text-5xl font-extrabold tracking-tight text-center text-white mb-12 uppercase"
+          className="text-4xl lg:text-5xl font-extrabold tracking-tight text-center text-white pb-[80px] uppercase"
           data-aos="fade-up"
         >
           What traders say about ECAPFX
@@ -265,7 +265,7 @@ const Testimonials = () => {
           <div className="absolute right-0 top-0 h-full w-20 md:w-40 z-10 pointer-events-none bg-gradient-to-l from-[#131313] to-transparent"></div>
         </div>
 
-        <div className="marquee-row w-full mx-auto max-w-7xl pb-14 px-6 lg:px-12 overflow-hidden relative">
+        <div className="marquee-row w-full mx-auto max-w-7xl pb-14 px-6 lg:px-12 overflow-hidden relative pb-[140px]">
           <div className="absolute left-0 top-0 h-full w-20 z-10 pointer-events-none bg-gradient-to-r from-[#131313] to-transparent"></div>
           <div
             ref={reverseInnerRef}
@@ -284,7 +284,7 @@ const Testimonials = () => {
           <div className="absolute right-0 top-0 h-full w-20 md:w-40 z-10 pointer-events-none bg-gradient-to-l from-[#131313] to-transparent"></div>
         </div>
 
-        <div className="absolute bottom-0 left-0 w-full h-2 bg-gradient-to-r from-transparent via-[#1d8348] to-transparent hidden shadow-lg sm:block z-20" />
+        {/* <div className="absolute bottom-0 left-0 w-full h-2 bg-gradient-to-r from-transparent via-[#1d8348] to-transparent hidden shadow-lg sm:block z-20" /> */}
       </section>
     </>
   );

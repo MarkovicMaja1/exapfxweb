@@ -446,7 +446,7 @@ function PricingTable() {
   return (
     <div
       id="start-challenge"
-      className="rounded-rt-[40px] relative z-0 pt-[90px] bg-[#151515] transition duration-500 ease-in-out overflow-hidden pb-[160px]"
+      className="rounded-rt-[40px] relative z-0 pt-[90px] bg-[#151515] transition duration-500 ease-in-out overflow-hidden pb-[100px]"
     >
       <div
         className="absolute left-[50%] top-0 h-full w-[1500px] sm:w-[2000px] xl:w-[3061px] translate-x-[-50%]"
@@ -836,7 +836,7 @@ function PricingTable() {
               </p>
               <div className="flex justify-center items-center">
                 <span className="px-2 w-[160px] h-[35px] rounded-[50px] overflow-hidden flex items-center justify-center gap-1 border-[1px] border-[#1a6f3d] code-container" style={{ background: 'linear-gradient(0deg, #1a6f3d 0%, #145c33 100%)', minWidth: '160px', whiteSpace: 'nowrap' }}>
-                  <p className="px-1 py-0 bg-[#FFC107] text-xs font-bold text-[#1a6f3d] uppercase code-text rounded-[50px]">USE CODE</p>
+                  <p className="px-1 py-0 bg-[#FF0000] text-xs font-bold text-[#FFFFFF] uppercase code-text rounded-[50px]">USE CODE</p>
                   <p className="text-xs font-bold text-white uppercase text-center flex items-center justify-center gap-1">
                     <span>NEW</span>
                     <button
