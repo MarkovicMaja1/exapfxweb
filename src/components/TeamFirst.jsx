@@ -6,6 +6,8 @@ import carlypearn from '../assets/Carlycard.png';
 import Nebocard from '../assets/Nebocard.png';
 import Majacard from '../assets/Majacard.png';
 import Nikolacard from '../assets/Nikolacard.png';
+import serbiaFlag from '../assets/serbian.jpg';
+import englandFlag from '../assets/england.jpg';
 
 const TeamCard = ({ post }) => {
   const { t } = useTranslation();
@@ -23,13 +25,21 @@ const TeamCard = ({ post }) => {
       <div className="bg-white rounded-lg shadow-lg overflow-hidden h-full transition-transform duration-300 border-t-4 border-green-600 flex flex-col">
         <div className="p-4 flex flex-col flex-grow">
           <div className="flex justify-center mb-4">
-            <div className="relative w-[180px] h-[180px]">
+            <div className="relative w-[180px] h-[180px] group">
+              {/* Flag background */}
+              <img
+                src={post.flag}
+                alt={`${post.title}'s country flag`}
+                className="absolute inset-0 w-full h-full rounded-full object-cover opacity-1 transition-opacity duration-300"
+              />
+              {/* Main profile image */}
               <img
                 src={post.image}
                 alt={`${post.title} Avatar`}
-                className="w-[180px] h-[180px] rounded-full object-cover"
+                className="relative w-[180px] h-[180px] rounded-full object-cover z-10 group-hover:opacity-80 transition-opacity duration-300"
               />
-              <div className="absolute inset-0 rounded-full border-4 border-transparent transition-all duration-300 hover:border-gradient"></div>
+              {/* Gradient border */}
+              <div className="absolute inset-0 rounded-full border-4 border-transparent group-hover:border-gradient transition-all duration-300"></div>
             </div>
           </div>
           <h4 className="mt-1 text-xl font-bold text-gray-900 leading-tight line-clamp-1 min-h-[1.5rem]">
@@ -44,6 +54,7 @@ const TeamCard = ({ post }) => {
               <button
                 className="text-[#145c33] hover:text-[#03a84e] text-sm font-medium ml-2"
                 onClick={() => setIsExpanded(!isExpanded)}
+                aria-label={isExpanded ? t('team.readLess') : t('team.readMore')}
               >
                 {isExpanded ? t('team.readLess') : t('team.readMore')}
               </button>
@@ -71,52 +82,57 @@ const Team = () => {
   const [isPlaying, setIsPlaying] = useState(true);
 
   const blogPosts = [
-    {
-      id: 1,
-      key: 'michaelPearn',
-      category: t(`team.${'michaelPearn'}.category`),
-      title: t(`team.${'michaelPearn'}.title`),
-      description: t(`team.${'michaelPearn'}.description`),
-      linkedin: 'https://www.linkedin.com/in/michael-pearn-4652ab8a/',
-      image: Mikecard
-    },
-    {
-      id: 2,
-      key: 'carlyPearn',
-      category: t(`team.${'carlyPearn'}.category`),
-      title: t(`team.${'carlyPearn'}.title`),
-      description: t(`team.${'carlyPearn'}.description`),
-      linkedin: '#',
-      image: carlypearn
-    },
-    {
-      id: 3,
-      key: 'nebojsaSladoje',
-      category: t(`team.${'nebojsaSladoje'}.category`),
-      title: t(`team.${'nebojsaSladoje'}.title`),
-      description: t(`team.${'nebojsaSladoje'}.description`),
-      linkedin: 'https://www.linkedin.com/in/nebojsa-sladoje',
-      image: Nebocard
-    },
-    {
-      id: 4,
-      key: 'majaMarkovic',
-      category: t(`team.${'majaMarkovic'}.category`),
-      title: t(`team.${'majaMarkovic'}.title`),
-      description: t(`team.${'majaMarkovic'}.description`),
-      linkedin: 'https://www.linkedin.com/in/maja-markovic-75580a244/',
-      image: Majacard
-    },
-    {
-      id: 5,
-      key: 'nikolaIlic',
-      category: t(`team.${'nikolaIlic'}.category`),
-      title: t(`team.${'nikolaIlic'}.title`),
-      description: t(`team.${'nikolaIlic'}.description`),
-      linkedin: 'https://www.linkedin.com/in/nikola-ilic-900a32138/',
-      image: Nikolacard
-    },
-  ];
+  {
+    id: 1,
+    key: 'michaelPearn',
+    category: t(`team.${'michaelPearn'}.category`),
+    title: t(`team.${'michaelPearn'}.title`),
+    description: t(`team.${'michaelPearn'}.description`),
+    linkedin: 'https://www.linkedin.com/in/michael-pearn-4652ab8a/',
+    image: Mikecard,
+    flag: englandFlag
+  },
+  {
+    id: 2,
+    key: 'carlyPearn',
+    category: t(`team.${'carlyPearn'}.category`),
+    title: t(`team.${'carlyPearn'}.title`),
+    description: t(`team.${'carlyPearn'}.description`),
+    linkedin: '#',
+    image: carlypearn,
+    flag: englandFlag
+  },
+  {
+    id: 3,
+    key: 'nebojsaSladoje',
+    category: t(`team.${'nebojsaSladoje'}.category`),
+    title: t(`team.${'nebojsaSladoje'}.title`),
+    description: t(`team.${'nebojsaSladoje'}.description`),
+    linkedin: 'https://www.linkedin.com/in/nebojsa-sladoje',
+    image: Nebocard,
+    flag: serbiaFlag
+  },
+  {
+    id: 4,
+    key: 'majaMarkovic',
+    category: t(`team.${'majaMarkovic'}.category`),
+    title: t(`team.${'majaMarkovic'}.title`),
+    description: t(`team.${'majaMarkovic'}.description`),
+    linkedin: 'https://www.linkedin.com/in/maja-markovic-75580a244/',
+    image: Majacard,
+    flag: serbiaFlag
+  },
+  {
+    id: 5,
+    key: 'nikolaIlic',
+    category: t(`team.${'nikolaIlic'}.category`),
+    title: t(`team.${'nikolaIlic'}.title`),
+    description: t(`team.${'nikolaIlic'}.description`),
+    linkedin: 'https://www.linkedin.com/in/nikola-ilic-900a32138/',
+    image: Nikolacard,
+    flag: serbiaFlag
+  },
+];
 
   const nextSlide = useCallback(() => {
     setCurrentIndex((prevIndex) => {
