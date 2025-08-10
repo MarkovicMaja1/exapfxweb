@@ -60,7 +60,7 @@ section {
 }
 
 h1 {
-  font-size: 3.5rem !important; /* 56px */
+  font-size: 3.5rem; /* 56px */
   font-weight: 700 !important;
 }
 h2 {
