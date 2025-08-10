@@ -5,20 +5,21 @@
   },
   "home": {
     "heading": {
-      "tradeWithPurpose": "Trade with Purpose Grow with ECAPFX"
+      "tradeWithPurpose": "Get Funded and Earn with EcapFX"
     },
     "title": {
       "empowerYourTrading": "Empower Your Trading",
-      "realFunding": "Real Funding &",
+      "realFunding": "With Real Funding",
       "supportingSustainability": "Supporting Sustainability"
     },
     "paragraph": {
-      "turnSimulatedTrading": "Turn Simulated Trading Into Real Profits. Turn Your Trading Talent Into Funded Success With ECAPFX & Earn Up to 90% Of Your Profits."
+      "turnSimulatedTrading": "Turn your practice into real payouts, Master your skills on ECAPFX’s simulated platform",
+      "turnSimulatedTrading2": "trade up to $200K and keep up to 90% of your profits"
     },
     "button": {
       "selectPlan": "Select Plan",
-      "getStarted": "Get Started",
-      "startChallenge": "Challenges"
+      "getStarted": "FREE TRIAL",
+      "startChallenge": "ECAP Challenge"
     },
     "disclaimer": {
       "text": "ECAPFX is not a financial institution · This website does not promote or sell any financial products or services"
@@ -38,6 +39,10 @@
       "tradingView": {
         "alt": "Trading View Integration"
       }
+    },
+    "seo": {
+      "title": "ECAPFX - Empower Your Trading",
+      "description": "Join ECAPFX to trade with purpose, access real funding, and support sustainability."
     }
   },
   "about": {

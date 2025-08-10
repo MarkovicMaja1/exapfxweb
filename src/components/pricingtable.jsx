@@ -891,7 +891,7 @@ function PricingTable() {
           padding: 0 2px;
         }
         .code-text {
-          font-size: 0.rem; /* Smaller letters for phones */
+          font-size: 0.5rem; /* Smaller letters for phones */
         }
         .max-w-7xl {
           padding-left: 0.5rem; /* Reduced padding to minimize cutoff */
