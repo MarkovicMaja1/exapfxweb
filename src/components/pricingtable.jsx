@@ -545,7 +545,7 @@ function PricingTable() {
       <div className="z-10 relative">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
           <div className="text-center">
-            <h2 className="text-5xl lg:text-5xl font-extrabold tracking-tight text-center text-white">
+            <h2 className="text-5xl lg:text-5xl font-extrabold tracking-tight text-center text-white uppercase">
               {t('pricingTable.chooseTheBestPlan')}
             </h2>
             <h2 className="mt-2 text-5xl lg:text-5xl font-extrabold tracking-tight text-center">

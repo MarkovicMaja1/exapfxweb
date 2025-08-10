@@ -18,7 +18,7 @@ const Sustainability = () => {
         <div className="text-center sustainabillityPadding">
           <div className="mx-auto max-w-screen-xl relative isolate">
             <div className="mx-auto lg:max-w-4xl text-center">
-              <h2 className="mt-2 text-4xl lg:text-5xl font-extrabold tracking-tight text-center">
+              <h2 className="mt-2 text-4xl lg:text-5xl font-extrabold tracking-tight text-center uppercase">
                 {t('sustainability.hero.title')}
               </h2>
             </div>

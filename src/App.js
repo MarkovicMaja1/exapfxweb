@@ -126,15 +126,15 @@ function App() {
                 <div id="pricingtable">
                   <PricingTable />
                 </div>
+                <div id="testimonials">
+                  <Testimonials />
+                </div>
                 <div id="howitworks">
                   <Howitworks />
                 </div>
                 <div id="about">
                   <About />
                 </div>
-                {/* <div id="testimonials">
-                  <Testimonials />
-                </div> */}
                 <div id="goals">
                   <Goals />
                 </div>

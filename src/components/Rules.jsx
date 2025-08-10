@@ -179,7 +179,7 @@ const Rules = () => {
         transition={{ duration: 0.6, ease: [0.25, 0.1, 0.25, 1] }}
       >
         <div className="mb-12 mx-auto lg:max-w-4xl">
-          <h2 className="mb-4 text-3xl sm:text-4xl font-extrabold tracking-tight text-black">
+          <h2 className="mb-4 text-3xl sm:text-4xl font-extrabold tracking-tight text-black uppercase">
             {t('rules.title')}
           </h2>
           <p className="text-lg sm:text-xl font-medium tracking-tight text-black">

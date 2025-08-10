@@ -10,7 +10,7 @@ const Discord = () => {
     <div style={{ backgroundColor: "rgb(21, 21, 21)" }}>
       {/* Title Container */}
       <div className="text-center pt-24" style={{ backgroundColor: "rgb(21, 21, 21)" }}>
-        <h2 className="text-4xl font-bold mb-4 text-white">{t('discord.title')}</h2>
+        <h2 className="text-4xl font-bold mb-4 text-white uppercase">{t('discord.title')}</h2>
       </div>
       
       {/* Main Content */}

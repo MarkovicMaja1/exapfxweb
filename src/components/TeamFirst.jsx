@@ -76,7 +76,7 @@ const Team = () => {
   return (
     <section className="bg-[#151515] py-24 text-center">
       <div className="mx-auto lg:max-w-4xl text-center">
-        <h2 className="mb-4 text-4xl font-extrabold tracking-tight text-center text-white">
+        <h2 className="mb-4 text-4xl font-extrabold tracking-tight text-center text-white uppercase">
           {t('team.hero.title')}
         </h2>
         <p className="mb-24 text-4xl font-extrabold tracking-tight text-center text-white">

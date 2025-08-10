@@ -65,13 +65,13 @@ const HowItWorks = () => {
       /*  Hero                                                              */
       /* ------------------------------------------------------------------ */}
       <motion.div
-        className="mx-auto max-w-7xl px-4 py-24 sm:px-6 lg:px-8 lg:py-24 relative z-10 text-center"
+        className="mx-auto max-w-7xl mt-5 px-4 py-24 sm:px-6 lg:px-8 lg:py-24 relative z-10 text-center"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, ease: [0.25, 0.1, 0.25, 1] }}
       >
         <div className="mb-14 mx-auto lg:max-w-4xl">
-          <h2 className="mb-4 text-4xl font-extrabold tracking-tight text-black">
+          <h2 className="mb-4 text-4xl font-extrabold tracking-tight text-black uppercase">
             {t('howItWorks.hero.title')}
           </h2>
           <p className="text-xl font-medium tracking-tight text-black">
