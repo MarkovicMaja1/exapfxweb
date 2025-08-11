@@ -241,7 +241,7 @@ const Testimonials = () => {
 
       <section className="w-full bg-[#ffffff] relative">
         <h2
-          className="text-4xl lg:text-5xl font-extrabold tracking-tight text-center text-white pb-[80px] uppercase"
+          className="text-4xl lg:text-5xl font-extrabold tracking-tight text-center text-black pt-[110px] pb-[80px] uppercase"
           data-aos="fade-up"
         >
           What traders say about ECAPFX
