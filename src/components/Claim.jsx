@@ -17,98 +17,115 @@ const Claim = () => {
       <h4 className="text-4xl text-center font-bold text-[#1d8348] mt-20 mb-10">{t('claimPolicy.title')}</h4>
       <p className="text-2xl font-semibold text-black-200 mt-10 mb-10">{t('claimPolicy.header')}</p>
       <p className="text-black-400 mb-10">
-        <strong className="text-black">{t('claimPolicy.effectiveDateLabel')}</strong> 11/04/2025<br />
-        <strong className="text-black">{t('claimPolicy.regulatoryAlignmentLabel')}</strong> UK Financial Conduct Authority (FCA) – DISP sourcebook
+        <strong className="text-black">{t('claimPolicy.effectiveDateLabel')}</strong> {t('claimPolicy.effectiveDate')}<br />
+        <strong className="text-black">{t('claimPolicy.regulatoryReferenceLabel')}</strong> {t('claimPolicy.regulatoryReference')}
       </p>
 
       <section className="mb-8">
         <h6 className="text-xl font-semibold text-black-200 mb-2">{t('claimPolicy.sections.purpose.title')}</h6>
         <p className="text-black-400">
-          {t('claimPolicy.sections.purpose.text')}
+          {t('claimPolicy.sections.purpose.text1')}
           <br />
-          {t('claimPolicy.sections.purpose.appliesTo')}
-        </p>
-        <ul className="list-disc pl-6 text-black-400">
-          {t('claimPolicy.sections.purpose.items', { returnObjects: true }).map((item, index) => (
-            <li key={index} className="text-black">{item}</li>
-          ))}
-        </ul>
-      </section>
-
-      <section className="mb-8">
-        <h6 className="text-xl font-semibold text-black-200 mb-2">{t('claimPolicy.sections.definition.title')}</h6>
-        <p className="text-black-400">
-          {t('claimPolicy.sections.definition.text')}<strong className="text-black">{t('claimPolicy.sections.definition.complaint')}</strong> {t('claimPolicy.sections.definition.definition')}
+          {t('claimPolicy.sections.purpose.text2')}
           <br />
-          {t('claimPolicy.sections.definition.claim')}<strong className="text-black">{t('claimPolicy.sections.definition.claimText')}</strong> refers to disputes around service delivery or trading progression eligibility.
+          {t('claimPolicy.sections.purpose.text3')}
         </p>
       </section>
 
       <section className="mb-8">
-        <h6 className="text-xl font-semibold text-black-200 mb-2">{t('claimPolicy.sections.howToComplain.title')}</h6>
+        <h6 className="text-xl font-semibold text-black-200 mb-2">{t('claimPolicy.sections.definitions.title')}</h6>
         <p className="text-black-400">
-          {t('claimPolicy.sections.howToComplain.textPrefix')}<a href="mailto:complaints@ecapfx.com" className="text-[#1d8348] hover:text-[#f9e79f] underline">{t('claimPolicy.sections.howToComplain.email')}</a>{t('claimPolicy.sections.howToComplain.textSuffix')}
+          {t('claimPolicy.sections.definitions.text1')} <strong className="text-black">{t('claimPolicy.sections.definitions.complaintBold')}</strong> {t('claimPolicy.sections.definitions.complaintText')}
+          <br />
+          {t('claimPolicy.sections.definitions.text2')} <strong className="text-black">{t('claimPolicy.sections.definitions.claimBold')}</strong> {t('claimPolicy.sections.definitions.claimText')}
+          <br />
+          {t('claimPolicy.sections.definitions.text3')} <strong className="text-black">{t('claimPolicy.sections.definitions.eligibleBold')}</strong> {t('claimPolicy.sections.definitions.eligibleText')}
+        </p>
+      </section>
+
+      <section className="mb-8">
+        <h6 className="text-xl font-semibold text-black-200 mb-2">{t('claimPolicy.sections.scope.title')}</h6>
+        <p className="text-black-400">
+          {t('claimPolicy.sections.scope.text')}
         </p>
         <ul className="list-disc pl-6 text-black-400">
-          {t('claimPolicy.sections.howToComplain.items', { returnObjects: true }).map((item, index) => (
+          {t('claimPolicy.sections.scope.items', { returnObjects: true }).map((item, index) => (
             <li key={index} className="text-black">{item}</li>
           ))}
         </ul>
       </section>
 
       <section className="mb-8">
-        <h6 className="text-xl font-semibold text-black-200 mb-2">{t('claimPolicy.sections.timelines.title')}</h6>
+        <h6 className="text-xl font-semibold text-black-200 mb-2">{t('claimPolicy.sections.submission.title')}</h6>
+        <p className="text-black-400">
+          {t('claimPolicy.sections.submission.text1')}<a href="mailto:complaints@ecapfx.com" className="text-[#1d8348] hover:text-[#f9e79f] underline">{t('claimPolicy.sections.contact.complaintsEmail')}</a>.
+          <br />
+          {t('claimPolicy.sections.submission.text2')}
+        </p>
         <ul className="list-disc pl-6 text-black-400">
-          {t('claimPolicy.sections.timelines.items', { returnObjects: true }).map((item, index) => (
+          {t('claimPolicy.sections.submission.items', { returnObjects: true }).map((item, index) => (
             <li key={index} className="text-black">{item}</li>
           ))}
         </ul>
       </section>
 
       <section className="mb-8">
-        <h6 className="text-xl font-semibold text-black-200 mb-2">{t('claimPolicy.sections.reviewProcess.title')}</h6>
-        <ol className="list-decimal pl-6 text-black-400">
-          {t('claimPolicy.sections.reviewProcess.steps', { returnObjects: true }).map((step, index) => (
-            <li key={index} className="text-black">{step}</li>
+        <h6 className="text-xl font-semibold text-black-200 mb-2">{t('claimPolicy.sections.acknowledgement.title')}</h6>
+        <ul className="list-disc pl-6 text-black-400">
+          {t('claimPolicy.sections.acknowledgement.items', { returnObjects: true }).map((item, index) => (
+            <li key={index} className="text-black">{item}</li>
           ))}
-        </ol>
+        </ul>
+      </section>
+
+      <section className="mb-8">
+        <h6 className="text-xl font-semibold text-black-200 mb-2">{t('claimPolicy.sections.internalReview.title')}</h6>
+        <ul className="list-disc pl-6 text-black-400">
+          {t('claimPolicy.sections.internalReview.items', { returnObjects: true }).map((item, index) => (
+            <li key={index} className="text-black">{item}</li>
+          ))}
+        </ul>
       </section>
 
       <section className="mb-8">
         <h6 className="text-xl font-semibold text-black-200 mb-2">{t('claimPolicy.sections.escalation.title')}</h6>
         <p className="text-black-400">
-          {t('claimPolicy.sections.escalation.text')}
+          {t('claimPolicy.sections.escalation.text1')}
+          <br />
+          {t('claimPolicy.sections.escalation.text2')}
         </p>
         <ul className="list-disc pl-6 text-black-400">
-          <li className="text-black">Website: <a href="https://www.financial-ombudsman.org.uk" className="text-[#1d8348] hover:text-[#f9e79f] underline">{t('claimPolicy.sections.escalation.website')}</a></li>
-          <li className="text-black">Email: {t('claimPolicy.sections.escalation.email')}</li>
-          <li className="text-black">Phone: {t('claimPolicy.sections.escalation.phone')}</li>
-          <li className="text-black">Address: {t('claimPolicy.sections.escalation.address')}</li>
+          <li className="text-black">{t('claimPolicy.sections.escalation.websiteLabel')} <a href="https://www.financial-ombudsman.org.uk" className="text-[#1d8348] hover:text-[#f9e79f] underline">{t('claimPolicy.sections.escalation.website')}</a></li>
+          <li className="text-black">{t('claimPolicy.sections.escalation.emailLabel')} <a href="mailto:complaint.info@financial-ombudsman.org.uk" className="text-[#1d8348] hover:text-[#f9e79f] underline">{t('claimPolicy.sections.contact.complaintsEmail2')}</a></li>
+          <li className="text-black">{t('claimPolicy.sections.escalation.phoneLabel')} {t('claimPolicy.sections.escalation.phone')}</li>
+          <li className="text-black">{t('claimPolicy.sections.escalation.addressLabel')} {t('claimPolicy.sections.escalation.address')}</li>
         </ul>
-        <p className="text-black-400 mt-2">{t('claimPolicy.sections.escalation.referral')}</p>
       </section>
 
       <section className="mb-8">
-        <h6 className="text-xl font-semibold text-black-200 mb-2">{t('claimPolicy.sections.misuse.title')}</h6>
-        <ul className="list-disc pl-6 text-black-400">
-          {t('claimPolicy.sections.misuse.items', { returnObjects: true }).map((item, index) => (
-            <li key={index} className="text-black">{item}</li>
-          ))}
-        </ul>
+        <h6 className="text-xl font-semibold text-black-200 mb-2">{t('claimPolicy.sections.malicious.title')}</h6>
+        <p className="text-black-400">
+          {t('claimPolicy.sections.malicious.text')}
+        </p>
       </section>
 
       <section className="mb-8">
         <h6 className="text-xl font-semibold text-black-200 mb-2">{t('claimPolicy.sections.intellectualProperty.title')}</h6>
+        <p className="text-black-400">
+          {t('claimPolicy.sections.intellectualProperty.text')}
+        </p>
         <ul className="list-disc pl-6 text-black-400">
           {t('claimPolicy.sections.intellectualProperty.items', { returnObjects: true }).map((item, index) => (
             <li key={index} className="text-black">{item}</li>
           ))}
         </ul>
-        <p className="text-black-400 mt-2">{t('claimPolicy.sections.intellectualProperty.review')}</p>
       </section>
 
       <section className="mb-8">
         <h6 className="text-xl font-semibold text-black-200 mb-2">{t('claimPolicy.sections.fcaPrinciples.title')}</h6>
+        <p className="text-black-400">
+          {t('claimPolicy.sections.fcaPrinciples.text')}
+        </p>
         <ul className="list-disc pl-6 text-black-400">
           {t('claimPolicy.sections.fcaPrinciples.items', { returnObjects: true }).map((item, index) => (
             <li key={index} className="text-black">{item}</li>
@@ -118,10 +135,11 @@ const Claim = () => {
 
       <section className="mb-8">
         <h6 className="text-xl font-semibold text-black-200 mb-2">{t('claimPolicy.sections.contact.title')}</h6>
-        <p className="text-black-400">
-          Email: <a href="mailto:contact@ecapfx.com" className="text-[#1d8348] hover:text-[#f9e79f] underline">{t('claimPolicy.sections.contact.email')}</a><br />
-          Website: <a href="https://www.ecapfx.com" className="text-[#1d8348] hover:text-[#f9e79f] underline">{t('claimPolicy.sections.contact.website')}</a>
-        </p>
+        <ul className="list-disc pl-6 text-black-400">
+          <li className="text-black">{t('claimPolicy.sections.contact.complaintsLabel')} <a href="mailto:complaints@ecapfx.com" className="text-[#1d8348] hover:text-[#f9e79f] underline">{t('claimPolicy.sections.contact.complaintsEmail')}</a></li>
+          <li className="text-black">{t('claimPolicy.sections.contact.generalLabel')} <a href="mailto:contact@ecapfx.com" className="text-[#1d8348] hover:text-[#f9e79f] underline">{t('claimPolicy.sections.contact.generalEmail')}</a></li>
+          <li className="text-black">{t('claimPolicy.sections.contact.websiteLabel')} <a href="https://www.ecapfx.com" className="text-[#1d8348] hover:text-[#f9e79f] underline">{t('claimPolicy.sections.contact.website')}</a></li>
+        </ul>
       </section>
 
       <section className="mb-8 text-center">

@@ -26,19 +26,10 @@ const TermsAndConditions = () => {
         <br />
         <strong className="text-black">{t('termsAndConditions.jurisdictionLabel')}</strong> {t('termsAndConditions.jurisdiction')}
       </p>
-      <p className="text-black-400 mb-10">{t('termsAndConditions.intro')}</p>
 
       <section className="mb-8">
         <h6 className="text-xl font-semibold text-black-200 mb-2">{t('termsAndConditions.sections.about.title')}</h6>
-        <p className="text-black-400">
-          {t('termsAndConditions.sections.about.text1', 'ECAPFX Proprietary Firm is a financial technology and prop trading company.')}{' '}
-          <br />
-          {t('termsAndConditions.sections.about.text2', 'We are')}{' '}
-          <strong className="text-black">{t('termsAndConditions.sections.about.notABroker', 'not a broker')}</strong>{' '}
-          {t('termsAndConditions.sections.about.text3', 'and')}{' '}
-          <strong className="text-black">{t('termsAndConditions.sections.about.doNotOfferAdvice', 'do not offer investment advice')}</strong>{' '}
-          {t('termsAndConditions.sections.about.text4', '. All trading activities are simulated or executed through third-party brokerage accounts.')}
-        </p>
+        <p className="text-black-400">{t('termsAndConditions.sections.about.text')}</p>
       </section>
 
       <section className="mb-8">
@@ -49,9 +40,7 @@ const TermsAndConditions = () => {
             <li key={index} className="text-black">{item}</li>
           ))}
         </ul>
-        <p className="text-black-400 mt-2">
-          {t('termsAndConditions.sections.eligibility.text2', 'By registering, you confirm that all information you provide is truthful and accurate.')}
-        </p>
+        <p className="text-black-400 mt-2">{t('termsAndConditions.sections.eligibility.text2')}</p>
       </section>
 
       <section className="mb-8">
@@ -73,9 +62,7 @@ const TermsAndConditions = () => {
             <li key={index} className="text-black">{item}</li>
           ))}
         </ul>
-        <p className="text-black-400 mt-2">
-          {t('termsAndConditions.sections.fundedAccounts.text2', 'Funded accounts are not personal brokerage accounts, and traders do not own the provided capital.')}
-        </p>
+        <p className="text-black-400 mt-2">{t('termsAndConditions.sections.fundedAccounts.text2')}</p>
       </section>
 
       <section className="mb-8">
@@ -86,9 +73,7 @@ const TermsAndConditions = () => {
             <li key={index} className="text-black">{item}</li>
           ))}
         </ul>
-        <p className="text-black-400 mt-2">
-          {t('termsAndConditions.sections.feesAndPayments.text2', 'All payments must be made through approved methods on our website.')}
-        </p>
+        <p className="text-black-400 mt-2">{t('termsAndConditions.sections.feesAndPayments.text2')}</p>
       </section>
 
       <section className="mb-8">
@@ -128,8 +113,7 @@ const TermsAndConditions = () => {
           {t('termsAndConditions.sections.privacy.text2')}{' '}
           <Link to="/cookies" className="text-[#1d8348] hover:text-[#f9e79f] underline" aria-label="View Cookie Policy">
             {t('termsAndConditions.sections.privacy.cookiePolicyLink')}
-          </Link>{' '}
-          {t('termsAndConditions.sections.privacy.text3')}
+          </Link>
         </p>
       </section>
 
@@ -141,8 +125,6 @@ const TermsAndConditions = () => {
             {t('termsAndConditions.sections.complaints.complaintsPolicyLink')}
           </Link>{' '}
           {t('termsAndConditions.sections.complaints.text2')}
-          <br />
-          {t('termsAndConditions.sections.complaints.text3')}
         </p>
       </section>
 
@@ -179,11 +161,10 @@ const TermsAndConditions = () => {
 
       <section className="mb-8">
         <h6 className="text-xl font-semibold text-black-200 mb-2">{t('termsAndConditions.sections.kyc.title')}</h6>
-        <p className="text-black-400">{t('termsAndConditions.sections.kyc.text')}</p>
         <h6 className="text-lg font-semibold text-black-200 mt-4 mb-2">{t('termsAndConditions.sections.kyc.subsections.requirements.title')}</h6>
         <p className="text-black-400">{t('termsAndConditions.sections.kyc.subsections.requirements.text')}</p>
         <h6 className="text-lg font-semibold text-black-200 mt-4 mb-2">{t('termsAndConditions.sections.kyc.subsections.prohibitedJurisdictions.title')}</h6>
-        <p className="text-black-400">{t('termsAndConditions.sections.kyc.subsections.prohibitedJurisdictions.text')}</p>
+        <p className="text-black-400">{t('termsAndConditions.sections.kyc.subsections.prohibitedJurisdictions.text1')}</p>
         <ul className="list-disc pl-6 text-black-400">
           {t('termsAndConditions.sections.kyc.subsections.prohibitedJurisdictions.items', { returnObjects: true }).map((item, index) => (
             <li key={index} className="text-black">{item}</li>
@@ -206,18 +187,8 @@ const TermsAndConditions = () => {
         </ul>
         <h6 className="text-lg font-semibold text-black-200 mt-4 mb-2">{t('termsAndConditions.sections.aml.subsections.regulatoryStatus.title')}</h6>
         <p className="text-black-400">{t('termsAndConditions.sections.aml.subsections.regulatoryStatus.text')}</p>
-        <ul className="list-disc pl-6 text-black-400">
-          {t('termsAndConditions.sections.aml.subsections.regulatoryStatus.items', { returnObjects: true }).map((item, index) => (
-            <li key={index} className="text-black">{item}</li>
-          ))}
-        </ul>
         <h6 className="text-lg font-semibold text-black-200 mt-4 mb-2">{t('termsAndConditions.sections.aml.subsections.compliance.title')}</h6>
         <p className="text-black-400">{t('termsAndConditions.sections.aml.subsections.compliance.text')}</p>
-        <ul className="list-disc pl-6 text-black-400">
-          {t('termsAndConditions.sections.aml.subsections.compliance.items', { returnObjects: true }).map((item, index) => (
-            <li key={index} className="text-black">{item}</li>
-          ))}
-        </ul>
         <h6 className="text-lg font-semibold text-black-200 mt-4 mb-2">{t('termsAndConditions.sections.aml.subsections.futurePolicy.title')}</h6>
         <p className="text-black-400">{t('termsAndConditions.sections.aml.subsections.futurePolicy.text')}</p>
         <ul className="list-disc pl-6 text-black-400">
@@ -229,16 +200,6 @@ const TermsAndConditions = () => {
         <p className="text-black-400">{t('termsAndConditions.sections.aml.subsections.policyDevelopment.text')}</p>
         <h6 className="text-lg font-semibold text-black-200 mt-4 mb-2">{t('termsAndConditions.sections.aml.subsections.conclusion.title')}</h6>
         <p className="text-black-400">{t('termsAndConditions.sections.aml.subsections.conclusion.text')}</p>
-        <p className="text-black-400 mt-4">
-          <strong className="text-black">{t('termsAndConditions.sections.aml.subsections.conclusion.documentVersionLabel')}</strong>{' '}
-          {t('termsAndConditions.sections.aml.subsections.conclusion.documentVersion')}
-          <br />
-          <strong className="text-black">{t('termsAndConditions.sections.aml.subsections.conclusion.reviewedByLabel')}</strong>{' '}
-          {t('termsAndConditions.sections.aml.subsections.conclusion.reviewedBy')}
-          <br />
-          <strong className="text-black">{t('termsAndConditions.sections.aml.subsections.conclusion.approvedByLabel')}</strong>{' '}
-          {t('termsAndConditions.sections.aml.subsections.conclusion.approvedBy')}
-        </p>
       </section>
 
       <section className="mb-8">

@@ -440,363 +440,420 @@
     }
   },
   "claimPolicy": {
-    "title": "Política de Reclamaciones",
-    "header": "ECAPFX Firma Propietaria – Política de Reclamaciones y Quejas del Sitio Web (Cumplimiento FCA del Reino Unido)",
-    "effectiveDateLabel": "Fecha de Efectividad:",
-    "regulatoryAlignmentLabel": "Alineación Regulatoria:",
+    "title": "Política de Reclamaciones y Quejas",
+    "header": "ECAPFX Proprietary Firm – Política de Reclamaciones y Quejas",
+    "effectiveDateLabel": "Fecha de entrada en vigor:",
+    "effectiveDate": "11 de abril de 2025",
+    "regulatoryReferenceLabel": "Referencia Regulatoria:",
+    "regulatoryReference": "UK Financial Conduct Authority (FCA) – DISP Sourcebook",
+    "downloadButton": "Descargar PDF de Política de Reclamaciones y Quejas",
     "sections": {
       "purpose": {
-        "title": "1. Propósito y Alcance",
-        "text": "ECAPFX se compromete a tratar a los clientes justamente y manejar todas las reclamaciones y quejas de manera transparente y pronta.",
-        "appliesTo": "Esta Política se aplica a:",
+        "title": "1. Propósito y Alineación Regulatoria",
+        "text1": "1.1. ECAPFX opera como una firma de trading propietario que ofrece desafíos de trading simulados. No gestionamos fondos de clientes, proporcionamos asesoramiento de inversión ni nos involucramos en actividades de inversión reguladas.",
+        "text2": "1.2. Esta Política está diseñada para asegurar que todas las reclamaciones y quejas se manejen de manera rápida, justa y transparente, de acuerdo con los Principles for Businesses (PRIN) de la FCA y secciones relevantes del DISP Sourcebook, donde sea aplicable a nuestro modelo de negocio.",
+        "text3": "1.3. Esta Política se aplica a todos los clientes, socios y stakeholders de ECAPFX."
+      },
+      "definitions": {
+        "title": "2. Definiciones",
+        "text1": "2.1.",
+        "complaintBold": "Queja",
+        "complaintText": "– Como definido por la FCA, „cualquier expresión oral o escrita de insatisfacción, justificada o no, de o en nombre de una persona sobre la provisión de, o fracaso en proporcionar, un servicio financiero.“",
+        "text2": "2.2.",
+        "claimBold": "Reclamación",
+        "claimText": "– Cualquier solicitud formal de remedio, compensación o acción correctiva que surja de la interpretación o ejecución de los Terms & Conditions de ECAPFX, acuerdos de servicio, compromisos promocionales o rendimiento operativo.",
+        "text3": "2.3.",
+        "eligibleBold": "Reclamante Elegible",
+        "eligibleText": "– Una persona o entidad que cumple con los criterios de elegibilidad de la FCA para escalar al Financial Ombudsman Service (FOS)."
+      },
+      "scope": {
+        "title": "3. Alcance",
+        "text": "Esta Política cubre, pero no se limita a:",
         "items": [
-          "Resultados de desafíos de trading",
-          "Disputas sobre decisiones de cuentas financiadas",
-          "Representaciones erróneas o errores en nuestro sitio web o marketing",
-          "Problemas técnicos o fallos de servicio",
-          "Preocupaciones sobre propiedad intelectual"
+          "3.1. Disputas respecto a resultados de desafíos de trading.",
+          "3.2. Decisiones de elegibilidad para cuentas financiadas.",
+          "3.3. Alegadas tergiversaciones o inexactitudes en el marketing o contenido del sitio web de ECAPFX.",
+          "3.4. Fallos técnicos o interrupciones de servicio.",
+          "3.5. Reportes de infracciones de propiedad intelectual."
         ]
       },
-      "definition": {
-        "title": "2. ¿Qué Constituye una Queja o Reclamación?",
-        "text": "La FCA define una ",
-        "complaint": "queja",
-        "definition": "como: \"Cualquier expresión oral o escrita de insatisfacción, justificada o no, de o en nombre de una persona sobre la prestación o la falta de prestación de un servicio financiero.\"",
-        "claim": "Una ",
-        "claimText": "reclamación"
-      },
-      "howToComplain": {
-        "title": "3. Cómo Hacer una Queja o Reclamación",
-        "textPrefix": "Envíenos un correo electrónico a ",
-        "textSuffix": " con:",
-        "email": "complaints@ecapfx.com",
+      "submission": {
+        "title": "4. Presentación de una Queja o Reclamación",
+        "text1": "4.1. Las quejas y reclamaciones deben presentarse por escrito a complaints@ecapfx.com.",
+        "text2": "4.2. La presentación debe incluir:",
         "items": [
-          "Nombre completo y correo electrónico registrado",
-          "Descripción del problema",
-          "Fecha del incidente",
-          "Evidencia (e.g. capturas de pantalla, IDs de operaciones)",
-          "Resolución deseada",
-          "Estrategia utilizada (si aplica)"
+          "- Nombre completo y correo electrónico de cuenta registrada en ECAPFX.",
+          "- Descripción detallada del problema.",
+          "- Fecha del incidente.",
+          "- Evidencia de apoyo (p. ej., capturas de pantalla, IDs de operaciones, correspondencia).",
+          "- Resolución deseada.",
+          "- Información de estrategia (si es relevante para el asunto)."
         ]
       },
-      "timelines": {
-        "title": "4. Reconocimiento y Cronogramas",
+      "acknowledgement": {
+        "title": "5. Reconocimiento y Plazos",
         "items": [
-          "Reconocimiento dentro de 3–5 días hábiles",
-          "Respuesta escrita final dentro de 8 semanas",
-          "Se comunicarán retrasos con derechos de escalación"
+          "5.1. ECAPFX reconocerá el recibo de una queja de inmediato, y en cualquier caso dentro de cinco (5) días hábiles.",
+          "5.2. Se emitirá una carta de respuesta final dentro de ocho (8) semanas del recibo.",
+          "5.3. Donde no se pueda emitir una respuesta final dentro de este plazo, el reclamante será informado por escrito del motivo del retraso y asesorado sobre su derecho a escalar el asunto."
         ]
       },
-      "reviewProcess": {
-        "title": "5. Proceso de Revisión Interna",
-        "steps": [
-          "Iniciar sesión en el sistema de cumplimiento interno",
-          "Investigar todos los datos y comunicaciones",
-          "Solicitar más información si es necesario",
-          "Emitir una resolución clara y razonada",
-          "Asegurar que no haya violaciones de políticas"
+      "internalReview": {
+        "title": "6. Proceso de Revisión Interna",
+        "items": [
+          "6.1. Todas las quejas se registrarán en el sistema interno de gestión de cumplimiento de ECAPFX.",
+          "6.2. Un revisor independiente, no directamente involucrado en el asunto, llevará a cabo la investigación.",
+          "6.3. Se puede solicitar información adicional al reclamante si es necesario.",
+          "6.4. Toda evidencia se manejará de acuerdo con UK GDPR y la Política de Retención de Datos de ECAPFX.",
+          "6.5. Se proporcionará una resolución clara y razonada, citando cualquier disposición contractual o de política relevante."
         ]
       },
       "escalation": {
-        "title": "6. Si Está Insatisfecho – Escalación",
-        "text": "Los reclamantes elegibles pueden escalar al Servicio de Ombudsman Financiero (FOS):",
-        "website": "financial-ombudsman.org.uk",
+        "title": "7. Escalación al Financial Ombudsman Service (FOS)",
+        "text1": "7.1. Si no está satisfecho con nuestra respuesta final, y es un reclamante elegible, puede referir su queja al FOS dentro de seis (6) meses de recibir nuestra carta de respuesta final.",
+        "text2": "7.2. Detalles de contacto para el FOS:",
+        "websiteLabel": "- Sitio web:",
+        "website": "www.financial-ombudsman.org.uk",
+        "emailLabel": "- Correo electrónico:",
         "email": "complaint.info@financial-ombudsman.org.uk",
+        "phoneLabel": "- Teléfono:",
         "phone": "0800 023 4567",
-        "address": "Exchange Tower, Londres, E14 9SR",
-        "referral": "Referir dentro de 6 meses de nuestra respuesta final."
+        "addressLabel": "- Dirección:",
+        "address": "Exchange Tower, London, E14 9SR"
       },
-      "misuse": {
-        "title": "7. Uso Indebido y Reclamaciones Maliciosas",
-        "items": [
-          "Las reclamaciones falsas pueden llevar a la suspensión de la cuenta o acciones legales"
-        ]
+      "malicious": {
+        "title": "8. Reclamaciones Maliciosas o Engañosas",
+        "text": "8.1. ECAPFX se reserva el derecho de suspender cuentas o tomar acciones legales donde las quejas se encuentren deliberadamente falsas, engañosas o maliciosas."
       },
       "intellectualProperty": {
-        "title": "8. Reclamaciones de Propiedad Intelectual",
+        "title": "9. Reclamaciones de Propiedad Intelectual",
+        "text": "9.1. Para presentar una reclamación de IP, proporcione:",
         "items": [
-          "Enviar detalles de la obra con derechos de autor y prueba de propiedad",
-          "Incluir URL y datos de contacto"
-        ],
-        "review": "Revisamos estos informes según la Ley de Derechos de Autor del Reino Unido."
+          "- Descripción dela obra con derechos de autor.",
+          "- Prueba de propiedad.",
+          "- URL(s) de la alegada infracción.",
+          "- Sus detalles de contacto completos."
+        ]
       },
       "fcaPrinciples": {
-        "title": "9. Principios FCA",
+        "title": "10. Principios de FCA",
+        "text": "Esta Política mantiene los siguientes Principios de FCA para Negocios:",
         "items": [
-          "Principio 6: Tratamiento justo de los clientes",
-          "Principio 7: Comunicación clara, justa y no engañosa"
+          "- Principle 6: Una firma debe prestar la debida atención a los intereses de sus clientes y tratarlos de manera justa.",
+          "- Principle 7: Una firma debe prestar la debida atención a las necesidades de información de sus clientes y comunicar información a ellos de una manera que sea clara, justa y no engañosa."
         ]
       },
       "contact": {
-        "title": "10. Contáctenos",
-        "email": "contact@ecapfx.com",
+        "title": "11. Información de Contacto",
+        "complaintsLabel": "- Reclamaciones y Quejas:",
+        "complaintsEmail": "complaints@ecapfx.com",
+        "generalLabel": "- Consultas Generales:",
+        "generalEmail": "contact@ecapfx.com",
+        "websiteLabel": "- Sitio web:",
         "website": "www.ecapfx.com"
       }
     }
   },
   "privacyPolicy": {
     "title": "Política de Privacidad",
-    "header": "ECAPFX Firma Propietaria – Política de Privacidad del Sitio Web",
-    "effectiveDateLabel": "Fecha de Efectividad:",
-    "applicableLawLabel": "Ley Aplicable:",
+    "header": "Política de Privacidad de ECAPFX Proprietary Firm",
+    "effectiveDateLabel": "Fecha de entrada en vigor:",
+    "effectiveDate": "11 de abril de 2025",
+    "applicableLawLabel": "Ley aplicable:",
+    "applicableLaw": "UK General Data Protection Regulation (UK GDPR), Data Protection Act 2018, Financial Conduct Authority (FCA) Principles (donde aplicable)",
+    "downloadButton": "Descargar PDF de Política de Privacidad",
     "sections": {
       "introduction": {
-        "title": "1. Introducción",
-        "text1": "ECAPFX Firma Propietaria (\"ECAPFX\", \"nosotros\", \"nuestro\" o \"nos\") está comprometida a proteger y respetar tu privacidad. Esta Política de Privacidad explica cómo recolectamos, usamos, divulgamos y protegemos tus datos personales cuando visitas nuestro sitio web ",
-        "website": "https://www.ecapfx.com",
-        "text2": " o utilizas nuestros servicios.",
-        "agreement": "Al acceder a nuestro sitio web, aceptas la recolección y uso de información de acuerdo con esta política."
+        "title": "1 Introducción",
+        "text1": "ECAPFX Proprietary Firm („ECAPFX“, „nosotros“, „nuestro“ o „nos“) se compromete a proteger y respetar su privacidad. Esta Política de Privacidad explica cómo recopilamos, usamos, divulgamos y salvaguardamos sus datos personales cuando usa nuestro sitio web (",
+        "website": "www.ecapfx.com",
+        "text2": ") y servicios. Al usar nuestro sitio web o servicios, acepta la recopilación y uso de sus datos personales como se describe en esta Política."
       },
       "dataController": {
-        "title": "2. Controlador de Datos",
-        "text1": "ECAPFX Firma Propietaria es el controlador de datos para los propósitos del UK GDPR.",
-        "registeredAddressLabel": "Dirección Registrada:",
-        "contactLabel": "Contacto:",
+        "title": "2 Controlador de Datos",
+        "text1": "ECAPFX Proprietary Firm es el Controlador de Datos para sus datos personales según UK GDPR.",
+        "registeredAddressLabel": "Dirección registrada:",
+        "registeredAddress": "Office 7330MO 182-184, High Street North Area 1/1, East Ham, London, E6 2JA",
+        "contactLabel": "Correo electrónico de contacto:",
         "email": "privacy@ecapfx.com"
       },
       "informationWeCollect": {
-        "title": "3. Información que Recolectamos",
-        "text": "Podemos recolectar y procesar los siguientes datos personales:",
+        "title": "3 Información que Recopilamos",
         "subsections": {
           "a": {
-            "title": "a) Información que Proporcionas Directamente",
+            "title": "3.1 Información que Proporciona Directamente",
             "items": [
-              "Nombre, dirección de correo electrónico, número de teléfono",
-              "Información de facturación o pago (vía proveedores de pago seguros)",
-              "Datos de actividad comercial y participación en desafíos",
-              "Documentación subida (e.g. verificación de identidad)"
+              "Nombres, detalles de contacto (p. ej., dirección de correo electrónico, número de teléfono)",
+              "Direcciones",
+              "Género, ocupación, fecha de nacimiento, estado civil (donde sea relevante para KYC/AML)",
+              "Información de terceros (p. ej., miembros de la familia u otras partes relevantes para verificación)",
+              "Información de facturación o pago (procesada a través de proveedores de pago seguros, p. ej., PayPal, Stripe)",
+              "Actividad de trading y datos de participación en desafíos",
+              "Documentación cargada (p. ej., ID emitido por el gobierno para KYC, que puede incluir datos biométricos como imágenes faciales)",
+              "Detalles de empleo (p. ej., salario, duración del servicio, donde sea requerido para verificación)",
+              "Datos financieros (p. ej., ingresos, gastos para comprobaciones AML)",
+              "Datos de transacciones (p. ej., pagos, productos/servicios comprados)"
             ]
           },
           "b": {
-            "title": "b) Información que Recolectamos Automáticamente",
+            "title": "3.2 Información que Recopilamos Automáticamente",
             "items": [
               "Dirección IP, tipo de navegador, sistema operativo",
-              "Datos de uso (e.g., páginas visitadas, tiempo invertido)",
-              "Cookies y tecnologías de seguimiento (ver sección 8)"
+              "Datos de uso (p. ej., páginas visitadas, tiempo pasado en nuestro sitio web, información de viaje del usuario)",
+              "Cookies y tecnologías de seguimiento similares (ver Sección 8)",
+              "Información de usuarios del sitio web (p. ej., interacción con productos y servicios)"
             ]
           },
           "c": {
-            "title": "c) Datos de Terceros",
+            "title": "3.3 Datos de Terceros",
             "items": [
-              "Datos de proveedores de pago, servicios de verificación o plataformas de análisis",
-              "Datos de redes sociales (si interactúas con nuestro contenido)"
+              "Datos de procesadores de pagos (p. ej., PayPal, Stripe), servicios de verificación KYC/AML (p. ej., Kenmore Design) y plataformas de análisis",
+              "Datos de redes sociales si interactúa con nuestro contenido",
+              "Proveedores y prestadores de servicios (p. ej., para verificación o soporte)"
             ]
           }
         }
       },
-      "howWeUse": {
-        "title": "4. Cómo Usamos tu Información",
-        "text": "Tus datos se usan para:",
+      "dataSources": {
+        "title": "4 De Dónde Obtenemos Información Personal",
+        "text": "Obtenemos información personal:",
         "items": [
-          "Entregar y gestionar nuestros desafíos comerciales y programas de cuentas financiadas",
-          "Proporcionar soporte al cliente y responder a consultas",
-          "Cumplir con nuestras obligaciones contractuales y regulatorias",
-          "Mejorar nuestro sitio web, servicios y marketing",
-          "Prevenir fraudes y hacer cumplir nuestros términos de servicio",
-          "Cumplir con leyes aplicables, incluyendo regulaciones contra el lavado de dinero (AML) y delitos financieros"
+          "Directamente de usted (p. ej., a través de formularios de registro, envíos KYC)",
+          "De proveedores y prestadores de servicios (p. ej., procesadores de pagos, socios KYC)"
         ]
+      },
+      "howWeUse": {
+        "title": "5 Cómo Usamos Su Información",
+        "text": "Usamos sus datos personales para:",
+        "items": [
+          "Proporcionar y gestionar nuestros desafíos de trading y programas de cuentas financiadas",
+          "Entregar soporte al cliente y responder a consultas",
+          "Cumplir con nuestras obligaciones contractuales y regulatorias, incluyendo cumplimiento AML y KYC",
+          "Mejorar nuestro sitio web y servicios (p. ej., analizando el comportamiento del usuario para mejorar la funcionalidad de la plataforma)",
+          "Prevenir fraude y hacer cumplir nuestros términos de servicio",
+          "Cumplir con las leyes y regulaciones aplicables",
+          "Operar cuentas de clientes o clientes (p. ej., historial de compras o servicios, información de cuenta)",
+          "Enviar actualizaciones de información o comunicaciones de marketing (con consentimiento)",
+          "Manejar consultas, quejas o reclamos (p. ej., correspondencia, datos de ubicación si relevante)"
+        ],
+        "subsections": {
+          "special": {
+            "title": "5.1 Datos de Categoría Especial",
+            "text": "Los documentos KYC (p. ej., pasaportes) pueden incluir datos biométricos, como imágenes faciales, procesados para cumplir con regulaciones AML/CTF bajo la condición de interés público sustancial (UK GDPR Artículo 9(2)(g))."
+          }
+        }
       },
       "legalBasis": {
-        "title": "5. Base Legal para el Procesamiento",
-        "text": "Procesamos datos personales bajo las siguientes bases legales:",
+        "title": "6 Base Legal para el Procesamiento",
+        "text": "Procesamos sus datos personales basados en las siguientes bases legales:",
         "items": [
-          { "label": "", "bold": "Consentimiento", "description": "– cuando das consentimiento explícito (e.g., correos de marketing)" },
-          { "label": "", "bold": "Contrato", "description": "– para cumplir con un servicio al que te has inscrito" },
-          { "label": "", "bold": "Obligación Legal", "description": "– para cumplir con regulaciones de la FCA o contra lavado de dinero" },
-          { "label": "", "bold": "Intereses Legítimos", "description": "– para mejorar servicios, prevenir fraudes y operar nuestro negocio de manera efectiva" }
-        ]
+          "Consentimiento: Para correos electrónicos de marketing o cookies no esenciales. Tiene derecho a retirar el consentimiento en cualquier momento.",
+          "Contrato: Para entregar servicios a los que se ha inscrito (p. ej., desafíos de trading, operación de cuentas de clientes).",
+          "Obligación Legal: Para cumplir con leyes (p. ej., comprobaciones AML bajo Money Laundering Regulations 2017, requisitos KYC).",
+          "Intereses Legítimos: Para mejorar servicios, prevenir fraude y operar efectivamente (p. ej., análisis de datos de uso)."
+        ],
+        "text2": "Todos sus derechos de protección de datos pueden aplicarse, excepto donde existan exenciones (p. ej., derecho a objetar no disponible bajo contrato; derecho a borrado/portabilidad limitado bajo obligación legal)."
       },
       "dataSharing": {
-        "title": "6. Compartición y Divulgación de Datos",
-        "text1": "No vendemos tus datos. Podemos compartir datos con:",
+        "title": "7 Compartición y Divulgación de Datos",
+        "text1": "No vendemos sus datos personales. Podemos compartir su información con:",
         "items": [
-          "Procesadores de pago verificados (e.g., Stripe, PayPal)",
-          "Socios de verificación KYC/AML",
-          "Proveedores de TI y alojamiento (basados en el Reino Unido/UE donde sea posible)",
-          "Organismos legales o regulatorios (e.g., FCA o HMRC), si es requerido por ley"
+          "Procesadores de pagos verificados (p. ej., PayPal, Stripe)",
+          "Socios de verificación KYC/AML (p. ej., Kenmore Design para autenticación de documentos, incluyendo pasaportes, licencias de conducir y otros IDs)",
+          "Proveedores de IT y hosting basados en UK/EU",
+          "Autoridades legales o regulatorias (p. ej., FCA, HMRC) cuando sea requerido por ley",
+          "Procesadores de datos que realizan actividades en nuestro nombre (p. ej., servicios de verificación)",
+          "Organizaciones con las que estamos legalmente obligados a compartir información personal"
         ],
-        "text2": "Todos los procesadores de terceros están obligados contractualmente a proteger tus datos de acuerdo con el UK GDPR."
+        "text2": "Todos los terceros están contractualmente obligados a cumplir con UK GDPR."
       },
       "internationalDataTransfers": {
-        "title": "7. Transferencias Internacionales de Datos",
-        "text": "Si transferimos tus datos personales fuera del Reino Unido o el EEA, aseguramos que se implementen salvaguardas adecuadas (como Cláusulas Contractuales Estándar o Adenda del Reino Unido) para proteger tu privacidad."
+        "title": "8 Transferencias Internacionales de Datos",
+        "text": "Donde transferimos sus datos personales fuera del UK o del Área Económica Europea (EEA) (p. ej., a procesadores de pagos basados en EE.UU.), aseguramos salvaguardas adecuadas, como Cláusulas Contractuales Estándar aprobadas por UK o addenda específicas de UK, para proteger sus derechos de privacidad. Para Kenmore Design (ubicado en el Reino Unido), no ocurre transferencia internacional, pero si cualquier sub-procesamiento involucra ubicaciones no-UK, se aplican Cláusulas Contractuales Estándar."
       },
       "cookies": {
-        "title": "8. Cookies y Tecnologías de Seguimiento (No rastreamos cookies actualmente)",
-        "text1": "Usamos cookies para:",
+        "title": "9 Cookies y Tecnologías de Seguimiento",
+        "text1": "Usamos cookies y tecnologías similares para:",
         "items": [
-          "Mejorar la funcionalidad del sitio web",
-          "Analizar patrones de uso",
-          "Personalizar experiencias de usuario",
-          "Rastrear enlaces de afiliados o campañas de marketing"
+          "Habilitar funcionalidad esencial del sitio web",
+          "Analizar uso para mejorar la experiencia del usuario",
+          "Personalizar contenido y comunicaciones de marketing",
+          "Rastrear campañas de marketing de afiliados"
         ],
-        "text2": "Puedes gestionar tus preferencias de cookies a través de nuestro banner de cookies o ajustes del navegador. Para más detalles, consulta nuestra [Política de Cookies]."
+        "text2": "Nuestro banner de cookies permite consentimiento granular (p. ej., opciones separadas para cookies de analytics y marketing). Cookies no esenciales (p. ej., analytics, marketing) se retienen por hasta 12 meses. Cookies de terceros pueden ser establecidas por plataformas de analytics o afiliados (ver Política de Cookies). Para detalles, consulte nuestra Política de Cookies en"
       },
       "dataRetention": {
-        "title": "9. Retención de Datos",
-        "text": "Retenemos tus datos solo por el tiempo necesario:",
+        "title": "10 Retención de Datos",
+        "text": "Retenemos sus datos personales solo el tiempo necesario para:",
         "items": [
-          "Para proporcionar servicios y soporte",
-          "Para cumplimiento fiscal y regulatorio (típicamente 6–7 años)",
-          "Hasta que retires tu consentimiento (para comunicaciones de marketing opcionales)"
-        ]
+          "Proporcionar nuestros servicios y apoyarlo",
+          "Cumplir con requisitos legales (p. ej., 67 años para AML, registros contables y financieros bajo Money Laundering Regulations 2017 y reglas HMRC)",
+          "Respetar sus preferencias de consentimiento de marketing hasta que se retiren"
+        ],
+        "text2": "Datos no regulatorios (p. ej., datos de uso, direcciones IP) se retienen por hasta 12 meses para fines de análisis. Los datos se eliminan de forma segura o se anonimizan después de que expiren los períodos de retención. Para más información sobre criterios de retención, contáctenos en"
       },
       "yourRights": {
-        "title": "10. Tus Derechos de Protección de Datos (UK GDPR)",
-        "text": "Tienes el derecho a:",
+        "title": "11 Sus Derechos de Protección de Datos",
+        "text": "Bajo UK GDPR, tiene derecho a:",
         "items": [
-          "Acceder a los datos personales que tenemos sobre ti",
-          "Corregir inexactitudes en tus datos",
-          "Solicitar la eliminación de tus datos (\"derecho al olvido\")",
-          "Oponerte al procesamiento o restringirlo",
-          "Solicitar portabilidad de datos",
-          "Presentar una queja ante la Oficina del Comisionado de Información del Reino Unido (ICO) en https://ico.org.uk/"
+          "Acceder a los datos personales que tenemos sobre usted (incluyendo detalles sobre fuentes y compartición)",
+          "Solicitar corrección de datos inexactos o incompletos",
+          "Solicitar borrado de sus datos („derecho al olvido“), sujeto a obligaciones legales",
+          "Objetar o restringir ciertas actividades de procesamiento",
+          "Solicitar portabilidad de sus datos en un formato estructurado y legible por máquina",
+          "Retirar consentimiento en cualquier momento (sin afectar procesamiento previo)"
         ],
-        "contactText": "Para ejercer estos derechos, envíanos un correo a ",
-        "email": "privacy@ecapfx.com"
+        "text2": "Para ejercer estos derechos, envíe un correo electrónico a"
       },
       "security": {
-        "title": "11. Seguridad",
-        "text": "Implementamos medidas técnicas y organizativas apropiadas para proteger tus datos personales contra pérdida, mal uso o acceso no autorizado. Estas incluyen:",
+        "title": "12 Seguridad de Sus Datos",
+        "text": "Implementamos medidas técnicas y organizativas apropiadas, incluyendo:",
         "items": [
-          "Almacenamiento de datos cifrado",
+          "Almacenamiento encriptado de datos en reposo y en tránsito",
           "Autenticación multifactor (MFA) para acceso administrativo",
-          "Integraciones de terceros seguras",
-          "Evaluaciones regulares de vulnerabilidades"
-        ]
+          "Entrenamiento del personal en protección de datos",
+          "Controles de acceso que limitan los datos a personal autorizado",
+          "Evaluaciones regulares de seguridad y vulnerabilidades"
+        ],
+        "text2": "En caso de una violación de datos que represente un alto riesgo para sus derechos, notificaremos a la ICO dentro de 72 horas y a los usuarios afectados según lo requerido por ley."
       },
       "marketing": {
-        "title": "12. Marketing y Comunicaciones",
-        "text1": "Puedes optar por participar o salir de las comunicaciones de marketing en cualquier momento haciendo:",
+        "title": "13 Comunicaciones de Marketing",
+        "text1": "Enviamos comunicaciones de marketing solo con su consentimiento explícito. Puede optar por no recibirlas en cualquier momento:",
         "items": [
-          "Haciendo clic en el enlace “darse de baja” en nuestros correos",
-          "Contactando a privacy@ecapfx.com"
+          "Haciendo clic en el enlace „darse de baja“ en correos electrónicos de marketing",
+          "Enviando un correo electrónico a privacy@ecapfx.com"
         ],
-        "text2": "Nunca enviaremos marketing no solicitado a menos que tengamos tu consentimiento explícito."
+        "text2": "Las solicitudes de opt-out se procesan dentro de 48 horas. Nunca enviamos marketing no solicitado."
+      },
+      "howToComplain": {
+        "title": "14 Cómo Presentar una Queja",
+        "text": "Si tiene preocupaciones sobre nuestro uso de sus datos personales, puede presentar una queja con nosotros usando los detalles de contacto anteriores. Si permanece insatisfecho con cómo hemos usado sus datos después de presentar una queja con nosotros, también puede quejarse ante la ICO.",
+        "icoAddress": "La dirección de la ICO: Information Commissioner’s Office, Wycliffe House, Water Lane, Wilmslow, Cheshire, SK9 5AF",
+        "helpline": "Número de línea de ayuda: 0303 123 1113",
+        "website": "www.ico.org.uk/make-a-complaint"
       },
       "updates": {
-        "title": "13. Actualizaciones a Esta Política",
-        "text": "Podemos actualizar esta Política de Privacidad para reflejar cambios en la ley, regulación o nuestras prácticas comerciales. La última versión siempre se publicará en nuestro sitio web con una \"Fecha de Efectividad\" revisada."
+        "title": "15 Cambios en Esta Política de Privacidad",
+        "text": "Podemos actualizar esta Política para reflejar cambios en la ley, regulaciones o nuestras prácticas comerciales. La versión más reciente se publicará en"
+      },
+      "accountability": {
+        "title": "16 Responsabilidad y Aplicabilidad de FCA",
+        "text": "Realizamos Evaluaciones de Impacto en la Protección de Datos (DPIAs) para actividades de procesamiento de alto riesgo (p. ej., verificación KYC que involucra datos biométricos) para garantizar el cumplimiento. Como no-broker, ECAPFX se adhiere a los Principios de FCA para Negocios donde sea relevante para nuestras operaciones como firma de tecnología financiera y trading propietario."
       },
       "contactUs": {
-        "title": "14. Contáctanos",
-        "text1": "Si tienes alguna pregunta sobre esta Política de Privacidad o tus datos, por favor contáctanos:",
-        "company": "ECAPFX Firma Propietaria",
-        "emailLabel": "Correo:",
-        "email": "privacy@ecapfx.com"
+        "title": "17 Contáctenos",
+        "text": "Para preguntas sobre esta Política de Privacidad o sus datos personales, contacte:",
+        "company": "ECAPFX Proprietary Firm",
+        "emailLabel": "Correo electrónico:",
+        "email": "privacy@ecapfx.com",
+        "websiteLabel": "Sitio web:",
+        "website": "www.ecapfx.com"
       }
     }
   },
   "termsAndConditions": {
     "title": "Términos y Condiciones",
-    "header": "ECAPFX Proprietary Firm – Términos y Condiciones",
+    "header": "Términos y Condiciones de ECAPFX Proprietary Firm",
     "effectiveDateLabel": "Fecha de entrada en vigor:",
     "effectiveDate": "2 de junio de 2025",
     "websiteLabel": "Sitio web:",
     "website": "https://www.ecapfx.com",
     "jurisdictionLabel": "Jurisdicción:",
     "jurisdiction": "Reino Unido",
-    "intro": "Estos Términos y Condiciones (\"Términos\") rigen el acceso y uso de los servicios, el sitio web y los programas de trading proporcionados por ECAPFX Proprietary Firm (\"ECAPFX\", \"nosotros\", \"nuestro\"). Al utilizar nuestro sitio web o participar en cualquiera de nuestros servicios, usted acepta estar vinculado por estos Términos.",
+    "downloadButton": "Descargar PDF de Términos y Condiciones",
     "sections": {
       "about": {
-        "title": "1. Acerca de ECAPFX",
-        "text1": "ECAPFX Proprietary Firm es una empresa de tecnología financiera y trading propietario que ofrece desafíos de evaluación para traders aspirantes. Tras la finalización exitosa, los traders pueden recibir una cuenta financiada bajo un modelo de reparto de beneficios.",
-        "text2": "Somos",
-        "notABroker": "no un corredor",
-        "text3": "y",
-        "doNotOfferAdvice": "no ofrecemos asesoramiento de inversión",
-        "text4": ". Todas las actividades de trading son simuladas o ejecutadas a través de cuentas de corretaje de terceros con capital demo o real."
+        "title": "1 Acerca de ECAPFX",
+        "text": "ECAPFX Proprietary Firm (ECAPFX, nosotros, nos o nuestro) es una empresa de tecnología financiera y trading propietario que ofrece desafíos de evaluación para traders aspirantes. Al completarlos con éxito, los traders pueden recibir una cuenta financiada bajo un modelo de reparto de ganancias. No somos un broker y no proporcionamos asesoramiento de inversión. Todas las actividades de trading se simulan o ejecutan a través de cuentas de brokers de terceros con capital demo o real."
       },
       "eligibility": {
-        "title": "2. Elegibilidad",
-        "text1": "Para utilizar nuestros servicios, debe:",
+        "title": "2 Elegibilidad",
+        "text1": "Para usar nuestros servicios, debe:",
         "items": [
           "Tener 18 años o más",
           "Tener la capacidad legal para celebrar un contrato",
           "No estar prohibido por ninguna ley aplicable de participar en actividades financieras",
-          "No estar ubicado en ningún país restringido o sancionado (según la ley de la FCA y del Reino Unido)"
+          "No estar ubicado en ningún país restringido o sancionado (según FCA y ley del Reino Unido)"
         ],
-        "text2": "Al registrarse, confirma que toda la información que proporciona es veraz y precisa."
+        "text2": "Al registrarse, confirma que toda la información proporcionada es veraz y precisa."
       },
       "servicesOffered": {
-        "title": "3. Servicios ofrecidos",
+        "title": "3 Servicios Ofrecidos",
         "text1": "ECAPFX ofrece:",
         "items": [
-          "Desafíos de trading en mercados de divisas, materias primas y futuros",
-          "Oportunidades de cuentas financiadas sujetas al éxito y cumplimiento del desafío",
-          "Esquemas de reparto de beneficios (detalles disponibles en las páginas de cada programa)",
+          "Desafíos de trading en mercados de forex, commodities y futuros",
+          "Oportunidades de cuentas financiadas sujetas al éxito del desafío y cumplimiento",
+          "Esquemas de reparto de ganancias (detalles disponibles en las páginas de programas individuales)",
           "Herramientas educativas y de análisis de rendimiento"
         ],
-        "text2": "Todos los servicios están sujetos a cambios sin previo aviso. Las reglas detalladas se describen en las preguntas frecuentes o la guía de cada desafío."
+        "text2": "Todos los servicios están sujetos a cambios sin previo aviso. Las reglas detalladas se describen en las FAQ o guías de programa de cada desafío."
       },
       "fundedAccounts": {
-        "title": "4. Cuentas financiadas y pagos",
-        "text1": "La finalización exitosa de nuestra evaluación multifase puede calificarlo para una cuenta de trading con capital simulado o real. Los términos incluyen:",
+        "title": "4 Cuentas Financiadas y Pagos",
+        "text1": "La finalización exitosa de nuestra evaluación multifase puede calificarle para una cuenta de trading con capital simulado o real. Los términos incluyen:",
         "items": [
-          "Los ratios de reparto de beneficios (por ejemplo, 80/20) se detallan antes de la entrada al desafío",
-          "Los pagos están sujetos a verificación de identidad, verificaciones AML, KYC y salud de la cuenta",
-          "Las violaciones de las reglas de trading (por ejemplo, incumplimiento del drawdown diario) pueden anular la elegibilidad; por favor, confirme con las reglas antes de comprar un desafío",
-          "Nos reservamos el derecho de revocar la financiación si sospechamos de fraude, manipulación o incumplimiento de las reglas",
-          "Los pagos generalmente se procesan dentro de 5 a 10 días hábiles tras la aprobación."
+          "Proporciones de reparto de ganancias (p. ej., 80/20) se describen antes de ingresar al desafío",
+          "Los pagos están sujetos a verificación de identidad, comprobaciones AML, KYC y salud de la cuenta",
+          "Violaciones de las reglas de trading (p. ej., incumplimiento del drawdown diario) pueden anular la elegibilidad—por favor confirme con las reglas antes de comprar un desafío",
+          "Nos reservamos el derecho de revocar la financiación si sospechamos fraude, manipulación o incumplimiento de reglas",
+          "Los pagos se procesan típicamente dentro de 5–10 días hábiles después de la aprobación; sin embargo, el procesamiento puede retrasarse debido a procedimientos de cumplimiento o verificación"
         ],
-        "text2": "Las cuentas financiadas no son cuentas de corretaje personales, y los traders no poseen el capital proporcionado."
+        "text2": ""
       },
       "feesAndPayments": {
-        "title": "5. Tarifas y pagos",
-        "text1": "La participación en los desafíos de trading requiere el pago de una tarifa única no reembolsable. Todas las tarifas:",
+        "title": "5 Tarifas y Pagos",
+        "text1": "La participación en desafíos de trading requiere el pago de una tarifa única no reembolsable. Todas las tarifas:",
         "items": [
-          "Están claramente indicadas antes de la compra",
-          "Incluyen el IVA del Reino Unido aplicable cuando sea necesario",
-          "Pueden pagarse a través de Stripe, PayPal u otras pasarelas aprobadas",
-          "Los reembolsos solo se emitirán en caso de fallos técnicos o fallos de servicio por nuestra parte. Los usuarios deben enviar solicitudes de reembolso por escrito dentro de los 7 días posteriores al problema."
+          "Se listan claramente antes de la compra",
+          "Incluyen el IVA del Reino Unido aplicable cuando sea requerido",
+          "Pueden pagarse a través de Stripe, PayPal u otras pasarelas aprobadas"
         ],
-        "text2": "Todos los pagos deben realizarse a través de los métodos aprobados en nuestro sitio web."
+        "text2": "Los reembolsos solo se emitirán por fallos técnicos verificables o fallos de servicio de nuestra parte. Las solicitudes de reembolso deben enviarse por escrito dentro de los 7 días del problema. Los reembolsos se otorgan a nuestra sola discreción."
       },
       "userConduct": {
-        "title": "6. Conducta del usuario",
+        "title": "6 Conducta del Usuario",
         "text1": "Usted acepta no:",
         "items": [
-          "Usar bots, scripts o automatización para operar",
-          "Hacer un mal uso del acceso a la plataforma o incumplir las reglas del desafío",
-          "Intentar realizar ingeniería inversa o interferir con la plataforma",
-          "Hacerse pasar por otros o presentar documentos falsos",
-          "Utilizar nuestro servicio para fines ilegales, engañosos o maliciosos",
-          "Nos reservamos el derecho de implementar cualquier regla de trading que percibamos como un riesgo para nuestra empresa en cualquier momento de su viaje de trading con nosotros"
+          "Usar bots, scripts o cualquier forma de automatización para operar",
+          "Hacer mal uso del acceso a la plataforma o incumplir las reglas del desafío",
+          "Intentar ingeniería inversa o interferir con la funcionalidad de la plataforma",
+          "Suplantar a otros o enviar documentos falsos",
+          "Usar nuestros servicios para fines ilegales, engañosos o maliciosos"
         ],
-        "text2": "La violación de esta cláusula puede resultar en la suspensión de la cuenta, la pérdida de cualquier pago o acciones legales."
+        "text2": "La violación de estos términos puede resultar en la suspensión o terminación inmediata de su cuenta, la pérdida de cualquier pago y posibles acciones legales. ECAPFX se reserva el derecho de hacer cumplir cualquier regla de trading considerada necesaria para proteger la empresa."
       },
       "intellectualProperty": {
-        "title": "7. Propiedad intelectual",
-        "text": "Todo el contenido del sitio web, incluyendo, entre otros, la marca, logotipos, videos, documentos, software y diseño, es propiedad intelectual de ECAPFX o de nuestros licenciantes. No puede copiar, reproducir o utilizarlo con fines comerciales sin permiso por escrito."
+        "title": "7 Propiedad Intelectual",
+        "text": "Todo el contenido del sitio web, incluyendo pero no limitado a branding, logos, videos, documentos, software y diseño, es propiedad intelectual de ECAPFX o nuestros licenciantes. No puede copiar, reproducir o usarlo para fines comerciales sin permiso escrito."
       },
       "limitationOfLiability": {
-        "title": "8. Limitación de responsabilidad",
+        "title": "8 Limitación de Responsabilidad",
         "text1": "En la máxima medida permitida por la ley, ECAPFX no será responsable por:",
         "items": [
-          "Cualquier pérdida de beneficios u oportunidades",
-          "Errores resultantes de plataformas de terceros (por ejemplo, corredores o fuentes de datos)",
-          "Daños indirectos, incidentales o consecuentes",
-          "Retrasos o fallos debido a eventos de fuerza mayor (por ejemplo, interrupciones del servidor, guerra, regulación)"
+          "Cualquier pérdida de ganancias, oportunidades de negocio o buena voluntad",
+          "Errores resultantes de plataformas de terceros (p. ej., brokers o feeds de datos)",
+          "Daños indirectos, incidentales, consecuentes o punitivos",
+          "Retrasos o fallos debido a eventos de fuerza mayor (p. ej., fallos de servidor, guerra, regulación)"
         ],
-        "text2": "Nuestra responsabilidad total bajo estos Términos no excederá el monto pagado por usted para el desafío en cuestión."
+        "text2": "Nuestra responsabilidad total bajo estos Términos no excederá la cantidad pagada por usted por el desafío en cuestión."
       },
       "privacy": {
-        "title": "9. Privacidad y protección de datos",
-        "text1": "Estamos comprometidos a proteger sus datos personales bajo el GDPR del Reino Unido y la Ley de Protección de Datos de 2018. Consulte nuestra",
+        "title": "9 Privacidad y Protección de Datos",
+        "text1": "Estamos comprometidos a proteger sus datos personales bajo el UK GDPR y la Data Protection Act 2018.",
         "privacyPolicyLink": "Política de Privacidad",
         "text2": "y",
         "cookiePolicyLink": "Política de Cookies",
-        "text3": "para obtener detalles completos sobre cómo manejamos sus datos."
+        "text3": "para detalles completos sobre cómo manejamos sus datos."
       },
       "complaints": {
-        "title": "10. Quejas y resolución de disputas",
+        "title": "10 Quejas y Resolución de Disputas",
         "text1": "Si no está satisfecho con nuestros servicios, consulte nuestra",
-        "complaintsPolicyLink": "Política de Reclamaciones",
-        "text2": "para plantear su preocupación.",
-        "text3": "Si su queja no se resuelve después de 8 semanas y es un reclamante elegible, puede remitir el caso al Servicio del Defensor del Pueblo Financiero del Reino Unido."
+        "complaintsPolicyLink": "Política de Quejas",
+        "text2": "para plantear su preocupación. Si su queja no se resuelve después de 8 semanas y usted es un reclamante elegible, puede referir el caso al UK Financial Ombudsman Service."
       },
       "termination": {
-        "title": "11. Terminación",
+        "title": "11 Terminación",
         "text1": "Podemos terminar su acceso a nuestra plataforma o cuentas financiadas en cualquier momento por causa, incluyendo:",
         "items": [
           "Incumplimiento de estos Términos",
@@ -804,114 +861,84 @@
           "Evidencia de comportamiento fraudulento",
           "Preocupaciones regulatorias"
         ],
-        "text2": "Puede solicitar la cancelación de la cuenta contactándonos en",
+        "text2": "Puede cancelar su cuenta en cualquier momento enviando un correo electrónico a",
         "email": "support@ecapfx.com",
-        "text3": ". Tras la terminación, perderá el acceso a todos los servicios y cuentas financiadas."
+        "text3": "No se emiten reembolsos por cancelaciones voluntarias."
       },
       "governingLaw": {
-        "title": "12. Ley aplicable",
-        "text": "Estos Términos se rigen y se interpretan de acuerdo con las leyes de Inglaterra y Gales. Cualquier disputa que surja de estos Términos estará sujeta a la jurisdicción exclusiva de los tribunales de Inglaterra y Gales."
+        "title": "12 Ley Aplicable",
+        "text": "Estos Términos se rigen y se interpretan de acuerdo con las leyes de Inglaterra y Gales. Cualquier disputa derivada de estos Términos estará sujeta a la jurisdicción exclusiva de los tribunales de Inglaterra y Gales."
       },
       "changesToTerms": {
-        "title": "13. Cambios a estos Términos",
-        "text": "Nos reservamos el derecho de modificar estos Términos en cualquier momento. Los Términos actualizados se publicarán en nuestro sitio web y entrarán en vigor de inmediato. Usted es responsable de revisar los Términos periódicamente."
+        "title": "13 Cambios en Estos Términos",
+        "text": "Nos reservamos el derecho de modificar estos Términos en cualquier momento. Los Términos actualizados se publicarán en nuestro sitio web y entrarán en vigor inmediatamente. Usted es responsable de revisar los Términos periódicamente."
       },
       "kyc": {
-        "title": "14. Conozca a su Cliente (KYC) y Jurisdicciones Restringidas",
-        "text": "Para cumplir con las regulaciones internacionales y las leyes aplicables, todos los usuarios de ECAPFX deben completar la verificación de identidad para participar en programas de evaluación o recibir pagos.",
+        "title": "14 Know Your Customer (KYC) y Jurisdicciones Restringidas",
         "subsections": {
           "requirements": {
             "title": "14.1 Requisitos de KYC",
-            "text": "Como parte de nuestros procedimientos de registro y pago, se requiere que presente una verificación de identidad completa utilizando una identificación con foto emitida por el gobierno válida (por ejemplo, pasaporte o tarjeta de identidad nacional). Utilizamos soluciones seguras de verificación de identidad proporcionadas por Kenmore Design para procesar y validar documentos KYC. Los pagos solo se procesarán tras la finalización exitosa de la verificación de identidad."
+            "text": "Para cumplir con regulaciones internacionales y leyes aplicables, todos los usuarios deben completar la verificación de identidad para participar en programas de evaluación o recibir pagos. Se requiere enviar una identificación con foto emitida por el gobierno válida (p. ej., pasaporte o ID nacional). Usamos soluciones de verificación seguras de Kenmore Design para validar documentos KYC. Los pagos solo se procesarán tras una verificación de identidad exitosa."
           },
           "prohibitedJurisdictions": {
-            "title": "14.2 Jurisdicciones prohibidas",
-            "text": "El uso de los servicios de ECAPFX está estrictamente prohibido desde las siguientes jurisdicciones, independientemente de los intentos de eludir las restricciones mediante VPN u otros métodos:",
+            "title": "14.2 Jurisdicciones Prohibidas",
+            "text1": "El uso de los servicios de ECAPFX está estrictamente prohibido desde las siguientes jurisdicciones, independientemente de intentos de eludir restricciones mediante VPN u otros métodos:",
             "items": [
-              "Afganistán",
-              "Bielorrusia",
-              "Canadá",
-              "Cuba",
-              "Irán",
-              "Myanmar (Birmania)",
-              "Corea del Norte (RPDC)",
-              "Rusia",
-              "Siria",
-              "Estados Unidos de América (EE. UU.)",
-              "Regiones de Crimea, Donetsk y Lugansk de Ucrania"
+              "Afganistán, Bielorrusia, Canadá, Cuba, Irán, Myanmar (Birmania), Corea del Norte (RPDC), Rusia, Siria, Estados Unidos de América (EE.UU.), Crimea, Donetsk y regiones de Lugansk de Ucrania"
             ],
-            "text2": "Si se detecta acceso desde alguna de estas jurisdicciones, ECAPFX se reserva el derecho de terminar su cuenta y retener cualquier pago pendiente."
+            "text2": "Si se detecta acceso desde estas jurisdicciones, ECAPFX se reserva el derecho de terminar su cuenta y retener cualquier pago pendiente."
           }
         }
       },
       "aml": {
-        "title": "15. Política contra el lavado de dinero (AML)",
+        "title": "15 Política Anti-Lavado de Dinero (AML)",
         "subsections": {
           "introduction": {
             "title": "15.1 Introducción",
-            "text": "ECAPFX es una plataforma de evaluación de trading educativo que proporciona a los traders acceso a cuentas de trading simuladas (demo). Nuestra plataforma está diseñada exclusivamente para el desarrollo, evaluación y demostración de habilidades de trading en un entorno sin riesgos."
+            "text": "ECAPFX es una plataforma educativa de evaluación de trading que proporciona a los traders acceso a cuentas de trading simuladas para el desarrollo y evaluación de habilidades en un entorno sin riesgos."
           },
           "scope": {
             "title": "15.2 Alcance",
-            "text": "Esta Política AML se aplica a todos los empleados, contratistas y personal asociado de ECAPFX. Describe el enfoque de la empresa para la prevención del lavado de dinero (AML) y la financiación del terrorismo (CTF) en relación con sus operaciones."
+            "text": "Esta Política AML se aplica a todos los empleados, contratistas y personal asociado de ECAPFX y describe el enfoque de la empresa hacia AML y Counter-Terrorist Financing (CTF)."
           },
           "businessModel": {
-            "title": "15.3 Modelo de negocio y naturaleza de los servicios",
+            "title": "15.3 Modelo de Negocio y Naturaleza de los Servicios",
             "items": [
-              "ECAPFX no acepta, mantiene ni gestiona fondos de clientes.",
-              "ECAPFX no proporciona asesoramiento financiero, recomendaciones de inversión ni gestiona capital real.",
-              "Todas las actividades de trading en la plataforma ECAPFX ocurren en un entorno simulado y sin riesgos utilizando solo cuentas demo.",
-              "ECAPFX opera estrictamente con fines educativos y de evaluación."
+              "ECAPFX no acepta, retiene ni gestiona fondos de clientes",
+              "ECAPFX no proporciona asesoramiento financiero ni gestiona capital real",
+              "Todo el trading ocurre en entornos simulados utilizando solo cuentas demo",
+              "ECAPFX opera estrictamente con fines educativos y de evaluación"
             ]
           },
           "regulatoryStatus": {
-            "title": "15.4 Estado regulatorio AML",
-            "text": "Dada la naturaleza de los servicios de ECAPFX, la empresa no está sujeta a las obligaciones regulatorias típicamente impuestas a instituciones financieras o entidades que manejan fondos reales de clientes o realizan transacciones financieras reales. Esto incluye, pero no se limita a:",
-            "items": [
-              "Requisitos de Debida Diligencia del Cliente (CDD) y Conozca a su Cliente (KYC) más allá de los descritos en la Sección 14",
-              "Monitoreo de transacciones por actividad sospechosa",
-              "Reporte de actividades sospechosas a las unidades de inteligencia financiera (FIUs)",
-              "Evaluaciones de riesgos y cribado de sanciones"
-            ]
+            "title": "15.4 Estado Regulatorio AML",
+            "text": "ECAPFX no está sujeto a las obligaciones regulatorias impuestas a entidades que manejan fondos reales de clientes, incluyendo Customer Due Diligence (CDD), monitoreo de transacciones o reporte de actividades sospechosas."
           },
           "compliance": {
-            "title": "15.5 Compromiso con el cumplimiento",
-            "text": "Aunque ECAPFX no está obligado a implementar controles AML formales debido a la ausencia de manejo de fondos reales, la empresa permanece comprometida a:",
-            "items": [
-              "Mantener la transparencia en todas las operaciones comerciales",
-              "Garantizar el cumplimiento legal y regulatorio en todas las áreas aplicables",
-              "Monitorear los desarrollos regulatorios que puedan afectar el modelo de negocio u obligaciones",
-              "Implementar un programa AML integral de inmediato si el modelo de negocio evoluciona para incluir el manejo de fondos reales de clientes o transacciones financieras"
-            ]
+            "title": "15.5 Compromiso con el Cumplimiento",
+            "text": "Aunque no está obligado a implementar controles AML formales, ECAPFX se compromete con la transparencia, el cumplimiento legal y el monitoreo de desarrollos regulatorios. Si nuestro modelo de negocio cambia para manejar fondos reales de clientes, implementaremos un cumplimiento AML/CTF completo."
           },
           "futurePolicy": {
-            "title": "15.6 Implementación futura de la Política AML",
-            "text": "Si ECAPFX expande o modifica sus operaciones comerciales para incluir la aceptación, gestión o procesamiento de fondos de clientes, la empresa:",
+            "title": "15.6 Implementación Futura de Política AML",
+            "text": "Si las operaciones comerciales evolucionan, ECAPFX desarrollará un programa AML/CTF integral que incluye:",
             "items": [
-              "Desarrollará e implementará un programa de cumplimiento AML/CTF completo en línea con las regulaciones relevantes",
-              "Realizará la debida diligencia del cliente (CDD) adecuada y monitoreo continuo",
-              "Designará un Oficial de Reporte de Lavado de Dinero (MLRO) responsable del cumplimiento AML",
-              "Proporcionará capacitación y concienciación AML a todos los miembros del personal"
+              "Customer Due Diligence (CDD)",
+              "Nombramiento de un Money Laundering Reporting Officer (MLRO)",
+              "Entrenamiento AML para el personal"
             ]
           },
           "policyDevelopment": {
-            "title": "15.7 Desarrollo de la política",
-            "text": "Esta Política AML ha sido desarrollada con el apoyo de una empresa privada que suministra a ECAPFX su plataforma de Gestión de Relaciones con Clientes (CRM). Esta asociación ayuda a ECAPFX a mantener e implementar las mejores prácticas de cumplimiento alineadas con los estándares de la industria."
+            "title": "15.7 Desarrollo de Política y Soporte",
+            "text": "Esta Política AML ha sido desarrollada en colaboración con el proveedor de la plataforma CRM de ECAPFX para alinearse con las mejores prácticas de la industria."
           },
           "conclusion": {
             "title": "15.8 Conclusión",
-            "text": "ECAPFX mantiene una posición clara como una plataforma de trading educativo y simulado sin involucrar dinero real. La empresa reconoce la importancia de las regulaciones AML y está preparada para implementar los controles necesarios si sus operaciones comerciales cambian.",
-            "documentVersionLabel": "Versión del documento:",
-            "documentVersion": "1.1",
-            "reviewedByLabel": "Revisado por:",
-            "reviewedBy": "Oficial de Cumplimiento de ECAPFX",
-            "approvedByLabel": "Aprobado por:",
-            "approvedBy": "Equipo de Gestión de ECAPFX"
+            "text": "ECAPFX sigue siendo una plataforma educativa de trading simulado y está preparada para implementar controles AML necesarios si cambian las circunstancias regulatorias."
           }
         }
       },
       "contact": {
-        "title": "16. Información de contacto",
+        "title": "16 Información de Contacto",
         "text": "Si tiene alguna pregunta sobre estos Términos, contáctenos:",
         "company": "ECAPFX Proprietary Firm",
         "emailLabel": "Correo electrónico:",
@@ -923,115 +950,114 @@
   },
   "cookiePolicy": {
     "title": "Política de Cookies",
-    "header": "ECAPFX Proprietary Firm – Política de Cookies",
-    "effectiveDateLabel": "Fecha de Efectividad:",
+    "header": "ECAPFX Proprietary Firm Política de Cookies",
+    "effectiveDateLabel": "Fecha de entrada en vigor:",
     "effectiveDate": "5 de julio de 2025",
-    "applicableLawLabel": "Ley Aplicable:",
-    "applicableLaw": "Reglamento General de Protección de Datos del Reino Unido (UK GDPR), Directiva de ePrivacy",
+    "applicableLawLabel": "Ley aplicable:",
+    "applicableLaw": "UK General Data Protection Regulation (UK GDPR), ePrivacy Directive",
+    "downloadButton": "Descargar PDF de Política de Cookies",
     "sections": {
       "introduction": {
-        "title": "1. Introducción",
-        "text1": "ECAPFX Proprietary Firm (\"ECAPFX\", \"nosotros\", \"nuestro\", o \"nos\") utiliza cookies y tecnologías similares para mejorar la funcionalidad, seguridad y personalización de nuestro sitio web",
-        "website": "https://www.ecapfx.com",
-        "text2": ". Esta Política de Cookies explica cómo usamos las cookies, qué tipos de cookies utilizamos y cómo puedes gestionar tus preferencias de cookies. Esto incluye las cookies utilizadas en conjunto con nuestra plataforma de trading (Match Trader) y nuestro sistema CRM (Kenmore CRM)."
+        "title": "1 Introducción",
+        "text1": "ECAPFX Proprietary Firm („ECAPFX“, „nosotros“, „nuestro“ o „nos“) utiliza cookies y tecnologías similares para mejorar la funcionalidad, seguridad y personalización de nuestro sitio web",
+        "website": "www.ecapfx.com",
+        "text2": ". Esta Política de Cookies explica cómo usamos cookies, qué tipos de cookies usamos y cómo puede gestionar sus preferencias de cookies. Esto incluye cookies usadas en conjunto con nuestra plataforma de trading (Match Trader) y sistema CRM (Kenmore CRM)."
       },
       "operator": {
-        "title": "2. Operador del Sitio Web",
-        "text1": "El operador del sitio web es ECAPFX Proprietary Firm, con su oficina registrada en Office 7330MO 182-184, High Street North Area 1/1, East Ham, Londres, E6 2JA, Reino Unido.",
+        "title": "2 Operador del Sitio Web",
+        "text": "El operador del sitio web es ECAPFX Proprietary Firm, con oficina registrada en Office 7330MO 182-184, High Street North Area 1/1, East Ham, London, E6 2JA, UK.",
         "contactLabel": "Contacto:",
         "email": "privacy@ecapfx.com"
       },
       "whatAreCookies": {
-        "title": "3. ¿Qué son las Cookies?",
-        "text": "Las cookies son pequeños archivos de texto almacenados en tu dispositivo cuando visitas nuestro sitio web. Nos ayudan a mejorar la funcionalidad del sitio web, analizar su uso y personalizar tu experiencia."
+        "title": "3 ¿Qué son las Cookies?",
+        "text": "Las cookies son pequeños archivos de texto almacenados en su dispositivo cuando visita nuestro sitio web. Nos ayudan a mejorar la funcionalidad del sitio web, analizar el uso y personalizar su experiencia."
       },
       "typesOfCookies": {
-        "title": "4. Tipos de Cookies que Usamos",
-        "text": "Utilizamos los siguientes tipos de cookies:",
+        "title": "4 Tipos de Cookies que Usamos",
+        "text": "Usamos los siguientes tipos de cookies:",
         "subsections": {
           "necessary": {
             "title": "4.1 Cookies Necesarias",
             "items": [
-              "Habilitan la funcionalidad principal del sitio web, como la navegación y el acceso a áreas seguras. No se pueden desactivar ya que son esenciales para el funcionamiento del sitio web.",
-              "Propósito: Habilitar la funcionalidad del sitio web y de la plataforma de trading (por ejemplo, gestión de sesiones, inicio de sesión).",
-              "Sistemas: Sitio web de ECAPFX, Match Trader (cookies de sesión para acceso al trading).",
+              "Habilitan la funcionalidad principal del sitio web, como navegación y acceso a áreas seguras. No se pueden desactivar ya que son esenciales para el funcionamiento del sitio web.",
+              "Propósito: Habilitar funcionalidad del sitio web y plataforma de trading (p. ej., gestión de sesiones, inicio de sesión).",
+              "Sistemas: Sitio web ECAPFX, Match Trader (cookies de sesión para acceso de trading).",
               "Retención: Duración de la sesión (eliminadas al cerrar el navegador)."
             ]
           },
           "analytical": {
             "title": "4.2 Cookies Analíticas",
             "items": [
-              "Nos ayudan a entender cómo los visitantes usan nuestro sitio web, por ejemplo, qué páginas son más visitadas. Son opcionales y solo se utilizan con tu consentimiento.",
-              "Propósito: Analizar el uso (por ejemplo, páginas visitadas, tiempo empleado) para mejorar la experiencia del usuario.",
-              "Sistemas: Sitio web de ECAPFX, Kenmore CRM (a través de integraciones analíticas, por ejemplo, Google Analytics).",
+              "Nos ayudan a entender cómo los visitantes usan nuestro sitio web, p. ej., qué páginas se visitan más. Opcionales y usadas solo con su consentimiento.",
+              "Propósito: Analizar uso (p. ej., páginas visitadas, tiempo pasado) para mejorar la experiencia del usuario.",
+              "Sistemas: Sitio web ECAPFX, Kenmore CRM (vía integraciones de analytics, p. ej., Google Analytics).",
               "Retención: Hasta 12 meses, luego anonimizadas."
             ]
           },
           "marketing": {
             "title": "4.3 Cookies de Marketing",
             "items": [
-              "Se utilizan para personalizar anuncios y contenido en sitios web y redes sociales. Son opcionales y solo se utilizan con tu consentimiento.",
+              "Usadas para personalizar anuncios y contenido a través de sitios web y redes sociales. Opcionales y usadas solo con su consentimiento.",
               "Propósito: Personalizar contenido de marketing, rastrear campañas de afiliados.",
-              "Sistemas: Sitio web de ECAPFX, Kenmore CRM (por ejemplo, seguimiento de clics en boletines).",
+              "Sistemas: Sitio web ECAPFX, Kenmore CRM (p. ej., rastreo de clics en boletines).",
               "Retención: Hasta 12 meses o hasta que se retire el consentimiento."
             ]
           },
           "thirdParty": {
             "title": "4.4 Cookies de Terceros",
             "items": [
-              "Algunas cookies pueden ser establecidas por servicios de terceros (por ejemplo, socios de análisis o publicidad). Estas están sujetas a las políticas de privacidad de esos proveedores.",
-              "Propósito: Apoyar análisis, seguimiento de afiliados (por ejemplo, Google Analytics, plataformas de afiliados).",
-              "Sistemas: Establecidas por terceros a través del sitio web de ECAPFX o integraciones de Kenmore CRM.",
-              "Retención: Hasta 12 meses, según las políticas de terceros.",
-              "Providers: Google Analytics (rastrea el uso del sitio web con direcciones IP anonimizadas); Plataformas de Afiliados (rastrean referencias, listadas en https://www.ecapfx.com/processors)."
+              "Algunas cookies pueden ser establecidas por servicios de terceros (p. ej., partners de analytics o publicidad). Estas están sujetas a las políticas de privacidad de esos proveedores.",
+              "Propósito: Apoyar analytics, rastreo de afiliados (p. ej., Google Analytics, plataformas de afiliados).",
+              "Sistemas: Establecidas por terceros vía sitio web ECAPFX o integraciones Kenmore CRM.",
+              "Retención: Hasta 12 meses, según políticas de terceros.",
+              "Proveedores: Google Analytics (rastrea uso del sitio web con direcciones IP anonimizadas); Plataformas de Afiliados (rastrea referencias, listadas en www.ecapfx.com/processors)."
             ]
           }
         }
       },
       "cookieManagement": {
-        "title": "5. Cómo Gestionar las Cookies",
-        "text1": "Puedes gestionar tus preferencias de cookies a través de la configuración de tu navegador o nuestro banner de consentimiento de cookies. La mayoría de los navegadores aceptan cookies por defecto, pero puedes:",
+        "title": "5 Cómo Gestionar Cookies",
+        "text1": "Puede gestionar preferencias de cookies a través de la configuración de su navegador o nuestro banner de consentimiento de cookies. La mayoría de los navegadores aceptan cookies por defecto, pero puede:",
         "items": [
           "Aceptar todas las cookies.",
           "Rechazar cookies no esenciales.",
-          "Eliminar cookies de tu dispositivo en cualquier momento."
+          "Eliminar cookies de su dispositivo en cualquier momento."
         ],
-        "text2": "Para más información, consulta la sección de ayuda de tu navegador o la configuración de tu sistema operativo. Ten en cuenta que rechazar cookies puede afectar algunas funciones del sitio web.",
+        "text2": "Para más información, vea la sección de ayuda de su navegador o la configuración de su sistema operativo. Tenga en cuenta que rechazar cookies puede afectar algunas características del sitio web.",
         "subsections": {
           "consent": {
             "title": "5.1 Gestión de Consentimiento",
             "items": [
-              "Consentimiento Granular: Nuestro banner de cookies permite consentimientos separados para cookies analíticas y de marketing. Las cookies esenciales no requieren consentimiento.",
-              "Retirada: Opta por no participar a través de la configuración del navegador o haciendo clic en Rechazar.",
-              "Kenmore CRM: Registra marcas temporales de consentimiento, fuentes (por ejemplo, formulario web) y solicitudes de retirada (procesadas en 48 horas)."
+              "Consentimiento Granular: Nuestro banner de cookies permite consentimiento separado para cookies de analytics y marketing. Las cookies esenciales no requieren consentimiento.",
+              "Retiro: Opt-out vía www.ecapfx.com/cookie-preferences o configuración del navegador.",
+              "Kenmore CRM: Registra timestamps de consentimiento, fuentes (p. ej., formulario web) y solicitudes de retiro (procesadas dentro de 48 horas)."
             ]
           }
         }
       },
       "yourRights": {
-        "title": "6. Tus Derechos",
-        "text": "Bajo el UK GDPR, tienes derecho a:",
+        "title": "6 Sus Derechos",
+        "text": "Bajo UK GDPR, tiene derecho a:",
         "items": [
-          "Acceder a los datos que tenemos sobre ti a través de cookies.",
-          "Oponerte o restringir el procesamiento de datos relacionados con cookies.",
-          "Retirar el consentimiento para cookies no esenciales en cualquier momento.",
-          "Presentar una queja ante la Oficina del Comisionado de Información del Reino Unido (ICO) en https://ico.org.uk/"
-        ],
-        "contactText": "Para ejercer estos derechos, contáctanos en",
-        "email": "privacy@ecapfx.com"
+          "Acceder a datos que tenemos sobre usted vía cookies.",
+          "Objetar o restringir procesamiento de datos relacionado con cookies.",
+          "Retirar consentimiento para cookies no esenciales en cualquier momento.",
+          "Presentar una queja ante la UK Information Commissioner’s Office (ICO) en ico.org.uk."
+        ]
       },
       "updates": {
-        "title": "7. Actualizaciones de Esta Política",
-        "text": "Podemos actualizar esta Política de Cookies para reflejar cambios en la ley o en nuestras prácticas. La versión más reciente se publicará en nuestro sitio web con una fecha de efectividad revisada."
+        "title": "7 Actualizaciones a Esta Política",
+        "text": "Podemos actualizar esta Política de Cookies para reflejar cambios en la ley o nuestras prácticas. La versión más reciente se publicará en nuestro sitio web con una fecha de vigencia revisada."
       },
       "contact": {
-        "title": "8. Contáctanos",
-        "text": "Para preguntas sobre esta Política de Cookies, por favor contacta:",
+        "title": "8 Contáctenos",
+        "text": "Para preguntas sobre esta Política de Cookies, contáctenos:",
         "company": "ECAPFX Proprietary Firm",
         "emailLabel": "Correo electrónico:",
         "email": "privacy@ecapfx.com",
         "websiteLabel": "Sitio web:",
-        "website": "https://www.ecapfx.com"
+        "website": "www.ecapfx.com"
       }
     }
   },
