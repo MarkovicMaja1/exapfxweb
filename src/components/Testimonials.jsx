@@ -3,7 +3,6 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 
 const Testimonials = () => {
-  const containerRef = useRef(null);
   const innerRef = useRef(null);
   const reverseInnerRef = useRef(null);
   const [scrollWidth, setScrollWidth] = useState(0);
@@ -30,9 +29,47 @@ const Testimonials = () => {
     }
   }, []);
 
+  // JavaScript fallback for pause-on-hover
+  useEffect(() => {
+    const rows = document.querySelectorAll('.marquee-row');
+
+    rows.forEach((row) => {
+      const cards = row.querySelectorAll('.card');
+      cards.forEach((card) => {
+        const handleMouseEnter = () => {
+          row.classList.add('paused');
+        };
+        const handleMouseLeave = () => {
+          row.classList.remove('paused');
+        };
+
+        card.addEventListener('mouseenter', handleMouseEnter);
+        card.addEventListener('mouseleave', handleMouseLeave);
+
+        // Store handlers for cleanup
+        card._handleMouseEnter = handleMouseEnter;
+        card._handleMouseLeave = handleMouseLeave;
+      });
+    });
+
+    return () => {
+      rows.forEach((row) => {
+        const cards = row.querySelectorAll('.card');
+        cards.forEach((card) => {
+          if (card._handleMouseEnter) {
+            card.removeEventListener('mouseenter', card._handleMouseEnter);
+          }
+          if (card._handleMouseLeave) {
+            card.removeEventListener('mouseleave', card._handleMouseLeave);
+          }
+        });
+      });
+    };
+  }, []);
+
   const cardsData = [
     {
-      image: 'https://scontent.fbeg1-1.fna.fbcdn.net/v/t1.6435-9/139288848_117355423580647_8923759221739434213_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=t20yTEdUudwQ7kNvwFIAHOW&_nc_oc=Admt3bHcmMthNsVFxSCQQUXHpApGBrVZTdDrSNowOhQgVEW_GMOPTZdgk8pk7ztFn1c&_nc_zt=23&_nc_ht=scontent.fbeg1-1.fna&_nc_gid=HeE55ILmZxmUt4JKA03ilg&oh=00_AfWRXkaVI2nC7V7w-NIEdb26DHcu5ksrzP0EjOrLo7L6vw&oe=68C0108F',
+      image: 'https://scontent.fbeg2-1.fna.fbcdn.net/v/t39.30808-6/502375006_644484481945735_2891722523436855694_n.jpg?stp=cp6_dst-jpg_tt6&_nc_cat=104&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=Z076C6VtEGsQ7kNvwF_TOp_&_nc_oc=Adlkr2Zq6_Bz9dNftiYqVzsEyMx0mJ4roeuuK_wTKGzE0ok5MuXTen5hI5e5jFbNkiU&_nc_zt=23&_nc_ht=scontent.fbeg2-1.fna&_nc_gid=PqVMRtCIdXK7QCt9EqEkqA&oh=00_AfUSrgVyCmXHjQezaGLjLKQ62yUtmKNkjyj0rOijjnO54w&oe=689F9ED2',
       name: 'Marco Mojza',
       handle: '@marcomojza',
       date: 'August 3, 2025',
@@ -60,7 +97,7 @@ const Testimonials = () => {
       review: 'Mobile app is a lifesaver for trading on the go. The seamless sync between desktop and mobile means I never miss an opportunity. Absolutely love the user experience!'
     },
     {
-      image: 'https://scontent.fbeg1-1.fna.fbcdn.net/v/t39.30808-6/466402931_10230485898385264_1334459201437981814_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=cZ92p7aadWwQ7kNvwHoscF4&_nc_oc=Admk8C489Y6C0sRQCgBm2qwIg9k3qJn0oHFh5Pr3LOkHc1l0w4vP1eeZEKM24d7rkhI&_nc_zt=23&_nc_ht=scontent.fbeg1-1.fna&_nc_gid=-S7ZGSAsKVqEDa3-nr6owA&oh=00_AfVLRY9woi93xgQNaZv53aXXRcC22knXntWsOomnLlwi7A&oe=689E4EE4',
+      image: 'https://scontent.fbeg1-1.fna.fbcdn.net/v/t39.30808-6/466402931_10230485898385264_1334459201437981814_n.jpg?_nc_cat=100&ccb=1-7&_nc_ohc=cZ92p7aadWwQ7kNvwHoscF4&_nc_oc=Admk8C489Y6C0sRQCgBm2qwIg9k3qJn0oHFh5Pr3LOkHc1l0w4vP1eeZEKM24d7rkhI&_nc_zt=23&_nc_ht=scontent.fbeg1-1.fna&_nc_gid=-S7ZGSAsKVqEDa3-nr6owA&oh=00_AfVLRY9woi93xgQNaZv53aXXRcC22knXntWsOomnLlwi7A&oe=689E4EE4',
       name: 'Nebojsa',
       handle: '@earnings4all',
       date: 'June 28, 2025',
@@ -175,7 +212,7 @@ const Testimonials = () => {
     return (
       <div
         ref={cardRef}
-        className="p-4 rounded-lg shadow hover:shadow-lg transition-all duration-200 w-72 shrink-0 bg-white"
+        className="card p-4 rounded-lg shadow hover:shadow-lg transition-all duration-200 w-72 shrink-0 bg-white"
         data-aos="fade-up"
         data-aos-delay="100"
       >
@@ -236,6 +273,35 @@ const Testimonials = () => {
         }
         .marquee-inner {
           will-change: transform;
+          animation-play-state: running;
+        }
+        /* Pause animation when marquee-row has .paused (JS fallback) */
+        .marquee-row.paused .marquee-inner {
+          animation-play-state: paused;
+        }
+        /* Pause animation when any card is hovered (CSS :has()) */
+        .marquee-row:has(.card:hover) .marquee-inner {
+          animation-play-state: paused;
+        }
+        /* Stop the slider completely on card hover */
+        .marquee-row .card:hover ~ .marquee-inner,
+        .marquee-row .card:hover .marquee-inner {
+          animation: none;
+        }
+        /* Restart the slider when hover ends */
+        .marquee-row .marquee-inner {
+        animation: ${scrollWidth ? `marqueeScroll ${Math.round(0.025 * scrollWidth)}s linear infinite` : 'none'};
+        }
+        .marquee-row.reverse .marquee-inner {
+        animation: ${reverseScrollWidth ? `marqueeScrollReverse ${Math.round(0.025 * reverseScrollWidth)}s linear infinite` : 'none'};
+        }
+        /* Ensure child elements don't interfere with hover */
+        .card * {
+          pointer-events: none;
+        }
+        /* Re-enable pointer events for interactive elements */
+        .card button {
+          pointer-events: auto;
         }
       `}</style>
 
@@ -251,10 +317,7 @@ const Testimonials = () => {
           <div
             ref={innerRef}
             className="marquee-inner flex flex-nowrap transform-gpu gap-8 pt-10 pb-5"
-            style={{
-              animation: scrollWidth ? `marqueeScroll ${Math.round(0.025 * scrollWidth)}s linear infinite` : 'none',
-            }}
-          >
+            >
             {cardsData.map((card, index) => (
               <CreateCard key={index} card={card} />
             ))}
@@ -265,15 +328,12 @@ const Testimonials = () => {
           <div className="absolute right-0 top-0 h-full w-20 md:w-40 z-10 pointer-events-none bg-gradient-to-l from-[#ffffff] to-transparent"></div>
         </div>
 
-        <div className="marquee-row w-full mx-auto max-w-7xl pb-14 px-6 lg:px-12 overflow-hidden relative pb-[120px]">
+        <div className="marquee-row reverse w-full mx-auto max-w-7xl pb-14 px-6 lg:px-12 overflow-hidden relative pb-[120px]">
           <div className="absolute left-0 top-0 h-full w-20 z-10 pointer-events-none bg-gradient-to-r from-[#ffffff] to-transparent"></div>
           <div
             ref={reverseInnerRef}
             className="marquee-inner flex flex-nowrap transform-gpu gap-8 pt-10 pb-5"
-            style={{
-              animation: reverseScrollWidth ? `marqueeScrollReverse ${Math.round(0.025 * reverseScrollWidth)}s linear infinite` : 'none',
-            }}
-          >
+            >
             {cardsData.map((card, index) => (
               <CreateCard key={index} card={card} />
             ))}
@@ -283,24 +343,21 @@ const Testimonials = () => {
           </div>
           <div className="absolute right-0 top-0 h-full w-20 md:w-40 z-10 pointer-events-none bg-gradient-to-l from-[#ffffff] to-transparent"></div>
         </div>
-
-        {/* <div className="absolute bottom-0 left-0 w-full h-2 bg-gradient-to-r from-transparent via-[#1d8348] to-transparent hidden shadow-lg sm:block z-20" /> */}
       </section>
-         {/* GRADIENT DIV BELOW SECTION */}
-        <div className="bg-[#e5e5e5] relative w-full h-32 overflow-hidden z-30">
+      <div className="bg-[#e5e5e5] relative w-full h-32 overflow-hidden z-30">
         <svg
-            className="absolute top-0 left-0 w-full h-full custom-svg"
-            viewBox="0 0 100 100"
-            preserveAspectRatio="none"
+          className="absolute top-0 left-0 w-full h-full custom-svg"
+          viewBox="0 0 100 100"
+          preserveAspectRatio="none"
         >
-            <polygon fill="#ffffff" points="0,0 100,50 100,0" />
+          <polygon fill="#ffffff" points="0,0 100,50 100,0" />
         </svg>
-        </div>
-        <style>{`
+      </div>
+      <style>{`
         .custom-svg polygon {
-            fill: #ffffff !important;
+          fill: #ffffff !important;
         }
-        `}</style>
+      `}</style>
     </>
   );
 };
