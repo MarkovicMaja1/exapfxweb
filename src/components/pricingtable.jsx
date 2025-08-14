@@ -9,6 +9,7 @@ import './pricingtable.css';
 import usdFlag from '../assets/usd-flag.png';
 import gbpFlag from '../assets/gbp-flag.png';
 import eurFlag from '../assets/eur-flag.png';
+import mtIcon from '../assets/mticon.png';
 
 const getTranslationKey = (text) => {
   const keyMap = {
@@ -937,21 +938,34 @@ function PricingTable() {
           <div 
             className="absolute inset-0 bg-black bg-opacity-50" 
             onClick={() => setShowModal(false)}
-            style={{ pointerEvents: 'auto' }} // Ensure backdrop captures clicks
+            style={{ pointerEvents: 'auto' }}
           ></div>
-           <div 
+          <div 
             className={`absolute right-0 h-[calc(100%-124px)] w-[1200px] bg-white transform transition-transform duration-300 ease-in-out flex flex-col ${showModal ? 'translate-x-0' : 'translate-x-full'}`} 
             style={{ top: '124px' }}
           >
-            <div className="relative p-4 border-b">
+            {/* Transparent Header */}
+            <div className="relative p-4" style={{ 
+              background: '#151515',
+              backdropFilter: 'blur(10px)',
+              WebkitBackdropFilter: 'blur(10px)'
+            }}>
               <button
-                className="absolute top-4 right-4 text-gray-600 hover:text-gray-800 text-2xl font-bold z-10"
+                className="absolute top-4 right-4 text-white hover:text-gray-300 text-2xl font-bold z-10"
                 onClick={() => setShowModal(false)}
               >
                 ×
               </button>
-              <h3 className="text-lg font-semibold text-center">Challenge Details</h3>
+              <div className="flex items-center justify-center gap-2">
+                <img 
+                  src={mtIcon} 
+                  alt="Challenge Icon" 
+                  className="w-38 h-28" 
+                />
+                <h3 className="text-lg font-semibold uppercase text-white">Challenge Details</h3>
+              </div>
             </div>
+            
             <div className="flex-grow min-h-0 w-full">
               <iframe 
                 src={iframeUrl} 
@@ -959,7 +973,7 @@ function PricingTable() {
                 height="100%" 
                 frameBorder="0"
                 title="Challenge Modal"
-                style={{ pointerEvents: 'auto' }} // Ensure iframe is interactive
+                style={{ pointerEvents: 'auto' }}
               ></iframe>
             </div>
           </div>
