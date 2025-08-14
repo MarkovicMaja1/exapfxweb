@@ -940,30 +940,32 @@ function PricingTable() {
             onClick={() => setShowModal(false)}
             style={{ pointerEvents: 'auto' }}
           ></div>
+          
+          {/* Desktop Modal (right-side drawer) */}
           <div 
-            className={`absolute right-0 h-[calc(100%-124px)] w-[1200px] bg-white transform transition-transform duration-300 ease-in-out flex flex-col ${showModal ? 'translate-x-0' : 'translate-x-full'}`} 
+            className={`absolute right-0 h-[calc(100%-124px)] w-[1200px] bg-white transform transition-transform duration-300 ease-in-out flex flex-col
+                        ${showModal ? 'translate-x-0' : 'translate-x-full'}
+                        hidden md:flex`}
             style={{ top: '124px' }}
           >
-            {/* Transparent Header */}
-            <div className="relative p-4" style={{ 
+            <div className="relative p-0 flex justify-between items-center" style={{ 
               background: '#151515',
-              backdropFilter: 'blur(10px)',
-              WebkitBackdropFilter: 'blur(10px)'
+              minHeight: '60px'
             }}>
-              <button
-                className="absolute top-4 right-4 text-white hover:text-gray-300 text-2xl font-bold z-10"
-                onClick={() => setShowModal(false)}
-              >
-                ×
-              </button>
-              <div className="flex items-center justify-center gap-2">
+              <div className="flex items-center gap-2 pl-4">
                 <img 
                   src={mtIcon} 
                   alt="Challenge Icon" 
                   className="w-38 h-28" 
                 />
-                <h3 className="text-lg font-semibold uppercase text-white">Challenge Details</h3>
+                <h3 className="text-sm sm:text-base font-semibold uppercase text-white">Challenge Details</h3>
               </div>
+              <button
+                className="text-white hover:text-gray-300 text-2xl font-bold z-10 pr-4"
+                onClick={() => setShowModal(false)}
+              >
+                ×
+              </button>
             </div>
             
             <div className="flex-grow min-h-0 w-full">
@@ -974,6 +976,47 @@ function PricingTable() {
                 frameBorder="0"
                 title="Challenge Modal"
                 style={{ pointerEvents: 'auto' }}
+                className="w-full h-full"
+              ></iframe>
+            </div>
+          </div>
+          
+          {/* Mobile Modal (full-screen) */}
+          <div 
+            className={`fixed inset-0 bg-white transform transition-transform duration-300 ease-in-out flex flex-col
+                        ${showModal ? 'translate-y-0' : 'translate-y-full'}
+                        flex md:hidden`}
+            style={{ top: '124px' }}
+          >
+            <div className="relative p-0 flex justify-between items-center" style={{ 
+              background: '#151515',
+              minHeight: '60px'
+            }}>
+              <div className="flex items-center gap-2 pl-4">
+                <img 
+                  src={mtIcon} 
+                  alt="Challenge Icon" 
+                  className="w-26 h-12" 
+                />
+                <h3 className="text-sm sm:text-base font-semibold uppercase text-white">Challenge Details</h3>
+              </div>
+              <button
+                className="text-white hover:text-gray-300 text-2xl font-bold z-10 pr-4"
+                onClick={() => setShowModal(false)}
+              >
+                ×
+              </button>
+            </div>
+            
+            <div className="flex-grow min-h-0 w-full">
+              <iframe 
+                src={iframeUrl} 
+                width="100%" 
+                height="100%" 
+                frameBorder="0"
+                title="Challenge Modal"
+                style={{ pointerEvents: 'auto' }}
+                className="w-full h-full"
               ></iframe>
             </div>
           </div>
@@ -981,6 +1024,26 @@ function PricingTable() {
       )}
       {/* <div className="absolute bottom-0 left-0 w-full h-2 bg-gradient-to-r from-transparent via-[#1d8348] to-transparent hidden shadow-lg sm:block z-20" /> */}
       <style jsx>{`
+        @media (max-width: 767px) {
+          .modal-container {
+            top: 0 !important;
+            height: 100% !important;
+            transform: translateY(0) !important;
+            transition: transform 0.3s ease-in-out;
+          }
+          @media (max-width: 767px) {
+            .modal-container {
+              transition: transform 0.3s ease-in-out;
+            }
+          }
+          .modal-container.hidden {
+            transform: translateY(100%) !important;
+          }
+          
+          iframe {
+            min-height: calc(100vh - 60px); /* Account for header height */
+          }
+        }
         @media (max-width: 640px) {
           .code-container {
             min-width: 160px;
