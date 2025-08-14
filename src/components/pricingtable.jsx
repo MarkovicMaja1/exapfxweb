@@ -33,6 +33,55 @@ function PricingTable() {
   const [isAnimating, setIsAnimating] = useState(false);
   const [timeLeft, setTimeLeft] = useState(0);
   const [isCopied, setIsCopied] = useState(false);
+  const [showModal, setShowModal] = useState(false);
+  const [iframeUrl, setIframeUrl] = useState('');
+
+  // Lock body scroll when modal is open
+  useEffect(() => {
+  if (showModal) {
+    document.documentElement.style.overflow = 'hidden';
+    document.body.style.overflow = 'hidden';
+  } else {
+    document.documentElement.style.overflow = 'unset';
+    document.body.style.overflow = 'unset';
+  }
+  
+  return () => {
+    document.documentElement.style.overflow = 'unset';
+    document.body.style.overflow = 'unset';
+  };
+  }, [showModal]);
+
+
+  const challengeUrls = {
+    "One Step": {
+      "10k": "https://active.ecapfx.com/promotion/challenge?challengeId=d2de65a0-6ee2-11f0-90e8-23d7e3e41c0d",
+      "25k": "https://active.ecapfx.com/promotion/challenge?challengeId=b16d5c31-6e62-11f0-90e8-23d7e3e41c0d",
+      "50k": "https://active.ecapfx.com/promotion/challenge?challengeId=b1a932a0-6ee4-11f0-90e8-23d7e3e41c0d",
+      "100k": "https://active.ecapfx.com/promotion/challenge?challengeId=478c2b60-6ee5-11f0-90e8-23d7e3e41c0d",
+      "200k": "https://active.ecapfx.com/promotion/challenge?challengeId=e28330a0-6ee5-11f0-90e8-23d7e3e41c0d"
+    },
+    "Two Step": {
+      "10k": "https://active.ecapfx.com/promotion/challenge?challengeId=72a370e1-6ee7-11f0-90e8-23d7e3e41c0d",
+      "25k": "https://active.ecapfx.com/promotion/challenge?challengeId=ab071270-6eec-11f0-90e8-23d7e3e41c0d",
+      "50k": "https://active.ecapfx.com/promotion/challenge?challengeId=44e61800-6eed-11f0-90e8-23d7e3e41c0d",
+      "100k": "https://active.ecapfx.com/promotion/challenge?challengeId=d2b7a2c1-6eed-11f0-90e8-23d7e3e41c0d",
+      "200k": "https://active.ecapfx.com/promotion/challenge?challengeId=f209ee80-6ef7-11f0-90e8-23d7e3e41c0d"
+    },
+    "Three Step": {
+      "10k": "https://active.ecapfx.com/promotion/challenge?challengeId=c5d5db50-708a-11f0-90e8-23d7e3e41c0d",
+      "25k": "https://active.ecapfx.com/promotion/challenge?challengeId=7df2ec91-708c-11f0-90e8-23d7e3e41c0d",
+      "50k": "https://active.ecapfx.com/promotion/challenge?challengeId=e1e551c1-708c-11f0-90e8-23d7e3e41c0d",
+      "100k": "https://active.ecapfx.com/promotion/challenge?challengeId=5a1683d0-708d-11f0-90e8-23d7e3e41c0d",
+      "200k": "https://active.ecapfx.com/promotion/challenge?challengeId=98f72a00-708d-11f0-90e8-23d7e3e41c0d"
+    },
+    "Instant Funding": {
+      "10k": "https://active.ecapfx.com/promotion/challenge?challengeId=3511cde0-7071-11f0-90e8-23d7e3e41c0d",
+      "15k": "https://active.ecapfx.com/promotion/challenge?challengeId=a4c28700-7072-11f0-90e8-23d7e3e41c0d",
+      "20k": "https://active.ecapfx.com/promotion/challenge?challengeId=6664fe11-7073-11f0-90e8-23d7e3e41c0d",
+      "25k": "https://active.ecapfx.com/promotion/challenge?challengeId=38522471-7074-11f0-90e8-23d7e3e41c0d"
+    }
+  };
 
   // Price mapping and table data remain unchanged
   const priceMap = {
@@ -355,6 +404,16 @@ function PricingTable() {
     setIsAnimating(true);
     setSelectedCurrency(currency);
     setTimeout(() => setIsAnimating(false), 300);
+  };
+
+  const handleStartChallenge = () => {
+    const url = challengeUrls[selectedStep][selectedSize];
+    if (url) {
+      setIframeUrl(url);
+      setShowModal(true);
+    } else {
+      window.open('https://active.ecapfx.com/promotion/challenge', '_blank', 'noopener,noreferrer');
+    }
   };
 
   const steps = ["One Step", "Two Step", "Three Step", "Instant Funding"];
@@ -819,7 +878,7 @@ function PricingTable() {
                       e.currentTarget.style.transform = 'scale(1)';
                       e.currentTarget.style.boxShadow = 'none';
                     }}
-                    onClick={() => window.open('https://active.ecapfx.com/promotion/challenge', '_blank', 'noopener,noreferrer')}
+                    onClick={handleStartChallenge}
                   >
                     {t('pricingTable.startChallenge')}
                   </button>
@@ -873,6 +932,39 @@ function PricingTable() {
           </div>
         </div>
       </div>
+      {showModal && (
+        <div className="fixed inset-0 z-[1000] overflow-hidden">
+          <div 
+            className="absolute inset-0 bg-black bg-opacity-50" 
+            onClick={() => setShowModal(false)}
+            style={{ pointerEvents: 'auto' }} // Ensure backdrop captures clicks
+          ></div>
+           <div 
+            className={`absolute right-0 h-[calc(100%-124px)] w-[1200px] bg-white transform transition-transform duration-300 ease-in-out flex flex-col ${showModal ? 'translate-x-0' : 'translate-x-full'}`} 
+            style={{ top: '124px' }}
+          >
+            <div className="relative p-4 border-b">
+              <button
+                className="absolute top-4 right-4 text-gray-600 hover:text-gray-800 text-2xl font-bold z-10"
+                onClick={() => setShowModal(false)}
+              >
+                ×
+              </button>
+              <h3 className="text-lg font-semibold text-center">Challenge Details</h3>
+            </div>
+            <div className="flex-grow min-h-0 w-full">
+              <iframe 
+                src={iframeUrl} 
+                width="100%" 
+                height="100%" 
+                frameBorder="0"
+                title="Challenge Modal"
+                style={{ pointerEvents: 'auto' }} // Ensure iframe is interactive
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      )}
       {/* <div className="absolute bottom-0 left-0 w-full h-2 bg-gradient-to-r from-transparent via-[#1d8348] to-transparent hidden shadow-lg sm:block z-20" /> */}
       <style jsx>{`
         @media (max-width: 640px) {
@@ -968,9 +1060,19 @@ function PricingTable() {
           #start-challenge {
             overflow-x: hidden; /* Prevent horizontal overflow */
           }
+          #start-challenge {
+            overflow-x: hidden;
+            position: relative; /* Ensure proper stacking context */
+          }
+
+          /* When modal is open */
+          body.modal-open, html.modal-open {
+            overflow: hidden;
+            height: 100%;
+          }
       `}</style>
     </div>
   );
 }
 
-export default PricingTable;  
+export default PricingTable;
