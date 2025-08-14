@@ -10,7 +10,7 @@ const Header = () => {
 
   // Timer state from 03:32 PM CEST, August 04, 2025 to August 16, 2025
   const startDate = new Date('2025-08-04T15:32:00+02:00'); // 03:32 PM CEST
-  const endDate = new Date('2025-08-16T23:59:59+02:00'); // End of August 16, 2025
+  const endDate = new Date('2025-08-21T23:59:59+02:00'); // End of August 21, 2025
   const [timeLeft, setTimeLeft] = useState(Math.floor((endDate - startDate) / 1000));
 
   useEffect(() => {
@@ -32,7 +32,7 @@ const Header = () => {
   };
 
   const copyToClipboard = () => {
-    navigator.clipboard.writeText("NEW").then(() => {
+    navigator.clipboard.writeText("40OFF").then(() => {
       alert("Copied to clipboard!");
     }).catch(err => {
       console.error("Failed to copy: ", err);
@@ -68,7 +68,7 @@ const Header = () => {
                     <span className="max-xsm:w-[160px] leading-[120%] max-xsm:text-[12px]">Claim 25% Off ECAPFX Challenges Now with Promo Code!</span>
                     <button className="bg-white/15 rounded-full px-2 py-[2px] text-[13px] uppercase flex items-center gap-[8px] transition-all duration-300 font-semibold hover:bg-white/20" type="button" onClick={copyToClipboard}>
                       <span className="translate-y-[0.5px]">
-                        <span className="max-lg:hidden">CODE :</span> NEW
+                        <span className="max-lg:hidden">CODE :</span> 40OFF
                       </span>
                       <svg stroke="currentColor" fill="currentColor" strokeWidth="0" viewBox="0 0 24 24" className="text-[12px]" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
                         <path fill="none" d="M0 0h24v24H0z"></path>
@@ -95,7 +95,7 @@ const Header = () => {
                     <span className="max-xsm:w-[160px] leading-[120%] max-xsm:text-[12px]">Claim 25% Off ECAPFX Challenges Now with Promo Code!</span>
                     <button className="bg-white/15 rounded-full px-2 py-[2px] text-[13px] uppercase flex items-center gap-[8px] transition-all duration-300 font-semibold hover:bg-white/20" type="button" onClick={copyToClipboard}>
                       <span className="translate-y-[0.5px]">
-                        <span className="max-lg:hidden">CODE :</span> NEW
+                        <span className="max-lg:hidden">CODE :</span> 40OFF
                       </span>
                       <svg stroke="currentColor" fill="currentColor" strokeWidth="0" viewBox="0 0 24 24" className="text-[12px]" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
                         <path fill="none" d="M0 0h24v24H0z"></path>

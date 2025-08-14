@@ -11,7 +11,7 @@ const Header = () => {
 
   // Timer state from current time (02:02 AM CEST, August 05, 2025) to August 16, 2025
   const startDate = new Date('2025-08-05T02:02:00+02:00'); // 02:02 AM CEST
-  const endDate = new Date('2025-08-16T23:59:59+02:00'); // End of August 16, 2025
+  const endDate = new Date('2025-08-21T23:59:59+02:00'); // End of August 21, 2025
   const [timeLeft, setTimeLeft] = useState(Math.floor((endDate - new Date()) / 1000));
 
   useEffect(() => {
@@ -33,7 +33,7 @@ const Header = () => {
   };
 
   const handleCopy = () => {
-    navigator.clipboard.writeText("NEW").then(() => {
+    navigator.clipboard.writeText("OFF40").then(() => {
       setIsCopied(true);
       setTimeout(() => setIsCopied(false), 2000); // Reset after 2 seconds
     }).catch(err => {
@@ -59,12 +59,12 @@ const Header = () => {
         <div className="flex items-center justify-center space-x-2 sm:space-x-3">
           <span className="font-bold text-white text-xs sm:text-sm hidden lg:block">ECAPFX: Exclusive Offer</span>
           <span className="text-white text-xs sm:text-sm truncate max-w-[120px] sm:max-w-[180px] lg:max-w-[370px]">
-            {window.innerWidth >= 1024 ? "Claim 25% Off ECAPFX Challenges Now with Promo Code!" : "Claim 25% off ECAP"}
+            {window.innerWidth >= 1024 ? "Claim 40% Off ECAPFX Challenges Now with Promo Code!" : "Claim 40% off ECAP"}
           </span>
-          <div className="px-[10px] w-[75px] h-[35px] rounded-[50px] overflow-hidden flex items-center gap-1 border-[1px] border-[#1a6f3d]" style={{ background: 'linear-gradient(0deg, #1a6f3d 0%, #145c33 100%)' }}>
+          <div className="px-[10px] w-[95px] h-[35px] rounded-[50px] overflow-hidden flex items-center gap-1 border-[1px] border-[#1a6f3d]" style={{ background: 'linear-gradient(0deg, #1a6f3d 0%, #145c33 100%)' }}>
          
             <p className="text-xs font-bold text-white uppercase text-center flex items-center justify-center gap-1">
-              <span>NEW</span>
+              <span>OFF40</span>
               <button
                 type="button"
                 className="cursor-pointer transition-all duration-300 relative"

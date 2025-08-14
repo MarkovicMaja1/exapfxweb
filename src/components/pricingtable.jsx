@@ -318,7 +318,7 @@ function PricingTable() {
 }, [selectedStep, selectedSize, selectedCurrency]);
 
   const startDate = new Date('2025-08-04T15:34:00+02:00');
-  const endDate = new Date('2025-08-16T23:59:59+02:00');
+  const endDate = new Date('2025-08-21T23:59:59+02:00');
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -339,7 +339,7 @@ function PricingTable() {
   };
 
   const handleCopy = () => {
-    navigator.clipboard.writeText("NEW");
+    navigator.clipboard.writeText("OFF40");
     setIsCopied(true);
     setTimeout(() => setIsCopied(false), 2000);
   };
@@ -858,10 +858,10 @@ function PricingTable() {
                 Exclusive Offer:
               </p>
               <div className="flex justify-center items-center">
-                <span className="px-2 w-[160px] h-[35px] rounded-[50px] overflow-hidden flex items-center justify-center gap-1 border-[1px] border-[#1a6f3d] code-container" style={{ background: 'linear-gradient(0deg, #1a6f3d 0%, #145c33 100%)', minWidth: '160px', whiteSpace: 'nowrap' }}>
+                <span className="px-2 w-[170px] h-[35px] rounded-[50px] overflow-hidden flex items-center justify-center gap-1 border-[1px] border-[#1a6f3d] code-container" style={{ background: 'linear-gradient(0deg, #1a6f3d 0%, #145c33 100%)', minWidth: '160px', whiteSpace: 'nowrap' }}>
                   <p className="px-1 py-0 bg-[#FF0000] text-xs font-bold text-[#FFFFFF] uppercase code-text rounded-[50px]">USE CODE</p>
                   <p className="text-xs font-bold text-white uppercase text-center flex items-center justify-center gap-1">
-                    <span>NEW</span>
+                    <span>OFF40</span>
                     <button
                       type="button"
                       className="cursor-pointer transition-all duration-300 relative"
@@ -883,7 +883,7 @@ function PricingTable() {
               </div>
               <div className="text-lg sm:text-xl font-semibold sm:font-bold leading-snug">
                 <p>
-                  for <span className="font-bold">25% Off</span>!
+                  for <span className="font-bold">40% Off</span>!
                 </p>
               </div>
               <div className="text-sm sm:text-base flex flex-col sm:flex-row items-center gap-2 sm:gap-4">
