@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react'; // Added useRef to the import
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
@@ -10,6 +10,7 @@ import usdFlag from '../assets/usd-flag.png';
 import gbpFlag from '../assets/gbp-flag.png';
 import eurFlag from '../assets/eur-flag.png';
 import mtIcon from '../assets/mticon.png';
+import Popprice from './Popprice.jsx';
 
 const getTranslationKey = (text) => {
   const keyMap = {
@@ -34,55 +35,9 @@ function PricingTable() {
   const [isAnimating, setIsAnimating] = useState(false);
   const [timeLeft, setTimeLeft] = useState(0);
   const [isCopied, setIsCopied] = useState(false);
-  const [showModal, setShowModal] = useState(false);
-  const [iframeUrl, setIframeUrl] = useState('');
-
-  // Lock body scroll when modal is open
-  useEffect(() => {
-  if (showModal) {
-    document.documentElement.style.overflow = 'hidden';
-    document.body.style.overflow = 'hidden';
-  } else {
-    document.documentElement.style.overflow = 'unset';
-    document.body.style.overflow = 'unset';
-  }
+  const [showModal, setShowModal] = useState(false); // Keep showModal state
+  const pricingRef = useRef(null); // Keep pricingRef for potential future use
   
-  return () => {
-    document.documentElement.style.overflow = 'unset';
-    document.body.style.overflow = 'unset';
-  };
-  }, [showModal]);
-
-
-  const challengeUrls = {
-    "One Step": {
-      "10k": "https://active.ecapfx.com/promotion/challenge?challengeId=d2de65a0-6ee2-11f0-90e8-23d7e3e41c0d",
-      "25k": "https://active.ecapfx.com/promotion/challenge?challengeId=b16d5c31-6e62-11f0-90e8-23d7e3e41c0d",
-      "50k": "https://active.ecapfx.com/promotion/challenge?challengeId=b1a932a0-6ee4-11f0-90e8-23d7e3e41c0d",
-      "100k": "https://active.ecapfx.com/promotion/challenge?challengeId=478c2b60-6ee5-11f0-90e8-23d7e3e41c0d",
-      "200k": "https://active.ecapfx.com/promotion/challenge?challengeId=e28330a0-6ee5-11f0-90e8-23d7e3e41c0d"
-    },
-    "Two Step": {
-      "10k": "https://active.ecapfx.com/promotion/challenge?challengeId=72a370e1-6ee7-11f0-90e8-23d7e3e41c0d",
-      "25k": "https://active.ecapfx.com/promotion/challenge?challengeId=ab071270-6eec-11f0-90e8-23d7e3e41c0d",
-      "50k": "https://active.ecapfx.com/promotion/challenge?challengeId=44e61800-6eed-11f0-90e8-23d7e3e41c0d",
-      "100k": "https://active.ecapfx.com/promotion/challenge?challengeId=d2b7a2c1-6eed-11f0-90e8-23d7e3e41c0d",
-      "200k": "https://active.ecapfx.com/promotion/challenge?challengeId=f209ee80-6ef7-11f0-90e8-23d7e3e41c0d"
-    },
-    "Three Step": {
-      "10k": "https://active.ecapfx.com/promotion/challenge?challengeId=c5d5db50-708a-11f0-90e8-23d7e3e41c0d",
-      "25k": "https://active.ecapfx.com/promotion/challenge?challengeId=7df2ec91-708c-11f0-90e8-23d7e3e41c0d",
-      "50k": "https://active.ecapfx.com/promotion/challenge?challengeId=e1e551c1-708c-11f0-90e8-23d7e3e41c0d",
-      "100k": "https://active.ecapfx.com/promotion/challenge?challengeId=5a1683d0-708d-11f0-90e8-23d7e3e41c0d",
-      "200k": "https://active.ecapfx.com/promotion/challenge?challengeId=98f72a00-708d-11f0-90e8-23d7e3e41c0d"
-    },
-    "Instant Funding": {
-      "10k": "https://active.ecapfx.com/promotion/challenge?challengeId=3511cde0-7071-11f0-90e8-23d7e3e41c0d",
-      "15k": "https://active.ecapfx.com/promotion/challenge?challengeId=a4c28700-7072-11f0-90e8-23d7e3e41c0d",
-      "20k": "https://active.ecapfx.com/promotion/challenge?challengeId=6664fe11-7073-11f0-90e8-23d7e3e41c0d",
-      "25k": "https://active.ecapfx.com/promotion/challenge?challengeId=38522471-7074-11f0-90e8-23d7e3e41c0d"
-    }
-  };
 
   // Price mapping and table data remain unchanged
   const priceMap = {
@@ -351,16 +306,16 @@ function PricingTable() {
   };
 
   useEffect(() => {
-    if (priceMap[selectedStep][selectedSize]?.[selectedCurrency]) {
-      setPrice(priceMap[selectedStep][selectedSize][selectedCurrency]);
-    } else {
-      setPrice("N/A");
-    }
-    const availableSizes = getAvailableSizes();
-    if (!availableSizes.includes(selectedSize)) {
-      setSelectedSize(availableSizes[0]);
-    }
-  }, [selectedStep, selectedSize, selectedCurrency]);
+  const availableSizes = getAvailableSizes();
+  if (!availableSizes.includes(selectedSize)) {
+    setSelectedSize(availableSizes[0]);
+  }
+  if (priceMap[selectedStep][selectedSize]?.[selectedCurrency]) {
+    setPrice(priceMap[selectedStep][selectedSize][selectedCurrency]);
+  } else {
+    setPrice("N/A");
+  }
+}, [selectedStep, selectedSize, selectedCurrency]);
 
   const startDate = new Date('2025-08-04T15:34:00+02:00');
   const endDate = new Date('2025-08-16T23:59:59+02:00');
@@ -408,14 +363,9 @@ function PricingTable() {
   };
 
   const handleStartChallenge = () => {
-    const url = challengeUrls[selectedStep][selectedSize];
-    if (url) {
-      setIframeUrl(url);
-      setShowModal(true);
-    } else {
-      window.open('https://active.ecapfx.com/promotion/challenge', '_blank', 'noopener,noreferrer');
-    }
-  };
+  console.log("Modal opened"); // Debug to confirm button click
+  setShowModal(true); // Simply toggle the modal, let Iframe.jsx handle URL
+};
 
   const steps = ["One Step", "Two Step", "Three Step", "Instant Funding"];
   const currencies = ["USD", "GBP", "EUR"];
@@ -505,9 +455,19 @@ function PricingTable() {
 
   return (
     <div
+      ref={pricingRef}
       id="start-challenge"
-      className="rounded-rt-[40px] relative z-0 pt-[90px] bg-[#151515] transition duration-500 ease-in-out overflow-hidden pb-[100px]"
+      className="rounded-rt-[40px] relative pt-[90px] bg-[#151515] transition duration-500 ease-in-out overflow-hidden pb-[100px]"
+      style={{ zIndex: 900 }} // Adjusted z-index to prevent stacking issues
     >
+      {/* ------ START OF UNCHANGED SECTION: Background and layout styling ------ */}
+      <div
+        className="absolute inset-0"
+        style={{
+          
+          borderRadius: '40px 0 0 0',
+        }}
+      />
       <div
         className="absolute left-[50%] top-0 h-full w-[1500px] sm:w-[2000px] xl:w-[3061px] translate-x-[-50%]"
         style={{
@@ -646,6 +606,7 @@ function PricingTable() {
                             : 'bg-gray-200 text-black hover:bg-gray-300'
                         }`}
                         onClick={() => handleCurrencyChange(currency)}
+                        aria-label={`Select ${currency} currency`}
                         style={{ minWidth: '0' }}
                       >
                         {currency === 'USD' && (
@@ -709,6 +670,7 @@ function PricingTable() {
                       key={step}
                       className={`text-left px-4 py-3 rounded-md font-medium text-sm sm:text-base select-none ${selectedStep === step ? 'active' : ''}`}
                       onClick={() => handleStepChange(step)}
+                      aria-label={`Select ${t(`pricingTable.${step.toLowerCase().replace(/ /g, '')}`)} plan`}
                       style={{
                         background: selectedStep === step ? 'linear-gradient(to right, #1a6f3d, #1d8348, #145c33)' : 'linear-gradient(to right, #1a6f3d, #1d8348, #145c33)',
                         color: selectedStep === step ? '#000000' : '#ffffff',
@@ -744,6 +706,7 @@ function PricingTable() {
                     <button
                       key={size}
                       className={`text-left px-4 py-3 rounded-md font-medium text-sm sm:text-base select-none ${selectedSize === size ? 'active' : ''}`}
+                      aria-label={`Select ${size} challenge`}
                       onClick={() => handleSizeChange(size)}
                       style={{
                         background: selectedSize === size ? 'linear-gradient(to right, #1a6f3d, #1d8348, #145c33)' : 'linear-gradient(to right, #1a6f3d, #1d8348, #145c33)',
@@ -933,220 +896,112 @@ function PricingTable() {
           </div>
         </div>
       </div>
-      {showModal && (
-        <div className="fixed inset-0 z-[1000] overflow-hidden">
-          <div 
-            className="absolute inset-0 bg-black bg-opacity-50" 
-            onClick={() => setShowModal(false)}
-            style={{ pointerEvents: 'auto' }}
-          ></div>
-          
-          {/* Desktop Modal (right-side drawer) */}
-          <div 
-            className={`absolute right-0 h-[calc(100%-124px)] w-[1200px] bg-white transform transition-transform duration-300 ease-in-out flex flex-col
-                        ${showModal ? 'translate-x-0' : 'translate-x-full'}
-                        hidden md:flex`}
-            style={{ top: '124px' }}
-          >
-            <div className="relative p-0 flex justify-between items-center" style={{ 
-              background: '#151515',
-              minHeight: '60px'
-            }}>
-              <div className="flex items-center gap-2 pl-4">
-                <img 
-                  src={mtIcon} 
-                  alt="Challenge Icon" 
-                  className="w-38 h-28" 
-                />
-                <h3 className="text-sm sm:text-base font-semibold uppercase text-white">Challenge Details</h3>
-              </div>
-              <button
-                className="text-white hover:text-gray-300 text-2xl font-bold z-10 pr-4"
-                onClick={() => setShowModal(false)}
-              >
-                ×
-              </button>
-            </div>
-            
-            <div className="flex-grow min-h-0 w-full">
-              <iframe 
-                src={iframeUrl} 
-                width="100%" 
-                height="100%" 
-                frameBorder="0"
-                title="Challenge Modal"
-                style={{ pointerEvents: 'auto' }}
-                className="w-full h-full"
-              ></iframe>
-            </div>
-          </div>
-          
-          {/* Mobile Modal (full-screen) */}
-          <div 
-            className={`fixed inset-0 bg-white transform transition-transform duration-300 ease-in-out flex flex-col
-                        ${showModal ? 'translate-y-0' : 'translate-y-full'}
-                        flex md:hidden`}
-            style={{ top: '124px' }}
-          >
-            <div className="relative p-0 flex justify-between items-center" style={{ 
-              background: '#151515',
-              minHeight: '60px'
-            }}>
-              <div className="flex items-center gap-2 pl-4">
-                <img 
-                  src={mtIcon} 
-                  alt="Challenge Icon" 
-                  className="w-26 h-12" 
-                />
-                <h3 className="text-sm sm:text-base font-semibold uppercase text-white">Challenge Details</h3>
-              </div>
-              <button
-                className="text-white hover:text-gray-300 text-2xl font-bold z-10 pr-4"
-                onClick={() => setShowModal(false)}
-              >
-                ×
-              </button>
-            </div>
-            
-            <div className="flex-grow min-h-0 w-full">
-              <iframe 
-                src={iframeUrl} 
-                width="100%" 
-                height="100%" 
-                frameBorder="0"
-                title="Challenge Modal"
-                style={{ pointerEvents: 'auto' }}
-                className="w-full h-full"
-              ></iframe>
-            </div>
-          </div>
-        </div>
-      )}
+      <Popprice
+      isOpen={showModal}
+      onClose={() => setShowModal(false)}
+      step={selectedStep}
+      size={selectedSize}
+    />
       {/* <div className="absolute bottom-0 left-0 w-full h-2 bg-gradient-to-r from-transparent via-[#1d8348] to-transparent hidden shadow-lg sm:block z-20" /> */}
       <style jsx>{`
-        @media (max-width: 767px) {
-          .modal-container {
-            top: 0 !important;
-            height: 100% !important;
-            transform: translateY(0) !important;
-            transition: transform 0.3s ease-in-out;
-          }
-          @media (max-width: 767px) {
-            .modal-container {
-              transition: transform 0.3s ease-in-out;
-            }
-          }
-          .modal-container.hidden {
-            transform: translateY(100%) !important;
-          }
-          
-          iframe {
-            min-height: calc(100vh - 60px); /* Account for header height */
-          }
+        .table-container {
+        max-height: 600px;
+        overflow-y: auto;
+      }
+      .desktop-table {
+        overflow-x: auto;
+      }
+      .animate-change {
+        animation: fadeIn 0.3s ease-in-out;
+      }
+      @keyframes change {
+        0% {
+          opacity: 0.3;
+          transform: translateY(10px);
         }
-        @media (max-width: 640px) {
-          .code-container {
-            min-width: 160px;
-            padding: 0 2px;
-          }
-          .code-text {
-            font-size: 0.5rem;
-          }
-          .max-w-7xl {
-            padding-left: 0.5rem;
-            padding-right: 0.5rem;
-          }
-          .grid {
-            display: flex;
-            flex-direction: column;
-          }
-          .lg\\:col-span-3,
-          .lg\\:col-span-9,
-          .lg\\:col-span-12 {
-            width: 100%;
-          }
-          .table-container {
-            overflow-x: auto;
-            width: 100%;
-            -webkit-overflow-scrolling: touch;
-          }
-          .mobile-table {
-            padding-bottom: 40px;
-            padding-left: 8px;
-            padding-right: 8px;
-          }
-          .swiper-button-next,
-          .swiper-button-prev {
-            width: 24px;
-            height: 24px;
-            background: rgb(255, 255, 255);
-            border-radius: 50%;
-            color: #1d8348;
-            margin-top: 0;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-            transition: background 0.3s ease, transform 0.3s ease;
-          }
-          .swiper-button-prev {
-            left: 2px;
-          }
-          .swiper-button-next {
-            right: 2px;
-          }
-          .swiper-button-next:hover,
-          .swiper-button-prev:hover {
-            background: rgb(190, 190, 190);
-            transform: scale(1.1);
-          }
-          .swiper-button-next::after,
-          .swiper-button-prev::after {
-            font-size: 12px;
-            font-weight: bold;
-          }
-          .swiper-pagination-bullet {
+        100% {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      @media (max-width: 640px) {
+        .code-container {
+          min-width: 160px;
+          padding: 0 2px;
+        }
+        .code-text {
+          font-size: 0.5rem;
+        }
+        .max-w-7xl {
+          padding-left: 0.5rem;
+          padding-right: 0.5rem;
+        }
+        .grid {
+          display: flex;
+          flex-direction: column;
+        }
+        .lg\\:col-span-3,
+        .lg\\:col-span-9,
+        .lg\\:col-span-12 {
+          width: 100%;
+        }
+        .table-container {
+          overflow-y: auto;
+          max-height: 600px;
+          -webkit-overflow-scrolling: touch;
+        }
+        .mobile-table {
+          padding-bottom: 40px;
+          padding-left: 8px;
+          padding-right: 8px;
+        }
+        .swiper-button-next,
+        .swiper-button-prev {
+          width: 24px;
+          height: 24px;
+          background: rgb(255, 255, 255);
+          border-radius: 50%;
+          color: #1d8348;
+          margin-top: 0;
+          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+          transition: background 0.3s ease, transform 0.3s ease;
+        }
+        .swiper-button-prev {
+          left: 2px;
+        }
+        .swiper-button-next {
+          right: 2px;
+        }
+        .swiper-button-next:hover,
+        .swiper-button-prev:hover {
+          background: rgb(190, 190, 190);
+          transform: scale(1.1);
+        }
+        .swiper-button-next::after,
+        .swiper-button-prev::after {
+          font-size: 12px;
+          font-weight: bold;
+        }
+        .swiper-pagination-bullet {
           background: #1d8348;
           width: 8px;
           height: 8px;
-          }
-          .swiper-pagination-bullet-active {
-            background: #145c33;
-          }
-          th,
-          td {
-            padding: 0.5rem; /* Reduced padding for mobile */
-            min-width: 80px; /* Reduced min-width to fit smaller screens */
-          }
-          .text-5xl {
-            font-size: 2rem;
-          }
-          .ps_wrapper p {
-            font-size: 0.875rem;
-          }
-          }
-          .animate-change {
-            animation: fadeIn 0.3s ease-in-out;
-          }
-          @keyframes fadeIn {
-            0% {
-              opacity: 0;
-            }
-            100% {
-              opacity: 1;
-            }
-          }
-          /* Ensure the main container doesn't cause overflow */
-          #start-challenge {
-            overflow-x: hidden; /* Prevent horizontal overflow */
-          }
-          #start-challenge {
-            overflow-x: hidden;
-            position: relative; /* Ensure proper stacking context */
-          }
-
-          /* When modal is open */
-          body.modal-open, html.modal-open {
-            overflow: hidden;
-            height: 100%;
-          }
+        }
+        .swiper-pagination-bullet-active {
+          background: #145c33;
+        }
+        th,
+        td {
+          padding: 0.5rem;
+          min-width: 80px;
+        }
+        .text-5xl {
+          font-size: 2rem;
+        }
+        .ps_wrapper p {
+          font-size: 0.875rem;
+        }
+      }
       `}</style>
     </div>
   );
