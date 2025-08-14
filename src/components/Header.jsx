@@ -63,7 +63,7 @@ const Header = () => {
           </span>
           <div className="px-[10px] w-[95px] h-[35px] rounded-[50px] overflow-hidden flex items-center gap-1 border-[1px] border-[#1a6f3d]" style={{ background: 'linear-gradient(0deg, #1a6f3d 0%, #145c33 100%)' }}>
          
-            <p className="text-xs font-bold text-red uppercase text-center flex items-center justify-center gap-1">
+            <p className="text-xs font-bold text-white uppercase text-center flex items-center justify-center gap-1">
               <span>OFF40</span>
               <button
                 type="button"
