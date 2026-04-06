@@ -113,16 +113,6 @@ const Team = () => {
     flag: serbiaFlag
   },
   {
-    id: 4,
-    key: 'majaMarkovic',
-    category: t(`team.${'majaMarkovic'}.category`),
-    title: t(`team.${'majaMarkovic'}.title`),
-    description: t(`team.${'majaMarkovic'}.description`),
-    linkedin: 'https://www.linkedin.com/in/maja-markovic-75580a244/',
-    image: Majacard,
-    flag: serbiaFlag
-  },
-  {
     id: 5,
     key: 'nikolaIlic',
     category: t(`team.${'nikolaIlic'}.category`),
